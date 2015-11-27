@@ -28,6 +28,8 @@ except ImportError:
         "pypandoc module not found, could not convert Markdown to RST")
     long_description = open(f, 'r').read()
 
+reqs = open("requirements.txt", "r").read().splitlines()
+
 setup(
     name='ak-vendor',
     version='0.1.0',
@@ -50,7 +52,7 @@ setup(
     packages=find_packages(),
     py_modules=['ak_vendor'],
     entry_points='',
-    install_requires=[],
+    install_requires=reqs,
     extras_require={
         'dev': [''],
         'test': [''],
