@@ -1,2 +1,2 @@
 # vendor
-All the vendors we rely on
+All the vendors Appknox relies on
