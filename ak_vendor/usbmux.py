@@ -253,12 +253,7 @@ class MuxConnection(object):
 
 
 class USBMux(object):
-    def __init__(self, socketpath=None):
-        if socketpath is None:
-            if sys.platform == 'darwin':
-                socketpath = "/var/run/usbmuxd"
-            else:
-                socketpath = "/var/run/usbmuxd"
+    def __init__(self, socketpath="/var/run/usbmuxd"):
         self.socketpath = socketpath
         self.listener = MuxConnection(socketpath, BinaryProtocol)
         try:
