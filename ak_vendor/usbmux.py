@@ -95,6 +95,7 @@ class BinaryProtocol(object):
         elif resp == self.TYPE_DEVICE_ADD:
             devid, usbpid, serial, pad, location = struct.unpack(
                 "IH256sHI", payload)
+            serial = serial.decode()
             serial = serial.split("\0")[0]
             return {
                 'DeviceID': devid,
