@@ -83,7 +83,7 @@ class BinaryProtocol(object):
     def _pack(self, req, payload):
         if req == self.TYPE_CONNECT:
             return struct.pack(
-                "IH", payload['DeviceID'], payload['PortNumber']) + "\x00\x00"
+                "IH", payload['DeviceID'], payload['PortNumber']) + b"\x00\x00"
         elif req == self.TYPE_LISTEN:
             return b""
         else:
