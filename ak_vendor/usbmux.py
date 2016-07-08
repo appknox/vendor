@@ -23,7 +23,7 @@ import socket
 import struct
 import select
 import plistlib
-from threads import RLock
+from threading import RLock
 
 mux_lock = RLock()
 socket_lock = RLock()
