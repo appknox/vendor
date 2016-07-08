@@ -274,3 +274,6 @@ class USBMux(object):
     def connect(self, device, port):
         connector = MuxConnection(self.socketpath, self.protoclass)
         return connector.connect(device, port)
+
+
+default_mux = USBMux()
