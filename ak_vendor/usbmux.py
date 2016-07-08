@@ -23,10 +23,7 @@ import socket
 import struct
 import select
 import plistlib
-from threading import RLock
-
-mux_lock = RLock()
-socket_lock = RLock()
+from time import sleep
 
 
 class MuxError(Exception):
@@ -40,11 +37,7 @@ class MuxVersionError(MuxError):
 class SafeStreamSocket:
     def __init__(self, address, family):
         self.sock = socket.socket(family, socket.SOCK_STREAM)
-        socket_lock.acquire()
-        try:
-            self.sock.connect(address)
-        finally:
-            socket_lock.release()
+        self.sock.connect(address)
 
     def send(self, msg):
         totalsent = 0
@@ -281,12 +274,14 @@ class USBMux(object):
 
     def connect(self, device, port):
         connector = MuxConnection(self.socketpath, self.protoclass)
-        mux_lock.acquire()
         try:
-            ret_connect = connector.connect(device, port)
-        finally:
-            mux_lock.release()
-        return ret_connect
+            return connector.connect(device, port)
+        except MuxError:
+            print(
+                "Error connecting to (%(device)s, %(port)s). Trying again"
+                % locals())
+            sleep(0.5)
+            return self.connect(device, port)
 
 
 default_mux = USBMux()
