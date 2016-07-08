@@ -23,7 +23,6 @@ import socket
 import struct
 import select
 import plistlib
-from time import sleep
 
 
 class MuxError(Exception):
@@ -274,14 +273,7 @@ class USBMux(object):
 
     def connect(self, device, port):
         connector = MuxConnection(self.socketpath, self.protoclass)
-        try:
-            return connector.connect(device, port)
-        except MuxError:
-            print(
-                "Error connecting to (%(device)s, %(port)s). Trying again"
-                % locals())
-            sleep(0.5)
-            return self.connect(device, port)
+        return connector.connect(device, port)
 
 
 default_mux = USBMux()
