@@ -28,7 +28,7 @@ from binascii import crc32
 from struct import pack, unpack
 from zlib import compress, decompress
 
-PNG_HEADER = "\x89PNG\r\n\x1a\n"
+PNG_HEADER = b"\x89PNG\r\n\x1a\n"
 
 
 def pnguncrush(old_png):
@@ -52,12 +52,12 @@ def pnguncrush(old_png):
         chunk_pos += chunk_length + 12
 
         # Parsing the header chunk
-        if chunk_type == "IHDR":
+        if chunk_type == b"IHDR":
             width = unpack(">L", chunk_data[0:4])[0]
             height = unpack(">L", chunk_data[4:8])[0]
 
         # Parsing the image chunk
-        if chunk_type == "IDAT":
+        if chunk_type == b"IDAT":
             try:
                 # Uncompressing the image chunk
                 buf_size = width * height * 4 + height
@@ -68,7 +68,7 @@ def pnguncrush(old_png):
                 return None
 
             # Swapping red & blue bytes for each pixel
-            new_data = ""
+            new_data = b""
             for y in range(height):
                 i = len(new_data)
                 new_data += chunk_data[i]
@@ -88,7 +88,7 @@ def pnguncrush(old_png):
             chunk_crc = (chunk_crc + 0x100000000) % 0x100000000
 
         # Removing CgBI chunk
-        if chunk_type != "CgBI":
+        if chunk_type != b"CgBI":
             new_png += pack(">L", chunk_length)
             new_png += chunk_type
             if chunk_length > 0:
@@ -96,7 +96,7 @@ def pnguncrush(old_png):
             new_png += pack(">L", chunk_crc)
 
         # Stopping the PNG file parsing
-        if chunk_type == "IEND":
+        if chunk_type == b"IEND":
             break
 
     return new_png
