@@ -38,6 +38,7 @@ def pnguncrush(old_png):
     new_png = old_png[:8]
 
     chunk_pos = len(new_png)
+    pendingIDATChunks = []
 
     # For each chunk in the PNG file
     while chunk_pos < len(old_png):
@@ -61,23 +62,28 @@ def pnguncrush(old_png):
             try:
                 # Uncompressing the image chunk
                 buf_size = width * height * 4 + height
-                chunk_data = decompress(chunk_data, -8, buf_size)
+                if pendingIDATChunks:
+                    chunk_data = decompress(
+                        b''.join(pendingIDATChunks) + chunk_data, -8, buf_size)
+                else:
+                    chunk_data = decompress(chunk_data, -8, buf_size)
 
             except Exception:
                 # The PNG image is normalized
-                return None
+                pendingIDATChunks.append(chunk_data)
+                continue
 
             # Swapping red & blue bytes for each pixel
             new_data = b""
             for y in range(height):
                 i = len(new_data)
-                new_data += chunk_data[i]
+                new_data += to_bytes(chunk_data[i])
                 for x in range(width):
                     i = len(new_data)
-                    new_data += chunk_data[i+2]
-                    new_data += chunk_data[i+1]
-                    new_data += chunk_data[i+0]
-                    new_data += chunk_data[i+3]
+                    new_data += to_bytes(chunk_data[i + 2])
+                    new_data += to_bytes(chunk_data[i + 1])
+                    new_data += to_bytes(chunk_data[i + 0])
+                    new_data += to_bytes(chunk_data[i + 3])
 
             # Compressing the image chunk
             chunk_data = new_data
@@ -100,3 +106,8 @@ def pnguncrush(old_png):
             break
 
     return new_png
+
+def to_bytes(data):
+    if type(data).__name__ == 'int':
+        return bytes([data, ])
+    return data
