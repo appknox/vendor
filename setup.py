@@ -17,24 +17,11 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-here = path.abspath(path.dirname(__file__))
-f = path.join(here, 'README.md')
-
-try:
-    from pypandoc import convert
-    long_description = convert(f, 'rst')
-except ImportError:
-    print(
-        "pypandoc module not found, could not convert Markdown to RST")
-    long_description = open(f, 'r').read()
-
-reqs = open("requirements.txt", "r").read().splitlines()
-
 setup(
     name='ak-vendor',
-    version='0.5.1',
+    version='0.5.2',
     description="Some vendor scripts that we use here at Appknox",
-    long_description=long_description,
+    long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
     author='dhilipsiva',
     author_email='dhilipsiva@gmail.com',
@@ -52,7 +39,9 @@ setup(
     packages=find_packages(),
     py_modules=['ak_vendor'],
     entry_points='',
-    install_requires=reqs,
+    install_requires=[
+        "python3-protobuf==2.5.0",
+    ],
     extras_require={
         'dev': [''],
         'test': [''],
