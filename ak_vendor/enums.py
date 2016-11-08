@@ -214,3 +214,13 @@ class VulnerabilityTypeEnum:
         STATIC = [1, 'Static']
         DYNAMIC = [2, 'Dynamic']
         MANUAL = [3, 'Manual']
+
+
+@choices
+class UserTypeEnum:
+    '''
+    Use Types
+    '''
+    class Meta:
+        APPKNOX = [1, 'Appknox']
+        DEVKNOX = [2, 'Devknox']
