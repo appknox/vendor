@@ -32,7 +32,7 @@ reqs = open("requirements.txt", "r").read().splitlines()
 
 setup(
     name='ak-vendor',
-    version='0.5.0',
+    version='0.5.1',
     description="Some vendor scripts that we use here at Appknox",
     long_description=long_description,
     url='https://github.com/appknox/vendor',
