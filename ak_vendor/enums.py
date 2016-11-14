@@ -113,6 +113,7 @@ class SubmissionSourceEnum:
         UPLOAD = [0, 'Upload']
         STORE = [1, 'Store']
         SCM = [2, 'Source Code Management']
+        DEVKNOX = [3, 'Devknox']
 
 
 @choices
