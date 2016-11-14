@@ -19,7 +19,7 @@ from os import path
 
 setup(
     name='ak-vendor',
-    version='0.5.2',
+    version='0.5.3',
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
