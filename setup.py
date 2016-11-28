@@ -14,12 +14,10 @@ Date created: 2015-11-24
 """
 
 from setuptools import setup, find_packages
-from codecs import open
-from os import path
 
 setup(
     name='ak-vendor',
-    version='0.5.3',
+    version='0.5.4',
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
