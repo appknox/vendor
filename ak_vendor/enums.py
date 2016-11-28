@@ -167,9 +167,10 @@ class PaymentSourceEnum:
     '''
     class Meta:
         PAYPAL = [1, 'Paypal']
-        STRIPE = [2, 'Stripe']
+        STRIPE = [2, 'Stripe Manual']
         BANK_TRANSFER = [3, 'Bank Transfer']
         MANUAL = [4, 'Manual']
+        STRIPE_RECURRING = [5, 'Stripe Recurring']
 
 
 @choices
