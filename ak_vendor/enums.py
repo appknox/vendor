@@ -40,6 +40,10 @@ class DynamicStatusEnum:
         BOOTING = [1, 'Booting']
         READY = [2, 'Ready']
         SHUTTING_DOWN = [3, 'Shutting Down']
+        DOWNLOADING = [4, 'Downloading Package']
+        INSTALLING = [5, 'Installing Package']
+        LAUNCHING = [6, 'Launching App']
+        HOOKING = [7, 'Doing Magic']
 
 
 @choices
