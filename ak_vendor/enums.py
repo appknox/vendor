@@ -31,6 +31,17 @@ class PlatformEnum:
 
 
 @choices
+class DeviceTypeEnum:
+    """
+    Device type enum
+    """
+    class Meta:
+        NO_PREFERENCE = [0, 'No Preference']
+        PHONE_REQUIRED = [1, 'Phone Required']
+        TABLET_REQUIRED = [2, 'Tablet Required']
+
+
+@choices
 class DynamicStatusEnum:
     '''
     The Dynamic scanning status
