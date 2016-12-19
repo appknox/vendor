@@ -19,6 +19,13 @@ from ak_vendor.constants import RISK_ENUM_NONE, RISK_ENUM_LOW, \
 
 
 @choices
+class ProductEnum:
+    class Meta:
+        APPKNOX = [0, 'Appknox']
+        DEVKNOX = [1, 'Devknox']
+
+
+@choices
 class PlatformEnum:
     '''
     Platform Type Enum
