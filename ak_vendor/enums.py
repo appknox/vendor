@@ -255,9 +255,11 @@ class UserRoleEnum:
     """
     Role of User at Appknox
     """
-    CO_FOUNDER = [1, "Co-Founder"]
-    EMPLOYEE = [2, "Employee"]
-    PARTNER = [3, "Partner"]
+    class Meta:
+        CO_FOUNDER = [1, "Co-Founder"]
+        EMPLOYEE = [2, "Employee"]
+        PARTNER = [3, "Partner"]
+        REGULAR = [4, "Regular"]
 
 
 @choices
@@ -265,8 +267,9 @@ class UserDepartmentEnum:
     """
     The Department that the user belongs to
     """
-    TECHNOLOGY = [1, "Technology"]
-    SECURITY = [2, "Security"]
-    SALES = [3, "Sales"]
-    MARKETING = [4, "Marketing"]
-    DESIGN = [5, "Design"]
+    class Meta:
+        TECHNOLOGY = [1, "Technology"]
+        SECURITY = [2, "Security"]
+        SALES = [3, "Sales"]
+        MARKETING = [4, "Marketing"]
+        DESIGN = [5, "Design"]
