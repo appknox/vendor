@@ -248,3 +248,25 @@ class UserTypeEnum:
     class Meta:
         APPKNOX = [1, 'Appknox']
         DEVKNOX = [2, 'Devknox']
+
+
+@choices
+class UserRoleEnum:
+    """
+    Role of User at Appknox
+    """
+    CO_FOUNDER = [1, "Co-Founder"]
+    EMPLOYEE = [2, "Employee"]
+    PARTNER = [3, "Partner"]
+
+
+@choices
+class UserDepartmentEnum:
+    """
+    The Department that the user belongs to
+    """
+    TECHNOLOGY = [1, "Technology"]
+    SECURITY = [2, "Security"]
+    SALES = [3, "Sales"]
+    MARKETING = [4, "Marketing"]
+    DESIGN = [5, "Design"]
