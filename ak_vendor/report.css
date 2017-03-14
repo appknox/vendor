@@ -85,6 +85,10 @@
   padding-left: 50px;
 }
 
+table.audit-table {
+  border-bottom: 1px solid #6B6B6B
+}
+
 table.audit-table tr td p {
   font-size: 14px;
 }
