@@ -29,6 +29,10 @@
   margin-left: 35px
 }
 
+.margin-left50{
+  margin-left: 50px
+}
+
 .margin-top50 {
   margin-top: 50px
 }
@@ -112,7 +116,8 @@ table.audit-table tr td.risk-type {
 
 .report-container table {
   width: 95%;
-  margin: auto
+  margin: auto;
+  border-bottom: 1px solid #6B6B6B
 }
 
 .report-container table tr td {
