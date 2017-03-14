@@ -3,3 +3,80 @@
   justify-content: center;
   align-items: center;
 }
+
+.main-container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.margin-top10 {
+  margin-top: 10px
+}
+
+.margin-top20 {
+  margin-top: 20px;
+}
+
+.margin-top50 {
+  margin-top: 50px;
+}
+
+.margin-top100 {
+  margin-top: 100px;
+}
+
+.underline {
+  border-bottom: 2px solid #6B6B6B;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.mini-container p {
+  padding: 0 50px 0 50px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.heading-container {
+  border: 2px solid #EF4836;
+  border-radius: 5px;
+  color: #EF4836;
+  padding: 2px;
+  margin: 40px auto;
+  flex: none;
+  min-width: 30%
+}
+
+.content-table ol li {
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000;
+  list-style-position: inside;
+  padding: 5px;
+}
+
+.content-table ol.main-heading li {
+  list-style-type: upper-roman;
+  padding-left: 10px;
+}
+
+.content-table ol.main-heading li a {
+  cursor: pointer;
+  color: rgb(107, 107, 107);
+}
+.content-table ol.main-heading li a:hover {
+  color: darken(rgb(107, 107, 107), 50%);
+}
+.content-table ol.sub-topic li {
+  list-style-type: lower-alpha;
+  padding-left: 30px;
+}
+.content-table ol.sub-topic li.last-child {
+  border-bottom: 1px solid #000;
+}
+.content-table ol.sub-heading li {
+  list-style-type: lower-roman;
+  padding-left: 50px;
+}
