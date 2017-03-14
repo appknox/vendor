@@ -66,17 +66,45 @@
   cursor: pointer;
   color: rgb(107, 107, 107);
 }
+
 .content-table ol.main-heading li a:hover {
   color: darken(rgb(107, 107, 107), 50%);
 }
+
 .content-table ol.sub-topic li {
   list-style-type: lower-alpha;
   padding-left: 30px;
 }
+
 .content-table ol.sub-topic li.last-child {
   border-bottom: 1px solid #000;
 }
+
 .content-table ol.sub-heading li {
   list-style-type: lower-roman;
   padding-left: 50px;
+}
+
+table.audit-table tr td p {
+  font-size: 14px;
+}
+
+table.audit-table tr td.risk-type {
+  width: 20%;
+  vertical-align: middle;
+}
+
+.report-container table {
+  width: 95%;
+  margin: auto
+}
+
+.report-container table tr td {
+  border-color: #6B6B6B;
+  text-align: center;
+}
+
+.report-container table tr p {
+  font-size: 13px;
+  text-align: left;
 }
