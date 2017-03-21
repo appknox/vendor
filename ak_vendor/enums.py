@@ -29,12 +29,12 @@ class ProductEnum:
 class PlatformEnum:
     '''
     Platform Type Enum
-    WARNING: This should be same as Moriarty's enum
     '''
     class Meta:
         ANDROID = [0, 'Android']
         IOS = [1, 'iOS']
         WINDOWS = [2, 'Windows']
+        COMMON = [3, 'common (meta)']
 
 
 @choices
@@ -238,6 +238,18 @@ class VulnerabilityTypeEnum:
         STATIC = [1, 'Static']
         DYNAMIC = [2, 'Dynamic']
         MANUAL = [3, 'Manual']
+        API = [4, 'API']
+
+
+@choices
+class ConfidenceEnum:
+    '''
+    Confidence about the occurrence of a vulnerability
+    '''
+    class Meta:
+        LOW = [1, 'Low']
+        MEDIUM = [2, 'Medium']
+        HIGH = [3, 'High']
 
 
 @choices
