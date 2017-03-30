@@ -1,0 +1,13 @@
+#! /bin/bash
+#
+# report.sh
+# Copyright (C) 2017 dhilipsiva <dhilipsiva@gmail.com>
+#
+# Distributed under terms of the MIT license.
+#
+
+set -x
+
+pug ak_vendor
+python ak_vendor/report.py
+open ak_vendor/output.html
