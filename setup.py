@@ -13,7 +13,7 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2015-11-24
 """
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='ak-vendor',
@@ -34,7 +34,6 @@ setup(
     ],
 
     keywords='appknox vendor',
-    packages=find_packages(),
     packages=['ak_vendor'],
     package_dir={'ak_vendor': 'ak_vendor'},
     package_data={'ak_vendor': ['ak_vendor/*.html']},
