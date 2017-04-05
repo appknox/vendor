@@ -1,1 +1,2 @@
-recursive-include ak_vendor report.html
+include *.html
+global-include *.html
