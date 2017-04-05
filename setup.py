@@ -43,4 +43,5 @@ setup(
         'dev': [''],
         'test': [''],
     },
+    package_data={'ak_vendor': ['ak_vendor/*.html']}
 )
