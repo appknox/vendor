@@ -1,2 +1,3 @@
 include *.html
 global-include *.html
+recursive-include examples *.html

@@ -35,9 +35,6 @@ setup(
 
     keywords='appknox vendor',
     packages=['ak_vendor'],
-    package_dir={'ak_vendor': 'ak_vendor'},
-    package_data={'ak_vendor': ['ak_vendor/*.html']},
-    py_modules=['ak_vendor'],
     entry_points='',
     install_requires=[
         "python3-protobuf==2.5.0",
