@@ -13,11 +13,11 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2015-11-24
 """
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='ak-vendor',
-    version='0.8.9',
+    version='0.8.11',
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
@@ -34,7 +34,8 @@ setup(
     ],
 
     keywords='appknox vendor',
-    packages=['ak_vendor'],
+    packages=find_packages(),
+    include_package_data=True,
     entry_points='',
     install_requires=[
         "python3-protobuf==2.5.0",
@@ -43,5 +44,4 @@ setup(
         'dev': [''],
         'test': [''],
     },
-    package_data={'ak_vendor': ['ak_vendor/*.html']}
 )
