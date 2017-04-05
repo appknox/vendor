@@ -73,5 +73,5 @@ file_data = {
     'version': '1.0',
     'version_code': '1',
     'id': 29,
-    'analyses': [analiser1, analiser2]
+    'analyses': {'all': [analiser1, analiser2]}
 }

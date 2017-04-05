@@ -181,7 +181,7 @@ html(lang="en")
               a(class="link-tag" id="07")
               h3
                 | Configuration Management
-        | {% for analysis in file.analyses %}
+        | {% for analysis in file.analyses.all %}
         .columns
           .column.sub-heading-container.flex-center.bucket-list
             ol
@@ -241,4 +241,3 @@ html(lang="en")
               span.margin-bottom50
                 | Pizza Hut Japan Official Order App for Android has a problem whereby it fails to verify SSL server certificates.
         | {% endfor %}
-
