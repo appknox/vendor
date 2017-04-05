@@ -17,7 +17,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ak-vendor',
-    version='0.8.5',
+    version='0.8.6',
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
@@ -44,8 +44,7 @@ setup(
         'dev': [''],
         'test': [''],
     },
-    package_data={
-        '': ['*.html'],
-    },
-    include_package_data=True,
+    data_files=[
+        ('ak_vendor', ['report.html']),
+    ],
 )
