@@ -163,79 +163,114 @@ html(lang="en")
               h5
                 | {{ analysis.vulnerability.name }}
               p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            td.risk-type(style="color:#F5D76E")
-              h5.tag(class="is-warning")
+                | {{ analysis.vulnerability.description }}
+            td.risk-type
+              h5.tag(style="background-color:{{ analysis.color }};color:#FFF")
                 | {% if analysis.risk == RiskEnum.NONE %}
                 | Passed
                 | {% else %}
                 | {{ analysis.get_risk_display }} Risk
                 | {% endif %}
           | {% endfor %}      
-                
-
-        .columns
-          .column.heading-container.flex-center
-              a(class="link-tag" id="07")
-              h3
-                | Configuration Management
+        
+        div.margin-top50
+          table.audit-table
+            tr
+              td
+                | Priority Level      
+              td 
+                | Number of failed test cases 
+            tr    
+              td
+                | High Risk
+              td
+                | {# audit_summary | hash:RiskEnum.HIGH #}       
+            tr    
+              td
+                | Medium Risk
+              td
+                | {# audit_summary | hash:RiskEnum.MEDIUM #}      
+            tr    
+              td
+                | Low Risk
+              td
+                | {# audit_summary | hash:RiskEnum.LOW #}      
+        
         | {% for analysis in file.analyses.all %}
-        .columns
-          .column.sub-heading-container.flex-center.bucket-list
-            ol
-               a(class="link-tag" id="08")
-               li
-                 | {{ analysis.vulnerability.name }} :
-        p.margin-left35
-          | {{ analysis.vulnerability.intro | safe }} :
-        .columns
-          // color changes depending on risk type
-          .column.margin-left35.margin-top50.margin-bottom50
-            h5.tag.risk-tag(class="is-danger")
-              | Risk Rating : High
-        .columns
-          .column.analysis-type
-            a(class="link-tag" id="09")
-            h5
-              | Risk Assessment
-        p.margin-left35.margin-top20
-          | The Android application exports Service for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.
-        ul.margin-left50.margin-top20.margin-bottom50
-          li
-            | Exported service at com.flipkart.accountManager.account.AuthenticatorService
-          li
-            | Exported service at com.flipkart.accountManager.account.AuthenticatorService
-          li
-            | Exported service at com.flipkart.accountManager.account.AuthenticatorService
+        | {% if analysis.risk > RiskEnum.NONE %}  
+        section  
+          .columns
+            .column.heading-container.flex-center
+                a(class="link-tag" id="{{ analysis.id }}")
+                h3
+                  | {{ analysis.vulnerability.heading }}
 
-        .columns
-          .column.analysis-type
-            a(class="link-tag" id="10")
-            h5
-              | Noncompliant Code Example
-        p.margin-left35.margin-top20
-          | Using HTTP with SSL or TLS to connect to internet, or without a proper certificate the connection can be easily eavesdropped by attacker without the knowledge of the user.
-        pre.pre-code.margin-left50.margin-top20.margin-bottom50
-          | String link = "http://www.google.com";
+          .columns
+            // color changes depending on risk type
+            .column.margin-left35.margin-top50.margin-bottom50
+              h5.tag.risk-tag(style="background-color:{{ analysis.color }};color:#FFF")
+                | Risk Rating : {{ analysis.get_risk_display }}
+          .columns
+            .column.analysis-type
+              a(class="link-tag" id="09")
+              h5
+                | Risk Assessment
+          p.margin-left35.margin-top20
+            | {{ analysis.vulnerability.description | safe }}
+          | {% for descriptions in analysis.description %}
+          | {% if descriptions.extra_description %}
+          p 
+            | {{ descriptions.extra_description | safe }}
+          | {% endif %}
+          pre
+            | {{ descriptions.description | safe }}
+          | {% endfor %}  
+          
+          | {% for subheading in analysis.vulnerability.sub_headings.all %}
+          h3(id="title")
+            a(id="{{ analysis.id }}{{ forloop.counter }}")
+              | {{ subheading.heading }}
+            | {{ subheading.content | safe }}
+          | {% endfor %}
+          
+          | {% if analysis.vulnerability.non_compliant %}
+          .columns
+            .column.analysis-type.margin-top50
+              a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}non_compliant")
+              h5
+                | Noncompliant Code Example
+          p.margin-left35.margin-top20
+            | {{ analysis.vulnerability.non_compliant | safe }}
+          | {% endif %}  
 
-        .columns
-          .column.analysis-type
-            a(class="link-tag" id="11")
-            h5
-              | Compliant Solution
-        p.margin-left35.margin-top20.margin-bottom50
-          | If you are using a Service for sharing data between only your own apps, it is preferable to use the android:protectionLevel attribute set to "signature" protection. Signature permissions do not require user confirmation, so they provide a better user experience and more controlled access to the Service when the apps accessing the data are signed with the same key
-
-        .columns
-          .column.analysis-type
-            a(class="link-tag" id="12")
-            h5
-              | Related Vulnerabilities
-        p
-          ul
-            li.margin-left35.margin-top20
-              a(href="http://jvn.jp/en/jp/JVN39218538/")
-                |JVN#39218538 &nbsp;
-              span.margin-bottom50
-                | Pizza Hut Japan Official Order App for Android has a problem whereby it fails to verify SSL server certificates.
-        | {% endfor %}
+          | {% if analysis.vulnerability.compliant %}
+          .columns
+            .column.analysis-type.margin-top50
+              a(class="link-tag" id="11")
+              h5
+                | Compliant Solution
+          p.margin-left35.margin-top20.margin-bottom50
+            | {{ analysis.vulnerability.compliant | safe }}
+          | {% endif %}   
+          
+          | {% if analysis.vulnerability.business_implication %}
+          .columns
+            .column.analysis-type.margin-top50
+              a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}business_implication")
+              h5
+                | Business Implication
+          p.margin-left35.margin-top20.margin-bottom50
+            | {{ analysis.vulnerability.business_implication | safe }}
+          | {% endif %}          
+          
+          | {% if analysis.vulnerability.business_implication %}  
+          .columns
+            .column.analysis-type.margin-top50
+              a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}related_to")
+              h5
+                | Related Vulnerabilities
+          p.margin-left35.margin-top20.margin-bottom50
+            | {{ analysis.vulnerability.related_to | safe }}
+          | {% endif %}  
+        | {% endif %}
+        | {% endfor %}          

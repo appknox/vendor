@@ -43,7 +43,9 @@ analysis_template = {
     'updated_on': '2017-03-03 09:18:14.704847+00:00',
     'uuid': '9d522cf6-ce5c-4bef-9d96-2e641c2e65be',
     'id': 135,
-    'vulnerability': vulnerability_template
+    'vulnerability': vulnerability_template,
+    'color': 'red',
+    'get_risk_display': 'High'
  }
 
 analiser1 = copy(analysis_template)
