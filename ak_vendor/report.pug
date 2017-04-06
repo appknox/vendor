@@ -218,7 +218,6 @@ html(lang="en")
                   | {{ analysis.vulnerability.heading }}
 
           .columns
-            // color changes depending on risk type
             .column.margin-left35.margin-top50.margin-bottom50
               h5.tag.risk-tag(style="background-color:{{ analysis.color }};color:#FFF")
                 | Risk Rating : {{ analysis.get_risk_display }}
@@ -234,7 +233,7 @@ html(lang="en")
           p 
             | {{ descriptions.extra_description | safe }}
           | {% endif %}
-          pre
+          pre.pre-code.margin-left50.margin-top20.margin-bottom50
             | {{ descriptions.description | safe }}
           | {% endfor %}  
           
@@ -251,7 +250,7 @@ html(lang="en")
               a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}non_compliant")
               h5
                 | Noncompliant Code Example
-          p.margin-left35.margin-top20
+          .margin-left35.margin-top20
             | {{ analysis.vulnerability.non_compliant | safe }}
           | {% endif %}  
 
@@ -261,7 +260,7 @@ html(lang="en")
               a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}compliant")
               h5
                 | Compliant Solution
-          p.margin-left35.margin-top20.margin-bottom50
+          .margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.compliant | safe }}
           | {% endif %}        
           
@@ -271,7 +270,7 @@ html(lang="en")
               a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}related_to")
               h5
                 | Related Vulnerabilities
-          p.margin-left35.margin-top20.margin-bottom50
+          .margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.related_to | safe }}
           | {% endif %}  
           
@@ -281,7 +280,7 @@ html(lang="en")
               a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}business_implication")
               h5
                 | Business Implication
-          p.margin-left35.margin-top20.margin-bottom50
+          .margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.business_implication | safe }}
           | {% endif %}     
           
