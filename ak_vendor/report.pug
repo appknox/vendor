@@ -58,9 +58,7 @@ html(lang="en")
                     li
                       a(href="#04")
                         | Appknox Security Rating
-                    li
-                      a(href="#05")
-                        | Appknox Findings
+        
               | {% for analysis in file.analyses.all %}
               | {% if analysis.risk > RiskEnum.NONE %}
               .content-table
@@ -260,22 +258,12 @@ html(lang="en")
           | {% if analysis.vulnerability.compliant %}
           .columns
             .column.analysis-type.margin-top50
-              a(class="link-tag" id="11")
+              a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}compliant")
               h5
                 | Compliant Solution
           p.margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.compliant | safe }}
-          | {% endif %}   
-          
-          | {% if analysis.vulnerability.business_implication %}
-          .columns
-            .column.analysis-type.margin-top50
-              a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}business_implication")
-              h5
-                | Business Implication
-          p.margin-left35.margin-top20.margin-bottom50
-            | {{ analysis.vulnerability.business_implication | safe }}
-          | {% endif %}          
+          | {% endif %}        
           
           | {% if analysis.vulnerability.business_implication %}  
           .columns
@@ -286,5 +274,16 @@ html(lang="en")
           p.margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.related_to | safe }}
           | {% endif %}  
+          
+          | {% if analysis.vulnerability.business_implication %}
+          .columns
+            .column.analysis-type.margin-top50
+              a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}business_implication")
+              h5
+                | Business Implication
+          p.margin-left35.margin-top20.margin-bottom50
+            | {{ analysis.vulnerability.business_implication | safe }}
+          | {% endif %}     
+          
         | {% endif %}
         | {% endfor %}          
