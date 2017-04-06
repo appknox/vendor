@@ -38,7 +38,7 @@ analysis_template = {
     'description': [{
         'description': 'AllowAllHostnameVerifier is instantiated in org.apache.http.conn.ssl.SSLConnectionSocketFactory-><clinit>',
         'extra_description': None}],
-    'risk': 0,
+    'risk': 1,
     'status': 1,
     'updated_on': '2017-03-03 09:18:14.704847+00:00',
     'uuid': '9d522cf6-ce5c-4bef-9d96-2e641c2e65be',

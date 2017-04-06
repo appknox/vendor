@@ -195,6 +195,20 @@ html(lang="en")
                 | Low Risk
               td
                 | {# audit_summary | hash:RiskEnum.LOW #}      
+                
+        section
+          .columns
+            .column.sub-heading-container.flex-center
+              a(class="link-tag" id="04")
+              h5
+                | Appknox Security Rating 
+          div(style="text-align:center" id="logo")
+            img(class="images" width=316 height=75 src="{{ chart_url }}")
+          p
+            | Appknox Security Rating: 
+            b
+              | {# audit_summary | hash:AUDIT_SUMMARY_RATING #}
+              | Unsecured         
         
         | {% for analysis in file.analyses.all %}
         | {% if analysis.risk > RiskEnum.NONE %}  
