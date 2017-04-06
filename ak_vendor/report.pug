@@ -42,139 +42,137 @@ html(lang="en")
                 | Table Of Contents
         .columns
           .column.is-half.margin-auto
-            .content-table
-              ol.main-heading
-                li
-                  a(href="#01")
-                    | Report Summary
+            .content-main-table  
+              .content-table
+                ol.main-heading
+                  li
+                    a(href="#01")
+                      | Report Summary
+                  ol.sub-topic
+                    li
+                      a(href="#02")
+                        | Application Details
+                    li
+                      a(href="#03")
+                        | Audit Summary
+                    li
+                      a(href="#04")
+                        | Appknox Security Rating
+                    li
+                      a(href="#05")
+                        | Appknox Findings
+              | {% for analysis in file.analyses.all %}
+              | {% if analysis.risk > RiskEnum.NONE %}
+              .content-table
+                ol.main-heading
+                  li
+                    a(href="#{{ analysis.id }}")
+                      | {{ analysis.vulnerability.heading }}
+                | {% for subheading in analysis.vulnerability.sub_headings.all %} 
+                     
+                ol.sub-topic   
+                  li
+                    a(href="#{{ analysis.id }}{{ forloop.counter }}")
+                      | {{ subheading.heading }}
+                | {% endfor %} 
+                
+                | {% if analysis.vulnerability.non_compliant %}
                 ol.sub-topic
                   li
-                    a(href="#02")
-                      | Application Details
-                  li
-                    a(href="#03")
-                      | Types Of Vulnerabilities
-                  li
-                    a(href="#04")
-                      | OWASP Top 10 Vulnerabilities
-                  li
-                    a(href="#05")
-                      | Severity Of Risks
-                  li
-                    a(href="#06")
-                      | Audit Summary
-                li
-                  a(href="#07")
-                    | Configuration Management
+                    a(href="#{{ analysis.id }}{{ forloop.counter }}non_compliant")
+                      | Noncompliant Code Example
+                | {% endif %}       
+                
+                | {% if analysis.vulnerability.compliant %}
                 ol.sub-topic
                   li
-                    a(href="#08")
-                      | Do not provide addJavascriptInterface method access in a WebView which could contain untrusted content (API level JELLY_BEAN or below)
-                  ol.sub-heading
-                    li
-                      a(href="#09")
-                        | Risk Assessment
-                    li
-                      a(href="#10")
-                        | Noncompliant Code Example
-                    li
-                      a(href="#11")
-                        | Compliant Solution
-                    li
-                      a(href="#12")
-                        | Related Vulnerabilities
-        .columns
-          .column.heading-container.flex-center
-              a(class="link-tag" id="01")
-              h3
-                | Report Summary
-          p.margin-left30
-            | Appknox conducted a security assessment of the mobile application for the Android platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.
-        .columns
-          .column.sub-heading-container.flex-center
-            a(class="link-tag" id="02")
-            h5
-              | Application Details
-        table
-          tr
-            td
-              | Application Name
-            td
-              | com.flipkart.android
-          tr
-            td
-              | Application Namespace
-            td
-              | com.flipkart.android
-          tr
-            td
-              | Version
-            td
-              | 5.8
-          tr
-            td
-              | Audit Date
-            td
-              | 2017-02-15 06:13
-          tr
-            td
-              | Application SHA1 Hash
-            td
-              | c4da68e075c5d098f14909e9ded51916e8238b46
-          tr
-            td
-              | Application MD5 Hash
-            td
-              | f68e50276da5ec2958003dd1270c9a72
+                    a(href="#{{ analysis.id }}{{ forloop.counter }}compliant")
+                      | Compliant Solution
+                | {% endif %}     
+                  
+                | {% if analysis.vulnerability.related_to %}
+                ol.sub-topic
+                  li
+                    a(href="#{{ analysis.id }}{{ forloop.counter }}related_to")
+                      | Related Vulnerabilities
+                | {% endif %}    
+                   
+                | {% if analysis.vulnerability.business_implication %}
+                ol.sub-topic
+                  li
+                    a(href="#{{ analysis.id }}{{ forloop.counter }}business_implication")
+                      | Business Implication
+                | {% endif %}
+              | {% endif %}      
+              | {% endfor %}    
+                
+        .report-summary
+          .columns
+            .column.heading-container.flex-center
+                a(class="link-tag" id="01")
+                h3
+                  | Report Summary
+            p.margin-left30
+              | Appknox conducted a security assessment of the mobile application for the Android platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.
+          .columns
+            .column.sub-heading-container.flex-center
+              a(class="link-tag" id="02")
+              h5
+                | Application Details
+          table
+            tr
+              td
+                | Application Name
+              td
+                | {{file.name}}
+            tr
+              td
+                | Application Namespace
+              td
+                | {{file.name}}
+            tr
+              td
+                | Version
+              td
+                | {{file.version}}
+            tr
+              td
+                | Audit Date
+              td
+                | {{file.updated_on}}
+            tr
+              td
+                | Application SHA1 Hash
+              td
+                | {{file.sha1hash}}
+            tr
+              td
+                | Application MD5 Hash
+              td
+                | {{file.md5hash}}
 
         .columns
           .column.sub-heading-container.flex-center
-              a(class="link-tag" id="03")
-              h5
-                | Types Of Vulnerabilities
-        .columns.sub-topic-heading
-          ol.is-fullwidth
-            li
-              | Information Disclosure : &nbsp;
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        .columns
-          .column.sub-heading-container.flex-center
-            a(class="link-tag" id="04")
-            h5
-              | OWASP Top 10 Vulnerabilities
-        .columns.sub-topic-heading
-          ol.is-fullwidth
-            li
-              | Improper Platform Usage : &nbsp;
-              p
-                | This category covers misuse of a platform feature or failure to use platform security controls. It might include Android intents, platform permissions, misuse of TouchID, the Keychain, or some other security control that is part of the mobile operating system. There are several ways that mobile apps can experience this risk.
-        .columns
-          .column.sub-heading-container.flex-center
-            a(class="link-tag" id="05")
-            h5
-              | Severity Of Risks
-        .columns.sub-topic-heading
-          ol.is-fullwidth
-            li
-              | HIGH : &nbsp;
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        .columns
-          .column.sub-heading-container.flex-center
-            a(class="link-tag" id="06")
+            a(class="link-tag" id="03")
             h5
               | Audit Summary
         table.audit-table
+          | {% for analysis in file.analyses.all %}
           tr
             td
               h5
-                | Android Unprotected Exported Service
+                | {{ analysis.vulnerability.name }}
               p
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             td.risk-type(style="color:#F5D76E")
               h5.tag(class="is-warning")
-                | Medium Risk
+                | {% if analysis.risk == RiskEnum.NONE %}
+                | Passed
+                | {% else %}
+                | {{ analysis.get_risk_display }} Risk
+                | {% endif %}
+          | {% endfor %}      
+                
 
         .columns
           .column.heading-container.flex-center
