@@ -1,17 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# vim: fenc=utf-8
-# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
-#
-#
-
-"""
-File name: report.py
-Author: dhilipsiva <dhilipsiva@gmail.com>
-Date created: 2017-03-15
-"""
-
 from os import environ
 
 from django import template
@@ -30,9 +16,11 @@ file = dict2obj(file_data)
 pwd = environ['PWD']
 content = ""
 
+
 @register.filter(name="hash")
 def hash(dictionary, key):
     return dictionary.get(key)
+
 
 with open(REPORT_PATH, "r") as input_file:
     template_string = input_file.read()
