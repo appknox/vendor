@@ -1,3 +1,2 @@
 include *.html
-global-include *.html
-recursive-include ak_vendor *.html
+include *.css
