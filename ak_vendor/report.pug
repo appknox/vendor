@@ -7,32 +7,287 @@ html(lang="en")
        }
   body
     section.first-page
-      | First Page
+      div
+        | confidential
+      div
+        | 15th February, 2017 
+      div
+        img(src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
+      div
+        h1
+          | Android Security Report
+      div
+        h6
+          | For Internal Purpose   
+      div
+        h5
+          | Prepared For: {{file.name}}     
+      div
+        p
+          | Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission.
+        p
+          | While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur.      
+    
     section.toc
-      | TOC
+      div
+        h3
+          | Table Of Contents
+      div
+        table
+          tbody  
+            tr
+              td
+                a(href="#01")
+                  | Report Summary   
+            tr
+              td
+                a(href="#02")
+                  | Application Details
+            tr
+              td
+                a(href="#03")
+                  | Audit Summary
+            tr
+              td
+                a(href="#04")
+                  | Appknox Security Rating
+                  
+        | {% for analysis in file.analyses.all %}
+        | {% if analysis.risk > RiskEnum.NONE %}     
+        table 
+          tbody  
+            tr
+              td
+                a(href="#{{ analysis.id }}")
+                  | {{ analysis.vulnerability.heading }}
+            | {% for subheading in analysis.vulnerability.sub_headings.all %}
+            tr
+              td
+                a(href="#{{ analysis.id }}{{ forloop.counter }}")
+                  | {{ subheading.heading }}
+            | {% endfor %}
+            
+            | {% if analysis.vulnerability.non_compliant %}
+            tr
+              td
+                a(href="#{{ analysis.id }}{{ forloop.counter }}non_compliant")
+                  | Noncompliant Code Example
+            | {% endif %}
+            
+            | {% if analysis.vulnerability.compliant %}
+            tr
+              td
+                a(href="#{{ analysis.id }}{{ forloop.counter }}compliant")
+                  | Compliant Solution
+            | {% endif %}
+
+            | {% if analysis.vulnerability.related_to %}
+            tr
+              td
+                a(href="#{{ analysis.id }}{{ forloop.counter }}related_to")
+                  | Related Vulnerabilities
+            | {% endif %}
+
+            | {% if analysis.vulnerability.business_implication %}
+            tr
+              td
+                a(href="#{{ analysis.id }}{{ forloop.counter }}business_implication")
+                  | Business Implication
+            | {% endif %}
+          | {% endif %}
+          | {% endfor %}
+          
     section.summary
-      | SUMMARY
+      div
+        a(id="01")
+        h3
+          | Report Summary
+      div
+        p
+          | Appknox conducted a security assessment of the mobile application for the Android platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.    
+      
       section.details
-        | DETAILS
+        div
+          a(id="02")
+          h5
+            | Application Details
+        div
+          table
+            tbody
+              tr
+                td
+                  | Application Name
+                td
+                  | {{file.name}}
+              tr
+                td
+                  | Application Namespace
+                td
+                  | {{file.name}}
+              tr
+                td
+                  | Version
+                td
+                  | {{file.version}}
+              tr
+                td
+                  | Audit Date
+                td
+                  | {{file.updated_on}}
+              tr
+                td
+                  | Application SHA1 Hash
+                td
+                  | {{file.sha1hash}}
+              tr
+                td
+                  | Application MD5 Hash
+                td
+                  | {{file.md5hash}}
+      
       section.audit
-        | AUDIT
+        div
+          a(id="03")
+          h5
+            | Audit Summary
+        div
+          table
+            | {% for analysis in file.analyses.all %}
+            tbody
+              tr
+                td
+                  h5
+                    | {{ analysis.vulnerability.name }}
+                  p
+                    | {{ analysis.vulnerability.description }}
+                td
+                  h5(style="background-color:{{ analysis.color }};color:#FFF")
+                    | {% if analysis.risk == RiskEnum.NONE %}
+                    | Passed
+                    | {% else %}
+                    | {{ analysis.get_risk_display }} Risk
+                    | {% endif %}
+            | {% endfor %}    
+            
+        div
+          table
+            tbody
+              tr
+                td
+                  | Priority Level
+                td
+                  | Number of failed test cases
+              tr
+                td
+                  | High Risk
+                td
+                  | {# audit_summary | hash:RiskEnum.HIGH #}
+              tr
+                td
+                  | Medium Risk
+                td
+                  | {# audit_summary | hash:RiskEnum.MEDIUM #}
+              tr
+                td
+                  | Low Risk
+                td
+                  | {# audit_summary | hash:RiskEnum.LOW #}    
+                
       section.rating
-        | RATING
-      section.findings
-        | FINDINGS
+        div
+          a(id="04")
+          h5
+            | Appknox Security Rating
+            
+        div
+          img(class="images" width=316 height=75 src="{{ chart_url }}")
+          p
+            | Appknox Security Rating:
+            b
+              | {# audit_summary | hash:AUDIT_SUMMARY_RATING #}
+              | Unsecured    
+              
+          
     | {% for analysis in file.analyses.all %}
+    | {% if analysis.risk > RiskEnum.NONE %}
+    
     section.analysis
-      | {{analysis.vulnerability.name}}
+      div
+        a(id="{{ analysis.id }}")
+        h3
+          | {{ analysis.vulnerability.heading }}
       section.description
-        | DESCRIPTION
+        div
+          | {{ analysis.vulnerability.intro | safe }}
+        div
+          h5(style="background-color:{{ analysis.color }};color:#FFF")
+            | Risk Rating : {{ analysis.get_risk_display }}  
+            
       section.assessment
-        | ASSESMENT
+        div
+          a(id="09")
+          h5
+            | Risk Assessment
+        div
+          p
+            | {{ analysis.vulnerability.description | safe }}
+          | {% for descriptions in analysis.description %}
+          | {% if descriptions.extra_description %}
+          p
+            | {{ descriptions.extra_description | safe }}
+          | {% endif %}
+          pre
+            | {{ descriptions.description | safe }}
+          | {% endfor %}    
+      
+      | {% for subheading in analysis.vulnerability.sub_headings.all %}
+      section.sub-heading
+        div
+          h3(id="title")
+            a(id="{{ analysis.id }}{{ forloop.counter }}")
+              | {{ subheading.heading }}
+            | {{ subheading.content | safe }}
+      | {% endfor %}
+      
+      | {% if analysis.vulnerability.non_compliant %}    
       section.non-compliant
-        | NON COMP
+        div
+          a(id="{{ analysis.id }}{{ forloop.counter }}non_compliant")
+          h5
+            | Noncompliant Code Example
+        div
+          | {{ analysis.vulnerability.non_compliant | safe }}
+      | {% endif %}
+      
+      | {% if analysis.vulnerability.compliant %}        
       section.compliant
-        | COMP
+        div
+          a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}compliant")
+          h5
+            | Compliant Solution
+        div
+          | {{ analysis.vulnerability.compliant | safe }}
+      | {% endif %}    
+      
+      | {% if analysis.vulnerability.business_implication %}        
       section.implications
-        | IMPL
+        div
+          a(id="{{ analysis.id }}{{ forloop.counter }}business_implication")
+          h5
+            | Business Implication
+        div
+          | {{ analysis.vulnerability.business_implication | safe }}   
+      | {% endif %}    
+      
+      | {% if analysis.vulnerability.related_to %}      
       section.related
-        | RELATED
+        div
+          a(id="{{ analysis.id }}{{ forloop.counter }}related_to")
+          h5
+            | Related Vulnerabilities
+        div
+          | {{ analysis.vulnerability.related_to | safe }}
+      | {% endif %}        
+        
+    | {% endif %}
     | {% endfor %}
