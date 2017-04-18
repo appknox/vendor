@@ -1,2 +1,3 @@
 include *.html
 include *.css
+include *.csv
