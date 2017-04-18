@@ -5,6 +5,11 @@ html(lang="en")
       .new-page {
         page-break-before: always
        }
+      @page {
+        @top-left { content: "confidential";}
+        @top-right { content: "10th April, 2017";}
+        @bottom-center {content: "Page " counter(page) " of " counter(pages);}
+      }
   body
     section.new-page
       div
