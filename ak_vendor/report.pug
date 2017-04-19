@@ -240,9 +240,8 @@ html(lang="en")
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
       section.sub-heading
         div.analysis-type
-          h3(id="title")
-            a(id="{{ analysis.id }}{{ forloop.counter }}")
-              | {{ subheading.heading }}
+          h5
+            | {{ subheading.heading }}
         div
           | {{ subheading.content | safe }}
       | {% endfor %}
