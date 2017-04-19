@@ -127,3 +127,16 @@ html {
   text-align: center;
   border-radius: 20px
 }
+
+.analysis-type {
+  border-left: 2px solid #C0C0C0;
+  border-top: 2px solid #C0C0C0;
+  width: 30%;
+  margin-top: 20px
+}
+
+.analysis-type h5 {
+  margin-left: 10px;
+  margin-top: 0px;
+  padding-top: 5px;
+}

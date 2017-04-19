@@ -222,7 +222,7 @@ html(lang="en")
             | Risk Rating : {{ analysis.get_risk_display }}  
             
       section.assessment
-        div
+        div.analysis-type
           h5
             | Risk Assessment
         div
@@ -233,13 +233,13 @@ html(lang="en")
           p
             | {{ descriptions.extra_description | safe }}
           | {% endif %}
-          pre
+          code
             | {{ descriptions.description | safe }}
           | {% endfor %}    
       
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
       section.sub-heading
-        div
+        div.analysis-type
           h3(id="title")
             a(id="{{ analysis.id }}{{ forloop.counter }}")
               | {{ subheading.heading }}
@@ -248,7 +248,7 @@ html(lang="en")
       
       | {% if analysis.vulnerability.non_compliant %}    
       section.non-compliant
-        div
+        div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}non-compliant")
           h5
             | Noncompliant Code Example
@@ -258,7 +258,7 @@ html(lang="en")
       
       | {% if analysis.vulnerability.compliant %}        
       section.compliant
-        div
+        div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}compliant")
           h5
             | Compliant Solution
@@ -268,7 +268,7 @@ html(lang="en")
       
       | {% if analysis.vulnerability.business_implication %}        
       section.implications
-        div
+        div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}business-implication")
           h5
             | Business Implication
@@ -278,7 +278,7 @@ html(lang="en")
       
       | {% if analysis.vulnerability.related_to %}      
       section.related
-        div
+        div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}related-to")
           h5
             | Related Vulnerabilities
