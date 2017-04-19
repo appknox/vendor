@@ -243,7 +243,8 @@ html(lang="en")
           h3(id="title")
             a(id="{{ analysis.id }}{{ forloop.counter }}")
               | {{ subheading.heading }}
-            | {{ subheading.content | safe }}
+        div
+          | {{ subheading.content | safe }}
       | {% endfor %}
       
       | {% if analysis.vulnerability.non_compliant %}    
