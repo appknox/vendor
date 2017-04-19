@@ -1,7 +1,7 @@
 doctype 5
 html(lang="en")
   head
-    link(rel='stylesheet' href="https://cdn.rawgit.com/appknox/bohemia/master/dist/report.css")
+    link(rel='stylesheet' href="https://rawgit.com/appknox/bohemia/master/dist/report.css")
     style(type='text/css').
       .new-page {
         page-break-before: always
@@ -29,7 +29,7 @@ html(lang="en")
     
     section.new-page
       div
-        h1.heading-container
+        h3.heading-container
           | Table Of Contents
       div
         table.content-table
@@ -98,7 +98,7 @@ html(lang="en")
     section.new-page
       div
         a(id="report-summary")
-        h1.heading-container
+        h3.heading-container
           | Report Summary
       div
         p
@@ -212,7 +212,7 @@ html(lang="en")
     section.new-page
       div
         a(id="{{ analysis.id }}")
-        h1.heading-container
+        h3.heading-container
           | {{ analysis.vulnerability.heading }}
       section.description
         div
@@ -233,6 +233,7 @@ html(lang="en")
           p
             | {{ descriptions.extra_description | safe }}
           | {% endif %}
+        div
           code
             | {{ descriptions.description | safe }}
           | {% endfor %}    
