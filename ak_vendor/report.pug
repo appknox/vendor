@@ -149,7 +149,7 @@ html(lang="en")
           h5.sub-heading-container
             | Audit Summary
         div
-          table
+          table.audit-table
             | {% for analysis in file.analyses.all %}
             tbody
               tr
@@ -158,8 +158,8 @@ html(lang="en")
                     | {{ analysis.vulnerability.name }}
                   p
                     | {{ analysis.vulnerability.description }}
-                td
-                  h5(style="background-color:{{ analysis.color }};color:#FFF")
+                td.risk-type-container
+                  h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
                     | {% if analysis.risk == RiskEnum.NONE %}
                     | Passed
                     | {% else %}
@@ -168,7 +168,7 @@ html(lang="en")
             | {% endfor %}    
             
         div
-          table
+          table.audit-table.sub-table
             tbody
               tr
                 td
@@ -218,7 +218,7 @@ html(lang="en")
         div
           | {{ analysis.vulnerability.intro | safe }}
         div
-          h5(style="background-color:{{ analysis.color }};color:#FFF")
+          h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
             | Risk Rating : {{ analysis.get_risk_display }}  
             
       section.assessment

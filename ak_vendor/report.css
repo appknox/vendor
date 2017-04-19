@@ -90,3 +90,40 @@ html {
   width:30%;
   text-align: center
 }
+
+.audit-table {
+  margin: auto;
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.audit-table tr td {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  padding-left: 10px
+}
+
+.risk-type {
+  border-radius: 290486px;
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.risk-type-container {
+  padding-right: 10px
+}
+
+.sub-table {
+  margin-top: 50px
+}
+
+.risk-tag {
+  padding: 7px;
+  font-size: 16px;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px
+}
