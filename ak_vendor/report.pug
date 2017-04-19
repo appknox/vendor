@@ -1,6 +1,7 @@
 doctype 5
 html(lang="en")
   head
+    link(rel='stylesheet' href="report.css")
     style(type='text/css').
       .new-page {
         page-break-before: always
@@ -12,18 +13,15 @@ html(lang="en")
       }
   body
     section.new-page
-      div
-        img(src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
-      div
-        h1
-          | Android Security Report
-      div
-        h6
-          | For Internal Purpose   
-      div
-        h5
-          | Prepared For: {{file.name}}     
-      div
+      div.appknox-logo
+        img(align="middle" src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
+      div.main-heading
+        | Android Security Report
+      div.sub-heading
+        | For Internal Purpose   
+      div.app-name
+        | Prepared For: {{file.name}}     
+      div.doc-description
         p
           | Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission.
         p
@@ -31,78 +29,76 @@ html(lang="en")
     
     section.new-page
       div
-        h3
+        h1.heading-container
           | Table Of Contents
       div
-        table
+        table.content-table
           tbody  
-            tr
+            tr.main-table-heading
               td
                 a(href="#report-summary")
                   | Report Summary   
-            tr
+            tr.sub-table-heading    
               td
                 a(href="#application-details")
                   | Application Details
-            tr
+            tr.sub-table-heading          
               td
                 a(href="#audit-summary")
                   | Audit Summary
-            tr
+            tr.sub-table-heading      
               td
                 a(href="#security-rating")
                   | Appknox Security Rating
                   
-        | {% for analysis in file.analyses.all %}
-        | {% if analysis.risk > RiskEnum.NONE %}     
-        table 
-          tbody  
-            tr
+            | {% for analysis in file.analyses.all %}
+            | {% if analysis.risk > RiskEnum.NONE %}     
+            tr.main-table-heading  
               td
                 a(href="#{{ analysis.id }}")
                   | {{ analysis.vulnerability.heading }}
             | {% for subheading in analysis.vulnerability.sub_headings.all %}
-            tr
+            tr.sub-table-heading  
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}")
                   | {{ subheading.heading }}
-            | {% endfor %}
+              | {% endfor %}
             
             | {% if analysis.vulnerability.non_compliant %}
-            tr
+            tr.sub-table-heading  
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}non-compliant")
                   | Noncompliant Code Example
-            | {% endif %}
+              | {% endif %}
             
             | {% if analysis.vulnerability.compliant %}
-            tr
+            tr.sub-table-heading  
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}compliant")
                   | Compliant Solution
-            | {% endif %}
+              | {% endif %}
 
             | {% if analysis.vulnerability.business_implication %}
-            tr
+            tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}business-implication")
                   | Business Implication
-            | {% endif %}
+              | {% endif %}
             
             | {% if analysis.vulnerability.related_to %}
-            tr
+            tr.sub-table-heading 
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}related-to")
                   | Related Vulnerabilities
             | {% endif %}
             
-          | {% endif %}
-          | {% endfor %}
-          
+            | {% endif %}
+            | {% endfor %}
+            
     section.new-page
       div
         a(id="report-summary")
-        h3
+        h1.heading-container
           | Report Summary
       div
         p
@@ -111,10 +107,10 @@ html(lang="en")
       section.details
         div
           a(id="application-details")
-          h5
+          h5.sub-heading-container
             | Application Details
         div
-          table
+          table.app-details
             tbody
               tr
                 td
@@ -150,7 +146,7 @@ html(lang="en")
       section.new-page
         div
           a(id="audit-summary")
-          h5
+          h5.sub-heading-container
             | Audit Summary
         div
           table
@@ -198,7 +194,7 @@ html(lang="en")
       section
         div
           a(id="security-rating")
-          h5
+          h5.sub-heading-container
             | Appknox Security Rating
             
         div
@@ -216,7 +212,7 @@ html(lang="en")
     section.new-page
       div
         a(id="{{ analysis.id }}")
-        h3
+        h1.heading-container
           | {{ analysis.vulnerability.heading }}
       section.description
         div
