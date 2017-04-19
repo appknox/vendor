@@ -4,12 +4,16 @@ html(lang="en")
     link(rel='stylesheet' href="https://rawgit.com/appknox/bohemia/master/dist/report.css")
     style(type='text/css').
       .new-page {
-        page-break-before: always
-       }
+        page-break-before: always;
+       } 
       @page {
         @top-left { content: "confidential";}
         @top-right { content: "10th April, 2017";}
-        @bottom-center {content: "Page " counter(page) " of " counter(pages);}
+        @bottom-center {
+          border-top: 1px solid #6B6B6B;
+          width: 100%;
+          content: "Page " counter(page) " of " counter(pages);
+        }
       }
   body
     section.new-page

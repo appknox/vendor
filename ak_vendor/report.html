@@ -1,10 +1,14 @@
 <!DOCTYPE 5><html lang="en"><head><link rel="stylesheet" href="https://rawgit.com/appknox/bohemia/master/dist/report.css"/><style type="text/css">.new-page {
-  page-break-before: always
- }
+  page-break-before: always;
+ } 
 @page {
   @top-left { content: "confidential";}
   @top-right { content: "10th April, 2017";}
-  @bottom-center {content: "Page " counter(page) " of " counter(pages);}
+  @bottom-center {
+    border-top: 1px solid #6B6B6B;
+    width: 100%;
+    content: "Page " counter(page) " of " counter(pages);
+  }
 }</style></head><body><section class="new-page"><div class="appknox-logo"><img align="middle" src="https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png"/></div><div class="main-heading">Android Security Report</div><div class="sub-heading">For Internal Purpose   </div><div class="app-name">Prepared For: {{file.name}}     </div><div class="doc-description"><p>Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission.</p><p>While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur.      </p></div></section><section class="new-page"><div><h3 class="heading-container">Table Of Contents</h3></div><div><table class="content-table"><tbody> <tr class="main-table-heading"><td><a href="#report-summary">Report Summary   </a></td></tr><tr class="sub-table-heading">   <td><a href="#application-details">Application Details</a></td></tr><tr class="sub-table-heading">         <td><a href="#audit-summary">Audit Summary</a></td></tr><tr class="sub-table-heading">     <td><a href="#security-rating">Appknox Security Rating</a></td></tr>{% for analysis in file.analyses.all %}
 {% if analysis.risk > RiskEnum.NONE %}     <tr class="main-table-heading"> <td><a href="#{{ analysis.id }}">{{ analysis.vulnerability.heading }}</a></td></tr>{% for subheading in analysis.vulnerability.sub_headings.all %}<tr class="sub-table-heading"> <td><a href="#{{ analysis.id }}{{ forloop.counter }}">{{ subheading.heading }}</a></td>{% endfor %}</tr>{% if analysis.vulnerability.non_compliant %}<tr class="sub-table-heading"> <td><a href="#{{ analysis.id }}{{ forloop.counter }}non-compliant">Noncompliant Code Example</a></td>{% endif %}</tr>{% if analysis.vulnerability.compliant %}<tr class="sub-table-heading"> <td><a href="#{{ analysis.id }}{{ forloop.counter }}compliant">Compliant Solution</a></td>{% endif %}</tr>{% if analysis.vulnerability.business_implication %}<tr class="sub-table-heading"><td><a href="#{{ analysis.id }}{{ forloop.counter }}business-implication">Business Implication</a></td>{% endif %}</tr>{% if analysis.vulnerability.related_to %}<tr class="sub-table-heading"> <td><a href="#{{ analysis.id }}{{ forloop.counter }}related-to">Related Vulnerabilities</a></td></tr>{% endif %}
 {% endif %}
