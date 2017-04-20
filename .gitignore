@@ -56,3 +56,5 @@ docs/_build/
 # PyBuilder
 target/
 ak_vendor/output.html
+
+.DS_Store

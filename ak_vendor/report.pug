@@ -246,6 +246,7 @@ html(lang="en")
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
       section.sub-headings
         div.analysis-type
+          a(id="{{ analysis.id }}{{ forloop.counter }}")
           h5
             | {{ subheading.heading }}
         div
