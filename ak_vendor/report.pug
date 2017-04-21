@@ -5,7 +5,7 @@ html(lang="en")
     style(type='text/css').
       .new-page {
         page-break-before: always;
-       } 
+       }
       @page {
         @top-left { content: "confidential";}
         @top-right { content: "10th April, 2017";}
@@ -22,15 +22,15 @@ html(lang="en")
       div.main-heading
         | Android Security Report
       div.sub-heading
-        | For Internal Purpose   
+        | For Internal Purpose
       div.app-name
-        | Prepared For: {{file.name}}     
+        | Prepared For: {{file.name}}
       div.doc-description
         p
           | Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission.
         p
-          | While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur.      
-    
+          | While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur.
+
     section.new-page
       div
         h5.heading-container
@@ -68,50 +68,51 @@ html(lang="en")
                 | Application MD5 Hash
               td
                 | {{file.md5hash}}
-    
+
     section.new-page
       div
         h3.heading-container
           | Table Of Contents
       div
         table.content-table
-          tbody  
+          tbody
             tr.main-table-heading
               td
                 a(href="#report-summary")
-                  | Report Summary   
-            tr.sub-table-heading          
+                  | Report Summary
+            tr.sub-table-heading
               td
                 a(href="#audit-summary")
                   | Audit Summary
-            tr.sub-table-heading      
+            tr.sub-table-heading
               td
                 a(href="#security-rating")
                   | Appknox Security Rating
-                  
+
             | {% regroup file.analyses.all by risk as analysis_list %}
-            | {% for analysis in analysis_list %}
-            | {% if analysis.risk > RiskEnum.NONE %}     
-            tr.main-table-heading  
+            | {% for group in analysis_list %}
+            | {% for analysis in group.list %}
+            | {% if analysis.risk > RiskEnum.NONE %}
+            tr.main-table-heading
               td
                 a(href="#{{ analysis.id }}")
                   | {{ analysis.vulnerability.heading }}
             | {% for subheading in analysis.vulnerability.sub_headings.all %}
-            tr.sub-table-heading  
+            tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}")
                   | {{ subheading.heading }}
               | {% endfor %}
-            
+
             | {% if analysis.vulnerability.non_compliant %}
-            tr.sub-table-heading  
+            tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}non-compliant")
                   | Noncompliant Code Example
               | {% endif %}
-            
+
             | {% if analysis.vulnerability.compliant %}
-            tr.sub-table-heading  
+            tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}compliant")
                   | Compliant Solution
@@ -123,17 +124,18 @@ html(lang="en")
                 a(href="#{{ analysis.id }}{{ forloop.counter }}business-implication")
                   | Business Implication
               | {% endif %}
-            
+
             | {% if analysis.vulnerability.related_to %}
-            tr.sub-table-heading 
+            tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}related-to")
                   | Related Vulnerabilities
             | {% endif %}
-            
+
             | {% endif %}
             | {% endfor %}
-            
+            | {% endfor %}
+
     section.new-page
       div
         a(id="report-summary")
@@ -141,8 +143,8 @@ html(lang="en")
           | Report Summary
       div
         p
-          | Appknox conducted a security assessment of the mobile application for the Android platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.    
-      
+          | Appknox conducted a security assessment of the mobile application for the Android platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.
+
       section
         div
           a(id="audit-summary")
@@ -150,7 +152,9 @@ html(lang="en")
             | Audit Summary
         div
           table.audit-table
-            | {% for analysis in file.analysis_list %}
+            | {% for group in analysis_list %}
+            | {% for analysis in group.list %}
+
             tbody
               tr
                 td
@@ -165,9 +169,10 @@ html(lang="en")
                     | {% else %}
                     | {{ analysis.get_risk_display }} Risk
                     | {% endif %}
-            | {% endfor %}    
-      
-      section.new-page      
+            | {% endfor %}
+            | {% endfor %}
+
+      section.new-page
         table.audit-table.sub-table
           tbody
             tr
@@ -189,26 +194,27 @@ html(lang="en")
               td
                 | Low Risk
               td
-                | {# audit_summary | hash:RiskEnum.LOW #}    
-                
+                | {# audit_summary | hash:RiskEnum.LOW #}
+
       section
         div
           a(id="security-rating")
           h5.sub-heading-container
             | Appknox Security Rating
-            
+
         div
           img(width=316 height=75 src="{{ chart_url }}")
           p
             | Appknox Security Rating:
             b
               | {# audit_summary | hash:AUDIT_SUMMARY_RATING #}
-              | Unsecured    
-              
-          
-    | {% for analysis in analysis_list %}
+              | Unsecured
+
+    | {% for group in analysis_list %}
+    | {% for analysis in group.list %}
+
     | {% if analysis.risk > RiskEnum.NONE %}
-    
+
     section.new-page
       div
         a(id="{{ analysis.id }}")
@@ -219,8 +225,8 @@ html(lang="en")
           | {{ analysis.vulnerability.intro | safe }}
         div
           h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
-            | Risk Rating : {{ analysis.get_risk_display }}  
-            
+            | Risk Rating : {{ analysis.get_risk_display }}
+
       section.assessment
         div.analysis-type
           h5
@@ -237,8 +243,8 @@ html(lang="en")
           pre
             code
               | {{ descriptions.description | safe }}
-          | {% endfor %}    
-      
+          | {% endfor %}
+
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
       section.sub-headings
         div.analysis-type
@@ -248,8 +254,8 @@ html(lang="en")
         div
           | {{ subheading.content | safe }}
       | {% endfor %}
-      
-      | {% if analysis.vulnerability.non_compliant %}    
+
+      | {% if analysis.vulnerability.non_compliant %}
       section.non-compliant
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}non-compliant")
@@ -258,8 +264,8 @@ html(lang="en")
         div
           | {{ analysis.vulnerability.non_compliant | safe }}
       | {% endif %}
-      
-      | {% if analysis.vulnerability.compliant %}        
+
+      | {% if analysis.vulnerability.compliant %}
       section.compliant
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}compliant")
@@ -267,19 +273,19 @@ html(lang="en")
             | Compliant Solution
         div
           | {{ analysis.vulnerability.compliant | safe }}
-      | {% endif %}    
-      
-      | {% if analysis.vulnerability.business_implication %}        
+      | {% endif %}
+
+      | {% if analysis.vulnerability.business_implication %}
       section.implications
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}business-implication")
           h5
             | Business Implication
         div
-          | {{ analysis.vulnerability.business_implication | safe }}   
-      | {% endif %}    
-      
-      | {% if analysis.vulnerability.related_to %}      
+          | {{ analysis.vulnerability.business_implication | safe }}
+      | {% endif %}
+
+      | {% if analysis.vulnerability.related_to %}
       section.related
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}related-to")
@@ -287,7 +293,8 @@ html(lang="en")
             | Related Vulnerabilities
         div
           | {{ analysis.vulnerability.related_to | safe }}
-      | {% endif %}        
-        
+      | {% endif %}
+
     | {% endif %}
+    | {% endfor %}
     | {% endfor %}
