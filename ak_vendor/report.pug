@@ -89,9 +89,7 @@ html(lang="en")
                 a(href="#security-rating")
                   | Appknox Security Rating
 
-            | {% regroup file.analyses.all by risk as analysis_list %}
-            | {% for group in analysis_list %}
-            | {% for analysis in group.list %}
+            | {% for analysis in analyses %}
             | {% if analysis.risk > RiskEnum.NONE %}
             tr.main-table-heading
               td
@@ -134,7 +132,6 @@ html(lang="en")
 
             | {% endif %}
             | {% endfor %}
-            | {% endfor %}
 
     section.new-page
       div
@@ -152,8 +149,7 @@ html(lang="en")
             | Audit Summary
         div
           table.audit-table
-            | {% for group in analysis_list %}
-            | {% for analysis in group.list %}
+            | {% for analysis in analyses %}
 
             tbody
               tr
@@ -169,7 +165,6 @@ html(lang="en")
                     | {% else %}
                     | {{ analysis.get_risk_display }} Risk
                     | {% endif %}
-            | {% endfor %}
             | {% endfor %}
 
       section.new-page
@@ -210,8 +205,7 @@ html(lang="en")
               | {# audit_summary | hash:AUDIT_SUMMARY_RATING #}
               | Unsecured
 
-    | {% for group in analysis_list %}
-    | {% for analysis in group.list %}
+    | {% for analysis in analyses %}
 
     | {% if analysis.risk > RiskEnum.NONE %}
 
@@ -296,5 +290,4 @@ html(lang="en")
       | {% endif %}
 
     | {% endif %}
-    | {% endfor %}
     | {% endfor %}
