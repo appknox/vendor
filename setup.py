@@ -35,6 +35,10 @@ setup(
 
     keywords='appknox vendor',
     packages=find_packages(),
+    data_files=[
+        ('excel', ['ak_vendor/translations/ja/subheading.xlsx',
+                   'ak_vendor/translations/ja/vulnerability.xlsx'])
+    ],
     include_package_data=True,
     entry_points='',
     install_requires=[
