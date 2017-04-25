@@ -228,15 +228,15 @@ html(lang="en")
         div
           p
             | {{ analysis.vulnerability.description | safe }}
-          | {% for descriptions in analysis.description %}
-          | {% if descriptions.extra_description %}
+          | {% for finding in analysis.findings %}
+          | {% if finding.title %}
           p
-            | {{ descriptions.extra_description | safe }}
+            | {{ finding.title | safe }}
           | {% endif %}
         div
           pre
             code
-              | {{ descriptions.description | safe }}
+              | {{ finding.description | safe }}
           | {% endfor %}
 
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
