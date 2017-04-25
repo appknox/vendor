@@ -1,194 +1,145 @@
-.align-middle {
-  display: flex;
-  justify-content: center;
-  align-items: center
+html {
+  color: rgb(107, 107, 107);
 }
 
-.main-container {
-  padding-left: 50px;
-  padding-right: 50px
+.appknox-logo {
+  margin-top: 100px;
+  text-align: center
 }
 
-.margin-top10 {
-  margin-top: 10px
+.main-heading {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 100;
+  text-decoration: underline
 }
 
-.margin-auto {
-  margin: 0 auto
+.sub-heading {
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px
 }
 
-.margin-top20 {
-  margin-top: 20px
+.app-name {
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 70px
 }
 
-.margin-bottom50{
-  margin-bottom: 50px
-}
-
-.margin-left35{
-  margin-left: 35px
-}
-
-.margin-left50{
-  margin-left: 50px
-}
-
-.margin-top50 {
-  margin-top: 50px
-}
-
-.margin-top100 {
-  margin-top: 100px
-}
-
-.underline {
-  border-bottom: 2px solid #6B6B6B
-}
-
-.italics {
-  font-style: italic
-}
-
-.mini-container p {
-  padding: 0 50px 0 50px;
-  font-size: 15px;
-  margin-bottom: 30px
+.doc-description p {
+  font-size: 18px;
+  margin-top: 70px
 }
 
 .heading-container {
   border: 2px solid #EF4836;
   border-radius: 5px;
   color: #EF4836;
-  padding: 2px;
+  padding: 5px;
   margin: 40px auto;
-  flex: none;
-  min-width: 30%
+  min-width: 30%;
+  width: 50%;
+  max-width: 70%;
+  text-align: center;
+  font-weight: 100!important;
+  font-size: 32px
 }
 
-.content-table ol li {
-  border-width: 1px 1px 0px 1px;
-  border-style: solid;
-  border-color: #000;
-  list-style-position: inside;
-  padding: 5px
+.content-table {
+  margin: auto;
+  width: 70%;
+  border: 1px solid #000;
+  border-collapse: collapse;
 }
 
-.content-table ol.main-heading li {
-  list-style-type: upper-roman;
-  padding-left: 10px
-}
-
-.content-table ol.main-heading li a {
-  cursor: pointer;
-  color: rgb(107, 107, 107)
-}
-
-.content-table ol.main-heading li a:hover {
-  color: darken(rgb(107, 107, 107), 50%)
-}
-
-.content-table ol.sub-topic li {
-  list-style-type: lower-alpha;
-  padding-left: 30px
-}
-
-.content-table ol.sub-topic li.last-child {
+.content-table tr td {
   border-bottom: 1px solid #000
 }
 
-.content-table ol.sub-heading li {
-  list-style-type: lower-roman;
-  padding-left: 50px
+.content-table a {
+  text-decoration: none;
+  color: rgb(107, 107, 107);
 }
 
-table.audit-table {
-  border-bottom: 1px solid #6B6B6B
+.main-table-heading a {
+  margin-left: 10px
 }
 
-table.audit-table tr td p {
-  font-size: 14px
+.sub-table-heading a {
+  margin-left: 20px
 }
 
-table.audit-table tr td.risk-type {
-  width: 20%;
-  vertical-align: middle
-}
-
-.report-container table {
-  width: 95%;
+.app-details {
   margin: auto;
-  border-bottom: 1px solid #6B6B6B
+  width: 90%;
+  border: 1px solid #000;
+  border-collapse: collapse;
 }
 
-.report-container table tr td {
-  border-color: #6B6B6B;
-  text-align: center;
-}
-
-.report-container table tr p {
-  font-size: 13px;
-  text-align: left
-}
-
-.report-container p {
-  font-size: 15px
+.app-details tr td {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  padding-left: 10px
 }
 
 .sub-heading-container {
   padding: 5px;
-  margin: 45px;
   border: 2px solid #EF4836;
   border-radius: 5px;
   color: #EF4836;
-  flex: none;
-  min-width: 30%
+  width:30%;
+  text-align: center
+}
+
+.audit-table {
+  margin: auto;
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.audit-table tr td {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  padding-left: 10px
+}
+
+.risk-type {
+  border-radius: 290486px;
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.risk-type-container {
+  padding-right: 10px
+}
+
+.sub-table {
+  margin-top: 50px
 }
 
 .risk-tag {
-  padding: 15px;
-  font-size: 16px
-}
-
-.bucket-list {
-  @extend .sub-heading-container;
-  border: none;
-  margin: 20px
-}
-
-.bucket-list ol li {
-  list-style-type: decimal;
-  margin-left: 30px;
-  font-size: 16px
+  padding: 7px;
+  font-size: 16px;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px
 }
 
 .analysis-type {
-  margin-left: 40px;
   border-left: 2px solid #C0C0C0;
   border-top: 2px solid #C0C0C0;
-  flex: none;
-  min-width: 20%
+  width: 30%;
+  margin-top: 20px
 }
 
-.sub-topic-heading ol li {
-  margin-left: 60px;
-  font-size: 15px
-}
-
-.link-tag {
-  margin-top: -70px
-}
-
-.bold {
-  font-weight: 900
-}
-
-.pre-code {
-  padding: 10px 0 0 10px;
-  background-color: #f5f5f5;
-  color: #FE4D3F;
-}
-
-.mini-container {
-  padding-left: 100px;
-  padding-right: 100px
+.analysis-type h5 {
+  margin-left: 10px;
+  margin-top: 0px;
+  padding-top: 5px;
 }
