@@ -35,9 +35,9 @@ vulnerability_template = {
 analysis_template = {
     'analiser_version': 0,
     'created_on': '2017-03-03 09:17:31.849832+00:00',
-    'description': [{
+    'findings': [{
         'description': 'AllowAllHostnameVerifier is instantiated in org.apache.http.conn.ssl.SSLConnectionSocketFactory-><clinit>',
-        'extra_description': None}],
+        'title': 'Foo Title'}],
     'risk': 1,
     'status': 1,
     'updated_on': '2017-03-03 09:18:14.704847+00:00',
