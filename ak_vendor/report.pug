@@ -42,7 +42,7 @@ html(lang="en")
                 | Table Of Contents
         .columns
           .column.is-half.margin-auto
-            .content-main-table  
+            .content-main-table
               .content-table
                 ol.main-heading
                   li
@@ -58,7 +58,7 @@ html(lang="en")
                     li
                       a(href="#04")
                         | Appknox Security Rating
-        
+
               | {% for analysis in file.analyses.all %}
               | {% if analysis.risk > RiskEnum.NONE %}
               .content-table
@@ -66,44 +66,44 @@ html(lang="en")
                   li
                     a(href="#{{ analysis.id }}")
                       | {{ analysis.vulnerability.heading }}
-                | {% for subheading in analysis.vulnerability.sub_headings.all %} 
-                     
-                ol.sub-topic   
+                | {% for subheading in analysis.vulnerability.sub_headings.all %}
+
+                ol.sub-topic
                   li
                     a(href="#{{ analysis.id }}{{ forloop.counter }}")
                       | {{ subheading.heading }}
-                | {% endfor %} 
-                
+                | {% endfor %}
+
                 | {% if analysis.vulnerability.non_compliant %}
                 ol.sub-topic
                   li
                     a(href="#{{ analysis.id }}{{ forloop.counter }}non_compliant")
                       | Noncompliant Code Example
-                | {% endif %}       
-                
+                | {% endif %}
+
                 | {% if analysis.vulnerability.compliant %}
                 ol.sub-topic
                   li
                     a(href="#{{ analysis.id }}{{ forloop.counter }}compliant")
                       | Compliant Solution
-                | {% endif %}     
-                  
+                | {% endif %}
+
                 | {% if analysis.vulnerability.related_to %}
                 ol.sub-topic
                   li
                     a(href="#{{ analysis.id }}{{ forloop.counter }}related_to")
                       | Related Vulnerabilities
-                | {% endif %}    
-                   
+                | {% endif %}
+
                 | {% if analysis.vulnerability.business_implication %}
                 ol.sub-topic
                   li
                     a(href="#{{ analysis.id }}{{ forloop.counter }}business_implication")
                       | Business Implication
                 | {% endif %}
-              | {% endif %}      
-              | {% endfor %}    
-                
+              | {% endif %}
+              | {% endfor %}
+
         .report-summary
           .columns
             .column.heading-container.flex-center
@@ -169,48 +169,48 @@ html(lang="en")
                 | {% else %}
                 | {{ analysis.get_risk_display }} Risk
                 | {% endif %}
-          | {% endfor %}      
-        
+          | {% endfor %}
+
         div.margin-top50
           table.audit-table
             tr
               td
-                | Priority Level      
-              td 
-                | Number of failed test cases 
-            tr    
+                | Priority Level
+              td
+                | Number of failed test cases
+            tr
               td
                 | High Risk
               td
-                | {# audit_summary | hash:RiskEnum.HIGH #}       
-            tr    
+                | {# audit_summary | hash:RiskEnum.HIGH #}
+            tr
               td
                 | Medium Risk
               td
-                | {# audit_summary | hash:RiskEnum.MEDIUM #}      
-            tr    
+                | {# audit_summary | hash:RiskEnum.MEDIUM #}
+            tr
               td
                 | Low Risk
               td
-                | {# audit_summary | hash:RiskEnum.LOW #}      
-                
+                | {# audit_summary | hash:RiskEnum.LOW #}
+
         section
           .columns
             .column.sub-heading-container.flex-center
               a(class="link-tag" id="04")
               h5
-                | Appknox Security Rating 
+                | Appknox Security Rating
           div(style="text-align:center" id="logo")
             img(class="images" width=316 height=75 src="{{ chart_url }}")
           p
-            | Appknox Security Rating: 
+            | Appknox Security Rating:
             b
               | {# audit_summary | hash:AUDIT_SUMMARY_RATING #}
-              | Unsecured         
-        
+              | Unsecured
+
         | {% for analysis in file.analyses.all %}
-        | {% if analysis.risk > RiskEnum.NONE %}  
-        section  
+        | {% if analysis.risk > RiskEnum.NONE %}
+        section
           .columns
             .column.heading-container.flex-center
                 a(class="link-tag" id="{{ analysis.id }}")
@@ -228,22 +228,22 @@ html(lang="en")
                 | Risk Assessment
           p.margin-left35.margin-top20
             | {{ analysis.vulnerability.description | safe }}
-          | {% for descriptions in analysis.description %}
-          | {% if descriptions.extra_description %}
-          p 
-            | {{ descriptions.extra_description | safe }}
+          | {% for finding in analysis.findings %}
+          | {% if finding.title %}
+          p
+            | {{ finding.title | safe }}
           | {% endif %}
           pre.pre-code.margin-left50.margin-top20.margin-bottom50
-            | {{ descriptions.description | safe }}
-          | {% endfor %}  
-          
+            | {{ finding.description | safe }}
+          | {% endfor %}
+
           | {% for subheading in analysis.vulnerability.sub_headings.all %}
           h3(id="title")
             a(id="{{ analysis.id }}{{ forloop.counter }}")
               | {{ subheading.heading }}
             | {{ subheading.content | safe }}
           | {% endfor %}
-          
+
           | {% if analysis.vulnerability.non_compliant %}
           .columns
             .column.analysis-type.margin-top50
@@ -252,7 +252,7 @@ html(lang="en")
                 | Noncompliant Code Example
           .margin-left35.margin-top20
             | {{ analysis.vulnerability.non_compliant | safe }}
-          | {% endif %}  
+          | {% endif %}
 
           | {% if analysis.vulnerability.compliant %}
           .columns
@@ -262,9 +262,9 @@ html(lang="en")
                 | Compliant Solution
           .margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.compliant | safe }}
-          | {% endif %}        
-          
-          | {% if analysis.vulnerability.business_implication %}  
+          | {% endif %}
+
+          | {% if analysis.vulnerability.business_implication %}
           .columns
             .column.analysis-type.margin-top50
               a(class="link-tag" id="{{ analysis.id }}{{ forloop.counter }}related_to")
@@ -272,8 +272,8 @@ html(lang="en")
                 | Related Vulnerabilities
           .margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.related_to | safe }}
-          | {% endif %}  
-          
+          | {% endif %}
+
           | {% if analysis.vulnerability.business_implication %}
           .columns
             .column.analysis-type.margin-top50
@@ -282,7 +282,7 @@ html(lang="en")
                 | Business Implication
           .margin-left35.margin-top20.margin-bottom50
             | {{ analysis.vulnerability.business_implication | safe }}
-          | {% endif %}     
-          
+          | {% endif %}
+
         | {% endif %}
-        | {% endfor %}          
+        | {% endfor %}
