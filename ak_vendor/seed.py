@@ -75,5 +75,11 @@ file_data = {
     'version': '1.0',
     'version_code': '1',
     'id': 29,
-    'analyses': {'all': [analiser1, analiser2]}
+    'sorted_analyses': [analiser1, analiser2],
+    'project': {
+        'get_platform_display': "Some Platform"
+    },
+    'risk_count_high': 10,
+    'risk_count_medium': 7,
+    'risk_count_low': 8,
 }

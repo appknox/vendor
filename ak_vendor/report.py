@@ -1,4 +1,5 @@
 from os import environ
+from datetime import datetime
 
 from django import template
 from django.conf import settings
@@ -17,16 +18,12 @@ pwd = environ['PWD']
 content = ""
 
 
-@register.filter(name="hash")
-def hash(dictionary, key):
-    return dictionary.get(key)
-
-
 with open(REPORT_PATH, "r") as input_file:
     template_string = input_file.read()
     template = Template(template_string, engine=Engine())
     context = Context(dict(
-        file=file, RiskEnum=RiskEnum))
+        file=file, RiskEnum=RiskEnum, chart_url="Some URL", rating=50.5,
+        date=str(datetime.now())))
     content = template.render(context)
 
 with open(OUTPUT_PATH, "w") as output_file:

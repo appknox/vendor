@@ -8,7 +8,7 @@ html(lang="en")
        }
       @page {
         @top-left { content: "confidential";}
-        @top-right { content: "10th April, 2017";}
+        @top-right { content: "{{date}}";}
         @bottom-center {
           border-top: 1px solid #6B6B6B;
           width: 100%;
@@ -43,6 +43,11 @@ html(lang="en")
                 | Application Name
               td
                 | {{file.name}}
+            tr
+              td
+                | Platform
+              td
+                | {{file.project.get_platform_display}}
             tr
               td
                 | Application Namespace
@@ -89,8 +94,8 @@ html(lang="en")
                 a(href="#security-rating")
                   | Appknox Security Rating
 
-            | {% for analysis in analyses %}
-            | {% if analysis.risk > RiskEnum.NONE %}
+            | {% for analysis in file.sorted_analyses %}
+            | {% if analysis.risk > RiskEnum.PASSED %}
             tr.main-table-heading
               td
                 a(href="#{{ analysis.id }}")
@@ -149,7 +154,7 @@ html(lang="en")
             | Audit Summary
         div
           table.audit-table
-            | {% for analysis in analyses %}
+            | {% for analysis in file.sorted_analyses %}
 
             tbody
               tr
@@ -160,11 +165,7 @@ html(lang="en")
                     | {{ analysis.vulnerability.description }}
                 td.risk-type-container
                   h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
-                    | {% if analysis.risk == RiskEnum.NONE %}
-                    | Passed
-                    | {% else %}
                     | {{ analysis.get_risk_display }} Risk
-                    | {% endif %}
             | {% endfor %}
 
       section.new-page
@@ -179,17 +180,17 @@ html(lang="en")
               td
                 | High Risk
               td
-                | {# audit_summary | hash:RiskEnum.HIGH #}
+                | {{ file.risk_count_high }}
             tr
               td
                 | Medium Risk
               td
-                | {# audit_summary | hash:RiskEnum.MEDIUM #}
+                | {{ file.risk_count_medium }}
             tr
               td
                 | Low Risk
               td
-                | {# audit_summary | hash:RiskEnum.LOW #}
+                | {{ file.risk_count_low }}
 
       section
         div
@@ -202,12 +203,12 @@ html(lang="en")
           p
             | Appknox Security Rating:
             b
-              | {# audit_summary | hash:AUDIT_SUMMARY_RATING #}
+              | {{ rating }}
               | Unsecured
 
-    | {% for analysis in analyses %}
+    | {% for analysis in file.sorted_analyses %}
 
-    | {% if analysis.risk > RiskEnum.NONE %}
+    | {% if analysis.risk > RiskEnum.PASSED %}
 
     section.new-page
       div
