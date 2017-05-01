@@ -20,7 +20,7 @@ html(lang="en")
       div.appknox-logo
         img(align="middle" src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
       div.main-heading
-        | {{ platform }} 
+        | {{ get_platform_display }}
         | Security Report
       div.sub-heading
         | For Internal Purpose
@@ -146,7 +146,7 @@ html(lang="en")
           | Report Summary
       div
         p
-          | Appknox conducted a security assessment of the mobile application for the Android platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.
+          | Appknox conducted a security assessment of the mobile application for the {{ file.project.get_platform_display }} platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.
 
       section
         div
