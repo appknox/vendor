@@ -39,7 +39,8 @@ analysis_template = {
         {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/q;->b'},
         {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->a'},
         {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->d'},
-        {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->f'}
+        {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->f'},
+        {'title': "Debug was enabled on the app which make it easier for attackers to hook a debugger, dump a stack trace and access debugging helper classes.", "description": "<application android:debuggable='true' Debug enabled for app"},
     ],
     'risk': 1,
     'status': 1,

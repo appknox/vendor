@@ -233,7 +233,7 @@ html(lang="en")
             | Risk Assessment
         div
           p
-            | {{ analysis.vulnerability.description | safe }}
+            | {{ analysis.vulnerability.description | escape }}
           | {% for finding in analysis.findings %}
           | {% if finding.title %}
           h2
@@ -241,7 +241,7 @@ html(lang="en")
           | {% endif %}
           pre
             code
-              | {{ finding.description | safe }}
+              | {{ finding.description | escape }}
           | {% endfor %}
 
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
