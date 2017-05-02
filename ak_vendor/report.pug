@@ -1,6 +1,7 @@
 doctype 5
 html(lang="en")
   head
+    // link(rel='stylesheet' href="file:///Users/dhilipsiva/Projects/appknox/bohemia/dist/report.css")
     link(rel='stylesheet' href="https://rawgit.com/appknox/bohemia/master/dist/report.css")
     style(type='text/css').
       .new-page {
@@ -237,8 +238,7 @@ html(lang="en")
           | {% endif %}
         div
           pre
-            code
-              | {{ finding.description | safe }}
+            | {{ finding.description | safe }}
           | {% endfor %}
 
       | {% for subheading in analysis.vulnerability.sub_headings.all %}
