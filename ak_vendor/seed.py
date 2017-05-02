@@ -15,7 +15,7 @@ Date created: 2017-03-30
 from copy import copy
 
 vulnerability_template = {
-    'business_implication': '<p>Application can be debugged and reverse engineers can debug and manipulate the Runtime logic of the application.</p>\n',
+    'business_implication': '<p>With Cordova 3.5.0 or prior, attackers may:</p><p>Para2 With Cordova 3.5.0 or prior, attackers may:</p><ul><li>Open and send data to arbitrary applications.</li><li>Bypass the HTTP whitelist and connect to arbitrary servers.</li><li>Change the start page via a crafted intent URL.</li></ul>',
     'compliant': '<p>Ensure that the <code>android:debuggable</code> attribute is set to false before the app is released:</p>\n<pre><code>android:debuggable=&quot;false&quot;</code></pre>\n<p>Note that some development environments (including Eclipse/ADT and Ant) automatically set <code>android:debuggable</code> to true for incremental or debugging builds but set it to false for release builds.</p>\n',
     'description': 'Debugging was enabled on the app which makes it easier for reverse\nengineers to hook a debugger to it. This allows dumping a stack trace\nand accessing debugging helper classes.',
     'heading': 'Do not release apps that are debuggable',
@@ -23,7 +23,7 @@ vulnerability_template = {
     'name': 'Application Debug Enabled',
     'non_compliant': '<p>This non-compliant code example shows an app that has the <code>android:debuggable</code> attribute set to true being accessed to reveal sensitive data.</p>\n<pre><code>$ adb shell\nshell@android:/ $ run-as com.example.someapp sh\nshell@android:/data/data/com.example.someapp $ id\nuid=10060(app_60) gid=10060(app_60)\nshell@android:/data/data/com.example.someapp $ ls files/\nsecret_data.txt\nshell@android:/data/data/com.example.some $ cat files/secret_data.txt\npassword=GoogolPlex\naccount_number=31974286</code></pre>\n<p>Clearly, with the <code>android:debuggable</code> attribute set to true, sensitive date related to the app can be revealed to any user.</p>\n',
     'question': 'Does the application has Debug enabled?',
-    'related_to': '',
+    'related_to': '<p>With Cordova 3.5.0 or prior, attackers may:</p><p>Para2 With Cordova 3.5.0 or prior, attackers may:</p><ul><li>Open and send data to arbitrary applications.</li><li>Bypass the HTTP whitelist and connect to arbitrary servers.</li><li>Change the start page via a crafted intent URL.</li></ul>',
     'success_message': 'Debugging was disabled',
     'types': [1],
     'uuid': '84b86ac9-a60e-40ef-ab1b-fc8ec39f6e1d',
@@ -35,9 +35,12 @@ vulnerability_template = {
 analysis_template = {
     'analiser_version': 0,
     'created_on': '2017-03-03 09:17:31.849832+00:00',
-    'findings': [{
-        'description': 'AllowAllHostnameVerifier is instantiated in org.apache.http.conn.ssl.SSLConnectionSocketFactory-><clinit>',
-        'title': 'Foo Title'}],
+    'findings': [
+        {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/q;->b'},
+        {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->a'},
+        {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->d'},
+        {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->f'}
+    ],
     'risk': 1,
     'status': 1,
     'updated_on': '2017-03-03 09:18:14.704847+00:00',
