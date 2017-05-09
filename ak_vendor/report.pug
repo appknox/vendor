@@ -225,7 +225,7 @@ html(lang="en")
       section.assessment
         div.analysis-type
           h5
-            | Risk Assessment
+            | {% trans "Risk Assessment" %}
         div
           p
             | {{ analysis.vulnerability.description | safe }}
@@ -255,7 +255,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}non-compliant")
           h5
-            | Noncompliant Code Example
+            | {% trans "Noncompliant Code Example" %}
         div
           | {{ analysis.vulnerability.non_compliant | safe }}
       | {% endif %}
@@ -265,7 +265,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}compliant")
           h5
-            | Compliant Solution
+            | {% trans "Compliant Solution" %}  
         div
           | {{ analysis.vulnerability.compliant | safe }}
       | {% endif %}
@@ -275,7 +275,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}business-implication")
           h5
-            | Business Implication
+            | {% trans "Business Implication" %}  
         div
           | {{ analysis.vulnerability.business_implication | safe }}
       | {% endif %}
@@ -285,7 +285,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}related-to")
           h5
-            | Related Vulnerabilities
+            | {% trans "Related Vulnerabilities" %}  
         div
           | {{ analysis.vulnerability.related_to | safe }}
       | {% endif %}
