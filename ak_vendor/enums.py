@@ -15,7 +15,7 @@ Date created: 2016-11-07
 from orm_choices import choices_with_unknown as choices
 
 from ak_vendor.constants import RISK_ENUM_PASSED, RISK_ENUM_LOW, \
-    RISK_ENUM_MEDIUM, RISK_ENUM_HIGH
+    RISK_ENUM_MEDIUM, RISK_ENUM_HIGH, RISK_ENUM_CRITICAL
 
 
 @choices
@@ -74,6 +74,7 @@ class RiskEnum:
         LOW = [RISK_ENUM_LOW, 'Low']
         MEDIUM = [RISK_ENUM_MEDIUM, 'Medium']
         HIGH = [RISK_ENUM_HIGH, 'High']
+        CRITICAL = [RISK_ENUM_CRITICAL, 'Critical']
 
 
 @choices

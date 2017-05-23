@@ -19,6 +19,7 @@ RISK_ENUM_PASSED = 0
 RISK_ENUM_LOW = 1
 RISK_ENUM_MEDIUM = 2
 RISK_ENUM_HIGH = 3
+RISK_ENUM_CRITICAL = 4
 
 VENDOR_DIR = dirname(abspath(__file__))
 REPORT_PATH = "%s/report.html" % VENDOR_DIR
