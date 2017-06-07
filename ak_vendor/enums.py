@@ -1,16 +1,4 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# vim: fenc=utf-8
-# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
-#
-#
-
-"""
-File name: enums.py
-Author: dhilipsiva <dhilipsiva@gmail.com>
-Date created: 2016-11-07
-"""
+# (c) 2017, XYSec Labs
 
 from orm_choices import choices_with_unknown as choices
 
@@ -286,3 +274,89 @@ class UserDepartmentEnum:
         SALES = [3, "Sales"]
         MARKETING = [4, "Marketing"]
         DESIGN = [5, "Design"]
+
+
+@choices
+class AttackVectorEnum:
+    """
+    CVSSv3 attack vector
+    """
+    class Meta:
+        NETWORK = ['N', 'Network']
+        ADJACENT = ['A', 'Adjacent']
+        LOCAL = ['L', 'Local']
+        PHYSICAL = ['P', 'Physical']
+
+
+@choices
+class AttackComplexityEnum:
+    """
+    CVSSv3 attack complexity
+    """
+    class Meta:
+        LOW = ['L', 'Low']
+        HIGH = ['H', 'High']
+
+
+@choices
+class PrivilegesRequiredEnum:
+    """
+    CVSSv3 privileges required
+    """
+    class Meta:
+        NONE = ['N', 'None']
+        LOW = ['L', 'Low']
+        HIGH = ['H', 'High']
+
+
+@choices
+class UserInteractionEnum:
+    """
+    CVSSv3 user interaction
+    """
+    class Meta:
+        NOT_REQUIRED = ['N', 'Not Required']
+        REQUIRED = ['R', 'Required']
+
+
+@choices
+class ScopeEnum:
+    """
+    CVSSv3 scope
+    """
+    class Meta:
+        UNCHANGED = ['U', 'Unchanged']
+        CHANGED = ['C', 'Changed']
+
+
+@choices
+class ConfidentialityImpactEnum:
+    """
+    CVSSv3 confidentiality impact
+    """
+    class Meta:
+        HIGH = ['H', 'High']
+        LOW = ['L', 'Low']
+        NONE = ['N', 'None']
+
+
+@choices
+class IntegrityImpactEnum:
+    """
+    CVSSv3 integrity impact
+    """
+    class Meta:
+        HIGH = ['H', 'High']
+        LOW = ['L', 'Low']
+        NONE = ['N', 'None']
+
+
+@choices
+class AvailabilityImpactEnum:
+    """
+    CVSSv3 availability impact
+    """
+    class Meta:
+        HIGH = ['H', 'High']
+        LOW = ['L', 'Low']
+        NONE = ['N', 'None']
