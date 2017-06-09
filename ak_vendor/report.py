@@ -20,6 +20,11 @@ content = ""
 
 with open(REPORT_PATH, "r") as input_file:
     template_string = input_file.read()
+    ts_list = template_string.split('{% trans "')
+    ts_1 = ts_list[0]
+    ts_rest = [ts.replace('" %}', '', 1) for ts in ts_list[1:]]
+    ts_rest.insert(0, ts_1)
+    template_string = " ".join(ts_rest)
     template = Template(template_string, engine=Engine())
     context = Context(dict(
         file=file, RiskEnum=RiskEnum, chart_url="Some URL", rating=50.5,
