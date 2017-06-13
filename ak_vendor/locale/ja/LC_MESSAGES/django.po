@@ -3,353 +3,98 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: mycroft/core/data/vulnerabilities.py:969
-#: mycroft/core/data/vulnerabilities.py:970
-#: mycroft/core/data/vulnerabilities.py:1100
-#: mycroft/core/data/vulnerabilities.py:1142
-#: mycroft/core/data/vulnerabilities.py:1143
-#: mycroft/core/data/vulnerabilities.py:1148
-#: mycroft/core/data/vulnerabilities.py:1149
-#: mycroft/core/data/vulnerabilities.py:1621
-#: mycroft/core/data/vulnerabilities.py:1622
-#: mycroft/core/data/vulnerabilities.py:1694
-#: mycroft/core/data/vulnerabilities.py:1870
-#: mycroft/core/data/vulnerabilities.py:1951
-#: mycroft/core/data/vulnerabilities.py:2022
-#: mycroft/core/data/vulnerabilities.py:2122
-#: mycroft/core/data/vulnerabilities.py:2123
-#: mycroft/core/data/vulnerabilities.py:2136
-#: mycroft/core/data/vulnerabilities.py:2194
-#: mycroft/core/data/vulnerabilities.py:2215
-#: mycroft/core/data/vulnerabilities.py:2216
-#: mycroft/core/data/vulnerabilities.py:2227
-#: mycroft/core/data/vulnerabilities.py:2272
-#: mycroft/core/data/vulnerabilities.py:2293
-#: mycroft/core/data/vulnerabilities.py:2294
-#: mycroft/core/data/vulnerabilities.py:2295
-#: mycroft/core/data/vulnerabilities.py:2296
-#: mycroft/core/data/vulnerabilities.py:2297
-#: mycroft/core/data/vulnerabilities.py:2310
-#: mycroft/core/data/vulnerabilities.py:2333
-#: mycroft/core/data/vulnerabilities.py:2334
-#: mycroft/core/data/vulnerabilities.py:2347
-#: mycroft/core/data/vulnerabilities.py:2372
-#: mycroft/core/data/vulnerabilities.py:2373
-#: mycroft/core/data/vulnerabilities.py:2386
-#: mycroft/core/data/vulnerabilities.py:2411
-#: mycroft/core/data/vulnerabilities.py:2412
-#: mycroft/core/data/vulnerabilities.py:2425
-#: mycroft/core/data/vulnerabilities.py:2457
-#: mycroft/core/data/vulnerabilities.py:2458
-#: mycroft/core/data/vulnerabilities.py:2471
-#: mycroft/core/data/vulnerabilities.py:2504
-#: mycroft/core/data/vulnerabilities.py:2505
-#: mycroft/core/data/vulnerabilities.py:2518
-#: mycroft/core/data/vulnerabilities.py:2560
-#: mycroft/core/data/vulnerabilities.py:2561
-#: mycroft/core/data/vulnerabilities.py:2574
-#: mycroft/core/data/vulnerabilities.py:2610
-#: mycroft/core/data/vulnerabilities.py:2611
-#: mycroft/core/data/vulnerabilities.py:2624
-#: mycroft/core/data/vulnerabilities.py:2671
-#: mycroft/core/data/vulnerabilities.py:2672
-#: mycroft/core/data/vulnerabilities.py:2685
-#: mycroft/core/data/vulnerabilities.py:2741
-#: mycroft/core/data/vulnerabilities.py:2742
-#: mycroft/core/data/vulnerabilities.py:2755
-#: mycroft/core/data/vulnerabilities.py:2798
-#: mycroft/core/data/vulnerabilities.py:2799
-#: mycroft/core/data/vulnerabilities.py:2812
-#: mycroft/core/data/vulnerabilities.py:2847
-#: mycroft/core/data/vulnerabilities.py:2848
-#: mycroft/core/data/vulnerabilities.py:2861
-#: mycroft/core/data/vulnerabilities.py:2894
-#: mycroft/core/data/vulnerabilities.py:2895
-#: mycroft/core/data/vulnerabilities.py:2908
-#: mycroft/core/data/vulnerabilities.py:2943
-#: mycroft/core/data/vulnerabilities.py:2944
-#: mycroft/core/data/vulnerabilities.py:2957
-#: mycroft/core/data/vulnerabilities.py:3010
-#: mycroft/core/data/vulnerabilities.py:3011
-#: mycroft/core/data/vulnerabilities.py:3024
-#: mycroft/core/data/vulnerabilities.py:3053
-#: mycroft/core/data/vulnerabilities.py:3054
-#: mycroft/core/data/vulnerabilities.py:3067
-#: mycroft/core/data/vulnerabilities.py:3096
-#: mycroft/core/data/vulnerabilities.py:3097
-#: mycroft/core/data/vulnerabilities.py:3110
-#: mycroft/core/data/vulnerabilities.py:3148
-#: mycroft/core/data/vulnerabilities.py:3149
-#: mycroft/core/data/vulnerabilities.py:3162
-#: mycroft/core/data/vulnerabilities.py:3183
-#: mycroft/core/data/vulnerabilities.py:3184
-#: mycroft/core/data/vulnerabilities.py:3197
-#: mycroft/core/data/vulnerabilities.py:3232
-#: mycroft/core/data/vulnerabilities.py:3233
-#: mycroft/core/data/vulnerabilities.py:3246
-#: mycroft/core/data/vulnerabilities.py:3291
-#: mycroft/core/data/vulnerabilities.py:3292
-#: mycroft/core/data/vulnerabilities.py:3305
-#: mycroft/core/data/vulnerabilities.py:3344
-#: mycroft/core/data/vulnerabilities.py:3345
-#: mycroft/core/data/vulnerabilities.py:3358
-#: mycroft/core/data/vulnerabilities.py:3394
-#: mycroft/core/data/vulnerabilities.py:3395
-#: mycroft/core/data/vulnerabilities.py:3408
-#: mycroft/core/data/vulnerabilities.py:3441
-#: mycroft/core/data/vulnerabilities.py:3442
-#: mycroft/core/data/vulnerabilities.py:3455
-#: mycroft/core/data/vulnerabilities.py:3498
-#: mycroft/core/data/vulnerabilities.py:3499
-#: mycroft/core/data/vulnerabilities.py:3512
-#: mycroft/core/data/vulnerabilities.py:3549
-#: mycroft/core/data/vulnerabilities.py:3550
-#: mycroft/core/data/vulnerabilities.py:3563
-#: mycroft/core/data/vulnerabilities.py:3597
-#: mycroft/core/data/vulnerabilities.py:3598
-#: mycroft/core/data/vulnerabilities.py:3611
-#: mycroft/core/data/vulnerabilities.py:3674
-#: mycroft/core/data/vulnerabilities.py:3720
-#: mycroft/core/data/vulnerabilities.py:3721
-#: mycroft/core/data/vulnerabilities.py:3734
-#: mycroft/core/data/vulnerabilities.py:3746
-#: mycroft/core/data/vulnerabilities.py:3747
-#: mycroft/core/data/vulnerabilities.py:3748
-#: mycroft/core/data/vulnerabilities.py:3749
-#: mycroft/core/data/vulnerabilities.py:3750
-#: mycroft/core/data/vulnerabilities.py:3763
-#: mycroft/core/data/vulnerabilities.py:3789
-#: mycroft/core/data/vulnerabilities.py:3790
-#: mycroft/core/data/vulnerabilities.py:3803
-#: mycroft/core/data/vulnerabilities.py:3888
-#: mycroft/core/data/vulnerabilities.py:3962
-#: mycroft/core/data/vulnerabilities.py:3990
-#: mycroft/core/data/vulnerabilities.py:3991
-#: mycroft/core/data/vulnerabilities.py:3999
-#: mycroft/core/data/vulnerabilities.py:4018
-#: mycroft/core/data/vulnerabilities.py:4056
-#: mycroft/core/data/vulnerabilities.py:4057
-#: mycroft/core/data/vulnerabilities.py:4069
-#: mycroft/core/data/vulnerabilities.py:4109
-#: mycroft/core/data/vulnerabilities.py:4110
-#: mycroft/core/data/vulnerabilities.py:4122
-#: mycroft/core/data/vulnerabilities.py:4167
-#: mycroft/core/data/vulnerabilities.py:4168
-#: mycroft/core/data/vulnerabilities.py:4180
-#: mycroft/core/data/vulnerabilities.py:4241
-#: mycroft/core/data/vulnerabilities.py:4257
-#: mycroft/core/data/vulnerabilities.py:4283
-#: mycroft/core/data/vulnerabilities.py:4292
-#: mycroft/core/data/vulnerabilities.py:4293
-#: mycroft/core/data/vulnerabilities.py:4305
-#: mycroft/core/data/vulnerabilities.py:4325
-#: mycroft/core/data/vulnerabilities.py:4326
-#: mycroft/core/data/vulnerabilities.py:4327
-#: mycroft/core/data/vulnerabilities.py:4328
-#: mycroft/core/data/vulnerabilities.py:4329
-#: mycroft/core/data/vulnerabilities.py:4341
-#: mycroft/core/data/vulnerabilities.py:4361
-#: mycroft/core/data/vulnerabilities.py:4362
-#: mycroft/core/data/vulnerabilities.py:4363
-#: mycroft/core/data/vulnerabilities.py:4364
-#: mycroft/core/data/vulnerabilities.py:4365
-#: mycroft/core/data/vulnerabilities.py:4416
-#: mycroft/core/data/vulnerabilities.py:4417
-#: mycroft/core/data/vulnerabilities.py:4429
-#: mycroft/core/data/vulnerabilities.py:4445
-#: mycroft/core/data/vulnerabilities.py:4446
-#: mycroft/core/data/vulnerabilities.py:4447
-#: mycroft/core/data/vulnerabilities.py:4448
-#: mycroft/core/data/vulnerabilities.py:4461
-#: mycroft/core/data/vulnerabilities.py:4486
-#: mycroft/core/data/vulnerabilities.py:4487
-#: mycroft/core/data/vulnerabilities.py:4496
-#: mycroft/core/data/vulnerabilities.py:4509
-#: mycroft/core/data/vulnerabilities.py:4534
-#: mycroft/core/data/vulnerabilities.py:4535
-#: mycroft/core/data/vulnerabilities.py:4536
-#: mycroft/core/data/vulnerabilities.py:4537
-#: mycroft/core/data/vulnerabilities.py:4538
-#: mycroft/core/data/vulnerabilities.py:4551
-#: mycroft/core/data/vulnerabilities.py:4577
-#: mycroft/core/data/vulnerabilities.py:4578
-#: mycroft/core/data/vulnerabilities.py:4579
-#: mycroft/core/data/vulnerabilities.py:4580
-#: mycroft/core/data/vulnerabilities.py:4593
-#: mycroft/core/data/vulnerabilities.py:4609
-#: mycroft/core/data/vulnerabilities.py:4610
-#: mycroft/core/data/vulnerabilities.py:4611
-#: mycroft/core/data/vulnerabilities.py:4612
-#: mycroft/core/data/vulnerabilities.py:4613
-#: mycroft/core/data/vulnerabilities.py:4626
-#: mycroft/core/data/vulnerabilities.py:4648
-#: mycroft/core/data/vulnerabilities.py:4649
-#: mycroft/core/data/vulnerabilities.py:4650
-#: mycroft/core/data/vulnerabilities.py:4651
-#: mycroft/core/data/vulnerabilities.py:4664
-#: mycroft/core/data/vulnerabilities.py:4678
-#: mycroft/core/data/vulnerabilities.py:4679
-#: mycroft/core/data/vulnerabilities.py:4680
-#: mycroft/core/data/vulnerabilities.py:4681
-#: mycroft/core/data/vulnerabilities.py:4682
-#: mycroft/core/data/vulnerabilities.py:4695
-#: mycroft/core/data/vulnerabilities.py:4708
-#: mycroft/core/data/vulnerabilities.py:4709
-#: mycroft/core/data/vulnerabilities.py:4710
-#: mycroft/core/data/vulnerabilities.py:4711
-#: mycroft/core/data/vulnerabilities.py:4712
-#: mycroft/core/data/vulnerabilities.py:4725
-#: mycroft/core/data/vulnerabilities.py:4736
-#: mycroft/core/data/vulnerabilities.py:4737
-#: mycroft/core/data/vulnerabilities.py:4738
-#: mycroft/core/data/vulnerabilities.py:4739
-#: mycroft/core/data/vulnerabilities.py:4740
-#: mycroft/core/data/vulnerabilities.py:4753
-#: mycroft/core/data/vulnerabilities.py:4767
-#: mycroft/core/data/vulnerabilities.py:4768
-#: mycroft/core/data/vulnerabilities.py:4769
-#: mycroft/core/data/vulnerabilities.py:4770
-#: mycroft/core/data/vulnerabilities.py:4771
-#: mycroft/core/data/vulnerabilities.py:4784
-#: mycroft/core/data/vulnerabilities.py:4798
-#: mycroft/core/data/vulnerabilities.py:4807
-#: mycroft/core/data/vulnerabilities.py:4808
-#: mycroft/core/data/vulnerabilities.py:4821
-#: mycroft/core/data/vulnerabilities.py:4832
-#: mycroft/core/data/vulnerabilities.py:4833
-#: mycroft/core/data/vulnerabilities.py:4834
-#: mycroft/core/data/vulnerabilities.py:4835
-#: mycroft/core/data/vulnerabilities.py:4836
-#: mycroft/core/data/vulnerabilities.py:4849
-#: mycroft/core/data/vulnerabilities.py:4862
-#: mycroft/core/data/vulnerabilities.py:4863
-#: mycroft/core/data/vulnerabilities.py:4864
-#: mycroft/core/data/vulnerabilities.py:4865
-#: mycroft/core/data/vulnerabilities.py:4866
-#: mycroft/core/data/vulnerabilities.py:4879
-#: mycroft/core/data/vulnerabilities.py:4903
-#: mycroft/core/data/vulnerabilities.py:4904
-#: mycroft/core/data/vulnerabilities.py:4905
-#: mycroft/core/data/vulnerabilities.py:4906
-#: mycroft/core/data/vulnerabilities.py:4907
-#: mycroft/core/data/vulnerabilities.py:4920
-#: mycroft/core/data/vulnerabilities.py:4935
-#: mycroft/core/data/vulnerabilities.py:4936
-#: mycroft/core/data/vulnerabilities.py:4937
-#: mycroft/core/data/vulnerabilities.py:4938
-#: mycroft/core/data/vulnerabilities.py:4939
-#: mycroft/core/data/vulnerabilities.py:4952
-#: mycroft/core/data/vulnerabilities.py:4971
-#: mycroft/core/data/vulnerabilities.py:4972
-#: mycroft/core/data/vulnerabilities.py:4973
-#: mycroft/core/data/vulnerabilities.py:4974
-#: mycroft/core/data/vulnerabilities.py:4987
-#: mycroft/core/data/vulnerabilities.py:5011
-#: mycroft/core/data/vulnerabilities.py:5012
-#: mycroft/core/data/vulnerabilities.py:5013
-#: mycroft/core/data/vulnerabilities.py:5014
-#: mycroft/core/data/vulnerabilities.py:5027
-#: mycroft/core/data/vulnerabilities.py:5040
-#: mycroft/core/data/vulnerabilities.py:5041
-#: mycroft/core/data/vulnerabilities.py:5042
-#: mycroft/core/data/vulnerabilities.py:5043
-#: mycroft/core/data/vulnerabilities.py:5044
-#: mycroft/core/data/vulnerabilities.py:5056
-#: mycroft/core/data/vulnerabilities.py:5071
-#: mycroft/core/data/vulnerabilities.py:5072
-#: mycroft/core/data/vulnerabilities.py:5073
-#: mycroft/core/data/vulnerabilities.py:5074 vulnerabilities.py:969
-#: vulnerabilities.py:970 vulnerabilities.py:1100 vulnerabilities.py:1142
-#: vulnerabilities.py:1143 vulnerabilities.py:1148 vulnerabilities.py:1149
-#: vulnerabilities.py:1621 vulnerabilities.py:1622 vulnerabilities.py:1694
-#: vulnerabilities.py:1870 vulnerabilities.py:1951 vulnerabilities.py:2022
-#: vulnerabilities.py:2122 vulnerabilities.py:2123 vulnerabilities.py:2136
-#: vulnerabilities.py:2194 vulnerabilities.py:2215 vulnerabilities.py:2216
-#: vulnerabilities.py:2227 vulnerabilities.py:2272 vulnerabilities.py:2293
-#: vulnerabilities.py:2294 vulnerabilities.py:2295 vulnerabilities.py:2296
-#: vulnerabilities.py:2297 vulnerabilities.py:2310 vulnerabilities.py:2333
-#: vulnerabilities.py:2334 vulnerabilities.py:2347 vulnerabilities.py:2372
-#: vulnerabilities.py:2373 vulnerabilities.py:2386 vulnerabilities.py:2411
-#: vulnerabilities.py:2412 vulnerabilities.py:2425 vulnerabilities.py:2457
-#: vulnerabilities.py:2458 vulnerabilities.py:2471 vulnerabilities.py:2504
-#: vulnerabilities.py:2505 vulnerabilities.py:2518 vulnerabilities.py:2560
-#: vulnerabilities.py:2561 vulnerabilities.py:2574 vulnerabilities.py:2610
-#: vulnerabilities.py:2611 vulnerabilities.py:2624 vulnerabilities.py:2671
-#: vulnerabilities.py:2672 vulnerabilities.py:2685 vulnerabilities.py:2741
-#: vulnerabilities.py:2742 vulnerabilities.py:2755 vulnerabilities.py:2798
-#: vulnerabilities.py:2799 vulnerabilities.py:2812 vulnerabilities.py:2847
-#: vulnerabilities.py:2848 vulnerabilities.py:2861 vulnerabilities.py:2894
-#: vulnerabilities.py:2895 vulnerabilities.py:2908 vulnerabilities.py:2943
-#: vulnerabilities.py:2944 vulnerabilities.py:2957 vulnerabilities.py:3010
-#: vulnerabilities.py:3011 vulnerabilities.py:3024 vulnerabilities.py:3053
-#: vulnerabilities.py:3054 vulnerabilities.py:3067 vulnerabilities.py:3096
-#: vulnerabilities.py:3097 vulnerabilities.py:3110 vulnerabilities.py:3148
-#: vulnerabilities.py:3149 vulnerabilities.py:3162 vulnerabilities.py:3183
-#: vulnerabilities.py:3184 vulnerabilities.py:3197 vulnerabilities.py:3232
-#: vulnerabilities.py:3233 vulnerabilities.py:3246 vulnerabilities.py:3291
-#: vulnerabilities.py:3292 vulnerabilities.py:3305 vulnerabilities.py:3344
-#: vulnerabilities.py:3345 vulnerabilities.py:3358 vulnerabilities.py:3394
-#: vulnerabilities.py:3395 vulnerabilities.py:3408 vulnerabilities.py:3441
-#: vulnerabilities.py:3442 vulnerabilities.py:3455 vulnerabilities.py:3498
-#: vulnerabilities.py:3499 vulnerabilities.py:3512 vulnerabilities.py:3549
-#: vulnerabilities.py:3550 vulnerabilities.py:3563 vulnerabilities.py:3597
-#: vulnerabilities.py:3598 vulnerabilities.py:3611 vulnerabilities.py:3674
-#: vulnerabilities.py:3720 vulnerabilities.py:3721 vulnerabilities.py:3734
-#: vulnerabilities.py:3746 vulnerabilities.py:3747 vulnerabilities.py:3748
-#: vulnerabilities.py:3749 vulnerabilities.py:3750 vulnerabilities.py:3763
-#: vulnerabilities.py:3789 vulnerabilities.py:3790 vulnerabilities.py:3803
-#: vulnerabilities.py:3888 vulnerabilities.py:3962 vulnerabilities.py:3990
-#: vulnerabilities.py:3991 vulnerabilities.py:3999 vulnerabilities.py:4018
-#: vulnerabilities.py:4056 vulnerabilities.py:4057 vulnerabilities.py:4069
-#: vulnerabilities.py:4109 vulnerabilities.py:4110 vulnerabilities.py:4122
-#: vulnerabilities.py:4167 vulnerabilities.py:4168 vulnerabilities.py:4180
-#: vulnerabilities.py:4241 vulnerabilities.py:4257 vulnerabilities.py:4283
-#: vulnerabilities.py:4292 vulnerabilities.py:4293 vulnerabilities.py:4305
-#: vulnerabilities.py:4325 vulnerabilities.py:4326 vulnerabilities.py:4327
-#: vulnerabilities.py:4328 vulnerabilities.py:4329 vulnerabilities.py:4341
-#: vulnerabilities.py:4361 vulnerabilities.py:4362 vulnerabilities.py:4363
-#: vulnerabilities.py:4364 vulnerabilities.py:4365 vulnerabilities.py:4416
-#: vulnerabilities.py:4417 vulnerabilities.py:4429 vulnerabilities.py:4445
-#: vulnerabilities.py:4446 vulnerabilities.py:4447 vulnerabilities.py:4448
-#: vulnerabilities.py:4461 vulnerabilities.py:4486 vulnerabilities.py:4487
-#: vulnerabilities.py:4496 vulnerabilities.py:4509 vulnerabilities.py:4534
-#: vulnerabilities.py:4535 vulnerabilities.py:4536 vulnerabilities.py:4537
-#: vulnerabilities.py:4538 vulnerabilities.py:4551 vulnerabilities.py:4577
-#: vulnerabilities.py:4578 vulnerabilities.py:4579 vulnerabilities.py:4580
-#: vulnerabilities.py:4593 vulnerabilities.py:4609 vulnerabilities.py:4610
-#: vulnerabilities.py:4611 vulnerabilities.py:4612 vulnerabilities.py:4613
-#: vulnerabilities.py:4626 vulnerabilities.py:4648 vulnerabilities.py:4649
-#: vulnerabilities.py:4650 vulnerabilities.py:4651 vulnerabilities.py:4664
-#: vulnerabilities.py:4678 vulnerabilities.py:4679 vulnerabilities.py:4680
-#: vulnerabilities.py:4681 vulnerabilities.py:4682 vulnerabilities.py:4695
-#: vulnerabilities.py:4708 vulnerabilities.py:4709 vulnerabilities.py:4710
-#: vulnerabilities.py:4711 vulnerabilities.py:4712 vulnerabilities.py:4725
-#: vulnerabilities.py:4736 vulnerabilities.py:4737 vulnerabilities.py:4738
-#: vulnerabilities.py:4739 vulnerabilities.py:4740 vulnerabilities.py:4753
-#: vulnerabilities.py:4767 vulnerabilities.py:4768 vulnerabilities.py:4769
-#: vulnerabilities.py:4770 vulnerabilities.py:4771 vulnerabilities.py:4784
-#: vulnerabilities.py:4798 vulnerabilities.py:4807 vulnerabilities.py:4808
-#: vulnerabilities.py:4821 vulnerabilities.py:4832 vulnerabilities.py:4833
-#: vulnerabilities.py:4834 vulnerabilities.py:4835 vulnerabilities.py:4836
-#: vulnerabilities.py:4849 vulnerabilities.py:4862 vulnerabilities.py:4863
-#: vulnerabilities.py:4864 vulnerabilities.py:4865 vulnerabilities.py:4866
-#: vulnerabilities.py:4879 vulnerabilities.py:4903 vulnerabilities.py:4904
-#: vulnerabilities.py:4905 vulnerabilities.py:4906 vulnerabilities.py:4907
-#: vulnerabilities.py:4920 vulnerabilities.py:4935 vulnerabilities.py:4936
-#: vulnerabilities.py:4937 vulnerabilities.py:4938 vulnerabilities.py:4939
-#: vulnerabilities.py:4952 vulnerabilities.py:4971 vulnerabilities.py:4972
-#: vulnerabilities.py:4973 vulnerabilities.py:4974 vulnerabilities.py:4987
-#: vulnerabilities.py:5011 vulnerabilities.py:5012 vulnerabilities.py:5013
-#: vulnerabilities.py:5014 vulnerabilities.py:5027 vulnerabilities.py:5040
-#: vulnerabilities.py:5041 vulnerabilities.py:5042 vulnerabilities.py:5043
-#: vulnerabilities.py:5044 vulnerabilities.py:5056 vulnerabilities.py:5071
-#: vulnerabilities.py:5072 vulnerabilities.py:5073 vulnerabilities.py:5074
+#: vulnerabilities.py:969 vulnerabilities.py:970 vulnerabilities.py:1100
+#: vulnerabilities.py:1142 vulnerabilities.py:1143 vulnerabilities.py:1148
+#: vulnerabilities.py:1149 vulnerabilities.py:1621 vulnerabilities.py:1622
+#: vulnerabilities.py:1694 vulnerabilities.py:1870 vulnerabilities.py:1951
+#: vulnerabilities.py:2022 vulnerabilities.py:2122 vulnerabilities.py:2123
+#: vulnerabilities.py:2136 vulnerabilities.py:2194 vulnerabilities.py:2215
+#: vulnerabilities.py:2216 vulnerabilities.py:2227 vulnerabilities.py:2272
+#: vulnerabilities.py:2293 vulnerabilities.py:2294 vulnerabilities.py:2295
+#: vulnerabilities.py:2296 vulnerabilities.py:2297 vulnerabilities.py:2310
+#: vulnerabilities.py:2333 vulnerabilities.py:2334 vulnerabilities.py:2347
+#: vulnerabilities.py:2372 vulnerabilities.py:2373 vulnerabilities.py:2386
+#: vulnerabilities.py:2411 vulnerabilities.py:2412 vulnerabilities.py:2425
+#: vulnerabilities.py:2457 vulnerabilities.py:2458 vulnerabilities.py:2471
+#: vulnerabilities.py:2504 vulnerabilities.py:2505 vulnerabilities.py:2518
+#: vulnerabilities.py:2560 vulnerabilities.py:2561 vulnerabilities.py:2574
+#: vulnerabilities.py:2610 vulnerabilities.py:2611 vulnerabilities.py:2624
+#: vulnerabilities.py:2671 vulnerabilities.py:2672 vulnerabilities.py:2685
+#: vulnerabilities.py:2741 vulnerabilities.py:2742 vulnerabilities.py:2755
+#: vulnerabilities.py:2798 vulnerabilities.py:2799 vulnerabilities.py:2812
+#: vulnerabilities.py:2847 vulnerabilities.py:2848 vulnerabilities.py:2861
+#: vulnerabilities.py:2894 vulnerabilities.py:2895 vulnerabilities.py:2908
+#: vulnerabilities.py:2943 vulnerabilities.py:2944 vulnerabilities.py:2957
+#: vulnerabilities.py:3010 vulnerabilities.py:3011 vulnerabilities.py:3024
+#: vulnerabilities.py:3053 vulnerabilities.py:3054 vulnerabilities.py:3067
+#: vulnerabilities.py:3096 vulnerabilities.py:3097 vulnerabilities.py:3110
+#: vulnerabilities.py:3148 vulnerabilities.py:3149 vulnerabilities.py:3162
+#: vulnerabilities.py:3183 vulnerabilities.py:3184 vulnerabilities.py:3197
+#: vulnerabilities.py:3232 vulnerabilities.py:3233 vulnerabilities.py:3246
+#: vulnerabilities.py:3291 vulnerabilities.py:3292 vulnerabilities.py:3305
+#: vulnerabilities.py:3344 vulnerabilities.py:3345 vulnerabilities.py:3358
+#: vulnerabilities.py:3394 vulnerabilities.py:3395 vulnerabilities.py:3408
+#: vulnerabilities.py:3441 vulnerabilities.py:3442 vulnerabilities.py:3455
+#: vulnerabilities.py:3498 vulnerabilities.py:3499 vulnerabilities.py:3512
+#: vulnerabilities.py:3549 vulnerabilities.py:3550 vulnerabilities.py:3563
+#: vulnerabilities.py:3597 vulnerabilities.py:3598 vulnerabilities.py:3611
+#: vulnerabilities.py:3674 vulnerabilities.py:3720 vulnerabilities.py:3721
+#: vulnerabilities.py:3734 vulnerabilities.py:3746 vulnerabilities.py:3747
+#: vulnerabilities.py:3748 vulnerabilities.py:3749 vulnerabilities.py:3750
+#: vulnerabilities.py:3763 vulnerabilities.py:3789 vulnerabilities.py:3790
+#: vulnerabilities.py:3803 vulnerabilities.py:3888 vulnerabilities.py:3962
+#: vulnerabilities.py:3990 vulnerabilities.py:3991 vulnerabilities.py:3999
+#: vulnerabilities.py:4018 vulnerabilities.py:4056 vulnerabilities.py:4057
+#: vulnerabilities.py:4069 vulnerabilities.py:4109 vulnerabilities.py:4110
+#: vulnerabilities.py:4122 vulnerabilities.py:4167 vulnerabilities.py:4168
+#: vulnerabilities.py:4180 vulnerabilities.py:4241 vulnerabilities.py:4257
+#: vulnerabilities.py:4283 vulnerabilities.py:4292 vulnerabilities.py:4293
+#: vulnerabilities.py:4305 vulnerabilities.py:4325 vulnerabilities.py:4326
+#: vulnerabilities.py:4327 vulnerabilities.py:4328 vulnerabilities.py:4329
+#: vulnerabilities.py:4341 vulnerabilities.py:4361 vulnerabilities.py:4362
+#: vulnerabilities.py:4363 vulnerabilities.py:4364 vulnerabilities.py:4365
+#: vulnerabilities.py:4416 vulnerabilities.py:4417 vulnerabilities.py:4429
+#: vulnerabilities.py:4445 vulnerabilities.py:4446 vulnerabilities.py:4447
+#: vulnerabilities.py:4448 vulnerabilities.py:4461 vulnerabilities.py:4486
+#: vulnerabilities.py:4487 vulnerabilities.py:4496 vulnerabilities.py:4509
+#: vulnerabilities.py:4534 vulnerabilities.py:4535 vulnerabilities.py:4536
+#: vulnerabilities.py:4537 vulnerabilities.py:4538 vulnerabilities.py:4551
+#: vulnerabilities.py:4577 vulnerabilities.py:4578 vulnerabilities.py:4579
+#: vulnerabilities.py:4580 vulnerabilities.py:4593 vulnerabilities.py:4609
+#: vulnerabilities.py:4610 vulnerabilities.py:4611 vulnerabilities.py:4612
+#: vulnerabilities.py:4613 vulnerabilities.py:4626 vulnerabilities.py:4648
+#: vulnerabilities.py:4649 vulnerabilities.py:4650 vulnerabilities.py:4651
+#: vulnerabilities.py:4664 vulnerabilities.py:4678 vulnerabilities.py:4679
+#: vulnerabilities.py:4680 vulnerabilities.py:4681 vulnerabilities.py:4682
+#: vulnerabilities.py:4695 vulnerabilities.py:4708 vulnerabilities.py:4709
+#: vulnerabilities.py:4710 vulnerabilities.py:4711 vulnerabilities.py:4712
+#: vulnerabilities.py:4725 vulnerabilities.py:4736 vulnerabilities.py:4737
+#: vulnerabilities.py:4738 vulnerabilities.py:4739 vulnerabilities.py:4740
+#: vulnerabilities.py:4753 vulnerabilities.py:4767 vulnerabilities.py:4768
+#: vulnerabilities.py:4769 vulnerabilities.py:4770 vulnerabilities.py:4771
+#: vulnerabilities.py:4784 vulnerabilities.py:4798 vulnerabilities.py:4807
+#: vulnerabilities.py:4808 vulnerabilities.py:4821 vulnerabilities.py:4832
+#: vulnerabilities.py:4833 vulnerabilities.py:4834 vulnerabilities.py:4835
+#: vulnerabilities.py:4836 vulnerabilities.py:4849 vulnerabilities.py:4862
+#: vulnerabilities.py:4863 vulnerabilities.py:4864 vulnerabilities.py:4865
+#: vulnerabilities.py:4866 vulnerabilities.py:4879 vulnerabilities.py:4903
+#: vulnerabilities.py:4904 vulnerabilities.py:4905 vulnerabilities.py:4906
+#: vulnerabilities.py:4907 vulnerabilities.py:4920 vulnerabilities.py:4935
+#: vulnerabilities.py:4936 vulnerabilities.py:4937 vulnerabilities.py:4938
+#: vulnerabilities.py:4939 vulnerabilities.py:4952 vulnerabilities.py:4971
+#: vulnerabilities.py:4972 vulnerabilities.py:4973 vulnerabilities.py:4974
+#: vulnerabilities.py:4987 vulnerabilities.py:5011 vulnerabilities.py:5012
+#: vulnerabilities.py:5013 vulnerabilities.py:5014 vulnerabilities.py:5027
+#: vulnerabilities.py:5040 vulnerabilities.py:5041 vulnerabilities.py:5042
+#: vulnerabilities.py:5043 vulnerabilities.py:5044 vulnerabilities.py:5056
+#: vulnerabilities.py:5071 vulnerabilities.py:5072 vulnerabilities.py:5073
+#: vulnerabilities.py:5074
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 10:24+0000\n"
+"POT-Creation-Date: 2017-06-13 10:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -358,11 +103,161 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: mycroft/core/data/subheadings.py:19 subheadings.py:19
+
+#: report.html:4
+msgid "confidential"
+msgstr "ために"
+
+#: report.html:16
+msgid "Security Report"
+msgstr "セキュリティレポート"
+
+#: report.html:16
+msgid "For Internal Purpose"
+msgstr "内部目的のために"
+
+#: report.html:16
+msgid "Prepared For"
+msgstr "以下のために準備："
+
+#: report.html:16
+msgid ""
+"Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates "
+"used in its production are the property of XYSec Labs Pte. Ltd. and cannot "
+"be copied without permission."
+msgstr ""
+"XYSec研究所のPteによって調製しました。株式会社本書の一部およびその製造に使用"
+"されるテンプレートは、XYSec研究所のPteの財産です。 （株）および許可なしにコ"
+"ピーすることはできません。"
+
+#: report.html:16
+msgid ""
+"While precautions have been taken in the preparation of this document, XYSec "
+"Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility "
+"for errors, omissions, or for damages resulting from the use of the "
+"information contained herein. Use of XYSec Labs Pte. Ltd. services does not "
+"guarantee the security of a system, or that intrusions will not occur."
+msgstr ""
+"注意事項は、本文書、XYSec研究所のPteの準備で撮影してきたが。 （株）、出版社、"
+"及び著者（複数可）は、エラーのため、省略、または本明細書に含まれている情報の"
+"使用から生じた損害について、一切の責任を負いません。 XYSec研究所のPteの使"
+"用。 （株）サービスは、システムのセキュリティを保証する、または侵入が発生しな"
+"いことはありません。"
+
+#: report.html:16
+msgid "Application Details"
+msgstr "アプリケーションの詳細"
+
+#: report.html:16
+msgid "Application Name"
+msgstr "アプリケーションログ"
+
+#: report.html:16
+msgid "Platform"
+msgstr ""
+
+#: report.html:16
+msgid "Application Namespace"
+msgstr "アプリケーションログ"
+
+#: report.html:16
+msgid "Version"
+msgstr ""
+
+#: report.html:16
+msgid "Audit Date"
+msgstr ""
+
+#: report.html:16
+msgid "Application SHA1 Hash"
+msgstr "アプリケーションログ"
+
+#: report.html:16
+msgid "Application MD5 Hash"
+msgstr "アプリケーションの詳細"
+
+#: report.html:16
+msgid "Table Of Contents"
+msgstr "目次"
+
+#: report.html:16 report.html:23
+msgid "Report Summary"
+msgstr "レポートの概要"
+
+#: report.html:16 report.html:23
+msgid "Audit Summary"
+msgstr "監査の概要"
+
+#: report.html:16 report.html:23
+msgid "Appknox Security Rating"
+msgstr "Appknoxセキュリティ評価"
+
+#: report.html:18 report.html:26
+msgid "Noncompliant Code Example"
+msgstr ""
+
+#: report.html:19 report.html:27
+msgid "Compliant Solution"
+msgstr ""
+
+#: report.html:20 report.html:28
+msgid "Business Implication"
+msgstr "ビジネスロジック"
+
+#: report.html:21 report.html:29
+msgid "Related Vulnerabilities"
+msgstr ""
+
+#: report.html:23
+msgid ""
+"Appknox conducted a security assessment of the mobile application for the "
+"{{ file.project.get_platform_display }} platform. This report contains all "
+"the findings during the automated auditing process. It also contains the "
+"process of discovering those vulnerabilities in the first place, and ways to "
+"remediate those issues."
+msgstr ""
+
+#: report.html:23
+msgid "Priority Level"
+msgstr ""
+
+#: report.html:23
+msgid "Number of failed test cases"
+msgstr ""
+
+#: report.html:23
+msgid "High Risk"
+msgstr ""
+
+#: report.html:23
+msgid "Medium Risk"
+msgstr ""
+
+#: report.html:23
+msgid "Low Risk"
+msgstr ""
+
+#: report.html:23
+msgid "Appknox Security Rating:"
+msgstr "Appknoxセキュリティ評価"
+
+#: report.html:23
+msgid "Unsecured"
+msgstr ""
+
+#: report.html:24
+msgid "Risk Rating"
+msgstr ""
+
+#: report.html:24
+msgid "Risk Assessment"
+msgstr ""
+
+#: subheadings.py:19
 msgid "setPluginState()"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:20 subheadings.py:20
+#: subheadings.py:20
 msgid ""
 "\n"
 "The setPluginState() method tells the WebView to enable, disable, or\n"
@@ -383,11 +278,11 @@ msgid ""
 "The default is OFF.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:37 subheadings.py:37
+#: subheadings.py:37
 msgid "setAllowFileAccess()"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:38 subheadings.py:38
+#: subheadings.py:38
 msgid ""
 "\n"
 "The setAllowFileAccess() method enables or disables file access within\n"
@@ -396,11 +291,11 @@ msgid ""
 "The default is true.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:49 subheadings.py:49
+#: subheadings.py:49
 msgid "setAllowContentAccess()"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:50 subheadings.py:50
+#: subheadings.py:50
 msgid ""
 "\n"
 "The setAllowContentAccess() method enables or disables content URL\n"
@@ -410,11 +305,11 @@ msgid ""
 "The default is true.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:62 subheadings.py:62
+#: subheadings.py:62
 msgid "setAllowFileAccessFromFileURLs()"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:63 subheadings.py:63
+#: subheadings.py:63
 msgid ""
 "\n"
 "Sets whether JavaScript running in the context of a file scheme URL\n"
@@ -428,13 +323,11 @@ msgid ""
 "and above.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:79 subheadings.py:79
+#: subheadings.py:79
 msgid "setAllowUniversalAccessFromFileURLs()"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:80
-#: mycroft/core/data/vulnerabilities.py:1162 subheadings.py:80
-#: vulnerabilities.py:1162
+#: subheadings.py:80 vulnerabilities.py:1162
 msgid ""
 "\n"
 "Sets whether JavaScript running in the context of a file scheme URL\n"
@@ -448,11 +341,11 @@ msgid ""
 "and above.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:96 subheadings.py:96
+#: subheadings.py:96
 msgid "Security Concerns for WebView Class"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:97 subheadings.py:97
+#: subheadings.py:97
 msgid ""
 "\n"
 "When an activity has WebView embedded to display web pages, any\n"
@@ -475,12 +368,11 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:122 mycroft/core/data/subheadings.py:291
 #: subheadings.py:122 subheadings.py:291
 msgid "Example Proof of Concept"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:123 subheadings.py:123
+#: subheadings.py:123
 msgid ""
 "\n"
 "This code shows how the vulnerability can be exploited:\n"
@@ -500,11 +392,11 @@ msgid ""
 "    this.startActivity(intent);\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:145 subheadings.py:145
+#: subheadings.py:145
 msgid "Public"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:146 subheadings.py:146
+#: subheadings.py:146
 msgid ""
 "\n"
 "By specifying the android:exported attribute in the AndroidManifest.xml\n"
@@ -520,11 +412,11 @@ msgid ""
 "be designed to handle only non-sensitive information.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:164 subheadings.py:164
+#: subheadings.py:164
 msgid "Private"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:165 subheadings.py:165
+#: subheadings.py:165
 msgid ""
 "\n"
 "You can make your provider private by specifying the android:exported\n"
@@ -542,11 +434,11 @@ msgid ""
 "from other apps.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:185 subheadings.py:185
+#: subheadings.py:185
 msgid "Example Proof of Concept:"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:186 subheadings.py:186
+#: subheadings.py:186
 #, python-format
 msgid ""
 "\n"
@@ -587,11 +479,11 @@ msgid ""
 "    }\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:226 subheadings.py:226
+#: subheadings.py:226
 msgid "To Log Output"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:227 subheadings.py:227
+#: subheadings.py:227
 msgid ""
 "\n"
 "The android.util.Log class allows a number of possibilities:\n"
@@ -607,24 +499,22 @@ msgid ""
 "Log.w (Warn)\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:245 subheadings.py:245
+#: subheadings.py:245
 msgid "Example:"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:246
-#: mycroft/core/data/vulnerabilities.py:1707 subheadings.py:246
-#: vulnerabilities.py:1707
+#: subheadings.py:246 vulnerabilities.py:1707
 msgid ""
 "\n"
 "    Log.v(\"method\", Login.TAG + \", account=\" + str1);\n"
 "    Log.v(\"method\", Login.TAG + \", password=\" + str2);\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:255 subheadings.py:255
+#: subheadings.py:255
 msgid "To Obtain Log Output"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:256 subheadings.py:256
+#: subheadings.py:256
 msgid ""
 "\n"
 "Declare READ\\_LOGS permission in the manifest file so that an app can\n"
@@ -657,7 +547,7 @@ msgid ""
 "information to log output.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:292 subheadings.py:292
+#: subheadings.py:292
 msgid ""
 "\n"
 "Example code of obtaining log output from a vulnerable application is as\n"
@@ -702,13 +592,11 @@ msgid ""
 "    tView.setText(slog);\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:338 subheadings.py:338
+#: subheadings.py:338
 msgid "Applicability"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:339
-#: mycroft/core/data/vulnerabilities.py:1964 subheadings.py:339
-#: vulnerabilities.py:1964
+#: subheadings.py:339 vulnerabilities.py:1964
 msgid ""
 "\n"
 "Applications should make sure that they do not send sensitive\n"
@@ -721,11 +609,11 @@ msgid ""
 "side effects.\n"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:354 subheadings.py:354
+#: subheadings.py:354
 msgid "General Best Practices"
 msgstr ""
 
-#: mycroft/core/data/subheadings.py:355 subheadings.py:355
+#: subheadings.py:355
 msgid ""
 "\n"
 "-   Assume that the network layer is not secure and may potentially be\n"
@@ -751,23 +639,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:928 vulnerabilities.py:928
+#: vulnerabilities.py:928
 msgid "Unprotected Services"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:929 vulnerabilities.py:929
+#: vulnerabilities.py:929
 msgid "Protect exported services with strong permissions."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:930 vulnerabilities.py:930
+#: vulnerabilities.py:930
 msgid "Are exported services sufficiently protected?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:931 vulnerabilities.py:931
+#: vulnerabilities.py:931
 msgid "Exported services in the app are sufficiently protected."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:932 vulnerabilities.py:932
+#: vulnerabilities.py:932
 msgid ""
 "\n"
 "The `setPluginState()` method tells the WebView to enable, disable, or\n"
@@ -783,7 +671,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:941 vulnerabilities.py:941
+#: vulnerabilities.py:941
 msgid ""
 "\n"
 "[Chin, et al.](https://www.securecoding.cert.org/confluence/display/java/AA."
@@ -798,7 +686,7 @@ msgid ""
 "be protected with strong permissions.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:952 vulnerabilities.py:952
+#: vulnerabilities.py:952
 msgid ""
 "\n"
 "A service was found to be shared with other apps on the device without\n"
@@ -806,40 +694,38 @@ msgid ""
 "accessible to any other application on the device.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:957
-#: mycroft/core/data/vulnerabilities.py:961 vulnerabilities.py:957
-#: vulnerabilities.py:961
+#: vulnerabilities.py:957 vulnerabilities.py:961
 msgid ""
 "\n"
 "Data can be shared through other services resulting in loss of sensitive\n"
 "information.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:965 vulnerabilities.py:965
+#: vulnerabilities.py:965
 msgid ""
 "\n"
 "Always protect the Activity with `export=false`\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:978 vulnerabilities.py:978
+#: vulnerabilities.py:978
 msgid "Improper Content Provider Permissions"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:979 vulnerabilities.py:979
+#: vulnerabilities.py:979
 msgid "Limit the accessibility of sensitive Content Providers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:980 vulnerabilities.py:980
+#: vulnerabilities.py:980
 msgid "Are Content Providers sufficiently protected?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:981 vulnerabilities.py:981
+#: vulnerabilities.py:981
 msgid ""
 "Application seems to properly implement SSL, or HTTPS is not implemented."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:982 vulnerabilities.py:982
+#: vulnerabilities.py:982
 msgid ""
 "\n"
 "The `setAllowFileAccess()` method enables or disables file access within\n"
@@ -848,7 +734,7 @@ msgid ""
 "The default is true.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:988 vulnerabilities.py:988
+#: vulnerabilities.py:988
 msgid ""
 "\n"
 "The `ContentProvider` class provides a mechanism for managing and sharing\n"
@@ -864,7 +750,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1001 vulnerabilities.py:1001
+#: vulnerabilities.py:1001
 msgid ""
 "\n"
 "A content provider permission was set to allow access from any other app\n"
@@ -872,9 +758,7 @@ msgid ""
 "an app and therefore should not be shared.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1006
-#: mycroft/core/data/vulnerabilities.py:1011 vulnerabilities.py:1006
-#: vulnerabilities.py:1011
+#: vulnerabilities.py:1006 vulnerabilities.py:1011
 msgid ""
 "\n"
 "If security controls are not properly implemented, content providers can\n"
@@ -882,7 +766,7 @@ msgid ""
 "traditional SQL injection attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1016 vulnerabilities.py:1016
+#: vulnerabilities.py:1016
 msgid ""
 "\n"
 "The following entry in the AndroidManifest.xml file makes the content\n"
@@ -890,7 +774,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1021 vulnerabilities.py:1021
+#: vulnerabilities.py:1021
 msgid ""
 "\n"
 "MovatwiTouch, a Twitter client application, used a content provider to\n"
@@ -905,7 +789,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1033 vulnerabilities.py:1033
+#: vulnerabilities.py:1033
 msgid ""
 "\n"
 "- [JVN\\#90289505](https://jvn.jp/en/jp/JVN90289505/) Content provider\n"
@@ -913,23 +797,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1046 vulnerabilities.py:1046
+#: vulnerabilities.py:1046
 msgid "Application Debugging"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1047 vulnerabilities.py:1047
+#: vulnerabilities.py:1047
 msgid "Never ships builds that have debug information."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1048 vulnerabilities.py:1048
+#: vulnerabilities.py:1048
 msgid "Does the application have debug enabled?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1049 vulnerabilities.py:1049
+#: vulnerabilities.py:1049
 msgid "Debug was found to be disabled."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1050 vulnerabilities.py:1050
+#: vulnerabilities.py:1050
 msgid ""
 "\n"
 "The `setAllowContentAccess()` method enables or disables content URL\n"
@@ -939,7 +823,7 @@ msgid ""
 "The default is true.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1057 vulnerabilities.py:1057
+#: vulnerabilities.py:1057
 msgid ""
 "\n"
 "Android allows the attribute `android:debuggable` to be set to true so\n"
@@ -952,7 +836,7 @@ msgid ""
 "its source code.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1067 vulnerabilities.py:1067
+#: vulnerabilities.py:1067
 msgid ""
 "\n"
 "Debugging was enabled on the app which makes it easier for reverse\n"
@@ -960,9 +844,7 @@ msgid ""
 "and accessing debugging helper classes.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1072
-#: mycroft/core/data/vulnerabilities.py:1076 vulnerabilities.py:1072
-#: vulnerabilities.py:1076
+#: vulnerabilities.py:1072 vulnerabilities.py:1076
 msgid ""
 "\n"
 "Application can be debugged and reverse engineers can debug and manipulate "
@@ -970,7 +852,7 @@ msgid ""
 "Runtime logic of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1080 vulnerabilities.py:1080
+#: vulnerabilities.py:1080
 msgid ""
 "\n"
 "Ensure that the `android:debuggable` attribute is set to false before the\n"
@@ -983,7 +865,7 @@ msgid ""
 "debugging builds but set it to false for release builds.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1090 vulnerabilities.py:1090
+#: vulnerabilities.py:1090
 msgid ""
 "\n"
 "This non-compliant code example shows an app that has the\n"
@@ -992,7 +874,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1095 vulnerabilities.py:1095
+#: vulnerabilities.py:1095
 msgid ""
 "\n"
 "\n"
@@ -1000,26 +882,26 @@ msgid ""
 "date related to the app can be revealed to any user.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1109 vulnerabilities.py:1109
+#: vulnerabilities.py:1109
 msgid "Improper Custom Permissions"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1110 vulnerabilities.py:1110
+#: vulnerabilities.py:1110
 msgid ""
 "Check that the calling app has appropriate permissions before responding."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1111 vulnerabilities.py:1111
+#: vulnerabilities.py:1111
 msgid "Are protection levels of the custom permission safe?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1112 vulnerabilities.py:1112
+#: vulnerabilities.py:1112
 msgid ""
 "Custom permissions in the app have sufficient protection levels, or custom "
 "permissions are absent."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1113 vulnerabilities.py:1113
+#: vulnerabilities.py:1113
 msgid ""
 "\n"
 "Sets whether JavaScript running in the context of a file scheme URL\n"
@@ -1033,7 +915,7 @@ msgid ""
 "and above.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1124 vulnerabilities.py:1124
+#: vulnerabilities.py:1124
 msgid ""
 "\n"
 "If an app is using a granted permission to respond to a calling app then\n"
@@ -1047,7 +929,7 @@ msgid ""
 "calling app has the correct permissions.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1135 vulnerabilities.py:1135
+#: vulnerabilities.py:1135
 msgid ""
 "\n"
 "A custom permission controls whether other applications can access the\n"
@@ -1057,30 +939,30 @@ msgid ""
 "required during installation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1144 vulnerabilities.py:1144
+#: vulnerabilities.py:1144
 msgid ""
 "\n"
 "Remove custom permissions which are not required from the\n"
 "custom-permission sets defined in the `AndroidManifest.xml`\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1158 vulnerabilities.py:1158
+#: vulnerabilities.py:1158
 msgid "Broken SSL Trust Manager"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1159 vulnerabilities.py:1159
+#: vulnerabilities.py:1159
 msgid "Ensure that SSL/TLS Trust Manager is properly configured."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1160 vulnerabilities.py:1160
+#: vulnerabilities.py:1160
 msgid "Is the Trust Manager for SSL implemented properly?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1161 vulnerabilities.py:1161
+#: vulnerabilities.py:1161
 msgid "Trust Managers for SSL, if any, seem to be properly implemented."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1173 vulnerabilities.py:1173
+#: vulnerabilities.py:1173
 msgid ""
 "\n"
 "Android apps that use SSL/TLS protocols for secure communication should\n"
@@ -1113,21 +995,15 @@ msgid ""
 "implementation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1202 vulnerabilities.py:1202
+#: vulnerabilities.py:1202
 msgid ""
 "\n"
 "Implements naive certificate check. This Trust Manager breaks\n"
 "certificate validation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1206
-#: mycroft/core/data/vulnerabilities.py:1215
-#: mycroft/core/data/vulnerabilities.py:1299
-#: mycroft/core/data/vulnerabilities.py:1308
-#: mycroft/core/data/vulnerabilities.py:1458
-#: mycroft/core/data/vulnerabilities.py:1467 vulnerabilities.py:1206
-#: vulnerabilities.py:1215 vulnerabilities.py:1299 vulnerabilities.py:1308
-#: vulnerabilities.py:1458 vulnerabilities.py:1467
+#: vulnerabilities.py:1206 vulnerabilities.py:1215 vulnerabilities.py:1299
+#: vulnerabilities.py:1308 vulnerabilities.py:1458 vulnerabilities.py:1467
 msgid ""
 "\n"
 "In the event that a user (anonymous or verified) is able to execute\n"
@@ -1139,7 +1015,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1224 vulnerabilities.py:1224
+#: vulnerabilities.py:1224
 msgid ""
 "\n"
 "The compliant solution is given below which shows how to solve the issue\n"
@@ -1147,7 +1023,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1228 vulnerabilities.py:1228
+#: vulnerabilities.py:1228
 msgid ""
 "\n"
 "\n"
@@ -1156,7 +1032,7 @@ msgid ""
 "need to define and do a failsafe load of those certificates.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1234 vulnerabilities.py:1234
+#: vulnerabilities.py:1234
 msgid ""
 "\n"
 "The following code implements a custom `MySSLSocketFactory` class that\n"
@@ -1164,7 +1040,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1238 vulnerabilities.py:1238
+#: vulnerabilities.py:1238
 msgid ""
 "\n"
 "\n"
@@ -1174,13 +1050,8 @@ msgid ""
 "create an instance of HttpClient in another part of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1245
-#: mycroft/core/data/vulnerabilities.py:1330
-#: mycroft/core/data/vulnerabilities.py:1408
-#: mycroft/core/data/vulnerabilities.py:1496
-#: mycroft/core/data/vulnerabilities.py:1570 vulnerabilities.py:1245
-#: vulnerabilities.py:1330 vulnerabilities.py:1408 vulnerabilities.py:1496
-#: vulnerabilities.py:1570
+#: vulnerabilities.py:1245 vulnerabilities.py:1330 vulnerabilities.py:1408
+#: vulnerabilities.py:1496 vulnerabilities.py:1570
 msgid ""
 "\n"
 "- [JVN\\#39218538](http://jvn.jp/en/jp/JVN39218538/) Pizza Hut Japan\n"
@@ -1193,24 +1064,24 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1262 vulnerabilities.py:1262
+#: vulnerabilities.py:1262
 msgid "Broken HostnameVerifier for SSL"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1263 vulnerabilities.py:1263
+#: vulnerabilities.py:1263
 msgid "Ensure that Hostname Verifier for SSL/TLS is properly configured."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1264 vulnerabilities.py:1264
+#: vulnerabilities.py:1264
 msgid "Is the HostnameVerifier for SSL implemented properly?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1265 vulnerabilities.py:1265
+#: vulnerabilities.py:1265
 msgid ""
 "HostnameVerifiers for SSL, if any, seem to be verfying hostnames properly."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1266 vulnerabilities.py:1266
+#: vulnerabilities.py:1266
 msgid ""
 "\n"
 "When an activity has WebView embedded to display web pages, any\n"
@@ -1233,7 +1104,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1286 vulnerabilities.py:1286
+#: vulnerabilities.py:1286
 msgid ""
 "\n"
 "Allowing All Hostnames: The app does not verify if the certificate is\n"
@@ -1245,14 +1116,14 @@ msgid ""
 "implementation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1295 vulnerabilities.py:1295
+#: vulnerabilities.py:1295
 msgid ""
 "\n"
 "Implements naive hostname verification. This HostnameVerifier breaks\n"
 "certificate validation!\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1317 vulnerabilities.py:1317
+#: vulnerabilities.py:1317
 msgid ""
 "\n"
 "The code example shows how to verify hostname using a\n"
@@ -1261,14 +1132,14 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1322 vulnerabilities.py:1322
+#: vulnerabilities.py:1322
 msgid ""
 "\n"
 "The following code inherits `javax.net.ssl.SSLContext`:\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1325 vulnerabilities.py:1325
+#: vulnerabilities.py:1325
 msgid ""
 "\n"
 "\n"
@@ -1276,30 +1147,30 @@ msgid ""
 "or verifying the hostname\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1348 vulnerabilities.py:1348
+#: vulnerabilities.py:1348
 msgid "Insecure SSLSocketFactories"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1349 vulnerabilities.py:1349
+#: vulnerabilities.py:1349
 msgid "Ensure SSL SocketFactories are implemeted properly."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1350 vulnerabilities.py:1350
+#: vulnerabilities.py:1350
 msgid "Does the application have a probable SSL error in implementation?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1351 vulnerabilities.py:1351
+#: vulnerabilities.py:1351
 msgid "No implementation errors were found."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1352 vulnerabilities.py:1352
+#: vulnerabilities.py:1352
 msgid ""
 "\n"
 "This code shows how the vulnerability can be exploited:\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1356 vulnerabilities.py:1356
+#: vulnerabilities.py:1356
 msgid ""
 "\n"
 "Android SDK 4.0 and later offers packages to implement capabilities to\n"
@@ -1316,24 +1187,21 @@ msgid ""
 "implementation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1370 vulnerabilities.py:1370
+#: vulnerabilities.py:1370
 msgid ""
 "\n"
 "SSL Implementations are not proper in this application\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1373
-#: mycroft/core/data/vulnerabilities.py:1377
-#: mycroft/core/data/vulnerabilities.py:1549
-#: mycroft/core/data/vulnerabilities.py:1553 vulnerabilities.py:1373
-#: vulnerabilities.py:1377 vulnerabilities.py:1549 vulnerabilities.py:1553
+#: vulnerabilities.py:1373 vulnerabilities.py:1377 vulnerabilities.py:1549
+#: vulnerabilities.py:1553
 msgid ""
 "\n"
 "If proper implementation of SSL is not used, sensitive data may leak\n"
 "from the vulnerable SSL communication channel.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1381 vulnerabilities.py:1381
+#: vulnerabilities.py:1381
 msgid ""
 "\n"
 "The compliant solution may vary, depending on the actual implementation.\n"
@@ -1343,7 +1211,7 @@ msgid ""
 "Section 5.4 Communicate by HTTPS.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1388 vulnerabilities.py:1388
+#: vulnerabilities.py:1388
 msgid ""
 "\n"
 "The following code implements a custom MySSLSocketFactory class that\n"
@@ -1367,23 +1235,23 @@ msgid ""
 "silently, which even bypasses the check for trustmanagers\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1426 vulnerabilities.py:1426
+#: vulnerabilities.py:1426
 msgid "HostnameVerifier Allowing All Hostnames"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1427 vulnerabilities.py:1427
+#: vulnerabilities.py:1427
 msgid "Properly verify server certificate on SSL/TLS."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1428 vulnerabilities.py:1428
+#: vulnerabilities.py:1428
 msgid "Does the application have AllowAllHostnameVerification?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1429 vulnerabilities.py:1429
+#: vulnerabilities.py:1429
 msgid "AllowAllHostname is properly configured, or is disabled."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1430 vulnerabilities.py:1430
+#: vulnerabilities.py:1430
 msgid ""
 "\n"
 "By specifying the `android:exported` attribute in the `AndroidManifest.xml`\n"
@@ -1393,7 +1261,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1436 vulnerabilities.py:1436
+#: vulnerabilities.py:1436
 msgid ""
 "\n"
 "If a content provider is to be made public, the data stored in a\n"
@@ -1401,7 +1269,7 @@ msgid ""
 "be designed to handle only non-sensitive information.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1441 vulnerabilities.py:1441
+#: vulnerabilities.py:1441
 msgid ""
 "\n"
 "Android apps that use SSL/TLS protocols for secure communication should\n"
@@ -1417,14 +1285,14 @@ msgid ""
 "implementation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1454 vulnerabilities.py:1454
+#: vulnerabilities.py:1454
 msgid ""
 "\n"
 "Implements AllowAllHostname verifier which might allow hacker to\n"
 "eavesdrop into the connection.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1476 vulnerabilities.py:1476
+#: vulnerabilities.py:1476
 msgid ""
 "\n"
 "Never use `SSLSocketFactory.ALLOW\\_ALL\\_HOSTNAME\\_VERIFIER` in\n"
@@ -1435,7 +1303,7 @@ msgid ""
 "5.4 Communicate by HTTPS.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1484 vulnerabilities.py:1484
+#: vulnerabilities.py:1484
 msgid ""
 "\n"
 "The following code extends `HttpClient` class that inherits\n"
@@ -1443,7 +1311,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1488 vulnerabilities.py:1488
+#: vulnerabilities.py:1488
 msgid ""
 "\n"
 "\n"
@@ -1454,27 +1322,27 @@ msgid ""
 "certificate is trusted.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1514 vulnerabilities.py:1514
+#: vulnerabilities.py:1514
 msgid "App Extending WebViewClient"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1515 vulnerabilities.py:1515
+#: vulnerabilities.py:1515
 msgid "Ensure WebView clients handle secured connections properly."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1516 vulnerabilities.py:1516
+#: vulnerabilities.py:1516
 msgid ""
 "Does the application use WebViewClients correctly and handle the "
 "onReceivedSSLError method?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1517 vulnerabilities.py:1517
+#: vulnerabilities.py:1517
 msgid ""
 "Application seems to be handling WebViewClient correctly, or has no "
 "implementation of WebViewClient."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1518 vulnerabilities.py:1518
+#: vulnerabilities.py:1518
 msgid ""
 "\n"
 "You can make your provider private by specifying the `android:exported`\n"
@@ -1492,7 +1360,7 @@ msgid ""
 "from other apps.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1533 vulnerabilities.py:1533
+#: vulnerabilities.py:1533
 msgid ""
 "\n"
 "WebViews can introduce a number of security concerns and should be\n"
@@ -1507,14 +1375,14 @@ msgid ""
 "it removes all security from SSL.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1545 vulnerabilities.py:1545
+#: vulnerabilities.py:1545
 msgid ""
 "\n"
 "The default handling of WebViewClient should handle the\n"
 "onReceivedSSLError properly, which might break certificate validation\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1557 vulnerabilities.py:1557
+#: vulnerabilities.py:1557
 msgid ""
 "\n"
 "This can be fixed by using the onReceivedSslError to stop or notify the\n"
@@ -1526,7 +1394,7 @@ msgid ""
 "    }\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1565 vulnerabilities.py:1565
+#: vulnerabilities.py:1565
 msgid ""
 "\n"
 "The following code shows how onReceivedSslError was used to bypass the\n"
@@ -1534,31 +1402,31 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1588 vulnerabilities.py:1588
+#: vulnerabilities.py:1588
 msgid "Unused Permissions"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1589 vulnerabilities.py:1589
+#: vulnerabilities.py:1589
 msgid "Do not ask for permissions that may not be used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1590 vulnerabilities.py:1590
+#: vulnerabilities.py:1590
 msgid "Is the application over-privileged?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1591 vulnerabilities.py:1591
+#: vulnerabilities.py:1591
 msgid ""
 "Application seems to have just the essential set of permissions required."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1592 vulnerabilities.py:1592
+#: vulnerabilities.py:1592
 msgid ""
 "\n"
 "The following code shows how this could be exploited:\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1596 vulnerabilities.py:1596
+#: vulnerabilities.py:1596
 msgid ""
 "\n"
 "An app might request a user for certain permissions, like access to SD\n"
@@ -1567,16 +1435,14 @@ msgid ""
 "that you can optimize your app and follow proper compliance checks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1602 vulnerabilities.py:1602
+#: vulnerabilities.py:1602
 msgid ""
 "\n"
 "Application seems to be using extra permissions which are not really\n"
 "needed\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1606
-#: mycroft/core/data/vulnerabilities.py:1612 vulnerabilities.py:1606
-#: vulnerabilities.py:1612
+#: vulnerabilities.py:1606 vulnerabilities.py:1612
 msgid ""
 "\n"
 "Users may not download your app when presented with a long list of\n"
@@ -1585,34 +1451,34 @@ msgid ""
 "and reviews on App Stores. This also breaks compliance standards.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1618 vulnerabilities.py:1618
+#: vulnerabilities.py:1618
 msgid ""
 "\n"
 "Do not request for permissions beyond what your app actually needs\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1631 vulnerabilities.py:1631
+#: vulnerabilities.py:1631
 msgid "JavascriptInterface Remote Code Execution"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1632 vulnerabilities.py:1632
+#: vulnerabilities.py:1632
 msgid ""
 "Do not provide addJavascriptInterface method access in a WebView which could "
 "contain untrusted content (for API level JELLY_BEAN or below)."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1633 vulnerabilities.py:1633
+#: vulnerabilities.py:1633
 msgid ""
 "Is the application using JavascriptInterface? Does the application "
 "communicate over non-SSL or broken SSL Implementation?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1634 vulnerabilities.py:1634
+#: vulnerabilities.py:1634
 msgid ""
 "Application is safe from remote code execution through JavascriptInterface."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1635 vulnerabilities.py:1635
+#: vulnerabilities.py:1635
 msgid ""
 "\n"
 "The `android.util.Log` class allows a number of possibilities:\n"
@@ -1625,7 +1491,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1645 vulnerabilities.py:1645
+#: vulnerabilities.py:1645
 msgid ""
 "\n"
 "For API level JELLY\\_BEAN or below, allowing an app to use the\n"
@@ -1638,7 +1504,7 @@ msgid ""
 "should not be exposed to scripting attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1655 vulnerabilities.py:1655
+#: vulnerabilities.py:1655
 msgid ""
 "\n"
 "Application seems to use `JavascriptInterface`. An attacker can use it to\n"
@@ -1646,9 +1512,7 @@ msgid ""
 "informations.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1660
-#: mycroft/core/data/vulnerabilities.py:1665 vulnerabilities.py:1660
-#: vulnerabilities.py:1665
+#: vulnerabilities.py:1660 vulnerabilities.py:1665
 msgid ""
 "\n"
 "The app may be susceptible to JavaScript scripting attacks from\n"
@@ -1656,7 +1520,7 @@ msgid ""
 "information.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1670 vulnerabilities.py:1670
+#: vulnerabilities.py:1670
 msgid ""
 "\n"
 "-   Compliant code could refrain from calling the addJavascriptInterface() "
@@ -1673,7 +1537,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1683 vulnerabilities.py:1683
+#: vulnerabilities.py:1683
 msgid ""
 "\n"
 "This non-compliant code example shows an application that calls the\n"
@@ -1682,7 +1546,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1688 vulnerabilities.py:1688
+#: vulnerabilities.py:1688
 msgid ""
 "\n"
 "\n"
@@ -1691,23 +1555,23 @@ msgid ""
 "permissions of the app.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1703 vulnerabilities.py:1703
+#: vulnerabilities.py:1703
 msgid "Unprotected Activities"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1704 vulnerabilities.py:1704
+#: vulnerabilities.py:1704
 msgid "Restrict access to sensitive activities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1705 vulnerabilities.py:1705
+#: vulnerabilities.py:1705
 msgid "Are application activities protected?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1706 vulnerabilities.py:1706
+#: vulnerabilities.py:1706
 msgid "Activities seem to be sufficiently protected."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1711 vulnerabilities.py:1711
+#: vulnerabilities.py:1711
 msgid ""
 "\n"
 "On Android, declaring an intent filter for an activity in the\n"
@@ -1723,7 +1587,7 @@ msgid ""
 "Twicca user's Twitter account.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1724 vulnerabilities.py:1724
+#: vulnerabilities.py:1724
 msgid ""
 "\n"
 "An activity was found to be shared with other apps on the device without\n"
@@ -1731,23 +1595,21 @@ msgid ""
 "accessible to any other application on the device.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1729
-#: mycroft/core/data/vulnerabilities.py:1733 vulnerabilities.py:1729
-#: vulnerabilities.py:1733
+#: vulnerabilities.py:1729 vulnerabilities.py:1733
 msgid ""
 "\n"
 "Unauthorized apps may use vulnerable activities to perform malicious\n"
 "actions.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1737 vulnerabilities.py:1737
+#: vulnerabilities.py:1737
 msgid ""
 "\n"
 "-   In this compliant solution the activity is not exported:\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1740 vulnerabilities.py:1740
+#: vulnerabilities.py:1740
 msgid ""
 "\n"
 "\n"
@@ -1765,7 +1627,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1754 vulnerabilities.py:1754
+#: vulnerabilities.py:1754
 msgid ""
 "\n"
 "\n"
@@ -1788,7 +1650,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1774 vulnerabilities.py:1774
+#: vulnerabilities.py:1774
 msgid ""
 "\n"
 "This non-compliant code example shows an `AndroidManifest.xml` file for an\n"
@@ -1797,7 +1659,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1779 vulnerabilities.py:1779
+#: vulnerabilities.py:1779
 msgid ""
 "\n"
 "\n"
@@ -1808,7 +1670,7 @@ msgid ""
 "is defined, this activity is exported to other apps.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1787 vulnerabilities.py:1787
+#: vulnerabilities.py:1787
 msgid ""
 "\n"
 "- [JVN\\#31860555](https://jvn.jp/en/jp/JVN31860555/) Twicca fails to\n"
@@ -1816,23 +1678,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1801 vulnerabilities.py:1801
+#: vulnerabilities.py:1801
 msgid "SQL Injection"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1802 vulnerabilities.py:1802
+#: vulnerabilities.py:1802
 msgid "Prevent SQL Injection."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1803 vulnerabilities.py:1803
+#: vulnerabilities.py:1803
 msgid "Is the application vulnerable to SQL Injection through Web API?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1804 vulnerabilities.py:1804
+#: vulnerabilities.py:1804
 msgid "Application is not vulnerable to SQL Injection through Web API."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1805 vulnerabilities.py:1805
+#: vulnerabilities.py:1805
 msgid ""
 "\n"
 "Declare READ\\_LOGS permission in the manifest file so that an app can\n"
@@ -1840,7 +1702,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1809 vulnerabilities.py:1809
+#: vulnerabilities.py:1809
 msgid ""
 "\n"
 "\n"
@@ -1857,7 +1719,7 @@ msgid ""
 "information to log output.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1823 vulnerabilities.py:1823
+#: vulnerabilities.py:1823
 msgid ""
 "\n"
 "An SQL injection vulnerability arises when the original SQL query can be\n"
@@ -1867,7 +1729,7 @@ msgid ""
 "input, and parameterizing the query.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1830 vulnerabilities.py:1830
+#: vulnerabilities.py:1830
 msgid ""
 "\n"
 "Data retrieved from a mobile app's server contains malformed data that\n"
@@ -1876,9 +1738,7 @@ msgid ""
 "theft, and more\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1836
-#: mycroft/core/data/vulnerabilities.py:1842 vulnerabilities.py:1836
-#: vulnerabilities.py:1842
+#: vulnerabilities.py:1836 vulnerabilities.py:1842
 msgid ""
 "\n"
 "SQL injection allows the intruder to view and modify data contained in\n"
@@ -1887,7 +1747,7 @@ msgid ""
 "integrity of the data stored.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1848 vulnerabilities.py:1848
+#: vulnerabilities.py:1848
 msgid ""
 "\n"
 "Input validation is a prerequisite for proper query construction. This\n"
@@ -1897,7 +1757,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1855 vulnerabilities.py:1855
+#: vulnerabilities.py:1855
 msgid ""
 "\n"
 "This non-compliant code example shows JDBC code that is vulnerable to\n"
@@ -1906,7 +1766,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1860 vulnerabilities.py:1860
+#: vulnerabilities.py:1860
 msgid ""
 "\n"
 "\n"
@@ -1919,23 +1779,23 @@ msgid ""
 "unrestricted access.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1879 vulnerabilities.py:1879
+#: vulnerabilities.py:1879
 msgid "Storing Information in Shared Preferences"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1880 vulnerabilities.py:1880
+#: vulnerabilities.py:1880
 msgid "Ensure that sensitive data is not stored in SharedPreferences."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1881 vulnerabilities.py:1881
+#: vulnerabilities.py:1881
 msgid "Is any sensitive information is leaking through Shared Preferences?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1882 vulnerabilities.py:1882
+#: vulnerabilities.py:1882
 msgid "No leakage of data were found via Shared Preference."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1883 vulnerabilities.py:1883
+#: vulnerabilities.py:1883
 msgid ""
 "\n"
 "Example code of obtaining log output from a vulnerable application is as\n"
@@ -1943,7 +1803,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1888 vulnerabilities.py:1888
+#: vulnerabilities.py:1888
 msgid ""
 "\n"
 "In Android apps, data can be communicated via intents, or data can be\n"
@@ -1973,16 +1833,14 @@ msgid ""
 "flows that include intents and/or static fields.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1915 vulnerabilities.py:1915
+#: vulnerabilities.py:1915
 msgid ""
 "\n"
 "Insecured informations were found in shared preference. One shouldn't\n"
 "use un-encrypted information in SharedPreference.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1919
-#: mycroft/core/data/vulnerabilities.py:1928 vulnerabilities.py:1919
-#: vulnerabilities.py:1928
+#: vulnerabilities.py:1919 vulnerabilities.py:1928
 msgid ""
 "\n"
 "Typically, malicious code steals sensitive information (passwords,\n"
@@ -1994,7 +1852,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1937 vulnerabilities.py:1937
+#: vulnerabilities.py:1937
 msgid ""
 "\n"
 "In this compliant solution the file is created using MODE\\_PRIVATE, so\n"
@@ -2003,7 +1861,7 @@ msgid ""
 "    openFileOutput(\"someFile\", MODE_PRIVATE);\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1943 vulnerabilities.py:1943
+#: vulnerabilities.py:1943
 msgid ""
 "\n"
 "This non-compliant code example shows an application that creates a file\n"
@@ -2014,31 +1872,27 @@ msgid ""
 "Any application could read the file and access any data stored in it.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1960
-#: mycroft/core/data/vulnerabilities.py:4373 vulnerabilities.py:1960
-#: vulnerabilities.py:4373
+#: vulnerabilities.py:1960 vulnerabilities.py:4373
 msgid "Insufficient Transport Layer Protection"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1961 vulnerabilities.py:1961
+#: vulnerabilities.py:1961
 msgid "Make sure that the TLS implementation is proper."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1962 vulnerabilities.py:1962
+#: vulnerabilities.py:1962
 msgid ""
 "Is your application using proper Transport Layer protection? Is HTTPS "
 "enabled in your application?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1963 vulnerabilities.py:1963
+#: vulnerabilities.py:1963
 msgid ""
 "Application seems to have SSL enabled and sufficient protection is being "
 "used to prevent Information leakage."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1974
-#: mycroft/core/data/vulnerabilities.py:4378 vulnerabilities.py:1974
-#: vulnerabilities.py:4378
+#: vulnerabilities.py:1974 vulnerabilities.py:4378
 msgid ""
 "\n"
 "Insufficient transport layer protection issues happen when the data is\n"
@@ -2050,9 +1904,7 @@ msgid ""
 "towers, are some of the few ways data could be sniffed while in transit.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1983
-#: mycroft/core/data/vulnerabilities.py:4387 vulnerabilities.py:1983
-#: vulnerabilities.py:4387
+#: vulnerabilities.py:1983 vulnerabilities.py:4387
 msgid ""
 "\n"
 "Insufficient transport layer protection issues happen when the data is\n"
@@ -2064,11 +1916,8 @@ msgid ""
 "towers, are some of the few ways data could be sniffed while in transit.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:1992
-#: mycroft/core/data/vulnerabilities.py:2000
-#: mycroft/core/data/vulnerabilities.py:4396
-#: mycroft/core/data/vulnerabilities.py:4404 vulnerabilities.py:1992
-#: vulnerabilities.py:2000 vulnerabilities.py:4396 vulnerabilities.py:4404
+#: vulnerabilities.py:1992 vulnerabilities.py:2000 vulnerabilities.py:4396
+#: vulnerabilities.py:4404
 msgid ""
 "\n"
 "The violation of a user's confidentiality may result in:\n"
@@ -2079,14 +1928,14 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2008 vulnerabilities.py:2008
+#: vulnerabilities.py:2008
 msgid ""
 "\n"
 "Never use HTTP URL to download data. Instead, create a valid HTTPS\n"
 "request through which only sensitive data can be downloaded.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2012 vulnerabilities.py:2012
+#: vulnerabilities.py:2012
 msgid ""
 "\n"
 "Using HTTP with SSL or TLS to connect to internet, or without a proper\n"
@@ -2095,7 +1944,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2017 vulnerabilities.py:2017
+#: vulnerabilities.py:2017
 msgid ""
 "\n"
 "\n"
@@ -2103,27 +1952,27 @@ msgid ""
 "that someone is eavesdropping the connection.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2031 vulnerabilities.py:2031
+#: vulnerabilities.py:2031
 msgid "Derived Crypto Keys"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2032 vulnerabilities.py:2032
+#: vulnerabilities.py:2032
 msgid ""
 "Avoid using default Android cryptographic security provider encryption; "
 "Follow recommended encryption practices."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2033 vulnerabilities.py:2033
+#: vulnerabilities.py:2033
 msgid "Does the application use insecure encryption methods?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2034 vulnerabilities.py:2034
+#: vulnerabilities.py:2034
 msgid ""
 "Application seems to be using the correct cryptographic encryption method, "
 "if any."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2035 vulnerabilities.py:2035
+#: vulnerabilities.py:2035
 msgid ""
 "\n"
 "- Assume that the network layer is not secure and may potentially be\n"
@@ -2149,7 +1998,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2058 vulnerabilities.py:2058
+#: vulnerabilities.py:2058
 #, python-format
 msgid ""
 "\n"
@@ -2182,16 +2031,14 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2087 vulnerabilities.py:2087
+#: vulnerabilities.py:2087
 msgid ""
 "\n"
 "Traces of Crypto Keys which might be intermediate keys used when loading\n"
 "the different libraries.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2091
-#: mycroft/core/data/vulnerabilities.py:2101 vulnerabilities.py:2091
-#: vulnerabilities.py:2101
+#: vulnerabilities.py:2091 vulnerabilities.py:2101
 msgid ""
 "\n"
 "Broken cryptography will result in the following:\n"
@@ -2204,7 +2051,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2111 vulnerabilities.py:2111
+#: vulnerabilities.py:2111
 msgid ""
 "\n"
 "The following are the rules which should be followed while using\n"
@@ -2220,23 +2067,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2132 vulnerabilities.py:2132
+#: vulnerabilities.py:2132
 msgid "Application Logs"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2133 vulnerabilities.py:2133
+#: vulnerabilities.py:2133
 msgid "Always make sure that sensitive information is not logged."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2134 vulnerabilities.py:2134
+#: vulnerabilities.py:2134
 msgid "Is this application leaking data through logs?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2135 vulnerabilities.py:2135
+#: vulnerabilities.py:2135
 msgid "No application logs were found."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2137 vulnerabilities.py:2137
+#: vulnerabilities.py:2137
 msgid ""
 "\n"
 "Android provides capabilities for an app to output logging information\n"
@@ -2245,31 +2092,28 @@ msgid ""
 "execute the logcat command.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2143 vulnerabilities.py:2143
+#: vulnerabilities.py:2143
 msgid ""
 "\n"
 "Application was found to be writing logs to the system logs\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2146
-#: mycroft/core/data/vulnerabilities.py:2150
-#: mycroft/core/data/vulnerabilities.py:2321
-#: mycroft/core/data/vulnerabilities.py:2325 vulnerabilities.py:2146
-#: vulnerabilities.py:2150 vulnerabilities.py:2321 vulnerabilities.py:2325
+#: vulnerabilities.py:2146 vulnerabilities.py:2150 vulnerabilities.py:2321
+#: vulnerabilities.py:2325
 msgid ""
 "\n"
 "Sensitive data can inadvertently leak into the logs and may aid in\n"
 "further attacks\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2154 vulnerabilities.py:2154
+#: vulnerabilities.py:2154
 msgid ""
 "\n"
 "Never use logs in production\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2157 vulnerabilities.py:2157
+#: vulnerabilities.py:2157
 msgid ""
 "\n"
 "\n"
@@ -2277,7 +2121,7 @@ msgid ""
 "production so that it can be debugged\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2162 vulnerabilities.py:2162
+#: vulnerabilities.py:2162
 msgid ""
 "\n"
 "\n"
@@ -2287,7 +2131,7 @@ msgid ""
 "    manifest file.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2169 vulnerabilities.py:2169
+#: vulnerabilities.py:2169
 msgid ""
 "\n"
 "- Facebook SDK for Android:\n"
@@ -2304,31 +2148,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2190
-#: mycroft/core/data/vulnerabilities.py:2268 vulnerabilities.py:2190
-#: vulnerabilities.py:2268
+#: vulnerabilities.py:2190 vulnerabilities.py:2268
 msgid "Business Logic"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2191
-#: mycroft/core/data/vulnerabilities.py:2269 vulnerabilities.py:2191
-#: vulnerabilities.py:2269
+#: vulnerabilities.py:2191 vulnerabilities.py:2269
 msgid "Make sure that the application business logic is sound."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2192
-#: mycroft/core/data/vulnerabilities.py:2270 vulnerabilities.py:2192
-#: vulnerabilities.py:2270
+#: vulnerabilities.py:2192 vulnerabilities.py:2270
 msgid "Were flaws found in the business logic?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2193
-#: mycroft/core/data/vulnerabilities.py:2271 vulnerabilities.py:2193
-#: vulnerabilities.py:2271
+#: vulnerabilities.py:2193 vulnerabilities.py:2271
 msgid "No flaws were found in the business logic."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2195 vulnerabilities.py:2195
+#: vulnerabilities.py:2195
 msgid ""
 "\n"
 "Most security problems are weaknesses in an application that result from\n"
@@ -2345,7 +2181,7 @@ msgid ""
 "less common than the type of items.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2209 vulnerabilities.py:2209
+#: vulnerabilities.py:2209
 msgid ""
 "\n"
 "Logical Flaws through API which can bypass authorization and get\n"
@@ -2354,7 +2190,7 @@ msgid ""
 "server side\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2217 vulnerabilities.py:2217
+#: vulnerabilities.py:2217
 msgid ""
 "\n"
 "The following should be checked and properly fixed\n"
@@ -2367,7 +2203,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2228 vulnerabilities.py:2228
+#: vulnerabilities.py:2228
 msgid ""
 "\n"
 "Automated tools find it hard to understand context, hence it's up to a\n"
@@ -2402,7 +2238,7 @@ msgid ""
 "applied to their account?\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2273 vulnerabilities.py:2273
+#: vulnerabilities.py:2273
 msgid ""
 "\n"
 "Most security problems are weaknesses in an application that result from\n"
@@ -2419,7 +2255,7 @@ msgid ""
 "less common than the type of items.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2287 vulnerabilities.py:2287
+#: vulnerabilities.py:2287
 msgid ""
 "\n"
 "Logical Flaws through API which can bypass Authorization and get\n"
@@ -2428,23 +2264,23 @@ msgid ""
 "server side\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2306 vulnerabilities.py:2306
+#: vulnerabilities.py:2306
 msgid "Debug Logging with NSLog"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2307 vulnerabilities.py:2307
+#: vulnerabilities.py:2307
 msgid "Carefully manage debug logs with NSLog."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2308 vulnerabilities.py:2308
+#: vulnerabilities.py:2308
 msgid "Is the application logging to the system logs?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2309 vulnerabilities.py:2309
+#: vulnerabilities.py:2309
 msgid "Application does not log to system logs."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2311 vulnerabilities.py:2311
+#: vulnerabilities.py:2311
 msgid ""
 "\n"
 "Applications tend to add some data in logs for debugging purpose. If\n"
@@ -2452,7 +2288,7 @@ msgid ""
 "leakage of data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2316 vulnerabilities.py:2316
+#: vulnerabilities.py:2316
 msgid ""
 "\n"
 "Debug Logs are usually left enabled during application development.\n"
@@ -2460,31 +2296,31 @@ msgid ""
 "to the device.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2329 vulnerabilities.py:2329
+#: vulnerabilities.py:2329
 msgid ""
 "\n"
 "Wipe off the application log at particular intervals or when the user\n"
 "signs out of the application. Do not log any sensitive information.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2343 vulnerabilities.py:2343
+#: vulnerabilities.py:2343
 msgid "Sensitive Information in Property Lists"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2344 vulnerabilities.py:2344
+#: vulnerabilities.py:2344
 msgid "Do not store sensitive information in Property Lists (plist)."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2345 vulnerabilities.py:2345
+#: vulnerabilities.py:2345
 msgid ""
 "Does the application store sensitive information in Property Lists (plist)?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2346 vulnerabilities.py:2346
+#: vulnerabilities.py:2346
 msgid "The application does not store sensitive information in Property Lists."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2348 vulnerabilities.py:2348
+#: vulnerabilities.py:2348
 msgid ""
 "\n"
 "Information Property List Files are the files that contain configuration\n"
@@ -2495,22 +2331,20 @@ msgid ""
 "iOS backup.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2356 vulnerabilities.py:2356
+#: vulnerabilities.py:2356
 msgid ""
 "\n"
 "Plist files contain data in plaintext format\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2359
-#: mycroft/core/data/vulnerabilities.py:2363 vulnerabilities.py:2359
-#: vulnerabilities.py:2363
+#: vulnerabilities.py:2359 vulnerabilities.py:2363
 msgid ""
 "\n"
 "An attacker can steal sensitive data if they have access to the device\n"
 "or device backup\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2367 vulnerabilities.py:2367
+#: vulnerabilities.py:2367
 msgid ""
 "\n"
 "It's recommended not to store any sensitive data such as usernames,\n"
@@ -2518,24 +2352,24 @@ msgid ""
 "plist files of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2382 vulnerabilities.py:2382
+#: vulnerabilities.py:2382
 msgid "Sensitive Data in NSUserDefaults"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2383 vulnerabilities.py:2383
+#: vulnerabilities.py:2383
 msgid "Avoid storing sensitive data in NSUserDefaults."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2384 vulnerabilities.py:2384
+#: vulnerabilities.py:2384
 msgid "Does this application store sensitive information in NSUserDefaults?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2385 vulnerabilities.py:2385
+#: vulnerabilities.py:2385
 msgid ""
 "This application does not store sensitive information in NSUserDefaults."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2387 vulnerabilities.py:2387
+#: vulnerabilities.py:2387
 msgid ""
 "\n"
 "NSUserDefaults are stored in plist in binary format, with no encryption,\n"
@@ -2545,23 +2379,21 @@ msgid ""
 "personal use later on.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2394 vulnerabilities.py:2394
+#: vulnerabilities.py:2394
 msgid ""
 "\n"
 "NSUserDefaults is an alternative way by which data can be stored in\n"
 "Plist files\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2398
-#: mycroft/core/data/vulnerabilities.py:2402 vulnerabilities.py:2398
-#: vulnerabilities.py:2402
+#: vulnerabilities.py:2398 vulnerabilities.py:2402
 msgid ""
 "\n"
 "Sensitive information can get compromised since plist files store data\n"
 "unencrypted.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2406 vulnerabilities.py:2406
+#: vulnerabilities.py:2406
 msgid ""
 "\n"
 "Avoid using NSUserDefaults to store sensitive pieces of information as\n"
@@ -2569,24 +2401,24 @@ msgid ""
 "form.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2421 vulnerabilities.py:2421
+#: vulnerabilities.py:2421
 msgid "Sensitive Information in SQLite3 Databases"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2422 vulnerabilities.py:2422
+#: vulnerabilities.py:2422
 msgid "Do not use SQLite3 databases to store sensitive information."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2423 vulnerabilities.py:2423
+#: vulnerabilities.py:2423
 msgid "Does this application store sensitive information in SQLite3 databases?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2424 vulnerabilities.py:2424
+#: vulnerabilities.py:2424
 msgid ""
 "This application does not store sensitive information in SQLite3 databases."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2426 vulnerabilities.py:2426
+#: vulnerabilities.py:2426
 msgid ""
 "\n"
 "SQLite databases are often used by the applications to store persistent\n"
@@ -2598,33 +2430,24 @@ msgid ""
 "the information is stored in plain-text format in these files.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2435 vulnerabilities.py:2435
+#: vulnerabilities.py:2435
 msgid ""
 "\n"
 "SQLite3 databases are stored in unencrypted form on the device. Storing\n"
 "sensitive information in such databases may lead to leakage of data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2439
-#: mycroft/core/data/vulnerabilities.py:2443
-#: mycroft/core/data/vulnerabilities.py:2484
-#: mycroft/core/data/vulnerabilities.py:2488
-#: mycroft/core/data/vulnerabilities.py:2531
-#: mycroft/core/data/vulnerabilities.py:2535
-#: mycroft/core/data/vulnerabilities.py:2591
-#: mycroft/core/data/vulnerabilities.py:2595
-#: mycroft/core/data/vulnerabilities.py:2637
-#: mycroft/core/data/vulnerabilities.py:2641 vulnerabilities.py:2439
-#: vulnerabilities.py:2443 vulnerabilities.py:2484 vulnerabilities.py:2488
-#: vulnerabilities.py:2531 vulnerabilities.py:2535 vulnerabilities.py:2591
-#: vulnerabilities.py:2595 vulnerabilities.py:2637 vulnerabilities.py:2641
+#: vulnerabilities.py:2439 vulnerabilities.py:2443 vulnerabilities.py:2484
+#: vulnerabilities.py:2488 vulnerabilities.py:2531 vulnerabilities.py:2535
+#: vulnerabilities.py:2591 vulnerabilities.py:2595 vulnerabilities.py:2637
+#: vulnerabilities.py:2641
 msgid ""
 "\n"
 "Failure to use encryption routines may result in the database and its\n"
 "associated data including user credentials getting compromised.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2447 vulnerabilities.py:2447
+#: vulnerabilities.py:2447
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in SQLite\n"
@@ -2637,23 +2460,23 @@ msgid ""
 "can't be read even if someone tries to recover it.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2467 vulnerabilities.py:2467
+#: vulnerabilities.py:2467
 msgid "Unsecured Data in CoreData"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2468 vulnerabilities.py:2468
+#: vulnerabilities.py:2468
 msgid "Make sure sensitive data is not stored in CoreData."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2469 vulnerabilities.py:2469
+#: vulnerabilities.py:2469
 msgid "Does this application store sensitive information in CoreData?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2470 vulnerabilities.py:2470
+#: vulnerabilities.py:2470
 msgid "This application does not store sensitive information in CoreData."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2472 vulnerabilities.py:2472
+#: vulnerabilities.py:2472
 msgid ""
 "\n"
 "Core Data is used by the applications to store data which can be further\n"
@@ -2664,14 +2487,14 @@ msgid ""
 "then it can be accessed by any third party.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2480 vulnerabilities.py:2480
+#: vulnerabilities.py:2480
 msgid ""
 "\n"
 "Core Data is often used by applications to store data to improve\n"
 "application performance\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2492 vulnerabilities.py:2492
+#: vulnerabilities.py:2492
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Core\n"
@@ -2686,23 +2509,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2514 vulnerabilities.py:2514
+#: vulnerabilities.py:2514
 msgid "Unsecured Data in CouchDB"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2515 vulnerabilities.py:2515
+#: vulnerabilities.py:2515
 msgid "Ensure sensitive data is not stored in CouchDB."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2516 vulnerabilities.py:2516
+#: vulnerabilities.py:2516
 msgid "Does this application store data in CouchDB?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2517 vulnerabilities.py:2517
+#: vulnerabilities.py:2517
 msgid "This application does not store sensitive information in CouchDB."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2519 vulnerabilities.py:2519
+#: vulnerabilities.py:2519
 msgid ""
 "\n"
 "Couch databases are used by the applications to store data which can be\n"
@@ -2713,14 +2536,14 @@ msgid ""
 "in this database then it can be accessed by any third party.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2527 vulnerabilities.py:2527
+#: vulnerabilities.py:2527
 msgid ""
 "\n"
 "CouchDB is an alternative to SQLite3 database, used by applications to\n"
 "store data\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2539 vulnerabilities.py:2539
+#: vulnerabilities.py:2539
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Couch\n"
@@ -2744,25 +2567,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2570 vulnerabilities.py:2570
+#: vulnerabilities.py:2570
 msgid "Unsecured Data in RealmDB"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2571 vulnerabilities.py:2571
+#: vulnerabilities.py:2571
 msgid "Ensure sensitive data is not stored in RealmDB."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2572
-#: mycroft/core/data/vulnerabilities.py:2622 vulnerabilities.py:2572
-#: vulnerabilities.py:2622
+#: vulnerabilities.py:2572 vulnerabilities.py:2622
 msgid "Does this application store data in RealmDB?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2573 vulnerabilities.py:2573
+#: vulnerabilities.py:2573
 msgid "This application does not store sensitive information in RealmDB."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2575 vulnerabilities.py:2575
+#: vulnerabilities.py:2575
 msgid ""
 "\n"
 "Realm databases are used by the applications to store data which can be\n"
@@ -2773,7 +2594,7 @@ msgid ""
 "in this database then it can be accessed by any third party.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2583 vulnerabilities.py:2583
+#: vulnerabilities.py:2583
 msgid ""
 "\n"
 "Realm databases are used by the applications to store data which can be\n"
@@ -2784,7 +2605,7 @@ msgid ""
 "in this database then it can be accessed by any third party.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2599 vulnerabilities.py:2599
+#: vulnerabilities.py:2599
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Realm\n"
@@ -2795,26 +2616,26 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2606 vulnerabilities.py:2606
+#: vulnerabilities.py:2606
 msgid ""
 "\n"
 "\n"
 "and then can use the encrypted file at the new location.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2620 vulnerabilities.py:2620
+#: vulnerabilities.py:2620
 msgid "Unsecured Data in YapDB"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2621 vulnerabilities.py:2621
+#: vulnerabilities.py:2621
 msgid "Ensure sensitive data is not stored in YapDB."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2623 vulnerabilities.py:2623
+#: vulnerabilities.py:2623
 msgid "This application does not store sensitive information in YapDB."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2625 vulnerabilities.py:2625
+#: vulnerabilities.py:2625
 msgid ""
 "\n"
 "Yap databases are used by the applications to store data which can be\n"
@@ -2825,14 +2646,14 @@ msgid ""
 "in this database then it can be accessed by any third party.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2633 vulnerabilities.py:2633
+#: vulnerabilities.py:2633
 msgid ""
 "\n"
 "YapDB is an alternative to SQLite3 database, used by applications to\n"
 "store data\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2645 vulnerabilities.py:2645
+#: vulnerabilities.py:2645
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Yap\n"
@@ -2856,7 +2677,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2665 vulnerabilities.py:2665
+#: vulnerabilities.py:2665
 msgid ""
 "\n"
 "\n"
@@ -2865,23 +2686,23 @@ msgid ""
 "and when new connections are made to the database.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2681 vulnerabilities.py:2681
+#: vulnerabilities.py:2681
 msgid "Deprecated NSURLConnection"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2682 vulnerabilities.py:2682
+#: vulnerabilities.py:2682
 msgid "Never use the deprecated NSURLConnection to connect over internet."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2683 vulnerabilities.py:2683
+#: vulnerabilities.py:2683
 msgid "Does this application use NSURLConnection?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2684 vulnerabilities.py:2684
+#: vulnerabilities.py:2684
 msgid "This application does not use NSURLConnection to connect over Internet."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2686 vulnerabilities.py:2686
+#: vulnerabilities.py:2686
 msgid ""
 "\n"
 "`NSURLConnection` is the most common API used for establishing network\n"
@@ -2892,7 +2713,7 @@ msgid ""
 "handles authentication challenge in a more appropriate way.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2694 vulnerabilities.py:2694
+#: vulnerabilities.py:2694
 msgid ""
 "\n"
 "`NSURLConnection` is the most common API used for establishing network\n"
@@ -2900,9 +2721,7 @@ msgid ""
 "`NSURLSession` & deprecated by Apple starting iOS 9.0\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2699
-#: mycroft/core/data/vulnerabilities.py:2706 vulnerabilities.py:2699
-#: vulnerabilities.py:2706
+#: vulnerabilities.py:2699 vulnerabilities.py:2706
 msgid ""
 "\n"
 "Using deprecated routines may potentially result in:\n"
@@ -2912,7 +2731,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2713 vulnerabilities.py:2713
+#: vulnerabilities.py:2713
 msgid ""
 "\n"
 "It is advisable to use `NSURLSession` for all types of network connections\n"
@@ -2943,25 +2762,25 @@ msgid ""
 "----------------------\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2751 vulnerabilities.py:2751
+#: vulnerabilities.py:2751
 msgid "PhoneGap JavaScript Injection"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2752 vulnerabilities.py:2752
+#: vulnerabilities.py:2752
 msgid "PhoneGap JavaScript Injection."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2753 vulnerabilities.py:2753
+#: vulnerabilities.py:2753
 msgid "Does the application have PhoneGap javascript injection vulnerability?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2754 vulnerabilities.py:2754
+#: vulnerabilities.py:2754
 msgid ""
 "The application does not seem to be affected by PhoneGap javascript "
 "injection."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2756 vulnerabilities.py:2756
+#: vulnerabilities.py:2756
 msgid ""
 "\n"
 "PhoneGap uses web technology to help bridge the gap between mobile and\n"
@@ -2983,24 +2802,16 @@ msgid ""
 "with the available APIs.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2775 vulnerabilities.py:2775
+#: vulnerabilities.py:2775
 msgid ""
 "\n"
 "Application using older version of Phonegap has Javascript Injection\n"
 "Vulnerability\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2779
-#: mycroft/core/data/vulnerabilities.py:2787
-#: mycroft/core/data/vulnerabilities.py:2827
-#: mycroft/core/data/vulnerabilities.py:2835
-#: mycroft/core/data/vulnerabilities.py:2875
-#: mycroft/core/data/vulnerabilities.py:2883
-#: mycroft/core/data/vulnerabilities.py:3034
-#: mycroft/core/data/vulnerabilities.py:3042 vulnerabilities.py:2779
-#: vulnerabilities.py:2787 vulnerabilities.py:2827 vulnerabilities.py:2835
-#: vulnerabilities.py:2875 vulnerabilities.py:2883 vulnerabilities.py:3034
-#: vulnerabilities.py:3042
+#: vulnerabilities.py:2779 vulnerabilities.py:2787 vulnerabilities.py:2827
+#: vulnerabilities.py:2835 vulnerabilities.py:2875 vulnerabilities.py:2883
+#: vulnerabilities.py:3034 vulnerabilities.py:3042
 msgid ""
 "\n"
 "With Cordova 3.5.0 or prior, attackers may:\n"
@@ -3011,37 +2822,34 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2795
-#: mycroft/core/data/vulnerabilities.py:2891
-#: mycroft/core/data/vulnerabilities.py:2940
-#: mycroft/core/data/vulnerabilities.py:3050 vulnerabilities.py:2795
-#: vulnerabilities.py:2891 vulnerabilities.py:2940 vulnerabilities.py:3050
+#: vulnerabilities.py:2795 vulnerabilities.py:2891 vulnerabilities.py:2940
+#: vulnerabilities.py:3050
 msgid ""
 "\n"
 "Upgrade Phonegap or Apache Cordova to the latest version.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2808 vulnerabilities.py:2808
+#: vulnerabilities.py:2808
 msgid "Remote URL Redirection Vulnerability"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2809 vulnerabilities.py:2809
+#: vulnerabilities.py:2809
 msgid "Remote URL Redirection Vulnerability."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2810 vulnerabilities.py:2810
+#: vulnerabilities.py:2810
 msgid ""
 "Does the application use an older version of PhoneGap that allows remote "
 "attackers to perform URL redirection?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2811 vulnerabilities.py:2811
+#: vulnerabilities.py:2811
 msgid ""
 "The application is not vulnerable to URL redirection vulnerability, or is "
 "not using PhoneGap."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2813 vulnerabilities.py:2813
+#: vulnerabilities.py:2813
 msgid ""
 "\n"
 "Android applications built with the Cordova framework can be launched\n"
@@ -3054,40 +2862,40 @@ msgid ""
 "latest release.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2823 vulnerabilities.py:2823
+#: vulnerabilities.py:2823
 msgid ""
 "\n"
 "Android application which uses older version of PhoneGap is vulnerable\n"
 "to URL redirection to arbitary website as defined by CVE-3500\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2843 vulnerabilities.py:2843
+#: vulnerabilities.py:2843
 msgid ""
 "\n"
 "Upgrade your Phonegap or Apache Cordova application to the latest\n"
 "Version\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2857 vulnerabilities.py:2857
+#: vulnerabilities.py:2857
 msgid "PhoneGap Error URL Redirection Vulnerability"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2858 vulnerabilities.py:2858
+#: vulnerabilities.py:2858
 msgid "PhoneGap Error URL Redirection Vulnerability."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2859 vulnerabilities.py:2859
+#: vulnerabilities.py:2859
 msgid ""
 "Can the application allow remote attackers to perform Error URL redirection?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2860 vulnerabilities.py:2860
+#: vulnerabilities.py:2860
 msgid ""
 "The application is not vulnerable to error URL redirection vulnerability, or "
 "is not using PhoneGap."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2862 vulnerabilities.py:2862
+#: vulnerabilities.py:2862
 msgid ""
 "\n"
 "Cordova-based applications make use of a WebView in order to interact\n"
@@ -3099,34 +2907,34 @@ msgid ""
 "malicious caller could launch the Activity.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2871 vulnerabilities.py:2871
+#: vulnerabilities.py:2871
 msgid ""
 "\n"
 "Android application which uses older version of PhoneGap is vulnerable\n"
 "to Error URL redirection to arbitary website as defined by CVE-3500\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2904 vulnerabilities.py:2904
+#: vulnerabilities.py:2904
 msgid "PhoneGap HTTPS Bypass Vulnerability"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2905 vulnerabilities.py:2905
+#: vulnerabilities.py:2905
 msgid "PhoneGap HTTPS Bypass Vulnerability."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2906 vulnerabilities.py:2906
+#: vulnerabilities.py:2906
 msgid ""
 "Is the application using deprecated version of PhonGap which is susceptible "
 "to HTTPS Bypass?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2907 vulnerabilities.py:2907
+#: vulnerabilities.py:2907
 msgid ""
 "The application does not use a vulnerable version of PhoneGap, or is not "
 "using PhoneGap."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2909 vulnerabilities.py:2909
+#: vulnerabilities.py:2909
 msgid ""
 "\n"
 "Android applications built with the Cordova framework use a WebView\n"
@@ -3146,16 +2954,14 @@ msgid ""
 "general, and not specific to Apache Cordova.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2926 vulnerabilities.py:2926
+#: vulnerabilities.py:2926
 msgid ""
 "\n"
 "Deprecated Android PhoneGap application is affected with CVE-3501 via\n"
 "which attackers can downgrade HTTPS connection to HTTP\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2930
-#: mycroft/core/data/vulnerabilities.py:2935 vulnerabilities.py:2930
-#: vulnerabilities.py:2935
+#: vulnerabilities.py:2930 vulnerabilities.py:2935
 msgid ""
 "\n"
 "The attacker can open a WebSocket connection from the application\n"
@@ -3163,25 +2969,25 @@ msgid ""
 "whitelist.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2953 vulnerabilities.py:2953
+#: vulnerabilities.py:2953
 msgid "PhoneGap HTTPS Whitelist Bypass"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2954 vulnerabilities.py:2954
+#: vulnerabilities.py:2954
 msgid "PhoneGap HTTPS Whitelist Bypass."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2955 vulnerabilities.py:2955
+#: vulnerabilities.py:2955
 msgid "Does the PhoneGap application use vulnerable regex for whitelisting?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2956 vulnerabilities.py:2956
+#: vulnerabilities.py:2956
 msgid ""
 "The PhoneGap application seems to be using proper regex check, or is not "
 "using PhoneGap."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2958 vulnerabilities.py:2958
+#: vulnerabilities.py:2958
 msgid ""
 "\n"
 "In order to ensure that a Cordova WebView only allows requests to URLs\n"
@@ -3198,16 +3004,14 @@ msgid ""
 "white-listing mechanism.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2972 vulnerabilities.py:2972
+#: vulnerabilities.py:2972
 msgid ""
 "\n"
 "In PhoneGap if regex is used to whitelist, this checks if HTTPS can be\n"
 "bypassed from that regex\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2976
-#: mycroft/core/data/vulnerabilities.py:2981 vulnerabilities.py:2976
-#: vulnerabilities.py:2981
+#: vulnerabilities.py:2976 vulnerabilities.py:2981
 msgid ""
 "\n"
 "An attacker can bypass the Cordova's white-listing mechanism and\n"
@@ -3215,7 +3019,7 @@ msgid ""
 "further attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:2986 vulnerabilities.py:2986
+#: vulnerabilities.py:2986
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external\n"
@@ -3235,7 +3039,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3002 vulnerabilities.py:3002
+#: vulnerabilities.py:3002
 msgid ""
 "\n"
 "\n"
@@ -3246,27 +3050,27 @@ msgid ""
 "latest Version\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3020 vulnerabilities.py:3020
+#: vulnerabilities.py:3020
 msgid "Cordova Remote Start Page Manipulation Vulnerability"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3021 vulnerabilities.py:3021
+#: vulnerabilities.py:3021
 msgid "Cordova Remote Start Page Manipulation Vulnerability."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3022 vulnerabilities.py:3022
+#: vulnerabilities.py:3022
 msgid ""
 "Is the application affected by CVE-3500 that allows remote attackers to "
 "change the start page?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3023 vulnerabilities.py:3023
+#: vulnerabilities.py:3023
 msgid ""
 "The application is not affected by CVE-3500, or Apache Cordova is not being "
 "used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3025 vulnerabilities.py:3025
+#: vulnerabilities.py:3025
 msgid ""
 "\n"
 "Apache Cordova for Android version 3.5.0 and prior are vulnerable.\n"
@@ -3274,32 +3078,30 @@ msgid ""
 "perform unauthorized actions. This may aid in further attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3030 vulnerabilities.py:3030
+#: vulnerabilities.py:3030
 msgid ""
 "\n"
 "According to CVE-3500 Apache Cordova had a vulnerability to change the\n"
 "start page\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3063
-#: mycroft/core/data/vulnerabilities.py:4780 vulnerabilities.py:3063
-#: vulnerabilities.py:4780
+#: vulnerabilities.py:3063 vulnerabilities.py:4780
 msgid "PhoneGap Debug Logging"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3064 vulnerabilities.py:3064
+#: vulnerabilities.py:3064
 msgid "PhoneGap Debug Logging."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3065 vulnerabilities.py:3065
+#: vulnerabilities.py:3065
 msgid "Are PhoneGap application debug logs enabled?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3066 vulnerabilities.py:3066
+#: vulnerabilities.py:3066
 msgid "PhoneGap debug logs are not enabled, or PhoneGap is not being used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3068 vulnerabilities.py:3068
+#: vulnerabilities.py:3068
 msgid ""
 "\n"
 "Once a PhoneGap app gets shipped with debug mode switched \"on\" then\n"
@@ -3308,16 +3110,14 @@ msgid ""
 "determine the URL endpoints of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3074 vulnerabilities.py:3074
+#: vulnerabilities.py:3074
 msgid ""
 "\n"
 "While using PhoneGap to develop application, always stop debugging logs\n"
 "via PhoneGap\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3078
-#: mycroft/core/data/vulnerabilities.py:3083 vulnerabilities.py:3078
-#: vulnerabilities.py:3083
+#: vulnerabilities.py:3078 vulnerabilities.py:3083
 msgid ""
 "\n"
 "An attacker can attach a debugger and change the logical flow of the\n"
@@ -3325,16 +3125,14 @@ msgid ""
 "used to determine the URL endpoints of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3088
-#: mycroft/core/data/vulnerabilities.py:4799 vulnerabilities.py:3088
-#: vulnerabilities.py:4799
+#: vulnerabilities.py:3088 vulnerabilities.py:4799
 msgid ""
 "\n"
 "If using Cordova, please publish the plugin using\n"
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3091 vulnerabilities.py:3091
+#: vulnerabilities.py:3091
 msgid ""
 "\n"
 "\n"
@@ -3342,23 +3140,23 @@ msgid ""
 "codes before publishing\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3106 vulnerabilities.py:3106
+#: vulnerabilities.py:3106
 msgid "PhoneGap Whitelisted URLs"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3107 vulnerabilities.py:3107
+#: vulnerabilities.py:3107
 msgid "PhoneGap Whitelisted URLs."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3108 vulnerabilities.py:3108
+#: vulnerabilities.py:3108
 msgid "Does the PhoneGap application properly whitelist URLs"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3109 vulnerabilities.py:3109
+#: vulnerabilities.py:3109
 msgid "Application has proper whitelisted URLs, or does not use PhoneGap."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3111 vulnerabilities.py:3111
+#: vulnerabilities.py:3111
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external\n"
@@ -3369,16 +3167,14 @@ msgid ""
 "a whitelist and allow access to specific network domains and subdomains.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3119 vulnerabilities.py:3119
+#: vulnerabilities.py:3119
 msgid ""
 "\n"
 "While using PhoneGap to develop application, always try to whitelist the\n"
 "URL via which it connects\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3123
-#: mycroft/core/data/vulnerabilities.py:3128 vulnerabilities.py:3123
-#: vulnerabilities.py:3128
+#: vulnerabilities.py:3123 vulnerabilities.py:3128
 msgid ""
 "\n"
 "Without Domain Whitelisting, an attacker can load any domain in an\n"
@@ -3386,7 +3182,7 @@ msgid ""
 "Cordova JavaScript objects and the corresponding native Java objects.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3133 vulnerabilities.py:3133
+#: vulnerabilities.py:3133
 msgid ""
 "\n"
 "Cordova adheres to the W3C Widget Access specification, which relies on\n"
@@ -3400,7 +3196,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3143 vulnerabilities.py:3143
+#: vulnerabilities.py:3143
 msgid ""
 "\n"
 "\n"
@@ -3408,23 +3204,23 @@ msgid ""
 "secured.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3158 vulnerabilities.py:3158
+#: vulnerabilities.py:3158
 msgid "Connection to External Redis Server"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3159 vulnerabilities.py:3159
+#: vulnerabilities.py:3159
 msgid "Connection to External Redis Server."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3160 vulnerabilities.py:3160
+#: vulnerabilities.py:3160
 msgid "Does the application communicate with an external Redis server?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3161 vulnerabilities.py:3161
+#: vulnerabilities.py:3161
 msgid "The application does not communicate with an external Redis server."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3163 vulnerabilities.py:3163
+#: vulnerabilities.py:3163
 msgid ""
 "\n"
 "Redis framework should be used strictly in server to server\n"
@@ -3432,45 +3228,43 @@ msgid ""
 "because the credentials can be read in plain text.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3168 vulnerabilities.py:3168
+#: vulnerabilities.py:3168
 msgid ""
 "\n"
 "Android applications which use Redis to communicate are vulnerable\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3171
-#: mycroft/core/data/vulnerabilities.py:3175 vulnerabilities.py:3171
-#: vulnerabilities.py:3175
+#: vulnerabilities.py:3171 vulnerabilities.py:3175
 msgid ""
 "\n"
 "The database and associated data including user credentials may get\n"
 "compromised.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3179 vulnerabilities.py:3179
+#: vulnerabilities.py:3179
 msgid ""
 "\n"
 "Remove Redis client completely. If any SDK uses this component, then\n"
 "please remove the SDK itself\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3193 vulnerabilities.py:3193
+#: vulnerabilities.py:3193
 msgid "Unprotected Exported Activities"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3194 vulnerabilities.py:3194
+#: vulnerabilities.py:3194
 msgid "Unprotected Exported Activities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3195 vulnerabilities.py:3195
+#: vulnerabilities.py:3195
 msgid "Are any activities exported insecurely?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3196 vulnerabilities.py:3196
+#: vulnerabilities.py:3196
 msgid "The application does not insecurely export any activities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3198 vulnerabilities.py:3198
+#: vulnerabilities.py:3198
 msgid ""
 "\n"
 "Activities provide user interfaces. Activities are started with Intents,\n"
@@ -3481,7 +3275,7 @@ msgid ""
 "the phone leading to XAS (Cross Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3206 vulnerabilities.py:3206
+#: vulnerabilities.py:3206
 msgid ""
 "\n"
 "The Android application exports Activity for use by other applications,\n"
@@ -3489,27 +3283,12 @@ msgid ""
 "component or access the data it contains.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3211
-#: mycroft/core/data/vulnerabilities.py:3216
-#: mycroft/core/data/vulnerabilities.py:3270
-#: mycroft/core/data/vulnerabilities.py:3275
-#: mycroft/core/data/vulnerabilities.py:3323
-#: mycroft/core/data/vulnerabilities.py:3328
-#: mycroft/core/data/vulnerabilities.py:3373
-#: mycroft/core/data/vulnerabilities.py:3378
-#: mycroft/core/data/vulnerabilities.py:3423
-#: mycroft/core/data/vulnerabilities.py:3428
-#: mycroft/core/data/vulnerabilities.py:3480
-#: mycroft/core/data/vulnerabilities.py:3485
-#: mycroft/core/data/vulnerabilities.py:3531
-#: mycroft/core/data/vulnerabilities.py:3536
-#: mycroft/core/data/vulnerabilities.py:3579
-#: mycroft/core/data/vulnerabilities.py:3584 vulnerabilities.py:3211
-#: vulnerabilities.py:3216 vulnerabilities.py:3270 vulnerabilities.py:3275
-#: vulnerabilities.py:3323 vulnerabilities.py:3328 vulnerabilities.py:3373
-#: vulnerabilities.py:3378 vulnerabilities.py:3423 vulnerabilities.py:3428
-#: vulnerabilities.py:3480 vulnerabilities.py:3485 vulnerabilities.py:3531
-#: vulnerabilities.py:3536 vulnerabilities.py:3579 vulnerabilities.py:3584
+#: vulnerabilities.py:3211 vulnerabilities.py:3216 vulnerabilities.py:3270
+#: vulnerabilities.py:3275 vulnerabilities.py:3323 vulnerabilities.py:3328
+#: vulnerabilities.py:3373 vulnerabilities.py:3378 vulnerabilities.py:3423
+#: vulnerabilities.py:3428 vulnerabilities.py:3480 vulnerabilities.py:3485
+#: vulnerabilities.py:3531 vulnerabilities.py:3536 vulnerabilities.py:3579
+#: vulnerabilities.py:3584
 msgid ""
 "\n"
 "Attackers may use non-privileged services to intercept and track the\n"
@@ -3517,7 +3296,7 @@ msgid ""
 "maliciously modify the behaviour of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3221 vulnerabilities.py:3221
+#: vulnerabilities.py:3221
 msgid ""
 "\n"
 "If you are using a Activity for sharing between only your own apps, it\n"
@@ -3531,23 +3310,23 @@ msgid ""
 "Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3242 vulnerabilities.py:3242
+#: vulnerabilities.py:3242
 msgid "Unprotected Exported Receivers"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3243 vulnerabilities.py:3243
+#: vulnerabilities.py:3243
 msgid "Unprotected Exported Receivers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3244 vulnerabilities.py:3244
+#: vulnerabilities.py:3244
 msgid "Does the application export Broadcast Receivers?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3245 vulnerabilities.py:3245
+#: vulnerabilities.py:3245
 msgid "The application does not export Broadcast Receivers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3247 vulnerabilities.py:3247
+#: vulnerabilities.py:3247
 msgid ""
 "\n"
 "Broadcast Receivers receive Intents sent to multiple applications.\n"
@@ -3568,7 +3347,7 @@ msgid ""
 "leading to XAS (Cross Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3265 vulnerabilities.py:3265
+#: vulnerabilities.py:3265
 msgid ""
 "\n"
 "The Android application exports Receiver for use by other applications,\n"
@@ -3576,7 +3355,7 @@ msgid ""
 "component or access the data it contains.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3280 vulnerabilities.py:3280
+#: vulnerabilities.py:3280
 msgid ""
 "\n"
 "If you are using a Broadcast Receiver for sharing data between only your\n"
@@ -3590,23 +3369,23 @@ msgid ""
 "or use Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3301 vulnerabilities.py:3301
+#: vulnerabilities.py:3301
 msgid "Unprotected Exported Service"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3302 vulnerabilities.py:3302
+#: vulnerabilities.py:3302
 msgid "Unprotected Exported Service."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3303 vulnerabilities.py:3303
+#: vulnerabilities.py:3303
 msgid "Are any services insecurely exported?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3304 vulnerabilities.py:3304
+#: vulnerabilities.py:3304
 msgid "The application does not export any services insecurely."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3306 vulnerabilities.py:3306
+#: vulnerabilities.py:3306
 msgid ""
 "\n"
 "Services run in the background and do not interact with the user.\n"
@@ -3621,7 +3400,7 @@ msgid ""
 "Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3318 vulnerabilities.py:3318
+#: vulnerabilities.py:3318
 msgid ""
 "\n"
 "The Android application exports Service for use by other applications,\n"
@@ -3629,7 +3408,7 @@ msgid ""
 "component or access the data it contains.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3333 vulnerabilities.py:3333
+#: vulnerabilities.py:3333
 msgid ""
 "\n"
 "If you are using a Service for sharing data between only your own apps,\n"
@@ -3643,23 +3422,23 @@ msgid ""
 "Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3354 vulnerabilities.py:3354
+#: vulnerabilities.py:3354
 msgid "Unprotected Exported Provider"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3355 vulnerabilities.py:3355
+#: vulnerabilities.py:3355
 msgid "Unprotected Exported Provider."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3356 vulnerabilities.py:3356
+#: vulnerabilities.py:3356
 msgid "Are any providers insecurely exported?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3357 vulnerabilities.py:3357
+#: vulnerabilities.py:3357
 msgid "The application does not export any providers insecurely."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3359 vulnerabilities.py:3359
+#: vulnerabilities.py:3359
 msgid ""
 "\n"
 "Content Providers are databases addressable by their application-defined\n"
@@ -3671,7 +3450,7 @@ msgid ""
 "leading to XAS (Cross Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3368 vulnerabilities.py:3368
+#: vulnerabilities.py:3368
 msgid ""
 "\n"
 "The Android application exports a Content Provider for use by other\n"
@@ -3679,7 +3458,7 @@ msgid ""
 "launch the component or access the data it contains.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3383 vulnerabilities.py:3383
+#: vulnerabilities.py:3383
 msgid ""
 "\n"
 "If you are using a Content Provider for sharing data between only your\n"
@@ -3693,23 +3472,23 @@ msgid ""
 "use Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3404 vulnerabilities.py:3404
+#: vulnerabilities.py:3404
 msgid "Non-signature Protected Exported Activities"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3405 vulnerabilities.py:3405
+#: vulnerabilities.py:3405
 msgid "Non-signature Protected Exported Activities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3406 vulnerabilities.py:3406
+#: vulnerabilities.py:3406
 msgid "Are any activities exported without a ProtectionLevel?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3407 vulnerabilities.py:3407
+#: vulnerabilities.py:3407
 msgid "The application does not export any activity without a ProtectionLevel."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3409 vulnerabilities.py:3409
+#: vulnerabilities.py:3409
 msgid ""
 "\n"
 "Activities provide user interfaces. Activities are started with Intents,\n"
@@ -3720,7 +3499,7 @@ msgid ""
 "installed in the phone leading to XAS (Cross Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3417 vulnerabilities.py:3417
+#: vulnerabilities.py:3417
 msgid ""
 "\n"
 "The Android application exports Activity for use by other applications,\n"
@@ -3729,7 +3508,7 @@ msgid ""
 "`android:protectionLevel`.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3433 vulnerabilities.py:3433
+#: vulnerabilities.py:3433
 msgid ""
 "\n"
 "If you are using a Activity for sharing between only your own apps, it\n"
@@ -3740,25 +3519,25 @@ msgid ""
 "Activity are signed with the same key\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3451 vulnerabilities.py:3451
+#: vulnerabilities.py:3451
 msgid "Non-signature Protected Exported Receivers"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3452 vulnerabilities.py:3452
+#: vulnerabilities.py:3452
 msgid "Non-signature Protected Exported Receivers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3453 vulnerabilities.py:3453
+#: vulnerabilities.py:3453
 msgid "Are any Broadcast Receivers exported without a ProtectionLevel?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3454 vulnerabilities.py:3454
+#: vulnerabilities.py:3454
 msgid ""
 "The application does not export any Broadcast Receivers without a "
 "ProtectionLevel."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3456 vulnerabilities.py:3456
+#: vulnerabilities.py:3456
 msgid ""
 "\n"
 "Broadcast Receivers receive Intents sent to multiple applications.\n"
@@ -3779,7 +3558,7 @@ msgid ""
 "Receiver leading to XAS (Cross Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3474 vulnerabilities.py:3474
+#: vulnerabilities.py:3474
 msgid ""
 "\n"
 "The Android application exports Broadcast Receiver for use by other\n"
@@ -3788,7 +3567,7 @@ msgid ""
 "defined by `android:protectionLevel`.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3490 vulnerabilities.py:3490
+#: vulnerabilities.py:3490
 msgid ""
 "\n"
 "If you are using a Broadcast Receiver for sharing data between only your\n"
@@ -3799,23 +3578,23 @@ msgid ""
 "data are signed with the same key\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3508 vulnerabilities.py:3508
+#: vulnerabilities.py:3508
 msgid "Non-signature Protected Exported Services"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3509 vulnerabilities.py:3509
+#: vulnerabilities.py:3509
 msgid "Non-signature Protected Exported Services."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3510 vulnerabilities.py:3510
+#: vulnerabilities.py:3510
 msgid "Are any services exported without a ProtectionLevel?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3511 vulnerabilities.py:3511
+#: vulnerabilities.py:3511
 msgid "The application does not export any service without a ProtectionLevel."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3513 vulnerabilities.py:3513
+#: vulnerabilities.py:3513
 msgid ""
 "\n"
 "Services run in the background and do not interact with the user.\n"
@@ -3830,7 +3609,7 @@ msgid ""
 "Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3525 vulnerabilities.py:3525
+#: vulnerabilities.py:3525
 msgid ""
 "\n"
 "The Android application exports Service for use by other applications,\n"
@@ -3839,7 +3618,7 @@ msgid ""
 "`android:protectionLevel`.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3541 vulnerabilities.py:3541
+#: vulnerabilities.py:3541
 msgid ""
 "\n"
 "If you are using a Service for sharing data between only your own apps,\n"
@@ -3850,23 +3629,23 @@ msgid ""
 "signed with the same key\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3559 vulnerabilities.py:3559
+#: vulnerabilities.py:3559
 msgid "Non-signature Protected Exported Providers"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3560 vulnerabilities.py:3560
+#: vulnerabilities.py:3560
 msgid "Non-signature Protected Exported Providers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3561 vulnerabilities.py:3561
+#: vulnerabilities.py:3561
 msgid "Are any providers exported without a ProtectionLevel?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3562 vulnerabilities.py:3562
+#: vulnerabilities.py:3562
 msgid "The application does not export any provider without a ProtectionLevel."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3564 vulnerabilities.py:3564
+#: vulnerabilities.py:3564
 msgid ""
 "\n"
 "Content Providers are databases addressable by their application-defined\n"
@@ -3878,7 +3657,7 @@ msgid ""
 "Provider leading to XAS (Cross Application Scripting)\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3573 vulnerabilities.py:3573
+#: vulnerabilities.py:3573
 msgid ""
 "\n"
 "The Android application exports Content Provider for use by other\n"
@@ -3887,7 +3666,7 @@ msgid ""
 "defined by `android:protectionLevel`.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3589 vulnerabilities.py:3589
+#: vulnerabilities.py:3589
 msgid ""
 "\n"
 "If you are using a Content Provider for sharing data between only your\n"
@@ -3898,27 +3677,27 @@ msgid ""
 "the data are signed with the same key\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3607 vulnerabilities.py:3607
+#: vulnerabilities.py:3607
 msgid "Content Provider File Traversal Vulnerability"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3608 vulnerabilities.py:3608
+#: vulnerabilities.py:3608
 msgid "Content Provider File Traversal Vulnerability."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3609 vulnerabilities.py:3609
+#: vulnerabilities.py:3609
 msgid ""
 "Is the application vulnerable to content provider directory traversal "
 "attacks?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3610 vulnerabilities.py:3610
+#: vulnerabilities.py:3610
 msgid ""
 "Application does not seem to be vulnerable to content provider directory "
 "traversal attacks."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3612 vulnerabilities.py:3612
+#: vulnerabilities.py:3612
 msgid ""
 "\n"
 "Content Providers are databases addressable by their application-defined\n"
@@ -3933,16 +3712,14 @@ msgid ""
 "before it is used.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3624 vulnerabilities.py:3624
+#: vulnerabilities.py:3624
 msgid ""
 "\n"
 "Depending on the implementation of `ContentProvider`, use of the method\n"
 "can lead to a directory traversal vulnerability.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3628
-#: mycroft/core/data/vulnerabilities.py:3633 vulnerabilities.py:3628
-#: vulnerabilities.py:3633
+#: vulnerabilities.py:3628 vulnerabilities.py:3633
 msgid ""
 "\n"
 "Directory Traversal exploits allow attackers to escape the context of\n"
@@ -3950,7 +3727,7 @@ msgid ""
 "application/device.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3638 vulnerabilities.py:3638
+#: vulnerabilities.py:3638
 msgid ""
 "\n"
 "By using the canonicalized path, directory traversal will be mitigated\n"
@@ -3958,7 +3735,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3643 vulnerabilities.py:3643
+#: vulnerabilities.py:3643
 msgid ""
 "\n"
 "This non-compliant code example tries to retrieve the last segment from\n"
@@ -3968,7 +3745,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3649 vulnerabilities.py:3649
+#: vulnerabilities.py:3649
 msgid ""
 "\n"
 "\n"
@@ -3979,7 +3756,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3657 vulnerabilities.py:3657
+#: vulnerabilities.py:3657
 msgid ""
 "\n"
 "- JVN\\#78601526 GREE for Android vulnerable to directory traversal:\n"
@@ -3988,26 +3765,26 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3670 vulnerabilities.py:3670
+#: vulnerabilities.py:3670
 msgid "Insecure Cryptographic Keys"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3671 vulnerabilities.py:3671
+#: vulnerabilities.py:3671
 msgid "Insecure Cryptographic Keys."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3672 vulnerabilities.py:3672
+#: vulnerabilities.py:3672
 msgid ""
 "Does the application use insecure encryption algorithms or configurations?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3673 vulnerabilities.py:3673
+#: vulnerabilities.py:3673
 msgid ""
 "The application does not use insecure encryption algorithms or "
 "configurations."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3675 vulnerabilities.py:3675
+#: vulnerabilities.py:3675
 msgid ""
 "\n"
 "Using the CCCryptor, one can use common sounding functions such as\n"
@@ -4027,16 +3804,14 @@ msgid ""
 "cipher text.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3691 vulnerabilities.py:3691
+#: vulnerabilities.py:3691
 msgid ""
 "\n"
 "Application seems to be using the correct cryptographic encryption\n"
 "method, or is not using it.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3695
-#: mycroft/core/data/vulnerabilities.py:3700 vulnerabilities.py:3695
-#: vulnerabilities.py:3700
+#: vulnerabilities.py:3695 vulnerabilities.py:3700
 msgid ""
 "\n"
 "Using an insecure initialization vector allows the attacker to perform\n"
@@ -4044,7 +3819,7 @@ msgid ""
 "initial portion of ciphertext is effectively just substition.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3705 vulnerabilities.py:3705
+#: vulnerabilities.py:3705
 msgid ""
 "\n"
 "The mystical initialization vector (IV) is confusing. In CBC-mode, each\n"
@@ -4062,25 +3837,25 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3730 vulnerabilities.py:3730
+#: vulnerabilities.py:3730
 msgid "iOS SecKeyEncrypt implementation"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3731 vulnerabilities.py:3731
+#: vulnerabilities.py:3731
 msgid "iOS SecKeyEncrypt implementation."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3732 vulnerabilities.py:3732
+#: vulnerabilities.py:3732
 msgid "Does the application use proper SecKeyEncrypt implementation?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3733 vulnerabilities.py:3733
+#: vulnerabilities.py:3733
 msgid ""
 "The application uses proper SecKeyEncrypt, or SecKeyEncrypt is not "
 "implemented."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3735 vulnerabilities.py:3735
+#: vulnerabilities.py:3735
 msgid ""
 "\n"
 "Most of the time iOS handles all the encryption. It automatically\n"
@@ -4091,33 +3866,33 @@ msgid ""
 "called\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3743 vulnerabilities.py:3743
+#: vulnerabilities.py:3743
 msgid ""
 "\n"
 "`SecKeyEncrypt` determines how to encrypt data from a PUBLIC KEY in iOS\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3759 vulnerabilities.py:3759
+#: vulnerabilities.py:3759
 msgid "Insecure Peer Connections"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3760 vulnerabilities.py:3760
+#: vulnerabilities.py:3760
 msgid "Insecure Peer Connections."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3761 vulnerabilities.py:3761
+#: vulnerabilities.py:3761
 msgid ""
 "Does the application securely communicate with other devices over MultiPeer "
 "Framework?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3762 vulnerabilities.py:3762
+#: vulnerabilities.py:3762
 msgid ""
 "The application uses MultiPeer Framework properly, or MultiPeer Framework is "
 "not being used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3764 vulnerabilities.py:3764
+#: vulnerabilities.py:3764
 msgid ""
 "\n"
 "Multi-peer Connectivity Framework makes the task of exchanging data or\n"
@@ -4128,23 +3903,21 @@ msgid ""
 "of data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3772 vulnerabilities.py:3772
+#: vulnerabilities.py:3772
 msgid ""
 "\n"
 "MultiPeer Connectivity Framework is used for establishing connection\n"
 "with the devices in close proximity\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3776
-#: mycroft/core/data/vulnerabilities.py:3780 vulnerabilities.py:3776
-#: vulnerabilities.py:3780
+#: vulnerabilities.py:3776 vulnerabilities.py:3780
 msgid ""
 "\n"
 "Failing to use encrypted channels may undermine the confidentiality of\n"
 "the transmitted data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3784 vulnerabilities.py:3784
+#: vulnerabilities.py:3784
 msgid ""
 "\n"
 "While establishing a connection with the peer always initialize the\n"
@@ -4152,23 +3925,23 @@ msgid ""
 "ensure that complete data is shared on an encrypted channel.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3799 vulnerabilities.py:3799
+#: vulnerabilities.py:3799
 msgid "Unsecured Keychain Data"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3800 vulnerabilities.py:3800
+#: vulnerabilities.py:3800
 msgid "Unsecured Keychain Data."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3801 vulnerabilities.py:3801
+#: vulnerabilities.py:3801
 msgid "Does the application insecurely store data in Keychain?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3802 vulnerabilities.py:3802
+#: vulnerabilities.py:3802
 msgid "The application does not store sensitive data in Keychain."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3804 vulnerabilities.py:3804
+#: vulnerabilities.py:3804
 msgid ""
 "\n"
 "iOS provides the Keychain for secure data storage. However, in several\n"
@@ -4191,15 +3964,13 @@ msgid ""
 "with physical access to the device.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3824 vulnerabilities.py:3824
+#: vulnerabilities.py:3824
 msgid ""
 "\n"
 "Insecured data kept in iOS Keychain\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3827
-#: mycroft/core/data/vulnerabilities.py:3832 vulnerabilities.py:3827
-#: vulnerabilities.py:3832
+#: vulnerabilities.py:3827 vulnerabilities.py:3832
 msgid ""
 "\n"
 "Failing to take proper precautions may result in loss of login\n"
@@ -4207,7 +3978,7 @@ msgid ""
 "keychain.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3837 vulnerabilities.py:3837
+#: vulnerabilities.py:3837
 msgid ""
 "\n"
 "Store the sensitive data such as passwords in an encrypted form on the\n"
@@ -4234,7 +4005,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3861 vulnerabilities.py:3861
+#: vulnerabilities.py:3861
 msgid ""
 "\n"
 "Not in compliance with OWASP Mobile Top 10 for M8 - Side Channel Data\n"
@@ -4243,7 +4014,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3867 vulnerabilities.py:3867
+#: vulnerabilities.py:3867
 msgid ""
 "\n"
 "- [Keychain Services Programming\n"
@@ -4257,24 +4028,24 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3884 vulnerabilities.py:3884
+#: vulnerabilities.py:3884
 msgid "Exposed Pasteboard Data"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3885 vulnerabilities.py:3885
+#: vulnerabilities.py:3885
 msgid "Exposed Pasteboard Data."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3886 vulnerabilities.py:3886
+#: vulnerabilities.py:3886
 msgid ""
 "Does the application allow copy/paste functionalities in sensitive fields?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3887 vulnerabilities.py:3887
+#: vulnerabilities.py:3887
 msgid "The application has proper protection from general pasteboard."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3889 vulnerabilities.py:3889
+#: vulnerabilities.py:3889
 msgid ""
 "\n"
 "Both iOS and Android support copy/paste. Sensitive data may be stored,\n"
@@ -4284,23 +4055,21 @@ msgid ""
 "plaintext when other applications access the clipboard.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3896 vulnerabilities.py:3896
+#: vulnerabilities.py:3896
 msgid ""
 "\n"
 "Exposing sensitive data like passwords in pasteboard/clipboard which can\n"
 "be used by other applications\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3900
-#: mycroft/core/data/vulnerabilities.py:3904 vulnerabilities.py:3900
-#: vulnerabilities.py:3904
+#: vulnerabilities.py:3900 vulnerabilities.py:3904
 msgid ""
 "\n"
 "Failing to take proper precautions may result in loss of login\n"
 "credentials, passwords and other sensitive data stored in the clipboard.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3908 vulnerabilities.py:3908
+#: vulnerabilities.py:3908
 msgid ""
 "\n"
 "Use application specific pasteboard. Also mark fields like passwords as\n"
@@ -4334,7 +4103,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3939 vulnerabilities.py:3939
+#: vulnerabilities.py:3939
 msgid ""
 "\n"
 "Not in compliance with OWASP Mobile Top 10 for M8 - Side Channel Data\n"
@@ -4342,7 +4111,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3944 vulnerabilities.py:3944
+#: vulnerabilities.py:3944
 msgid ""
 "\n"
 "- [JVN\\#76662040](https://jvn.jp/en/jp/JVN76662040/) Clipboard\n"
@@ -4351,25 +4120,25 @@ msgid ""
 "  contents alteration vulnerability in Sleipnir\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3958 vulnerabilities.py:3958
+#: vulnerabilities.py:3958
 msgid "Buffer Overflows and Underflows"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3959 vulnerabilities.py:3959
+#: vulnerabilities.py:3959
 msgid "Buffer Overflows and Underflows."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3960 vulnerabilities.py:3960
+#: vulnerabilities.py:3960
 msgid "Does the application have buffer overflow or underflow vulnerabilities?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3961 vulnerabilities.py:3961
+#: vulnerabilities.py:3961
 msgid ""
 "The application does not seem have buffer overflow or underflow "
 "vulnerabilities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3963 vulnerabilities.py:3963
+#: vulnerabilities.py:3963
 msgid ""
 "\n"
 "iOS has several mechanisms which prevent the application from being\n"
@@ -4398,14 +4167,14 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3986 vulnerabilities.py:3986
+#: vulnerabilities.py:3986
 msgid ""
 "\n"
 "Buffer overflows, both on the stack and on the heap, are a major source\n"
 "of security vulnerabilities in C, Objective-C, and C++ code.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:3992 vulnerabilities.py:3992
+#: vulnerabilities.py:3992
 msgid ""
 "\n"
 "Usually the ipa file will be decrypted at runtime by the kernel's mach\n"
@@ -4415,7 +4184,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4000 vulnerabilities.py:4000
+#: vulnerabilities.py:4000
 msgid ""
 "\n"
 "- [Avoiding Buffer Overflows and Underflows by\n"
@@ -4427,24 +4196,24 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4014 vulnerabilities.py:4014
+#: vulnerabilities.py:4014
 msgid "Jailbreak Detection"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4015 vulnerabilities.py:4015
+#: vulnerabilities.py:4015
 msgid "Consider implementing Jailbreak Detection."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4016 vulnerabilities.py:4016
+#: vulnerabilities.py:4016
 msgid "Does the app implement any form of jailbreak detection?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4017 vulnerabilities.py:4017
+#: vulnerabilities.py:4017
 msgid ""
 "The app seems to implement routines that check if device has been jailbroken."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4019 vulnerabilities.py:4019
+#: vulnerabilities.py:4019
 msgid ""
 "\n"
 "Jailbreaking is the removing of software restrictions imposed by Apple.\n"
@@ -4454,7 +4223,7 @@ msgid ""
 "jailbroken iPhones on which malware can be installed more easily.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4026 vulnerabilities.py:4026
+#: vulnerabilities.py:4026
 msgid ""
 "\n"
 "Jailbroken devices may make it easier for attackers to break into the\n"
@@ -4462,9 +4231,7 @@ msgid ""
 "application on jailbroken devices is recommended.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4031
-#: mycroft/core/data/vulnerabilities.py:4041 vulnerabilities.py:4031
-#: vulnerabilities.py:4041
+#: vulnerabilities.py:4031 vulnerabilities.py:4041
 msgid ""
 "\n"
 "Attackers can run tools like Cycript, GDB, Snoop-it etc. to perform\n"
@@ -4477,7 +4244,7 @@ msgid ""
 "application rather than disabling the functionality entirely.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4051 vulnerabilities.py:4051
+#: vulnerabilities.py:4051
 msgid ""
 "\n"
 "Consider using jailbreak detection SDKs or libraries. Note that by\n"
@@ -4485,23 +4252,23 @@ msgid ""
 "accurate.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4065 vulnerabilities.py:4065
+#: vulnerabilities.py:4065
 msgid "UIWebView Exploits"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4066 vulnerabilities.py:4066
+#: vulnerabilities.py:4066
 msgid "Be careful when using UIWebView."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4067 vulnerabilities.py:4067
+#: vulnerabilities.py:4067
 msgid "Are there instances of UIWebView used in the app?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4068 vulnerabilities.py:4068
+#: vulnerabilities.py:4068
 msgid "UIWebView is not used in the app."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4070 vulnerabilities.py:4070
+#: vulnerabilities.py:4070
 msgid ""
 "\n"
 "iOS offers the UIWebView class to embed web content in the app. This is\n"
@@ -4509,16 +4276,14 @@ msgid ""
 "mobile platforms without having to create a specific UI for each.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4075 vulnerabilities.py:4075
+#: vulnerabilities.py:4075
 msgid ""
 "\n"
 "UIWebView can be susceptible to client side Javascript injection. It can\n"
 "also retain sensitive content in the memory as cache\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4079
-#: mycroft/core/data/vulnerabilities.py:4090 vulnerabilities.py:4079
-#: vulnerabilities.py:4090
+#: vulnerabilities.py:4079 vulnerabilities.py:4090
 msgid ""
 "\n"
 "UIWebView can be susceptible to client side Javascript injection if\n"
@@ -4532,7 +4297,7 @@ msgid ""
 "has been closed.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4101 vulnerabilities.py:4101
+#: vulnerabilities.py:4101
 msgid ""
 "\n"
 "When using UIWebView, make sure the data is loaded over HTTPS. Avoid\n"
@@ -4543,23 +4308,23 @@ msgid ""
 "Finally, disable caching when sensitive content is loaded.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4118 vulnerabilities.py:4118
+#: vulnerabilities.py:4118
 msgid "WebView Exploits"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4119 vulnerabilities.py:4119
+#: vulnerabilities.py:4119
 msgid "Be careful when using WebView."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4120 vulnerabilities.py:4120
+#: vulnerabilities.py:4120
 msgid "Are there instances of WebView used insecurely in the app?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4121 vulnerabilities.py:4121
+#: vulnerabilities.py:4121
 msgid "WebViews, if any, are properly implemented."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4123 vulnerabilities.py:4123
+#: vulnerabilities.py:4123
 msgid ""
 "\n"
 "Android API offers WebView to deliver a web application (or just a web\n"
@@ -4574,16 +4339,14 @@ msgid ""
 "parsing the data and rendering it in an Android layout.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4135 vulnerabilities.py:4135
+#: vulnerabilities.py:4135
 msgid ""
 "\n"
 "WebView can be susceptible to various exploits including client side\n"
 "Javascript injection and network sniffing if improperly implemented.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4139
-#: mycroft/core/data/vulnerabilities.py:4147 vulnerabilities.py:4139
-#: vulnerabilities.py:4147
+#: vulnerabilities.py:4139 vulnerabilities.py:4147
 msgid ""
 "\n"
 "An improperly implemented WebView instance may be vulnerable to XSS can\n"
@@ -4594,7 +4357,7 @@ msgid ""
 "injecting arbitrary JavaScript into the WebView.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4155 vulnerabilities.py:4155
+#: vulnerabilities.py:4155
 msgid ""
 "\n"
 "When using WebView, ensure the following:\n"
@@ -4609,23 +4372,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4176 vulnerabilities.py:4176
+#: vulnerabilities.py:4176
 msgid "App Transport Security"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4177 vulnerabilities.py:4177
+#: vulnerabilities.py:4177
 msgid "Ensure App Transport Security (ATS) is properly configured."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4178 vulnerabilities.py:4178
+#: vulnerabilities.py:4178
 msgid "Is App Transport Security (ATS) properly configured?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4179 vulnerabilities.py:4179
+#: vulnerabilities.py:4179
 msgid "App Transport Security (ATS) is properly configured."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4181 vulnerabilities.py:4181
+#: vulnerabilities.py:4181
 msgid ""
 "\n"
 "On Apple platforms, a networking security feature called App Transport\n"
@@ -4647,7 +4410,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4199 vulnerabilities.py:4199
+#: vulnerabilities.py:4199
 msgid ""
 "\n"
 "App Transport Security (ATS), which is a networking security feature\n"
@@ -4655,9 +4418,7 @@ msgid ""
 "ciphers, was found to be misconfigured.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4204
-#: mycroft/core/data/vulnerabilities.py:4212 vulnerabilities.py:4204
-#: vulnerabilities.py:4212
+#: vulnerabilities.py:4204 vulnerabilities.py:4212
 msgid ""
 "\n"
 "Misconfiguring App Transport Security (ATS) may lead to:\n"
@@ -4668,7 +4429,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4220 vulnerabilities.py:4220
+#: vulnerabilities.py:4220
 msgid ""
 "\n"
 "App Transport Security (ATS) is enabled by default for apps linked\n"
@@ -4695,7 +4456,7 @@ msgid ""
 "TP40009251-SW35).\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4242 vulnerabilities.py:4242
+#: vulnerabilities.py:4242
 msgid ""
 "\n"
 "For background on secure Internet connections, please read [HTTPS Server "
@@ -4704,25 +4465,23 @@ msgid ""
 "_index.html).\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4253 vulnerabilities.py:4253
+#: vulnerabilities.py:4253
 msgid "Insecure Hashing Algorithms"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4254 vulnerabilities.py:4254
+#: vulnerabilities.py:4254
 msgid "Avoid using insecure hash function algorithms."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4255 vulnerabilities.py:4255
+#: vulnerabilities.py:4255
 msgid "Are any insecure hash functions used?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4256 vulnerabilities.py:4256
+#: vulnerabilities.py:4256
 msgid "No insecure hash functions are used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4258
-#: mycroft/core/data/vulnerabilities.py:4462 vulnerabilities.py:4258
-#: vulnerabilities.py:4462
+#: vulnerabilities.py:4258 vulnerabilities.py:4462
 msgid ""
 "\n"
 "The MD5 algorithm is commonly used hash function producing a 128-bit hash "
@@ -4735,7 +4494,7 @@ msgid ""
 "vulnerabilities.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4264 vulnerabilities.py:4264
+#: vulnerabilities.py:4264
 msgid ""
 "\n"
 "Using cryptographically insecure hash function algorithms may severely "
@@ -4743,7 +4502,7 @@ msgid ""
 "the integrity of data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4268 vulnerabilities.py:4268
+#: vulnerabilities.py:4268
 msgid ""
 "\n"
 "Using salted MD5 for passwords is a bad idea. Not because of MD5's "
@@ -4771,7 +4530,7 @@ msgid ""
 "collision attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4284 vulnerabilities.py:4284
+#: vulnerabilities.py:4284
 msgid ""
 "\n"
 "**For passwords**, deliberately slow hash constructions, such as scrypt, "
@@ -4787,23 +4546,23 @@ msgid ""
 "standardized it will be a good choice too.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4301 vulnerabilities.py:4301
+#: vulnerabilities.py:4301
 msgid "One Time Password Bypass"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4302 vulnerabilities.py:4302
+#: vulnerabilities.py:4302
 msgid "Implement One Time Passwords properly."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4303 vulnerabilities.py:4303
+#: vulnerabilities.py:4303
 msgid "Is the application vulnerable to One Time Password Bypass?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4304 vulnerabilities.py:4304
+#: vulnerabilities.py:4304
 msgid "Application is not vulnerable to One Time Password Bypass."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4306 vulnerabilities.py:4306
+#: vulnerabilities.py:4306
 msgid ""
 "\n"
 "A one-time password (OTP) is a password that is valid for only one login "
@@ -4818,23 +4577,23 @@ msgid ""
 "knows (such as a PIN).\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4337 vulnerabilities.py:4337
+#: vulnerabilities.py:4337
 msgid "Insecure Direct Object Reference"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4338 vulnerabilities.py:4338
+#: vulnerabilities.py:4338
 msgid "Insecure Direct Object Reference."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4339 vulnerabilities.py:4339
+#: vulnerabilities.py:4339
 msgid "Do Insecure Direct Object References exist within the app?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4340 vulnerabilities.py:4340
+#: vulnerabilities.py:4340
 msgid "No occurences of Insecure Direct Object References were found."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4342 vulnerabilities.py:4342
+#: vulnerabilities.py:4342
 msgid ""
 "\n"
 "Insecure Direct Object References occur when an application provides direct "
@@ -4848,28 +4607,28 @@ msgid ""
 "authorisation checks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4374 vulnerabilities.py:4374
+#: vulnerabilities.py:4374
 msgid "Insufficient Transport Layer Protection."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4375 vulnerabilities.py:4375
+#: vulnerabilities.py:4375
 msgid ""
 "Does the application use Transport Layer protection? Is HTTPS enabled "
 "globally in the application?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4376 vulnerabilities.py:4376
+#: vulnerabilities.py:4376
 msgid ""
 "Application has SSL enabled and sufficient protection is being used to "
 "prevent information leakage."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4377 vulnerabilities.py:4377
+#: vulnerabilities.py:4377
 msgid ""
 "When making network transmissions, all connections should strictly use TLS."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4412 vulnerabilities.py:4412
+#: vulnerabilities.py:4412
 msgid ""
 "\n"
 "Never use just an HTTP connection to upload/download data. Instead, create "
@@ -4877,23 +4636,23 @@ msgid ""
 "request to perform transmission.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4425 vulnerabilities.py:4425
+#: vulnerabilities.py:4425
 msgid "Short HMAC Keys"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4426 vulnerabilities.py:4426
+#: vulnerabilities.py:4426
 msgid "Keys used to calculate HMAC should be of significant length."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4427 vulnerabilities.py:4427
+#: vulnerabilities.py:4427
 msgid "Are keys used to calculate HMAC too short?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4428 vulnerabilities.py:4428
+#: vulnerabilities.py:4428
 msgid "Keys used to calculate HMAC, if any, are of recommended length."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4430 vulnerabilities.py:4430
+#: vulnerabilities.py:4430
 msgid ""
 "\n"
 "An HMAC (keyed-hash message authentication code) is a type of message "
@@ -4909,7 +4668,7 @@ msgid ""
 "the key.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4438 vulnerabilities.py:4438
+#: vulnerabilities.py:4438
 msgid ""
 "\n"
 "The key for HMAC can be of any length. However, less than 32 bytes is "
@@ -4922,29 +4681,29 @@ msgid ""
 "weak.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4444 vulnerabilities.py:4444
+#: vulnerabilities.py:4444
 msgid ""
 "Loss of HMAC security may compromise the integrity and authenticity of the "
 "data maintained."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4457 vulnerabilities.py:4457
+#: vulnerabilities.py:4457
 msgid "Vulnerable Hash Algorithms"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4458 vulnerabilities.py:4458
+#: vulnerabilities.py:4458
 msgid "Deprecated or vulnerable hash algorithms should not be used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4459 vulnerabilities.py:4459
+#: vulnerabilities.py:4459
 msgid "Are any deprecated or vulnerable hash algorithms used?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4460 vulnerabilities.py:4460
+#: vulnerabilities.py:4460
 msgid "No deprecated or vulnerable hash algorithms are being used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4468 vulnerabilities.py:4468
+#: vulnerabilities.py:4468
 msgid ""
 "\n"
 "Using salted MD5 for passwords should be avoided, not because of its "
@@ -4970,14 +4729,14 @@ msgid ""
 "to be susceptible to collision attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4483 vulnerabilities.py:4483
+#: vulnerabilities.py:4483
 msgid ""
 "\n"
 "Using cryptographically weak hash function algorithms may severely "
 "compromise the integrity of data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4488 vulnerabilities.py:4488
+#: vulnerabilities.py:4488
 msgid ""
 "\n"
 "**For passwords**, deliberately slow hash constructions such as scrypt, "
@@ -4991,23 +4750,23 @@ msgid ""
 "a good choice once it gets standardised.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4505 vulnerabilities.py:4505
+#: vulnerabilities.py:4505
 msgid "General Server Vulnerabilities"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4506 vulnerabilities.py:4506
+#: vulnerabilities.py:4506
 msgid "General Server Vulnerabilities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4507 vulnerabilities.py:4507
+#: vulnerabilities.py:4507
 msgid "Are any general server vulnerabilities present?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4508 vulnerabilities.py:4508
+#: vulnerabilities.py:4508
 msgid "No general server vulnerabilities were found."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4510 vulnerabilities.py:4510
+#: vulnerabilities.py:4510
 msgid ""
 "\n"
 "This issue is not specific to a certain kind of vulnerabilities. It can be "
@@ -5042,7 +4801,7 @@ msgid ""
 "thrown by the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4530 vulnerabilities.py:4530
+#: vulnerabilities.py:4530
 msgid ""
 "\n"
 "The API may be susceptible to general server vulnerabilities, which can lead "
@@ -5050,23 +4809,23 @@ msgid ""
 "further attacks\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4547 vulnerabilities.py:4547
+#: vulnerabilities.py:4547
 msgid "Buffer Overflow Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4548 vulnerabilities.py:4548
+#: vulnerabilities.py:4548
 msgid "Buffer Overflow Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4549 vulnerabilities.py:4549
+#: vulnerabilities.py:4549
 msgid "Did buffer overflows occur in HTTP requests?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4550 vulnerabilities.py:4550
+#: vulnerabilities.py:4550
 msgid "Buffer overflow vulnerabilities were not detected in HTTP request."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4552 vulnerabilities.py:4552
+#: vulnerabilities.py:4552
 msgid ""
 "\n"
 "A buffer overflow occurs when a program attempts to put more data in a "
@@ -5092,13 +4851,13 @@ msgid ""
 "application itself.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4566 vulnerabilities.py:4566
+#: vulnerabilities.py:4566
 msgid ""
 "\n"
 "One or more API requests may be vulnerable to Buffer overflow issues\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4569 vulnerabilities.py:4569
+#: vulnerabilities.py:4569
 msgid ""
 "\n"
 "- Buffer overflows generally lead to crashes. Other attacks leading to lack "
@@ -5113,23 +4872,23 @@ msgid ""
 "  subvert any other security service.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4589 vulnerabilities.py:4589
+#: vulnerabilities.py:4589
 msgid "Command Injection Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4590 vulnerabilities.py:4590
+#: vulnerabilities.py:4590
 msgid "Command Injection Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4591 vulnerabilities.py:4591
+#: vulnerabilities.py:4591
 msgid "Are there command injection vulnerabilities in HTTP request?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4592 vulnerabilities.py:4592
+#: vulnerabilities.py:4592
 msgid "No command injection vulnerabilities in HTTP request were found."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4594 vulnerabilities.py:4594
+#: vulnerabilities.py:4594
 msgid ""
 "\n"
 "Command injection is an attack in which the attacker attempts execution of "
@@ -5152,30 +4911,30 @@ msgid ""
 "validation.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4606 vulnerabilities.py:4606
+#: vulnerabilities.py:4606
 msgid ""
 "\n"
 "One or more API requests were found to be vulnerable to command injection "
 "vulnerabilities\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4622 vulnerabilities.py:4622
+#: vulnerabilities.py:4622
 msgid "Integer Overflow Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4623 vulnerabilities.py:4623
+#: vulnerabilities.py:4623
 msgid "Integer Overflow Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4624 vulnerabilities.py:4624
+#: vulnerabilities.py:4624
 msgid "Are there integer overflow vulnerabilities in HTTP request?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4625 vulnerabilities.py:4625
+#: vulnerabilities.py:4625
 msgid "No integer overflow vulnerabilities were found in HTTP request."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4627 vulnerabilities.py:4627
+#: vulnerabilities.py:4627
 msgid ""
 "\n"
 "An integer overflow occurs when the result of an arithmetic operation "
@@ -5194,13 +4953,13 @@ msgid ""
 "to.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4637 vulnerabilities.py:4637
+#: vulnerabilities.py:4637
 msgid ""
 "\n"
 "The API may be vulnerable to integer overflow issues\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4640 vulnerabilities.py:4640
+#: vulnerabilities.py:4640
 msgid ""
 "\n"
 "- An integer overflow during a buffer length calculation can result in "
@@ -5216,23 +4975,23 @@ msgid ""
 "transaction.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4660 vulnerabilities.py:4660
+#: vulnerabilities.py:4660
 msgid "JSON Depth Overflow in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4661 vulnerabilities.py:4661
+#: vulnerabilities.py:4661
 msgid "JSON Depth Overflow in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4662 vulnerabilities.py:4662
+#: vulnerabilities.py:4662
 msgid "Are there JSON depth overflows in HTTP requests?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4663 vulnerabilities.py:4663
+#: vulnerabilities.py:4663
 msgid "No JSON depth overflows were found in HTTP request."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4665 vulnerabilities.py:4665
+#: vulnerabilities.py:4665
 msgid ""
 "\n"
 "Altough JSON is intended as a data serialization format, its design as a\n"
@@ -5249,29 +5008,29 @@ msgid ""
 "to a DoS vulnerability.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4675 vulnerabilities.py:4675
+#: vulnerabilities.py:4675
 msgid ""
 "\n"
 "The JSON parser used by the API may be vulnerable to depth overflow issues\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4691 vulnerabilities.py:4691
+#: vulnerabilities.py:4691
 msgid "LDAP Injection Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4692 vulnerabilities.py:4692
+#: vulnerabilities.py:4692
 msgid "LDAP Injection Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4693 vulnerabilities.py:4693
+#: vulnerabilities.py:4693
 msgid "Are there LDAP injection vulnerabilities in HTTP request?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4694 vulnerabilities.py:4694
+#: vulnerabilities.py:4694
 msgid "No LDAP injection vulnerabilities were found in HTTP request."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4696 vulnerabilities.py:4696
+#: vulnerabilities.py:4696
 msgid ""
 "\n"
 "LDAP injection is an attack used to exploit web based applications that "
@@ -5288,29 +5047,29 @@ msgid ""
 "applied in LDAP injection.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4705 vulnerabilities.py:4705
+#: vulnerabilities.py:4705
 msgid ""
 "\n"
 "The API may be vulnerable to LDAP injection\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4721 vulnerabilities.py:4721
+#: vulnerabilities.py:4721
 msgid "Regex DoS Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4722 vulnerabilities.py:4722
+#: vulnerabilities.py:4722
 msgid "Regex DoS Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4723 vulnerabilities.py:4723
+#: vulnerabilities.py:4723
 msgid "Are there Regex DoS vulnerabilities in HTTP requests?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4724 vulnerabilities.py:4724
+#: vulnerabilities.py:4724
 msgid "No Regex DoS vulnerabilities were found in HTTP request."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4726 vulnerabilities.py:4726
+#: vulnerabilities.py:4726
 msgid ""
 "\n"
 "The Regular Expression Denial of Service (ReDoS) is a Denial of Service "
@@ -5324,29 +5083,29 @@ msgid ""
 "to enter these extreme situations and then hang for a very long time.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4733 vulnerabilities.py:4733
+#: vulnerabilities.py:4733
 msgid ""
 "\n"
 "Instances of Regex DoS vulnerabilities were found in API requests\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4749 vulnerabilities.py:4749
+#: vulnerabilities.py:4749
 msgid "SQL Injection Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4750 vulnerabilities.py:4750
+#: vulnerabilities.py:4750
 msgid "SQL Injection Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4751 vulnerabilities.py:4751
+#: vulnerabilities.py:4751
 msgid "Are there SQL injection vulnerabilities in HTTP request?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4752 vulnerabilities.py:4752
+#: vulnerabilities.py:4752
 msgid "No SQL injection vulnerabilities were found in HTTP request."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4754 vulnerabilities.py:4754
+#: vulnerabilities.py:4754
 msgid ""
 "\n"
 "A SQL injection attack consists of insertion or _injection_ of a SQL query "
@@ -5364,27 +5123,27 @@ msgid ""
 "predefined SQL commands.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4764 vulnerabilities.py:4764
+#: vulnerabilities.py:4764
 msgid ""
 "\n"
 "One or more API requests were found to be vulnerable to SQL injection\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4781 vulnerabilities.py:4781
+#: vulnerabilities.py:4781
 msgid "Ensure PhoneGap debug logging is disabled on production builds."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4782 vulnerabilities.py:4782
+#: vulnerabilities.py:4782
 msgid "Is PhoneGap debug logging enabled?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4783 vulnerabilities.py:4783
+#: vulnerabilities.py:4783
 msgid ""
 "PhoneGap debug logging was found to be disabled or PhoneGap is not being "
 "used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4785 vulnerabilities.py:4785
+#: vulnerabilities.py:4785
 msgid ""
 "\n"
 "If a PhoneGap app is shipped with debug mode switched on, it can allow "
@@ -5394,13 +5153,13 @@ msgid ""
 "leaked which can be used to determine the URL endpoints of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4790 vulnerabilities.py:4790
+#: vulnerabilities.py:4790
 msgid ""
 "\n"
 "When using PhoneGap, disable debug logs before shipping the app.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4793 vulnerabilities.py:4793
+#: vulnerabilities.py:4793
 msgid ""
 "\n"
 "If a PhoneGap app is shipped with debug mode switched on, it can allow "
@@ -5410,7 +5169,7 @@ msgid ""
 "leaked which can be used to determine the URL endpoints of the application.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4802 vulnerabilities.py:4802
+#: vulnerabilities.py:4802
 msgid ""
 "\n"
 "\n"
@@ -5418,23 +5177,23 @@ msgid ""
 "code before publishing.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4817 vulnerabilities.py:4817
+#: vulnerabilities.py:4817
 msgid "String Validation Vulnerabilities in HTTP Requests"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4818 vulnerabilities.py:4818
+#: vulnerabilities.py:4818
 msgid "String Validation Vulnerabilities in HTTP Requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4819 vulnerabilities.py:4819
+#: vulnerabilities.py:4819
 msgid "Are there string validation vulnerabilities in HTTP request?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4820 vulnerabilities.py:4820
+#: vulnerabilities.py:4820
 msgid "No string validation vulnerabilities were found in HTTP requests."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4822 vulnerabilities.py:4822
+#: vulnerabilities.py:4822
 msgid ""
 "\n"
 "Failure to properly validate input from the client or environment is the "
@@ -5448,31 +5207,31 @@ msgid ""
 "trusted for the client has every possibility to tamper with the data.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4829 vulnerabilities.py:4829
+#: vulnerabilities.py:4829
 msgid ""
 "\n"
 "Appknox found string validation vulnerabilities in one or more HTTP "
 "requests\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4845 vulnerabilities.py:4845
+#: vulnerabilities.py:4845
 msgid "XML-external-entity Injection Vulnerabilities in HTTP Body"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4846 vulnerabilities.py:4846
+#: vulnerabilities.py:4846
 msgid "XML-external-entity Injection Vulnerabilities in HTTP Body."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4847 vulnerabilities.py:4847
+#: vulnerabilities.py:4847
 msgid "Are there XML-external-entity injection vulnerabilities in HTTP body?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4848 vulnerabilities.py:4848
+#: vulnerabilities.py:4848
 msgid ""
 "No XML-external-entity injection vulnerabilities were found in HTTP body."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4850 vulnerabilities.py:4850
+#: vulnerabilities.py:4850
 msgid ""
 "\n"
 "An XML External Entity Injection is a type of attack against an application "
@@ -5488,7 +5247,7 @@ msgid ""
 "located, and other system impacts.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4858 vulnerabilities.py:4858
+#: vulnerabilities.py:4858
 msgid ""
 "\n"
 "Our scanner detected occurrences of XML-external-entity injection "
@@ -5496,23 +5255,23 @@ msgid ""
 "in HTTP body of API calls\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4875 vulnerabilities.py:4875
+#: vulnerabilities.py:4875
 msgid "Cross-site-scripting Vulnerabilities in HTTP Body"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4876 vulnerabilities.py:4876
+#: vulnerabilities.py:4876
 msgid "Cross-site-scripting Vulnerabilities in HTTP Body."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4877 vulnerabilities.py:4877
+#: vulnerabilities.py:4877
 msgid "Are there cross-site-scripting vulnerabilities in HTTP body?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4878 vulnerabilities.py:4878
+#: vulnerabilities.py:4878
 msgid "No Cross-site-scripting vulnerabilities were found in HTTP body."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4880 vulnerabilities.py:4880
+#: vulnerabilities.py:4880
 msgid ""
 "\n"
 "Cross-Site Scripting (XSS) attacks are a type of injection, in which "
@@ -5546,30 +5305,30 @@ msgid ""
 "site's owner.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4900 vulnerabilities.py:4900
+#: vulnerabilities.py:4900
 msgid ""
 "\n"
 "One or more API calls were found to be vulnerable to Cross-Site Scripting "
 "(XSS) attacks\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4916 vulnerabilities.py:4916
+#: vulnerabilities.py:4916
 msgid "CORS Wild Character Vulnerabilities in HTTP Headers"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4917 vulnerabilities.py:4917
+#: vulnerabilities.py:4917
 msgid "CORS Wild Character Vulnerabilities in HTTP Headers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4918 vulnerabilities.py:4918
+#: vulnerabilities.py:4918
 msgid "Are there CORS wild character vulnerabilities in HTTP header?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4919 vulnerabilities.py:4919
+#: vulnerabilities.py:4919
 msgid "No CORS wild character vulnerabilities were found in HTTP headers."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4921 vulnerabilities.py:4921
+#: vulnerabilities.py:4921
 msgid ""
 "\n"
 "Cross Origin Resource Sharing (CORS) is a specification that allows cross "
@@ -5589,30 +5348,30 @@ msgid ""
 "domains that are trusted.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4932 vulnerabilities.py:4932
+#: vulnerabilities.py:4932
 msgid ""
 "\n"
 "One or more API requests were found to have CORS wild character "
 "vulnerability within in HTTP headers\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4947 vulnerabilities.py:4947
+#: vulnerabilities.py:4947
 msgid "PhoneGap Whitelist Open Access"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4948 vulnerabilities.py:4948
+#: vulnerabilities.py:4948
 msgid "Make sure PhoneGap whitelist does not allow open access."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4949 vulnerabilities.py:4949
+#: vulnerabilities.py:4949
 msgid "Does PhoneGap whitelist allow open access or is missing?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4950 vulnerabilities.py:4950
+#: vulnerabilities.py:4950
 msgid "PhoneGap whitelist does not allow open acces.s or PhoneGap is not used"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4953 vulnerabilities.py:4953
+#: vulnerabilities.py:4953
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external "
@@ -5628,7 +5387,7 @@ msgid ""
 "automatically get converted to the appropriate ATS directives.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4963 vulnerabilities.py:4963
+#: vulnerabilities.py:4963
 msgid ""
 "\n"
 "The PhoneGap whitelist was found to be allowing open access to all sites.\n"
@@ -5636,9 +5395,7 @@ msgid ""
 "hostnames.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4967
-#: mycroft/core/data/vulnerabilities.py:5067 vulnerabilities.py:4967
-#: vulnerabilities.py:5067
+#: vulnerabilities.py:4967 vulnerabilities.py:5067
 msgid ""
 "\n"
 "An attacker can bypass the whitelisting mechanism and initiate connections "
@@ -5646,23 +5403,23 @@ msgid ""
 "unauthorized remote servers. This could aid in further attacks.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4983 vulnerabilities.py:4983
+#: vulnerabilities.py:4983
 msgid "Cross Site Tracing Vulnerabilities"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4984 vulnerabilities.py:4984
+#: vulnerabilities.py:4984
 msgid "Cross Site Tracing Vulnerabilities."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4985 vulnerabilities.py:4985
+#: vulnerabilities.py:4985
 msgid "Are there Cross Site Tracing vulnerabilities present?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4986 vulnerabilities.py:4986
+#: vulnerabilities.py:4986
 msgid "No Cross Site Tracing vulnerabilities were found."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4988 vulnerabilities.py:4988
+#: vulnerabilities.py:4988
 msgid ""
 "\n"
 "A Cross-Site Tracing (XST) attack involves the use of Cross-site Scripting "
@@ -5676,14 +5433,14 @@ msgid ""
 "being accessed by JavaScript.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4996 vulnerabilities.py:4996
+#: vulnerabilities.py:4996
 msgid ""
 "\n"
 "One or more API requests were found to be susceptible to Cross Site Tracing "
 "vulnerabilies\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:4999 vulnerabilities.py:4999
+#: vulnerabilities.py:4999
 msgid ""
 "\n"
 "The Cross-Site Tracing (XST) attack makes use of Cross-site Scripting (XSS)\n"
@@ -5702,23 +5459,23 @@ msgid ""
 "such as using Java.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5023 vulnerabilities.py:5023
+#: vulnerabilities.py:5023
 msgid "Response Body Contains Non-HTTPS Links"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5024 vulnerabilities.py:5024
+#: vulnerabilities.py:5024
 msgid "Response Body Contains Non-HTTPS Links."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5025 vulnerabilities.py:5025
+#: vulnerabilities.py:5025
 msgid "Does any response body contain non-https links?"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5026 vulnerabilities.py:5026
+#: vulnerabilities.py:5026
 msgid "Response body does not contain non-https links."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5028 vulnerabilities.py:5028
+#: vulnerabilities.py:5028
 msgid ""
 "\n"
 "When a response is served over HTTPS, the connection with the web server\n"
@@ -5732,7 +5489,7 @@ msgid ""
 "by man-in-the-middle attackers, so the connection is not safeguarded.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5036 vulnerabilities.py:5036
+#: vulnerabilities.py:5036
 msgid ""
 "\n"
 "One or more of the API responses were found to contain URL links that do not "
@@ -5740,24 +5497,24 @@ msgid ""
 "ie. that use regular, cleartext HTTP.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5052 vulnerabilities.py:5052
+#: vulnerabilities.py:5052
 msgid "PhoneGap Whitelist RegEx Bypass"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5053 vulnerabilities.py:5053
+#: vulnerabilities.py:5053
 msgid "Be careful with regular expressions in PhoneGap whitelist."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5054 vulnerabilities.py:5054
+#: vulnerabilities.py:5054
 msgid "Can the PhoneGap whitelist be bypassed with a special RegEx"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5055 vulnerabilities.py:5055
+#: vulnerabilities.py:5055
 msgid ""
 "The app does not allow whitelist to be bypassed, or PhoneGap is not used."
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5057 vulnerabilities.py:5057
+#: vulnerabilities.py:5057
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external "
@@ -5769,41 +5526,9 @@ msgid ""
 "a whitelist and allow access to specific network domains and subdomains.\n"
 msgstr ""
 
-#: mycroft/core/data/vulnerabilities.py:5063 vulnerabilities.py:5063
+#: vulnerabilities.py:5063
 msgid ""
 "\n"
 "If a regular expression is used within the whitelist, check if HTTPS can be\n"
 "bypassed with the regex.\n"
-msgstr ""
-
-#: mycroft/crm/templates/crm/subscription_wizard.html:19
-msgid "first step"
-msgstr ""
-
-#: mycroft/crm/templates/crm/subscription_wizard.html:20
-msgid "prev step"
-msgstr ""
-
-#: mycroft/crm/templates/crm/subscription_wizard.html:22
-msgid "Next"
-msgstr ""
-
-#: report.html:22
-msgid "Risk Assessment"
-msgstr ""
-
-#: report.html:24
-msgid "Noncompliant Code Example"
-msgstr ""
-
-#: report.html:25
-msgid "Compliant Solution"
-msgstr ""
-
-#: report.html:26
-msgid "Business Implication"
-msgstr ""
-
-#: report.html:27
-msgid "Related Vulnerabilities"
 msgstr ""
