@@ -5807,3 +5807,197 @@ msgstr ""
 #: report.html:27
 msgid "Related Vulnerabilities"
 msgstr ""
+
+
+#: mycroft/report/templates/foo.html:2 mycroft/report/templates/report.html:5
+msgid "Report"
+msgstr "報告する"
+
+#: mycroft/report/templates/foo.html:3 mycroft/report/templates/report.html:21
+msgid "Security Report"
+msgstr "セキュリティレポート"
+
+#: mycroft/report/templates/foo.html:4 mycroft/report/templates/report.html:24
+msgid "For Internal Purpose"
+msgstr "内部目的のために"
+
+#: mycroft/report/templates/report.html:9
+msgid "confidential"
+msgstr "ために"
+
+#: mycroft/report/templates/report.html:27
+msgid "Prepared For:"
+msgstr "以下のために準備："
+
+#: mycroft/report/templates/report.html:33
+msgid ""
+"\n"
+"                        Prepared by XYSec Labs Pte. Ltd. Portions of this "
+"document and the templates used in its production are the property of XYSec "
+"Labs Pte. Ltd. and cannot be copied without permission.\n"
+"                    "
+msgstr ""
+"\n"
+"XYSec研究所のPteによって調製しました。株式会社本書の一部およびその製造に使用"
+"されるテンプレートは、XYSec研究所のPteの財産です。 （株）および許可なしにコ"
+"ピーすることはできません。"
+
+#: mycroft/report/templates/report.html:39
+msgid ""
+"\n"
+"                        While precautions have been taken in the preparation "
+"of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) "
+"assume no responsibility for errors, omissions, or for damages resulting "
+"from the use of the information contained herein. Use of XYSec Labs Pte. "
+"Ltd. services does not guarantee the security of a system, or that "
+"intrusions will not occur.\n"
+"                    "
+msgstr ""
+"\n"
+"注意事項は、本文書、XYSec研究所のPteの準備で撮影してきたが。 （株）、出版社、"
+"及び著者（複数可）は、エラーのため、省略、または本明細書に含まれている情報の"
+"使用から生じた損害について、一切の責任を負いません。 XYSec研究所のPteの使"
+"用。 （株）サービスは、システムのセキュリティを保証する、または侵入が発生しな"
+"いことはありません。"
+
+#: mycroft/report/templates/report.html:47
+msgid "Table of Contents"
+msgstr "目次"
+
+#: mycroft/report/templates/report.html:52
+#: mycroft/report/templates/report.html:104
+msgid "Report Summary"
+msgstr "レポートの概要"
+
+#: mycroft/report/templates/report.html:55
+#: mycroft/report/templates/report.html:116
+msgid "Application Details"
+msgstr "アプリケーションの詳細"
+
+#: mycroft/report/templates/report.html:58
+#: mycroft/report/templates/report.html:147
+msgid "Audit Summary"
+msgstr "監査の概要"
+
+#: mycroft/report/templates/report.html:61
+#: mycroft/report/templates/report.html:186
+msgid "Appknox Security Rating"
+msgstr "Appknoxセキュリティ評価"
+
+#: mycroft/report/templates/report.html:64
+#: mycroft/report/templates/report.html:195
+msgid "Appknox Findings"
+msgstr "Appknox所見"
+
+#: mycroft/report/templates/report.html:107
+#, python-format
+msgid ""
+"\n"
+"                Appknox conducted a security assessment of the mobile\n"
+"                application for the %(platform)s platform. This report "
+"contains all the findings\n"
+"                during the automated auditing process. It also contains the "
+"process of\n"
+"                discovering those vulnerabilities in the first place, and "
+"ways to remediate\n"
+"                those issues.\n"
+"            "
+msgstr ""
+
+#: mycroft/report/templates/report.html:121
+#, fuzzy
+#| msgid "Application Logs"
+msgid "Application Name"
+msgstr "アプリケーションログ"
+
+#: mycroft/report/templates/report.html:125
+#, fuzzy
+#| msgid "Application Logs"
+msgid "Application Namespace"
+msgstr "アプリケーションログ"
+
+#: mycroft/report/templates/report.html:129
+msgid "Version"
+msgstr ""
+
+#: mycroft/report/templates/report.html:133
+#, fuzzy
+#| msgid "Audit Summary"
+msgid "Audit Date"
+msgstr "監査の概要"
+
+#: mycroft/report/templates/report.html:137
+#, fuzzy
+#| msgid "Application Logs"
+msgid "Application SHA1 Hash"
+msgstr "アプリケーションログ"
+
+#: mycroft/report/templates/report.html:141
+#, fuzzy
+#| msgid "Application Details"
+msgid "Application MD5 Hash"
+msgstr "アプリケーションの詳細"
+
+#: mycroft/report/templates/report.html:155
+msgid "Passed"
+msgstr ""
+
+#: mycroft/report/templates/report.html:159
+msgid "Risk"
+msgstr ""
+
+#: mycroft/report/templates/report.html:169
+msgid "Priority Level"
+msgstr ""
+
+#: mycroft/report/templates/report.html:170
+msgid "Number of failed test cases"
+msgstr ""
+
+#: mycroft/report/templates/report.html:173
+msgid "High Risk"
+msgstr ""
+
+#: mycroft/report/templates/report.html:177
+msgid "Medium Risk"
+msgstr ""
+
+#: mycroft/report/templates/report.html:181
+msgid "Low Risk"
+msgstr ""
+
+#: mycroft/report/templates/report.html:191
+#, fuzzy
+#| msgid "Appknox Security Rating"
+msgid "Appknox Security Rating: "
+msgstr "Appknoxセキュリティ評価"
+
+#: mycroft/report/templates/report.html:191
+msgid "Unsecured"
+msgstr ""
+
+#: mycroft/report/templates/report.html:214
+msgid "Risk Rating"
+msgstr ""
+
+#: mycroft/report/templates/report.html:216
+msgid "Risk Assessment"
+msgstr ""
+
+#: mycroft/report/templates/report.html:235
+msgid "Noncompliant Code Example"
+msgstr ""
+
+#: mycroft/report/templates/report.html:241
+msgid "Compliant Solution"
+msgstr ""
+
+#: mycroft/report/templates/report.html:247
+#, fuzzy
+#| msgid "Business Logic"
+msgid "Business Implication"
+msgstr "ビジネスロジック"
+
+#: mycroft/report/templates/report.html:253
+msgid "Related Vulnerabilities"
+msgstr ""
