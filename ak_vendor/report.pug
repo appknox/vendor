@@ -28,79 +28,79 @@ html(lang="en")
         img(align="middle" src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
       div.main-heading
         | {{ file.project.get_platform_display }}
-        | Security Report
+        | {% trans Security Report %}
       div.sub-heading
-        | For Internal Purpose
+        | {% trans For Internal Purpose %}
       div.app-name
-        | Prepared For: {{file.name}}
+        | {% trans Prepared For %}: {{file.name}}
       div.doc-description
         p
-          | Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission.
+          |  {% trans Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission. %}
         p
-          | While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur.
+          | {% trans While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur. %}
 
     section.new-page
       div
         h5.heading-container
-          | Application Details
+          | {% trans Application Details %}
       div
         table.app-details
           tbody
             tr
               td
-                | Application Name
+                | {% trans Application Name %}
               td
                 | {{file.name}}
             tr
               td
-                | Platform
+                | {% trans Platform %}
               td
                 | {{file.project.get_platform_display}}
             tr
               td
-                | Application Namespace
+                | {% trans Application Namespace %}
               td
                 | {{file.name}}
             tr
               td
-                | Version
+                | {% trans Version %}
               td
                 | {{file.version}}
             tr
               td
-                | Audit Date
+                | {% trans Audit Date %}
               td
                 | {{file.updated_on}}
             tr
               td
-                | Application SHA1 Hash
+                | {% trans Application SHA1 Hash %}
               td
                 | {{file.sha1hash}}
             tr
               td
-                | Application MD5 Hash
+                | {% trans Application MD5 Hash %}
               td
                 | {{file.md5hash}}
 
     section.new-page
       div
         h3.heading-container
-          | Table Of Contents
+          | {% trans Table Of Contents %}
       div
         table.content-table
           tbody
             tr.main-table-heading
               td
                 a(href="#report-summary")
-                  | Report Summary
+                  | {% trans Report Summary %}
             tr.sub-table-heading
               td
                 a(href="#audit-summary")
-                  | Audit Summary
+                  | {% trans Audit Summary %}
             tr.sub-table-heading
               td
                 a(href="#security-rating")
-                  | Appknox Security Rating
+                  | {% trans Appknox Security Rating %}
 
             | {% for analysis in file.sorted_analyses %}
             | {% if analysis.risk > RiskEnum.PASSED %}
@@ -119,28 +119,28 @@ html(lang="en")
             tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}non-compliant")
-                  | Noncompliant Code Example
+                  | {% trans Noncompliant Code Example %}
             | {% endif %}
 
             | {% if analysis.vulnerability.compliant %}
             tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}compliant")
-                  | Compliant Solution
+                  | {% trans Compliant Solution %}
             | {% endif %}
 
             | {% if analysis.vulnerability.business_implication %}
             tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}business-implication")
-                  | Business Implication
+                  | {% trans Business Implication %}
             | {% endif %}
 
             | {% if analysis.vulnerability.related_to %}
             tr.sub-table-heading
               td
                 a(href="#{{ analysis.id }}{{ forloop.counter }}related-to")
-                  | Related Vulnerabilities
+                  | {% trans Related Vulnerabilities %}
             | {% endif %}
 
             | {% endif %}
@@ -150,16 +150,16 @@ html(lang="en")
       div
         a(id="report-summary")
         h3.heading-container
-          | Report Summary
+          | {% trans Report Summary %}
       div
         p
-          | Appknox conducted a security assessment of the mobile application for the {{ file.project.get_platform_display }} platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues.
+          | {% trans Appknox conducted a security assessment of the mobile application for the {{ file.project.get_platform_display }} platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues. %}
 
       section
         div
           a(id="audit-summary")
           h5.sub-heading-container
-            | Audit Summary
+            | {% trans Audit Summary %}
         div
           table.audit-table
             | {% for analysis in file.sorted_analyses %}
@@ -181,22 +181,22 @@ html(lang="en")
           tbody
             tr
               td
-                | Priority Level
+                | {% trans Priority Level %}
               td
-                | Number of failed test cases
+                | {% trans Number of failed test cases %}
             tr
               td
-                | High Risk
+                | {% trans High Risk %}
               td
                 | {{ file.risk_count_high }}
             tr
               td
-                | Medium Risk
+                | {% trans Medium Risk %}
               td
                 | {{ file.risk_count_medium }}
             tr
               td
-                | Low Risk
+                | {% trans Low Risk %}
               td
                 | {{ file.risk_count_low }}
 
@@ -204,12 +204,12 @@ html(lang="en")
         div
           a(id="security-rating")
           h5.sub-heading-container
-            | Appknox Security Rating
+            | {% trans Appknox Security Rating %}
 
         div
           img(width=316 height=75 src="{{ chart_url }}")
           p
-            | Appknox Security Rating: {{ rating }}% Unsecured
+            | {% trans Appknox Security Rating: %} {{ rating }}% {% trans Unsecured %}
 
     | {% for analysis in file.sorted_analyses %}
 
@@ -225,7 +225,7 @@ html(lang="en")
           | {{ analysis.vulnerability.intro | safe }}
         div
           h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
-            | Risk Rating : {{ analysis.get_risk_display }}
+            | {% trans Risk Rating %} : {{ analysis.get_risk_display }}
 
       section.assessment
         div.analysis-type
@@ -269,7 +269,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}compliant")
           h5
-            | {% trans "Compliant Solution" %}  
+            | {% trans "Compliant Solution" %}
         div
           | {{ analysis.vulnerability.compliant | safe }}
       | {% endif %}
@@ -279,7 +279,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}business-implication")
           h5
-            | {% trans "Business Implication" %}  
+            | {% trans "Business Implication" %}
         div
           | {{ analysis.vulnerability.business_implication | safe }}
       | {% endif %}
@@ -289,7 +289,7 @@ html(lang="en")
         div.analysis-type
           a(id="{{ analysis.id }}{{ forloop.counter }}related-to")
           h5
-            | {% trans "Related Vulnerabilities" %}  
+            | {% trans "Related Vulnerabilities" %}
         div
           | {{ analysis.vulnerability.related_to | safe }}
       | {% endif %}
