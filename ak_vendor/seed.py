@@ -49,7 +49,19 @@ analysis_template = {
     'id': 135,
     'vulnerability': vulnerability_template,
     'color': 'red',
-    'get_risk_display': 'High'
+    'get_risk_display': 'High',
+    'show_cvss': True,
+    'cvss_base': 6.7,
+    'cvss_version': 3,
+    'cvss_metrics_humanized': [
+     {'key': 'Integrity Impact', 'value': 'Low'},
+     {'key': 'Attack Vector', 'value': 'Network'},
+     {'key': 'Availability Impact', 'value': 'None'},
+     {'key': 'Confidentiality Impact', 'value': 'Low'},
+     {'key': 'Attack Complexity', 'value': 'Low'},
+     {'key': 'User Interaction', 'value': 'Not Required'},
+     {'key': 'Privileges Required', 'value': 'High'}
+     ]
  }
 
 analiser1 = copy(analysis_template)
@@ -86,6 +98,7 @@ file_data = {
     'project': {
         'get_platform_display': "Some Platform"
     },
+    'risk_count_critical': 12,
     'risk_count_high': 10,
     'risk_count_medium': 7,
     'risk_count_low': 8,
