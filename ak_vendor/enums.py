@@ -360,3 +360,13 @@ class AvailabilityImpactEnum:
         HIGH = ['H', 'High']
         LOW = ['L', 'Low']
         NONE = ['N', 'None']
+
+
+@choices
+class MFAMethodEnum:
+    """
+    Multi-factor authentication method
+    """
+    class Meta:
+        NONE = [0, 'None']
+        TOTP = [1, 'TOTP']
