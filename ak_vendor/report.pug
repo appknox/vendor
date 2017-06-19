@@ -234,18 +234,18 @@ html(lang="en")
           h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
             | {% trans "Risk Rating" %} : {{ analysis.get_risk_display }}
         | {% if analysis.show_cvss %}
-        div(class="cvss-vector")  
+        div(class="cvss-vector")
           ul
-            | {% for metric in analysis.cvss_metrics_humanized %}  
+            | {% for metric in analysis.cvss_metrics_humanized %}
             li
               | {{metric.key}} : {{metric.value}}
-            | {% endfor %} 
+            | {% endfor %}
         div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
           h1
             | {{analysis.cvss_base}}
           h6
-            | CVSSv3     
-        | {% endif %}       
+            | CVSSv3
+        | {% endif %}
       section.assessment
         div.analysis-type
           h5
