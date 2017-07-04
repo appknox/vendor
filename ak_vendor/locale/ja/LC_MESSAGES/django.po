@@ -3,98 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: vulnerabilities.py:969 vulnerabilities.py:970 vulnerabilities.py:1100
-#: vulnerabilities.py:1142 vulnerabilities.py:1143 vulnerabilities.py:1148
-#: vulnerabilities.py:1149 vulnerabilities.py:1621 vulnerabilities.py:1622
-#: vulnerabilities.py:1694 vulnerabilities.py:1870 vulnerabilities.py:1951
-#: vulnerabilities.py:2022 vulnerabilities.py:2122 vulnerabilities.py:2123
-#: vulnerabilities.py:2136 vulnerabilities.py:2194 vulnerabilities.py:2215
-#: vulnerabilities.py:2216 vulnerabilities.py:2227 vulnerabilities.py:2272
-#: vulnerabilities.py:2293 vulnerabilities.py:2294 vulnerabilities.py:2295
-#: vulnerabilities.py:2296 vulnerabilities.py:2297 vulnerabilities.py:2310
-#: vulnerabilities.py:2333 vulnerabilities.py:2334 vulnerabilities.py:2347
-#: vulnerabilities.py:2372 vulnerabilities.py:2373 vulnerabilities.py:2386
-#: vulnerabilities.py:2411 vulnerabilities.py:2412 vulnerabilities.py:2425
-#: vulnerabilities.py:2457 vulnerabilities.py:2458 vulnerabilities.py:2471
-#: vulnerabilities.py:2504 vulnerabilities.py:2505 vulnerabilities.py:2518
-#: vulnerabilities.py:2560 vulnerabilities.py:2561 vulnerabilities.py:2574
-#: vulnerabilities.py:2610 vulnerabilities.py:2611 vulnerabilities.py:2624
-#: vulnerabilities.py:2671 vulnerabilities.py:2672 vulnerabilities.py:2685
-#: vulnerabilities.py:2741 vulnerabilities.py:2742 vulnerabilities.py:2755
-#: vulnerabilities.py:2798 vulnerabilities.py:2799 vulnerabilities.py:2812
-#: vulnerabilities.py:2847 vulnerabilities.py:2848 vulnerabilities.py:2861
-#: vulnerabilities.py:2894 vulnerabilities.py:2895 vulnerabilities.py:2908
-#: vulnerabilities.py:2943 vulnerabilities.py:2944 vulnerabilities.py:2957
-#: vulnerabilities.py:3010 vulnerabilities.py:3011 vulnerabilities.py:3024
-#: vulnerabilities.py:3053 vulnerabilities.py:3054 vulnerabilities.py:3067
-#: vulnerabilities.py:3096 vulnerabilities.py:3097 vulnerabilities.py:3110
-#: vulnerabilities.py:3148 vulnerabilities.py:3149 vulnerabilities.py:3162
-#: vulnerabilities.py:3183 vulnerabilities.py:3184 vulnerabilities.py:3197
-#: vulnerabilities.py:3232 vulnerabilities.py:3233 vulnerabilities.py:3246
-#: vulnerabilities.py:3291 vulnerabilities.py:3292 vulnerabilities.py:3305
-#: vulnerabilities.py:3344 vulnerabilities.py:3345 vulnerabilities.py:3358
-#: vulnerabilities.py:3394 vulnerabilities.py:3395 vulnerabilities.py:3408
-#: vulnerabilities.py:3441 vulnerabilities.py:3442 vulnerabilities.py:3455
-#: vulnerabilities.py:3498 vulnerabilities.py:3499 vulnerabilities.py:3512
-#: vulnerabilities.py:3549 vulnerabilities.py:3550 vulnerabilities.py:3563
-#: vulnerabilities.py:3597 vulnerabilities.py:3598 vulnerabilities.py:3611
-#: vulnerabilities.py:3674 vulnerabilities.py:3720 vulnerabilities.py:3721
-#: vulnerabilities.py:3734 vulnerabilities.py:3746 vulnerabilities.py:3747
-#: vulnerabilities.py:3748 vulnerabilities.py:3749 vulnerabilities.py:3750
-#: vulnerabilities.py:3763 vulnerabilities.py:3789 vulnerabilities.py:3790
-#: vulnerabilities.py:3803 vulnerabilities.py:3888 vulnerabilities.py:3962
-#: vulnerabilities.py:3990 vulnerabilities.py:3991 vulnerabilities.py:3999
-#: vulnerabilities.py:4018 vulnerabilities.py:4056 vulnerabilities.py:4057
-#: vulnerabilities.py:4069 vulnerabilities.py:4109 vulnerabilities.py:4110
-#: vulnerabilities.py:4122 vulnerabilities.py:4167 vulnerabilities.py:4168
-#: vulnerabilities.py:4180 vulnerabilities.py:4241 vulnerabilities.py:4257
-#: vulnerabilities.py:4283 vulnerabilities.py:4292 vulnerabilities.py:4293
-#: vulnerabilities.py:4305 vulnerabilities.py:4325 vulnerabilities.py:4326
-#: vulnerabilities.py:4327 vulnerabilities.py:4328 vulnerabilities.py:4329
-#: vulnerabilities.py:4341 vulnerabilities.py:4361 vulnerabilities.py:4362
-#: vulnerabilities.py:4363 vulnerabilities.py:4364 vulnerabilities.py:4365
-#: vulnerabilities.py:4416 vulnerabilities.py:4417 vulnerabilities.py:4429
-#: vulnerabilities.py:4445 vulnerabilities.py:4446 vulnerabilities.py:4447
-#: vulnerabilities.py:4448 vulnerabilities.py:4461 vulnerabilities.py:4486
-#: vulnerabilities.py:4487 vulnerabilities.py:4496 vulnerabilities.py:4509
-#: vulnerabilities.py:4534 vulnerabilities.py:4535 vulnerabilities.py:4536
-#: vulnerabilities.py:4537 vulnerabilities.py:4538 vulnerabilities.py:4551
-#: vulnerabilities.py:4577 vulnerabilities.py:4578 vulnerabilities.py:4579
-#: vulnerabilities.py:4580 vulnerabilities.py:4593 vulnerabilities.py:4609
-#: vulnerabilities.py:4610 vulnerabilities.py:4611 vulnerabilities.py:4612
-#: vulnerabilities.py:4613 vulnerabilities.py:4626 vulnerabilities.py:4648
-#: vulnerabilities.py:4649 vulnerabilities.py:4650 vulnerabilities.py:4651
-#: vulnerabilities.py:4664 vulnerabilities.py:4678 vulnerabilities.py:4679
-#: vulnerabilities.py:4680 vulnerabilities.py:4681 vulnerabilities.py:4682
-#: vulnerabilities.py:4695 vulnerabilities.py:4708 vulnerabilities.py:4709
-#: vulnerabilities.py:4710 vulnerabilities.py:4711 vulnerabilities.py:4712
-#: vulnerabilities.py:4725 vulnerabilities.py:4736 vulnerabilities.py:4737
-#: vulnerabilities.py:4738 vulnerabilities.py:4739 vulnerabilities.py:4740
-#: vulnerabilities.py:4753 vulnerabilities.py:4767 vulnerabilities.py:4768
-#: vulnerabilities.py:4769 vulnerabilities.py:4770 vulnerabilities.py:4771
-#: vulnerabilities.py:4784 vulnerabilities.py:4798 vulnerabilities.py:4807
-#: vulnerabilities.py:4808 vulnerabilities.py:4821 vulnerabilities.py:4832
-#: vulnerabilities.py:4833 vulnerabilities.py:4834 vulnerabilities.py:4835
-#: vulnerabilities.py:4836 vulnerabilities.py:4849 vulnerabilities.py:4862
-#: vulnerabilities.py:4863 vulnerabilities.py:4864 vulnerabilities.py:4865
-#: vulnerabilities.py:4866 vulnerabilities.py:4879 vulnerabilities.py:4903
-#: vulnerabilities.py:4904 vulnerabilities.py:4905 vulnerabilities.py:4906
-#: vulnerabilities.py:4907 vulnerabilities.py:4920 vulnerabilities.py:4935
-#: vulnerabilities.py:4936 vulnerabilities.py:4937 vulnerabilities.py:4938
-#: vulnerabilities.py:4939 vulnerabilities.py:4952 vulnerabilities.py:4971
-#: vulnerabilities.py:4972 vulnerabilities.py:4973 vulnerabilities.py:4974
-#: vulnerabilities.py:4987 vulnerabilities.py:5011 vulnerabilities.py:5012
-#: vulnerabilities.py:5013 vulnerabilities.py:5014 vulnerabilities.py:5027
-#: vulnerabilities.py:5040 vulnerabilities.py:5041 vulnerabilities.py:5042
-#: vulnerabilities.py:5043 vulnerabilities.py:5044 vulnerabilities.py:5056
-#: vulnerabilities.py:5071 vulnerabilities.py:5072 vulnerabilities.py:5073
-#: vulnerabilities.py:5074
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-14 07:13+0000\n"
+"POT-Creation-Date: 2017-07-04 09:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -210,11 +124,10 @@ msgstr ""
 
 #: report.html:24
 msgid ""
-"Appknox conducted a security assessment of the mobile application for the "
-"{{ file.project.get_platform_display }} platform. This report contains all "
-"the findings during the automated auditing process. It also contains the "
-"process of discovering those vulnerabilities in the first place, and ways to "
-"remediate those issues."
+"Appknox conducted a security assessment of the mobile application. This "
+"report contains all the findings during the automated auditing process. It "
+"also contains the process of discovering those vulnerabilities in the first "
+"place, and ways to remediate those issues."
 msgstr ""
 
 #: report.html:24
@@ -223,6 +136,10 @@ msgstr ""
 
 #: report.html:24
 msgid "Number of failed test cases"
+msgstr ""
+
+#: report.html:24
+msgid "Critical Risk"
 msgstr ""
 
 #: report.html:24
@@ -639,12 +556,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:928
+#: vulnerabilities.py:928 vulnerabilities.py:929
 msgid "Unprotected Services"
-msgstr ""
-
-#: vulnerabilities.py:929
-msgid "Protect exported services with strong permissions."
 msgstr ""
 
 #: vulnerabilities.py:930
@@ -708,12 +621,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:978
+#: vulnerabilities.py:978 vulnerabilities.py:979
 msgid "Improper Content Provider Permissions"
-msgstr ""
-
-#: vulnerabilities.py:979
-msgid "Limit the accessibility of sensitive Content Providers."
 msgstr ""
 
 #: vulnerabilities.py:980
@@ -797,12 +706,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:1046
+#: vulnerabilities.py:1046 vulnerabilities.py:1047
 msgid "Application Debugging"
-msgstr ""
-
-#: vulnerabilities.py:1047
-msgid "Never ships builds that have debug information."
 msgstr ""
 
 #: vulnerabilities.py:1048
@@ -882,13 +787,8 @@ msgid ""
 "date related to the app can be revealed to any user.\n"
 msgstr ""
 
-#: vulnerabilities.py:1109
+#: vulnerabilities.py:1109 vulnerabilities.py:1110
 msgid "Improper Custom Permissions"
-msgstr ""
-
-#: vulnerabilities.py:1110
-msgid ""
-"Check that the calling app has appropriate permissions before responding."
 msgstr ""
 
 #: vulnerabilities.py:1111
@@ -946,12 +846,8 @@ msgid ""
 "custom-permission sets defined in the `AndroidManifest.xml`\n"
 msgstr ""
 
-#: vulnerabilities.py:1158
+#: vulnerabilities.py:1158 vulnerabilities.py:1159
 msgid "Broken SSL Trust Manager"
-msgstr ""
-
-#: vulnerabilities.py:1159
-msgid "Ensure that SSL/TLS Trust Manager is properly configured."
 msgstr ""
 
 #: vulnerabilities.py:1160
@@ -1064,12 +960,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:1262
+#: vulnerabilities.py:1262 vulnerabilities.py:1263
 msgid "Broken HostnameVerifier for SSL"
-msgstr ""
-
-#: vulnerabilities.py:1263
-msgid "Ensure that Hostname Verifier for SSL/TLS is properly configured."
 msgstr ""
 
 #: vulnerabilities.py:1264
@@ -1147,12 +1039,8 @@ msgid ""
 "or verifying the hostname\n"
 msgstr ""
 
-#: vulnerabilities.py:1348
+#: vulnerabilities.py:1348 vulnerabilities.py:1349
 msgid "Insecure SSLSocketFactories"
-msgstr ""
-
-#: vulnerabilities.py:1349
-msgid "Ensure SSL SocketFactories are implemeted properly."
 msgstr ""
 
 #: vulnerabilities.py:1350
@@ -1235,12 +1123,8 @@ msgid ""
 "silently, which even bypasses the check for trustmanagers\n"
 msgstr ""
 
-#: vulnerabilities.py:1426
+#: vulnerabilities.py:1426 vulnerabilities.py:1427
 msgid "HostnameVerifier Allowing All Hostnames"
-msgstr ""
-
-#: vulnerabilities.py:1427
-msgid "Properly verify server certificate on SSL/TLS."
 msgstr ""
 
 #: vulnerabilities.py:1428
@@ -1322,12 +1206,8 @@ msgid ""
 "certificate is trusted.\n"
 msgstr ""
 
-#: vulnerabilities.py:1514
+#: vulnerabilities.py:1514 vulnerabilities.py:1515
 msgid "App Extending WebViewClient"
-msgstr ""
-
-#: vulnerabilities.py:1515
-msgid "Ensure WebView clients handle secured connections properly."
 msgstr ""
 
 #: vulnerabilities.py:1516
@@ -1402,12 +1282,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:1588
+#: vulnerabilities.py:1588 vulnerabilities.py:1589
 msgid "Unused Permissions"
-msgstr ""
-
-#: vulnerabilities.py:1589
-msgid "Do not ask for permissions that may not be used."
 msgstr ""
 
 #: vulnerabilities.py:1590
@@ -1457,14 +1333,8 @@ msgid ""
 "Do not request for permissions beyond what your app actually needs\n"
 msgstr ""
 
-#: vulnerabilities.py:1631
+#: vulnerabilities.py:1631 vulnerabilities.py:1632
 msgid "JavascriptInterface Remote Code Execution"
-msgstr ""
-
-#: vulnerabilities.py:1632
-msgid ""
-"Do not provide addJavascriptInterface method access in a WebView which could "
-"contain untrusted content (for API level JELLY_BEAN or below)."
 msgstr ""
 
 #: vulnerabilities.py:1633
@@ -1555,12 +1425,8 @@ msgid ""
 "permissions of the app.\n"
 msgstr ""
 
-#: vulnerabilities.py:1703
+#: vulnerabilities.py:1703 vulnerabilities.py:1704
 msgid "Unprotected Activities"
-msgstr ""
-
-#: vulnerabilities.py:1704
-msgid "Restrict access to sensitive activities."
 msgstr ""
 
 #: vulnerabilities.py:1705
@@ -1678,12 +1544,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:1801
+#: vulnerabilities.py:1801 vulnerabilities.py:1802
 msgid "SQL Injection"
-msgstr ""
-
-#: vulnerabilities.py:1802
-msgid "Prevent SQL Injection."
 msgstr ""
 
 #: vulnerabilities.py:1803
@@ -1779,12 +1641,8 @@ msgid ""
 "unrestricted access.\n"
 msgstr ""
 
-#: vulnerabilities.py:1879
+#: vulnerabilities.py:1879 vulnerabilities.py:1880
 msgid "Storing Information in Shared Preferences"
-msgstr ""
-
-#: vulnerabilities.py:1880
-msgid "Ensure that sensitive data is not stored in SharedPreferences."
 msgstr ""
 
 #: vulnerabilities.py:1881
@@ -1872,12 +1730,9 @@ msgid ""
 "Any application could read the file and access any data stored in it.\n"
 msgstr ""
 
-#: vulnerabilities.py:1960 vulnerabilities.py:4373
+#: vulnerabilities.py:1960 vulnerabilities.py:1961 vulnerabilities.py:4373
+#: vulnerabilities.py:4374
 msgid "Insufficient Transport Layer Protection"
-msgstr ""
-
-#: vulnerabilities.py:1961
-msgid "Make sure that the TLS implementation is proper."
 msgstr ""
 
 #: vulnerabilities.py:1962
@@ -1952,14 +1807,8 @@ msgid ""
 "that someone is eavesdropping the connection.\n"
 msgstr ""
 
-#: vulnerabilities.py:2031
+#: vulnerabilities.py:2031 vulnerabilities.py:2032
 msgid "Derived Crypto Keys"
-msgstr ""
-
-#: vulnerabilities.py:2032
-msgid ""
-"Avoid using default Android cryptographic security provider encryption; "
-"Follow recommended encryption practices."
 msgstr ""
 
 #: vulnerabilities.py:2033
@@ -2067,12 +1916,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:2132
+#: vulnerabilities.py:2132 vulnerabilities.py:2133
 msgid "Application Logs"
-msgstr ""
-
-#: vulnerabilities.py:2133
-msgid "Always make sure that sensitive information is not logged."
 msgstr ""
 
 #: vulnerabilities.py:2134
@@ -2148,12 +1993,9 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:2190 vulnerabilities.py:2268
+#: vulnerabilities.py:2190 vulnerabilities.py:2191 vulnerabilities.py:2268
+#: vulnerabilities.py:2269
 msgid "Business Logic"
-msgstr ""
-
-#: vulnerabilities.py:2191 vulnerabilities.py:2269
-msgid "Make sure that the application business logic is sound."
 msgstr ""
 
 #: vulnerabilities.py:2192 vulnerabilities.py:2270
@@ -2264,12 +2106,8 @@ msgid ""
 "server side\n"
 msgstr ""
 
-#: vulnerabilities.py:2306
+#: vulnerabilities.py:2306 vulnerabilities.py:2307
 msgid "Debug Logging with NSLog"
-msgstr ""
-
-#: vulnerabilities.py:2307
-msgid "Carefully manage debug logs with NSLog."
 msgstr ""
 
 #: vulnerabilities.py:2308
@@ -2303,12 +2141,8 @@ msgid ""
 "signs out of the application. Do not log any sensitive information.\n"
 msgstr ""
 
-#: vulnerabilities.py:2343
+#: vulnerabilities.py:2343 vulnerabilities.py:2344
 msgid "Sensitive Information in Property Lists"
-msgstr ""
-
-#: vulnerabilities.py:2344
-msgid "Do not store sensitive information in Property Lists (plist)."
 msgstr ""
 
 #: vulnerabilities.py:2345
@@ -2352,12 +2186,8 @@ msgid ""
 "plist files of the application.\n"
 msgstr ""
 
-#: vulnerabilities.py:2382
+#: vulnerabilities.py:2382 vulnerabilities.py:2383
 msgid "Sensitive Data in NSUserDefaults"
-msgstr ""
-
-#: vulnerabilities.py:2383
-msgid "Avoid storing sensitive data in NSUserDefaults."
 msgstr ""
 
 #: vulnerabilities.py:2384
@@ -2401,12 +2231,8 @@ msgid ""
 "form.\n"
 msgstr ""
 
-#: vulnerabilities.py:2421
+#: vulnerabilities.py:2421 vulnerabilities.py:2422
 msgid "Sensitive Information in SQLite3 Databases"
-msgstr ""
-
-#: vulnerabilities.py:2422
-msgid "Do not use SQLite3 databases to store sensitive information."
 msgstr ""
 
 #: vulnerabilities.py:2423
@@ -2460,12 +2286,8 @@ msgid ""
 "can't be read even if someone tries to recover it.\n"
 msgstr ""
 
-#: vulnerabilities.py:2467
+#: vulnerabilities.py:2467 vulnerabilities.py:2468
 msgid "Unsecured Data in CoreData"
-msgstr ""
-
-#: vulnerabilities.py:2468
-msgid "Make sure sensitive data is not stored in CoreData."
 msgstr ""
 
 #: vulnerabilities.py:2469
@@ -2509,12 +2331,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:2514
+#: vulnerabilities.py:2514 vulnerabilities.py:2515
 msgid "Unsecured Data in CouchDB"
-msgstr ""
-
-#: vulnerabilities.py:2515
-msgid "Ensure sensitive data is not stored in CouchDB."
 msgstr ""
 
 #: vulnerabilities.py:2516
@@ -2567,12 +2385,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:2570
+#: vulnerabilities.py:2570 vulnerabilities.py:2571
 msgid "Unsecured Data in RealmDB"
-msgstr ""
-
-#: vulnerabilities.py:2571
-msgid "Ensure sensitive data is not stored in RealmDB."
 msgstr ""
 
 #: vulnerabilities.py:2572 vulnerabilities.py:2622
@@ -2623,12 +2437,8 @@ msgid ""
 "and then can use the encrypted file at the new location.\n"
 msgstr ""
 
-#: vulnerabilities.py:2620
+#: vulnerabilities.py:2620 vulnerabilities.py:2621
 msgid "Unsecured Data in YapDB"
-msgstr ""
-
-#: vulnerabilities.py:2621
-msgid "Ensure sensitive data is not stored in YapDB."
 msgstr ""
 
 #: vulnerabilities.py:2623
@@ -2686,12 +2496,8 @@ msgid ""
 "and when new connections are made to the database.\n"
 msgstr ""
 
-#: vulnerabilities.py:2681
+#: vulnerabilities.py:2681 vulnerabilities.py:2682
 msgid "Deprecated NSURLConnection"
-msgstr ""
-
-#: vulnerabilities.py:2682
-msgid "Never use the deprecated NSURLConnection to connect over internet."
 msgstr ""
 
 #: vulnerabilities.py:2683
@@ -2762,12 +2568,8 @@ msgid ""
 "----------------------\n"
 msgstr ""
 
-#: vulnerabilities.py:2751
+#: vulnerabilities.py:2751 vulnerabilities.py:2752
 msgid "PhoneGap JavaScript Injection"
-msgstr ""
-
-#: vulnerabilities.py:2752
-msgid "PhoneGap JavaScript Injection."
 msgstr ""
 
 #: vulnerabilities.py:2753
@@ -2829,12 +2631,8 @@ msgid ""
 "Upgrade Phonegap or Apache Cordova to the latest version.\n"
 msgstr ""
 
-#: vulnerabilities.py:2808
+#: vulnerabilities.py:2808 vulnerabilities.py:2809
 msgid "Remote URL Redirection Vulnerability"
-msgstr ""
-
-#: vulnerabilities.py:2809
-msgid "Remote URL Redirection Vulnerability."
 msgstr ""
 
 #: vulnerabilities.py:2810
@@ -2876,12 +2674,8 @@ msgid ""
 "Version\n"
 msgstr ""
 
-#: vulnerabilities.py:2857
+#: vulnerabilities.py:2857 vulnerabilities.py:2858
 msgid "PhoneGap Error URL Redirection Vulnerability"
-msgstr ""
-
-#: vulnerabilities.py:2858
-msgid "PhoneGap Error URL Redirection Vulnerability."
 msgstr ""
 
 #: vulnerabilities.py:2859
@@ -2914,12 +2708,8 @@ msgid ""
 "to Error URL redirection to arbitary website as defined by CVE-3500\n"
 msgstr ""
 
-#: vulnerabilities.py:2904
+#: vulnerabilities.py:2904 vulnerabilities.py:2905
 msgid "PhoneGap HTTPS Bypass Vulnerability"
-msgstr ""
-
-#: vulnerabilities.py:2905
-msgid "PhoneGap HTTPS Bypass Vulnerability."
 msgstr ""
 
 #: vulnerabilities.py:2906
@@ -2969,12 +2759,8 @@ msgid ""
 "whitelist.\n"
 msgstr ""
 
-#: vulnerabilities.py:2953
+#: vulnerabilities.py:2953 vulnerabilities.py:2954
 msgid "PhoneGap HTTPS Whitelist Bypass"
-msgstr ""
-
-#: vulnerabilities.py:2954
-msgid "PhoneGap HTTPS Whitelist Bypass."
 msgstr ""
 
 #: vulnerabilities.py:2955
@@ -3050,12 +2836,8 @@ msgid ""
 "latest Version\n"
 msgstr ""
 
-#: vulnerabilities.py:3020
+#: vulnerabilities.py:3020 vulnerabilities.py:3021
 msgid "Cordova Remote Start Page Manipulation Vulnerability"
-msgstr ""
-
-#: vulnerabilities.py:3021
-msgid "Cordova Remote Start Page Manipulation Vulnerability."
 msgstr ""
 
 #: vulnerabilities.py:3022
@@ -3085,12 +2867,9 @@ msgid ""
 "start page\n"
 msgstr ""
 
-#: vulnerabilities.py:3063 vulnerabilities.py:4780
+#: vulnerabilities.py:3063 vulnerabilities.py:3064 vulnerabilities.py:4780
+#: vulnerabilities.py:4781
 msgid "PhoneGap Debug Logging"
-msgstr ""
-
-#: vulnerabilities.py:3064
-msgid "PhoneGap Debug Logging."
 msgstr ""
 
 #: vulnerabilities.py:3065
@@ -3140,12 +2919,8 @@ msgid ""
 "codes before publishing\n"
 msgstr ""
 
-#: vulnerabilities.py:3106
+#: vulnerabilities.py:3106 vulnerabilities.py:3107
 msgid "PhoneGap Whitelisted URLs"
-msgstr ""
-
-#: vulnerabilities.py:3107
-msgid "PhoneGap Whitelisted URLs."
 msgstr ""
 
 #: vulnerabilities.py:3108
@@ -3204,12 +2979,8 @@ msgid ""
 "secured.\n"
 msgstr ""
 
-#: vulnerabilities.py:3158
+#: vulnerabilities.py:3158 vulnerabilities.py:3159
 msgid "Connection to External Redis Server"
-msgstr ""
-
-#: vulnerabilities.py:3159
-msgid "Connection to External Redis Server."
 msgstr ""
 
 #: vulnerabilities.py:3160
@@ -3248,12 +3019,8 @@ msgid ""
 "please remove the SDK itself\n"
 msgstr ""
 
-#: vulnerabilities.py:3193
+#: vulnerabilities.py:3193 vulnerabilities.py:3194
 msgid "Unprotected Exported Activities"
-msgstr ""
-
-#: vulnerabilities.py:3194
-msgid "Unprotected Exported Activities."
 msgstr ""
 
 #: vulnerabilities.py:3195
@@ -3310,12 +3077,8 @@ msgid ""
 "Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: vulnerabilities.py:3242
+#: vulnerabilities.py:3242 vulnerabilities.py:3243
 msgid "Unprotected Exported Receivers"
-msgstr ""
-
-#: vulnerabilities.py:3243
-msgid "Unprotected Exported Receivers."
 msgstr ""
 
 #: vulnerabilities.py:3244
@@ -3369,12 +3132,8 @@ msgid ""
 "or use Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: vulnerabilities.py:3301
+#: vulnerabilities.py:3301 vulnerabilities.py:3302
 msgid "Unprotected Exported Service"
-msgstr ""
-
-#: vulnerabilities.py:3302
-msgid "Unprotected Exported Service."
 msgstr ""
 
 #: vulnerabilities.py:3303
@@ -3422,12 +3181,8 @@ msgid ""
 "Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: vulnerabilities.py:3354
+#: vulnerabilities.py:3354 vulnerabilities.py:3355
 msgid "Unprotected Exported Provider"
-msgstr ""
-
-#: vulnerabilities.py:3355
-msgid "Unprotected Exported Provider."
 msgstr ""
 
 #: vulnerabilities.py:3356
@@ -3472,12 +3227,8 @@ msgid ""
 "use Intent-Filter for custom permissions\n"
 msgstr ""
 
-#: vulnerabilities.py:3404
+#: vulnerabilities.py:3404 vulnerabilities.py:3405
 msgid "Non-signature Protected Exported Activities"
-msgstr ""
-
-#: vulnerabilities.py:3405
-msgid "Non-signature Protected Exported Activities."
 msgstr ""
 
 #: vulnerabilities.py:3406
@@ -3519,12 +3270,8 @@ msgid ""
 "Activity are signed with the same key\n"
 msgstr ""
 
-#: vulnerabilities.py:3451
+#: vulnerabilities.py:3451 vulnerabilities.py:3452
 msgid "Non-signature Protected Exported Receivers"
-msgstr ""
-
-#: vulnerabilities.py:3452
-msgid "Non-signature Protected Exported Receivers."
 msgstr ""
 
 #: vulnerabilities.py:3453
@@ -3578,12 +3325,8 @@ msgid ""
 "data are signed with the same key\n"
 msgstr ""
 
-#: vulnerabilities.py:3508
+#: vulnerabilities.py:3508 vulnerabilities.py:3509
 msgid "Non-signature Protected Exported Services"
-msgstr ""
-
-#: vulnerabilities.py:3509
-msgid "Non-signature Protected Exported Services."
 msgstr ""
 
 #: vulnerabilities.py:3510
@@ -3629,12 +3372,8 @@ msgid ""
 "signed with the same key\n"
 msgstr ""
 
-#: vulnerabilities.py:3559
+#: vulnerabilities.py:3559 vulnerabilities.py:3560
 msgid "Non-signature Protected Exported Providers"
-msgstr ""
-
-#: vulnerabilities.py:3560
-msgid "Non-signature Protected Exported Providers."
 msgstr ""
 
 #: vulnerabilities.py:3561
@@ -3677,12 +3416,8 @@ msgid ""
 "the data are signed with the same key\n"
 msgstr ""
 
-#: vulnerabilities.py:3607
+#: vulnerabilities.py:3607 vulnerabilities.py:3608
 msgid "Content Provider File Traversal Vulnerability"
-msgstr ""
-
-#: vulnerabilities.py:3608
-msgid "Content Provider File Traversal Vulnerability."
 msgstr ""
 
 #: vulnerabilities.py:3609
@@ -3765,12 +3500,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:3670
+#: vulnerabilities.py:3670 vulnerabilities.py:3671
 msgid "Insecure Cryptographic Keys"
-msgstr ""
-
-#: vulnerabilities.py:3671
-msgid "Insecure Cryptographic Keys."
 msgstr ""
 
 #: vulnerabilities.py:3672
@@ -3837,12 +3568,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:3730
+#: vulnerabilities.py:3730 vulnerabilities.py:3731
 msgid "iOS SecKeyEncrypt implementation"
-msgstr ""
-
-#: vulnerabilities.py:3731
-msgid "iOS SecKeyEncrypt implementation."
 msgstr ""
 
 #: vulnerabilities.py:3732
@@ -3872,12 +3599,8 @@ msgid ""
 "`SecKeyEncrypt` determines how to encrypt data from a PUBLIC KEY in iOS\n"
 msgstr ""
 
-#: vulnerabilities.py:3759
+#: vulnerabilities.py:3759 vulnerabilities.py:3760
 msgid "Insecure Peer Connections"
-msgstr ""
-
-#: vulnerabilities.py:3760
-msgid "Insecure Peer Connections."
 msgstr ""
 
 #: vulnerabilities.py:3761
@@ -3925,12 +3648,8 @@ msgid ""
 "ensure that complete data is shared on an encrypted channel.\n"
 msgstr ""
 
-#: vulnerabilities.py:3799
+#: vulnerabilities.py:3799 vulnerabilities.py:3800
 msgid "Unsecured Keychain Data"
-msgstr ""
-
-#: vulnerabilities.py:3800
-msgid "Unsecured Keychain Data."
 msgstr ""
 
 #: vulnerabilities.py:3801
@@ -4028,12 +3747,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:3884
+#: vulnerabilities.py:3884 vulnerabilities.py:3885
 msgid "Exposed Pasteboard Data"
-msgstr ""
-
-#: vulnerabilities.py:3885
-msgid "Exposed Pasteboard Data."
 msgstr ""
 
 #: vulnerabilities.py:3886
@@ -4120,12 +3835,8 @@ msgid ""
 "  contents alteration vulnerability in Sleipnir\n"
 msgstr ""
 
-#: vulnerabilities.py:3958
+#: vulnerabilities.py:3958 vulnerabilities.py:3959
 msgid "Buffer Overflows and Underflows"
-msgstr ""
-
-#: vulnerabilities.py:3959
-msgid "Buffer Overflows and Underflows."
 msgstr ""
 
 #: vulnerabilities.py:3960
@@ -4196,12 +3907,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:4014
+#: vulnerabilities.py:4014 vulnerabilities.py:4015
 msgid "Jailbreak Detection"
-msgstr ""
-
-#: vulnerabilities.py:4015
-msgid "Consider implementing Jailbreak Detection."
 msgstr ""
 
 #: vulnerabilities.py:4016
@@ -4252,12 +3959,8 @@ msgid ""
 "accurate.\n"
 msgstr ""
 
-#: vulnerabilities.py:4065
+#: vulnerabilities.py:4065 vulnerabilities.py:4066
 msgid "UIWebView Exploits"
-msgstr ""
-
-#: vulnerabilities.py:4066
-msgid "Be careful when using UIWebView."
 msgstr ""
 
 #: vulnerabilities.py:4067
@@ -4308,12 +4011,8 @@ msgid ""
 "Finally, disable caching when sensitive content is loaded.\n"
 msgstr ""
 
-#: vulnerabilities.py:4118
+#: vulnerabilities.py:4118 vulnerabilities.py:4119
 msgid "WebView Exploits"
-msgstr ""
-
-#: vulnerabilities.py:4119
-msgid "Be careful when using WebView."
 msgstr ""
 
 #: vulnerabilities.py:4120
@@ -4372,12 +4071,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vulnerabilities.py:4176
+#: vulnerabilities.py:4176 vulnerabilities.py:4177
 msgid "App Transport Security"
-msgstr ""
-
-#: vulnerabilities.py:4177
-msgid "Ensure App Transport Security (ATS) is properly configured."
 msgstr ""
 
 #: vulnerabilities.py:4178
@@ -4465,12 +4160,8 @@ msgid ""
 "_index.html).\n"
 msgstr ""
 
-#: vulnerabilities.py:4253
+#: vulnerabilities.py:4253 vulnerabilities.py:4254
 msgid "Insecure Hashing Algorithms"
-msgstr ""
-
-#: vulnerabilities.py:4254
-msgid "Avoid using insecure hash function algorithms."
 msgstr ""
 
 #: vulnerabilities.py:4255
@@ -4546,12 +4237,8 @@ msgid ""
 "standardized it will be a good choice too.\n"
 msgstr ""
 
-#: vulnerabilities.py:4301
+#: vulnerabilities.py:4301 vulnerabilities.py:4302
 msgid "One Time Password Bypass"
-msgstr ""
-
-#: vulnerabilities.py:4302
-msgid "Implement One Time Passwords properly."
 msgstr ""
 
 #: vulnerabilities.py:4303
@@ -4577,12 +4264,8 @@ msgid ""
 "knows (such as a PIN).\n"
 msgstr ""
 
-#: vulnerabilities.py:4337
+#: vulnerabilities.py:4337 vulnerabilities.py:4338
 msgid "Insecure Direct Object Reference"
-msgstr ""
-
-#: vulnerabilities.py:4338
-msgid "Insecure Direct Object Reference."
 msgstr ""
 
 #: vulnerabilities.py:4339
@@ -4605,10 +4288,6 @@ msgid ""
 "This is caused by the fact that the application takes user supplied input "
 "and uses it to retrieve an object without performing sufficient "
 "authorisation checks.\n"
-msgstr ""
-
-#: vulnerabilities.py:4374
-msgid "Insufficient Transport Layer Protection."
 msgstr ""
 
 #: vulnerabilities.py:4375
@@ -4636,12 +4315,8 @@ msgid ""
 "request to perform transmission.\n"
 msgstr ""
 
-#: vulnerabilities.py:4425
+#: vulnerabilities.py:4425 vulnerabilities.py:4426
 msgid "Short HMAC Keys"
-msgstr ""
-
-#: vulnerabilities.py:4426
-msgid "Keys used to calculate HMAC should be of significant length."
 msgstr ""
 
 #: vulnerabilities.py:4427
@@ -4687,12 +4362,8 @@ msgid ""
 "data maintained."
 msgstr ""
 
-#: vulnerabilities.py:4457
+#: vulnerabilities.py:4457 vulnerabilities.py:4458
 msgid "Vulnerable Hash Algorithms"
-msgstr ""
-
-#: vulnerabilities.py:4458
-msgid "Deprecated or vulnerable hash algorithms should not be used."
 msgstr ""
 
 #: vulnerabilities.py:4459
@@ -4750,12 +4421,8 @@ msgid ""
 "a good choice once it gets standardised.\n"
 msgstr ""
 
-#: vulnerabilities.py:4505
+#: vulnerabilities.py:4505 vulnerabilities.py:4506
 msgid "General Server Vulnerabilities"
-msgstr ""
-
-#: vulnerabilities.py:4506
-msgid "General Server Vulnerabilities."
 msgstr ""
 
 #: vulnerabilities.py:4507
@@ -4809,12 +4476,8 @@ msgid ""
 "further attacks\n"
 msgstr ""
 
-#: vulnerabilities.py:4547
+#: vulnerabilities.py:4547 vulnerabilities.py:4548
 msgid "Buffer Overflow Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4548
-msgid "Buffer Overflow Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4549
@@ -4872,12 +4535,8 @@ msgid ""
 "  subvert any other security service.\n"
 msgstr ""
 
-#: vulnerabilities.py:4589
+#: vulnerabilities.py:4589 vulnerabilities.py:4590
 msgid "Command Injection Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4590
-msgid "Command Injection Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4591
@@ -4918,12 +4577,8 @@ msgid ""
 "vulnerabilities\n"
 msgstr ""
 
-#: vulnerabilities.py:4622
+#: vulnerabilities.py:4622 vulnerabilities.py:4623
 msgid "Integer Overflow Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4623
-msgid "Integer Overflow Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4624
@@ -4975,12 +4630,8 @@ msgid ""
 "transaction.\n"
 msgstr ""
 
-#: vulnerabilities.py:4660
+#: vulnerabilities.py:4660 vulnerabilities.py:4661
 msgid "JSON Depth Overflow in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4661
-msgid "JSON Depth Overflow in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4662
@@ -5014,12 +4665,8 @@ msgid ""
 "The JSON parser used by the API may be vulnerable to depth overflow issues\n"
 msgstr ""
 
-#: vulnerabilities.py:4691
+#: vulnerabilities.py:4691 vulnerabilities.py:4692
 msgid "LDAP Injection Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4692
-msgid "LDAP Injection Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4693
@@ -5053,12 +4700,8 @@ msgid ""
 "The API may be vulnerable to LDAP injection\n"
 msgstr ""
 
-#: vulnerabilities.py:4721
+#: vulnerabilities.py:4721 vulnerabilities.py:4722
 msgid "Regex DoS Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4722
-msgid "Regex DoS Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4723
@@ -5089,12 +4732,8 @@ msgid ""
 "Instances of Regex DoS vulnerabilities were found in API requests\n"
 msgstr ""
 
-#: vulnerabilities.py:4749
+#: vulnerabilities.py:4749 vulnerabilities.py:4750
 msgid "SQL Injection Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4750
-msgid "SQL Injection Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4751
@@ -5127,10 +4766,6 @@ msgstr ""
 msgid ""
 "\n"
 "One or more API requests were found to be vulnerable to SQL injection\n"
-msgstr ""
-
-#: vulnerabilities.py:4781
-msgid "Ensure PhoneGap debug logging is disabled on production builds."
 msgstr ""
 
 #: vulnerabilities.py:4782
@@ -5177,12 +4812,8 @@ msgid ""
 "code before publishing.\n"
 msgstr ""
 
-#: vulnerabilities.py:4817
+#: vulnerabilities.py:4817 vulnerabilities.py:4818
 msgid "String Validation Vulnerabilities in HTTP Requests"
-msgstr ""
-
-#: vulnerabilities.py:4818
-msgid "String Validation Vulnerabilities in HTTP Requests."
 msgstr ""
 
 #: vulnerabilities.py:4819
@@ -5214,12 +4845,8 @@ msgid ""
 "requests\n"
 msgstr ""
 
-#: vulnerabilities.py:4845
+#: vulnerabilities.py:4845 vulnerabilities.py:4846
 msgid "XML-external-entity Injection Vulnerabilities in HTTP Body"
-msgstr ""
-
-#: vulnerabilities.py:4846
-msgid "XML-external-entity Injection Vulnerabilities in HTTP Body."
 msgstr ""
 
 #: vulnerabilities.py:4847
@@ -5255,12 +4882,8 @@ msgid ""
 "in HTTP body of API calls\n"
 msgstr ""
 
-#: vulnerabilities.py:4875
+#: vulnerabilities.py:4875 vulnerabilities.py:4876
 msgid "Cross-site-scripting Vulnerabilities in HTTP Body"
-msgstr ""
-
-#: vulnerabilities.py:4876
-msgid "Cross-site-scripting Vulnerabilities in HTTP Body."
 msgstr ""
 
 #: vulnerabilities.py:4877
@@ -5312,12 +4935,8 @@ msgid ""
 "(XSS) attacks\n"
 msgstr ""
 
-#: vulnerabilities.py:4916
+#: vulnerabilities.py:4916 vulnerabilities.py:4917
 msgid "CORS Wild Character Vulnerabilities in HTTP Headers"
-msgstr ""
-
-#: vulnerabilities.py:4917
-msgid "CORS Wild Character Vulnerabilities in HTTP Headers."
 msgstr ""
 
 #: vulnerabilities.py:4918
@@ -5355,12 +4974,8 @@ msgid ""
 "vulnerability within in HTTP headers\n"
 msgstr ""
 
-#: vulnerabilities.py:4947
+#: vulnerabilities.py:4947 vulnerabilities.py:4948
 msgid "PhoneGap Whitelist Open Access"
-msgstr ""
-
-#: vulnerabilities.py:4948
-msgid "Make sure PhoneGap whitelist does not allow open access."
 msgstr ""
 
 #: vulnerabilities.py:4949
@@ -5403,12 +5018,8 @@ msgid ""
 "unauthorized remote servers. This could aid in further attacks.\n"
 msgstr ""
 
-#: vulnerabilities.py:4983
+#: vulnerabilities.py:4983 vulnerabilities.py:4984
 msgid "Cross Site Tracing Vulnerabilities"
-msgstr ""
-
-#: vulnerabilities.py:4984
-msgid "Cross Site Tracing Vulnerabilities."
 msgstr ""
 
 #: vulnerabilities.py:4985
@@ -5459,12 +5070,8 @@ msgid ""
 "such as using Java.\n"
 msgstr ""
 
-#: vulnerabilities.py:5023
+#: vulnerabilities.py:5023 vulnerabilities.py:5024
 msgid "Response Body Contains Non-HTTPS Links"
-msgstr ""
-
-#: vulnerabilities.py:5024
-msgid "Response Body Contains Non-HTTPS Links."
 msgstr ""
 
 #: vulnerabilities.py:5025
@@ -5497,12 +5104,8 @@ msgid ""
 "ie. that use regular, cleartext HTTP.\n"
 msgstr ""
 
-#: vulnerabilities.py:5052
+#: vulnerabilities.py:5052 vulnerabilities.py:5053
 msgid "PhoneGap Whitelist RegEx Bypass"
-msgstr ""
-
-#: vulnerabilities.py:5053
-msgid "Be careful with regular expressions in PhoneGap whitelist."
 msgstr ""
 
 #: vulnerabilities.py:5054
