@@ -29,7 +29,7 @@ html(lang="en")
       div.appknox-logo
         img(align="middle" src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
       div.main-heading
-        | {{ file.project.get_platform_display }}
+        | {{file.project.get_platform_display}}
         | {% trans "Security Report" %}
       div.sub-heading
         | {% trans "For Internal Purpose" %}
@@ -155,7 +155,7 @@ html(lang="en")
           | {% trans "Report Summary" %}
       div
         p
-          | {% trans "Appknox conducted a security assessment of the mobile application for the {{ file.project.get_platform_display }} platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
+          | {% trans "Appknox conducted a security assessment of the mobile application for the {{file.project.get_platform_display}} platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
 
       section
         div
