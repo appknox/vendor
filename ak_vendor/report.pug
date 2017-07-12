@@ -107,7 +107,7 @@ html(lang="en")
             tr.main-table-heading
               td
                 a(href="#{{ analysis.id }}")
-                  | {{ analysis.vulnerability.heading }}
+                  | {{ analysis.vulnerability.name }}
 
             | {% if analysis.vulnerability.non_compliant %}
             tr.sub-table-heading
@@ -218,7 +218,7 @@ html(lang="en")
       div
         a(id="{{ analysis.id }}")
         h3.vulnerability-heading
-          | {{ analysis.vulnerability.heading }}
+          | {{ analysis.vulnerability.name }}
       section.description
         div
           | {{ analysis.vulnerability.intro | safe }}
