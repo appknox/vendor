@@ -21,8 +21,7 @@ setup(
     keywords='appknox vendor',
     packages=find_packages(),
     data_files=[
-        ('excel', ['ak_vendor/translations/ja/subheading.xlsx',
-                   'ak_vendor/translations/ja/vulnerability.xlsx']),
+        ('excel', ['ak_vendor/translations/ja/vulnerability.xlsx']),
         ('report', ['ak_vendor/report.html']),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
     ],

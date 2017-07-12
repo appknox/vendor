@@ -11,12 +11,10 @@ html(lang="en")
     style(type='text/css').
       @page {
         @top-left {
-          content:
-          {% trans "confidential" %}
-          ;
+          content: "Confidential";
         }
         @top-right {
-          content: "{{ date }}";
+          content: "{{ date }} UTC";
         }
         @bottom-center {
           border-top: 1px solid #6B6B6B;
@@ -87,7 +85,7 @@ html(lang="en")
     section.new-page
       div
         h3.heading-container
-          | {% trans "Table Of Contents" %}
+          | {% trans "Table of Contents" %}
       div
         table.content-table
           tbody
@@ -110,12 +108,6 @@ html(lang="en")
               td
                 a(href="#{{ analysis.id }}")
                   | {{ analysis.vulnerability.heading }}
-            | {% for subheading in analysis.vulnerability.sub_headings.all %}
-            tr.sub-table-heading
-              td
-                a(href="#{{ analysis.id }}{{ forloop.counter }}")
-                  | {{ subheading.heading }}
-            | {% endfor %}
 
             | {% if analysis.vulnerability.non_compliant %}
             tr.sub-table-heading
@@ -172,7 +164,7 @@ html(lang="en")
                   h5
                     | {{ analysis.vulnerability.name }}
                   p
-                    | {{ analysis.vulnerability.description }}
+                    | {{ analysis.vulnerability.question }}
                 td.risk-type-container
                   h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
                     | {{ analysis.get_risk_display }} Risk
@@ -238,7 +230,7 @@ html(lang="en")
           ul
             | {% for metric in analysis.cvss_metrics_humanized %}
             li
-              | {{metric.key}} : {{metric.value}}
+              | {{ metric.key }}: {{ metric.value }}
             | {% endfor %}
         div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
           h1
@@ -252,26 +244,16 @@ html(lang="en")
             | {% trans "Risk Assessment" %}
         div
           p
-            | {{ analysis.vulnerability.description | escape }}
+            | {{ analysis.vulnerability.description | safe }}
           | {% for finding in analysis.findings %}
           | {% if finding.title %}
           h2
-            | {{ finding.title | safe }}
+            | {{ finding.title | escape }}
           | {% endif %}
           pre
             code
               | {{ finding.description | escape }}
           | {% endfor %}
-
-      | {% for subheading in analysis.vulnerability.sub_headings.all %}
-      section.sub-headings
-        div.analysis-type
-          a(id="{{ analysis.id }}{{ forloop.counter }}")
-          h5
-            | {{ subheading.heading }}
-        div
-          | {{ subheading.content | safe }}
-      | {% endfor %}
 
       | {% if analysis.vulnerability.non_compliant %}
       section.non-compliant
