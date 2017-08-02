@@ -164,7 +164,7 @@ html(lang="en")
                   h5
                     | {{ analysis.vulnerability.name }}
                   p
-                    | {{ analysis.vulnerability.question }}
+                    | {{ analysis.vulnerability.description }}
                 td.risk-type-container
                   h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
                     | {{ analysis.get_risk_display }} Risk
