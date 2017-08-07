@@ -11,12 +11,10 @@ html(lang="en")
     style(type='text/css').
       @page {
         @top-left {
-          content:
-          {% trans "confidential" %}
-          ;
+          content: "Confidential";
         }
         @top-right {
-          content: "{{ date }}";
+          content: "{{ date }} UTC";
         }
         @bottom-center {
           border-top: 1px solid #6B6B6B;
@@ -29,7 +27,7 @@ html(lang="en")
       div.appknox-logo
         img(align="middle" src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
       div.main-heading
-        | {{ file.project.get_platform_display }}
+        | {{file.project.get_platform_display}}
         | {% trans "Security Report" %}
       div.sub-heading
         | {% trans "For Internal Purpose" %}
@@ -87,7 +85,7 @@ html(lang="en")
     section.new-page
       div
         h3.heading-container
-          | {% trans "Table Of Contents" %}
+          | {% trans "Table of Contents" %}
       div
         table.content-table
           tbody
@@ -109,13 +107,7 @@ html(lang="en")
             tr.main-table-heading
               td
                 a(href="#{{ analysis.id }}")
-                  | {{ analysis.vulnerability.heading }}
-            | {% for subheading in analysis.vulnerability.sub_headings.all %}
-            tr.sub-table-heading
-              td
-                a(href="#{{ analysis.id }}{{ forloop.counter }}")
-                  | {{ subheading.heading }}
-            | {% endfor %}
+                  | {{ analysis.vulnerability.name }}
 
             | {% if analysis.vulnerability.non_compliant %}
             tr.sub-table-heading
@@ -155,7 +147,7 @@ html(lang="en")
           | {% trans "Report Summary" %}
       div
         p
-          | {% trans "Appknox conducted a security assessment of the mobile application for the {{ file.project.get_platform_display }} platform. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
+          | {% trans "Appknox conducted a security assessment of the mobile application. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
 
       section
         div
@@ -225,7 +217,7 @@ html(lang="en")
       div
         a(id="{{ analysis.id }}")
         h3.vulnerability-heading
-          | {{ analysis.vulnerability.heading }}
+          | {{ analysis.vulnerability.name }}
       section.description
         div
           | {{ analysis.vulnerability.intro | safe }}
@@ -237,7 +229,7 @@ html(lang="en")
           ul
             | {% for metric in analysis.cvss_metrics_humanized %}
             li
-              | {{metric.key}} : {{metric.value}}
+              | {{ metric.key }}: {{ metric.value }}
             | {% endfor %}
         div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
           h1
@@ -251,26 +243,16 @@ html(lang="en")
             | {% trans "Risk Assessment" %}
         div
           p
-            | {{ analysis.vulnerability.description | escape }}
+            | {{ analysis.vulnerability.description | safe }}
           | {% for finding in analysis.findings %}
           | {% if finding.title %}
           h2
-            | {{ finding.title | safe }}
+            | {{ finding.title | escape }}
           | {% endif %}
           pre
             code
               | {{ finding.description | escape }}
           | {% endfor %}
-
-      | {% for subheading in analysis.vulnerability.sub_headings.all %}
-      section.sub-headings
-        div.analysis-type
-          a(id="{{ analysis.id }}{{ forloop.counter }}")
-          h5
-            | {{ subheading.heading }}
-        div
-          | {{ subheading.content | safe }}
-      | {% endfor %}
 
       | {% if analysis.vulnerability.non_compliant %}
       section.non-compliant

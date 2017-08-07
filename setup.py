@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ak-vendor',
-    version='0.9.28',
+    version='0.9.35',
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
@@ -21,8 +21,7 @@ setup(
     keywords='appknox vendor',
     packages=find_packages(),
     data_files=[
-        ('excel', ['ak_vendor/translations/ja/subheading.xlsx',
-                   'ak_vendor/translations/ja/vulnerability.xlsx']),
+        ('excel', ['ak_vendor/translations/ja/vulnerability.xlsx']),
         ('report', ['ak_vendor/report.html']),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
     ],

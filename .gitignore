@@ -59,3 +59,12 @@ ak_vendor/output.html
 
 .DS_Store
 *.pdf
+node_modules
+
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+Session.vim
+.netrwhist
+*~
+tags
