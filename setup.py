@@ -1,8 +1,10 @@
 from setuptools import setup, find_packages
 
+__VERSION__ = '0.9.37'
+
 setup(
     name='ak-vendor',
-    version='0.9.37',
+    version=__VERSION__,
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
