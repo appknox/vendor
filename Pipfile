@@ -13,6 +13,8 @@ weasyprint = "*"
 
 [dev-packages]
 neovim = "*"
+bumpversion = "*"
+
 
 
 [requires]
