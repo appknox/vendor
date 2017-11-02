@@ -24,3 +24,5 @@ RISK_ENUM_CRITICAL = 4
 VENDOR_DIR = dirname(abspath(__file__))
 REPORT_PATH = "%s/report.html" % VENDOR_DIR
 OUTPUT_PATH = "%s/output.html" % VENDOR_DIR
+
+MITM_PREFIX = "mitm_prefix_%s"
