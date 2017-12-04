@@ -14,6 +14,23 @@ class ProductEnum:
 
 
 @choices
+class OWASPCATEGORIESEnum:
+    class Meta:
+        OWASP_CAT_A1 = [0, 'A1']
+        OWASP_CAT_A3 = [1, 'A3']
+        OWASP_CAT_M1 = [2, 'M1']
+        OWASP_CAT_M2 = [3, 'M2']
+        OWASP_CAT_M3 = [4, 'M3']
+        OWASP_CAT_M4 = [5, 'M4']
+        OWASP_CAT_M5 = [6, 'M5']
+        OWASP_CAT_M6 = [7, 'M6']
+        OWASP_CAT_M7 = [8, 'M7']
+        OWASP_CAT_M8 = [9, 'M8']
+        OWASP_CAT_M9 = [10, 'M9']
+        OWASP_CAT_M10 = [11, 'M10']
+
+
+@choices
 class PlatformEnum:
     '''
     Platform Type Enum
