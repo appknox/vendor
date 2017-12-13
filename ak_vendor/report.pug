@@ -234,19 +234,40 @@ html(lang="en")
         div
           h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
             | {% trans "Risk Rating" %} : {{ analysis.get_risk_display }}
-        | {% if analysis.show_cvss %}
-        div(class="cvss-vector")
-          ul
-            | {% for metric in analysis.cvss_metrics_humanized %}
-            li
-              | {{ metric.key }}: {{ metric.value }}
-            | {% endfor %}
-        div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
-          h1
-            | {{analysis.cvss_base}}
-          h6
-            | CVSSv3
-        | {% endif %}
+      table
+        tbody
+          tr
+            td
+              div.owasp-categories
+                h3
+                  | OWASP CATEGORY
+                div.owasp-list  
+                  | {% for metric in analysis.owasp_categories %}
+                  div
+                    span.bold-test
+                      | {{ metric.key }}
+                    | : {{ metric.value }}
+                  | {% endfor %}        
+              | {% if analysis.show_cvss %}
+            td
+              div(class="cvss-container")
+                h3
+                  | CVSS SCORE
+                div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
+                  h1
+                    | {{analysis.cvss_base}}
+                  h6
+                    | CVSSv3
+            td
+              div(class="cvss-vector")
+                h3
+                  | CVSS VECTOR
+                ul
+                  | {% for metric in analysis.cvss_metrics_humanized %}
+                  li
+                    | {{ metric.key }}: {{ metric.value }}
+                  | {% endfor %}
+              | {% endif %}
       section.assessment
         div.analysis-type
           h5
