@@ -24,20 +24,30 @@ html(lang="en")
       }
   body
     section.new-page
-      div.appknox-logo
-        img(align="middle" src='https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png')
+      div.main-logo
+        | {% if whitelabel.enabled and whitelabel.logo %}
+        div.whitelabel-company-logo
+          img(src="{{whitelabel.logo}}")
+        div.whitelabel-poweredby-logo
+          img(src="https://raw.githubusercontent.com/appknox/press-kit/master/logo/poweredby_appknox.png")
+        | {% else %}
+        div.appknox-logo
+          img(src="https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png")
+        | {% endif %}
+
       div.main-heading
         | {{file.project.get_platform_display}}
         | {% trans "Security Report" %}
       div.sub-heading
         | {% trans "For Internal Purpose" %}
+
       div.app-name
         | {% trans "Prepared For" %}: {{file.name}}
       div.doc-description
         p
-          |  {% trans "Prepared by XYSec Labs Pte. Ltd. Portions of this document and the templates used in its production are the property of XYSec Labs Pte. Ltd. and cannot be copied without permission." %}
+          | {% trans "Prepared by " %}{% if whitelabel.enabled and whitelabel.name %}{{ whitelabel.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox. Portions of this document and the templates used in its production are the property of " %}{% if whitelabel.enabled and whitelabel.name %}{{ whitelabel.name }}{% else %}{% trans "Appknox" %}{% endif %}{% trans " and cannot be copied without permission." %}
         p
-          | {% trans "While precautions have been taken in the preparation of this document, XYSec Labs Pte. Ltd., the publisher, and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of XYSec Labs Pte. Ltd. services does not guarantee the security of a system, or that intrusions will not occur." %}
+          | {% trans "While precautions have been taken in the preparation of this document, the publisher and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of Appknox services does not guarantee the security of a system, or that intrusions will not occur." %}
 
     section.new-page
       div
@@ -147,7 +157,7 @@ html(lang="en")
           | {% trans "Report Summary" %}
       div
         p
-          | {% trans "Appknox conducted a security assessment of the mobile application. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
+          | {% if whitelabel.enabled and whitelabel.name %}{{ whitelabel.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if whitelabel.enabled and whitelabel.name %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
 
       section
         div

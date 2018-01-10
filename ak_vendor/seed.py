@@ -103,3 +103,9 @@ file_data = {
     'risk_count_medium': 7,
     'risk_count_low': 8,
 }
+
+whitelabel_data = {
+    'enabled': False,
+    'name': 'Appknox',
+    'logo': 'https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png'
+}
