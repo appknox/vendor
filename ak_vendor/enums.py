@@ -14,6 +14,14 @@ class ProductEnum:
 
 
 @choices
+class AppactionEnum:
+    class Meta:
+        NO_PREFERENCE = [0, 'NO_PREFERENCE']
+        HALT = [1, 'HALT']
+        PROCEED = [2, 'PROCEED']
+
+
+@choices
 class OWASPCATEGORIESEnum:
     class Meta:
         OWASP_CAT_A1 = [0, 'A1']
