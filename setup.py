@@ -29,9 +29,6 @@ setup(
     ],
     include_package_data=True,
     entry_points='',
-    install_requires=[
-        "python3-protobuf==2.5.0",
-    ],
     zip_safe=False,
     extras_require={
         'dev': [''],
