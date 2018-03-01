@@ -13,4 +13,4 @@ class OWASP():
 json_data = json.load(
     open(os.path.join(os.path.dirname(__file__), 'owasp.json'))
 )
-data = {d['id']: OWASP(*d) for d in json_data}
+data = {d['id']: OWASP(**d) for d in json_data}
