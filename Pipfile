@@ -1,21 +1,15 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [packages]
 
-django = "*"
 "e1839a8" = {path = ".", editable = true}
-"orm-choices" = "*"
-weasyprint = "*"
 
 
 [dev-packages]
-neovim = "*"
-bumpversion = "*"
 
-
-
-[requires]
-python_version = "3.6"
+"e1839a8" = {path = ".", extras = ["dev"], editable = true}

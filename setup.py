@@ -29,9 +29,17 @@ setup(
     ],
     include_package_data=True,
     entry_points='',
+    install_requires=[
+        "orm-choices==0.3.0"
+    ],
     zip_safe=False,
     extras_require={
-        'dev': [''],
+        'dev': [
+            'django==2.0.2',
+            'weasyprint==0.42.2',
+            'bumpversion==0.5.3',
+            'twine==1.9.1'
+        ],
         'test': [''],
     },
 )
