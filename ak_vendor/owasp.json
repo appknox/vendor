@@ -1,0 +1,122 @@
+[
+  {
+      "id": "M1_2016",
+      "code": "M1",
+      "description": "Improper Platform Usage",
+      "year": 2016
+  },
+  {
+      "id": "M2_2016",
+      "code": "M2",
+      "description": "Insecure Data Storage",
+      "year": 2016
+  },
+  {
+      "id": "M3_2016",
+      "code": "M3",
+      "description": "Insecure Communication",
+      "year": 2016
+  },
+  {
+      "id": "M4_2016",
+      "code": "M4",
+      "description": "Insecure Authentication",
+      "year": 2016
+  },
+  {
+      "id": "M5_2016",
+      "code": "M5",
+      "description": "Insufficient Cryptography",
+      "year": 2016
+  },
+  {
+      "id": "M6_2016",
+      "code": "M6",
+      "description": "Insecure Authorization",
+      "year": 2016
+  },
+  {
+      "id": "M7_2016",
+      "code": "M7",
+      "description": "Client Code Quality",
+      "year": 2016
+  },
+  {
+      "id": "M8_2016",
+      "code": "M8",
+      "description": "Code Tampering",
+      "year": 2016
+  },
+  {
+      "id": "M9_2016",
+      "code": "M9",
+      "description": "Reverse Engineering",
+      "year": 2016
+  },
+  {
+      "id": "M10_2016",
+      "code": "M10",
+      "description": "Extraneous Functionality",
+      "year": 2016
+  },
+  {
+      "id": "A1_2013",
+      "code": "A1",
+      "description": "Injection",
+      "year": 2013
+  },
+  {
+      "id": "A2_2013",
+      "code": "A2",
+      "description": "Broken Authentication and Session Management",
+      "year": 2013
+  },
+  {
+      "id": "A3_2013",
+      "code": "A3",
+      "description": "Cross Site Scripting",
+      "year": 2013
+  },
+  {
+      "id": "A4_2013",
+      "code": "A4",
+      "description": "Insecure Direct Object References",
+      "year": 2013
+  },
+  {
+      "id": "A5_2013",
+      "code": "A5",
+      "description": "Security Misconfiguration",
+      "year": 2013
+  },
+  {
+      "id": "A6_2013",
+      "code": "A6",
+      "description": "Sensitive Data Exposure",
+      "year": 2013
+  },
+  {
+      "id": "A7_2013",
+      "code": "A7",
+      "description": "Missing Function Level Access Control",
+      "year": 2013
+  },
+  {
+      "id": "A8_2013",
+      "code": "A8",
+      "description": "Cross-Site Request Forgery (CSRF)",
+      "year": 2013
+  },
+  {
+      "id": "A9_2013",
+      "code": "A9",
+      "description": "Using Components with Known Vulnerabilities",
+      "year": 2013
+  },
+  {
+      "id": "A10_2013",
+      "code": "A10",
+      "description": "Unvalidated Redirects and Forwards",
+      "year": 2013
+  }
+]
