@@ -26,6 +26,7 @@ setup(
         ('excel', ['ak_vendor/translations/ja/vulnerability.xlsx']),
         ('report', ['ak_vendor/report.html']),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
+        ('owasp', ['ak_vendor/owasp.json']),
     ],
     include_package_data=True,
     entry_points='',
