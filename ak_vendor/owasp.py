@@ -4,6 +4,7 @@ import os
 
 class OWASP():
     def __init__(self, id, code, description, year):
+        self.pk = id
         self.id = id
         self.code = code
         self.description = description
