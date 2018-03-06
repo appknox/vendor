@@ -246,6 +246,7 @@ html(lang="en")
       table
         tbody
           tr
+            | {% if analysis.owasp_categories %}
             td
               div.owasp-categories
                 h3
@@ -254,10 +255,11 @@ html(lang="en")
                   | {% for metric in analysis.owasp_categories %}
                   div
                     span.bold-test
-                      | {{ metric.key }}
-                    | : {{ metric.value }}
-                  | {% endfor %}        
-              | {% if analysis.show_cvss %}
+                      | {{ metric.code }}
+                    | : {{ metric.title }}
+                  | {% endfor %}    
+            | {% endif %}          
+            | {% if analysis.show_cvss %}
             td
               div(class="cvss-container")
                 h3
@@ -277,7 +279,7 @@ html(lang="en")
                   li
                     | {{ metric.key }}: {{ metric.value }}
                   | {% endfor %}
-              | {% endif %}
+            | {% endif %}
       section.assessment
         div.analysis-type
           h5
