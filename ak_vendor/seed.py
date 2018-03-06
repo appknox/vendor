@@ -13,6 +13,10 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2017-03-30
 """
 from copy import copy
+from ak_vendor import owasp
+from ak_vendor.utils import dict2obj
+OWASP_DATA = {d['id']: dict2obj(d) for d in owasp.data}
+
 
 vulnerability_template = {
     'business_implication': '<p>With Cordova 3.5.0 or prior, attackers may:</p><p>Para2 With Cordova 3.5.0 or prior, attackers may:</p><ul><li>Open and send data to arbitrary applications.</li><li>Bypass the HTTP whitelist and connect to arbitrary servers.</li><li>Change the start page via a crafted intent URL.</li></ul>',
@@ -54,14 +58,19 @@ analysis_template = {
     'cvss_base': 6.7,
     'cvss_version': 3,
     'cvss_metrics_humanized': [
-     {'key': 'Integrity Impact', 'value': 'Low'},
-     {'key': 'Attack Vector', 'value': 'Network'},
-     {'key': 'Availability Impact', 'value': 'None'},
-     {'key': 'Confidentiality Impact', 'value': 'Low'},
-     {'key': 'Attack Complexity', 'value': 'Low'},
-     {'key': 'User Interaction', 'value': 'Not Required'},
-     {'key': 'Privileges Required', 'value': 'High'}
-     ]
+        {'key': 'Integrity Impact', 'value': 'Low'},
+        {'key': 'Attack Vector', 'value': 'Network'},
+        {'key': 'Availability Impact', 'value': 'None'},
+        {'key': 'Confidentiality Impact', 'value': 'Low'},
+        {'key': 'Attack Complexity', 'value': 'Low'},
+        {'key': 'User Interaction', 'value': 'Not Required'},
+        {'key': 'Privileges Required', 'value': 'High'}
+        ],
+        'owasp': ['M1_2016', 'M10_2016', 'A1_2013'],
+        'owasp_categories': [
+            OWASP_DATA.get('M1_2016'), OWASP_DATA.get('M10_2016'),
+            OWASP_DATA.get('A1_2013')
+        ]
  }
 
 analiser1 = copy(analysis_template)

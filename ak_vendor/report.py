@@ -31,7 +31,8 @@ with open(REPORT_PATH, "r") as input_file:
     template_compiled = "".join(ts_rest)
     template = Template(template_compiled, engine=Engine())
     context = Context(dict(
-        file=file, whitelabel=whitelabel, RiskEnum=RiskEnum, chart_url="Some URL",
+        file=file, whitelabel=whitelabel, RiskEnum=RiskEnum,
+        chart_url="Some URL",
         rating=50.5, date=str(datetime.now())))
     content = template.render(context)
 

@@ -3,120 +3,160 @@
       "id": "M1_2016",
       "code": "M1",
       "title": "Improper Platform Usage",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M2_2016",
       "code": "M2",
       "title": "Insecure Data Storage",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M3_2016",
       "code": "M3",
       "title": "Insecure Communication",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M4_2016",
       "code": "M4",
       "title": "Insecure Authentication",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M5_2016",
       "code": "M5",
       "title": "Insufficient Cryptography",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M6_2016",
       "code": "M6",
       "title": "Insecure Authorization",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M7_2016",
       "code": "M7",
       "title": "Client Code Quality",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M8_2016",
       "code": "M8",
       "title": "Code Tampering",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M9_2016",
       "code": "M9",
       "title": "Reverse Engineering",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "M10_2016",
       "code": "M10",
       "title": "Extraneous Functionality",
-      "year": 2016
+      "year": 2016,
+      "active": true,
+      "type": "mobile"
   },
   {
       "id": "A1_2013",
       "code": "A1",
       "title": "Injection",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A2_2013",
       "code": "A2",
       "title": "Broken Authentication and Session Management",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A3_2013",
       "code": "A3",
       "title": "Cross Site Scripting",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A4_2013",
       "code": "A4",
       "title": "Insecure Direct Object References",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A5_2013",
       "code": "A5",
       "title": "Security Misconfiguration",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A6_2013",
       "code": "A6",
       "title": "Sensitive Data Exposure",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A7_2013",
       "code": "A7",
       "title": "Missing Function Level Access Control",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A8_2013",
       "code": "A8",
       "title": "Cross-Site Request Forgery (CSRF)",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A9_2013",
       "code": "A9",
       "title": "Using Components with Known Vulnerabilities",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   },
   {
       "id": "A10_2013",
       "code": "A10",
       "title": "Unvalidated Redirects and Forwards",
-      "year": 2013
+      "year": 2013,
+      "active": true,
+      "type": "api"
   }
 ]
