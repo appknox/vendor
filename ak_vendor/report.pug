@@ -251,6 +251,9 @@ html(lang="en")
               div.owasp-categories
                 h3
                   | {% trans "OWASP CATEGORY" %} 
+                  a(href="#references")
+                    span
+                      | &#8505;
                 div.owasp-list  
                   | {% for metric in analysis.owasp_categories %}
                   div
@@ -336,6 +339,20 @@ html(lang="en")
         div
           | {{ analysis.vulnerability.related_to | safe }}
       | {% endif %}
-
+          
     | {% endif %}
     | {% endfor %}
+    
+    section.new-page
+      div.references
+        a(id="references")
+        h3.heading-container
+          | {% trans "References" %}
+        ol
+          a(target="_blank" href="https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10")
+            li
+              | Mobile Top 10 | 2016  
+          a(target="_blank" href="https://www.owasp.org/index.php/Top_10_2013-Top_10")
+            li
+              | Web Top 10 | 2016
+  
