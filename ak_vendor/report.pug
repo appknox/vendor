@@ -231,22 +231,58 @@ html(lang="en")
       section.description
         div
           | {{ analysis.vulnerability.intro | safe }}
-        div
-          h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
-            | {% trans "Risk Rating" %} : {{ analysis.get_risk_display }}
-        | {% if analysis.show_cvss %}
-        div(class="cvss-vector")
-          ul
-            | {% for metric in analysis.cvss_metrics_humanized %}
-            li
-              | {{ metric.key }}: {{ metric.value }}
-            | {% endfor %}
-        div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
-          h1
-            | {{analysis.cvss_base}}
-          h6
-            | CVSSv3
-        | {% endif %}
+        table
+          tbody
+            tr  
+              td
+                div
+                  h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
+                    | {% trans "Risk Rating" %} : {{ analysis.get_risk_display }}
+              td.scan-container
+                | {% for type in analysis.vulnerability.types %}  
+                span(class="scan-tag")
+                  | {{type}}
+                | {% endfor %}          
+      table
+        tbody
+          tr
+            | {% if analysis.owasp_categories %}
+            td
+              div.owasp-categories
+                h3
+                  | {% trans "OWASP CATEGORY" %} 
+                  a(href="#references")
+                    span
+                      | &#8505;
+                div.owasp-list  
+                  | {% for metric in analysis.owasp_categories %}
+                  div
+                    span.bold-test
+                      | {{ metric.code }}
+                    | : {{ metric.title }}
+                  | {% endfor %}    
+            | {% endif %}          
+            | {% if analysis.show_cvss %}
+            td
+              div(class="cvss-container")
+                h3
+                  | {% trans "CVSS SCORE" %} 
+
+                div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
+                  h1
+                    | {{analysis.cvss_base}}
+                  h6
+                    | CVSSv3
+            td
+              div(class="cvss-vector")
+                h3
+                  | {% trans "CVSS VECTOR" %} 
+                ul
+                  | {% for metric in analysis.cvss_metrics_humanized %}
+                  li
+                    | {{ metric.key }}: {{ metric.value }}
+                  | {% endfor %}
+            | {% endif %}
       section.assessment
         div.analysis-type
           h5
@@ -303,6 +339,20 @@ html(lang="en")
         div
           | {{ analysis.vulnerability.related_to | safe }}
       | {% endif %}
-
+          
     | {% endif %}
     | {% endfor %}
+    
+    section.new-page
+      div.references
+        a(id="references")
+        h3.heading-container
+          | {% trans "References" %}
+        ol
+          a(target="_blank" href="https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10")
+            li
+              | Mobile Top 10 | 2016  
+          a(target="_blank" href="https://www.owasp.org/index.php/Top_10_2013-Top_10")
+            li
+              | Web Top 10 | 2016
+  
