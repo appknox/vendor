@@ -29,7 +29,7 @@ vulnerability_template = {
     'question': 'Does the application has Debug enabled?',
     'related_to': '<p>With Cordova 3.5.0 or prior, attackers may:</p><p>Para2 With Cordova 3.5.0 or prior, attackers may:</p><ul><li>Open and send data to arbitrary applications.</li><li>Bypass the HTTP whitelist and connect to arbitrary servers.</li><li>Change the start page via a crafted intent URL.</li></ul>',
     'success_message': 'Debugging was disabled',
-    'types': ["Static","Dynamic","API","Manual"],
+    'get_types_display': ["Static","Dynamic","API","Manual"],
     'uuid': '84b86ac9-a60e-40ef-ab1b-fc8ec39f6e1d',
     'id': 3
 }
@@ -82,7 +82,7 @@ vulnerability2['related_to'] = '<ul> <li>Facebook SDK for Android: <a href="http
 vulnerability2['non_compliant'] = '<ol style="list-style-type: decimal"> <li>Facebook SDK for Android contained the following code which sends Facebook access tokens to log output in plain text format.</p> <pre><code>Log.d(&quot;Facebook-authorize&quot;, &quot;Login Success! access_token=&quot; + getAccessToken() + &quot; expires=&quot; + getAccessExpires());</code></pre></li> <li><p>Here is another example. A weather report for Android sent a user\'s location data to the log output as follows:</p> <pre><code>I/MyWeatherReport( 6483): Re-use MyWeatherReport data I/ ( 6483): GET JSON: http://example.com/smart/repo_piece.cgi?arc=0&amp;lat=26.209026&amp;lon=127.650803&amp;rad=50&amp;dir=-999&amp;lim=52&amp;category=1000</code></pre> <p>If a user is using Android OS 4.0 or before, other applications with READ_LOGS permission can obtain the user\'s location information without declaring ACCESS_FINE_LOCATION permission in the manifest file.</p></li> </ol>'
 
 analiser2['risk'] = 3
-vulnerability2['types'] = ["Static","Dynamic"]
+vulnerability2['get_types_display'] = ["Static","Dynamic"]
 
 analiser1['vulnerability'] = vulnerability1
 analiser2['vulnerability'] = vulnerability2
