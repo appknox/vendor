@@ -239,7 +239,7 @@ html(lang="en")
                   h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
                     | {% trans "Risk Rating" %} : {{ analysis.get_risk_display }}
               td.scan-container
-                | {% for type in analysis.vulnerability.types %}  
+                | {% for type in analysis.vulnerability.get_types_display %}  
                 span(class="scan-tag")
                   | {{type}}
                 | {% endfor %}          
