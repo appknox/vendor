@@ -173,8 +173,17 @@ html(lang="en")
                 td
                   h5
                     | {{ analysis.vulnerability.name }}
+                    | {% for type in analysis.vulnerability.get_types_display %}  
+                    span(class="scan-tag")
+                      | {{type}}
+                    | {% endfor %}   
+                  
                   | {{ analysis.vulnerability.description | safe  }}
-                td.risk-type-container
+                  
+                td.risk-type-container  
+                  div(class="cvss-text" style="color:{{ analysis.color }}")
+                    h1
+                      | {{analysis.cvss_base}}
                   h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
                     | {{ analysis.get_risk_display }} Risk
             | {% endfor %}
