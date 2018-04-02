@@ -68,3 +68,5 @@ Session.vim
 .netrwhist
 *~
 tags
+
+ak_vendor/report.html
