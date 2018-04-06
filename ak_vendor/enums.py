@@ -22,6 +22,13 @@ class AppactionEnum:
         PROCEED = [2, 'PROCEED']
 
 
+@choices
+class OrganizationRolesEnum:
+    class Meta:
+        MEMBER = [0, 'MEMBER']
+        OWNER = [1, 'OWNER']
+
+
 @choices_without_unknown
 class OWASPEnum:
     """
