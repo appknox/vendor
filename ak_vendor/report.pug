@@ -181,9 +181,11 @@ html(lang="en")
                   | {{ analysis.vulnerability.description | safe  }}
                   
                 td.risk-type-container  
+                  | {% if analysis.show_cvss %}
                   div(class="cvss-text" style="color:{{ analysis.color }}")
                     h1
                       | {{analysis.cvss_base}}
+                  | {% endif %}    
                   h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
                     | {{ analysis.get_risk_display }} Risk
             | {% endfor %}
