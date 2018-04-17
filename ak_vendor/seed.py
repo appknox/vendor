@@ -48,15 +48,18 @@ analysis_template = {
         {'title': None, 'description': 'This application opens a socket and connects to it, which might be insecured, defined at Lcom/e/a/a/a/p;->f'},
         {'title': "Debug was enabled on the app which make it easier for attackers to hook a debugger, dump a stack trace and access debugging helper classes.", "description": "<application android:debuggable='true' Debug enabled for app"},
     ],
-    'risk': 1,
+    'risk': 3,
     'status': 1,
     'updated_on': '2017-03-03 09:18:14.704847+00:00',
     'uuid': '9d522cf6-ce5c-4bef-9d96-2e641c2e65be',
     'id': 135,
     'vulnerability': vulnerability_template,
     'color': 'red',
+    'computed_risk': 3,
     'get_risk_display': 'High',
-    'show_cvss': True,
+    'get_computed_risk_display': 'High',
+    'is_ignored': True,
+    'show_cvss': 'True',
     'cvss_base': 6.7,
     'cvss_version': 3,
     'cvss_metrics_humanized': [
@@ -87,10 +90,15 @@ analiser2 = copy(analysis_template)
 vulnerability1 = copy(vulnerability_template)
 vulnerability2 = copy(vulnerability_template)
 
+vulnerability2['name'] = 'Unprotected Services'
 vulnerability2['related_to'] = '<ul> <li>Facebook SDK for Android: <a href="http://readwrite.com/2012/04/10/what-developers-and-users-can#awesm=~o9iqZAMlUPshPu" class="uri">http://readwrite.com/2012/04/10/what-developers-and-users-can#awesm=~o9iqZAMlUPshPu</a></li> <li><a href="https://jvn.jp/en/jp/JVN23328321/">JVN#23328321</a> Puella Magi Madoka Magica iP for Android vulnerable to information disclosure</li> <li><a href="https://jvn.jp/en/jp/JVN86040029/">JVN#86040029</a> Weathernews Touch for Android stores location information in the system log file</li> <li><a href="https://jvn.jp/en/jp/JVN33159152/">JVN#33159152</a> Loctouch for Android information management vulnerability</li> <li><a href="https://jvn.jp/en/jp/JVN56923652/">JVN#56923652</a> Monaca Debugger for Android information management vulnerability</li> </ul>'
 vulnerability2['non_compliant'] = '<ol style="list-style-type: decimal"> <li>Facebook SDK for Android contained the following code which sends Facebook access tokens to log output in plain text format.</p> <pre><code>Log.d(&quot;Facebook-authorize&quot;, &quot;Login Success! access_token=&quot; + getAccessToken() + &quot; expires=&quot; + getAccessExpires());</code></pre></li> <li><p>Here is another example. A weather report for Android sent a user\'s location data to the log output as follows:</p> <pre><code>I/MyWeatherReport( 6483): Re-use MyWeatherReport data I/ ( 6483): GET JSON: http://example.com/smart/repo_piece.cgi?arc=0&amp;lat=26.209026&amp;lon=127.650803&amp;rad=50&amp;dir=-999&amp;lim=52&amp;category=1000</code></pre> <p>If a user is using Android OS 4.0 or before, other applications with READ_LOGS permission can obtain the user\'s location information without declaring ACCESS_FINE_LOCATION permission in the manifest file.</p></li> </ol>'
 
 analiser2['risk'] = 3
+analiser2['overriden_risk'] = 4
+analiser2['computed_risk'] = 4
+analiser2['is_ignored'] = False
+analiser2['get_computed_risk_display'] = 'Critical'
 vulnerability2['get_types_display'] = ["Static","Dynamic"]
 
 analiser1['vulnerability'] = vulnerability1
@@ -120,6 +128,11 @@ file_data = {
     'risk_count_high': 10,
     'risk_count_medium': 7,
     'risk_count_low': 8,
+    'profile': {
+        'report_preference': {
+            'show_ignored_analyses': True
+        }
+    }
 }
 
 whitelabel_data = {
