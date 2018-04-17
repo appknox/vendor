@@ -31,9 +31,16 @@ with open(REPORT_PATH, "r") as input_file:
     template_compiled = "".join(ts_rest)
     template = Template(template_compiled, engine=Engine())
     context = Context(dict(
-        file=file, whitelabel=whitelabel, RiskEnum=RiskEnum,
+        file=file,
+        whitelabel=whitelabel,
+        RiskEnum=RiskEnum,
         chart_url="Some URL",
-        rating=50.5, date=str(datetime.now())))
+        ignored_analyses_count=len([
+            a for a in file.sorted_analyses if a.is_ignored
+        ]),
+        rating=50.5,
+        date=str(datetime.now())
+    ))
     content = template.render(context)
 
 with open(REPORT_PATH, "w") as report_file:
