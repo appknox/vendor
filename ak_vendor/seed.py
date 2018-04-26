@@ -116,5 +116,6 @@ file_data = {
 whitelabel_data = {
     'enabled': False,
     'name': 'Appknox',
-    'logo': 'https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png'
+    'logo': 'https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png',
+    'hide_poweredby_logo': False
 }
