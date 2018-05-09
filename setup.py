@@ -27,6 +27,7 @@ setup(
         ('report', ['ak_vendor/report.html']),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
         ('owasp', ['ak_vendor/owasp.json']),
+        ('pcidss', ['ak_vendor/pcidss.json'])
     ],
     include_package_data=True,
     entry_points='',
