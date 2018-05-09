@@ -14,8 +14,10 @@ Date created: 2017-03-30
 """
 from copy import copy
 from ak_vendor import owasp
+from ak_vendor import pcidss
 from ak_vendor.utils import dict2obj
 OWASP_DATA = {d['id']: dict2obj(d) for d in owasp.data}
+PCIDSS_DATA = {d['id']: dict2obj(d) for d in pcidss.data}
 
 
 vulnerability_template = {
@@ -65,12 +67,16 @@ analysis_template = {
         {'key': 'Attack Complexity', 'value': 'Low'},
         {'key': 'User Interaction', 'value': 'Not Required'},
         {'key': 'Privileges Required', 'value': 'High'}
-        ],
-        'owasp': ['M1_2016', 'M10_2016', 'A1_2013'],
-        'owasp_categories': [
-            OWASP_DATA.get('M1_2016'), OWASP_DATA.get('M10_2016'),
-            OWASP_DATA.get('A1_2013')
-        ]
+    ],
+    'owasp': ['M1_2016', 'M10_2016', 'A1_2013'],
+    'owasp_categories': [
+        OWASP_DATA.get('M1_2016'), OWASP_DATA.get('M10_2016'),
+        OWASP_DATA.get('A1_2013')
+    ],
+    'pcidss': ['1_1'],
+    'pcidss_categories': [
+        PCIDSS_DATA.get('1_1')
+    ]
  }
 
 analiser1 = copy(analysis_template)

@@ -259,45 +259,62 @@ html(lang="en")
                 span(class="scan-tag")
                   | {{type}}
                 | {% endfor %}
-      table
-        tbody
-          tr
-            | {% if analysis.owasp_categories %}
-            td
-              div.owasp-categories
-                h3
-                  | {% trans "OWASP CATEGORY" %}
-                  a(href="#references")
-                    span
-                      | &#8505;
-                div.owasp-list
-                  | {% for metric in analysis.owasp_categories %}
-                  div
-                    span.bold-test
-                      | {{ metric.code }}
-                    | : {{ metric.title }}
-                  | {% endfor %}
-            | {% endif %}
+      section
+        div
+          h5.bold-black-text
+            | {% trans "Regulatory" %}
+        table.regulatory-table
+          tbody
             | {% if analysis.show_cvss %}
-            td
-              div(class="cvss-container")
-                h3
-                  | {% trans "CVSS SCORE" %}
-
-                div(class="cvss-box tag" style="background-color:{{ analysis.color }};color:#FFF")
-                  h1
-                    | {{analysis.cvss_base}}
-                  h6
-                    | CVSSv3
-            td
-              div(class="cvss-vector")
-                h3
-                  | {% trans "CVSS VECTOR" %}
+            tr    
+              td
+                | CVSSv3
+              td
+                | {{analysis.cvss_base}}
+            
+            tr
+              td
+                | CVSS Metrics    
+              td
                 ul
-                  | {% for metric in analysis.cvss_metrics_humanized %}
+                  | {% for metric in analysis.cvss_metrics_humanized %}  
                   li
-                    | {{ metric.key }}: {{ metric.value }}
+                    span.metric-key
+                      | {{ metric.key }}
+                    span.metric-value
+                      | {{ metric.value }}
                   | {% endfor %}
+            | {% endif %}      
+            | {% if analysis.owasp_categories %}
+            tr
+              td
+                | OWASP
+              td  
+                ul
+                  | {% for metric in analysis.owasp_categories %}
+                  li
+                    span.metric-key
+                      | {{ metric.code }}
+                    span.metric-value
+                      | {{ metric.title }}
+                  | {% endfor %}      
+            | {% endif %}
+            | {% if analysis.pcidss_categories %}
+            tr
+              td
+                | PCI-DSS
+              td  
+                ul
+                  | {% for metric in analysis.pcidss_categories %}
+                  li
+                    span.metric-key
+                      | {{ metric.code }}
+                    span.metric-value
+                      | {{ metric.title }}
+                      .metric-description
+                        | {% trans "Description" %}
+                      | {{ metric.description }}
+                  | {% endfor %}      
             | {% endif %}
       section.assessment
         div.analysis-type
@@ -371,4 +388,3 @@ html(lang="en")
           a(target="_blank" href="https://www.owasp.org/index.php/Top_10_2013-Top_10")
             li
               | Web Top 10 OWASP Categories | 2013
-
