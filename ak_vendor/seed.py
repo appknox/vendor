@@ -73,9 +73,12 @@ analysis_template = {
         OWASP_DATA.get('M1_2016'), OWASP_DATA.get('M10_2016'),
         OWASP_DATA.get('A1_2013')
     ],
-    'pcidss': ['1_1'],
+    'pcidss': ['1_1', '1_2', '1_3', '1_4'],
     'pcidss_categories': [
-        PCIDSS_DATA.get('1_1')
+        PCIDSS_DATA.get('1_1'),
+        PCIDSS_DATA.get('1_2'),
+        PCIDSS_DATA.get('1_3'),
+        PCIDSS_DATA.get('1_4')
     ]
  }
 

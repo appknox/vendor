@@ -299,23 +299,25 @@ html(lang="en")
                       | {{ metric.title }}
                   | {% endfor %}      
             | {% endif %}
-            | {% if analysis.pcidss_categories %}
+        | {% if analysis.pcidss_categories %}
+        div.pcidss-heading
+          | PCI-DSS
+        | {% for metric in analysis.pcidss_categories %}
+        table.pcidss-table
+          tbody
             tr
-              td
-                | PCI-DSS
-              td  
-                ul
-                  | {% for metric in analysis.pcidss_categories %}
-                  li
-                    span.metric-key
-                      | {{ metric.code }}
-                    span.metric-value
-                      | {{ metric.title }}
-                      .metric-description
-                        | {% trans "Description" %}
-                      | {{ metric.description }}
-                  | {% endfor %}      
-            | {% endif %}
+              td.metric-key
+                | {{ metric.code }}
+              td.metric-value
+                div
+                  | {{ metric.title }}  
+                .metric-description
+                  | {% trans "Description" %}
+                div
+                  | {{ metric.description }}
+        | {% endfor %}  
+        | {% endif %}   
+            
       section.assessment
         div.analysis-type
           h5
