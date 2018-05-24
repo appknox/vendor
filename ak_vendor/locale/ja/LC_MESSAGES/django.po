@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-23 11:53+0000\n"
+"POT-Creation-Date: 2018-05-24 15:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,579 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: owasp.py:8
+msgid "Improper Platform Usage"
+msgstr ""
+
+#: owasp.py:16
+msgid "Insecure Data Storage"
+msgstr ""
+
+#: owasp.py:24
+msgid "Insecure Communication"
+msgstr ""
+
+#: owasp.py:32
+msgid "Insecure Authentication"
+msgstr ""
+
+#: owasp.py:40
+msgid "Insufficient Cryptography"
+msgstr ""
+
+#: owasp.py:48
+msgid "Insecure Authorization"
+msgstr ""
+
+#: owasp.py:56
+msgid "Client Code Quality"
+msgstr ""
+
+#: owasp.py:64
+msgid "Code Tampering"
+msgstr ""
+
+#: owasp.py:72
+msgid "Reverse Engineering"
+msgstr ""
+
+#: owasp.py:80
+msgid "Extraneous Functionality"
+msgstr ""
+
+#: owasp.py:88
+msgid "Injection"
+msgstr ""
+
+#: owasp.py:96
+msgid "Broken Authentication and Session Management"
+msgstr ""
+
+#: owasp.py:104
+msgid "Cross Site Scripting"
+msgstr ""
+
+#: owasp.py:112
+msgid "Insecure Direct Object References"
+msgstr ""
+
+#: owasp.py:120
+#, fuzzy
+#| msgid "Security Report"
+msgid "Security Misconfiguration"
+msgstr "セキュリティレポート"
+
+#: owasp.py:128
+msgid "Sensitive Data Exposure"
+msgstr ""
+
+#: owasp.py:136
+msgid "Missing Function Level Access Control"
+msgstr ""
+
+#: owasp.py:144
+msgid "Cross-Site Request Forgery (CSRF)"
+msgstr ""
+
+#: owasp.py:152
+msgid "Using Components with Known Vulnerabilities"
+msgstr ""
+
+#: owasp.py:160
+msgid "Unvalidated Redirects and Forwards"
+msgstr ""
+
+#: pcidss.py:7
+msgid ""
+"Install and maintain a firewall and router configuration to "
+"protectcardholder data"
+msgstr ""
+
+#: pcidss.py:13
+msgid ""
+"Establish firewall and router configuration standards that formalize testing "
+"whenever configurations change; that identify all connections to cardholder "
+"data (including wireless); that use various technical settings for each "
+"implementation; and stipulate a review of configuration rule sets at least "
+"every six months."
+msgstr ""
+
+#: pcidss.py:22 pcidss.py:35 pcidss.py:47
+msgid ""
+"Install and maintain a firewall and router configuration to protect "
+"cardholder data"
+msgstr ""
+
+#: pcidss.py:28
+msgid ""
+"Build firewall and router configurations that restrict all traffic from "
+"untrusted networks and hosts, except for protocols necessary for the "
+"cardholder data environment."
+msgstr ""
+
+#: pcidss.py:41
+msgid ""
+"Prohibit direct public access between the Internet and any system component "
+"in the cardholder data environment."
+msgstr ""
+
+#: pcidss.py:53
+msgid ""
+"Install personal firewall software on any mobile and/or employee-owned "
+"computers with direct connectivity to the Internet that are used to access "
+"the organization's network"
+msgstr ""
+
+#: pcidss.py:60 pcidss.py:74 pcidss.py:88 pcidss.py:100
+msgid ""
+"Do not use vendor-supplied defaults for system passwords and other security "
+"parameters"
+msgstr ""
+
+#: pcidss.py:66
+msgid ""
+"Always change vendor-supplied defaults before installing a system on the "
+"network. This includes wireless devices that are connected to the cardholder "
+"data environment or are used to transmit cardholder data"
+msgstr ""
+
+#: pcidss.py:80
+msgid ""
+"Develop configuration standards for all system components that address all "
+"known security vulnerabilities and are consistent with industry-accepted "
+"definitions. Update system configuration standards as new vulnerability "
+"issues are identified."
+msgstr ""
+
+#: pcidss.py:94
+msgid ""
+"Encrypt using strong cryptography all non-console administrative access such "
+"as browser/web- based management tools"
+msgstr ""
+
+#: pcidss.py:106
+msgid ""
+"Shared hosting providers must protect each entity's hosted environment and "
+"cardholder data (details are in PCI DSS Appendix A: Additional PCI DSS "
+"Requirements for Shared Hosting Providers.)"
+msgstr ""
+
+#: pcidss.py:112 pcidss.py:123 pcidss.py:134 pcidss.py:146 pcidss.py:160
+#: pcidss.py:169
+msgid "Protect stored cardholder data"
+msgstr ""
+
+#: pcidss.py:116
+msgid ""
+"Limit cardholder data storage and retention time to that required for "
+"business, legal, and/or regulatory purposes, as documented in your data "
+"retention policy. Purge unnecessary stored data at least quarterly."
+msgstr ""
+
+#: pcidss.py:127
+msgid ""
+"Do not store sensitive authentication data after authorization (even if it "
+"is encrypted). See guidelines in table below. Issuers and related entities "
+"may store sensitive authentication data if there is a business "
+"justification, and the data is stored securely."
+msgstr ""
+
+#: pcidss.py:138
+msgid ""
+"Mask PAN when displayed; the first six and last four digits are the maximum "
+"number of digits you may display. Not applicable for authorized people with "
+"a legitimate business need to see the full PAN. Does not supersede stricter "
+"requirements in place for displays of cardholder data such as on a point-of-"
+"sale receipt."
+msgstr ""
+
+#: pcidss.py:150
+msgid ""
+"Render PAN unreadable anywhere it is stored including on portable digital "
+"media, backup media, in logs, and data received from or stored by wireless "
+"networks. Technology solutions for this requirement may include strong one-"
+"way hash functions of the entire PAN, truncation, index tokens with securely "
+"stored pads, or strong cryptography. (See PCI DSS Glossary for definition of "
+"strong cryptography.)"
+msgstr ""
+
+#: pcidss.py:164
+msgid ""
+"Protect any keys used for encryption of cardholder data from disclosure and "
+"misuse"
+msgstr ""
+
+#: pcidss.py:173
+msgid ""
+"Fully document and implement all appropriate key management processes and "
+"procedures for cryptographic keys used for encryption of cardholder data"
+msgstr ""
+
+#: pcidss.py:180 pcidss.py:198
+msgid "Encrypt transmission of cardholder data across open, public networks"
+msgstr ""
+
+#: pcidss.py:185
+msgid ""
+"Use strong cryptography and security protocols such as SSL/TLS, SSH or IPSec "
+"to safeguard sensitive cardholder data during transmission over open, public "
+"networks (e.g. Internet, wireless technologies, Global System for Mobile "
+"communications [GSM], General Packet Radio Service [GPRS]). Ensure wireless "
+"networks transmitting cardholder data or connected to the cardholder data "
+"environment use industry best practices (e.g., IEEE 802.11i) to implement "
+"strong encryption for authentication and transmission. The use of WEP as a "
+"security control is prohibited"
+msgstr ""
+
+#: pcidss.py:203
+msgid "Never send unprotected PANs by end user messaging technologies"
+msgstr ""
+
+#: pcidss.py:207 pcidss.py:216
+msgid "Use and regularly update anti-virus software or programs"
+msgstr ""
+
+#: pcidss.py:211
+msgid ""
+"Deploy anti-virus software on all systems affected by malicious software "
+"(particularly personal computers and servers)"
+msgstr ""
+
+#: pcidss.py:220
+msgid ""
+"Ensure that all anti-virus mechanisms are current, actively running, and "
+"generating audit logs"
+msgstr ""
+
+#: pcidss.py:225 pcidss.py:235 pcidss.py:245 pcidss.py:256 pcidss.py:265
+#: pcidss.py:276
+msgid "Develop and maintain secure systems and applications"
+msgstr ""
+
+#: pcidss.py:229
+msgid ""
+"Ensure that all system components and software are protected from known "
+"vulnerabilities by having the latest vendor-supplied security patches "
+"installed. Deploy critical patches within a month of release"
+msgstr ""
+
+#: pcidss.py:239
+msgid ""
+"Establish a process to identify and assign a risk ranking to newly "
+"discovered security vulnerabilities. Risk rankings should be based on "
+"industry best practices and guidelines."
+msgstr ""
+
+#: pcidss.py:249
+msgid ""
+"Develop software applications (internal and external, and including web-"
+"based administrative access) in accordance with PCI DSS and based on "
+"industry best practices. Incorporate information security throughout the "
+"software development life cycle."
+msgstr ""
+
+#: pcidss.py:260
+msgid ""
+"Follow change control processes and procedures for all changes to system "
+"components"
+msgstr ""
+
+#: pcidss.py:269
+msgid ""
+"Develop applications based on secure coding guidelines and review custom "
+"application code to identify coding vulnerabilities. Follow up-to-date "
+"industry best practices to identify and manage vulnerabilities."
+msgstr ""
+
+#: pcidss.py:280
+msgid ""
+"Ensure all public-facing web applications are protected against known "
+"attacks, either by performing code vulnerability reviews at least annually "
+"or by installing a web application firewall in front of public-facing web "
+"applications"
+msgstr ""
+
+#: pcidss.py:287 pcidss.py:296
+msgid "Restrict access to cardholder data by business need to know"
+msgstr ""
+
+#: pcidss.py:291
+msgid ""
+"Limit access to system components and cardholder data to only those "
+"individuals whose job requires such access."
+msgstr ""
+
+#: pcidss.py:300
+msgid ""
+"Establish an access control system for systems components with multiple "
+"users that restricts access based on a user's need to know, and is set to "
+"deny all unless specifically allowed"
+msgstr ""
+
+#: pcidss.py:306 pcidss.py:315 pcidss.py:326 pcidss.py:340 pcidss.py:349
+msgid "Assign a unique ID to each person with computer access"
+msgstr ""
+
+#: pcidss.py:310
+msgid ""
+"Assign all users a unique user name before allowing them to access system "
+"components or cardholder data."
+msgstr ""
+
+#: pcidss.py:319
+msgid ""
+"Employ at least one of these to authenticate all users: something you know, "
+"such as a password or passphrase; something you have, such as a token device "
+"or smart card; or something you are, such as a biometric"
+msgstr ""
+
+#: pcidss.py:330
+msgid ""
+"Implement two-factor authentication for remote access to the network by "
+"employees, administrators, and third parties. For example, use technologies "
+"such as remote authentication and dialin service (RADIUS) with tokens; "
+"terminal access controller access control system (TACACS) with tokens; or "
+"other technologies that facilitate two-factor authentication. Using one "
+"factor twice (e.g. using two separate passwords) is not considered two-"
+"factor authentication"
+msgstr ""
+
+#: pcidss.py:344
+msgid ""
+"Render all passwords unreadable during storage and transmission, for all "
+"system components, by using strong cryptography."
+msgstr ""
+
+#: pcidss.py:353
+msgid ""
+"Ensure proper user identification and authentication management for non-"
+"consumer users and administrators on all system components"
+msgstr ""
+
+#: pcidss.py:358 pcidss.py:367 pcidss.py:376 pcidss.py:388 pcidss.py:399
+#: pcidss.py:407 pcidss.py:415 pcidss.py:425 pcidss.py:434 pcidss.py:442
+msgid "Restrict physical access to cardholder data"
+msgstr ""
+
+#: pcidss.py:362
+msgid ""
+"Use appropriate facility entry controls to limit and monitor physical access "
+"to systems in the cardholder data environment"
+msgstr ""
+
+#: pcidss.py:371
+msgid ""
+"Develop procedures to easily distinguish between onsite personnel and "
+"visitors, especially in areas where cardholder data is accessible"
+msgstr ""
+
+#: pcidss.py:380
+msgid ""
+"Ensure all visitors are authorized before entering areas where cardholder "
+"data is processed or maintained; given a physical token that expires and "
+"that identifies visitors as not onsite personnel; and are asked to surrender "
+"the physical token before leaving the facility or at the date of expiration."
+msgstr ""
+
+#: pcidss.py:392
+msgid ""
+"Use a visitor log to maintain a physical audit trail of visitor information "
+"and activity, including visitor name and company, and the onsite personnel "
+"authorizing physical access. Retain the log for at least three months unless "
+"otherwise restricted by law."
+msgstr ""
+
+#: pcidss.py:403
+msgid "Store media back-ups in a secure location, preferably off site."
+msgstr ""
+
+#: pcidss.py:411
+msgid "Physically secure all media."
+msgstr ""
+
+#: pcidss.py:419
+msgid ""
+"Maintain strict control over the internal or external distribution of any "
+"kind of media. Classify media so the sensitivity of the data can be "
+"determined."
+msgstr ""
+
+#: pcidss.py:429
+msgid ""
+"Ensure that management approves any and all media moved from a secured area, "
+"especially when media is distributed to individuals"
+msgstr ""
+
+#: pcidss.py:438
+msgid "Maintain strict control over the storage and accessibility of media"
+msgstr ""
+
+#: pcidss.py:446
+msgid "Destroy media when it is no longer needed for business or legal reasons"
+msgstr ""
+
+#: pcidss.py:452 pcidss.py:465 pcidss.py:482 pcidss.py:496 pcidss.py:509
+#: pcidss.py:520 pcidss.py:532
+msgid "Track and monitor all access to network resources and cardholder  data"
+msgstr ""
+
+#: pcidss.py:458
+msgid ""
+"Establish a process for linking all access to system components to each "
+"individual user especially access done with administrative privileges."
+msgstr ""
+
+#: pcidss.py:471
+msgid ""
+"Implement automated audit trails for all system components for "
+"reconstructing these events: all individual user accesses to cardholder "
+"data; all actions taken by any individual with root or administrative "
+"privileges; access to all audit trails; invalid logical access attempts; use "
+"of identification and authentication mechanisms; initialization of the audit "
+"logs; creation and deletion of system-level objects"
+msgstr ""
+
+#: pcidss.py:488
+msgid ""
+"Record audit trail entries for all system components for each event, "
+"including at a minimum: user identification, type of event, date and time, "
+"success or failure indication, origination of event, and identity or name of "
+"affected data, system component or resource. "
+msgstr ""
+
+#: pcidss.py:502
+msgid ""
+"Using time synchronization technology, synchronize all critical system "
+"clocks and times and implement controls for acquiring, distributing, and "
+"storing time."
+msgstr ""
+
+#: pcidss.py:515
+msgid "Secure audit trails so they cannot be altered."
+msgstr ""
+
+#: pcidss.py:526
+msgid ""
+"Review logs for all system components related to security functions at least "
+"daily"
+msgstr ""
+
+#: pcidss.py:538
+msgid ""
+"Retain audit trail history for at least one year; at least three months of "
+"history must be immediately available for analysis"
+msgstr ""
+
+#: pcidss.py:543 pcidss.py:555 pcidss.py:569 pcidss.py:580 pcidss.py:593
+msgid "Regularly test security systems and processes"
+msgstr ""
+
+#: pcidss.py:547
+msgid ""
+"Test for the presence of wireless access points and detect unauthorized "
+"wireless access points on a quarterly basis. Typical methods are wireless "
+"network scans, physical/logical inspections of system components and "
+"infrastructure, network access control (NAC), or wireless IDS/IPS. "
+msgstr ""
+
+#: pcidss.py:559
+msgid ""
+"Run internal and external network vulnerability scans at least quarterly and "
+"after any significant change in the network. After passing a scan for "
+"initial PCI DSS compliance, an entity must, in subsequent years, pass four "
+"consecutive quarterly scans as a requirement for compliance. Quarterly "
+"external scans must be performed by an Approved Scanning Vendor (ASV). Scans "
+"conducted after network changes may be performed by internal staff"
+msgstr ""
+
+#: pcidss.py:573
+msgid ""
+"Perform external and internal penetration testing, including network- and "
+"application-layer penetration tests, at least annually and after any "
+"significant infrastructure or application upgrade or modification."
+msgstr ""
+
+#: pcidss.py:584
+msgid ""
+"Use network intrusion detection systems and/or intrusion prevention systems "
+"to monitor all traffic at the perimeter of the cardholder data environment "
+"as well as at critical points inside of the cardholder data environment, and "
+"alert personnel to suspected compromises. IDS/IPS engines, baselines, and "
+"signatures must be kept up to date"
+msgstr ""
+
+#: pcidss.py:597
+msgid ""
+"Deploy file integrity monitoring tools to alert personnel to unauthorized "
+"modification of critical system files, configuration files or content files. "
+"Configure the software to perform critical file comparisons at least weekly"
+msgstr ""
+
+#: pcidss.py:605 pcidss.py:620 pcidss.py:632 pcidss.py:646 pcidss.py:658
+#: pcidss.py:670 pcidss.py:682 pcidss.py:696 pcidss.py:710
+msgid "Maintain a policy that addresses information security for all personnel"
+msgstr ""
+
+#: pcidss.py:611
+msgid ""
+"Establish, publish, maintain, and disseminate a security policy that "
+"addresses all PCI DSS requirements, includes an annual process for "
+"identifying vulnerabilities and formally assessing risks, and includes a "
+"review at least once a year and when the environment changes"
+msgstr ""
+
+#: pcidss.py:626
+msgid ""
+"Develop daily operational security procedures that are consistent with "
+"requirements in PCI DSS"
+msgstr ""
+
+#: pcidss.py:638
+msgid ""
+"Develop usage policies for critical technologies to define their proper use "
+"by all personnel. These include remote access, wireless, removable "
+"electronic media, laptops, tablets, handheld devices, email and Internet"
+msgstr ""
+
+#: pcidss.py:652
+msgid ""
+"Ensure that the security policy and procedures clearly define information "
+"security responsibilities for all personnel."
+msgstr ""
+
+#: pcidss.py:664
+msgid ""
+"Assign to an individual or team information security responsibilities "
+"defined by 12.5 subsections."
+msgstr ""
+
+#: pcidss.py:676
+msgid ""
+"Implement a formal security awareness program to make all personnel aware of "
+"the importance of cardholder data security"
+msgstr ""
+
+#: pcidss.py:688
+msgid ""
+"Screen potential personnel prior to hire to minimize the risk of attacks "
+"from internal sources. Example screening includes previous employment "
+"history, criminal record, credit history, and reference checks"
+msgstr ""
+
+#: pcidss.py:702
+msgid ""
+"If cardholder data is shared with service providers, maintain policies and "
+"procedures to formally identify service provider responsibilities for "
+"securing cardholder data, and monitor service providers' PCI DSS compliance "
+"status at least annually"
+msgstr ""
+
+#: pcidss.py:716
+msgid ""
+"Implement an incident response plan. Be prepared to respond immediately to a "
+"system breach."
+msgstr ""
 
 #: report.html:17
 msgid "Security Report"
@@ -37,8 +610,10 @@ msgid "Prepared by "
 msgstr "以下のために準備："
 
 #: report.html:17 report.html:23
+#, fuzzy
+#| msgid "Prepared For"
 msgid ", powered by "
-msgstr ""
+msgstr "以下のために準備："
 
 #: report.html:17
 #, fuzzy
@@ -105,8 +680,10 @@ msgid "Version"
 msgstr ""
 
 #: report.html:17
+#, fuzzy
+#| msgid "Audit Summary"
 msgid "Audit Date"
-msgstr ""
+msgstr "監査の概要"
 
 #: report.html:17
 msgid "Application SHA1 Hash"
