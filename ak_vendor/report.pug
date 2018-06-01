@@ -201,7 +201,7 @@ html(lang="en")
               | {% endif %}
               | {% endfor %}
 
-              | {% if file.guaranteed_profile.rps.show_ignored_analyses and ignored_analyses_count %}
+              | {% if file.guaranteed_profile.rps.show_ignored_analyses %}
               | {% for analysis in file.sorted_analyses %}
               | {% if analysis.is_ignored %}
               tr(class="{% if analysis.is_ignored %}disabled{% endif %}")
