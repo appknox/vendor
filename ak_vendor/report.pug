@@ -118,7 +118,7 @@ html(lang="en")
                   | {% trans "Appknox Security Rating" %}
 
             | {% for analysis in file.sorted_analyses %}
-            | {% if analysis.risk > RiskEnum.PASSED %}
+            | {% if analysis.computed_risk > RiskEnum.PASSED %}
             tr.main-table-heading
               td
                 a(href="#{{ analysis.id }}")
@@ -171,10 +171,10 @@ html(lang="en")
             | {% trans "Audit Summary" %}
         div
           table.audit-table
-            | {% for analysis in file.sorted_analyses %}
-
             tbody
-              tr
+              | {% for analysis in file.sorted_analyses %}
+              | {% if not analysis.is_ignored %}
+              tr(class="{% if analysis.is_ignored %}disabled{% endif %}")
                 td
                   h5
                     | {{ analysis.vulnerability.name }}
@@ -187,13 +187,54 @@ html(lang="en")
 
                 td.risk-type-container
                   | {% if analysis.show_cvss %}
-                  div(class="cvss-text" style="color:{{ analysis.color }}")
+                  div(class="cvss-text color-{{ analysis.get_computed_risk_display|lower }}")
                     h1
                       | {{analysis.cvss_base}}
                   | {% endif %}
-                  h6(class="risk-type" style="background-color:{{ analysis.color }};color:#FFF")
-                    | {{ analysis.get_risk_display }} Risk
-            | {% endfor %}
+                  div
+                    div(class="risk-type fill-{{ analysis.get_computed_risk_display|lower }}")
+                      | {{ analysis.get_computed_risk_display }} Risk
+                    | {% if analysis.overridden_risk %}
+                    div(class="risk-type-icon")
+                      img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzOTkuMTQgMzk5LjE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOTkuMTQgMzk5LjE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+ICAgIDxnPiAgICAgICAgPGNpcmNsZSBjeD0iMTA4Ljc1IiBjeT0iNzIuOTgiIHI9IjYwIiBmaWxsPSIjYzdjN2M3Ii8+ICAgICAgICA8cGF0aCBkPSJNMTkyLjM4OSwyMDIuMjM4Yy0xOS45NDYtMjMuOTg0LTUwLjAwNi0zOS4yNTgtODMuNjM5LTM5LjI1OEM0OC42ODksMTYyLjk4LDAsMjExLjY2OSwwLDI3MS43M2gxMjIuODk3TDE5Mi4zODksMjAyLjIzOHoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0zMDAuMzc2LDEzNi42NzZsMzguNjYxLTM4LjY2MWw2MC4xMDQsNjAuMTA0bC0zOC42NjEsMzguNjYxTDMwMC4zNzYsMTM2LjY3NnoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0xMTAuOTk4LDM4Ni4xNmw2OC40NjQtMTkuOTg2bC00OC40NzgtNDguNDc3TDExMC45OTgsMzg2LjE2eiIgZmlsbD0iI2M3YzdjNyIvPiAgICAgICAgPHBhdGggZD0iTTE0Ni4zODEsMjkwLjY3bDEzMi43ODItMTMyLjc4Mmw2MC4xMDQsNjAuMTA0TDIwNi40ODUsMzUwLjc3NEwxNDYuMzgxLDI5MC42N3oiIGZpbGw9IiNjN2M3YzciLz4gICAgPC9nPjwvc3ZnPg==")
+                    | {% endif %}
+              | {% endif %}
+              | {% endfor %}
+
+              | {% if file.profile.report_preference.show_ignored_analyses and ignored_analyses_count %}
+              | {% for analysis in file.sorted_analyses %}
+              | {% if analysis.is_ignored %}
+              tr(class="{% if analysis.is_ignored %}disabled{% endif %}")
+                td
+                  h5
+                    | {{ analysis.vulnerability.name }}
+                    | {% for type in analysis.vulnerability.get_types_display %}
+                    span(class="scan-tag")
+                      | {{type}}
+                    | {% endfor %}
+
+                  | {{ analysis.vulnerability.description | safe  }}
+
+                td.risk-type-container
+                  | {% if analysis.is_ignored %}
+                  label(class="audit-ignored-label")
+                    | {% trans "Ignored" %}
+                  | {% endif %}
+                  | {% if analysis.show_cvss %}
+                  div(class="cvss-text color-{{ analysis.get_computed_risk_display|lower }}")
+                    h1
+                      | {{analysis.cvss_base}}
+                  | {% endif %}
+                  div
+                    div(class="risk-type fill-{{ analysis.get_computed_risk_display|lower }}")
+                      | {{ analysis.get_computed_risk_display }} Risk
+                    | {% if analysis.overridden_risk %}
+                    div(class="risk-type-icon")
+                      img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzOTkuMTQgMzk5LjE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOTkuMTQgMzk5LjE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+ICAgIDxnPiAgICAgICAgPGNpcmNsZSBjeD0iMTA4Ljc1IiBjeT0iNzIuOTgiIHI9IjYwIiBmaWxsPSIjYzdjN2M3Ii8+ICAgICAgICA8cGF0aCBkPSJNMTkyLjM4OSwyMDIuMjM4Yy0xOS45NDYtMjMuOTg0LTUwLjAwNi0zOS4yNTgtODMuNjM5LTM5LjI1OEM0OC42ODksMTYyLjk4LDAsMjExLjY2OSwwLDI3MS43M2gxMjIuODk3TDE5Mi4zODksMjAyLjIzOHoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0zMDAuMzc2LDEzNi42NzZsMzguNjYxLTM4LjY2MWw2MC4xMDQsNjAuMTA0bC0zOC42NjEsMzguNjYxTDMwMC4zNzYsMTM2LjY3NnoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0xMTAuOTk4LDM4Ni4xNmw2OC40NjQtMTkuOTg2bC00OC40NzgtNDguNDc3TDExMC45OTgsMzg2LjE2eiIgZmlsbD0iI2M3YzdjNyIvPiAgICAgICAgPHBhdGggZD0iTTE0Ni4zODEsMjkwLjY3bDEzMi43ODItMTMyLjc4Mmw2MC4xMDQsNjAuMTA0TDIwNi40ODUsMzUwLjc3NEwxNDYuMzgxLDI5MC42N3oiIGZpbGw9IiNjN2M3YzciLz4gICAgPC9nPjwvc3ZnPg==")
+                    | {% endif %}
+              | {% endif %}
+              | {% endfor %}
+              | {% endif %}
 
       section.new-page
         table.audit-table.sub-table
@@ -237,7 +278,7 @@ html(lang="en")
 
     | {% for analysis in file.sorted_analyses %}
 
-    | {% if analysis.risk > RiskEnum.PASSED %}
+    | {% if analysis.computed_risk > RiskEnum.PASSED and not analysis.is_ignored  %}
 
     section.new-page
       div
@@ -250,10 +291,14 @@ html(lang="en")
         table
           tbody
             tr
-              td
+              td.risk-tag-container
                 div
-                  h5(class="risk-tag" style="background-color:{{ analysis.color }};color:#FFF")
-                    | {% trans "Risk Rating" %} : {{ analysis.get_risk_display }}
+                  div(class="risk-tag fill-{{ analysis.get_computed_risk_display|lower }}")
+                    | {% trans "Risk Rating" %} : {{ analysis.get_computed_risk_display }}
+                  | {% if analysis.overridden_risk %}
+                  div(class="risk-tag-icon")
+                    img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzOTkuMTQgMzk5LjE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOTkuMTQgMzk5LjE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCI+ICAgIDxnPiAgICAgICAgPGNpcmNsZSBjeD0iMTA4Ljc1IiBjeT0iNzIuOTgiIHI9IjYwIiBmaWxsPSIjYzdjN2M3Ii8+ICAgICAgICA8cGF0aCBkPSJNMTkyLjM4OSwyMDIuMjM4Yy0xOS45NDYtMjMuOTg0LTUwLjAwNi0zOS4yNTgtODMuNjM5LTM5LjI1OEM0OC42ODksMTYyLjk4LDAsMjExLjY2OSwwLDI3MS43M2gxMjIuODk3TDE5Mi4zODksMjAyLjIzOHoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0zMDAuMzc2LDEzNi42NzZsMzguNjYxLTM4LjY2MWw2MC4xMDQsNjAuMTA0bC0zOC42NjEsMzguNjYxTDMwMC4zNzYsMTM2LjY3NnoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0xMTAuOTk4LDM4Ni4xNmw2OC40NjQtMTkuOTg2bC00OC40NzgtNDguNDc3TDExMC45OTgsMzg2LjE2eiIgZmlsbD0iI2M3YzdjNyIvPiAgICAgICAgPHBhdGggZD0iTTE0Ni4zODEsMjkwLjY3bDEzMi43ODItMTMyLjc4Mmw2MC4xMDQsNjAuMTA0TDIwNi40ODUsMzUwLjc3NEwxNDYuMzgxLDI5MC42N3oiIGZpbGw9IiNjN2M3YzciLz4gICAgPC9nPjwvc3ZnPg==")
+                  | {% endif %}
               td.scan-container
                 | {% for type in analysis.vulnerability.get_types_display %}
                 span(class="scan-tag")
@@ -377,6 +422,159 @@ html(lang="en")
 
     | {% endif %}
     | {% endfor %}
+
+    | {% if file.profile.report_preference.show_ignored_analyses and ignored_analyses_count %}
+    section.new-page
+      div.ignored-analyses
+        a(id="ignored-analyses")
+        h3.heading-container
+          | {% trans "Ignored Analyses" %}
+
+      | {% for analysis in file.sorted_analyses %}
+      | {% if analysis.computed_risk > RiskEnum.PASSED and analysis.is_ignored  %}
+      section
+        div
+          a(id="{{ analysis.id }}")
+          h3.vulnerability-heading
+            | {{ analysis.vulnerability.name }}
+        section.description
+          div
+            | {{ analysis.vulnerability.intro | safe }}
+          table
+            tbody
+              tr
+                td.risk-tag-container
+                  div
+                    div(class="risk-tag fill-{{ analysis.get_computed_risk_display|lower }}")
+                      | {% trans "Risk Rating" %} : {{ analysis.get_computed_risk_display }}
+                    | {% if analysis.overridden_risk %}
+                    div(class="risk-tag-icon")
+                      img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzOTkuMTQgMzk5LjE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOTkuMTQgMzk5LjE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCI+ICAgIDxnPiAgICAgICAgPGNpcmNsZSBjeD0iMTA4Ljc1IiBjeT0iNzIuOTgiIHI9IjYwIiBmaWxsPSIjYzdjN2M3Ii8+ICAgICAgICA8cGF0aCBkPSJNMTkyLjM4OSwyMDIuMjM4Yy0xOS45NDYtMjMuOTg0LTUwLjAwNi0zOS4yNTgtODMuNjM5LTM5LjI1OEM0OC42ODksMTYyLjk4LDAsMjExLjY2OSwwLDI3MS43M2gxMjIuODk3TDE5Mi4zODksMjAyLjIzOHoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0zMDAuMzc2LDEzNi42NzZsMzguNjYxLTM4LjY2MWw2MC4xMDQsNjAuMTA0bC0zOC42NjEsMzguNjYxTDMwMC4zNzYsMTM2LjY3NnoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0xMTAuOTk4LDM4Ni4xNmw2OC40NjQtMTkuOTg2bC00OC40NzgtNDguNDc3TDExMC45OTgsMzg2LjE2eiIgZmlsbD0iI2M3YzdjNyIvPiAgICAgICAgPHBhdGggZD0iTTE0Ni4zODEsMjkwLjY3bDEzMi43ODItMTMyLjc4Mmw2MC4xMDQsNjAuMTA0TDIwNi40ODUsMzUwLjc3NEwxNDYuMzgxLDI5MC42N3oiIGZpbGw9IiNjN2M3YzciLz4gICAgPC9nPjwvc3ZnPg==")
+                    | {% endif %}
+                td.scan-container
+                  | {% for type in analysis.vulnerability.get_types_display %}
+                  span(class="scan-tag")
+                    | {{type}}
+                  | {% endfor %}
+        section
+          div
+            h5.bold-black-text
+              | {% trans "Regulatory" %}
+          table.regulatory-table
+            tbody
+              | {% if analysis.show_cvss %}
+              tr
+                td
+                  | CVSSv3
+                td
+                  | {{analysis.cvss_base}}
+
+              tr
+                td
+                  | CVSS Metrics
+                td
+                  ul
+                    | {% for metric in analysis.cvss_metrics_humanized %}
+                    li
+                      span.metric-key
+                        | {{ metric.key }}
+                      span.metric-value
+                        | {{ metric.value }}
+                    | {% endfor %}
+              | {% endif %}
+              | {% if analysis.owasp_categories %}
+              tr
+                td
+                  | OWASP
+                td
+                  ul
+                    | {% for metric in analysis.owasp_categories %}
+                    li
+                      span.metric-key
+                        | {{ metric.code }}
+                      span.metric-value
+                        | {{ metric.title }}
+                    | {% endfor %}
+              | {% endif %}
+          | {% if analysis.pcidss_categories %}
+          div.pcidss-heading
+            | PCI-DSS
+          | {% for metric in analysis.pcidss_categories %}
+          table.pcidss-table
+            tbody
+              tr
+                td.metric-key
+                  | {{ metric.code }}
+                td.metric-value
+                  div
+                    | {{ metric.title }}
+                  .metric-description
+                    | {% trans "Description" %}
+                  div
+                    | {{ metric.description }}
+          | {% endfor %}
+          | {% endif %}
+
+        section.assessment
+          div.analysis-type
+            h5
+              | {% trans "Risk Assessment" %}
+          div
+            p
+              | {{ analysis.vulnerability.description | safe }}
+            | {% for finding in analysis.findings %}
+            | {% if finding.title %}
+            h2
+              | {{ finding.title | escape }}
+            | {% endif %}
+            pre
+              code
+                | {{ finding.description | escape }}
+            | {% endfor %}
+
+        | {% if analysis.vulnerability.non_compliant %}
+        section.non-compliant
+          div.analysis-type
+            a(id="{{ analysis.id }}{{ forloop.counter }}non-compliant")
+            h5
+              | {% trans "Noncompliant Code Example" %}
+          div
+            | {{ analysis.vulnerability.non_compliant | safe }}
+        | {% endif %}
+
+        | {% if analysis.vulnerability.compliant %}
+        section.compliant
+          div.analysis-type
+            a(id="{{ analysis.id }}{{ forloop.counter }}compliant")
+            h5
+              | {% trans "Compliant Solution" %}
+          div
+            | {{ analysis.vulnerability.compliant | safe }}
+        | {% endif %}
+
+        | {% if analysis.vulnerability.business_implication %}
+        section.implications
+          div.analysis-type
+            a(id="{{ analysis.id }}{{ forloop.counter }}business-implication")
+            h5
+              | {% trans "Business Implication" %}
+          div
+            | {{ analysis.vulnerability.business_implication | safe }}
+        | {% endif %}
+
+        | {% if analysis.vulnerability.related_to %}
+        section.related
+          div.analysis-type
+            a(id="{{ analysis.id }}{{ forloop.counter }}related-to")
+            h5
+              | {% trans "Related Vulnerabilities" %}
+          div
+            | {{ analysis.vulnerability.related_to | safe }}
+        | {% endif %}
+
+      | {% endif %}
+      | {% endfor %}
+    | {% endif %}
 
     section.new-page
       div.references
