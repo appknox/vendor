@@ -108,12 +108,12 @@ file_data = {
     'created_on': '2017-03-03 09:17:31.568125+00:00',
     'device_token': 'None',
     'dynamic_status': 0,
-    'icon_url': 'https://cdn.appknox.com/13cb5f99-0a67-43ae-89b6-35fe5bc01a78.png',
+    'icon_url': 'assets/icon.png',
     'is_dynamic_done': False,
     'is_static_done': False,
     'manual': 0,
     'md5hash': '97d83c689f2cb0118e1901054165e8fe',
-    'name': 'com.foo.bar',
+    'name': 'FooBar',
     'sha1hash': 'd5341a898eb1d1e90a316d49e8f6b4f33ad08cf0',
     'updated_on': '2017-03-03 09:17:31.568149+00:00',
     'uuid': '04b8fa5d-2ea9-4055-b862-5b470640ffa2',
@@ -122,7 +122,9 @@ file_data = {
     'id': 29,
     'sorted_analyses': [analiser1, analiser2],
     'project': {
-        'get_platform_display': "Some Platform"
+        'get_platform_display': 'iOS',
+        'platform': 1,
+        'package_name': 'com.google.android.youtube.com.google.bar'
     },
     'risk_count_critical': 12,
     'risk_count_high': 10,
@@ -135,9 +137,25 @@ file_data = {
     }
 }
 
-whitelabel_data = {
-    'enabled': False,
-    'name': 'Appknox',
-    'logo': 'https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png',
-    'hide_poweredby_logo': False
+
+report_data = {
+    'client': {
+        'name': 'Google',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/272px-Google_2015_logo.svg.png',
+    },
+    'partner': {
+        'name': 'Django',
+        'logo': 'https://www.djangoproject.com/s/img/logos/django-logo-positive.png',
+        'hide_poweredby_logo': False,
+    },
+    'whitelabel': {
+        'name': 'Django',
+        'logo': '',
+        'enabled': False,
+        'hide_poweredby_logo': False,
+    },
+    'author': {
+        'name': 'Appknox',
+        'logo': 'https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png'
+    }
 }

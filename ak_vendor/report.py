@@ -7,14 +7,14 @@ from django.template import Template, Context
 from django.template.engine import Engine
 
 from ak_vendor.utils import dict2obj
-from ak_vendor.seed import file_data, whitelabel_data
+from ak_vendor.seed import file_data, report_data
 from ak_vendor.constants import REPORT_PATH, OUTPUT_PATH
 from ak_vendor.enums import RiskEnum
 
 settings.configure(DEBUG=False)
 register = template.Library()
 file = dict2obj(file_data)
-whitelabel = dict2obj(whitelabel_data)
+data = dict2obj(report_data)
 pwd = environ['PWD']
 content = ""
 
@@ -32,7 +32,7 @@ with open(REPORT_PATH, "r") as input_file:
     template = Template(template_compiled, engine=Engine())
     context = Context(dict(
         file=file,
-        whitelabel=whitelabel,
+        data=data,
         RiskEnum=RiskEnum,
         chart_url="Some URL",
         ignored_analyses_count=len([
