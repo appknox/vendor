@@ -151,11 +151,12 @@ report_data = {
     'whitelabel': {
         'name': 'Django',
         'logo': '',
-        'enabled': False,
+        'enabled': True,
         'hide_poweredby_logo': False,
     },
     'author': {
         'name': 'Appknox',
         'logo': 'https://raw.githubusercontent.com/appknox/press-kit/master/logo/logo-dark-small.png'
-    }
+    },
+    'show_copyright': False
 }
