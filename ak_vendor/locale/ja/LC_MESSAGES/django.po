@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-24 15:46+0000\n"
+"POT-Creation-Date: 2018-06-08 10:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -591,53 +591,43 @@ msgid ""
 "system breach."
 msgstr ""
 
-#: report.html:17
-msgid "Security Report"
+#: report.html:14
+#, fuzzy
+#| msgid "Security Report"
+msgid "App Security Report"
 msgstr "セキュリティレポート"
 
-#: report.html:17
+#: report.html:14
 msgid "For Internal Purpose"
 msgstr "内部目的のために"
 
-#: report.html:17
-msgid "Prepared For"
-msgstr "以下のために準備："
-
-#: report.html:17
+#: report.html:15 report.html:18
 #, fuzzy
 #| msgid "Prepared For"
-msgid "Prepared by "
+msgid "Prepared by"
 msgstr "以下のために準備："
 
-#: report.html:17 report.html:23
+#: report.html:15 report.html:17
 #, fuzzy
 #| msgid "Prepared For"
-msgid ", powered by "
+msgid "Powered by"
 msgstr "以下のために準備："
 
-#: report.html:17
+#: report.html:18
 #, fuzzy
 #| msgid ""
 #| "Prepared by XYSec Labs Pte. Ltd. Portions of this document and the "
 #| "templates used in its production are the property of XYSec Labs Pte. Ltd. "
 #| "and cannot be copied without permission."
 msgid ""
-"Appknox. Portions of this document and the templates used in its production "
-"are the property of "
+"Portions of this document and the templates used in its production are the "
+"property of Appknox and cannot be copied without permission."
 msgstr ""
 "XYSec研究所のPteによって調製しました。株式会社本書の一部およびその製造に使用"
 "されるテンプレートは、XYSec研究所のPteの財産です。 （株）および許可なしにコ"
 "ピーすることはできません。"
 
-#: report.html:17 report.html:23
-msgid "Appknox"
-msgstr ""
-
-#: report.html:17
-msgid " and cannot be copied without permission."
-msgstr ""
-
-#: report.html:17
+#: report.html:18
 #, fuzzy
 #| msgid ""
 #| "While precautions have been taken in the preparation of this document, "
@@ -650,8 +640,7 @@ msgid ""
 "While precautions have been taken in the preparation of this document, the "
 "publisher and the author(s) assume no responsibility for errors, omissions, "
 "or for damages resulting from the use of the information contained herein. "
-"Use of Appknox services does not guarantee the security of a system, or that "
-"intrusions will not occur."
+"Use of "
 msgstr ""
 "注意事項は、本文書、XYSec研究所のPteの準備で撮影してきたが。 （株）、出版社、"
 "及び著者（複数可）は、エラーのため、省略、または本明細書に含まれている情報の"
@@ -659,135 +648,170 @@ msgstr ""
 "用。 （株）サービスは、システムのセキュリティを保証する、または侵入が発生しな"
 "いことはありません。"
 
-#: report.html:17
+#: report.html:18 report.html:34
+msgid "Appknox "
+msgstr ""
+
+#: report.html:18
+msgid ""
+"services does not guarantee the security of a system, or that intrusions "
+"will not occur."
+msgstr ""
+
+#: report.html:18
 msgid "Application Details"
 msgstr "アプリケーションの詳細"
 
-#: report.html:17
+#: report.html:18
 msgid "Application Name"
 msgstr "アプリケーションログ"
 
-#: report.html:17
+#: report.html:18
 msgid "Platform"
 msgstr ""
 
-#: report.html:17
+#: report.html:18
 msgid "Application Namespace"
 msgstr "アプリケーションログ"
 
-#: report.html:17
+#: report.html:18
 msgid "Version"
 msgstr ""
 
-#: report.html:17
+#: report.html:18
 #, fuzzy
 #| msgid "Audit Summary"
 msgid "Audit Date"
 msgstr "監査の概要"
 
-#: report.html:17
+#: report.html:18
 msgid "Application SHA1 Hash"
 msgstr "アプリケーションログ"
 
-#: report.html:17
+#: report.html:18
 msgid "Application MD5 Hash"
 msgstr "アプリケーションの詳細"
 
-#: report.html:17
+#: report.html:18
 #, fuzzy
 #| msgid "Table Of Contents"
 msgid "Table of Contents"
 msgstr "目次"
 
-#: report.html:17 report.html:23
+#: report.html:18 report.html:24
 msgid "Report Summary"
 msgstr "レポートの概要"
 
-#: report.html:17 report.html:23
+#: report.html:18 report.html:24
 msgid "Audit Summary"
 msgstr "監査の概要"
 
-#: report.html:17 report.html:24
-msgid "Appknox Security Rating"
+#: report.html:18 report.html:34
+#, fuzzy
+#| msgid "Appknox Security Rating"
+msgid "Security Rating"
 msgstr "Appknoxセキュリティ評価"
 
-#: report.html:18 report.html:28
+#: report.html:19 report.html:38 report.html:47
 msgid "Noncompliant Code Example"
 msgstr ""
 
-#: report.html:19 report.html:29
+#: report.html:20 report.html:39 report.html:48
 msgid "Compliant Solution"
 msgstr ""
 
-#: report.html:20 report.html:30
+#: report.html:21 report.html:40 report.html:49
 msgid "Business Implication"
 msgstr "ビジネスロジック"
 
-#: report.html:21 report.html:31
+#: report.html:22 report.html:41 report.html:50
 msgid "Related Vulnerabilities"
 msgstr ""
 
-#: report.html:23
+#: report.html:24
+#, fuzzy
+#| msgid "Prepared For"
+msgid ", powered by "
+msgstr "以下のために準備："
+
+#: report.html:24
+msgid "Appknox"
+msgstr ""
+
+#: report.html:24
 msgid ","
 msgstr ""
 
-#: report.html:23
-msgid ""
-" conducted a security assessment of the mobile application. This report "
-"contains all the findings during the automated auditing process. It also "
-"contains the process of discovering those vulnerabilities in the first "
-"place, and ways to remediate those issues."
+#: report.html:24
+msgid " conducted a security assessment of the mobile application. "
 msgstr ""
 
 #: report.html:24
+msgid ""
+"This report contains all the findings during the automated auditing process. "
+"It also contains the process of discovering those vulnerabilities in the "
+"first place, and ways to remediate those issues."
+msgstr ""
+
+#: report.html:31
+msgid "Ignored"
+msgstr ""
+
+#: report.html:34
 msgid "Priority Level"
 msgstr ""
 
-#: report.html:24
+#: report.html:34
 msgid "Number of failed test cases"
 msgstr ""
 
-#: report.html:24
+#: report.html:34
 msgid "Critical Risk"
 msgstr ""
 
-#: report.html:24
+#: report.html:34
 msgid "High Risk"
 msgstr ""
 
-#: report.html:24
+#: report.html:34
 msgid "Medium Risk"
 msgstr ""
 
-#: report.html:24
+#: report.html:34
 msgid "Low Risk"
 msgstr ""
 
-#: report.html:24
-msgid "Appknox Security Rating:"
+#: report.html:34
+#, fuzzy
+#| msgid "Appknox Security Rating:"
+msgid "Security Rating:"
 msgstr "Appknoxセキュリティ評価"
 
-#: report.html:24
+#: report.html:34
 msgid "Unsecured"
 msgstr ""
 
-#: report.html:25
+#: report.html:35 report.html:44
 msgid "Risk Rating"
 msgstr ""
 
-#: report.html:25
+#: report.html:35 report.html:44
 msgid "Regulatory"
 msgstr ""
 
-#: report.html:26
+#: report.html:36 report.html:45
 msgid "Description"
 msgstr ""
 
-#: report.html:27
+#: report.html:37 report.html:46
 msgid "Risk Assessment"
 msgstr ""
 
-#: report.html:32
+#: report.html:43
+msgid "Ignored Analyses"
+msgstr ""
+
+#: report.html:51
 msgid "References"
 msgstr ""
 
@@ -5885,6 +5909,9 @@ msgid ""
 " Usually the binary is compiled using the `PIE` flag by using `-fPIE -pie`\n"
 " during compilation time\n"
 msgstr ""
+
+#~ msgid "Prepared For"
+#~ msgstr "以下のために準備："
 
 #~ msgid "confidential"
 #~ msgstr "ために"
