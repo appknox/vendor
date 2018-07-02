@@ -59,6 +59,10 @@ html(lang="en")
             | {% endif %}
           div.app-version
             | {{ file.version }}
+          | {% if file.fmd.name != '' %}
+          div.app-metadataname
+            | {{ file.fmd.name }}
+          | {% endif %}
 
       table(class="authors {% if not data.show_copyright %}authors-extended{% endif %}")
         tr
@@ -157,6 +161,10 @@ html(lang="en")
                 | {% trans "Application Name" %}
               td
                 | {{file.name}}
+                | {% if file.fmd.name != '' %}
+                <br>
+                | {{ file.fmd.name }}
+                | {% endif %}
             tr
               td
                 | {% trans "Platform" %}
