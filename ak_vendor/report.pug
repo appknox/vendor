@@ -144,10 +144,10 @@ html(lang="en")
       div.doc-description
         | {% if data.show_copyright %}
         p
-          | {% trans "Portions of this document and the templates used in its production are the property of Appknox and cannot be copied without permission." %}
+          | {% trans "Portions of this document and the templates used in its production are the property of Appknox" %}{% if data.partner and data.partner.name %}{% trans " and " %}{{ data.partner.name }}{% trans "," %}{% endif %}{% trans " and cannot be copied without permission." %}
         | {% endif %}
         p
-          | {% trans "While precautions have been taken in the preparation of this document, the publisher and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of " %}{% if data.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "services does not guarantee the security of a system, or that intrusions will not occur." %}
+          | {% trans "While precautions have been taken in the preparation of this document, the publisher and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of " %}{% if data.show_copyright %}{% trans "Appknox" %}{% if data.partner and data.partner.name %}{% trans " and " %}{{ data.partner.name }}{% endif %}{% endif %}{% trans " services does not guarantee the security of a system, or that intrusions will not occur." %}
 
     section.new-page
       div
@@ -261,7 +261,7 @@ html(lang="en")
           | {% trans "Report Summary" %}
       div
         p
-          | {% if data.show_copyright %}{% if data.whitelabel.enabled and data.whitelabel.name %}{{ data.whitelabel.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if data.whitelabel.enabled and data.whitelabel.name %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
+          | {% if data.show_copyright %}{% if data.partner and data.partner.name %}{{ data.partner.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if data.partner and data.partner.name %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
 
       section
         div
