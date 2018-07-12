@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 19:11+0000\n"
+"POT-Creation-Date: 2018-07-13 00:25+0000\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -773,15 +773,27 @@ msgstr "作成"
 
 #: report.html:15 report.html:17
 msgid "Powered by"
-msgstr "powered by"
+msgstr "搭載"
 
 #: report.html:18
 msgid ""
 "Portions of this document and the templates used in its production are the "
-"property of Appknox and cannot be copied without permission."
+"property of Appknox"
 msgstr ""
 "この文書の一部およびそのプロダクションに使用されるテンプレートは、Appknoxが所"
 "有権を有します。"
+
+#: report.html:18
+msgid " and "
+msgstr " そして "
+
+#: report.html:18 report.html:26
+msgid ","
+msgstr "、"
+
+#: report.html:18
+msgid " and cannot be copied without permission."
+msgstr " 許可なくコピーすることはできません。"
 
 #: report.html:18
 msgid ""
@@ -795,15 +807,17 @@ msgstr ""
 "ん。Appknox のサービスを使用しても、システムのセキュリティが保証されるわけで"
 "はなく、侵入も発生しません。"
 
-#: report.html:18 report.html:34
-msgid "Appknox "
+#: report.html:18 report.html:26
+msgid "Appknox"
 msgstr "Appknox"
 
 #: report.html:18
 msgid ""
-"services does not guarantee the security of a system, or that intrusions "
+" services does not guarantee the security of a system, or that intrusions "
 "will not occur."
 msgstr ""
+"サービスはシステムのセキュリティを保証するものではなく、侵入が起こらないこと"
+"を保証します。"
 
 #: report.html:18
 msgid "Application Details"
@@ -813,79 +827,75 @@ msgstr "アプリケーションの詳細"
 msgid "Application Name"
 msgstr "アプリケーションの名称"
 
-#: report.html:18
+#: report.html:20
 msgid "Platform"
 msgstr "プラットフォーム"
 
-#: report.html:18
+#: report.html:20
 msgid "Application Namespace"
 msgstr "アプリケーションの名前空間"
 
-#: report.html:18
+#: report.html:20
 msgid "Version"
 msgstr "バージョン"
 
-#: report.html:18
+#: report.html:20
 msgid "Audit Date"
 msgstr "監査日"
 
-#: report.html:18
+#: report.html:20
 msgid "Application SHA1 Hash"
 msgstr "アプリケーション SHA1 ハッシュ"
 
-#: report.html:18
+#: report.html:20
 msgid "Application MD5 Hash"
 msgstr "アプリケーション MD5 ハッシュ"
 
-#: report.html:18
+#: report.html:20
 msgid "Table of Contents"
 msgstr "目次"
 
-#: report.html:18 report.html:24
+#: report.html:20 report.html:26
 msgid "Report Summary"
 msgstr "レポートの概要"
 
-#: report.html:18 report.html:24
+#: report.html:20 report.html:26
 msgid "Audit Summary"
 msgstr "監査の概要"
 
-#: report.html:18 report.html:34
+#: report.html:20 report.html:36
+msgid "Appknox "
+msgstr "Appknox"
+
+#: report.html:20 report.html:36
 msgid "Security Rating"
 msgstr "Appknoxのセキュリティ評価"
 
-#: report.html:19 report.html:38 report.html:47
+#: report.html:21 report.html:40 report.html:49
 msgid "Noncompliant Code Example"
 msgstr "違反コードの例"
 
-#: report.html:20 report.html:39 report.html:48
+#: report.html:22 report.html:41 report.html:50
 msgid "Compliant Solution"
 msgstr "コンプライアンス ソリューション"
 
-#: report.html:21 report.html:40 report.html:49
+#: report.html:23 report.html:42 report.html:51
 msgid "Business Implication"
 msgstr "ビジネスへの影響"
 
-#: report.html:22 report.html:41 report.html:50
+#: report.html:24 report.html:43 report.html:52
 msgid "Related Vulnerabilities"
 msgstr "関連のある脆弱性"
 
-#: report.html:24
+#: report.html:26
 msgid ", powered by "
-msgstr "powered by"
+msgstr "、 搭載 "
 
-#: report.html:24
-msgid "Appknox"
-msgstr "Appknox"
-
-#: report.html:24
-msgid ","
-msgstr "、"
-
-#: report.html:24
+#: report.html:26
 msgid " conducted a security assessment of the mobile application. "
-msgstr ""
+msgstr " モバイルアプリケーションのセキュリティ評価を実施しました。"
 
-#: report.html:24
+#: report.html:26
 msgid ""
 "This report contains all the findings during the automated auditing process. "
 "It also contains the process of discovering those vulnerabilities in the "
@@ -895,80 +905,80 @@ msgstr ""
 "自動監査プロセス中のすべての調査結果が含まれています。また、これらの脆弱性を"
 "発見するプロセスと、その問題を改善する方法も含まれています。"
 
-#: report.html:31
+#: report.html:33
 msgid "Ignored"
 msgstr ""
 
-#: report.html:34
+#: report.html:36
 msgid "Priority Level"
 msgstr "優先レベル"
 
-#: report.html:34
+#: report.html:36
 msgid "Number of failed test cases"
 msgstr "失敗したテストケースの数"
 
-#: report.html:34
+#: report.html:36
 msgid "Critical Risk"
 msgstr "重大リスク"
 
-#: report.html:34
+#: report.html:36
 msgid "High Risk"
 msgstr "高リスク"
 
-#: report.html:34
+#: report.html:36
 msgid "Medium Risk"
 msgstr "中リスク"
 
-#: report.html:34
+#: report.html:36
 msgid "Low Risk"
 msgstr "低リスク"
 
-#: report.html:34
+#: report.html:36
 msgid "Security Rating:"
 msgstr "Appknoxセキュリティ評価："
 
-#: report.html:34
+#: report.html:36
 msgid "Unsecured"
 msgstr "無担保"
 
-#: report.html:35 report.html:44
+#: report.html:37 report.html:46
 msgid "Risk Rating"
 msgstr "リスク評価"
 
-#: report.html:35 report.html:44
+#: report.html:37 report.html:46
 msgid "Regulatory"
 msgstr "規制上"
 
-#: report.html:36 report.html:45
+#: report.html:38 report.html:47
 msgid "Description"
 msgstr "説明"
 
-#: report.html:37 report.html:46
+#: report.html:39 report.html:48
 msgid "Risk Assessment"
 msgstr "リスクアセスメント"
 
-#: report.html:43
+#: report.html:45
 msgid "Ignored Analyses"
 msgstr ""
 
-#: report.html:51
+#: report.html:53
 msgid "References"
 msgstr "参考文献"
 
-#: vulnerabilities.py:74
+#: vulnerabilities.py:78
 msgid "Unprotected Services"
 msgstr "保護されていないサービス"
 
-#: vulnerabilities.py:75
+#: vulnerabilities.py:79
 msgid "Are exported services sufficiently protected?"
 msgstr "エクスポートされたサービスは十分に保護されていますか？"
 
-#: vulnerabilities.py:76
+#: vulnerabilities.py:80
 msgid "Exported services in the app are sufficiently protected."
 msgstr ""
 "アプリケーション内のエクスポートされたサービスは十分に保護されています。"
 
-#: vulnerabilities.py:77
+#: vulnerabilities.py:81
 msgid ""
 "\n"
 "[Chin, et al.](https://www.securecoding.cert.org/confluence/display/java/AA."
@@ -993,7 +1003,7 @@ msgstr ""
 "そのような事態を防ぐために、エクスポートされたサービスは常に強いパーミッショ"
 "ンで保護されるべきです。\n"
 
-#: vulnerabilities.py:88
+#: vulnerabilities.py:92
 msgid ""
 "\n"
 "A service was found to be shared with other apps on the device without\n"
@@ -1005,7 +1015,7 @@ msgstr ""
 "プリケーションと共有されているため、デバイス上の他のアプリケーションからアク"
 "セス可能な状態になっています。\n"
 
-#: vulnerabilities.py:93
+#: vulnerabilities.py:97
 msgid ""
 "\n"
 "Data can be shared through other services resulting in loss of sensitive\n"
@@ -1014,7 +1024,7 @@ msgstr ""
 "\n"
 "データは他のサービスを通じて共有され、機密情報が失われる可能性があります。\n"
 
-#: vulnerabilities.py:97
+#: vulnerabilities.py:101
 msgid ""
 "\n"
 "Always protect the Activity with `export=false`\n"
@@ -1028,22 +1038,22 @@ msgstr ""
 "    <activity exported=\"false\" />\n"
 "\n"
 
-#: vulnerabilities.py:112
+#: vulnerabilities.py:116
 msgid "Improper Content Provider Permissions"
 msgstr "不適切なコンテンツプロバイダのアクセス権"
 
-#: vulnerabilities.py:113
+#: vulnerabilities.py:117
 msgid "Are Content Providers sufficiently protected?"
 msgstr "コンテンツプロバイダーは十分に保護されていますか？"
 
-#: vulnerabilities.py:114
+#: vulnerabilities.py:118
 msgid ""
 "Application seems to properly implement SSL, or HTTPS is not implemented."
 msgstr ""
 "アプリケーションはSSLを適切に実装しているか、あるいはHTTPSが実装されていない"
 "ようです。"
 
-#: vulnerabilities.py:115
+#: vulnerabilities.py:119
 msgid ""
 "\n"
 "The `ContentProvider` class provides a mechanism for managing and sharing\n"
@@ -1069,7 +1079,7 @@ msgstr ""
 "- 制限付きアクセス\n"
 "\n"
 
-#: vulnerabilities.py:128
+#: vulnerabilities.py:132
 msgid ""
 "\n"
 "A content provider permission was set to allow access from any other app\n"
@@ -1082,7 +1092,7 @@ msgstr ""
 "コンテンツプロバイダはアプリケーションに関する機密情報を含む可能性があるた"
 "め、共有されるべきではありません。\n"
 
-#: vulnerabilities.py:133
+#: vulnerabilities.py:137
 msgid ""
 "\n"
 "If security controls are not properly implemented, content providers can\n"
@@ -1095,7 +1105,7 @@ msgstr ""
 "す。\n"
 "これは従来のSQLインジェクション攻撃と同様に機能します。\n"
 
-#: vulnerabilities.py:138
+#: vulnerabilities.py:142
 msgid ""
 "\n"
 "The following entry in the AndroidManifest.xml file makes the content\n"
@@ -1117,7 +1127,7 @@ msgstr ""
 "        android:authorities=\"jp.co.vulnerable.accountprovider\" />\n"
 "\n"
 
-#: vulnerabilities.py:148
+#: vulnerabilities.py:152
 msgid ""
 "\n"
 "MovatwiTouch, a Twitter client application, used a content provider to\n"
@@ -1149,7 +1159,7 @@ msgstr ""
 "        android:authorities=\"jp.co.vulnerable.accountprovider\" />\n"
 "\n"
 
-#: vulnerabilities.py:164
+#: vulnerabilities.py:168
 msgid ""
 "\n"
 "- [JVN\\#90289505](https://jvn.jp/en/jp/JVN90289505/) Content provider\n"
@@ -1160,19 +1170,19 @@ msgstr ""
 "- [JVN\\#90289505](https://jvn.jp/en/jp/JVN90289505/) MovatwiTouch のコンテン"
 "ツプロバイダがアクセス権の制限に失敗\n"
 
-#: vulnerabilities.py:177
+#: vulnerabilities.py:181
 msgid "Application Debugging"
 msgstr "アプリケーションのデバッグ"
 
-#: vulnerabilities.py:178
+#: vulnerabilities.py:182
 msgid "Does the application have debug enabled?"
 msgstr "アプリケーションでデバッグが有効になっていますか？"
 
-#: vulnerabilities.py:179
+#: vulnerabilities.py:183
 msgid "Debug was found to be disabled."
 msgstr "デバッグが無効であることが判明しました。"
 
-#: vulnerabilities.py:180
+#: vulnerabilities.py:184
 msgid ""
 "\n"
 "Android allows the attribute `android:debuggable` to be set to true so\n"
@@ -1193,7 +1203,7 @@ msgstr ""
 "ンは決してリリースしないでください。属性をtrueに設定すると、ユーザはソース"
 "コードにアクセスしなくてもアプリケーションをデバッグできます。\n"
 
-#: vulnerabilities.py:190
+#: vulnerabilities.py:194
 msgid ""
 "\n"
 "Debugging was enabled on the app which makes it easier for reverse\n"
@@ -1205,7 +1215,7 @@ msgstr ""
 "グが有効化されました。これによってスタックトレースのダンプと、デバッギングヘ"
 "ルパークラスへのアクセスが可能になります。\n"
 
-#: vulnerabilities.py:195
+#: vulnerabilities.py:199
 msgid ""
 "\n"
 "Application can be debugged and reverse engineers can debug and manipulate "
@@ -1216,7 +1226,7 @@ msgstr ""
 "アプリケーションをデバッグすることができ、リバースエンジニアはアプリケーショ"
 "ンのランタイムロジックをデバッグして操作できます。\n"
 
-#: vulnerabilities.py:199
+#: vulnerabilities.py:203
 msgid ""
 "\n"
 "Ensure that the `android:debuggable` attribute is set to false before the\n"
@@ -1246,7 +1256,7 @@ msgstr ""
 "たはデバッギングビルドのために、android:debuggable を自動的に true にします"
 "が、リリースビルドでは false に設定されることに注意してください。\n"
 
-#: vulnerabilities.py:213
+#: vulnerabilities.py:217
 msgid ""
 "\n"
 "This non-compliant code example shows an app that has the\n"
@@ -1284,15 +1294,15 @@ msgstr ""
 "`android：debuggable`属性が true に設定されていると、アプリに関連する機密性の"
 "高いデータが漏洩することがあります。\n"
 
-#: vulnerabilities.py:240
+#: vulnerabilities.py:244
 msgid "Improper Custom Permissions"
 msgstr "不適切なカスタム権限"
 
-#: vulnerabilities.py:241
+#: vulnerabilities.py:245
 msgid "Are protection levels of the custom permission safe?"
 msgstr "カスタム権限の保護レベルは安全ですか？"
 
-#: vulnerabilities.py:242
+#: vulnerabilities.py:246
 msgid ""
 "Custom permissions in the app have sufficient protection levels, or custom "
 "permissions are absent."
@@ -1300,7 +1310,7 @@ msgstr ""
 "アプリのカスタム権限は十分な保護レベルに設定されているか、カスタム権限があり"
 "ません。"
 
-#: vulnerabilities.py:243
+#: vulnerabilities.py:247
 msgid ""
 "\n"
 "If an app is using a granted permission to respond to a calling app then\n"
@@ -1323,7 +1333,7 @@ msgstr ""
 "を使用することができます（これは「Confused deputy problem 混乱した使節の問"
 "題」とも呼ばれます）。\n"
 
-#: vulnerabilities.py:254
+#: vulnerabilities.py:258
 msgid ""
 "\n"
 "A custom permission controls whether other applications can access the\n"
@@ -1338,7 +1348,7 @@ msgstr ""
 "るアプリケーションにどのアプリがアクセスできるかは制限されませんが、インス"
 "トール中に危険な許可が必要であることが警告されます。\n"
 
-#: vulnerabilities.py:262
+#: vulnerabilities.py:266
 msgid ""
 "\n"
 "Remove custom permissions which are not required from the\n"
@@ -1348,19 +1358,19 @@ msgstr ""
 "`AndroidManifest.xml`で定義されたカスタム権限セットから不要なカスタム権限を削"
 "除します。\n"
 
-#: vulnerabilities.py:276
+#: vulnerabilities.py:280
 msgid "Broken SSL Trust Manager"
 msgstr "壊れたSSLトラストマネージャ"
 
-#: vulnerabilities.py:277
+#: vulnerabilities.py:281
 msgid "Is the Trust Manager for SSL implemented properly?"
 msgstr "Trust Manager for SSLは正しく実装されていますか?"
 
-#: vulnerabilities.py:278
+#: vulnerabilities.py:282
 msgid "Trust Managers for SSL, if any, seem to be properly implemented."
 msgstr "SSLのトラストマネージャがある場合は、適切に実装されているようです。"
 
-#: vulnerabilities.py:279
+#: vulnerabilities.py:283
 msgid ""
 "\n"
 "Android apps that use SSL/TLS protocols for secure communication should\n"
@@ -1420,7 +1430,7 @@ msgstr ""
 "されています。\n"
 "\n"
 
-#: vulnerabilities.py:308
+#: vulnerabilities.py:312
 msgid ""
 "\n"
 "Implements naive certificate check. This Trust Manager breaks\n"
@@ -1430,8 +1440,8 @@ msgstr ""
 "欠如した証明書検査を実装しています。このトラストマネジャーは証明書検証を中断"
 "します。\n"
 
-#: vulnerabilities.py:312 vulnerabilities.py:446 vulnerabilities.py:622
-#: vulnerabilities.py:4248 vulnerabilities.py:4377
+#: vulnerabilities.py:316 vulnerabilities.py:450 vulnerabilities.py:626
+#: vulnerabilities.py:4252 vulnerabilities.py:4381
 msgid ""
 "\n"
 "In the event that a user (anonymous or verified) is able to execute\n"
@@ -1452,7 +1462,7 @@ msgstr ""
 "\n"
 "\n"
 
-#: vulnerabilities.py:321
+#: vulnerabilities.py:325
 msgid ""
 "\n"
 "The compliant solution is given below which shows how to solve the issue\n"
@@ -1590,7 +1600,7 @@ msgstr ""
 "ストアを使用して証明書をロードする場合、これらの証明書のfailsafe loadを定義し"
 "て実行する必要があります。\n"
 
-#: vulnerabilities.py:382
+#: vulnerabilities.py:386
 msgid ""
 "\n"
 "The following code implements a custom `MySSLSocketFactory` class that\n"
@@ -1656,8 +1666,8 @@ msgstr ""
 "ドされています。MySSLSocketFactoryクラスは、アプリケーションの別の部分に"
 "HttpClientのインスタンスを作成するために使用されます。\n"
 
-#: vulnerabilities.py:413 vulnerabilities.py:515 vulnerabilities.py:584
-#: vulnerabilities.py:655 vulnerabilities.py:721
+#: vulnerabilities.py:417 vulnerabilities.py:519 vulnerabilities.py:588
+#: vulnerabilities.py:659 vulnerabilities.py:725
 msgid ""
 "\n"
 "- [JVN\\#39218538](http://jvn.jp/en/jp/JVN39218538/) Pizza Hut Japan\n"
@@ -1678,21 +1688,21 @@ msgstr ""
 "-  [JVN\\#68156832](http://jvn.jp/en/jp/JVN68156832/)  ヤフオク！SSLサーバー"
 "証明書の検証に失敗する問題があります。\n"
 
-#: vulnerabilities.py:430
+#: vulnerabilities.py:434
 msgid "Broken HostnameVerifier for SSL"
 msgstr "HostnameVerifier for SSLの破損"
 
-#: vulnerabilities.py:431
+#: vulnerabilities.py:435
 msgid "Is the HostnameVerifier for SSL implemented properly?"
 msgstr "HostnameVerifier for SSLは正しく実装されていますか?"
 
-#: vulnerabilities.py:432
+#: vulnerabilities.py:436
 msgid ""
 "HostnameVerifiers for SSL, if any, seem to be verfying hostnames properly."
 msgstr ""
 "SSLのHostnameVerifiersがある場合、ホスト名を正しく検証しているようです。"
 
-#: vulnerabilities.py:433
+#: vulnerabilities.py:437
 msgid ""
 "\n"
 "Allowing All Hostnames: The app does not verify if the certificate is\n"
@@ -1713,7 +1723,7 @@ msgstr ""
 "されています。\n"
 "\n"
 
-#: vulnerabilities.py:442
+#: vulnerabilities.py:446
 msgid ""
 "\n"
 "Implements naive hostname verification. This HostnameVerifier breaks\n"
@@ -1723,7 +1733,7 @@ msgstr ""
 "ナイーブなホスト名検査を実装しています。この HostnameVerifier は証明書検証を"
 "中断します。\n"
 
-#: vulnerabilities.py:455
+#: vulnerabilities.py:459
 msgid ""
 "\n"
 "The code example shows how to verify hostname using a\n"
@@ -1830,7 +1840,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:499
+#: vulnerabilities.py:503
 msgid ""
 "\n"
 "The following code inherits `javax.net.ssl.SSLContext`:\n"
@@ -1865,20 +1875,20 @@ msgstr ""
 "返します。\n"
 "\n"
 
-#: vulnerabilities.py:533
+#: vulnerabilities.py:537
 msgid "Insecure SSLSocketFactories"
 msgstr "安全でないSSLSocketFactories"
 
-#: vulnerabilities.py:534
+#: vulnerabilities.py:538
 msgid "Does the application have a probable SSL error in implementation?"
 msgstr ""
 "このアプリケーションは実装中にSSLエラーが発生する可能性がありませんか？"
 
-#: vulnerabilities.py:535
+#: vulnerabilities.py:539
 msgid "No implementation errors were found."
 msgstr "実装エラーは見つかりませんでした。"
 
-#: vulnerabilities.py:536
+#: vulnerabilities.py:540
 msgid ""
 "\n"
 "Android SDK 4.0 and later offers packages to implement capabilities to\n"
@@ -1909,7 +1919,7 @@ msgstr ""
 "されています。\n"
 "\n"
 
-#: vulnerabilities.py:550
+#: vulnerabilities.py:554
 msgid ""
 "\n"
 "SSL Implementations are not proper in this application\n"
@@ -1917,7 +1927,7 @@ msgstr ""
 "\n"
 "SSL実装はこのアプリケーションにおいて適切ではありません。\n"
 
-#: vulnerabilities.py:553 vulnerabilities.py:692
+#: vulnerabilities.py:557 vulnerabilities.py:696
 msgid ""
 "\n"
 "If proper implementation of SSL is not used, sensitive data may leak\n"
@@ -1927,7 +1937,7 @@ msgstr ""
 "SSLの適切な実装が使用されない場合、脆弱なSSL通信チャネルから機密データが漏洩"
 "する可能性があります。\n"
 
-#: vulnerabilities.py:557
+#: vulnerabilities.py:561
 msgid ""
 "\n"
 "The compliant solution may vary, depending on the actual implementation.\n"
@@ -1944,7 +1954,7 @@ msgstr ""
 "い。\n"
 "\n"
 
-#: vulnerabilities.py:564
+#: vulnerabilities.py:568
 msgid ""
 "\n"
 "The following code implements a custom MySSLSocketFactory class that\n"
@@ -1989,19 +1999,19 @@ msgstr ""
 "上記の例では、 `InsecureSocketFactory`はすべての証明書を黙って受け取り、"
 "trustmanager のチェックをバイパスします。\n"
 
-#: vulnerabilities.py:602
+#: vulnerabilities.py:606
 msgid "HostnameVerifier Allowing All Hostnames"
 msgstr "すべてのホスト名を許可する HostnameVerifier"
 
-#: vulnerabilities.py:603
+#: vulnerabilities.py:607
 msgid "Does the application have AllowAllHostnameVerification?"
 msgstr "このアプリケーションは AllowAllHostnameVerification がありますか?"
 
-#: vulnerabilities.py:604
+#: vulnerabilities.py:608
 msgid "AllowAllHostname is properly configured, or is disabled."
 msgstr "AllowAllHostname が正しく構成されているか、または無効になっています。"
 
-#: vulnerabilities.py:605
+#: vulnerabilities.py:609
 msgid ""
 "\n"
 "Android apps that use SSL/TLS protocols for secure communication should\n"
@@ -2030,7 +2040,7 @@ msgstr ""
 "されています。\n"
 "\n"
 
-#: vulnerabilities.py:618
+#: vulnerabilities.py:622
 msgid ""
 "\n"
 "Implements AllowAllHostname verifier which might allow hacker to\n"
@@ -2039,7 +2049,7 @@ msgstr ""
 "\n"
 "ハッカーに盗聴される可能性がある AllowAllHostnameVerifierを実装しています。\n"
 
-#: vulnerabilities.py:631
+#: vulnerabilities.py:635
 msgid ""
 "\n"
 "Never use `SSLSocketFactory.ALLOW\\_ALL\\_HOSTNAME\\_VERIFIER` in\n"
@@ -2058,7 +2068,7 @@ msgstr ""
 "ださい。\n"
 "\n"
 
-#: vulnerabilities.py:639
+#: vulnerabilities.py:643
 msgid ""
 "\n"
 "The following code extends `HttpClient` class that inherits\n"
@@ -2094,11 +2104,11 @@ msgstr ""
 "るのと同じ状況になります。\n"
 "\n"
 
-#: vulnerabilities.py:673
+#: vulnerabilities.py:677
 msgid "App Extending WebViewClient"
 msgstr "アプリケーション WebViewClient の拡張"
 
-#: vulnerabilities.py:674
+#: vulnerabilities.py:678
 msgid ""
 "Does the application use WebViewClients correctly and handle the "
 "onReceivedSSLError method?"
@@ -2106,7 +2116,7 @@ msgstr ""
 "このアプリケーションは、onreceivedsslerrorメソッドを正しく処理する"
 "WebViewClientを使用していますか?"
 
-#: vulnerabilities.py:675
+#: vulnerabilities.py:679
 msgid ""
 "Application seems to be handling WebViewClient correctly, or has no "
 "implementation of WebViewClient."
@@ -2114,7 +2124,7 @@ msgstr ""
 "アプリケーションはWebViewClientを正しく処理していないか、もしくはアプリケー"
 "ションにWebViewClientの実装がないようです。"
 
-#: vulnerabilities.py:676
+#: vulnerabilities.py:680
 msgid ""
 "\n"
 "WebViews can introduce a number of security concerns and should be\n"
@@ -2139,7 +2149,7 @@ msgstr ""
 "チェックをバイパスすると、SSLからすべてのセキュリティーが削除されます。\n"
 "\n"
 
-#: vulnerabilities.py:688
+#: vulnerabilities.py:692
 msgid ""
 "\n"
 "The default handling of WebViewClient should handle the\n"
@@ -2149,7 +2159,7 @@ msgstr ""
 "WebViewClient のデフォルトの処理は、証明書検証を中断する可能性がある"
 "onReceivedSSLError を適切に処理するべきです。\n"
 
-#: vulnerabilities.py:696
+#: vulnerabilities.py:700
 msgid ""
 "\n"
 "This can be fixed by using the onReceivedSslError to stop or notify the\n"
@@ -2170,7 +2180,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:704
+#: vulnerabilities.py:708
 msgid ""
 "\n"
 "The following code shows how onReceivedSslError was used to bypass the\n"
@@ -2208,21 +2218,21 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:739
+#: vulnerabilities.py:743
 msgid "Unused Permissions"
 msgstr "未使用のパーミッション"
 
-#: vulnerabilities.py:740
+#: vulnerabilities.py:744
 msgid "Is the application over-privileged?"
 msgstr "このアプリケーションの権限は特権ですか？"
 
-#: vulnerabilities.py:741
+#: vulnerabilities.py:745
 msgid ""
 "Application seems to have just the essential set of permissions required."
 msgstr ""
 "アプリケーションに必須なパーミッションのセットだけを持っているようです。"
 
-#: vulnerabilities.py:742
+#: vulnerabilities.py:746
 msgid ""
 "\n"
 "An app might request a user for certain permissions, like access to SD\n"
@@ -2238,7 +2248,7 @@ msgstr ""
 "ウトします。\n"
 "\n"
 
-#: vulnerabilities.py:748
+#: vulnerabilities.py:752
 msgid ""
 "\n"
 "Application seems to be using extra permissions which are not really\n"
@@ -2248,7 +2258,7 @@ msgstr ""
 "アプリケーションは実際には必要ない余分なパーミッションを使用しているようで"
 "す。\n"
 
-#: vulnerabilities.py:752
+#: vulnerabilities.py:756
 msgid ""
 "\n"
 "Users may not download your app when presented with a long list of\n"
@@ -2264,7 +2274,7 @@ msgstr ""
 "す。\n"
 "\n"
 
-#: vulnerabilities.py:758
+#: vulnerabilities.py:762
 msgid ""
 "\n"
 "Do not request for permissions beyond what your app actually needs\n"
@@ -2274,11 +2284,11 @@ msgstr ""
 "いでください。\n"
 "\n"
 
-#: vulnerabilities.py:771
+#: vulnerabilities.py:775
 msgid "JavascriptInterface Remote Code Execution"
 msgstr "JavascriptInterfaceリモートコードの実行"
 
-#: vulnerabilities.py:772
+#: vulnerabilities.py:776
 msgid ""
 "Is the application using JavascriptInterface? Does the application "
 "communicate over non-SSL or broken SSL Implementation?"
@@ -2286,14 +2296,14 @@ msgstr ""
 "あなたのアプリケーションはJavascriptInterfaceを使用していますか?このアプリ"
 "ケーションはnon-SSL経由かSSL実装が壊れていませんか?"
 
-#: vulnerabilities.py:773
+#: vulnerabilities.py:777
 msgid ""
 "Application is safe from remote code execution through JavascriptInterface."
 msgstr ""
 "アプリケーションはJavascriptInterfaceを介したリモートコード実行からは安全で"
 "す。"
 
-#: vulnerabilities.py:774
+#: vulnerabilities.py:778
 msgid ""
 "\n"
 "For API level JELLY\\_BEAN or below, allowing an app to use the\n"
@@ -2316,7 +2326,7 @@ msgstr ""
 "らされるべきではありません。\n"
 "\n"
 
-#: vulnerabilities.py:784
+#: vulnerabilities.py:788
 msgid ""
 "\n"
 "Application seems to use `JavascriptInterface`. An attacker can use it to\n"
@@ -2328,7 +2338,7 @@ msgstr ""
 "撃者はあなたのアプリケーションに対してリモートでコードの実行を行い、機密情報"
 "を盗むことができます。\n"
 
-#: vulnerabilities.py:789
+#: vulnerabilities.py:793
 msgid ""
 "\n"
 "The app may be susceptible to JavaScript scripting attacks from\n"
@@ -2339,7 +2349,7 @@ msgstr ""
 "このアプリは、ユーザ提供のコンテンツやHTTPのコンテンツからのJavaScriptスクリ"
 "プト攻撃の影響を受けやすく、機密情報が失われる可能性があります。\n"
 
-#: vulnerabilities.py:794
+#: vulnerabilities.py:798
 msgid ""
 "\n"
 "-   Compliant code could refrain from calling the addJavascriptInterface() "
@@ -2361,13 +2371,13 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"-  準拠しているコードでは、addJavascriptInterface()メソッドの呼び出しを控える"
+"- 準拠しているコードでは、addJavascriptInterface()メソッドの呼び出しを控える"
 "ことができます。\n"
 "\n"
 "        WebView webView = new WebView(this);\n"
 "        setContentView(webView);\n"
 "\n"
-"-  もう1つの準拠した解決策は、アプリケーションがAPIレベルJELLY_BEAN_MR1以上の"
+"- もう1つの準拠した解決策は、アプリケーションがAPIレベルJELLY_BEAN_MR1以上の"
 "み用であることをアプリケーションのマニフェストに指定することです。これらのAPI"
 "レベルに対しては、JavascriptInterfaceでアノテーションされたパブリックメソッド"
 "のみがJavaScriptからアクセスできます。APIレベル17はJELLY_BEAN_MR1で"
@@ -2379,7 +2389,7 @@ msgstr ""
 "        </manifest>\n"
 "\n"
 
-#: vulnerabilities.py:812
+#: vulnerabilities.py:816
 msgid ""
 "\n"
 "This non-compliant code example shows an application that calls the\n"
@@ -2425,19 +2435,19 @@ msgstr ""
 "リケーションのパーミッションを使用して、注入されたオブジェクトの public メ"
 "ソッドにアクセスするために使用できます。\n"
 
-#: vulnerabilities.py:843
+#: vulnerabilities.py:847
 msgid "Unprotected Activities"
 msgstr "保護されていないアクティビティ"
 
-#: vulnerabilities.py:844
+#: vulnerabilities.py:848
 msgid "Are application activities protected?"
 msgstr "アプリケーションのアクティビティは保護されていますか？"
 
-#: vulnerabilities.py:845
+#: vulnerabilities.py:849
 msgid "Activities seem to be sufficiently protected."
 msgstr "アクティビティは十分に保護されているようです。"
 
-#: vulnerabilities.py:846
+#: vulnerabilities.py:850
 msgid ""
 "\n"
 "On Android, declaring an intent filter for an activity in the\n"
@@ -2465,7 +2475,7 @@ msgstr ""
 "キングサービスにアップロードできました。\n"
 "\n"
 
-#: vulnerabilities.py:859
+#: vulnerabilities.py:863
 msgid ""
 "\n"
 "An activity was found to be shared with other apps on the device without\n"
@@ -2477,7 +2487,7 @@ msgstr ""
 "のアプリケーションと共有されているため、デバイス上の他のアプリケーションから"
 "アクセス可能な状態になっています。\n"
 
-#: vulnerabilities.py:864
+#: vulnerabilities.py:868
 msgid ""
 "\n"
 "Unauthorized apps may use vulnerable activities to perform malicious\n"
@@ -2488,7 +2498,7 @@ msgstr ""
 "なアクティビティを使用することがあります。\n"
 "\n"
 
-#: vulnerabilities.py:868
+#: vulnerabilities.py:872
 msgid ""
 "\n"
 "-   In this compliant solution the activity is not exported:\n"
@@ -2596,7 +2606,7 @@ msgstr ""
 "リケーションを上書きします。\n"
 "\n"
 
-#: vulnerabilities.py:926
+#: vulnerabilities.py:930
 msgid ""
 "\n"
 "This non-compliant code example shows an `AndroidManifest.xml` file for an\n"
@@ -2649,7 +2659,7 @@ msgstr ""
 "エクスポートされます。\n"
 "\n"
 
-#: vulnerabilities.py:950
+#: vulnerabilities.py:954
 msgid ""
 "\n"
 "- [JVN\\#31860555](https://jvn.jp/en/jp/JVN31860555/) Twicca fails to\n"
@@ -2660,23 +2670,23 @@ msgstr ""
 "- [JVN\\#31860555](https://jvn.jp/en/jp/JVN31860555/) Twiccaはアクセス権を制"
 "限しません。\n"
 
-#: vulnerabilities.py:964
+#: vulnerabilities.py:968
 msgid "SQL Injection"
 msgstr "SQLインジェクション"
 
-#: vulnerabilities.py:965
+#: vulnerabilities.py:969
 msgid "Is the application vulnerable to SQL Injection through Web API?"
 msgstr ""
 "アプリケーションはWeb APIを通じたSQLインジェクションに対して脆弱ではありませ"
 "んか？"
 
-#: vulnerabilities.py:966
+#: vulnerabilities.py:970
 msgid "Application is not vulnerable to SQL Injection through Web API."
 msgstr ""
 "アプリケーションはWeb APIを通じたSQLインジェクションに対して脆弱ではありませ"
 "ん。"
 
-#: vulnerabilities.py:967
+#: vulnerabilities.py:971
 msgid ""
 "\n"
 "An SQL injection vulnerability arises when the original SQL query can be\n"
@@ -2691,7 +2701,7 @@ msgstr ""
 "データが変更される可能性があります。 SQLインジェクションを防止する主な手段"
 "は、ユーザー入力の検証とサニタイズ、およびクエリのパラメータ化です。\n"
 
-#: vulnerabilities.py:974
+#: vulnerabilities.py:978
 msgid ""
 "\n"
 "Data retrieved from a mobile app's server contains malformed data that\n"
@@ -2705,7 +2715,7 @@ msgstr ""
 "る可能性があります。ローカルのSQLインジェクションは、ローカルのマルウェア注"
 "入、情報の盗難などを招く可能性があります。\n"
 
-#: vulnerabilities.py:980
+#: vulnerabilities.py:984
 msgid ""
 "\n"
 "SQL injection allows the intruder to view and modify data contained in\n"
@@ -2718,7 +2728,7 @@ msgstr ""
 "更できます。 さらに攻撃者はデータベース上で、時間の経過とともにより高い権限を"
 "得ることができ、格納されたデータの機密性と完全性を損なう可能性があります。\n"
 
-#: vulnerabilities.py:986
+#: vulnerabilities.py:990
 msgid ""
 "\n"
 "Input validation is a prerequisite for proper query construction. This\n"
@@ -2805,7 +2815,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:1023
+#: vulnerabilities.py:1027
 msgid ""
 "\n"
 "This non-compliant code example shows JDBC code that is vulnerable to\n"
@@ -2886,19 +2896,19 @@ msgstr ""
 "ユーザー名とパスワードの両方のチェックをバイパスし、攻撃者に無制限アクセスを"
 "許可します。\n"
 
-#: vulnerabilities.py:1066
+#: vulnerabilities.py:1070
 msgid "Storing Information in Shared Preferences"
 msgstr "Shared Preferencesへの情報の保存"
 
-#: vulnerabilities.py:1067
+#: vulnerabilities.py:1071
 msgid "Is any sensitive information is leaking through Shared Preferences?"
 msgstr "機密情報がSharedPreferenceを通じて漏洩していませんか？"
 
-#: vulnerabilities.py:1068
+#: vulnerabilities.py:1072
 msgid "No leakage of data were found via Shared Preference."
 msgstr "SharedPreferenceを介したデータの漏洩は検出されませんでした。"
 
-#: vulnerabilities.py:1069
+#: vulnerabilities.py:1073
 msgid ""
 "\n"
 "In Android apps, data can be communicated via intents, or data can be\n"
@@ -2952,7 +2962,7 @@ msgstr ""
 "ローを含め、多くの可能性のあるシンクソースフローをユーザが理解するのに役立ち"
 "ます。\n"
 
-#: vulnerabilities.py:1096
+#: vulnerabilities.py:1100
 msgid ""
 "\n"
 "Insecured informations were found in shared preference. One shouldn't\n"
@@ -2962,7 +2972,7 @@ msgstr ""
 "SharedPreference内に安全でない情報が見つかりました。SharedPreferenceでは暗号"
 "化されていない情報を使用するべきではありません。\n"
 
-#: vulnerabilities.py:1100
+#: vulnerabilities.py:1104
 msgid ""
 "\n"
 "Typically, malicious code steals sensitive information (passwords,\n"
@@ -2982,7 +2992,7 @@ msgstr ""
 "- プライバシー侵害\n"
 "\n"
 
-#: vulnerabilities.py:1109
+#: vulnerabilities.py:1113
 msgid ""
 "\n"
 "In this compliant solution the file is created using MODE\\_PRIVATE, so\n"
@@ -2998,7 +3008,7 @@ msgstr ""
 "   openFileOutput(\"someFile\", MODE_PRIVATE);\n"
 "\n"
 
-#: vulnerabilities.py:1116
+#: vulnerabilities.py:1120
 msgid ""
 "\n"
 "This non-compliant code example shows an application that creates a file\n"
@@ -3017,11 +3027,11 @@ msgstr ""
 "どのアプリケーションでもファイルを読み込むことができ、そこに格納されている"
 "データにアクセスできます。\n"
 
-#: vulnerabilities.py:1133 vulnerabilities.py:3543
+#: vulnerabilities.py:1137 vulnerabilities.py:3547
 msgid "Insufficient Transport Layer Protection"
 msgstr "トランスポート層の不十分な保護"
 
-#: vulnerabilities.py:1134
+#: vulnerabilities.py:1138
 msgid ""
 "Is your application using proper Transport Layer protection? Is HTTPS "
 "enabled in your application?"
@@ -3029,7 +3039,7 @@ msgstr ""
 "アプリケーションは適切なトランスポート層の保護を使用していますか？アプリケー"
 "ションでHTTPSは有効になっていますか？"
 
-#: vulnerabilities.py:1135
+#: vulnerabilities.py:1139
 msgid ""
 "Application seems to have SSL enabled and sufficient protection is being "
 "used to prevent Information leakage."
@@ -3037,7 +3047,7 @@ msgstr ""
 "アプリケーションでSSLが有効になっており、情報漏洩を防止するために十分な保護が"
 "使用されているようです。"
 
-#: vulnerabilities.py:1136 vulnerabilities.py:3546
+#: vulnerabilities.py:1140 vulnerabilities.py:3550
 msgid ""
 "\n"
 "Insufficient transport layer protection issues happen when the data is\n"
@@ -3057,7 +3067,7 @@ msgstr ""
 "くつかあり、ルータ、プロキシ、携帯電話の基地局などは、データの送信中に盗聴さ"
 "れる可能性があります。\n"
 
-#: vulnerabilities.py:1145 vulnerabilities.py:3555
+#: vulnerabilities.py:1149 vulnerabilities.py:3559
 msgid ""
 "\n"
 "Insufficient transport layer protection issues happen when the data is\n"
@@ -3077,7 +3087,7 @@ msgstr ""
 "くつかあり、ルータ、プロキシ、携帯電話の基地局などは、データの送信中に盗聴さ"
 "れる可能性があります。\n"
 
-#: vulnerabilities.py:1154 vulnerabilities.py:3564
+#: vulnerabilities.py:1158 vulnerabilities.py:3568
 msgid ""
 "\n"
 "The violation of a user's confidentiality may result in:\n"
@@ -3095,7 +3105,7 @@ msgstr ""
 "- 風評被害\n"
 "\n"
 
-#: vulnerabilities.py:1162
+#: vulnerabilities.py:1166
 msgid ""
 "\n"
 "Applications should make sure that they do not send sensitive\n"
@@ -3125,7 +3135,7 @@ msgstr ""
 "データのみをダウンロードできる有効なHTTPSリクエストを作成してください。\n"
 "\n"
 
-#: vulnerabilities.py:1175
+#: vulnerabilities.py:1179
 msgid ""
 "\n"
 "Using HTTP with SSL or TLS to connect to internet, or without a proper\n"
@@ -3170,15 +3180,15 @@ msgstr ""
 "ユーザーに誰かが接続を盗聴していることさえ気づかせずに、攻撃者はMITM攻撃を行"
 "うことができます。\n"
 
-#: vulnerabilities.py:1205
+#: vulnerabilities.py:1209
 msgid "Derived Crypto Keys"
 msgstr "派生した暗号鍵"
 
-#: vulnerabilities.py:1206
+#: vulnerabilities.py:1210
 msgid "Does the application use insecure encryption methods?"
 msgstr "アプリケーションが安全でない暗号化方式を使用していますか？"
 
-#: vulnerabilities.py:1207
+#: vulnerabilities.py:1211
 msgid ""
 "Application seems to be using the correct cryptographic encryption method, "
 "if any."
@@ -3186,37 +3196,7 @@ msgstr ""
 "もし使用しているのであれば、アプリケーションは正しい暗号化メソッドを使用して"
 "いるようです。"
 
-#: vulnerabilities.py:1208
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "The predominant Android cryptographic security provider API defaults to\n"
-#| "using an insecure AES encryption method: ECB block cipher mode for AES\n"
-#| "encryption. Android's default cryptographic security provider (since\n"
-#| "version 2.1) is BouncyCastle.\n"
-#| "\n"
-#| "Note that Java also selects ECB as a default value when only the AES\n"
-#| "encryption method is chosen. So, this rule also applies to Java, but for\n"
-#| "Java's different default cryptographic security provider. Oracle Java's\n"
-#| "default cryptographic security provider is SunJCE.\n"
-#| "\n"
-#| "Default behaviors of cryptographic libraries used in Android systems\n"
-#| "often do not use recommended practices. For example, the predominant\n"
-#| "Android Java security provider API defaults to using an insecure AES\n"
-#| "encryption method: ECB block cipher mode for AES encryption. Extensive\n"
-#| "app testing by Egele 2013 has shown that the following 6 rules are\n"
-#| "often not followed, resulting in 88% of apps with cryptographic APIs on\n"
-#| "Google Play making at least one mistake.\n"
-#| "\n"
-#| "Six common cryptography rules that were tested:\n"
-#| "\n"
-#| "1.  Do not use ECB mode for encryption.\n"
-#| "2.  Do not use a non-random IV for CBC encryption.\n"
-#| "3.  Do not use constant encryption keys.\n"
-#| "4.  Do not use constant salts for PBE.\n"
-#| "5.  Do not use fewer than 1,000 iterations for PBE.\n"
-#| "6.  Do not use static seeds to seed SecureRandom().\n"
-#| "\n"
+#: vulnerabilities.py:1212
 msgid ""
 "\n"
 "The predominant Android cryptographic security provider API defaults to\n"
@@ -3234,7 +3214,8 @@ msgid ""
 "Android Java security provider API defaults to using an insecure AES\n"
 "encryption method: ECB block cipher mode for AES encryption. Extensive\n"
 "app testing by Egele 2013 has shown that the following 6 rules are\n"
-"often not followed, resulting in 88% of apps with cryptographic APIs on\n"
+"often not followed, resulting in 88 percent of apps with cryptographic APIs "
+"on\n"
 "Google Play making at least one mistake.\n"
 "\n"
 "Six common cryptography rules that were tested:\n"
@@ -3274,7 +3255,7 @@ msgstr ""
 "6. 静的なシードを使用してSecureRandom（）をシードしないでください。\n"
 "\n"
 
-#: vulnerabilities.py:1237
+#: vulnerabilities.py:1241
 msgid ""
 "\n"
 "Traces of Crypto Keys which might be intermediate keys used when loading\n"
@@ -3284,7 +3265,7 @@ msgstr ""
 "異なるライブラリをロードする際に使用される中間鍵である可能性のある暗号鍵の形"
 "跡。\n"
 
-#: vulnerabilities.py:1241
+#: vulnerabilities.py:1245
 msgid ""
 "\n"
 "Broken cryptography will result in the following:\n"
@@ -3306,7 +3287,7 @@ msgstr ""
 "- 評判の損失\n"
 "\n"
 
-#: vulnerabilities.py:1251
+#: vulnerabilities.py:1255
 msgid ""
 "\n"
 "The following are the rules which should be followed while using\n"
@@ -3371,19 +3352,19 @@ msgstr ""
 "- SMS、MMS、通知などの代替チャネルで機密データを送信しないでください。\n"
 "\n"
 
-#: vulnerabilities.py:1289
+#: vulnerabilities.py:1293
 msgid "Application Logs"
 msgstr "アプリケーションログ"
 
-#: vulnerabilities.py:1290
+#: vulnerabilities.py:1294
 msgid "Is this application leaking data through logs?"
 msgstr "このアプリケーションはログを介してデータを漏洩していますか？"
 
-#: vulnerabilities.py:1291
+#: vulnerabilities.py:1295
 msgid "No application logs were found."
 msgstr "アプリケーションログは見つかりませんでした。"
 
-#: vulnerabilities.py:1292
+#: vulnerabilities.py:1296
 msgid ""
 "\n"
 "Android provides capabilities for an app to output logging information\n"
@@ -3397,7 +3378,7 @@ msgstr ""
 "送信できます。 ログ出力を取得するには、アプリケーションで logcat コマンドを実"
 "行します。\n"
 
-#: vulnerabilities.py:1298
+#: vulnerabilities.py:1302
 msgid ""
 "\n"
 "Application was found to be writing logs to the system logs\n"
@@ -3405,7 +3386,7 @@ msgstr ""
 "\n"
 "アプリケーションがシステムログにログを書き込んでいました。\n"
 
-#: vulnerabilities.py:1301 vulnerabilities.py:1463
+#: vulnerabilities.py:1305 vulnerabilities.py:1467
 msgid ""
 "\n"
 "Sensitive data can inadvertently leak into the logs and may aid in\n"
@@ -3416,7 +3397,7 @@ msgstr ""
 "す。\n"
 "\n"
 
-#: vulnerabilities.py:1305
+#: vulnerabilities.py:1309
 msgid ""
 "\n"
 "Never use logs in production. Find all `Log.d()` and remove them.\n"
@@ -3431,7 +3412,7 @@ msgstr ""
 "本番環境では、例外パーサを使用し、クラッシュベースの分析ツールでクラッシュを"
 "キャプチャしてデバッグすることができます。\n"
 
-#: vulnerabilities.py:1311
+#: vulnerabilities.py:1315
 msgid ""
 "\n"
 "Facebook SDK for Android contained the following code which sends Facebook "
@@ -3473,7 +3454,7 @@ msgstr ""
 "宣言せずにユーザーの場所情報を取得できます。\n"
 "\n"
 
-#: vulnerabilities.py:1326
+#: vulnerabilities.py:1330
 msgid ""
 "\n"
 "- [Facebook SDK for Android](http://readwrite.com/2012/04/10/what-developers-"
@@ -3501,19 +3482,19 @@ msgstr ""
 "  for Android 情報管理に関する脆弱性\n"
 "\n"
 
-#: vulnerabilities.py:1346 vulnerabilities.py:1415
+#: vulnerabilities.py:1350 vulnerabilities.py:1419
 msgid "Business Logic"
 msgstr "ビジネスロジック"
 
-#: vulnerabilities.py:1347 vulnerabilities.py:1416
+#: vulnerabilities.py:1351 vulnerabilities.py:1420
 msgid "Were flaws found in the business logic?"
 msgstr "ビジネスロジックに欠陥が見つかりましたか？"
 
-#: vulnerabilities.py:1348 vulnerabilities.py:1417
+#: vulnerabilities.py:1352 vulnerabilities.py:1421
 msgid "No flaws were found in the business logic."
 msgstr "ビジネスロジックに欠陥が見つかりませんでした。"
 
-#: vulnerabilities.py:1349
+#: vulnerabilities.py:1353
 msgid ""
 "\n"
 "Most security problems are weaknesses in an application that result from\n"
@@ -3540,7 +3521,7 @@ msgstr ""
 "重大なビジネスロジック脆弱性がありますが、それらはアイテムのタイプよりはるか"
 "に一般的ではありません。\n"
 
-#: vulnerabilities.py:1363
+#: vulnerabilities.py:1367
 msgid ""
 "\n"
 "Logical Flaws through API which can bypass authorization and get\n"
@@ -3553,7 +3534,7 @@ msgstr ""
 "による論理的欠陥です。認証および認証セッションは、クライアント側またはサー"
 "バー側の両方で正しく検証されませんでした。\n"
 
-#: vulnerabilities.py:1370
+#: vulnerabilities.py:1374
 msgid ""
 "\n"
 "The following should be checked and properly fixed\n"
@@ -3573,7 +3554,7 @@ msgstr ""
 "mobi123</b></li> <li>mobi123 のようなパスワードを絶対に使用しないでください。"
 "</li> </ul>\n"
 
-#: vulnerabilities.py:1381
+#: vulnerabilities.py:1385
 msgid ""
 "\n"
 "Automated tools find it hard to understand context, hence it's up to a\n"
@@ -3635,7 +3616,7 @@ msgstr ""
 "うなりますか？ポイントまたはクレジットは引き続きアカウントに適用されます\n"
 "か？\n"
 
-#: vulnerabilities.py:1418
+#: vulnerabilities.py:1422
 msgid ""
 "\n"
 "Most security problems are weaknesses in an application that result from\n"
@@ -3662,7 +3643,7 @@ msgstr ""
 "重大なビジネスロジック脆弱性がありますが、それらはアイテムのタイプよりはるか"
 "に一般的ではありません。\n"
 
-#: vulnerabilities.py:1432
+#: vulnerabilities.py:1436
 msgid ""
 "\n"
 "Logical Flaws through API which can bypass Authorization and get\n"
@@ -3675,19 +3656,19 @@ msgstr ""
 "による論理的欠陥です。認証および認証セッションは、クライアント側またはサー"
 "バー側の両方で正しく検証されませんでした。\n"
 
-#: vulnerabilities.py:1450
+#: vulnerabilities.py:1454
 msgid "Debug Logging with NSLog"
 msgstr "NSLogによるデバッグロギング"
 
-#: vulnerabilities.py:1451
+#: vulnerabilities.py:1455
 msgid "Is the application logging to the system logs?"
 msgstr "このアプリケーションはシステムログにログの出力をしていませんか？"
 
-#: vulnerabilities.py:1452
+#: vulnerabilities.py:1456
 msgid "Application does not log to system logs."
 msgstr "アプリケーションはシステムログに記録されません。"
 
-#: vulnerabilities.py:1453
+#: vulnerabilities.py:1457
 msgid ""
 "\n"
 "Applications tend to add some data in logs for debugging purpose. If\n"
@@ -3699,7 +3680,7 @@ msgstr ""
 "ます。もし重要なデータがアプリケーションログに見られたら、それはデータ漏洩に"
 "つながる可能性があります。\n"
 
-#: vulnerabilities.py:1458
+#: vulnerabilities.py:1462
 msgid ""
 "\n"
 "Debug Logs are usually left enabled during application development.\n"
@@ -3712,7 +3693,7 @@ msgstr ""
 "これらのアプリケーションログは、Xcode あるいはデバイスへのルートアクセスに\n"
 "よって容易にアクセスすることが可能です。\n"
 
-#: vulnerabilities.py:1467
+#: vulnerabilities.py:1471
 msgid ""
 "\n"
 "Wipe off the application log at particular intervals or when the user\n"
@@ -3723,20 +3704,20 @@ msgstr ""
 "ケーションログを削除してください。機密情報はログに記録しないようにしてくださ"
 "い。\n"
 
-#: vulnerabilities.py:1481
+#: vulnerabilities.py:1485
 msgid "Sensitive Information in Property Lists"
 msgstr "プロパティリストの機密情報"
 
-#: vulnerabilities.py:1482
+#: vulnerabilities.py:1486
 msgid ""
 "Does the application store sensitive information in Property Lists (plist)?"
 msgstr "アプリケーションは機密情報をプロパティリスト（plist）に保存しますか？"
 
-#: vulnerabilities.py:1483
+#: vulnerabilities.py:1487
 msgid "The application does not store sensitive information in Property Lists."
 msgstr "アプリケーションは、機密情報をプロパティリストに保存しません。"
 
-#: vulnerabilities.py:1484
+#: vulnerabilities.py:1488
 msgid ""
 "\n"
 "Information Property List Files are the files that contain configuration\n"
@@ -3754,7 +3735,7 @@ msgstr ""
 "降)、あるいはiOSバックアップの取得によって誰にでも読まれる可能性がありま"
 "す。\n"
 
-#: vulnerabilities.py:1492
+#: vulnerabilities.py:1496
 msgid ""
 "\n"
 "Plist files contain data in plaintext format\n"
@@ -3762,7 +3743,7 @@ msgstr ""
 "\n"
 "Plistファイルは平文フォーマットのデータを含んでいます。\n"
 
-#: vulnerabilities.py:1495
+#: vulnerabilities.py:1499
 msgid ""
 "\n"
 "An attacker can steal sensitive data if they have access to the device\n"
@@ -3772,7 +3753,7 @@ msgstr ""
 "攻撃者がデバイスまたはデバイスのバックアップにアクセスできる場合、機密データ"
 "を盗まれる可能性があります。\n"
 
-#: vulnerabilities.py:1499
+#: vulnerabilities.py:1503
 msgid ""
 "\n"
 "It's recommended not to store any sensitive data such as usernames,\n"
@@ -3783,20 +3764,20 @@ msgstr ""
 "アプリケーションのPlistファイルにはユーザ名、認証トークン、パスワード、個人情"
 "報などの機密情報を保存しないことが推奨されています。\n"
 
-#: vulnerabilities.py:1514
+#: vulnerabilities.py:1518
 msgid "Sensitive Data in NSUserDefaults"
 msgstr "NSUserDefaultsの機密データ"
 
-#: vulnerabilities.py:1515
+#: vulnerabilities.py:1519
 msgid "Does this application store sensitive information in NSUserDefaults?"
 msgstr "このアプリケーションはNSUserDefaultsに機密情報を保存していませんか？"
 
-#: vulnerabilities.py:1516
+#: vulnerabilities.py:1520
 msgid ""
 "This application does not store sensitive information in NSUserDefaults."
 msgstr "このアプリケーションはNSUserDefaultsに機密情報を保存していません。"
 
-#: vulnerabilities.py:1517
+#: vulnerabilities.py:1521
 msgid ""
 "\n"
 "NSUserDefaults are stored in plist in binary format, with no encryption,\n"
@@ -3812,7 +3793,7 @@ msgstr ""
 "NSUserDefaultsに保存されるなら、それは誤った手に届き、個人利用される可能性が"
 "あります。\n"
 
-#: vulnerabilities.py:1524
+#: vulnerabilities.py:1528
 msgid ""
 "\n"
 "NSUserDefaults is an alternative way by which data can be stored in\n"
@@ -3821,7 +3802,7 @@ msgstr ""
 "\n"
 "NSUserDefaultsはデータをplistファイルに保存することができる代替方法です。\n"
 
-#: vulnerabilities.py:1528
+#: vulnerabilities.py:1532
 msgid ""
 "\n"
 "Sensitive information can get compromised since plist files store data\n"
@@ -3831,7 +3812,7 @@ msgstr ""
 "plistファイルはデータを暗号化保存しないため、機密情報が侵害される可能性があり"
 "ます。</p>\n"
 
-#: vulnerabilities.py:1532
+#: vulnerabilities.py:1536
 msgid ""
 "\n"
 "Avoid using NSUserDefaults to store sensitive pieces of information as\n"
@@ -3842,22 +3823,22 @@ msgstr ""
 "暗号化されていない形式の情報を含んだplistファイルにデータを保存する際は、"
 "NSUserDefaultsを機密情報を保存するために使用しないでください。\n"
 
-#: vulnerabilities.py:1547
+#: vulnerabilities.py:1551
 msgid "Sensitive Information in SQLite3 Databases"
 msgstr "SQLite3データベースの機密情報"
 
-#: vulnerabilities.py:1548
+#: vulnerabilities.py:1552
 msgid "Does this application store sensitive information in SQLite3 databases?"
 msgstr ""
 "このアプリケーションはSQLite3データベース内に機密情報を保存していませんか？"
 
-#: vulnerabilities.py:1549
+#: vulnerabilities.py:1553
 msgid ""
 "This application does not store sensitive information in SQLite3 databases."
 msgstr ""
 "このアプリケーションはSQLite3データベース内に機密情報を保存していません。"
 
-#: vulnerabilities.py:1550
+#: vulnerabilities.py:1554
 msgid ""
 "\n"
 "SQLite databases are often used by the applications to store persistent\n"
@@ -3876,7 +3857,7 @@ msgstr ""
 "かなる暗号ためのビルトインサポートを持っていないので、すべての情報は平文形式"
 "でこれらのファイルに保存されます。</p>\n"
 
-#: vulnerabilities.py:1559
+#: vulnerabilities.py:1563
 msgid ""
 "\n"
 "SQLite3 databases are stored in unencrypted form on the device. Storing\n"
@@ -3886,8 +3867,8 @@ msgstr ""
 "SQLite3データベースはデバイス上に暗号化されずに保存されます。そのようなデータ"
 "ベースへに機密情報を保存することはデータ漏洩につながる可能性があります。\n"
 
-#: vulnerabilities.py:1563 vulnerabilities.py:1602 vulnerabilities.py:1657
-#: vulnerabilities.py:1710 vulnerabilities.py:1750 vulnerabilities.py:4800
+#: vulnerabilities.py:1567 vulnerabilities.py:1606 vulnerabilities.py:1661
+#: vulnerabilities.py:1714 vulnerabilities.py:1754 vulnerabilities.py:4803
 msgid ""
 "\n"
 "Failure to use encryption routines may result in the database and its\n"
@@ -3897,7 +3878,7 @@ msgstr ""
 "暗号化ルーチンの使用の失敗によって、データベースとユーザ資格情報を含む関連"
 "データの侵害につながる可能性があります。\n"
 
-#: vulnerabilities.py:1567
+#: vulnerabilities.py:1571
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in SQLite\n"
@@ -3921,19 +3902,19 @@ msgstr ""
 "し\n"
 "てください。\n"
 
-#: vulnerabilities.py:1587
+#: vulnerabilities.py:1591
 msgid "Unsecured Data in CoreData"
 msgstr "CoreDataの安全でないデータ"
 
-#: vulnerabilities.py:1588
+#: vulnerabilities.py:1592
 msgid "Does this application store sensitive information in CoreData?"
 msgstr "このアプリケーションはCoreDataに機密情報を保存していませんか？"
 
-#: vulnerabilities.py:1589
+#: vulnerabilities.py:1593
 msgid "This application does not store sensitive information in CoreData."
 msgstr "このアプリケーションはCoreDataに機密情報を保存していません。"
 
-#: vulnerabilities.py:1590
+#: vulnerabilities.py:1594
 msgid ""
 "\n"
 "Core Data is used by the applications to store data which can be further\n"
@@ -3950,7 +3931,7 @@ msgstr ""
 "ケーションがユーザ資格情報あるいは何らかの重要なユーザ固有データをこのデータ"
 "ベースに保存するなら、第三者にアクセスされる可能性があります。\n"
 
-#: vulnerabilities.py:1598
+#: vulnerabilities.py:1602
 msgid ""
 "\n"
 "Core Data is often used by applications to store data to improve\n"
@@ -3960,7 +3941,7 @@ msgstr ""
 "CoreData はアプリケーションのパフォーマンス改善のために、アプリケーションに"
 "よってデータ保存のため使用されます。\n"
 
-#: vulnerabilities.py:1606
+#: vulnerabilities.py:1610
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Core\n"
@@ -4026,19 +4007,19 @@ msgstr ""
 "The project is available [here](https://github.com/project-imas/encrypted-"
 "core-data).\n"
 
-#: vulnerabilities.py:1642
+#: vulnerabilities.py:1646
 msgid "Unsecured Data in CouchDB"
 msgstr "CouchDBの安全でないデータ"
 
-#: vulnerabilities.py:1643
+#: vulnerabilities.py:1647
 msgid "Does this application store data in CouchDB?"
 msgstr "このアプリケーションはCouchDBにデータを保存していますか？"
 
-#: vulnerabilities.py:1644
+#: vulnerabilities.py:1648
 msgid "This application does not store sensitive information in CouchDB."
 msgstr "このアプリケーションはCouchDBに機密情報を保存していません。"
 
-#: vulnerabilities.py:1645
+#: vulnerabilities.py:1649
 msgid ""
 "\n"
 "Couch databases are used by the applications to store data which can be\n"
@@ -4055,7 +4036,7 @@ msgstr ""
 "ションがユーザ資格情報あるいは何らかの重要なユーザ固有データをこのデータベー"
 "スに保存するなら、第三者にアクセスされる可能性があります。\n"
 
-#: vulnerabilities.py:1653
+#: vulnerabilities.py:1657
 msgid ""
 "\n"
 "CouchDB is an alternative to SQLite3 database, used by applications to\n"
@@ -4065,7 +4046,7 @@ msgstr ""
 "CouchDB は SQLite3 データベースの代替として、データ保存のためにアプリケーショ"
 "ンに使用されます。\n"
 
-#: vulnerabilities.py:1661
+#: vulnerabilities.py:1665
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Couch\n"
@@ -4106,19 +4087,19 @@ msgstr ""
 "- libsqlite.dylibを除去してください。\n"
 "\n"
 
-#: vulnerabilities.py:1691
+#: vulnerabilities.py:1695
 msgid "Unsecured Data in RealmDB"
 msgstr "RealmDBの無担保データ"
 
-#: vulnerabilities.py:1692 vulnerabilities.py:1736
+#: vulnerabilities.py:1696 vulnerabilities.py:1740
 msgid "Does this application store data in RealmDB?"
 msgstr "このアプリケーションはRealmDBにデータを保存していますか？"
 
-#: vulnerabilities.py:1693
+#: vulnerabilities.py:1697
 msgid "This application does not store sensitive information in RealmDB."
 msgstr "このアプリケーションはRealmDBに機密情報を保存していません。"
 
-#: vulnerabilities.py:1694
+#: vulnerabilities.py:1698
 msgid ""
 "\n"
 "Realm databases are used by the applications to store data which can be\n"
@@ -4135,7 +4116,7 @@ msgstr ""
 "がユーザ資格情報、あるいは重要なユーザ固有データをこのデータベースに保存した"
 "場合、第三者にアクセスされる可能性があります。\n"
 
-#: vulnerabilities.py:1702
+#: vulnerabilities.py:1706
 msgid ""
 "\n"
 "Realm databases are used by the applications to store data which can be\n"
@@ -4152,7 +4133,7 @@ msgstr ""
 "がユーザ資格情報、あるいは重要なユーザ固有データをこのデータベースに保存した"
 "場合、第三者にアクセスされる可能性があります。\n"
 
-#: vulnerabilities.py:1714
+#: vulnerabilities.py:1718
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Realm\n"
@@ -4173,15 +4154,15 @@ msgstr ""
 "\n"
 "新しいロケーションで暗号化されたファイルを使用することができます。\n"
 
-#: vulnerabilities.py:1735
+#: vulnerabilities.py:1739
 msgid "Unsecured Data in YapDB"
 msgstr "YapDBの安全でないデータ"
 
-#: vulnerabilities.py:1737
+#: vulnerabilities.py:1741
 msgid "This application does not store sensitive information in YapDB."
 msgstr "このアプリケーションはYapDBに機密情報を保存していません。"
 
-#: vulnerabilities.py:1738
+#: vulnerabilities.py:1742
 msgid ""
 "\n"
 "Yap databases are used by the applications to store data which can be\n"
@@ -4198,7 +4179,7 @@ msgstr ""
 "プリケーションがユーザ資格情報あるいは何らかの重要なユーザ固有データをこの"
 "データベースに保存するなら、第三者にアクセスされる可能性があります。</p>\n"
 
-#: vulnerabilities.py:1746
+#: vulnerabilities.py:1750
 msgid ""
 "\n"
 "YapDB is an alternative to SQLite3 database, used by applications to\n"
@@ -4208,7 +4189,7 @@ msgstr ""
 "YapDB は SQLite3 データベースの代替として、データ保存のためにアプリケーション"
 "に使用されます。\n"
 
-#: vulnerabilities.py:1754
+#: vulnerabilities.py:1758
 msgid ""
 "\n"
 "It is suggested to use custom encryption while storing data in Yap\n"
@@ -4283,21 +4264,21 @@ msgstr ""
 "す。このブロックはデータベースセットアップ時、そしてデータベースへの新たな接"
 "続が作成された時に実行されます。\n"
 
-#: vulnerabilities.py:1798
+#: vulnerabilities.py:1802
 msgid "Deprecated NSURLConnection"
 msgstr "非推奨のNSURLConnection"
 
-#: vulnerabilities.py:1799
+#: vulnerabilities.py:1803
 msgid "Does this application use NSURLConnection?"
 msgstr "このアプリケーションは NSURLConnection を使用していますか？"
 
-#: vulnerabilities.py:1800
+#: vulnerabilities.py:1804
 msgid "This application does not use NSURLConnection to connect over Internet."
 msgstr ""
 "このアプリケーションはインターネットへの接続に NSURLConnection を使用していま"
 "せん。"
 
-#: vulnerabilities.py:1801
+#: vulnerabilities.py:1805
 msgid ""
 "\n"
 "`NSURLConnection` is the most common API used for establishing network\n"
@@ -4314,7 +4295,7 @@ msgstr ""
 "キャッシュ、プロトコル、クッキー、そして資格情報ポリシーの、より適切な方法で"
 "認証チャレンジをするアプリ同士の共有ではなく、構成のサポートをします。 </p>\n"
 
-#: vulnerabilities.py:1809
+#: vulnerabilities.py:1813
 msgid ""
 "\n"
 "`NSURLConnection` is the most common API used for establishing network\n"
@@ -4326,7 +4307,7 @@ msgstr ""
 "一般的なAPIでしたが、 NSURLSession に移行され、iOS 9.0 以降 Apple は非推奨と"
 "しています。\n"
 
-#: vulnerabilities.py:1814
+#: vulnerabilities.py:1818
 msgid ""
 "\n"
 "Using deprecated routines may potentially result in:\n"
@@ -4341,7 +4322,7 @@ msgstr ""
 "ラー</li>         <li>安全でない推奨されないメソッドによるデータ破損</"
 "li>     </ol> </p\n"
 
-#: vulnerabilities.py:1821
+#: vulnerabilities.py:1825
 msgid ""
 "\n"
 "It is advisable to use `NSURLSession` for all types of network connections\n"
@@ -4464,17 +4445,17 @@ msgstr ""
 "(int64_t)expectedTotalBytes;\n"
 "\n"
 
-#: vulnerabilities.py:1880
+#: vulnerabilities.py:1884
 msgid "PhoneGap JavaScript Injection"
 msgstr "PhoneGapのJavaScriptインジェクション"
 
-#: vulnerabilities.py:1881
+#: vulnerabilities.py:1885
 msgid "Does the application have PhoneGap javascript injection vulnerability?"
 msgstr ""
 "アプリケーションに PhoneGap の JavaScript インジェクションの脆弱性があります"
 "か？"
 
-#: vulnerabilities.py:1882
+#: vulnerabilities.py:1886
 msgid ""
 "The application does not seem to be affected by PhoneGap javascript "
 "injection."
@@ -4482,7 +4463,7 @@ msgstr ""
 "アプリケーションは、PhoneGap の JavaScript インジェクションの影響を受けていな"
 "いようです。"
 
-#: vulnerabilities.py:1883
+#: vulnerabilities.py:1887
 msgid ""
 "\n"
 "PhoneGap uses web technology to help bridge the gap between mobile and\n"
@@ -4518,7 +4499,7 @@ msgstr ""
 "Camera, Contacts, Compass, Media, FileSystem などのためにAPI と一緒に来ます。"
 "Plugins はこれらの利用可能なAPIにアクセスできない機能を拡張します。 </p>\n"
 
-#: vulnerabilities.py:1902
+#: vulnerabilities.py:1906
 msgid ""
 "\n"
 "Application using older version of Phonegap has Javascript Injection\n"
@@ -4528,7 +4509,7 @@ msgstr ""
 "古いバージョンの PhoneGap を使用しているアプリケーションは Javascript イン"
 "ジェクションの脆弱性を持っています。\n"
 
-#: vulnerabilities.py:1906 vulnerabilities.py:1944 vulnerabilities.py:1982
+#: vulnerabilities.py:1910 vulnerabilities.py:1948 vulnerabilities.py:1986
 msgid ""
 "\n"
 "With the presence of this vulnerability, attackers may:\n"
@@ -4547,7 +4528,7 @@ msgstr ""
 "<li>細工したインテントURLを使用して開始ページを変更</li>\n"
 "</ul>\n"
 
-#: vulnerabilities.py:1914 vulnerabilities.py:1990 vulnerabilities.py:2032
+#: vulnerabilities.py:1918 vulnerabilities.py:1994 vulnerabilities.py:2036
 msgid ""
 "\n"
 "Upgrade Phonegap or Apache Cordova to the latest version.\n"
@@ -4556,11 +4537,11 @@ msgstr ""
 "<p>     Phonegap あるいは Apache Cordova を最新バージョンにアップグレードして"
 "ください。</p>\n"
 
-#: vulnerabilities.py:1927
+#: vulnerabilities.py:1931
 msgid "Remote URL Redirection Vulnerability"
 msgstr "リモートURLリダイレクトの脆弱性"
 
-#: vulnerabilities.py:1928
+#: vulnerabilities.py:1932
 msgid ""
 "Does the application use an older version of PhoneGap that allows remote "
 "attackers to perform URL redirection?"
@@ -4568,7 +4549,7 @@ msgstr ""
 "リモート攻撃者がURLリダイレクトを実行可能な、古いバージョンのPhoneGapをアプリ"
 "ケーションで使用していますか？"
 
-#: vulnerabilities.py:1929
+#: vulnerabilities.py:1933
 msgid ""
 "The application is not vulnerable to URL redirection vulnerability, or is "
 "not using PhoneGap."
@@ -4576,7 +4557,7 @@ msgstr ""
 "このアプリケーションは、URLリダイレクトの脆弱性に対して脆弱ではないか、"
 "PhoneGapを使用していません。"
 
-#: vulnerabilities.py:1930
+#: vulnerabilities.py:1934
 msgid ""
 "\n"
 "Android applications built with the Cordova framework can be launched\n"
@@ -4597,7 +4578,7 @@ msgstr ""
 "ス (3.5.1) では修正されました。影響を受けたプロジェクトはそれらのアプリを最新"
 "リリースへアップデートすることを推奨します。 </p>\n"
 
-#: vulnerabilities.py:1940
+#: vulnerabilities.py:1944
 msgid ""
 "\n"
 "Android application which uses older version of PhoneGap is vulnerable\n"
@@ -4608,7 +4589,7 @@ msgstr ""
 "CVE-3500 で定義されている恣意的なWebサイトへのURLリダイレクトに対して脆弱で"
 "す。\n"
 
-#: vulnerabilities.py:1952
+#: vulnerabilities.py:1956
 msgid ""
 "\n"
 "Upgrade your Phonegap or Apache Cordova application to the latest\n"
@@ -4618,18 +4599,18 @@ msgstr ""
 "PhonegapまたはApache Cordovaアプリケーションを最新バージョンにアップグレード"
 "してください。\n"
 
-#: vulnerabilities.py:1966
+#: vulnerabilities.py:1970
 msgid "PhoneGap Error URL Redirection Vulnerability"
 msgstr "PhoneGap エラー URLリダイレクトの脆弱性"
 
-#: vulnerabilities.py:1967
+#: vulnerabilities.py:1971
 msgid ""
 "Can the application allow remote attackers to perform Error URL redirection?"
 msgstr ""
 "アプリケーションは、リモートの攻撃者にエラーURLのリダイレクトを実行させること"
 "はできますか？"
 
-#: vulnerabilities.py:1968
+#: vulnerabilities.py:1972
 msgid ""
 "The application is not vulnerable to error URL redirection vulnerability, or "
 "is not using PhoneGap."
@@ -4637,7 +4618,7 @@ msgstr ""
 "アプリケーションは、エラーURLリダイレクトの脆弱性に対して脆弱ではないか、"
 "PhoneGap を使用していません。"
 
-#: vulnerabilities.py:1969
+#: vulnerabilities.py:1973
 msgid ""
 "\n"
 "Cordova-based applications make use of a WebView in order to interact\n"
@@ -4657,7 +4638,7 @@ msgstr ""
 "ることによって、悪意のある発信者がアクティビティを起動する可能性があることを"
 "示しています。 </p>\n"
 
-#: vulnerabilities.py:1978
+#: vulnerabilities.py:1982
 msgid ""
 "\n"
 "Android application which uses older version of PhoneGap is vulnerable\n"
@@ -4668,11 +4649,11 @@ msgstr ""
 "義されている恣意的な Web サイトへのエラー URL リダイレクトに対して脆弱で"
 "す。\n"
 
-#: vulnerabilities.py:2003
+#: vulnerabilities.py:2007
 msgid "PhoneGap HTTPS Bypass Vulnerability"
 msgstr "PhoneGap HTTPSバイパスの脆弱性"
 
-#: vulnerabilities.py:2004
+#: vulnerabilities.py:2008
 msgid ""
 "Is the application using deprecated version of PhonGap which is susceptible "
 "to HTTPS Bypass?"
@@ -4680,7 +4661,7 @@ msgstr ""
 "アプリケーションは、HTTPS バイパスの影響を受けやすい PhonGap の非推奨バージョ"
 "ンを使用していますか？"
 
-#: vulnerabilities.py:2005
+#: vulnerabilities.py:2009
 msgid ""
 "The application does not use a vulnerable version of PhoneGap, or is not "
 "using PhoneGap."
@@ -4688,7 +4669,7 @@ msgstr ""
 "アプリケーションは PhoneGap の脆弱なバージョンを使用していないか、PhoneGap を"
 "使用していません。"
 
-#: vulnerabilities.py:2006
+#: vulnerabilities.py:2010
 msgid ""
 "\n"
 "Android applications built with the Cordova framework use a WebView\n"
@@ -4720,7 +4701,7 @@ msgstr ""
 "これは一般的な Android 上のハイブリッドアプリ構造の制限事項であり、 Apache "
 "Cordova に限ったことではありません。</p>\n"
 
-#: vulnerabilities.py:2023
+#: vulnerabilities.py:2027
 msgid ""
 "\n"
 "Deprecated Android PhoneGap application is affected with CVE-3501 via\n"
@@ -4730,7 +4711,7 @@ msgstr ""
 "推奨されない AndroidのPhoneGap アプリケーションは、攻撃者が HTTPS 接続を "
 "HTTP にダウングレードできるCVE-3501の影響を受けます。\n"
 
-#: vulnerabilities.py:2027
+#: vulnerabilities.py:2031
 msgid ""
 "\n"
 "The attacker can open a WebSocket connection from the application\n"
@@ -4741,17 +4722,17 @@ msgstr ""
 "<p>     攻撃者はHTTPホワイトリストを回避する任意のリモートサーバへ接続する "
 "JavaScript アプリからの WebSocket 接続を開く可能性があります。 </p>\n"
 
-#: vulnerabilities.py:2045
+#: vulnerabilities.py:2049
 msgid "PhoneGap HTTPS Whitelist Bypass"
 msgstr "PhoneGap HTTPS ホワイトリストのバイパス"
 
-#: vulnerabilities.py:2046
+#: vulnerabilities.py:2050
 msgid "Does the PhoneGap application use vulnerable regex for whitelisting?"
 msgstr ""
 "アプリケーションは phonegap でのホワイトリスト化に誤った regex を使用していま"
 "せんか？"
 
-#: vulnerabilities.py:2047
+#: vulnerabilities.py:2051
 msgid ""
 "The PhoneGap application seems to be using proper regex check, or is not "
 "using PhoneGap."
@@ -4759,7 +4740,7 @@ msgstr ""
 "phonegap アプリケーションは適切な regex チェックを使用、あるいは適切に "
 "phonegapを使用していないようです。"
 
-#: vulnerabilities.py:2048
+#: vulnerabilities.py:2052
 msgid ""
 "\n"
 "In order to ensure that a Cordova WebView only allows requests to URLs\n"
@@ -4789,7 +4770,7 @@ msgstr ""
 "WebSocket 接続を利用して、Cordova のホワイトリストメカニズムをバイパスするこ"
 "とができます。\n"
 
-#: vulnerabilities.py:2062
+#: vulnerabilities.py:2066
 msgid ""
 "\n"
 "In PhoneGap if regex is used to whitelist, this checks if HTTPS can be\n"
@@ -4799,7 +4780,7 @@ msgstr ""
 "PhoneGapでは、正規表現がホワイトリストに使用されている場合、その正規表現から"
 "HTTPSをバイパスできるかチェックします。\n"
 
-#: vulnerabilities.py:2066
+#: vulnerabilities.py:2070
 msgid ""
 "\n"
 "An attacker can bypass the Cordova's white-listing mechanism and\n"
@@ -4811,7 +4792,7 @@ msgstr ""
 "ないリモートサーバへの接続を初期化する可能性があります。 これは更なる攻撃を助"
 "長する可能性があります。</p>\n"
 
-#: vulnerabilities.py:2071
+#: vulnerabilities.py:2075
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external\n"
@@ -4856,18 +4837,19 @@ msgid ""
 "version\n"
 msgstr ""
 "\n"
-"<p> ドメインホワイトリストは、アプリケーションが制御できない外部ドメインへの"
-"アクセスを制御するセキュリティモデルです。 Cordovaのデフォルトのセキュリティ"
-"ポリシーでは、どのサイトにもアクセスできます。 アプリケーションを本番環境に移"
-"行する前に、ホワイトリストを作成し、特定のネットワークドメインとサブドメイン"
-"にアクセスできるようにする必要があります。</p>\n"
-"<p>Cordovaは、特定のドメインへのネットワークアクセスを可能にするために、アプ"
-"リケーションの `config.xml`ファイル内の `<access>` 要素に依存するW3C Widget "
+"ドメインホワイトリストは、アプリケーションが制御できない外部ドメインへのアク"
+"セスを制御するセキュリティモデルです。 Cordovaのデフォルトのセキュリティポリ"
+"シーでは、どのサイトにもアクセスできます。 アプリケーションを本番環境に移行す"
+"る前に、ホワイトリストを作成し、特定のネットワークドメインとサブドメインにア"
+"クセスできるようにする必要があります。\n"
+"Cordovaは、特定のドメインへのネットワークアクセスを可能にするために、アプリ"
+"ケーションの `config.xml`ファイル内の `<access>` 要素に依存するW3C Widget "
 "Access仕様に準拠しています。 コマンドラインインターフェイスで説明されている"
 "CLIワークフローに依存するプロジェクトの場合、このファイルはプロジェクトの最上"
 "位ディレクトリにあります。 それ以外のプラットフォーム固有の開発パスの場合は、"
-"次のセクションで場所を示します。：  </p><p> 次の例はホワイトリストの構文を例"
-"示しています：\n"
+"次のセクションで場所を示します。：\n"
+"次の例はホワイトリストの構文を例示しています：\n"
+"\n"
 "Access to google.com\n"
 "\n"
 "    <access origin=\"http://google.com\" />\n"
@@ -4894,11 +4876,11 @@ msgstr ""
 "また、PhoneGapまたはApache Cordovaアプリケーションを最新バージョンにアップグ"
 "レードしてください。\n"
 
-#: vulnerabilities.py:2121
+#: vulnerabilities.py:2125
 msgid "Cordova Remote Start Page Manipulation Vulnerability"
 msgstr "Cordovaのリモートスタートページ操作の脆弱性"
 
-#: vulnerabilities.py:2122
+#: vulnerabilities.py:2126
 msgid ""
 "Is the application affected by CVE-3500 that allows remote attackers to "
 "change the start page?"
@@ -4906,7 +4888,7 @@ msgstr ""
 "アプリケーションは、リモートの攻撃者によるスタートページ変更の CVE-3500 に影"
 "響されますか？"
 
-#: vulnerabilities.py:2123
+#: vulnerabilities.py:2127
 msgid ""
 "The application is not affected by CVE-3500, or Apache Cordova is not being "
 "used."
@@ -4914,7 +4896,7 @@ msgstr ""
 "アプリケーションはCVE-3500の影響を受けません。または、Apache Cordovaは使用さ"
 "れていません。"
 
-#: vulnerabilities.py:2124
+#: vulnerabilities.py:2128
 msgid ""
 "\n"
 "Apache Cordova for Android version 3.5.0 and prior are vulnerable.\n"
@@ -4926,7 +4908,7 @@ msgstr ""
 "攻撃者は、これらの問題を悪用して、セキュリティ制限をバイパスして不正な操作を"
 "実行することができます。 これによりさらなる攻撃の可能性があります。\n"
 
-#: vulnerabilities.py:2129
+#: vulnerabilities.py:2133
 msgid ""
 "\n"
 "According to CVE-3500 Apache Cordova had a vulnerability to change the\n"
@@ -4936,7 +4918,7 @@ msgstr ""
 "CVE-3500 によると、Apache Cordovaはスタートページを変更する脆弱性を持っていま"
 "した。\n"
 
-#: vulnerabilities.py:2133
+#: vulnerabilities.py:2137
 msgid ""
 "\n"
 "With Cordova 3.5.0 or prior, attackers may:\n"
@@ -4952,7 +4934,7 @@ msgstr ""
 "し、任意のサーバに接続します</li>         <li>細工されたインテント URL でス"
 "タートページを変更します</li>     </ul> </p>\n"
 
-#: vulnerabilities.py:2141
+#: vulnerabilities.py:2145
 msgid ""
 "\n"
 "Upgrade PhoneGap or Apache Cordova to the latest version.\n"
@@ -4961,20 +4943,20 @@ msgstr ""
 "<p>     Phonegap あるいは Apache Cordova を最新バージョンにアップグレードして"
 "ください。</p>\n"
 
-#: vulnerabilities.py:2154 vulnerabilities.py:3912
+#: vulnerabilities.py:2158 vulnerabilities.py:3916
 msgid "PhoneGap Debug Logging"
 msgstr "PhoneGapのデバッグログの出力"
 
-#: vulnerabilities.py:2155
+#: vulnerabilities.py:2159
 msgid "Are PhoneGap application debug logs enabled?"
 msgstr "PhoneGapアプリケーションのデバッグログは有効になっていますか？"
 
-#: vulnerabilities.py:2156
+#: vulnerabilities.py:2160
 msgid "PhoneGap debug logs are not enabled, or PhoneGap is not being used."
 msgstr ""
 "PhoneGapデバッグログが有効になっていないか、PhoneGapが使用されていません。"
 
-#: vulnerabilities.py:2157
+#: vulnerabilities.py:2161
 msgid ""
 "\n"
 "Once a PhoneGap app gets shipped with debug mode switched \"on\" then\n"
@@ -4988,7 +4970,7 @@ msgstr ""
 "重要なログが流出し、アプリの URL エンドポイントを決定するために使用される可能"
 "性があります。　</p>\n"
 
-#: vulnerabilities.py:2163
+#: vulnerabilities.py:2167
 msgid ""
 "\n"
 "While using PhoneGap to develop application, always stop debugging logs\n"
@@ -4998,7 +4980,7 @@ msgstr ""
 "アプリケーション開発のためにPhoneGapを使用している間は、常にPhoneGap経由でデ"
 "バッグログを停止してください。\n"
 
-#: vulnerabilities.py:2167
+#: vulnerabilities.py:2171
 msgid ""
 "\n"
 "An attacker can attach a debugger and change the logical flow of the\n"
@@ -5010,7 +4992,7 @@ msgstr ""
 "ます。さらに、アプリの URL エンドポイントを決定するために利用される重要なログ"
 "は漏洩する可能性があります。</p>\n"
 
-#: vulnerabilities.py:2172
+#: vulnerabilities.py:2176
 msgid ""
 "\n"
 "If using Cordova, please publish the plugin using\n"
@@ -5037,22 +5019,22 @@ msgstr ""
 "\n"
 "`<preference name=\"loglevel\" value=\"INFO\" />`\n"
 
-#: vulnerabilities.py:2195
+#: vulnerabilities.py:2199
 msgid "PhoneGap Whitelisted URLs"
 msgstr "PhoneGap ホワイトリストに登録されたURL"
 
-#: vulnerabilities.py:2196
+#: vulnerabilities.py:2200
 msgid "Does the PhoneGap application properly whitelist URLs"
 msgstr ""
 "PhoneGap アプリケーションは URL を適切にホワイトリストを適用していますか？"
 
-#: vulnerabilities.py:2197
+#: vulnerabilities.py:2201
 msgid "Application has proper whitelisted URLs, or does not use PhoneGap."
 msgstr ""
 "アプリケーションに適切なホワイトリストのURLがあるか、PhoneGapを使用していませ"
 "ん。"
 
-#: vulnerabilities.py:2198
+#: vulnerabilities.py:2202
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external\n"
@@ -5070,7 +5052,7 @@ msgstr ""
 "す。　アプリを実稼動に移行する前に、ホワイトリストを生成し、特定のネットワー"
 "クドメインとサブドメインへのアクセスを許可するべきです。</p>\n"
 
-#: vulnerabilities.py:2206
+#: vulnerabilities.py:2210
 msgid ""
 "\n"
 "While using PhoneGap to develop application, always try to whitelist the\n"
@@ -5080,7 +5062,7 @@ msgstr ""
 "アプリケーション開発のためにPhoneGapを使用している間は、常に接続するURLをホワ"
 "イトリストに登録してください。\n"
 
-#: vulnerabilities.py:2210
+#: vulnerabilities.py:2214
 msgid ""
 "\n"
 "Without Domain Whitelisting, an attacker can load any domain in an\n"
@@ -5093,7 +5075,7 @@ msgstr ""
 "ブジェクトと corresponding native Java objects にアクセスする可能性がありま"
 "す。</p>\n"
 
-#: vulnerabilities.py:2215
+#: vulnerabilities.py:2219
 msgid ""
 "\n"
 "Cordova adheres to the W3C Widget Access specification, which relies on\n"
@@ -5165,19 +5147,19 @@ msgstr ""
 "\n"
 "これは、保護されていない新しく作成されたCLIプロジェクトのデフォルト値です。\n"
 
-#: vulnerabilities.py:2257
+#: vulnerabilities.py:2261
 msgid "Connection to External Redis Server"
 msgstr "Redis Server への外部接続"
 
-#: vulnerabilities.py:2258
+#: vulnerabilities.py:2262
 msgid "Does the application communicate with an external Redis server?"
 msgstr "アプリケーションは外部の Redis サーバーと通信しますか？"
 
-#: vulnerabilities.py:2259
+#: vulnerabilities.py:2263
 msgid "The application does not communicate with an external Redis server."
 msgstr "アプリケーションは外部の Redis サーバーと通信しません。"
 
-#: vulnerabilities.py:2260
+#: vulnerabilities.py:2264
 msgid ""
 "\n"
 "Redis framework should be used strictly in server to server\n"
@@ -5189,7 +5171,7 @@ msgstr ""
 "クライアントサイドでの Redis の使用は、資格情報が平文で読まれる可能性があるた"
 "め、セキュリティを侵害します。</p>\n"
 
-#: vulnerabilities.py:2265
+#: vulnerabilities.py:2269
 msgid ""
 "\n"
 "Android applications which use Redis to communicate are vulnerable\n"
@@ -5197,7 +5179,7 @@ msgstr ""
 "\n"
 "Redisを使用して通信するAndroidアプリケーションには脆弱性があります。\n"
 
-#: vulnerabilities.py:2268
+#: vulnerabilities.py:2272
 msgid ""
 "\n"
 "The database and associated data including user credentials may get\n"
@@ -5207,7 +5189,7 @@ msgstr ""
 "<p>    ユーザ資格情報を含むデータベースと関連するデータは侵害される可能性があ"
 "ります。 </p>\n"
 
-#: vulnerabilities.py:2272
+#: vulnerabilities.py:2276
 msgid ""
 "\n"
 "Remove Redis client completely. If any SDK uses this component, then\n"
@@ -5217,19 +5199,19 @@ msgstr ""
 "<p>Redis client を完全に削除してください。 もし何らかの SDK がこのコンポーネ"
 "ントを使用していたら、SDK 自体を削除してください。 </p>\n"
 
-#: vulnerabilities.py:2286
+#: vulnerabilities.py:2290
 msgid "Unprotected Exported Activities"
 msgstr "保護されていないエクスポートされたアクティビティ"
 
-#: vulnerabilities.py:2287
+#: vulnerabilities.py:2291
 msgid "Are any activities exported insecurely?"
 msgstr "アクティビティが安全でない状態でエクスポートされていますか？"
 
-#: vulnerabilities.py:2288
+#: vulnerabilities.py:2292
 msgid "The application does not insecurely export any activities."
 msgstr "アプリケーションは、アクティビティを安全にエクスポートしていません。"
 
-#: vulnerabilities.py:2289
+#: vulnerabilities.py:2293
 msgid ""
 "\n"
 "Activities provide user interfaces. Activities are started with Intents,\n"
@@ -5247,7 +5229,7 @@ msgstr ""
 "された他のアプリによって呼び出される可能性があります。それは XAS (Cross "
 "Application Scripting) につながる可能性があります。</p>\n"
 
-#: vulnerabilities.py:2297
+#: vulnerabilities.py:2301
 msgid ""
 "\n"
 "The Android application exports Activity for use by other applications,\n"
@@ -5260,9 +5242,9 @@ msgstr ""
 "り、そのコンポーネントに含まれているデータにアクセスできるかは適切に制限され"
 "ません。\n"
 
-#: vulnerabilities.py:2302 vulnerabilities.py:2354 vulnerabilities.py:2400
-#: vulnerabilities.py:2443 vulnerabilities.py:2486 vulnerabilities.py:2536
-#: vulnerabilities.py:2580 vulnerabilities.py:2621
+#: vulnerabilities.py:2306 vulnerabilities.py:2358 vulnerabilities.py:2404
+#: vulnerabilities.py:2447 vulnerabilities.py:2490 vulnerabilities.py:2540
+#: vulnerabilities.py:2584 vulnerabilities.py:2625
 msgid ""
 "\n"
 "Attackers may use non-privileged services to intercept and track the\n"
@@ -5274,7 +5256,7 @@ msgstr ""
 "する可能性があります。さらに、アプリの挙動を変更する可能性があるデータの挿入"
 "の可能性があります。  </p>\n"
 
-#: vulnerabilities.py:2307
+#: vulnerabilities.py:2311
 msgid ""
 "\n"
 "If you are using a Activity for sharing between only your own apps, it\n"
@@ -5296,19 +5278,19 @@ msgstr ""
 " <p>   もしアクティビティがそれ自体の中で呼び出された時は、それをエクスポー"
 "ト、あるいはカスタム権限のインテントフィルタを使用しないでください。 </p>\n"
 
-#: vulnerabilities.py:2328
+#: vulnerabilities.py:2332
 msgid "Unprotected Exported Receivers"
 msgstr "保護されていないエクスポートされたレシーバ"
 
-#: vulnerabilities.py:2329
+#: vulnerabilities.py:2333
 msgid "Does the application export Broadcast Receivers?"
 msgstr "アプリケーションはブロードキャストレシーバをエクスポートしますか？"
 
-#: vulnerabilities.py:2330
+#: vulnerabilities.py:2334
 msgid "The application does not export Broadcast Receivers."
 msgstr "アプリケーションはブロードキャストレシーバをエクスポートしません。"
 
-#: vulnerabilities.py:2331
+#: vulnerabilities.py:2335
 msgid ""
 "\n"
 "Broadcast Receivers receive Intents sent to multiple applications.\n"
@@ -5344,7 +5326,7 @@ msgstr ""
 "プリによってブロードキャストレシーバを呼び出すために呼び出され、 XAS (Cross "
 "Application Scripting) につながる可能性があります。  </p>\n"
 
-#: vulnerabilities.py:2349
+#: vulnerabilities.py:2353
 msgid ""
 "\n"
 "The Android application exports Receiver for use by other applications,\n"
@@ -5357,7 +5339,7 @@ msgstr ""
 "コンポーネントに含まれているデータにアクセスできるかは適切に制限されませ"
 "ん。\n"
 
-#: vulnerabilities.py:2359
+#: vulnerabilities.py:2363
 msgid ""
 "\n"
 "If you are using a Broadcast Receiver for sharing data between only your\n"
@@ -5381,19 +5363,19 @@ msgstr ""
 "クスポート、あるいはカスタム権限のインテントフィルタを使用しないでください。 "
 "</p>\n"
 
-#: vulnerabilities.py:2380
+#: vulnerabilities.py:2384
 msgid "Unprotected Exported Service"
 msgstr "保護されていないエクスポートされたサービス"
 
-#: vulnerabilities.py:2381
+#: vulnerabilities.py:2385
 msgid "Are any services insecurely exported?"
 msgstr "サービスが安全でない状態でエクスポートされていますか？"
 
-#: vulnerabilities.py:2382
+#: vulnerabilities.py:2386
 msgid "The application does not export any services insecurely."
 msgstr "アプリケーションは、安全でない状態でサービスをエクスポートしません。"
 
-#: vulnerabilities.py:2383
+#: vulnerabilities.py:2387
 msgid ""
 "\n"
 "Services run in the background and do not interact with the user.\n"
@@ -5417,7 +5399,7 @@ msgstr ""
 "内にインストールされた他のアプリによって呼び出される可能性があり、それは XAS "
 "(Cross Application Scripting) につながります。 </p>\n"
 
-#: vulnerabilities.py:2395
+#: vulnerabilities.py:2399
 msgid ""
 "\n"
 "The Android application exports Service for use by other applications,\n"
@@ -5430,7 +5412,7 @@ msgstr ""
 "のコンポーネントに含まれているデータにアクセスできるかは適切に制限されませ"
 "ん。\n"
 
-#: vulnerabilities.py:2405
+#: vulnerabilities.py:2409
 msgid ""
 "\n"
 "If you are using a Service for sharing data between only your own apps,\n"
@@ -5453,19 +5435,19 @@ msgstr ""
 "クスポート、あるいはカスタム権限のインテントフィルタを使用しないでください。 "
 "</p>\n"
 
-#: vulnerabilities.py:2426
+#: vulnerabilities.py:2430
 msgid "Unprotected Exported Provider"
 msgstr "保護されていないエクスポートされたプロバイダ"
 
-#: vulnerabilities.py:2427
+#: vulnerabilities.py:2431
 msgid "Are any providers insecurely exported?"
 msgstr "プロバイダが安全でない状態でエクスポートされていますか？"
 
-#: vulnerabilities.py:2428
+#: vulnerabilities.py:2432
 msgid "The application does not export any providers insecurely."
 msgstr "アプリケーションは、安全でない状態でプロバイダをエクスポートしません。"
 
-#: vulnerabilities.py:2429
+#: vulnerabilities.py:2433
 msgid ""
 "\n"
 "Content Providers are databases addressable by their application-defined\n"
@@ -5484,7 +5466,7 @@ msgstr ""
 "トールされた他の悪意のあるアプリによって呼び出される可能性があります。それは "
 "XAS (Cross Application Scripting) につながる可能性があります。</p>\n"
 
-#: vulnerabilities.py:2438
+#: vulnerabilities.py:2442
 msgid ""
 "\n"
 "The Android application exports a Content Provider for use by other\n"
@@ -5497,7 +5479,7 @@ msgstr ""
 "たり、そのコンポーネントに含まれているデータにアクセスできるかは適切に制限さ"
 "れません。\n"
 
-#: vulnerabilities.py:2448
+#: vulnerabilities.py:2452
 msgid ""
 "\n"
 "If you are using a Content Provider for sharing data between only your\n"
@@ -5520,20 +5502,20 @@ msgstr ""
 "ポート、あるいはカスタム権限のインテントフィルタを使用しないでください。 </"
 "p>\n"
 
-#: vulnerabilities.py:2469
+#: vulnerabilities.py:2473
 msgid "Non-signature Protected Exported Activities"
 msgstr "無署名の保護されエクスポートされたアクティビティ"
 
-#: vulnerabilities.py:2470
+#: vulnerabilities.py:2474
 msgid "Are any activities exported without a ProtectionLevel?"
 msgstr "ProtectionLevelなしでエクスポートされたアクティビティはありますか？"
 
-#: vulnerabilities.py:2471
+#: vulnerabilities.py:2475
 msgid "The application does not export any activity without a ProtectionLevel."
 msgstr ""
 "アプリケーションはProtectionLevelなしでアクティビティをエクスポートしません。"
 
-#: vulnerabilities.py:2472
+#: vulnerabilities.py:2476
 msgid ""
 "\n"
 "Activities provide user interfaces. Activities are started with Intents,\n"
@@ -5552,7 +5534,7 @@ msgstr ""
 "ている他のアプリケーションから呼び出すことができるため、XAS（クロスアプリケー"
 "ションスクリプティング）を引き起こす可能性があります。\n"
 
-#: vulnerabilities.py:2480
+#: vulnerabilities.py:2484
 msgid ""
 "\n"
 "The Android application exports Activity for use by other applications,\n"
@@ -5566,7 +5548,7 @@ msgstr ""
 "り、そのコンポーネントに含まれているデータに `android：protectionLevel`で定義"
 "されたカスタムシグネチャでアクセスできるかを適切に制限しません。\n"
 
-#: vulnerabilities.py:2491
+#: vulnerabilities.py:2495
 msgid ""
 "\n"
 "If you are using a Activity for sharing between only your own apps, it\n"
@@ -5583,16 +5565,16 @@ msgstr ""
 "いユーザー体験と、アクティビティにアクセスするアプリが同じキーでサインされた"
 "時にさらに制御されたアプリへのアクセスを提供します。</p> \n"
 
-#: vulnerabilities.py:2509
+#: vulnerabilities.py:2513
 msgid "Non-signature Protected Exported Receivers"
 msgstr "無署名の保護されたエクスポートレシーバ"
 
-#: vulnerabilities.py:2510
+#: vulnerabilities.py:2514
 msgid "Are any Broadcast Receivers exported without a ProtectionLevel?"
 msgstr ""
 "ProtectionLevel なしでブロードキャストレシーバがエクスポートされていますか？"
 
-#: vulnerabilities.py:2511
+#: vulnerabilities.py:2515
 msgid ""
 "The application does not export any Broadcast Receivers without a "
 "ProtectionLevel."
@@ -5600,7 +5582,7 @@ msgstr ""
 "アプリケーションは ProtectionLevel なしでブロードキャストレシーバーをエクス"
 "ポートしません。"
 
-#: vulnerabilities.py:2512
+#: vulnerabilities.py:2516
 msgid ""
 "\n"
 "Broadcast Receivers receive Intents sent to multiple applications.\n"
@@ -5636,7 +5618,7 @@ msgstr ""
 "意のあるアプリによってブロードキャストレシーバを呼び出すために呼び出され、 "
 "XAS (Cross Application Scripting) につながる可能性があります。 </p>\n"
 
-#: vulnerabilities.py:2530
+#: vulnerabilities.py:2534
 msgid ""
 "\n"
 "The Android application exports Broadcast Receiver for use by other\n"
@@ -5651,7 +5633,7 @@ msgstr ""
 "protectionLevel`で定義されたカスタムシグネチャでアクセスできるかを適切に制限"
 "しません。\n"
 
-#: vulnerabilities.py:2541
+#: vulnerabilities.py:2545
 msgid ""
 "\n"
 "If you are using a Broadcast Receiver for sharing data between only your\n"
@@ -5669,20 +5651,20 @@ msgstr ""
 "プリケーションが同じ鍵で署名されている場合、より良いユーザエクスペリエンスと"
 "ブロードキャストレシーバへのアクセスがより制御されたものになります。\n"
 
-#: vulnerabilities.py:2559
+#: vulnerabilities.py:2563
 msgid "Non-signature Protected Exported Services"
 msgstr "署名されていない保護されたエクスポートされたサービス"
 
-#: vulnerabilities.py:2560
+#: vulnerabilities.py:2564
 msgid "Are any services exported without a ProtectionLevel?"
 msgstr "ProtectionLevelなしでエクスポートされるサービスはありますか？"
 
-#: vulnerabilities.py:2561
+#: vulnerabilities.py:2565
 msgid "The application does not export any service without a ProtectionLevel."
 msgstr ""
 "アプリケーションはProtectionLevelなしではサービスをエクスポートしません。"
 
-#: vulnerabilities.py:2562
+#: vulnerabilities.py:2566
 msgid ""
 "\n"
 "Services run in the background and do not interact with the user.\n"
@@ -5706,7 +5688,7 @@ msgstr ""
 "ンドするために電話内にインストールされた他のアプリによって呼び出される可能性"
 "があり、それは XAS (Cross Application Scripting) につながります。  </p>\n"
 
-#: vulnerabilities.py:2574
+#: vulnerabilities.py:2578
 msgid ""
 "\n"
 "The Android application exports Service for use by other applications,\n"
@@ -5720,7 +5702,7 @@ msgstr ""
 "ンポーネントに含まれているデータに `android：protectionLevel`で定義されたカス"
 "タムシグネチャでアクセスできるかを適切に制限しません。\n"
 
-#: vulnerabilities.py:2585
+#: vulnerabilities.py:2589
 msgid ""
 "\n"
 "If you are using a Service for sharing data between only your own apps,\n"
@@ -5740,20 +5722,20 @@ msgstr ""
 "クスポート、あるいはカスタム権限のインテントフィルタを使用しないでください。 "
 "</p> \n"
 
-#: vulnerabilities.py:2603
+#: vulnerabilities.py:2607
 msgid "Non-signature Protected Exported Providers"
 msgstr "無署名の保護されエクスポートされたプロバイダ"
 
-#: vulnerabilities.py:2604
+#: vulnerabilities.py:2608
 msgid "Are any providers exported without a ProtectionLevel?"
 msgstr "ProtectionLevelなしで輸出されたプロバイダはありますか？"
 
-#: vulnerabilities.py:2605
+#: vulnerabilities.py:2609
 msgid "The application does not export any provider without a ProtectionLevel."
 msgstr ""
 "アプリケーションはProtectionLevelなしでプロバイダをエクスポートしません。"
 
-#: vulnerabilities.py:2606
+#: vulnerabilities.py:2610
 msgid ""
 "\n"
 "Content Providers are databases addressable by their application-defined\n"
@@ -5773,7 +5755,7 @@ msgstr ""
 "あります。それは XAS (Cross Application Scripting) につながる可能性がありま"
 "す。 </p>\n"
 
-#: vulnerabilities.py:2615
+#: vulnerabilities.py:2619
 msgid ""
 "\n"
 "The Android application exports Content Provider for use by other\n"
@@ -5787,7 +5769,7 @@ msgstr ""
 "たり、そのコンポーネントに含まれているデータに `android：protectionLevel`で定"
 "義されたカスタムシグネチャでアクセスできるかを適切に制限しません。\n"
 
-#: vulnerabilities.py:2626
+#: vulnerabilities.py:2630
 msgid ""
 "\n"
 "If you are using a Content Provider for sharing data between only your\n"
@@ -5807,11 +5789,11 @@ msgstr ""
 "ポート、あるいはカスタム権限のインテントフィルタを使用しないでください。 </"
 "p>\n"
 
-#: vulnerabilities.py:2644
+#: vulnerabilities.py:2648
 msgid "Content Provider File Traversal Vulnerability"
 msgstr "コンテンツプロバイダーのファイルトラバーサルの脆弱性"
 
-#: vulnerabilities.py:2645
+#: vulnerabilities.py:2649
 msgid ""
 "Is the application vulnerable to content provider directory traversal "
 "attacks?"
@@ -5819,7 +5801,7 @@ msgstr ""
 "アプリケーションはコンテンツプロバイダのディレクトリトラバーサル攻撃に対して"
 "脆弱ですか？"
 
-#: vulnerabilities.py:2646
+#: vulnerabilities.py:2650
 msgid ""
 "Application does not seem to be vulnerable to content provider directory "
 "traversal attacks."
@@ -5827,7 +5809,7 @@ msgstr ""
 "アプリケーションは、コンテンツプロバイダのディレクトリトラバーサル攻撃に対し"
 "て脆弱ではないようです。"
 
-#: vulnerabilities.py:2647
+#: vulnerabilities.py:2651
 msgid ""
 "\n"
 "Content Providers are databases addressable by their application-defined\n"
@@ -5842,16 +5824,16 @@ msgid ""
 "before it is used.\n"
 msgstr ""
 "\n"
-"<p>    コンテントプロバイダは、アプリ定義の URI によるアドレス可能なデータ"
-"ベースです。それらは持続的内部データストレージと、アプリ間情報の共有のメカニ"
-"ズムとしての両方のために使用されます。</p> <p> \t ContentProvider.openFile() "
-"メソッドを使用することによって、あなたのアプリのデータ(ファイル)にアクセスす"
-"る、ある別のアプリのためのファシリティを提供します。コンテントプロバイダの実"
-"装によって、メソッドの利用がディレクトリトラバーサルの脆弱性につながる可能性"
-"があります。従って、　コンテントプロバイダを通してのファイルを交換する時、パ"
-"スは使用前に正規化されるべきです。 </p>\n"
+"<p>コンテントプロバイダは、アプリ定義の URI によるアドレス可能なデータベース"
+"です。それらは持続的内部データストレージと、アプリ間情報の共有のメカニズムと"
+"しての両方のために使用されます。</p> <p> \t ContentProvider.openFile() メソッ"
+"ドを使用することによって、あなたのアプリのデータ(ファイル)にアクセスする、あ"
+"る別のアプリのためのファシリティを提供します。コンテントプロバイダの実装に"
+"よって、メソッドの利用がディレクトリトラバーサルの脆弱性につながる可能性があ"
+"ります。従って、　コンテントプロバイダを通してのファイルを交換する時、パスは"
+"使用前に正規化されるべきです。 </p>\n"
 
-#: vulnerabilities.py:2659
+#: vulnerabilities.py:2663
 msgid ""
 "\n"
 "Depending on the implementation of `ContentProvider`, use of the method\n"
@@ -5861,7 +5843,7 @@ msgstr ""
 "コンテンツプロバイダの実装に応じて、このメソッドの使用がディレクトリトラバー"
 "サルの脆弱性につながる可能性があります。\n"
 
-#: vulnerabilities.py:2663
+#: vulnerabilities.py:2667
 msgid ""
 "\n"
 "Directory Traversal exploits allow attackers to escape the context of\n"
@@ -5869,11 +5851,11 @@ msgid ""
 "application/device.\n"
 msgstr ""
 "\n"
-"<p>     ディレクトリトラバーサル脆弱性は攻撃者にサンドボックスアプリのコンテ"
-"キストのエスケープを許し、アプリ·デバイスを構成するローカルファイルの読み書き"
-"を許す可能性があります。</p>\n"
+"<p>ディレクトリトラバーサル脆弱性は攻撃者にサンドボックスアプリのコンテキスト"
+"のエスケープを許し、アプリ·デバイスを構成するローカルファイルの読み書きを許す"
+"可能性があります。</p>\n"
 
-#: vulnerabilities.py:2668
+#: vulnerabilities.py:2672
 msgid ""
 "\n"
 "By using the canonicalized path, directory traversal will be mitigated\n"
@@ -5947,7 +5929,7 @@ msgstr ""
 "    ../../../data/data/com.example.android.app/shared_prefs/Example.xml\n"
 "\n"
 
-#: vulnerabilities.py:2697
+#: vulnerabilities.py:2701
 msgid ""
 "\n"
 "This non-compliant code example tries to retrieve the last segment from\n"
@@ -5980,10 +5962,11 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"\"<h4>順守しないコード例 1<h4>  この非順守コード例は最後のセグメントを、 "
-"android.net.Uri.getLastPathSegment() を呼び出すことによって、ファイル名を示す"
-"ことになっている paramUri パスから取り戻そうとしています。そのファイルは事前"
-"構成済みの親ディレクトリ IMAGE_DIRECTORY 内でアクセスされます。\n"
+"この非順守コード例は最後のセグメントを、 android.net.Uri."
+"getLastPathSegment() を呼び出すことによって、ファイル名を示すことになってい"
+"る paramUri パスから取り戻そうとしています。そのファイルは事前構成済みの親"
+"ディレクトリ IMAGE_DIRECTORY 内でアクセスされます。\n"
+"\n"
 "    private static String IMAGE_DIRECTORY = localFile.getAbsolutePath();\n"
 "    public ParcelFileDescriptor openFile(Uri paramUri, String paramString) "
 "throws FileNotFoundException {\n"
@@ -5997,6 +5980,7 @@ msgstr ""
 "すことで、最初の非準拠のコード例を修正しようとしています。最初の呼び出しはURL"
 "デコードを意図しており、2番目の呼び出しは開発者が望む文字列を取得することで"
 "す。\n"
+"\n"
 "    private static String IMAGE_DIRECTORY = localFile.getAbsolutePath();\n"
 "    public ParcelFileDescriptor openFile(Uri paramUri, String paramString) "
 "throws FileNotFoundException {\n"
@@ -6007,7 +5991,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:2721
+#: vulnerabilities.py:2725
 msgid ""
 "\n"
 "- [JVN\\#78601526 GREE for Android vulnerable to directory traversal]"
@@ -6020,25 +6004,25 @@ msgstr ""
 "android/DRD08-J.+Always+canonicalize+a+URL+received+by+a+content+provider) "
 "GREE for Android ディレクトリトラバーサルに対する脆弱性\n"
 
-#: vulnerabilities.py:2733
+#: vulnerabilities.py:2737
 msgid "Insecure Cryptographic Keys"
 msgstr "安全でない暗号鍵"
 
-#: vulnerabilities.py:2734
+#: vulnerabilities.py:2738
 msgid ""
 "Does the application use insecure encryption algorithms or configurations?"
 msgstr ""
 "アプリケーションは安全ではない暗号化アルゴリズムあるいは構成を使用していませ"
 "んか？"
 
-#: vulnerabilities.py:2735
+#: vulnerabilities.py:2739
 msgid ""
 "The application does not use insecure encryption algorithms or "
 "configurations."
 msgstr ""
 "アプリケーションは、安全ではない暗号化アルゴリズムまたは構成を使用しません。"
 
-#: vulnerabilities.py:2736
+#: vulnerabilities.py:2740
 msgid ""
 "\n"
 "Using the CCCryptor, one can use common sounding functions such as\n"
@@ -6070,7 +6054,7 @@ msgstr ""
 "\"Ignorance Vector\"に翻訳したと思われますが、実際には最初の暗号テキストブ"
 "ロックの初期化に使用する \"Initialization Vector\"を読むべきです。 </p>\n"
 
-#: vulnerabilities.py:2752
+#: vulnerabilities.py:2756
 msgid ""
 "\n"
 "Application seems to be using the correct cryptographic encryption\n"
@@ -6080,7 +6064,7 @@ msgstr ""
 "アプリケーションは正しい暗号化メソッドを使用しているか、あるいはまったく使用"
 "していないようです。\n"
 
-#: vulnerabilities.py:2756
+#: vulnerabilities.py:2760
 msgid ""
 "\n"
 "Using an insecure initialization vector allows the attacker to perform\n"
@@ -6093,135 +6077,7 @@ msgstr ""
 "ciphertext の initial portion が効果的な代用であることを意味しています。 </"
 "p>\n"
 
-#: vulnerabilities.py:2761
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "The mystical initialization vector (IV) is confusing. In CBC-mode, each\n"
-#| "16-byte encryption influences the next 16-byte encryption. It's also the\n"
-#| "default. The problem is about block 0. It is a random block -1 which is\n"
-#| "the IV.\n"
-#| "\n"
-#| "This is listed as optional in `CCCrypt()` which is confusing because it\n"
-#| "isn't really optional in CBC mode. If it is not provided, then it'll\n"
-#| "automatically generate an all-0 IV. That throws away significant\n"
-#| "protection on the first block. IV is just 16 random bytes.\n"
-#| "\n"
-#| "The method returns the encrypted data (nil for error), and returns the\n"
-#| "IV, salt and error by reference.\n"
-#| "\n"
-#| "    NSData *iv;\n"
-#| "    NSData *salt;\n"
-#| "    NSError *error;\n"
-#| "    NSData *encryptedData = [RNCryptManager encryptedDataForData:"
-#| "plaintextData\n"
-#| "                                                        password:"
-#| "password\n"
-#| "                                                              iv:&iv\n"
-#| "                                                            salt:&salt\n"
-#| "                                                           error:"
-#| "&error];\n"
-#| "\n"
-#| "Example implementation\n"
-#| "\n"
-#| "    #import <CommonCrypto/CommonCryptor.h>\n"
-#| "    #import <CommonCrypto/CommonKeyDerivation.h>\n"
-#| "\n"
-#| "    NSString * const\n"
-#| "    kRNCryptManagerErrorDomain = @\"net.robnapier.RNCryptManager\";\n"
-#| "\n"
-#| "    const CCAlgorithm kAlgorithm = kCCAlgorithmAES128;\n"
-#| "    const NSUInteger kAlgorithmKeySize = kCCKeySizeAES128;\n"
-#| "    const NSUInteger kAlgorithmBlockSize = kCCBlockSizeAES128;\n"
-#| "    const NSUInteger kAlgorithmIVSize = kCCBlockSizeAES128;\n"
-#| "    const NSUInteger kPBKDFSaltSize = 8;\n"
-#| "    const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4\n"
-#| "\n"
-#| "    + (NSData *)encryptedDataForData:(NSData *)data\n"
-#| "                            password:(NSString *)password\n"
-#| "                                  iv:(NSData )iv\n"
-#| "                                salt:(NSData )salt\n"
-#| "                               error:(NSError )error {\n"
-#| "      NSAssert(iv, @\"IV must not be NULL\");\n"
-#| "      NSAssert(salt, @\"salt must not be NULL\");\n"
-#| "\n"
-#| "      *iv = [self randomDataOfLength:kAlgorithmIVSize];\n"
-#| "      *salt = [self randomDataOfLength:kPBKDFSaltSize];\n"
-#| "\n"
-#| "      NSData *key = [self AESKeyForPassword:password salt:*salt];\n"
-#| "\n"
-#| "      size_t outLength;\n"
-#| "      NSMutableData *\n"
-#| "      cipherData = [NSMutableData dataWithLength:data.length +\n"
-#| "                    kAlgorithmBlockSize];\n"
-#| "\n"
-#| "      CCCryptorStatus\n"
-#| "      result = CCCrypt(kCCEncrypt, // operation\n"
-#| "                       kAlgorithm, // Algorithm\n"
-#| "                       kCCOptionPKCS7Padding, // options\n"
-#| "                       key.bytes, // key\n"
-#| "                       key.length, // keylength\n"
-#| "                       (*iv).bytes,// iv\n"
-#| "                       data.bytes, // dataIn\n"
-#| "                       data.length, // dataInLength,\n"
-#| "                       cipherData.mutableBytes, // dataOut\n"
-#| "                       cipherData.length, // dataOutAvailable\n"
-#| "                       &outLength); // dataOutMoved\n"
-#| "\n"
-#| "      if (result == kCCSuccess) {\n"
-#| "        cipherData.length = outLength;\n"
-#| "      }\n"
-#| "      else {\n"
-#| "        if (error) {\n"
-#| "          *error = [NSError errorWithDomain:kRNCryptManagerErrorDomain\n"
-#| "                                       code:result\n"
-#| "                                   userInfo:nil];\n"
-#| "        }\n"
-#| "        return nil;\n"
-#| "      }\n"
-#| "\n"
-#| "      return cipherData;\n"
-#| "    }\n"
-#| "\n"
-#| "    + (NSData *)randomDataOfLength:(size_t)length {\n"
-#| "      NSMutableData *data = [NSMutableData dataWithLength:length];\n"
-#| "\n"
-#| "      int result = SecRandomCopyBytes(kSecRandomDefault,\n"
-#| "                                      length,\n"
-#| "                                      data.mutableBytes);\n"
-#| "      NSAssert(result == 0, @\"Unable to generate random bytes: %d\",\n"
-#| "               errno);\n"
-#| "\n"
-#| "      return data;\n"
-#| "    }\n"
-#| "\n"
-#| "    // Replace this with a 10,000 hash calls if you don't have "
-#| "CCKeyDerivationPBKDF\n"
-#| "    + (NSData *)AESKeyForPassword:(NSString *)password\n"
-#| "                             salt:(NSData *)salt {\n"
-#| "      NSMutableData *\n"
-#| "      derivedKey = [NSMutableData dataWithLength:kAlgorithmKeySize];\n"
-#| "\n"
-#| "      int\n"
-#| "      result = CCKeyDerivationPBKDF(kCCPBKDF2,            // algorithm\n"
-#| "                                    password.UTF8String,  // password\n"
-#| "                                    [password lengthOfBytesUsingEncoding:"
-#| "NSUTF8StringEncoding],  // passwordLength\n"
-#| "                                    salt.bytes,           // salt\n"
-#| "                                    salt.length,          // saltLen\n"
-#| "                                    kCCPRFHmacAlgSHA1,    // PRF\n"
-#| "                                    kPBKDFRounds,         // rounds\n"
-#| "                                    derivedKey.mutableBytes, // "
-#| "derivedKey\n"
-#| "                                    derivedKey.length); // derivedKeyLen\n"
-#| "\n"
-#| "      // Do not log password here\n"
-#| "      NSAssert(result == kCCSuccess,\n"
-#| "               @\"Unable to create AES key for password: %d\", result);\n"
-#| "\n"
-#| "      return derivedKey;\n"
-#| "    }\n"
-#| "\n"
+#: vulnerabilities.py:2765
 msgid ""
 "\n"
 "The mystical initialization vector (IV) is confusing. In CBC-mode, each\n"
@@ -6470,15 +6326,15 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:2892
+#: vulnerabilities.py:2896
 msgid "iOS SecKeyEncrypt implementation"
 msgstr "iOS SecKeyEncryptの実装"
 
-#: vulnerabilities.py:2893
+#: vulnerabilities.py:2897
 msgid "Does the application use proper SecKeyEncrypt implementation?"
 msgstr "アプリケーションは適切な SecKeyEncrypt 実装を使用していますか？"
 
-#: vulnerabilities.py:2894
+#: vulnerabilities.py:2898
 msgid ""
 "The application uses proper SecKeyEncrypt, or SecKeyEncrypt is not "
 "implemented."
@@ -6486,7 +6342,7 @@ msgstr ""
 "アプリケーションが適切なSecKeyEncryptを使用するか、SecKeyEncryptが実装されて"
 "いません。"
 
-#: vulnerabilities.py:2895
+#: vulnerabilities.py:2899
 msgid ""
 "\n"
 "Most of the time iOS handles all the encryption. It automatically\n"
@@ -6502,7 +6358,7 @@ msgstr ""
 "ファイルを管理します。しかし、カスタム実装の場合、 `SecKeyEncrypt`と` "
 "SecKeyDecrypt`が呼び出されます。\n"
 
-#: vulnerabilities.py:2903
+#: vulnerabilities.py:2907
 msgid ""
 "\n"
 "`SecKeyEncrypt` determines how to encrypt data from a PUBLIC KEY in iOS\n"
@@ -6510,11 +6366,11 @@ msgstr ""
 "\n"
 "SecKeyEncryptは、iOSの公開鍵からデータを暗号化する方法を決定します。\n"
 
-#: vulnerabilities.py:2918
+#: vulnerabilities.py:2922
 msgid "Insecure Peer Connections"
 msgstr "安全でないピア接続"
 
-#: vulnerabilities.py:2919
+#: vulnerabilities.py:2923
 msgid ""
 "Does the application securely communicate with other devices over MultiPeer "
 "Framework?"
@@ -6522,7 +6378,7 @@ msgstr ""
 "アプリケーションは他のデバイスと MultiPeer Framework で安全に通信しています"
 "か？"
 
-#: vulnerabilities.py:2920
+#: vulnerabilities.py:2924
 msgid ""
 "The application uses MultiPeer Framework properly, or MultiPeer Framework is "
 "not being used."
@@ -6530,7 +6386,7 @@ msgstr ""
 "アプリケーションでMultiPeer Frameworkが正しく使用されているか、MultiPeer "
 "Frameworkが使用されていません。"
 
-#: vulnerabilities.py:2921
+#: vulnerabilities.py:2925
 msgid ""
 "\n"
 "Multi-peer Connectivity Framework makes the task of exchanging data or\n"
@@ -6547,7 +6403,7 @@ msgstr ""
 "密性を保証するピアとのデータ交換の間に暗号化の特徴を有効にするべきです。</"
 "p>\n"
 
-#: vulnerabilities.py:2929
+#: vulnerabilities.py:2933
 msgid ""
 "\n"
 "MultiPeer Connectivity Framework is used for establishing connection\n"
@@ -6557,7 +6413,7 @@ msgstr ""
 "Multipeer Connectivity Frameworkは、近くにあるデバイスとの接続を確立するため"
 "に使用されます。\n"
 
-#: vulnerabilities.py:2933
+#: vulnerabilities.py:2937
 msgid ""
 "\n"
 "Failing to use encrypted channels may undermine the confidentiality of\n"
@@ -6567,7 +6423,7 @@ msgstr ""
 "Failing to use encrypted channels may undermine the confidentiality of\n"
 "the transmitted data.\n"
 
-#: vulnerabilities.py:2937
+#: vulnerabilities.py:2941
 msgid ""
 "\n"
 "While establishing a connection with the peer always initialize the\n"
@@ -6579,21 +6435,21 @@ msgstr ""
 "るように、常に暗号化選択が 'MCEncryptionRequired' として設定されたセッション"
 "を初期化してください。</p>\n"
 
-#: vulnerabilities.py:2952
+#: vulnerabilities.py:2956
 msgid "Unsecured Keychain Data"
 msgstr "セキュリティで保護されていないキーチェーンデータ"
 
-#: vulnerabilities.py:2953
+#: vulnerabilities.py:2957
 msgid "Does the application insecurely store data in Keychain?"
 msgstr ""
 "アプリケーションはキーチェーンでセキュリティで保護されずにデータを保存してい"
 "ませんか？"
 
-#: vulnerabilities.py:2954
+#: vulnerabilities.py:2958
 msgid "The application does not store sensitive data in Keychain."
 msgstr "アプリケーションは重要なデータをキーチェーンに保存しません。"
 
-#: vulnerabilities.py:2955
+#: vulnerabilities.py:2959
 msgid ""
 "\n"
 "iOS provides the Keychain for secure data storage. However, in several\n"
@@ -6632,7 +6488,7 @@ msgstr ""
 "キーチェーンが、攻撃者によるデバイスへの物理的なアクセスによって侵害される可"
 "能性があります。 </p>\n"
 
-#: vulnerabilities.py:2975
+#: vulnerabilities.py:2979
 msgid ""
 "\n"
 "Insecured data kept in iOS Keychain\n"
@@ -6640,7 +6496,7 @@ msgstr ""
 "\n"
 "iOSのキーチェーンに安全でないデータが保存されています。\n"
 
-#: vulnerabilities.py:2978
+#: vulnerabilities.py:2982
 msgid ""
 "\n"
 "Failing to take proper precautions may result in loss of login\n"
@@ -6651,7 +6507,7 @@ msgstr ""
 "適切な注意を怠ると、ログイン資格情報、パスワード、およびキーチェーンに保存さ"
 "れているその他の機密性の高いデータが失われる可能性があります。\n"
 
-#: vulnerabilities.py:2983
+#: vulnerabilities.py:2987
 msgid ""
 "\n"
 "Store the sensitive data such as passwords in an encrypted form on the\n"
@@ -6768,7 +6624,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:3032
+#: vulnerabilities.py:3036
 msgid ""
 "\n"
 "Not in compliance with OWASP Mobile Top 10 for M8 - Side Channel Data\n"
@@ -6812,7 +6668,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:3052
+#: vulnerabilities.py:3056
 msgid ""
 "\n"
 "- [Keychain Services Programming Guide](https://developer.apple.com/library/"
@@ -6833,21 +6689,21 @@ msgstr ""
 "- [M5 -　不充分な認可と認証](https://www.owasp.org/index.php/"
 "Mobile_Top_10_2014-M5)\n"
 
-#: vulnerabilities.py:3066
+#: vulnerabilities.py:3070
 msgid "Exposed Pasteboard Data"
 msgstr "公開されたペーストボードデータ"
 
-#: vulnerabilities.py:3067
+#: vulnerabilities.py:3071
 msgid ""
 "Does the application allow copy/paste functionalities in sensitive fields?"
 msgstr ""
 "アプリケーションは重要なフィールドでコピー·ペースト機能を許可していますか？"
 
-#: vulnerabilities.py:3068
+#: vulnerabilities.py:3072
 msgid "The application has proper protection from general pasteboard."
 msgstr "アプリケーションは一般的なペーストボードから適切な保護を持っています。"
 
-#: vulnerabilities.py:3069
+#: vulnerabilities.py:3073
 msgid ""
 "\n"
 "Both iOS and Android support copy/paste. Sensitive data may be stored,\n"
@@ -6863,7 +6719,7 @@ msgstr ""
 "それをコピーする時にそれがプレーンテキストなら、それは他のアプリがクリップ"
 "ボードにアクセスする時、プレーンテキストになるでしょう。 </p>\n"
 
-#: vulnerabilities.py:3076
+#: vulnerabilities.py:3080
 msgid ""
 "\n"
 "Exposing sensitive data like passwords in pasteboard/clipboard which can\n"
@@ -6873,7 +6729,7 @@ msgstr ""
 "パスワードのような重要なデータを他のアプリケーションが使用できるペーストボー"
 "ド/クリップボード内に公開。\n"
 
-#: vulnerabilities.py:3080
+#: vulnerabilities.py:3084
 msgid ""
 "\n"
 "Failing to take proper precautions may result in loss of login\n"
@@ -6883,7 +6739,7 @@ msgstr ""
 "適切な注意を怠ると、ログイン情報、パスワード、その他の機密データがクリップ"
 "ボードに保存されなくなる可能性があります。\n"
 
-#: vulnerabilities.py:3084
+#: vulnerabilities.py:3088
 msgid ""
 "\n"
 "Use application specific pasteboard. Also mark fields like passwords as\n"
@@ -6985,7 +6841,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:3131
+#: vulnerabilities.py:3135
 msgid ""
 "\n"
 "Not in compliance with OWASP Mobile Top 10 for M8 - Side Channel Data\n"
@@ -7042,7 +6898,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:3159
+#: vulnerabilities.py:3163
 msgid ""
 "\n"
 "- [JVN\\#76662040](https://jvn.jp/en/jp/JVN76662040/) Clipboard\n"
@@ -7056,17 +6912,17 @@ msgstr ""
 "- [JVN\\#64764004](http://jvn.jp/en/jp/JVN64764004/index.html) Sleipnir ク"
 "リップボードの内容変更に関する脆弱性\n"
 
-#: vulnerabilities.py:3173
+#: vulnerabilities.py:3177
 msgid "Buffer Overflows and Underflows"
 msgstr "バッファのオーバーフローとアンダーフロー"
 
-#: vulnerabilities.py:3174
+#: vulnerabilities.py:3178
 msgid "Does the application have buffer overflow or underflow vulnerabilities?"
 msgstr ""
 "アプリケーションに脆弱性関連のバッファオーバーフローあるいはアンダーフローが"
 "ありませんか？"
 
-#: vulnerabilities.py:3175
+#: vulnerabilities.py:3179
 msgid ""
 "The application does not seem have buffer overflow or underflow "
 "vulnerabilities."
@@ -7074,7 +6930,7 @@ msgstr ""
 "アプリケーションにバッファオーバーフローやアンダーフローの脆弱性がないようで"
 "す。"
 
-#: vulnerabilities.py:3176
+#: vulnerabilities.py:3180
 msgid ""
 "\n"
 "iOS has several mechanisms which prevent the application from being\n"
@@ -7134,7 +6990,7 @@ msgstr ""
 "ラにメモリ管理の処理をさせることで、メモリの脆弱性の問題からアプリケーション"
 "を保護します。</li>         </ul>     </li> </ul> \n"
 
-#: vulnerabilities.py:3198 vulnerabilities.py:4864
+#: vulnerabilities.py:3202 vulnerabilities.py:4867
 msgid ""
 "\n"
 "Buffer overflows, both on the stack and on the heap, are a major source\n"
@@ -7144,7 +7000,7 @@ msgstr ""
 "スタック上およびヒープ上のバッファオーバーフローは、C、Objective-C、およびC+"
 "+のコードのセキュリティ脆弱性の主要な原因です。\n"
 
-#: vulnerabilities.py:3203
+#: vulnerabilities.py:3207
 msgid ""
 "\n"
 "Usually the ipa file will be decrypted at runtime by the kernel's mach\n"
@@ -7200,7 +7056,7 @@ msgstr ""
 "      `_obj_retain`\n"
 "\n"
 
-#: vulnerabilities.py:3231 vulnerabilities.py:4874
+#: vulnerabilities.py:3235 vulnerabilities.py:4877
 msgid ""
 "\n"
 "- [Avoiding Buffer Overflows and Underflows by\n"
@@ -7218,22 +7074,22 @@ msgstr ""
 "- [[iOSアプリケーションのハッキングとセキュリティ保護](http://books.google."
 "de/books?id=huy8AwAAQBAJ&printsec=frontcover#v=onepage&q&f=false)\n"
 
-#: vulnerabilities.py:3245
+#: vulnerabilities.py:3249
 msgid "Jailbreak Detection"
 msgstr "脱獄検出"
 
-#: vulnerabilities.py:3246
+#: vulnerabilities.py:3250
 msgid "Does the app implement any form of jailbreak detection?"
 msgstr "アプリケーションはなんらかの脱獄検出を実装していますか？"
 
-#: vulnerabilities.py:3247
+#: vulnerabilities.py:3251
 msgid ""
 "The app seems to implement routines that check if device has been jailbroken."
 msgstr ""
 "アプリケーションはデバイスが脱獄されているかどうかをチェックするルーチンを実"
 "装しているようです。"
 
-#: vulnerabilities.py:3248
+#: vulnerabilities.py:3252
 msgid ""
 "\n"
 "Jailbreaking is the removing of software restrictions imposed by Apple.\n"
@@ -7249,7 +7105,7 @@ msgstr ""
 "ンロードを可能にします。マルウェアをより簡単にインストールできるため、攻撃者"
 "はジェイルブレイクされたiPhoneをターゲットにしていることがよくあります。\n"
 
-#: vulnerabilities.py:3255
+#: vulnerabilities.py:3259
 msgid ""
 "\n"
 "Jailbroken devices may make it easier for attackers to break into the\n"
@@ -7261,7 +7117,7 @@ msgstr ""
 "があります。脱獄検出の使用と脱獄されたデバイス上でのアプリケーションの機能制"
 "限が推奨されます。\n"
 
-#: vulnerabilities.py:3260
+#: vulnerabilities.py:3264
 msgid ""
 "\n"
 "Attackers can run tools like Cycript, GDB, Snoop-it etc. to perform\n"
@@ -7283,7 +7139,7 @@ msgstr ""
 "オプションは、機能を完全に無効にするのではなく、アプリケーションの一部の機能"
 "をブロックすることです。</p>\n"
 
-#: vulnerabilities.py:3270
+#: vulnerabilities.py:3274
 msgid ""
 "\n"
 "Consider using jailbreak detection SDKs or libraries. Note that by\n"
@@ -7295,19 +7151,19 @@ msgstr ""
 "ジェイルブレイクされたデバイスにとっては100％の正確性とはいえない可能性がある"
 "ことに注意してください。\n"
 
-#: vulnerabilities.py:3284
+#: vulnerabilities.py:3288
 msgid "UIWebView Exploits"
 msgstr "UIWebViewの悪用"
 
-#: vulnerabilities.py:3285
+#: vulnerabilities.py:3289
 msgid "Are there instances of UIWebView used in the app?"
 msgstr "アプリケーション内でUIWebViewのインスタンスは使用されていますか？"
 
-#: vulnerabilities.py:3286
+#: vulnerabilities.py:3290
 msgid "UIWebView is not used in the app."
 msgstr "アプリケーション内でUIWebViewは使用されていません。"
 
-#: vulnerabilities.py:3287
+#: vulnerabilities.py:3291
 msgid ""
 "\n"
 "iOS offers the UIWebView class to embed web content in the app. This is\n"
@@ -7319,7 +7175,7 @@ msgstr ""
 "は、Webアプリケーションを複数のモバイルプラットフォームにすばやく移植する必要"
 "があり、それぞれに固有のUIを作成する必要がない場合によく使用されます。\n"
 
-#: vulnerabilities.py:3292
+#: vulnerabilities.py:3296
 msgid ""
 "\n"
 "UIWebView can be susceptible to client side Javascript injection. It can\n"
@@ -7330,7 +7186,7 @@ msgstr ""
 "能性あります。メモリ内の機密コンテンツをキャッシュとして保持することもできま"
 "す。\n"
 
-#: vulnerabilities.py:3296
+#: vulnerabilities.py:3300
 msgid ""
 "\n"
 "UIWebView can be susceptible to client side Javascript injection if\n"
@@ -7353,7 +7209,7 @@ msgstr ""
 "能性があります。これは、機密コンテンツが閉じられた後でもメモリに残っているこ"
 "とを意味します。</p>\n"
 
-#: vulnerabilities.py:3307
+#: vulnerabilities.py:3311
 msgid ""
 "\n"
 "When using UIWebView, make sure the data is loaded over HTTPS. Avoid\n"
@@ -7372,20 +7228,20 @@ msgstr ""
 "りに、 `loadHTMLString：baseURL：`を使用してください。重要なコンテンツが読み"
 "込まれたときにキャッシュを無効にします。\n"
 
-#: vulnerabilities.py:3324
+#: vulnerabilities.py:3328
 msgid "WebView Exploits"
 msgstr "WebViewの悪用"
 
-#: vulnerabilities.py:3325
+#: vulnerabilities.py:3329
 msgid "Are there instances of WebView used insecurely in the app?"
 msgstr ""
 "アプリケーション内でWebViewのインスタンスが不適切に使用されていませんか？"
 
-#: vulnerabilities.py:3326
+#: vulnerabilities.py:3330
 msgid "WebViews, if any, are properly implemented."
 msgstr "WebViewが設定されているならば、適切に実装されています。"
 
-#: vulnerabilities.py:3327
+#: vulnerabilities.py:3331
 msgid ""
 "\n"
 "Android API offers WebView to deliver a web application (or just a web\n"
@@ -7410,7 +7266,7 @@ msgstr ""
 "レイアウトでレンダリングするのではなく、すべてのユーザーデータを含むWebページ"
 "を簡単に作成できることがわかります。\n"
 
-#: vulnerabilities.py:3339
+#: vulnerabilities.py:3343
 msgid ""
 "\n"
 "WebView can be susceptible to various exploits including client side\n"
@@ -7421,7 +7277,7 @@ msgstr ""
 "ジェクションやネットワークスニッフィングを含む様々な悪用の影響を受けやすい可"
 "能性があります。\n"
 
-#: vulnerabilities.py:3343
+#: vulnerabilities.py:3347
 msgid ""
 "\n"
 "An improperly implemented WebView instance may be vulnerable to XSS can\n"
@@ -7438,7 +7294,7 @@ msgstr ""
 "由でロードしないと、攻撃者はネットワーク送信からのデータを盗聴し、任意の"
 "JavaScript を WebView に注入することで中間者攻撃を実行できます。\n"
 
-#: vulnerabilities.py:3351
+#: vulnerabilities.py:3355
 msgid ""
 "\n"
 "When using WebView, ensure the following:\n"
@@ -7461,19 +7317,19 @@ msgstr ""
 "テキストを適切にエスケープする必要があります。プレーンテキストのユーザー入力"
 "のみを受け入れ、WebView に表示する前にサニタイズします。\n"
 
-#: vulnerabilities.py:3372
+#: vulnerabilities.py:3376
 msgid "App Transport Security"
 msgstr "App Transport Security (ATS) の設定"
 
-#: vulnerabilities.py:3373
+#: vulnerabilities.py:3377
 msgid "Is App Transport Security (ATS) properly configured?"
 msgstr "App Transport Security (ATS)は正しく設定されていますか?"
 
-#: vulnerabilities.py:3374
+#: vulnerabilities.py:3378
 msgid "App Transport Security (ATS) is properly configured."
 msgstr "App Transport Security (ATS)は正しく設定されています。"
 
-#: vulnerabilities.py:3375
+#: vulnerabilities.py:3379
 msgid ""
 "\n"
 "On Apple platforms, a networking security feature called App Transport\n"
@@ -7510,7 +7366,7 @@ msgstr ""
 "場所ではATS保護を維持する\n"
 "- 証明書の透過性\n"
 
-#: vulnerabilities.py:3393
+#: vulnerabilities.py:3397
 msgid ""
 "\n"
 "App Transport Security (ATS), which is a networking security feature\n"
@@ -7522,7 +7378,7 @@ msgstr ""
 "ネットワークセキュリティ機能であるApp Transport Security (ATS)が正しく設定さ"
 "れていないことが判明しました。\n"
 
-#: vulnerabilities.py:3398
+#: vulnerabilities.py:3402
 msgid ""
 "\n"
 "Misconfiguring App Transport Security (ATS) may lead to:\n"
@@ -7541,7 +7397,7 @@ msgstr ""
 "<li>ユーザの信頼の喪失</li>\n"
 "</ul>\n"
 
-#: vulnerabilities.py:3406
+#: vulnerabilities.py:3410
 msgid ""
 "\n"
 "App Transport Security (ATS) is enabled by default for apps linked\n"
@@ -7588,7 +7444,7 @@ msgstr ""
 "Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35).を参照してくださ"
 "い。\n"
 
-#: vulnerabilities.py:3428
+#: vulnerabilities.py:3432
 msgid ""
 "\n"
 "For background on secure Internet connections, please read [HTTPS Server "
@@ -7601,19 +7457,19 @@ msgstr ""
 "Evaluation](https://developer.apple.com/library/content/technotes/tn2232/"
 "_index.html)を参照してください。\n"
 
-#: vulnerabilities.py:3439
+#: vulnerabilities.py:3443
 msgid "Insecure Hashing Algorithms"
 msgstr "安全でないハッシュアルゴリズム"
 
-#: vulnerabilities.py:3440
+#: vulnerabilities.py:3444
 msgid "Are any insecure hash functions used?"
 msgstr "安全でないハッシュ関数が使用されていませんか？"
 
-#: vulnerabilities.py:3441
+#: vulnerabilities.py:3445
 msgid "No insecure hash functions are used."
 msgstr "安全でないハッシュ関数は使用していません。"
 
-#: vulnerabilities.py:3442 vulnerabilities.py:3619
+#: vulnerabilities.py:3446 vulnerabilities.py:3623
 msgid ""
 "\n"
 "The MD5 algorithm is commonly used hash function producing a 128-bit hash "
@@ -7632,7 +7488,7 @@ msgstr ""
 "す。しかし、MD5はブルートフォース攻撃を受けることもあり、広範な脆弱性に悩まさ"
 "れています。\n"
 
-#: vulnerabilities.py:3448
+#: vulnerabilities.py:3452
 msgid ""
 "\n"
 "Using cryptographically insecure hash function algorithms may severely "
@@ -7643,7 +7499,7 @@ msgstr ""
 "暗号で安全でないハッシュ関数アルゴリズムを使用すると、データの完全性が著しく"
 "損なわれる可能性があります。\n"
 
-#: vulnerabilities.py:3452
+#: vulnerabilities.py:3456
 msgid ""
 "\n"
 "Using salted MD5 for passwords is a bad idea. Not because of MD5's "
@@ -7687,7 +7543,7 @@ msgstr ""
 "いるハッシュアルゴリズムでありながら、衝突攻撃の影響を受けやすいことが最近[証"
 "明](https://shattered.io/static/shattered.pdf)されています。\n"
 
-#: vulnerabilities.py:3467
+#: vulnerabilities.py:3471
 msgid ""
 "\n"
 "**For passwords**, deliberately slow hash constructions, such as scrypt, "
@@ -7705,26 +7561,26 @@ msgstr ""
 "\n"
 "**パスワードの場合**、scrypt、bcrypt、PBKDF2など意図的に遅いハッシュ構造を使"
 "用する必要があります。slted SHA-2は、ほとんどの汎用ハッシュのように高速ですの"
-"で、十分ではありません。（[パスワードを安全にハッシュする方法]（https://"
-"security.stackexchange.com/questions/211/how-to-securely-hash-passwords））\n"
+"で、十分ではありません。([パスワードを安全にハッシュする方法](https://"
+"security.stackexchange.com/questions/211/how-to-securely-hash-passwords))\n"
 "\n"
 "**ファイルの完全性の場合**、現在の最良のソリューションはSHA-2です"
 "（SHA-256）。SHA-3が標準化されると同様に良い選択となります。\n"
 
-#: vulnerabilities.py:3484
+#: vulnerabilities.py:3488
 msgid "One Time Password Bypass"
 msgstr "ワンタイムパスワードのバイパス"
 
-#: vulnerabilities.py:3485
+#: vulnerabilities.py:3489
 msgid "Is the application vulnerable to One Time Password Bypass?"
 msgstr "アプリケーションはワンタイムパスワードのバイパスに対して脆弱ですか?"
 
-#: vulnerabilities.py:3486
+#: vulnerabilities.py:3490
 msgid "Application is not vulnerable to One Time Password Bypass."
 msgstr ""
 "アプリケーションはワンタイムパスワードのバイパスに対して脆弱ではありません。"
 
-#: vulnerabilities.py:3487
+#: vulnerabilities.py:3491
 msgid ""
 "\n"
 "A one-time password (OTP) is a password that is valid for only one login "
@@ -7747,19 +7603,19 @@ msgstr ""
 "もの（PINなど）へのアクセスが必要であることを保証することで2要素認証を組み込"
 "みます。\n"
 
-#: vulnerabilities.py:3517
+#: vulnerabilities.py:3521
 msgid "Insecure Direct Object Reference"
 msgstr "安全でない直接オブジェクト参照"
 
-#: vulnerabilities.py:3518
+#: vulnerabilities.py:3522
 msgid "Do Insecure Direct Object References exist within the app?"
 msgstr "安全でない直接オブジェクト参照が存在していませんか?"
 
-#: vulnerabilities.py:3519
+#: vulnerabilities.py:3523
 msgid "No occurences of Insecure Direct Object References were found."
 msgstr "安全でない直接オブジェクト参照は見つかりませんでした。"
 
-#: vulnerabilities.py:3520
+#: vulnerabilities.py:3524
 msgid ""
 "\n"
 "Insecure Direct Object References occur when an application provides direct "
@@ -7782,7 +7638,7 @@ msgstr ""
 "プリケーションがユーザー指定の入力を受け取り、十分な許可チェックを実行せずに"
 "オブジェクトを取得し使用するために発生します。\n"
 
-#: vulnerabilities.py:3544
+#: vulnerabilities.py:3548
 msgid ""
 "Does the application use Transport Layer protection? Is HTTPS enabled "
 "globally in the application?"
@@ -7790,7 +7646,7 @@ msgstr ""
 "アプリケーションはトランスポート層の保護を使用していますか?HTTPSはアプリケー"
 "ション内全体で有効になっていますか？"
 
-#: vulnerabilities.py:3545
+#: vulnerabilities.py:3549
 msgid ""
 "Application has SSL enabled and sufficient protection is being used to "
 "prevent information leakage."
@@ -7798,7 +7654,7 @@ msgstr ""
 "アプリケーションでSSLが有効になっており、情報漏洩を防止するために十分な保護が"
 "使用されています。"
 
-#: vulnerabilities.py:3572
+#: vulnerabilities.py:3576
 msgid ""
 "\n"
 "When making network transmissions, all connections should strictly use TLS.\n"
@@ -7812,19 +7668,19 @@ msgstr ""
 "データのアップロード/ダウンロードにはHTTP接続を使用しないでください。代わり"
 "に、HTTPS要求を作成して送信します。\n"
 
-#: vulnerabilities.py:3587
+#: vulnerabilities.py:3591
 msgid "Short HMAC Keys"
 msgstr "短いHMAC鍵"
 
-#: vulnerabilities.py:3588
+#: vulnerabilities.py:3592
 msgid "Are keys used to calculate HMAC too short?"
 msgstr "HMACの計算に使用される鍵は短すぎていませんか？"
 
-#: vulnerabilities.py:3589
+#: vulnerabilities.py:3593
 msgid "Keys used to calculate HMAC, if any, are of recommended length."
 msgstr "HMACを計算するために使用される鍵がある場合は、推奨される長さです。"
 
-#: vulnerabilities.py:3590
+#: vulnerabilities.py:3594
 msgid ""
 "\n"
 "An HMAC (keyed-hash message authentication code) is a type of message "
@@ -7847,7 +7703,7 @@ msgstr ""
 "は、基礎となるハッシュ関数の暗号強度、ハッシュ出力のサイズ、およびキーのサイ"
 "ズと品質に依存します。\n"
 
-#: vulnerabilities.py:3598
+#: vulnerabilities.py:3602
 msgid ""
 "\n"
 "The key for HMAC can be of any length. However, less than 32 bytes is "
@@ -7865,7 +7721,7 @@ msgstr ""
 "されますが、余分な長さでは機能強度が大幅に向上しません。鍵のランダム性が弱い"
 "と考えられる場合は、より長い鍵を使用することをお勧めします。\n"
 
-#: vulnerabilities.py:3604
+#: vulnerabilities.py:3608
 msgid ""
 "Loss of HMAC security may compromise the integrity and authenticity of the "
 "data maintained."
@@ -7873,19 +7729,19 @@ msgstr ""
 "HMACセキュリティの喪失は、管理されるデータの完全性と信頼性を損なう可能性があ"
 "ります。"
 
-#: vulnerabilities.py:3616
+#: vulnerabilities.py:3620
 msgid "Vulnerable Hash Algorithms"
 msgstr "脆弱なハッシュアルゴリズム"
 
-#: vulnerabilities.py:3617
+#: vulnerabilities.py:3621
 msgid "Are any deprecated or vulnerable hash algorithms used?"
 msgstr "非推奨または脆弱なハッシュアルゴリズムが使用されていませんか？"
 
-#: vulnerabilities.py:3618
+#: vulnerabilities.py:3622
 msgid "No deprecated or vulnerable hash algorithms are being used."
 msgstr "非推奨、または脆弱なハッシュアルゴリズムは使用されていません。"
 
-#: vulnerabilities.py:3625
+#: vulnerabilities.py:3629
 msgid ""
 "\n"
 "Using salted MD5 for passwords should be avoided, not because of its "
@@ -7927,7 +7783,7 @@ msgstr ""
 "衝突攻撃の影響を受けやすいことも [証明](https://shattered.io/static/"
 "shattered.pdf)されています。\n"
 
-#: vulnerabilities.py:3640
+#: vulnerabilities.py:3644
 msgid ""
 "\n"
 "Using cryptographically weak hash function algorithms may severely "
@@ -7937,7 +7793,7 @@ msgstr ""
 "暗号で安全でないハッシュ関数アルゴリズムを使用すると、データの完全性が著しく"
 "損なわれる可能性があります。\n"
 
-#: vulnerabilities.py:3644
+#: vulnerabilities.py:3648
 msgid ""
 "\n"
 "**For passwords**, deliberately slow hash constructions such as scrypt, "
@@ -7956,19 +7812,19 @@ msgstr ""
 "ため十分ではありません。**ファイルの完全性**の場合、現在の最良のソリューショ"
 "ンはSHA-2（SHA-256）です。SHA-3は、標準化されると良い選択になるでしょう。\n"
 
-#: vulnerabilities.py:3661
+#: vulnerabilities.py:3665
 msgid "General Server Vulnerabilities"
 msgstr "一般的なサーバの脆弱性"
 
-#: vulnerabilities.py:3662
+#: vulnerabilities.py:3666
 msgid "Are any general server vulnerabilities present?"
 msgstr "一般的なサーバの脆弱性はありませんか?"
 
-#: vulnerabilities.py:3663
+#: vulnerabilities.py:3667
 msgid "No general server vulnerabilities were found."
 msgstr "一般的なサーバの脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3664
+#: vulnerabilities.py:3668
 msgid ""
 "\n"
 "This issue is not specific to a certain kind of vulnerabilities. It can be "
@@ -8022,7 +7878,7 @@ msgstr ""
 "使いやすいです。また、適切な構成では、アプリケーションによってスローされる可"
 "能性のある例外をすべて検出するラストチャンスエラーハンドラも定義されます。\n"
 
-#: vulnerabilities.py:3684
+#: vulnerabilities.py:3688
 msgid ""
 "\n"
 "The API may be susceptible to general server vulnerabilities, which can lead "
@@ -8033,20 +7889,20 @@ msgstr ""
 "APIは一般的なサーバの脆弱性の影響を受けやすく、更なる攻撃に繋がる可能性があり"
 "ます。\n"
 
-#: vulnerabilities.py:3700
+#: vulnerabilities.py:3704
 msgid "Buffer Overflow Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにおけるバッファオーバーフローの脆弱性"
 
-#: vulnerabilities.py:3701
+#: vulnerabilities.py:3705
 msgid "Did buffer overflows occur in HTTP requests?"
 msgstr "HTTPリクエストでバッファオーバーフローが発生しましたか?"
 
-#: vulnerabilities.py:3702
+#: vulnerabilities.py:3706
 msgid "Buffer overflow vulnerabilities were not detected in HTTP request."
 msgstr ""
 "HTTPリクエストにおけるバッファオーバーフローの脆弱性は検出されませんでした。"
 
-#: vulnerabilities.py:3703
+#: vulnerabilities.py:3707
 msgid ""
 "\n"
 "A buffer overflow occurs when a program attempts to put more data in a "
@@ -8089,7 +7945,7 @@ msgstr ""
 "リケーション自体に役立つWebサーバーまたはアプリケーションサーバー製品の両方に"
 "存在する可能性があります。\n"
 
-#: vulnerabilities.py:3717
+#: vulnerabilities.py:3721
 msgid ""
 "\n"
 "One or more API requests may be vulnerable to Buffer overflow issues\n"
@@ -8098,7 +7954,7 @@ msgstr ""
 "1つまたは複数のAPIリクエストがバッファオーバーフローの問題に対して脆弱である"
 "可能性があります。\n"
 
-#: vulnerabilities.py:3720
+#: vulnerabilities.py:3724
 msgid ""
 "\n"
 "- Buffer overflows generally lead to crashes. Other attacks leading to lack "
@@ -8120,20 +7976,20 @@ msgstr ""
 "- 任意のコード実行は、他のセキュリティサービスを破壊するために使用されること"
 "がよくあります。\n"
 
-#: vulnerabilities.py:3739
+#: vulnerabilities.py:3743
 msgid "Command Injection Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにおけるコマンドインジェクションの脆弱性"
 
-#: vulnerabilities.py:3740
+#: vulnerabilities.py:3744
 msgid "Are there command injection vulnerabilities in HTTP request?"
 msgstr "HTTPリクエストにコマンドインジェクションの脆弱性はありませんか？"
 
-#: vulnerabilities.py:3741
+#: vulnerabilities.py:3745
 msgid "No command injection vulnerabilities in HTTP request were found."
 msgstr ""
 "HTTPリクエストにコマンドインジェクションの脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3742
+#: vulnerabilities.py:3746
 msgid ""
 "\n"
 "Command injection is an attack in which the attacker attempts execution of "
@@ -8169,7 +8025,7 @@ msgstr ""
 "ションの特権で実行されます。コマンドインジェクション攻撃は、入力の検証が不十"
 "分なことが主な原因です。\n"
 
-#: vulnerabilities.py:3754
+#: vulnerabilities.py:3758
 msgid ""
 "\n"
 "One or more API requests were found to be vulnerable to command injection "
@@ -8179,20 +8035,20 @@ msgstr ""
 "1つまたは複数のAPIリクエストがコマンドインジェクションの脆弱性に対して脆弱で"
 "ある可能性があります。\n"
 
-#: vulnerabilities.py:3769
+#: vulnerabilities.py:3773
 msgid "Integer Overflow Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにおける整数オーバーフローの脆弱性"
 
-#: vulnerabilities.py:3770
+#: vulnerabilities.py:3774
 msgid "Are there integer overflow vulnerabilities in HTTP request?"
 msgstr "HTTPリクエストに整数オーバーフローの脆弱性はありませんか？"
 
-#: vulnerabilities.py:3771
+#: vulnerabilities.py:3775
 msgid "No integer overflow vulnerabilities were found in HTTP request."
 msgstr ""
 "HTTPリクエストにおける整数オーバーフローの脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3772
+#: vulnerabilities.py:3776
 msgid ""
 "\n"
 "An integer overflow occurs when the result of an arithmetic operation "
@@ -8219,7 +8075,7 @@ msgstr ""
 "データ破損を引き起こす可能性があります。攻撃者は、これらの欠陥を使用して、ア"
 "プリケーションが意図していない方法で変数の値に影響を与えることができます。\n"
 
-#: vulnerabilities.py:3782
+#: vulnerabilities.py:3786
 msgid ""
 "\n"
 "The API may be vulnerable to integer overflow issues\n"
@@ -8227,7 +8083,7 @@ msgstr ""
 "\n"
 "APIは整数オーバーフローの問題に対して脆弱である可能性があります。\n"
 
-#: vulnerabilities.py:3785
+#: vulnerabilities.py:3789
 msgid ""
 "\n"
 "- An integer overflow during a buffer length calculation can result in "
@@ -8253,19 +8109,19 @@ msgstr ""
 "してキャストできます。解釈された値は負の数になり、トランザクションの方向を反"
 "転させる可能性があります。\n"
 
-#: vulnerabilities.py:3804
+#: vulnerabilities.py:3808
 msgid "JSON Depth Overflow in HTTP Requests"
 msgstr "HTTPリクエストにおけるJSON深度オーバーフロー"
 
-#: vulnerabilities.py:3805
+#: vulnerabilities.py:3809
 msgid "Are there JSON depth overflows in HTTP requests?"
 msgstr "HTTPリクエストにJSON深度オーバーフローはありませんか？"
 
-#: vulnerabilities.py:3806
+#: vulnerabilities.py:3810
 msgid "No JSON depth overflows were found in HTTP request."
 msgstr "HTTPリクエストにおけるJSON深度オーバーフローは見つかりませんでした。"
 
-#: vulnerabilities.py:3807
+#: vulnerabilities.py:3811
 msgid ""
 "\n"
 "Altough JSON is intended as a data serialization format, its design as a\n"
@@ -8290,7 +8146,7 @@ msgstr ""
 "パーサが深さ制限とクラッシュに達し、深さ制限がオーバーフローし、DoSの脆弱性が"
 "発生する可能性があります。\n"
 
-#: vulnerabilities.py:3817
+#: vulnerabilities.py:3821
 msgid ""
 "\n"
 "The JSON parser used by the API may be vulnerable to depth overflow issues\n"
@@ -8299,19 +8155,19 @@ msgstr ""
 "APIで使用されるJSONパーサは、深度オーバーフローの問題に脆弱である可能性があり"
 "ます。\n"
 
-#: vulnerabilities.py:3832
+#: vulnerabilities.py:3836
 msgid "LDAP Injection Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにLDAPインジェクションの脆弱性"
 
-#: vulnerabilities.py:3833
+#: vulnerabilities.py:3837
 msgid "Are there LDAP injection vulnerabilities in HTTP request?"
 msgstr "HTTPリクエストにLDAPインジェクションの脆弱性はありませんか？"
 
-#: vulnerabilities.py:3834
+#: vulnerabilities.py:3838
 msgid "No LDAP injection vulnerabilities were found in HTTP request."
 msgstr "HTTPリクエストにLDAPインジェクションの脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3835
+#: vulnerabilities.py:3839
 msgid ""
 "\n"
 "LDAP injection is an attack used to exploit web based applications that "
@@ -8337,7 +8193,7 @@ msgstr ""
 "きる高度なエクスプロイト手法は、LDAPインジェクションでも同様に適用できま"
 "す。\n"
 
-#: vulnerabilities.py:3844
+#: vulnerabilities.py:3848
 msgid ""
 "\n"
 "The API may be vulnerable to LDAP injection\n"
@@ -8345,19 +8201,19 @@ msgstr ""
 "\n"
 "APIはLDAPインジェクションに対して脆弱である可能性があります。\n"
 
-#: vulnerabilities.py:3859
+#: vulnerabilities.py:3863
 msgid "Regex DoS Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにおけるRegex DoSの脆弱性"
 
-#: vulnerabilities.py:3860
+#: vulnerabilities.py:3864
 msgid "Are there Regex DoS vulnerabilities in HTTP requests?"
 msgstr "HTTPリクエストにRegex DoSの脆弱性はありませんか？"
 
-#: vulnerabilities.py:3861
+#: vulnerabilities.py:3865
 msgid "No Regex DoS vulnerabilities were found in HTTP request."
 msgstr "HTTPリクエストにRegex DoSの脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3862
+#: vulnerabilities.py:3866
 msgid ""
 "\n"
 "The Regular Expression Denial of Service (ReDoS) is a Denial of Service "
@@ -8377,7 +8233,7 @@ msgstr ""
 "しているプログラムにこれらの極端な状況を入力させ、それにより非常に長い時間ハ"
 "ングする可能性があります。\n"
 
-#: vulnerabilities.py:3869
+#: vulnerabilities.py:3873
 msgid ""
 "\n"
 "Instances of Regex DoS vulnerabilities were found in API requests\n"
@@ -8385,20 +8241,20 @@ msgstr ""
 "\n"
 "Regex DoSの脆弱性のインスタンスが、APIリクエストに検出されました。\n"
 
-#: vulnerabilities.py:3884
+#: vulnerabilities.py:3888
 msgid "SQL Injection Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにおけるSQLインジェクションの脆弱性"
 
-#: vulnerabilities.py:3885
+#: vulnerabilities.py:3889
 msgid "Are there SQL injection vulnerabilities in HTTP request?"
 msgstr "HTTPリクエストにSQLインジェクションの脆弱性はありませんか？"
 
-#: vulnerabilities.py:3886
+#: vulnerabilities.py:3890
 msgid "No SQL injection vulnerabilities were found in HTTP request."
 msgstr ""
 "HTTPリクエストにおけるSQLインジェクションの脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3887
+#: vulnerabilities.py:3891
 msgid ""
 "\n"
 "A SQL injection attack consists of insertion or _injection_ of a SQL query "
@@ -8426,7 +8282,7 @@ msgstr ""
 "ション攻撃は、事前定義されたSQLコマンドの実行を行うために、SQLコマンドがデー"
 "タプレーン入力に注入されるインジェクション攻撃の一種です。\n"
 
-#: vulnerabilities.py:3897
+#: vulnerabilities.py:3901
 msgid ""
 "\n"
 "One or more API requests were found to be vulnerable to SQL injection\n"
@@ -8435,11 +8291,11 @@ msgstr ""
 "1つまたは複数のAPIリクエストがSQLインジェクションに対して脆弱であることが判明"
 "しました。\n"
 
-#: vulnerabilities.py:3913
+#: vulnerabilities.py:3917
 msgid "Is PhoneGap debug logging enabled?"
 msgstr "PhoneGapのデバッグログの出力は有効になっていますか？"
 
-#: vulnerabilities.py:3914
+#: vulnerabilities.py:3918
 msgid ""
 "PhoneGap debug logging was found to be disabled or PhoneGap is not being "
 "used."
@@ -8447,7 +8303,7 @@ msgstr ""
 "PhoneGapのデバッグログの出力は無効になっているか、もしくはPhoneGapは使用され"
 "ていません。"
 
-#: vulnerabilities.py:3915
+#: vulnerabilities.py:3919
 msgid ""
 "\n"
 "If a PhoneGap app is shipped with debug mode switched on, it can allow "
@@ -8461,7 +8317,7 @@ msgstr ""
 "てアプリの論理フローを変更できるようになります。機密ログが漏洩し、アプリケー"
 "ションのURLエンドポイントを特定するために使用できます。\n"
 
-#: vulnerabilities.py:3920
+#: vulnerabilities.py:3924
 msgid ""
 "\n"
 "When using PhoneGap, disable debug logs before shipping the app.\n"
@@ -8470,7 +8326,7 @@ msgstr ""
 "PhoneGapを使用する場合は、アプリを出荷する前にデバッグログを無効にしてくださ"
 "い。\n"
 
-#: vulnerabilities.py:3923
+#: vulnerabilities.py:3927
 msgid ""
 "\n"
 "If a PhoneGap app is shipped with debug mode switched on, it can allow "
@@ -8484,7 +8340,7 @@ msgstr ""
 "てアプリの論理フローを変更できるようになります。機密ログが漏洩し、アプリケー"
 "ションのURLエンドポイントを特定するために使用できます。\n"
 
-#: vulnerabilities.py:3928
+#: vulnerabilities.py:3932
 msgid ""
 "\n"
 "If using Cordova, please publish the plugin using\n"
@@ -8502,19 +8358,19 @@ msgstr ""
 "PhoneGapを使用している場合は、公開前に `console.logs（）`と他のログコードを有"
 "効にしてください。\n"
 
-#: vulnerabilities.py:3946
+#: vulnerabilities.py:3950
 msgid "String Validation Vulnerabilities in HTTP Requests"
 msgstr "HTTPリクエストにおける文字列検証の脆弱性"
 
-#: vulnerabilities.py:3947
+#: vulnerabilities.py:3951
 msgid "Are there string validation vulnerabilities in HTTP request?"
 msgstr "HTTPリクエストに文字列検証の脆弱性はありませんか？"
 
-#: vulnerabilities.py:3948
+#: vulnerabilities.py:3952
 msgid "No string validation vulnerabilities were found in HTTP requests."
 msgstr "HTTPリクエストにおける文字列検証の脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:3949
+#: vulnerabilities.py:3953
 msgid ""
 "\n"
 "Failure to properly validate input from the client or environment is the "
@@ -8535,7 +8391,7 @@ msgstr ""
 "ントからのデータは、データを改ざんされる可能性があるため、信頼されるべきでは"
 "ありません。\n"
 
-#: vulnerabilities.py:3956
+#: vulnerabilities.py:3960
 msgid ""
 "\n"
 "Appknox found string validation vulnerabilities in one or more HTTP "
@@ -8544,23 +8400,23 @@ msgstr ""
 "\n"
 "1つまたは複数のHTTPリクエストに文字列検証の脆弱性が見つかりました。\n"
 
-#: vulnerabilities.py:3971
+#: vulnerabilities.py:3975
 msgid "XML-external-entity Injection Vulnerabilities in HTTP Body"
 msgstr "HTTPボディにおけるXML外部エンティティ(XXE)インジェクションの脆弱性"
 
-#: vulnerabilities.py:3972
+#: vulnerabilities.py:3976
 msgid "Are there XML-external-entity injection vulnerabilities in HTTP body?"
 msgstr ""
 "HTTPボディにXML外部エンティティ(XXE)インジェクションの脆弱性はありませんか？"
 
-#: vulnerabilities.py:3973
+#: vulnerabilities.py:3977
 msgid ""
 "No XML-external-entity injection vulnerabilities were found in HTTP body."
 msgstr ""
 "HTTPボディにおけるXML外部エンティティ(XXE)インジェクションの脆弱性は見つかり"
 "ませんでした。"
 
-#: vulnerabilities.py:3974
+#: vulnerabilities.py:3978
 msgid ""
 "\n"
 "An XML External Entity Injection is a type of attack against an application "
@@ -8583,7 +8439,7 @@ msgstr ""
 "の観点からのポートスキャン、およびその他のシステムへの影響につながる可能性が"
 "あります。\n"
 
-#: vulnerabilities.py:3982
+#: vulnerabilities.py:3986
 msgid ""
 "\n"
 "Our scanner detected occurrences of XML-external-entity injection "
@@ -8594,21 +8450,21 @@ msgstr ""
 "スキャナはAPI呼び出しのHTTPボディにXML外部エンティティ(XXE)インジェクションの"
 "脆弱性の発生を検知しました。\n"
 
-#: vulnerabilities.py:3998
+#: vulnerabilities.py:4002
 msgid "Cross-site-scripting Vulnerabilities in HTTP Body"
 msgstr "クロスサイトトレーシング(XST)の脆弱性"
 
-#: vulnerabilities.py:3999
+#: vulnerabilities.py:4003
 msgid "Are there cross-site-scripting vulnerabilities in HTTP body?"
 msgstr "HTTPボディにクロスサイトスクリプティング(XSS)の脆弱性はありませんか？"
 
-#: vulnerabilities.py:4000
+#: vulnerabilities.py:4004
 msgid "No Cross-site-scripting vulnerabilities were found in HTTP body."
 msgstr ""
 "HTTPボディにおけるクロスサイトスクリプティング(XSS)の脆弱性は見つかりませんで"
 "した。"
 
-#: vulnerabilities.py:4001
+#: vulnerabilities.py:4005
 msgid ""
 "\n"
 "Cross-Site Scripting (XSS) attacks are a type of injection, in which "
@@ -8662,7 +8518,7 @@ msgstr ""
 "わたりますが、脆弱なサイトが扱うデータの機密性と、サイトの所有者が実装するセ"
 "キュリティ対策の性質によって異なります。\n"
 
-#: vulnerabilities.py:4021
+#: vulnerabilities.py:4025
 msgid ""
 "\n"
 "One or more API calls were found to be vulnerable to Cross-Site Scripting "
@@ -8672,20 +8528,20 @@ msgstr ""
 "1つまたは複数のAPI呼び出しがクロスサイトスクリプティング(XSS)攻撃に対して脆弱"
 "であることが判明しました。\n"
 
-#: vulnerabilities.py:4036
+#: vulnerabilities.py:4040
 msgid "CORS Wild Character Vulnerabilities in HTTP Headers"
 msgstr "HTTPヘッダにおけるCORSワイルドカード文字の脆弱性"
 
-#: vulnerabilities.py:4037
+#: vulnerabilities.py:4041
 msgid "Are there CORS wild character vulnerabilities in HTTP header?"
 msgstr "HTTPヘッダにCORSワイルドカード文字の脆弱性はありませんか？"
 
-#: vulnerabilities.py:4038
+#: vulnerabilities.py:4042
 msgid "No CORS wild character vulnerabilities were found in HTTP headers."
 msgstr ""
 "HTTPヘッダにおけるCORSワイルドカード文字の脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:4039
+#: vulnerabilities.py:4043
 msgid ""
 "\n"
 "Cross Origin Resource Sharing (CORS) is a specification that allows cross "
@@ -8715,7 +8571,7 @@ msgstr ""
 "場合、「* （アスタリスク）」で設定しないでください。信頼できるドメインからの"
 "要求のみを許可するように設定する必要があります。\n"
 
-#: vulnerabilities.py:4050
+#: vulnerabilities.py:4054
 msgid ""
 "\n"
 "One or more API requests were found to have CORS wild character "
@@ -8725,23 +8581,23 @@ msgstr ""
 "1つまたは複数のAPIリクエストがHTTPヘッダにおけるCORSワイルドカード文字の脆弱"
 "性を持っていることが判明しました。\n"
 
-#: vulnerabilities.py:4064
+#: vulnerabilities.py:4068
 msgid "PhoneGap Whitelist Open Access"
 msgstr "PhoneGapのホワイトリストのオープンアクセス"
 
-#: vulnerabilities.py:4065
+#: vulnerabilities.py:4069
 msgid "Does PhoneGap whitelist allow open access or is missing?"
 msgstr ""
 "PhoneGapのホワイトリストはオープンアクセスを許可している、もしくは欠落してい"
 "ませんか?"
 
-#: vulnerabilities.py:4066
+#: vulnerabilities.py:4070
 msgid "PhoneGap whitelist does not allow open acces.s or PhoneGap is not used"
 msgstr ""
 "PhoneGapのホワイトリストはオープンアクセスを許可していないか、もしくは"
 "PhoneGapは使用されていません。"
 
-#: vulnerabilities.py:4068
+#: vulnerabilities.py:4072
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external "
@@ -8764,7 +8620,7 @@ msgstr ""
 "す。　アプリを実稼動に移行する前に、ホワイトリストを生成し、特定のネットワー"
 "クドメインとサブドメインへのアクセスを許可するべきです。</p>\n"
 
-#: vulnerabilities.py:4078
+#: vulnerabilities.py:4082
 msgid ""
 "\n"
 "The PhoneGap whitelist was found to be allowing open access to all sites.\n"
@@ -8777,7 +8633,7 @@ msgstr ""
 "ホワイトリストにワイルドカード（*）を単独で使用せずに、完全修飾ホスト名を使用"
 "してください。\n"
 
-#: vulnerabilities.py:4082 vulnerabilities.py:4173
+#: vulnerabilities.py:4086 vulnerabilities.py:4177
 msgid ""
 "\n"
 "An attacker can bypass the whitelisting mechanism and initiate connections "
@@ -8789,19 +8645,19 @@ msgstr ""
 "サーバへの接続を初期化する可能性があります。 これは更なる攻撃を助長する可能性"
 "があります。</p>\n"
 
-#: vulnerabilities.py:4097
+#: vulnerabilities.py:4101
 msgid "Cross Site Tracing Vulnerabilities"
 msgstr "クロスサイトトレーシング(XST)の脆弱性"
 
-#: vulnerabilities.py:4098
+#: vulnerabilities.py:4102
 msgid "Are there Cross Site Tracing vulnerabilities present?"
 msgstr "クロスサイトトレーシング(XST)の脆弱性が存在していませんか？"
 
-#: vulnerabilities.py:4099
+#: vulnerabilities.py:4103
 msgid "No Cross Site Tracing vulnerabilities were found."
 msgstr "クロスサイトトレーシング(XST)の脆弱性は見つかりませんでした。"
 
-#: vulnerabilities.py:4100
+#: vulnerabilities.py:4104
 msgid ""
 "\n"
 "A Cross-Site Tracing (XST) attack involves the use of Cross-site Scripting "
@@ -8822,7 +8678,7 @@ msgstr ""
 "マイクロソフトがInternet Explorer 6 SP1で導入したHttpOnlyタグをバイパスして、"
 "JavaScriptによってCookieがアクセスされないようにしています。\n"
 
-#: vulnerabilities.py:4108
+#: vulnerabilities.py:4112
 msgid ""
 "\n"
 "One or more API requests were found to be susceptible to Cross Site Tracing "
@@ -8832,7 +8688,7 @@ msgstr ""
 "1つまたは複数のAPIリクエストがクロスサイトトレーシング(XST)の脆弱性の影響を受"
 "けやすいことが判明しました。\n"
 
-#: vulnerabilities.py:4111
+#: vulnerabilities.py:4115
 msgid ""
 "\n"
 "The Cross-Site Tracing (XST) attack makes use of Cross-site Scripting (XSS)\n"
@@ -8864,19 +8720,19 @@ msgstr ""
 "Javaを使用するなど、ブラウザーでTRACE要求を送信する他の方法が発見されていま"
 "す。\n"
 
-#: vulnerabilities.py:4134
+#: vulnerabilities.py:4138
 msgid "Response Body Contains Non-HTTPS Links"
 msgstr "レスポンスボディに含まれている非HTTPSのリンク"
 
-#: vulnerabilities.py:4135
+#: vulnerabilities.py:4139
 msgid "Does any response body contain non-https links?"
 msgstr "レスポンスボディに非HTTPSリンクは含まれていませんか?"
 
-#: vulnerabilities.py:4136
+#: vulnerabilities.py:4140
 msgid "Response body does not contain non-https links."
 msgstr "レスポンスボディには非HTTPSリンクは含まれていません。"
 
-#: vulnerabilities.py:4137
+#: vulnerabilities.py:4141
 msgid ""
 "\n"
 "When a response is served over HTTPS, the connection with the web server\n"
@@ -8897,7 +8753,7 @@ msgstr ""
 "ニッファーにアクセス可能で、中間者攻撃の攻撃者が変更できるため、接続は保護さ"
 "れません。\n"
 
-#: vulnerabilities.py:4145
+#: vulnerabilities.py:4149
 msgid ""
 "\n"
 "One or more of the API responses were found to contain URL links that do not "
@@ -8908,23 +8764,23 @@ msgstr ""
 "1つまたは複数のAPIレスポンスにHTTPSを使用しないURLリンクが含まれていることが"
 "判明しました。すなわち、通常の平文のHTTPを使用しています。\n"
 
-#: vulnerabilities.py:4160
+#: vulnerabilities.py:4164
 msgid "PhoneGap Whitelist RegEx Bypass"
 msgstr "PhoneGapのホワイトリストのRegExバイパス"
 
-#: vulnerabilities.py:4161
+#: vulnerabilities.py:4165
 msgid "Can the PhoneGap whitelist be bypassed with a special RegEx"
 msgstr ""
 "PhoneGapのホワイトリストを特別な正規表現でバイパスすることはできますか？"
 
-#: vulnerabilities.py:4162
+#: vulnerabilities.py:4166
 msgid ""
 "The app does not allow whitelist to be bypassed, or PhoneGap is not used."
 msgstr ""
 "このアプリケーションはホワイトリストをバイパスすることを許可していないか、も"
 "しくはPhoneGapは使用されていません。"
 
-#: vulnerabilities.py:4163
+#: vulnerabilities.py:4167
 msgid ""
 "\n"
 "Domain whitelisting is a security model that controls access to external "
@@ -8943,7 +8799,7 @@ msgstr ""
 "されています。　アプリを本番移行する前に、ホワイトリストを生成し、特定のネッ"
 "トワークドメインとサブドメインのみアクセスを許可してください。</p>\n"
 
-#: vulnerabilities.py:4169
+#: vulnerabilities.py:4173
 msgid ""
 "\n"
 "If a regular expression is used within the whitelist, check if HTTPS can be\n"
@@ -8953,12 +8809,12 @@ msgstr ""
 "正規表現がホワイトリスト内で使用されている場合は、HTTPSを正規表現でバイパスで"
 "きるかどうかを確認してください。\n"
 
-#: vulnerabilities.py:4188
+#: vulnerabilities.py:4192
 msgid "Sending Address Book Data over Unencrypted Insecure Transport Layer"
 msgstr ""
 "暗号化されていない安全でないトランスポート層を介したアドレス帳データの送信"
 
-#: vulnerabilities.py:4192
+#: vulnerabilities.py:4196
 msgid ""
 "Does the application sends sensitive data and Personal Identifiable "
 "Information from address book over the network"
@@ -8966,12 +8822,12 @@ msgstr ""
 "アプリケーションはネットワーク経由でアドレス帳から機密データと個人識別情報を"
 "送信しますか？"
 
-#: vulnerabilities.py:4196
+#: vulnerabilities.py:4200
 msgid "The Application doesn't sends Address Book over Insecured Network"
 msgstr ""
 "アプリケーションは安全でないネットワーク経由でアドレス帳を送信しません。"
 
-#: vulnerabilities.py:4199
+#: vulnerabilities.py:4203
 msgid ""
 "\n"
 "Information stored in the Contacts list along with the private notes are\n"
@@ -8989,7 +8845,7 @@ msgstr ""
 "性があります。安全でないトランスポート層の保護により、中間者攻撃が可能になり"
 "ます。これにより、アドレス帳のデータや個人情報が盗まれる可能性があります。\n"
 
-#: vulnerabilities.py:4207
+#: vulnerabilities.py:4211
 msgid ""
 "\n"
 "If Contact List is sent via Network Layer, ensure that Proper\n"
@@ -8999,7 +8855,7 @@ msgstr ""
 "連絡先リストがネットワーク層経由で送信されている場合は、適切な証明書のピン設"
 "定と暗号化が使用されていることを確認してください。\n"
 
-#: vulnerabilities.py:4211
+#: vulnerabilities.py:4215
 msgid ""
 "\n"
 "In the event that a user (anonymous or verified) is able to aceess the\n"
@@ -9015,19 +8871,19 @@ msgstr ""
 "は次のような問題が発生する可能性があります。:  <ul>     <li>風評被害</"
 "li>     <li>詐欺</li>     <li>情報盗難</li> </ul>\n"
 
-#: vulnerabilities.py:4230
+#: vulnerabilities.py:4234
 msgid "Disabled SSL CA Validation and Certificate Pinning"
 msgstr "無効なSSL CAの検証と証明書のピン留め"
 
-#: vulnerabilities.py:4231
+#: vulnerabilities.py:4235
 msgid "Does the application has Certificate Pinning enabled"
 msgstr "アプリケーションは証明書のピン留めが有効になっていますか？"
 
-#: vulnerabilities.py:4232
+#: vulnerabilities.py:4236
 msgid "Application uses Certificate Pinning"
 msgstr "アプリケーションは証明書のピン留めを使用しています。"
 
-#: vulnerabilities.py:4233
+#: vulnerabilities.py:4237
 msgid ""
 "\n"
 "Certificate Pinning is the process of associating a host with their "
@@ -9045,7 +8901,7 @@ msgstr ""
 "付けられます。複数の証明書/公開鍵が許容される場合、広告IDはピンセットの要素の"
 "1つと一致していなければなりません。\n"
 
-#: vulnerabilities.py:4241
+#: vulnerabilities.py:4245
 msgid ""
 "\n"
 "A host or service's certificate or public key can be added to an\n"
@@ -9060,21 +8916,21 @@ msgstr ""
 "に追加する方が推奨されます。証明書や公開鍵を帯域外にプリロードするのは、通"
 "常、攻撃者がピンを汚染させるとができないためです。\n"
 
-#: vulnerabilities.py:4337
+#: vulnerabilities.py:4341
 msgid "Surreptitious Sharing on Android"
 msgstr "Android における Surreptitious Sharing"
 
-#: vulnerabilities.py:4338
+#: vulnerabilities.py:4342
 msgid "Is your application vulnerable to Surreptitious Sharing?"
 msgstr "アプリケーションは Surreptitious Sharing に対して脆弱ですか？"
 
-#: vulnerabilities.py:4340
+#: vulnerabilities.py:4344
 msgid "Surreptitious Sharing might not be in use in this application"
 msgstr ""
 "このアプリケーションでは、Surreptitious Sharing が使用されていない可能性があ"
 "ります。"
 
-#: vulnerabilities.py:4341
+#: vulnerabilities.py:4345
 msgid ""
 "\n"
 "Many email and messaging apps on Android utilize the Intent API for sending\n"
@@ -9136,7 +8992,7 @@ msgstr ""
 "[ContentResolver]\n"
 "(https://goo.gl/Qyx84j)).\n"
 
-#: vulnerabilities.py:4368
+#: vulnerabilities.py:4372
 msgid ""
 "\n"
 "This activity receives `android.intent.action.SEND` or\n"
@@ -9157,7 +9013,7 @@ msgstr ""
 "ティーチェックが行われない場合、参照されたファイルを取得するために使用される"
 "可能性があります。\n"
 
-#: vulnerabilities.py:4386
+#: vulnerabilities.py:4390
 msgid ""
 "\n"
 "We provided a fix for app developers that checks with _fstat_ if a file is\n"
@@ -9178,7 +9034,7 @@ msgstr ""
 "します。\n"
 "[https://github.com/appknox/SafeContentResolver](https://goo.gl/Gsz1bh)\n"
 
-#: vulnerabilities.py:4395
+#: vulnerabilities.py:4399
 msgid ""
 "\n"
 "This example is intended to surreptitiously share IMAP passwords of K-9 "
@@ -9212,6 +9068,7 @@ msgstr ""
 "しています。\n"
 "\n"
 "この攻撃を実行するために必要なコードは次のとおりです。\n"
+"\n"
 "    Intent i = new Intent();\n"
 "    i.setComponent(new ComponentName(\"com.fsck.k9\", \"com.fsck.k9.activity."
 "MessageCompose\"));\n"
@@ -9227,19 +9084,19 @@ msgstr ""
 "これは、 `adbシェル`を介してAndroidデバイスに接続し、 `dmesg | grep avc`を実"
 "行します。\n"
 
-#: vulnerabilities.py:4424
+#: vulnerabilities.py:4428
 msgid "Android Fragment Injection"
 msgstr "Android Fragment Injection"
 
-#: vulnerabilities.py:4425
+#: vulnerabilities.py:4429
 msgid "Is your appl;ication vulnerable to Fragment Injection?"
 msgstr "アプリケーションは Fragment Injection に対して脆弱ですか？"
 
-#: vulnerabilities.py:4427
+#: vulnerabilities.py:4431
 msgid "Application is not vulnerable to Fragment Injection"
 msgstr "アプリケーションはFragment Injection に対して脆弱ではありません。"
 
-#: vulnerabilities.py:4428
+#: vulnerabilities.py:4432
 msgid ""
 "\n"
 "Android SDK offers a way for developers to present a\n"
@@ -9281,7 +9138,7 @@ msgstr ""
 "ります。 ロードされたクラスは、このアクティビティをエクスポートするアプリケー"
 "ションのコンテキストで実行されます。\n"
 
-#: vulnerabilities.py:4448
+#: vulnerabilities.py:4452
 msgid ""
 "\n"
 "With this vulnerability the attacker will be able to call non exported\n"
@@ -9291,7 +9148,7 @@ msgstr ""
 "この脆弱性により、攻撃者はエクスポートされていないアクティビティやターゲット"
 "アプリケーション内のフラグメントを呼び出すことができます。\n"
 
-#: vulnerabilities.py:4452 vulnerabilities.py:4510
+#: vulnerabilities.py:4456 vulnerabilities.py:4514
 msgid ""
 "\n"
 "In the event that a user (anonymous or verified) is able to execute\n"
@@ -9309,7 +9166,7 @@ msgstr ""
 "- 詐欺\n"
 "- 情報盗難\n"
 
-#: vulnerabilities.py:4460
+#: vulnerabilities.py:4464
 msgid ""
 "\n"
 "To mitigate this vulnerability, a new method called `isValidFragment` was\n"
@@ -9323,7 +9180,7 @@ msgstr ""
 "isValidFragmentという新しいメソッドが追加されました。これにより、開発者はこの"
 "メソッドを使用してこのコンテキストで使用できるフラグメントを定義できます。\n"
 
-#: vulnerabilities.py:4466
+#: vulnerabilities.py:4470
 msgid ""
 "\n"
 "- Determine the minSDKVersion and maxSDKVersion to determine what will be "
@@ -9351,22 +9208,22 @@ msgstr ""
 "            super.onCreate(savedInstanceState);\n"
 "\n"
 
-#: vulnerabilities.py:4486
+#: vulnerabilities.py:4490
 msgid ""
 "Do not allow WebView to access sensitive local resource through file scheme"
 msgstr ""
 "WebViewが重要なローカルリソースにファイルスキームでアクセスすることを許可しな"
 "いでください。"
 
-#: vulnerabilities.py:4487
+#: vulnerabilities.py:4491
 msgid "Are weak glass containers in use?"
 msgstr "weak glass containersを使用していますか？"
 
-#: vulnerabilities.py:4488
+#: vulnerabilities.py:4492
 msgid "Weak glass containers are not being used"
 msgstr "weak glass containersを使用していません。"
 
-#: vulnerabilities.py:4489
+#: vulnerabilities.py:4493
 msgid ""
 "\n"
 "The WebView class displays web pages as part of an activity layout.\n"
@@ -9409,7 +9266,7 @@ msgstr ""
 "URIを（target：file：schemeを使用して）ターゲットアクティビティに送信しま"
 "す。\n"
 
-#: vulnerabilities.py:4507
+#: vulnerabilities.py:4511
 msgid ""
 "\n"
 "Allowing WebView to access sensitive resources may result in information "
@@ -9419,7 +9276,7 @@ msgstr ""
 "WebViewが機密リソースにアクセスできるようにすると、情報が漏洩する可能性があり"
 "ます。\n"
 
-#: vulnerabilities.py:4518
+#: vulnerabilities.py:4522
 msgid ""
 "\n"
 "Any URI received via an intent from outside a trust-boundary should be\n"
@@ -9446,7 +9303,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:4531
+#: vulnerabilities.py:4535
 msgid ""
 "\n"
 "The following noncompliant code example uses the WebView component with\n"
@@ -9508,7 +9365,8 @@ msgstr ""
 "        }\n"
 "    }\n"
 "\n"
-"このコードは、この脆弱性がどのように悪用されるかを示しています。␣␣␣␣␣␣\n"
+"このコードは、この脆弱性がどのように悪用されるかを示しています。\n"
+"\n"
 "    // Malicious application prepares some crafted HTML file,\n"
 "    // places it on a local storage, makes accessible from\n"
 "    // other applications. The following code sends an\n"
@@ -9524,7 +9382,7 @@ msgstr ""
 "    this.startActivity(intent);\n"
 "\n"
 
-#: vulnerabilities.py:4570
+#: vulnerabilities.py:4574
 msgid ""
 "\n"
 "*   [JVN#59652356](https://jvn.jp/en/jp/JVN59652356/) Cybozu KUNAI for "
@@ -9554,19 +9412,19 @@ msgstr ""
 "*   [JVN#46088915](https://jvn.jp/en/jp/JVN46088915/) Yahoo! ブラウザ WebView"
 "クラスの脆弱性\n"
 
-#: vulnerabilities.py:4585
+#: vulnerabilities.py:4589
 msgid "Misconfigured AWS S3 Buckets"
 msgstr "設定されていないAWS S3バケット"
 
-#: vulnerabilities.py:4586
+#: vulnerabilities.py:4590
 msgid "Is the AWS S3 bucket misconfigured?"
 msgstr "AWS S3バケットの構成が誤っていますか？"
 
-#: vulnerabilities.py:4587
+#: vulnerabilities.py:4591
 msgid "No misconfigured AWS S3 buckets were found."
 msgstr "誤って構成されたAWS S3バケットは見つかりませんでした。"
 
-#: vulnerabilities.py:4588
+#: vulnerabilities.py:4592
 msgid ""
 "\n"
 "Amazon S3 is a web service offered by Amazon Web Services.\n"
@@ -9591,7 +9449,7 @@ msgstr ""
 "1.アクセスキーが意図せずハードコーディングまたは公開されている\n"
 "2.バケットのアクセス許可が正しく設定されていない\n"
 
-#: vulnerabilities.py:4599
+#: vulnerabilities.py:4603
 msgid ""
 "\n"
 "Since the bucket is misconfigured, any user with an AWS access key will be "
@@ -9608,7 +9466,7 @@ msgstr ""
 "アクセスキーが漏洩した場合、キーを持っている誰もがバケット上で管理特権を得る"
 "ことができ、そのオブジェクトがデータを危険にさらすことにつながります。\n"
 
-#: vulnerabilities.py:4605
+#: vulnerabilities.py:4609
 msgid ""
 "\n"
 "Leaving third party cloud storage open or insecure may result in compromise "
@@ -9621,20 +9479,20 @@ msgstr ""
 "データを危険にさらすことにつながり、機密性と完全性を失うことになる可能性があ"
 "ります。\n"
 
-#: vulnerabilities.py:4626
+#: vulnerabilities.py:4630
 msgid "Insecure Broadcast Receivers registered dynamically"
 msgstr "動的に登録された安全でないブロードキャストレシーバ"
 
-#: vulnerabilities.py:4628
+#: vulnerabilities.py:4632
 msgid "Does the Android Application registers Broadcast Receivers dynamically?"
 msgstr ""
 "Android アプリケーションはブロードキャストレシーバ を動的に登録しますか？"
 
-#: vulnerabilities.py:4632
+#: vulnerabilities.py:4636
 msgid "There is no insecure Dynamically registered Broadcast Receiver"
 msgstr "動的に登録された安全でないブロードキャストレシーバはありませんでした。"
 
-#: vulnerabilities.py:4633
+#: vulnerabilities.py:4637
 msgid ""
 "\n"
 "A BroadcastReceiver represents one main component of an essential\n"
@@ -9669,7 +9527,7 @@ msgstr ""
 "このメカニズムは、Androidアーキテクチャの2番目のフレームワークレイヤーの"
 "Activity Managerサービス（AMS）によって管理されます。\n"
 
-#: vulnerabilities.py:4646
+#: vulnerabilities.py:4650
 msgid ""
 "\n"
 "Broadcast Receivers which are set Dynamically and are not protected\n"
@@ -9677,7 +9535,7 @@ msgstr ""
 "\n"
 "動的に設定された安全でないブロードキャストレシーバー\n"
 
-#: vulnerabilities.py:4650
+#: vulnerabilities.py:4654
 msgid ""
 "\n"
 "To protect broadcast, it needs to be registered with permissions when it\n"
@@ -9694,7 +9552,7 @@ msgstr ""
 "プリケーションに到着するためにトラストゾーンを通過しているので、検証する必要"
 "があります。\n"
 
-#: vulnerabilities.py:4658
+#: vulnerabilities.py:4662
 msgid ""
 "\n"
 "If the broadcast filter is listening for an intent that isn't a restricted\n"
@@ -9714,20 +9572,20 @@ msgstr ""
 "合、または他の機能の実行を開始する場合、マルウェアは、アプリケーションへの新"
 "しいエントリポイントを持ちます。\n"
 
-#: vulnerabilities.py:4675
+#: vulnerabilities.py:4679
 msgid "Android Component Hijacking via Intent"
 msgstr "インテントによるAndroidコンポーネントのハイジャック"
 
-#: vulnerabilities.py:4676
+#: vulnerabilities.py:4680
 msgid "Is any Android component vulnerable to Intent hijacking?"
 msgstr "Androidコンポーネントはインテントのハイジャックに対して脆弱ですか？"
 
-#: vulnerabilities.py:4678
+#: vulnerabilities.py:4682
 msgid "Application has no vulnerable components for Intent hijacking"
 msgstr ""
 "アプリケーションにインテントハイジャックに脆弱なコンポーネントはありません。"
 
-#: vulnerabilities.py:4679
+#: vulnerabilities.py:4683
 msgid ""
 "\n"
 "Android app can have four types of components:\n"
@@ -9808,7 +9666,7 @@ msgstr ""
 "- **インテント スプーフィング*は、悪意のあるアプリケーションがインテントを偽"
 "造することによって望ましくない動作を誘発する攻撃です。\n"
 
-#: vulnerabilities.py:4714
+#: vulnerabilities.py:4718
 msgid ""
 "\n"
 "An implicit intent is being created. This may leave to an intent hijacking\n"
@@ -9821,7 +9679,7 @@ msgstr ""
 "クションとカテゴリに登録し、データを侵害したり、動きを変えたりするインテント"
 "を横取りする可能性のある、インテントハイジャック攻撃の可能性があります。\n"
 
-#: vulnerabilities.py:4721
+#: vulnerabilities.py:4725
 msgid ""
 "\n"
 "Android framework provides \"*PendingIntent*\" mechanism to safely perform "
@@ -9863,7 +9721,7 @@ msgstr ""
 "    }\n"
 "\n"
 
-#: vulnerabilities.py:4739
+#: vulnerabilities.py:4743
 msgid ""
 "\n"
 "This application wants to create a user account in several trusted\n"
@@ -9910,15 +9768,15 @@ msgstr ""
 "ワイトリストを作成するか、個々のレシーバーにインテントをプログラムで送信しま"
 "す。\n"
 
-#: vulnerabilities.py:4761
+#: vulnerabilities.py:4765
 msgid ""
 "\n"
 "This vulnerability is related to:\n"
+"\n"
 "- [CWE-927](https://cwe.mitre.org/data/definitions/927.html): Use of "
-"Implicit\n"
-"  Intent for Sensitive Communication\n"
-"- [JVN#31860555](https://jvn.jp/en/jp/JVN31860555/)  Twicca fails to\n"
-"  restrict access permissions\n"
+"Implicit Intent for Sensitive Communication\n"
+"- [JVN#31860555](https://jvn.jp/en/jp/JVN31860555/)  Twicca fails to "
+"restrict access permissions\n"
 msgstr ""
 "\n"
 "脆弱性との関連:\n"
@@ -9927,19 +9785,19 @@ msgstr ""
 "- [JVN#31860555](https://jvn.jp/en/jp/JVN31860555/)  Twiccaのアクセス許可制限"
 "失敗\n"
 
-#: vulnerabilities.py:4775
+#: vulnerabilities.py:4778
 msgid "Sensitive information in Sqlite database"
 msgstr "Sqlite データベースの機密情報"
 
-#: vulnerabilities.py:4777
+#: vulnerabilities.py:4780
 msgid "Is the application leaking any sensitive information in SQLITE DB?"
 msgstr "アプリケーションがSQLite DBの機密情報を漏洩していませんか？"
 
-#: vulnerabilities.py:4780
+#: vulnerabilities.py:4783
 msgid "Application is not vulnerable to SQLITE db"
 msgstr "アプリケーションはSQLite DBに対して脆弱ではありません。"
 
-#: vulnerabilities.py:4781
+#: vulnerabilities.py:4784
 msgid ""
 "\n"
 "Android apps contain a lot of user information which also includes some\n"
@@ -9976,7 +9834,7 @@ msgstr ""
 "ただし、これらのデータベースには暗号化のための組み込みサポートはないため、こ"
 "れらのファイルにはすべての情報がプレーンテキスト形式で保存されます。\n"
 
-#: vulnerabilities.py:4796
+#: vulnerabilities.py:4799
 msgid ""
 "\n"
 "SQLITE databases which are leaking information and their queries are listed\n"
@@ -9985,7 +9843,7 @@ msgstr ""
 "\n"
 "情報が漏洩しているSQLiteデータベースとそのクエリを以下に示します。\n"
 
-#: vulnerabilities.py:4804
+#: vulnerabilities.py:4807
 msgid ""
 "\n"
 "1. Wherever possible you must avoid storing sensitive data within your app.\n"
@@ -10040,7 +9898,7 @@ msgstr ""
 "- サーバーにキーを格納し、Webサービスからのみアクセスできるようにする（デバイ"
 "スがオンラインのときだけアプリケーションを使用できるようにする）\n"
 
-#: vulnerabilities.py:4827
+#: vulnerabilities.py:4830
 msgid ""
 "\n"
 "SQLite is an SQL database engine that stores data in .db files.\n"
@@ -10080,19 +9938,19 @@ msgstr ""
 "供されたデータから作成され、平文ファイルが `/ data / data / <package-name> / "
 "databases / privateNotSoSecure`　に保存されます。\n"
 
-#: vulnerabilities.py:4851
+#: vulnerabilities.py:4854
 msgid "iOS Binary having ASLR Protection"
 msgstr "ASLR保護を持つiOSバイナリ"
 
-#: vulnerabilities.py:4852
+#: vulnerabilities.py:4855
 msgid "Does the application have ASLR Protection?"
 msgstr "アプリケーションにASLR保護機能はありますか？"
 
-#: vulnerabilities.py:4853
+#: vulnerabilities.py:4856
 msgid "The application does seem to have ASLR Protection."
 msgstr "アプリケーションにASLR保護があるようです。"
 
-#: vulnerabilities.py:4854
+#: vulnerabilities.py:4857
 msgid ""
 "\n"
 "iOS has several mechanisms which prevent the application from being\n"
@@ -10116,7 +9974,7 @@ msgstr ""
 "- アドレス空間配置のランダム化（ASLR）：通常、-fPIE -pieを使用してコンパイル"
 "される\n"
 
-#: vulnerabilities.py:4869
+#: vulnerabilities.py:4872
 msgid ""
 "\n"
 " Usually the binary is compiled using the `PIE` flag by using `-fPIE -pie`\n"
@@ -10125,538 +9983,399 @@ msgstr ""
 "\n"
 "通常、バイナリは fPIE -pie、PIEフラグを使ってコンパイルされます。\n"
 
-#~ msgid ""
-#~ "\n"
-#~ "We used following approaches to check if the OTP could be bypassed:\n"
-#~ "\n"
-#~ "- Check if the generated OTP can be re-generated by breaking into the "
-#~ "logic of how an OTP is generated\n"
-#~ "- Check if the OTP challenge is present in the client side, which "
-#~ "includes in response body or stored in filesystem layer or in the memory "
-#~ "layer\n"
-#~ "- Check if an older OTP can be re-used again in the future transaction\n"
-#~ "- Check the randomness of the OTP\n"
-#~ "- Check if the OTP could be brute-forced by requesting wrong OTP until a "
-#~ "correct OTP can be verified\n"
-#~ "- Check the expiry time of a generated OTP\n"
-#~ "- Check the number of wrong attempts accepted to verify an OTP\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "We used following approaches to check if the OTP could be bypassed:\n"
-#~ "\n"
-#~ "- Check if the generated OTP can be re-generated by breaking into the "
-#~ "logic of how an OTP is generated\n"
-#~ "- Check if the OTP challenge is present in the client side, which "
-#~ "includes in response body or stored in filesystem layer or in the memory "
-#~ "layer\n"
-#~ "- Check if an older OTP can be re-used again in the future transaction\n"
-#~ "- Check the randomness of the OTP\n"
-#~ "- Check if the OTP could be brute-forced by requesting wrong OTP until a "
-#~ "correct OTP can be verified\n"
-#~ "- Check the expiry time of a generated OTP\n"
-#~ "- Check the number of wrong attempts accepted to verify an OTP\n"
-#~ "\n"
+#: vulnerabilities.py:4891
+msgid ""
+"MediaProjection: Android Service Allows Recording of Audio, Screen Activity"
+msgstr ""
 
-#~ msgid ""
-#~ "\n"
-#~ "It is also recommended to [set proper access control](http://docs.aws."
-#~ "amazon.com/AmazonS3/latest/dev/acl-overview.html)\n"
-#~ "to the buckets such that only the owner of the bucket is able to view/"
-#~ "modify data in the buckets.\n"
-#~ "It is recommended to rotate the access keys, if the keys are leaked. For "
-#~ "more information,\n"
-#~ "click [here.](http://docs.aws.amazon.com/config/latest/developerguide/s3-"
-#~ "bucket-policy.html)\n"
-#~ msgstr ""
-#~ "\n"
-#~ "It is also recommended to [set proper access control](http://docs.aws."
-#~ "amazon.com/AmazonS3/latest/dev/acl-overview.html)\n"
-#~ "to the buckets such that only the owner of the bucket is able to view/"
-#~ "modify data in the buckets.\n"
-#~ "It is recommended to rotate the access keys, if the keys are leaked. For "
-#~ "more information,\n"
-#~ "click [here.](http://docs.aws.amazon.com/config/latest/developerguide/s3-"
-#~ "bucket-policy.html)\n"
+#: vulnerabilities.py:4892
+msgid ""
+"Does the application protect sensitive screens from being displayed in "
+"screencasts initiated by third-party Apps?"
+msgstr ""
 
-#~ msgid ""
-#~ "\n"
-#~ "Buckets with misconfigured access control policies or exposed private "
-#~ "keys\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Buckets with misconfigured access control policies or exposed private "
-#~ "keys\n"
+#: vulnerabilities.py:4893
+msgid ""
+"The application does seem protect sensitive screens from being displayed in "
+"screencasts initiated by third-party Apps."
+msgstr ""
 
-#~ msgid ""
-#~ "\n"
-#~ "Certificate Pinning can be done with these two options:\n"
-#~ "\n"
-#~ "You can\n"
-#~ "1. pin the certificate or\n"
-#~ "2. pin the public key\n"
-#~ "\n"
-#~ "If you choose public keys, you have two additional choices:\n"
-#~ "- pin the `subjectPublicKeyInfo` or\n"
-#~ "- pin one of the concrete types such as `RSAPublicKey` or "
-#~ "`DSAPublicKey`.\n"
-#~ "\n"
-#~ "The three choices are explained below in more detail. I would encourage "
-#~ "you\n"
-#~ "to pin the subjectPublicKeyInfo because it has the public parameters\n"
-#~ "(such as {e,n} for an RSA public key) and contextual information such as\n"
-#~ "an algorithm and OID. The context will help you keep your bearings at "
-#~ "times,\n"
-#~ "and the figure to the right shows the additional information available.\n"
-#~ "Certificate\n"
-#~ "\n"
-#~ "### Certificate\n"
-#~ "\n"
-#~ "The certificate is easiest to pin. You can fetch the certificate out of "
-#~ "band\n"
-#~ "for the website, have the IT folks email your company certificate to "
-#~ "you,\n"
-#~ "use openssl s_client to retrieve the certificate etc. At runtime, you\n"
-#~ "retrieve the website or server's certificate in the callback. Within the\n"
-#~ "callback, you compare the retrieved certificate with the certificate "
-#~ "embedded\n"
-#~ "within the program. If the comparison fails, then fail the method or "
-#~ "function.\n"
-#~ "There is a downside to pinning a certificate. If the site rotates its\n"
-#~ "certificate on a regular basis, then your application would need to be "
-#~ "updated\n"
-#~ "regularly. For example, Google rotates its certificates, so you will need "
-#~ "to\n"
-#~ "update your application about once a month (if it depended on Google "
-#~ "services).\n"
-#~ "Even though Google rotates its certificates, the underlying public keys\n"
-#~ "(within the certificate) remain static.\n"
-#~ "\n"
-#~ "#### Public Key\n"
-#~ "\n"
-#~ "Public key pinning is more flexible but a little trickier due to the "
-#~ "extra\n"
-#~ "steps necessary to extract the public key from a certificate. As with a\n"
-#~ "certificate, the program checks the extracted public key with its "
-#~ "embedded\n"
-#~ "copy of the public key.\n"
-#~ "There are two downsides to public key pinning. First, it's harder to "
-#~ "work\n"
-#~ "with keys (versus certificates) since you must extract the key from the\n"
-#~ "certificate. Extraction is a minor inconvenience in Java and .Net, buts "
-#~ "it's\n"
-#~ "uncomfortable in Cocoa/CocoaTouch and OpenSSL. Second, the key is static\n"
-#~ "and may violate key rotation policies.\n"
-#~ "\n"
-#~ "#### Hashing\n"
-#~ "While the three choices above used DER encoding, its also acceptable to "
-#~ "use\n"
-#~ "a hash of the information. In fact, the original sample programs were "
-#~ "written\n"
-#~ "using digested certificates and public keys. The samples were changed to\n"
-#~ "allow a programmer to inspect the objects with tools like dumpasn1 and\n"
-#~ "other ASN.1 decoders.\n"
-#~ "\n"
-#~ "Hashing also provides three additional benefits. First, hashing allows "
-#~ "you\n"
-#~ "to anonymize a certificate or public key. This might be important if you\n"
-#~ "application is concerned about leaking information during decompilation "
-#~ "and\n"
-#~ "re-engineering. Second, a digested certificate fingerprint is often "
-#~ "available\n"
-#~ "as a native API for many libraries, so its convenient to use.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Certificate Pinning can be done with these two options:\n"
-#~ "\n"
-#~ "You can\n"
-#~ "1. pin the certificate or\n"
-#~ "2. pin the public key\n"
-#~ "\n"
-#~ "If you choose public keys, you have two additional choices:\n"
-#~ "- pin the `subjectPublicKeyInfo` or\n"
-#~ "- pin one of the concrete types such as `RSAPublicKey` or "
-#~ "`DSAPublicKey`.\n"
-#~ "\n"
-#~ "The three choices are explained below in more detail. I would encourage "
-#~ "you\n"
-#~ "to pin the subjectPublicKeyInfo because it has the public parameters\n"
-#~ "(such as {e,n} for an RSA public key) and contextual information such as\n"
-#~ "an algorithm and OID. The context will help you keep your bearings at "
-#~ "times,\n"
-#~ "and the figure to the right shows the additional information available.\n"
-#~ "Certificate\n"
-#~ "\n"
-#~ "### Certificate\n"
-#~ "\n"
-#~ "The certificate is easiest to pin. You can fetch the certificate out of "
-#~ "band\n"
-#~ "for the website, have the IT folks email your company certificate to "
-#~ "you,\n"
-#~ "use openssl s_client to retrieve the certificate etc. At runtime, you\n"
-#~ "retrieve the website or server's certificate in the callback. Within the\n"
-#~ "callback, you compare the retrieved certificate with the certificate "
-#~ "embedded\n"
-#~ "within the program. If the comparison fails, then fail the method or "
-#~ "function.\n"
-#~ "There is a downside to pinning a certificate. If the site rotates its\n"
-#~ "certificate on a regular basis, then your application would need to be "
-#~ "updated\n"
-#~ "regularly. For example, Google rotates its certificates, so you will need "
-#~ "to\n"
-#~ "update your application about once a month (if it depended on Google "
-#~ "services).\n"
-#~ "Even though Google rotates its certificates, the underlying public keys\n"
-#~ "(within the certificate) remain static.\n"
-#~ "\n"
-#~ "#### Public Key\n"
-#~ "\n"
-#~ "Public key pinning is more flexible but a little trickier due to the "
-#~ "extra\n"
-#~ "steps necessary to extract the public key from a certificate. As with a\n"
-#~ "certificate, the program checks the extracted public key with its "
-#~ "embedded\n"
-#~ "copy of the public key.\n"
-#~ "There are two downsides to public key pinning. First, it's harder to "
-#~ "work\n"
-#~ "with keys (versus certificates) since you must extract the key from the\n"
-#~ "certificate. Extraction is a minor inconvenience in Java and .Net, buts "
-#~ "it's\n"
-#~ "uncomfortable in Cocoa/CocoaTouch and OpenSSL. Second, the key is static\n"
-#~ "and may violate key rotation policies.\n"
-#~ "\n"
-#~ "#### Hashing\n"
-#~ "While the three choices above used DER encoding, its also acceptable to "
-#~ "use\n"
-#~ "a hash of the information. In fact, the original sample programs were "
-#~ "written\n"
-#~ "using digested certificates and public keys. The samples were changed to\n"
-#~ "allow a programmer to inspect the objects with tools like dumpasn1 and\n"
-#~ "other ASN.1 decoders.\n"
-#~ "\n"
-#~ "Hashing also provides three additional benefits. First, hashing allows "
-#~ "you\n"
-#~ "to anonymize a certificate or public key. This might be important if you\n"
-#~ "application is concerned about leaking information during decompilation "
-#~ "and\n"
-#~ "re-engineering. Second, a digested certificate fingerprint is often "
-#~ "available\n"
-#~ "as a native API for many libraries, so its convenient to use.\n"
-#~ "\n"
+#: vulnerabilities.py:4894
+msgid ""
+"\n"
+"Starting with Android 5.0, Google introduced the android.media.projection "
+"API which allows any third-party App to perform screen capture and screen "
+"sharing (fixed in Android 8).\n"
+"\n"
+"Such an App can capture everything on the device’s screen, including "
+"sensitive activity from all other Apps such as password keystrokes, credit "
+"card data, etc. The capturing ability remains on even if the user terminates/"
+"closes the App, but not after a reboot.\n"
+"\n"
+msgstr ""
 
-#~ msgid ""
-#~ "\n"
-#~ "*   OWASP [Transport Layer Protection Cheat Sheet](/index.php/"
-#~ "Transport_Layer_Protection_Cheat_Sheet \"Transport Layer Protection Cheat "
-#~ "Sheet\")\n"
-#~ "*   IETF [RFC 1421 (PEM Encoding)](http://www.ietf.org/rfc/rfc1421.txt)\n"
-#~ "*   IETF [RFC 4648 (Base16, Base32, and Base64 Encodings)](http://www."
-#~ "ietf.org/rfc/rfc4648.txt)\n"
-#~ "*   IETF [RFC 5280 (Internet X.509, PKIX)](http://www.ietf.org/rfc/"
-#~ "rfc5280.txt)\n"
-#~ "*   IETF [RFC 3279 (PKI, X509 Algorithms and CRL Profiles)](http://www."
-#~ "ietf.org/rfc/rfc3279.txt)\n"
-#~ "*   IETF [RFC 4055 (PKI, X509 Additional Algorithms and CRL Profiles)]"
-#~ "(http://www.ietf.org/rfc/rfc4055.txt)\n"
-#~ "*   IETF [RFC 2246 (TLS 1.0)](http://www.ietf.org/rfc/rfc2246.txt)\n"
-#~ "*   IETF [RFC 4346 (TLS 1.1)](http://www.ietf.org/rfc/rfc4346.txt)\n"
-#~ "*   IETF [RFC 5246 (TLS 1.2)](http://www.ietf.org/rfc/rfc5246.txt)\n"
-#~ "*   RSA Laboratories [PKCS#1, RSA Encryption Standard](http://www.rsa.com/"
-#~ "rsalabs/node.asp?id=2125)\n"
-#~ "*   RSA Laboratories [PKCS#6, Extended-Certificate Syntax Standard]"
-#~ "(http://www.rsa.com/rsalabs/node.asp?id=2128)\n"
-#~ msgstr ""
-#~ "\n"
-#~ "*   OWASP [Transport Layer Protection Cheat Sheet](/index.php/"
-#~ "Transport_Layer_Protection_Cheat_Sheet \"Transport Layer Protection Cheat "
-#~ "Sheet\")\n"
-#~ "*   IETF [RFC 1421 (PEM Encoding)](http://www.ietf.org/rfc/rfc1421.txt)\n"
-#~ "*   IETF [RFC 4648 (Base16, Base32, and Base64 Encodings)](http://www."
-#~ "ietf.org/rfc/rfc4648.txt)\n"
-#~ "*   IETF [RFC 5280 (Internet X.509, PKIX)](http://www.ietf.org/rfc/"
-#~ "rfc5280.txt)\n"
-#~ "*   IETF [RFC 3279 (PKI, X509 Algorithms and CRL Profiles)](http://www."
-#~ "ietf.org/rfc/rfc3279.txt)\n"
-#~ "*   IETF [RFC 4055 (PKI, X509 Additional Algorithms and CRL Profiles)]"
-#~ "(http://www.ietf.org/rfc/rfc4055.txt)\n"
-#~ "*   IETF [RFC 2246 (TLS 1.0)](http://www.ietf.org/rfc/rfc2246.txt)\n"
-#~ "*   IETF [RFC 4346 (TLS 1.1)](http://www.ietf.org/rfc/rfc4346.txt)\n"
-#~ "*   IETF [RFC 5246 (TLS 1.2)](http://www.ietf.org/rfc/rfc5246.txt)\n"
-#~ "*   RSA Laboratories [PKCS#1, RSA Encryption Standard](http://www.rsa.com/"
-#~ "rsalabs/node.asp?id=2125)\n"
-#~ "*   RSA Laboratories [PKCS#6, Extended-Certificate Syntax Standard]"
-#~ "(http://www.rsa.com/rsalabs/node.asp?id=2128)\n"
+#: vulnerabilities.py:4900
+msgid ""
+"\n"
+"Protect all sensitive windows within the App by enabling the `FLAG_SECURE` "
+"flag. This flag will prevent Apps from being able to record the protected "
+"windows. Also, the flag will prevent users from taking screenshots of these "
+"windows (by pressing the VOLUME_DOWN and POWER buttons). As such screenshots "
+"are stored on the SDCard by default, they are accessible to all Apps and "
+"sensitive data may be exposed.\n"
+msgstr ""
 
-#~ msgid ""
-#~ "\n"
-#~ "The mystical initialization vector (IV) is confusing. In CBC-mode, each\n"
-#~ "16-byte encryption influences the next 16-byte encryption. It's also the\n"
-#~ "default. The problem is about block 0. It is a random block -1 which is\n"
-#~ "the IV.\n"
-#~ "\n"
-#~ "This is listed as optional in `CCCrypt()` which is confusing because it\n"
-#~ "isn't really optional in CBC mode. If it is not provided, then it'll\n"
-#~ "automatically generate an all-0 IV. That throws away significant\n"
-#~ "protection on the first block. IV is just 16 random bytes.\n"
-#~ "\n"
-#~ "The method returns the encrypted data (nil for error), and returns the\n"
-#~ "IV, salt and error by reference.\n"
-#~ "\n"
-#~ "    NSData *iv;\n"
-#~ "    NSData *salt;\n"
-#~ "    NSError *error;\n"
-#~ "    NSData *encryptedData = [RNCryptManager encryptedDataForData:"
-#~ "plaintextData\n"
-#~ "                                                        password:"
-#~ "password\n"
-#~ "                                                              iv:&iv\n"
-#~ "                                                            salt:&salt\n"
-#~ "                                                           error:"
-#~ "&error];\n"
-#~ "\n"
-#~ "Example implementation\n"
-#~ "\n"
-#~ "    #import <CommonCrypto/CommonCryptor.h>\n"
-#~ "    #import <CommonCrypto/CommonKeyDerivation.h>\n"
-#~ "\n"
-#~ "    NSString * const\n"
-#~ "    kRNCryptManagerErrorDomain = @\"net.robnapier.RNCryptManager\";\n"
-#~ "\n"
-#~ "    const CCAlgorithm kAlgorithm = kCCAlgorithmAES128;\n"
-#~ "    const NSUInteger kAlgorithmKeySize = kCCKeySizeAES128;\n"
-#~ "    const NSUInteger kAlgorithmBlockSize = kCCBlockSizeAES128;\n"
-#~ "    const NSUInteger kAlgorithmIVSize = kCCBlockSizeAES128;\n"
-#~ "    const NSUInteger kPBKDFSaltSize = 8;\n"
-#~ "    const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4\n"
-#~ "\n"
-#~ "    + (NSData *)encryptedDataForData:(NSData *)data\n"
-#~ "                            password:(NSString *)password\n"
-#~ "                                  iv:(NSData )iv\n"
-#~ "                                salt:(NSData )salt\n"
-#~ "                               error:(NSError )error {\n"
-#~ "      NSAssert(iv, @\"IV must not be NULL\");\n"
-#~ "      NSAssert(salt, @\"salt must not be NULL\");\n"
-#~ "\n"
-#~ "      *iv = [self randomDataOfLength:kAlgorithmIVSize];\n"
-#~ "      *salt = [self randomDataOfLength:kPBKDFSaltSize];\n"
-#~ "\n"
-#~ "      NSData *key = [self AESKeyForPassword:password salt:*salt];\n"
-#~ "\n"
-#~ "      size_t outLength;\n"
-#~ "      NSMutableData *\n"
-#~ "      cipherData = [NSMutableData dataWithLength:data.length +\n"
-#~ "                    kAlgorithmBlockSize];\n"
-#~ "\n"
-#~ "      CCCryptorStatus\n"
-#~ "      result = CCCrypt(kCCEncrypt, // operation\n"
-#~ "                       kAlgorithm, // Algorithm\n"
-#~ "                       kCCOptionPKCS7Padding, // options\n"
-#~ "                       key.bytes, // key\n"
-#~ "                       key.length, // keylength\n"
-#~ "                       (*iv).bytes,// iv\n"
-#~ "                       data.bytes, // dataIn\n"
-#~ "                       data.length, // dataInLength,\n"
-#~ "                       cipherData.mutableBytes, // dataOut\n"
-#~ "                       cipherData.length, // dataOutAvailable\n"
-#~ "                       &outLength); // dataOutMoved\n"
-#~ "\n"
-#~ "      if (result == kCCSuccess) {\n"
-#~ "        cipherData.length = outLength;\n"
-#~ "      }\n"
-#~ "      else {\n"
-#~ "        if (error) {\n"
-#~ "          *error = [NSError errorWithDomain:kRNCryptManagerErrorDomain\n"
-#~ "                                       code:result\n"
-#~ "                                   userInfo:nil];\n"
-#~ "        }\n"
-#~ "        return nil;\n"
-#~ "      }\n"
-#~ "\n"
-#~ "      return cipherData;\n"
-#~ "    }\n"
-#~ "\n"
-#~ "    + (NSData *)randomDataOfLength:(size_t)length {\n"
-#~ "      NSMutableData *data = [NSMutableData dataWithLength:length];\n"
-#~ "\n"
-#~ "      int result = SecRandomCopyBytes(kSecRandomDefault,\n"
-#~ "                                      length,\n"
-#~ "                                      data.mutableBytes);\n"
-#~ "      NSAssert(result == 0, @\"Unable to generate random bytes: %d\",\n"
-#~ "               errno);\n"
-#~ "\n"
-#~ "      return data;\n"
-#~ "    }\n"
-#~ "\n"
-#~ "    // Replace this with a 10,000 hash calls if you don't have "
-#~ "CCKeyDerivationPBKDF\n"
-#~ "    + (NSData *)AESKeyForPassword:(NSString *)password\n"
-#~ "                             salt:(NSData *)salt {\n"
-#~ "      NSMutableData *\n"
-#~ "      derivedKey = [NSMutableData dataWithLength:kAlgorithmKeySize];\n"
-#~ "\n"
-#~ "      int\n"
-#~ "      result = CCKeyDerivationPBKDF(kCCPBKDF2,            // algorithm\n"
-#~ "                                    password.UTF8String,  // password\n"
-#~ "                                    [password lengthOfBytesUsingEncoding:"
-#~ "NSUTF8StringEncoding],  // passwordLength\n"
-#~ "                                    salt.bytes,           // salt\n"
-#~ "                                    salt.length,          // saltLen\n"
-#~ "                                    kCCPRFHmacAlgSHA1,    // PRF\n"
-#~ "                                    kPBKDFRounds,         // rounds\n"
-#~ "                                    derivedKey.mutableBytes, // "
-#~ "derivedKey\n"
-#~ "                                    derivedKey.length); // derivedKeyLen\n"
-#~ "\n"
-#~ "      // Do not log password here\n"
-#~ "      NSAssert(result == kCCSuccess,\n"
-#~ "               @\"Unable to create AES key for password: %d\", result);\n"
-#~ "\n"
-#~ "      return derivedKey;\n"
-#~ "    }\n"
-#~ "\n"
-#~ msgstr ""
-#~ "initialization vector (IV) は紛らわしい存在です。\n"
-#~ "CBCモードでは、各16バイトの暗号化が次の16バイト暗号化に影響し、 これもデ"
-#~ "フォルトです。\n"
-#~ "問題はブロック0についてです。これはIVであるランダムブロック-1です。\n"
-#~ "これは `CCCrypt（）`にオプションとしてリストされていますが、CBCモードでは"
-#~ "実際にはオプションではないので混乱が生じます。\n"
-#~ "提供されていない場合、自動的にall-0 IVが生成されます。 それは最初のブロッ"
-#~ "クに大きな保護を捨てます。 IVはちょうど16のランダムバイトです。\n"
-#~ "このメソッドは、暗号化されたデータ（エラーの場合はnil）を返し、参照によっ"
-#~ "てIV、ソルト、およびエラーを返します。\n"
-#~ "\n"
-#~ "    NSData *iv;\n"
-#~ "    NSData *salt;\n"
-#~ "    NSError *error;\n"
-#~ "    NSData *encryptedData = [RNCryptManager encryptedDataForData:"
-#~ "plaintextData\n"
-#~ "                                                        password:"
-#~ "password\n"
-#~ "                                                              iv:&iv\n"
-#~ "                                                            salt:&salt\n"
-#~ "                                                           error:"
-#~ "&error];\n"
-#~ "\n"
-#~ "Example implementation\n"
-#~ "\n"
-#~ "    #import <CommonCrypto/CommonCryptor.h>\n"
-#~ "    #import <CommonCrypto/CommonKeyDerivation.h>\n"
-#~ "\n"
-#~ "    NSString * const\n"
-#~ "    kRNCryptManagerErrorDomain = @\"net.robnapier.RNCryptManager\";\n"
-#~ "\n"
-#~ "    const CCAlgorithm kAlgorithm = kCCAlgorithmAES128;\n"
-#~ "    const NSUInteger kAlgorithmKeySize = kCCKeySizeAES128;\n"
-#~ "    const NSUInteger kAlgorithmBlockSize = kCCBlockSizeAES128;\n"
-#~ "    const NSUInteger kAlgorithmIVSize = kCCBlockSizeAES128;\n"
-#~ "    const NSUInteger kPBKDFSaltSize = 8;\n"
-#~ "    const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4\n"
-#~ "\n"
-#~ "    + (NSData *)encryptedDataForData:(NSData *)data\n"
-#~ "                            password:(NSString *)password\n"
-#~ "                                  iv:(NSData )iv\n"
-#~ "                                salt:(NSData )salt\n"
-#~ "                               error:(NSError )error {\n"
-#~ "      NSAssert(iv, @\"IV must not be NULL\");\n"
-#~ "      NSAssert(salt, @\"salt must not be NULL\");\n"
-#~ "\n"
-#~ "      *iv = [self randomDataOfLength:kAlgorithmIVSize];\n"
-#~ "      *salt = [self randomDataOfLength:kPBKDFSaltSize];\n"
-#~ "\n"
-#~ "      NSData *key = [self AESKeyForPassword:password salt:*salt];\n"
-#~ "\n"
-#~ "      size_t outLength;\n"
-#~ "      NSMutableData *\n"
-#~ "      cipherData = [NSMutableData dataWithLength:data.length +\n"
-#~ "                    kAlgorithmBlockSize];\n"
-#~ "\n"
-#~ "      CCCryptorStatus\n"
-#~ "      result = CCCrypt(kCCEncrypt, // operation\n"
-#~ "                       kAlgorithm, // Algorithm\n"
-#~ "                       kCCOptionPKCS7Padding, // options\n"
-#~ "                       key.bytes, // key\n"
-#~ "                       key.length, // keylength\n"
-#~ "                       (*iv).bytes,// iv\n"
-#~ "                       data.bytes, // dataIn\n"
-#~ "                       data.length, // dataInLength,\n"
-#~ "                       cipherData.mutableBytes, // dataOut\n"
-#~ "                       cipherData.length, // dataOutAvailable\n"
-#~ "                       &outLength); // dataOutMoved\n"
-#~ "\n"
-#~ "      if (result == kCCSuccess) {\n"
-#~ "        cipherData.length = outLength;\n"
-#~ "      }\n"
-#~ "      else {\n"
-#~ "        if (error) {\n"
-#~ "          *error = [NSError errorWithDomain:kRNCryptManagerErrorDomain\n"
-#~ "                                       code:result\n"
-#~ "                                   userInfo:nil];\n"
-#~ "        }\n"
-#~ "        return nil;\n"
-#~ "      }\n"
-#~ "\n"
-#~ "      return cipherData;\n"
-#~ "    }\n"
-#~ "\n"
-#~ "    + (NSData *)randomDataOfLength:(size_t)length {\n"
-#~ "      NSMutableData *data = [NSMutableData dataWithLength:length];\n"
-#~ "\n"
-#~ "      int result = SecRandomCopyBytes(kSecRandomDefault,\n"
-#~ "                                      length,\n"
-#~ "                                      data.mutableBytes);\n"
-#~ "      NSAssert(result == 0, @\"Unable to generate random bytes: %d\",\n"
-#~ "               errno);\n"
-#~ "\n"
-#~ "      return data;\n"
-#~ "    }\n"
-#~ "\n"
-#~ "    // Replace this with a 10,000 hash calls if you don't have "
-#~ "CCKeyDerivationPBKDF\n"
-#~ "    + (NSData *)AESKeyForPassword:(NSString *)password\n"
-#~ "                             salt:(NSData *)salt {\n"
-#~ "      NSMutableData *\n"
-#~ "      derivedKey = [NSMutableData dataWithLength:kAlgorithmKeySize];\n"
-#~ "\n"
-#~ "      int\n"
-#~ "      result = CCKeyDerivationPBKDF(kCCPBKDF2,            // algorithm\n"
-#~ "                                    password.UTF8String,  // password\n"
-#~ "                                    [password lengthOfBytesUsingEncoding:"
-#~ "NSUTF8StringEncoding],  // passwordLength\n"
-#~ "                                    salt.bytes,           // salt\n"
-#~ "                                    salt.length,          // saltLen\n"
-#~ "                                    kCCPRFHmacAlgSHA1,    // PRF\n"
-#~ "                                    kPBKDFRounds,         // rounds\n"
-#~ "                                    derivedKey.mutableBytes, // "
-#~ "derivedKey\n"
-#~ "                                    derivedKey.length); // derivedKeyLen\n"
-#~ "\n"
-#~ "      // Do not log password here\n"
-#~ "      NSAssert(result == kCCSuccess,\n"
-#~ "               @\"Unable to create AES key for password: %d\", result);\n"
-#~ "\n"
-#~ "      return derivedKey;\n"
-#~ "    }\n"
-#~ "\n"
+#: vulnerabilities.py:4904
+msgid ""
+"\n"
+"Below is an example of how to use `FLAG_SECURE` inside your activity\n"
+msgstr ""
 
-#~ msgid ""
-#~ "\n"
-#~ "To test for this vulnerability, all locations in the application need to "
-#~ "be mapped where user input is used to reference objects directly.\n"
-#~ "For example, locations where user input is used to access a database row, "
-#~ "a file or even an application page.\n"
-#~ "Next, the value of the parameter used to reference objects is modified "
-#~ "and assessed whether it is possible to\n"
-#~ "retrieve objects belonging to other users or otherwise bypass "
-#~ "authorisation.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "To test for this vulnerability, all locations in the application need to "
-#~ "be mapped where user input is used to reference objects directly.\n"
-#~ "For example, locations where user input is used to access a database row, "
-#~ "a file or even an application page.\n"
-#~ "Next, the value of the parameter used to reference objects is modified "
-#~ "and assessed whether it is possible to\n"
-#~ "retrieve objects belonging to other users or otherwise bypass "
-#~ "authorisation.\n"
+#: vulnerabilities.py:4919
+msgid ""
+"\n"
+"- [Android 5.0 Docs](https://developer.android.com/about/versions/"
+"android-5.0.html)\n"
+"- [FLAG_SECURE docs](https://developer.android.com/reference/android/view/"
+"WindowManager.LayoutParams#FLAG_SECURE)\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:4931
+msgid "External data in raw SQL queries"
+msgstr ""
+
+#: vulnerabilities.py:4932
+msgid "Does the application uses user-input into raw SQL query?"
+msgstr ""
+
+#: vulnerabilities.py:4933
+msgid "The application does not seem to use raw SQL query."
+msgstr ""
+
+#: vulnerabilities.py:4934
+msgid ""
+"\n"
+"Sql injection is possible because we use quotation marks to delimit strings "
+"and also to be parts of strings, making it impossible to interpret them "
+"sometimes. If we had delimiters that could not be used in string data, sql "
+"injection never would have happened. Solving the delimiter problem "
+"eliminates the sql injection problem. Structure queries do that.\n"
+"\n"
+"Prepared statements are resilient against SQL injection, because parameter "
+"values, which are transmitted later using a different protocol, need not be "
+"correctly escaped. If the original statement template is not derived from "
+"external input, SQL injection cannot occur.\n"
+msgstr ""
+
+#: vulnerabilities.py:4939
+msgid ""
+"\n"
+"Inclusion of input into raw SQL queries can potentially lead to a local SQL "
+"injection vulnerability in the mobile application.\n"
+"\n"
+"The correct approach is to use prepared SQL statements beyond user's "
+"control.\n"
+msgstr ""
+
+#: vulnerabilities.py:4945
+msgid ""
+"\n"
+"Below is an example of how to use Prepeared SQL statement:\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:4959
+msgid ""
+"\n"
+"- [Android SQLite Docs](https://developer.android.com/reference/android/"
+"database/sqlite/SQLiteDatabase.html)\n"
+"- [Android PrepearedStatement docs](https://developer.android.com/reference/"
+"java/sql/PreparedStatement.html)\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:4971
+msgid "Enabled Android Application Backup"
+msgstr ""
+
+#: vulnerabilities.py:4972
+msgid "Is the application backup enabled?"
+msgstr ""
+
+#: vulnerabilities.py:4973
+msgid "The application backup is not enabled."
+msgstr ""
+
+#: vulnerabilities.py:4974
+msgid ""
+"\n"
+"The mobile application uses external backup functionality (default Android "
+"backup mechanism) that may store inside sensitive data from the "
+"application.\n"
+"\n"
+"In certain conditions, this may lead to information disclosure (e.g. when a "
+"backup server or the Gmail account is compromised).\n"
+msgstr ""
+
+#: vulnerabilities.py:4979
+msgid ""
+"\n"
+"Application backup might contain sensitive information private data of the "
+"app into their PC\n"
+msgstr ""
+
+#: vulnerabilities.py:4983
+msgid ""
+"\n"
+"Below is an example of how to prevent the application from getting backed-up "
+"via adb in your AndroidManifest file:\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:4994
+msgid ""
+"\n"
+"- [Android Manifest Docs](https://developer.android.com/guide/topics/"
+"manifest/application-element.html)\n"
+"- [Hacking Android Apps using Backup](http://resources.infosecinstitute.com/"
+"android-hacking-security-part-15-hacking-android-apps-using-backup-"
+"techniques/)\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:5006
+msgid "Javascript CORS enabled in Webview"
+msgstr ""
+
+#: vulnerabilities.py:5007
+msgid "Is the application vulnerable to Javascript CORS?"
+msgstr "]"
+
+#: vulnerabilities.py:5008
+msgid "The application is not vulnerable to Javascript CORS."
+msgstr ""
+
+#: vulnerabilities.py:5009
+msgid ""
+"\n"
+"Cross-Origin Resource Sharing (CORS) is enabled in WebView. JavaScript used "
+"in mobile application can send and receive data from arbitrary remote hosts. "
+"This can be a risk if the remote host is impersonated or compromised.\n"
+msgstr ""
+
+#: vulnerabilities.py:5012
+msgid ""
+"\n"
+"Javascript in the Webview having CORS enabled to be loaded from file and any "
+"arbitary URL\n"
+msgstr ""
+
+#: vulnerabilities.py:5016
+msgid ""
+"\n"
+"Below is an example of how to prevent the application from Javascript CORS "
+"issue:\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:5032
+msgid ""
+"\n"
+"- [Android Webkit Settings Docs](https://developer.android.com/reference/"
+"android/webkit/WebSettings.html)\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:5043
+msgid "Java Object Deserialization Vulnerability"
+msgstr ""
+
+#: vulnerabilities.py:5044
+msgid "Is the application vulnerable to Object deserialization?"
+msgstr ""
+
+#: vulnerabilities.py:5045
+msgid "The application is not vulnerable to object deserialization."
+msgstr ""
+
+#: vulnerabilities.py:5046
+msgid ""
+"\n"
+"It is often convenient to serialize objects for convenient communication or "
+"to save them for later use. However, deserialized data or code can often be "
+"modified without using the provided accessor functions if it does not use "
+"cryptography to protect itself. Furthermore, any cryptography would still be "
+"client-side security - which is of course a dangerous security assumption.\n"
+"\n"
+"An attempt to serialize and then deserialize a class containing transient "
+"fields will result in NULLs where the non-transient data should be. This is "
+"an excellent way to prevent time, environment-based, or sensitive variables "
+"from being carried over and used improperly.\n"
+"\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:5053
+msgid ""
+"\n"
+"Object deserialization performed on an untrusted resource (e.g. user-"
+"supplied input or external storage), can be dangerous if the data for "
+"deserialization is tampered by an attacker.\n"
+msgstr ""
+
+#: vulnerabilities.py:5057
+msgid ""
+"\n"
+"Use only serialization when you have the control over data. Use the "
+"following pointers to figure out if serialization is necessary\n"
+"\n"
+"- Does the deserialization take place before authentication?\n"
+"- Does the deserialization limit which types can be deserialized?\n"
+"- Does the deserialization host have types available which can be repurposed "
+"towards malicious ends?\n"
+msgstr ""
+
+#: vulnerabilities.py:5071
+msgid ""
+"\n"
+"- [CVE-2014-7911](https://androidvulnerabilities.org/vulnerabilities/"
+"ObjectInputStream_deserializable)\n"
+"- [POC for this vulnerability](https://github.com/retme7/CVE-2014-7911_poc)\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:5083
+msgid "Zipperdown Vulnerability leading to Remote Code Execution Attack"
+msgstr ""
+
+#: vulnerabilities.py:5084
+msgid "Is the application vulnerable to ZipperDown?"
+msgstr ""
+
+#: vulnerabilities.py:5085
+msgid "The application is not vulnerable to ZipperDown."
+msgstr ""
+
+#: vulnerabilities.py:5086
+msgid ""
+"\n"
+"ZipperDown attack launches a Man-in-the-Middle (MiTM) attack and replace the "
+"benign .zip file with malicious .zip file over the unencrypted network.\n"
+"\n"
+"The app uses the ZipArchive or SSZipArchive library to decompress it. Since "
+"the ZipArchive and SSZipArchive libraries allow unzipping files in parent "
+"directories, malicious .zip file can be unzipped to overwrite app data or "
+"codes. Apps that dynamically load the codes, such as via JavaScript bridges, "
+"make it easier for an attacker to overwrite the codes and launch remote code "
+"execution attacks.\n"
+msgstr ""
+
+#: vulnerabilities.py:5091
+msgid ""
+"\n"
+"The remote code execution occurs inside the affected app allowing a remote "
+"attacker to possess the same privileges or permissions as the vulnerable "
+"app. For instance, if a vulnerable app has permission to access the user’s "
+"address book, the ZipperDown attacker will also have access to the affected "
+"user’s address book.\n"
+msgstr ""
+
+#: vulnerabilities.py:5095
+msgid ""
+"\n"
+"Use the following pointers to make sure the application is not affected with "
+"ZipperDown vulnerability\n"
+"\n"
+"- Use SSL pinning to download .zip file or any assets\n"
+"- Use the latest version of SSArchive or Ziparchive third-party "
+"decompression library\n"
+msgstr ""
+
+#: vulnerabilities.py:5102
+msgid ""
+"\n"
+"- [Zipperdown Web](https://zipperdown.org/)\n"
+"- [Zipperdown Issue in ZipArchive](https://github.com/ZipArchive/ZipArchive/"
+"issues/453)\n"
+"\n"
+msgstr ""
+
+#: vulnerabilities.py:5114
+msgid "Deprecated setPluginState in WebView"
+msgstr ""
+
+#: vulnerabilities.py:5115
+msgid "Does the application uses setPluginState in WebView?"
+msgstr ""
+
+#: vulnerabilities.py:5116
+msgid "The application does not uses setPluginState in WebView."
+msgstr ""
+
+#: vulnerabilities.py:5117
+msgid ""
+"\n"
+"The mobile application uses a deprecated setPluginState method in WebView. "
+"The \"setPluginState\" method was deprecated in Android’s API level 18 "
+"because plugins will not be supported anymore in the future and should not "
+"be used. Example of plugins are embedded PDF reader, Flash plugin, etc.\n"
+msgstr ""
+
+#: vulnerabilities.py:5120
+msgid ""
+"\n"
+"`setPluginState` has security implication and depricated by Android. It is "
+"unsafe to use in production.\n"
+msgstr ""
+
+#: vulnerabilities.py:5124
+msgid ""
+"\n"
+"`setPluginState` feature is deprecated, don't enable it.\n"
+msgstr ""
+
+#: vulnerabilities.py:5134
+msgid ""
+"- [Webview docs](https://developer.android.com/reference/android/webkit/"
+"WebView)\n"
+"- [WebSettings docs](https://developer.android.com/reference/android/webkit/"
+"WebSettings)"
+msgstr ""
+
+#: vulnerabilities.py:5143
+msgid "Improper Session Management"
+msgstr ""
+
+#: vulnerabilities.py:5144
+msgid "Does the application uses proper Session Management?"
+msgstr ""
+
+#: vulnerabilities.py:5145
+msgid "The application does uses proper Session Management"
+msgstr ""
+
+#: vulnerabilities.py:5146
+msgid ""
+"Once the user successfully logs in to the application with credentials, "
+"access tokens are generated by the server and assigned to the user. "
+"Thereafter, access tokens are used to identify the users and maintain the "
+"session until they logout. It is critical to generate, assign, invalidate "
+"access tokens securely since they provide a way to authenticate and "
+"authorize to the server resources post login. Failing to do so may result in "
+"loss of confidentiality and integrity. "
+msgstr ""
+
+#: vulnerabilities.py:5147
+msgid ""
+"If the application does not manage sessions securely, an attacker may be "
+"able to remotely compromise accounts, reuse the tokens to make unauthorised "
+"API calls on behalf of other users."
+msgstr ""
+
+#: vulnerabilities.py:5149
+msgid ""
+"The application server should generate access tokens which are "
+"cryptographically strong, dynamic and expires as soon as the user logs off "
+"or is inactive for a particular amount of time"
+msgstr ""
