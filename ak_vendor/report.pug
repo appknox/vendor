@@ -261,7 +261,7 @@ html(lang="en")
           | {% trans "Report Summary" %}
       div
         p
-          | {% if data.show_copyright %}{% if data.partner and data.partner.name %}{{ data.partner.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if data.partner and data.partner.name %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
+          | {% if data.show_copyright %}{% if data.partner and data.partner.name %}{{ data.partner.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if data.partner and data.partner.name %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated and manual auditing processes. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}
 
       section
         div
