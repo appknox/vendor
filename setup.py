@@ -24,7 +24,7 @@ setup(
     packages=find_packages(),
     data_files=[
         ('excel', ['ak_vendor/translations/ja/vulnerability.xlsx']),
-        ('report', ['ak_vendor/report.html']),
+        ('report', ['ak_vendor/report.html', 'ak_vendor/report.css']),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
     ],
     include_package_data=True,
