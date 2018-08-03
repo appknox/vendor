@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-03 10:34+0000\n"
+"POT-Creation-Date: 2018-08-03 17:46+0000\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -10360,15 +10360,15 @@ msgstr ""
 
 #: vulnerabilities.py:5008
 msgid "Javascript CORS enabled in Webview"
-msgstr ""
+msgstr "Webview で Javascript CORS が有効"
 
 #: vulnerabilities.py:5009
 msgid "Is the application vulnerable to Javascript CORS?"
-msgstr "]"
+msgstr "アプリケーションは Javascript CORS に対して脆弱ですか？`"
 
 #: vulnerabilities.py:5010
 msgid "The application is not vulnerable to Javascript CORS."
-msgstr ""
+msgstr "このアプリケーションは Javascript CORS に脆弱ではありません。"
 
 #: vulnerabilities.py:5011
 msgid ""
@@ -10377,6 +10377,11 @@ msgid ""
 "in mobile application can send and receive data from arbitrary remote hosts. "
 "This can be a risk if the remote host is impersonated or compromised.\n"
 msgstr ""
+"\n"
+"WebView でクロスソースリソース共有（CORS）が有効になっています。 モバイルアプ"
+"リケーションで使用される JavaScript は、任意のリモートホストからデータを送受"
+"信できます。 これは、リモートホストが偽装されているか、または侵害されている場"
+"合には危険です。\n"
 
 #: vulnerabilities.py:5014
 msgid ""
@@ -10384,6 +10389,8 @@ msgid ""
 "Javascript in the Webview having CORS enabled to be loaded from file and any "
 "arbitary URL\n"
 msgstr ""
+"\n"
+"CORS をファイルと任意のURLからロードできるようにした Webview の Javascript\n"
 
 #: vulnerabilities.py:5018
 msgid ""
@@ -10396,6 +10403,13 @@ msgid ""
 "    settings.setAllowFileAccessFromFileURLs(false)\n"
 "\n"
 msgstr ""
+"\n"
+"以下は、Javascript CORS の問題を防ぐ方法の例です：\n"
+"\n"
+"    WebSettings settings = getSettings();\n"
+"    settings.setAllowUniversalAccessFromFileURLs(false)\n"
+"    settings.setAllowFileAccessFromFileURLs(false)\n"
+"\n"
 
 #: vulnerabilities.py:5026
 msgid ""
@@ -10407,6 +10421,13 @@ msgid ""
 "    settings.setAllowFileAccessFromFileURLs(true)\n"
 "\n"
 msgstr ""
+"\n"
+"安全でないコードの例 :\n"
+"\n"
+"    WebSettings settings = getSettings();\n"
+"    settings.setAllowUniversalAccessFromFileURLs(true)\n"
+"    settings.setAllowFileAccessFromFileURLs(true)\n"
+"\n"
 
 #: vulnerabilities.py:5034
 msgid ""
@@ -10415,6 +10436,10 @@ msgid ""
 "android/webkit/WebSettings.html)\n"
 "\n"
 msgstr ""
+"\n"
+"- [Android Webkit設定について](https://developer.android.com/reference/"
+"android/webkit/WebSettings.html)\n"
+"\n"
 
 #: vulnerabilities.py:5045
 msgid "Java Object Deserialization Vulnerability"
