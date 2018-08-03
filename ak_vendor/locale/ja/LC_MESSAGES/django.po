@@ -10272,15 +10272,15 @@ msgstr ""
 
 #: vulnerabilities.py:4972
 msgid "Enabled Android Application Backup"
-msgstr ""
+msgstr "Androidアプリケーションバックアップが有効"
 
 #: vulnerabilities.py:4973
 msgid "Is the application backup enabled?"
-msgstr ""
+msgstr "アプリケーションのバックアップは有効になっていますか？"
 
 #: vulnerabilities.py:4974
 msgid "The application backup is not enabled."
-msgstr ""
+msgstr "アプリケーションのバックアップが有効になっていません。"
 
 #: vulnerabilities.py:4975
 msgid ""
@@ -10292,6 +10292,13 @@ msgid ""
 "In certain conditions, this may lead to information disclosure (e.g. when a "
 "backup server or the Gmail account is compromised).\n"
 msgstr ""
+"\n"
+"モバイルアプリケーションは、アプリケーションからの機密データ内部に格納される"
+"外部バックアップ機能（デフォルトの Android バックアップメカニズム）を使用しま"
+"す。\n"
+"\n"
+"特定の状況では、これにより情報が漏洩する可能性があります（バックアップサー"
+"バーやGmailアカウントに進入された場合など）。\n"
 
 #: vulnerabilities.py:4980
 msgid ""
@@ -10299,6 +10306,9 @@ msgid ""
 "Application backup might contain sensitive information private data of the "
 "app into their PC\n"
 msgstr ""
+"\n"
+"アプリケーションのバックアップには、PCに保存されている重要な個人情報が含まれ"
+"ている可能性があります。\n"
 
 #: vulnerabilities.py:4984
 msgid ""
@@ -10309,6 +10319,12 @@ msgid ""
 "    android:allowBackup=\"false\"\n"
 "\n"
 msgstr ""
+"\n"
+"以下は、AndroidManifest ファイルの adb でアプリケーションがバックアップされな"
+"いようにする方法の例です：\n"
+"\n"
+"    android:allowBackup=\"false\"\n"
+"\n"
 
 #: vulnerabilities.py:4990
 msgid ""
@@ -10318,6 +10334,11 @@ msgid ""
 "    android:allowBackup=\"true\"\n"
 "\n"
 msgstr ""
+"\n"
+"AndroidManifest ファイル内の安全でないコードの例：\n"
+"\n"
+"    android:allowBackup=\"true\"\n"
+"\n"
 
 #: vulnerabilities.py:4996
 msgid ""
@@ -10329,6 +10350,13 @@ msgid ""
 "techniques/)\n"
 "\n"
 msgstr ""
+"\n"
+"- [Android マニフェスト](https://developer.android.com/guide/topics/manifest/"
+"application-element.html)\n"
+"- [バックアップを使用した Android アプリのハッキング](http://resources."
+"infosecinstitute.com/android-hacking-security-part-15-hacking-android-apps-"
+"using-backup-techniques/)\n"
+"\n"
 
 #: vulnerabilities.py:5008
 msgid "Javascript CORS enabled in Webview"
