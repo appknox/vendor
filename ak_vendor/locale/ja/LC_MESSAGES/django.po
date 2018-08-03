@@ -10458,15 +10458,15 @@ msgstr ""
 
 #: vulnerabilities.py:5085
 msgid "Zipperdown Vulnerability leading to Remote Code Execution Attack"
-msgstr ""
+msgstr "Zipperdown の脆弱性によるリモートのコード実行"
 
 #: vulnerabilities.py:5086
 msgid "Is the application vulnerable to ZipperDown?"
-msgstr ""
+msgstr "アプリケーションは ZipperDown に対して脆弱ですか？"
 
 #: vulnerabilities.py:5087
 msgid "The application is not vulnerable to ZipperDown."
-msgstr ""
+msgstr "アプリケーションは ZipperDown に対して脆弱ではありません。"
 
 #: vulnerabilities.py:5088
 msgid ""
@@ -10481,6 +10481,16 @@ msgid ""
 "make it easier for an attacker to overwrite the codes and launch remote code "
 "execution attacks.\n"
 msgstr ""
+"\n"
+"ZipperDown 攻撃は、Man-in-the-Middle（MiTM）攻撃を開始し、暗号化されていない"
+"ネットワーク上で害のない Zip ファイルを悪意のある zip ファイルに置き換えま"
+"す。\n"
+"アプリケーションは、ZipArchive または SSZipArchive ライブラリを使用して解凍し"
+"ます。 ZipArchiveとSSZipArchiveライブラリは親ディレクトリのファイルを解凍でき"
+"るので、悪意のある zipファイルを解凍してアプリケーションデータやコードを上書"
+"きすることができます。 JavaScriptブリッジなどを介してコードを動的にロードする"
+"アプリケーションは、攻撃者がコードを上書きしてリモートコード実行攻撃を開始し"
+"やすくします。\n"
 
 #: vulnerabilities.py:5093
 msgid ""
@@ -10491,6 +10501,12 @@ msgid ""
 "address book, the ZipperDown attacker will also have access to the affected "
 "user’s address book.\n"
 msgstr ""
+"\n"
+"影響を受けるアプリケーションの内部でリモートコードが実行されるため、リモート"
+"の攻撃者は脆弱なアプリケーションと同じ権限またはアクセス許可を持つことができ"
+"ます。 たとえば、脆弱なアプリケーションにユーザーのアドレス帳にアクセスする権"
+"限がある場合、ZipperDown の攻撃者は影響を受けるユーザーのアドレス帳にもアクセ"
+"スが可能です。\n"
 
 #: vulnerabilities.py:5097
 msgid ""
@@ -10503,6 +10519,12 @@ msgid ""
 "decompression library\n"
 "\n"
 msgstr ""
+"\n"
+"アプリケーションが ZipperDown の脆弱性の影響を受けていないことを次の設問から"
+"確認してください。\n"
+"\n"
+"- SSLピン留めを使用して.zipファイルまたは任意のアセットをダウンロードする\n"
+"- SSArchive または Zipアーカイブ解凍ライブラリの最新バージョンを使用する\n"
 
 #: vulnerabilities.py:5105
 msgid ""
@@ -10512,6 +10534,9 @@ msgid ""
 "issues/453)\n"
 "\n"
 msgstr ""
+"\n"
+"- [Zipperdown](https://zipperdown.org/)- [ZipArchiveにおける Zipperdownの問"
+"題](https://github.com/ZipArchive/ZipArchive/issues/453)\n"
 
 #: vulnerabilities.py:5117
 msgid "Deprecated setPluginState in WebView"
