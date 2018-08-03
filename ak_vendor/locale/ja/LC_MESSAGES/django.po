@@ -10418,15 +10418,16 @@ msgstr ""
 
 #: vulnerabilities.py:5045
 msgid "Java Object Deserialization Vulnerability"
-msgstr ""
+msgstr "Java オブジェクトの逆シリアル化の脆弱性"
 
 #: vulnerabilities.py:5046
 msgid "Is the application vulnerable to Object deserialization?"
-msgstr ""
+msgstr "アプリケーションはオブジェクトの逆シリアル化に対して脆弱ですか？"
 
 #: vulnerabilities.py:5047
 msgid "The application is not vulnerable to object deserialization."
 msgstr ""
+"アプリケーションは、オブジェクトの逆シリアル化に対して脆弱ではありません。"
 
 #: vulnerabilities.py:5048
 msgid ""
@@ -10443,6 +10444,18 @@ msgid ""
 "from being carried over and used improperly.\n"
 "\n"
 msgstr ""
+"\n"
+"通信の利便性のためにオブジェクトをシリアル化したり、後で使用するためにオブ"
+"ジェクトを保存することはよくあります。 ただし、逆シリアル化されたデータまたは"
+"コードは、暗号化を使用して保護しない場合は、提供されたアクセサ関数を使用せず"
+"に変更することができます。 さらに、暗号化は依然としてクライアント側のセキュリ"
+"ティであり危険なセキュリティの前提です。\n"
+"\n"
+"一時的なフィールドを含むクラスをシリアル化したのち、逆シリアル化しようとする"
+"と、非一時的なデータがある箇所が NULL になります。 これは、時間、環境ベースの"
+"変数、または重要な変数が持ち越されて不適切に使用されるのを防ぐ優れた方法で"
+"す。\n"
+"\n"
 
 #: vulnerabilities.py:5054
 msgid ""
@@ -10451,6 +10464,10 @@ msgid ""
 "supplied input or external storage), can be dangerous if the data for "
 "deserialization is tampered by an attacker.\n"
 msgstr ""
+"\n"
+"逆シリアル化のためのデータが攻撃者によって改ざんされている場合、信頼できない"
+"リソース（ユーザー入力や外部ストレージなど）に対して実行されるオブジェクトの"
+"逆シリアル化は危険です。\n"
 
 #: vulnerabilities.py:5058
 msgid ""
@@ -10464,6 +10481,14 @@ msgid ""
 "towards malicious ends?\n"
 "\n"
 msgstr ""
+"\n"
+"データを制御するときは、シリアル化のみを使用します。シリアル化が必要かどうか"
+"を判断するには、次の点を参考にしてください。\n"
+"\n"
+"- 認証前に逆シリアル化が行われますか？\n"
+"- どの型が逆シリアル化ができるか制限されていますか？\n"
+"- 逆シリアル化のホストには、悪意のある者が再利用できる型がありますか？\n"
+"\n"
 
 #: vulnerabilities.py:5066
 msgid ""
@@ -10474,6 +10499,12 @@ msgid ""
 "    exampleOfSerializabledClass = bundle.getSerializable(\"exampleClass\");\n"
 "\n"
 msgstr ""
+"\n"
+"安全でないコードの例 :\n"
+"\n"
+"    bundle.putSerializable(\"exampleClass\", exampleOfSerializabledClass);\n"
+"    exampleOfSerializabledClass = bundle.getSerializable(\"exampleClass\");\n"
+"\n"
 
 #: vulnerabilities.py:5073
 msgid ""
@@ -10483,6 +10514,11 @@ msgid ""
 "- [POC for this vulnerability](https://github.com/retme7/CVE-2014-7911_poc)\n"
 "\n"
 msgstr ""
+"\n"
+"- [CVE-2014-7911](https://androidvulnerabilities.org/vulnerabilities/"
+"ObjectInputStream_deserializable)\n"
+"- [この脆弱性に関するPOC](https://github.com/retme7/CVE-2014-7911_poc)\n"
+"\n"
 
 #: vulnerabilities.py:5085
 msgid "Zipperdown Vulnerability leading to Remote Code Execution Attack"
