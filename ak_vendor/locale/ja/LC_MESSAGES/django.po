@@ -10515,15 +10515,15 @@ msgstr ""
 
 #: vulnerabilities.py:5117
 msgid "Deprecated setPluginState in WebView"
-msgstr ""
+msgstr "WebView の非推奨の setPluginState"
 
 #: vulnerabilities.py:5118
 msgid "Does the application uses setPluginState in WebView?"
-msgstr ""
+msgstr "アプリケーションはWebViewでsetPluginStateを使用していますか？"
 
 #: vulnerabilities.py:5119
 msgid "The application does not uses setPluginState in WebView."
-msgstr ""
+msgstr "アプリケーションはWebViewでsetPluginStateを使用していません。"
 
 #: vulnerabilities.py:5120
 msgid ""
@@ -10533,6 +10533,11 @@ msgid ""
 "because plugins will not be supported anymore in the future and should not "
 "be used. Example of plugins are embedded PDF reader, Flash plugin, etc.\n"
 msgstr ""
+"\n"
+"モバイルアプリケーションは、WebViewで非推奨のsetPluginStateメソッドを使用しま"
+"す。 プラグインは今後サポートされなくなるため、Android の APIレベル18では、"
+"「setPluginState」メソッドは非推奨とされ、使用するべきではありません。 プラグ"
+"インの例には、PDFリーダー、Flash プラグインなどが含まれます。\n"
 
 #: vulnerabilities.py:5123
 msgid ""
@@ -10540,12 +10545,17 @@ msgid ""
 "`setPluginState` has security implication and depricated by Android. It is "
 "unsafe to use in production.\n"
 msgstr ""
+"\n"
+"`setPluginState` はセキュリティの意味合いを持ち、Androidによって非推奨とされ"
+"ています。 製作に使用するのは危険です。\n"
 
 #: vulnerabilities.py:5127
 msgid ""
 "\n"
 "`setPluginState` feature is deprecated, don't enable it.\n"
 msgstr ""
+"\n"
+"`setPluginState` の機能は非推奨です。有効にしないでください。\n"
 
 #: vulnerabilities.py:5130
 msgid ""
@@ -10557,6 +10567,12 @@ msgid ""
 "    settings.setPluginState(WebSettings.PluginState.ON);\n"
 "\n"
 msgstr ""
+"\n"
+"以下は、安全でない実装の例です。\n"
+"    WebSettings settings = webView.getSettings();\n"
+"    settings.setPluginsEnabled(true);\n"
+"    settings.setPluginState(WebSettings.PluginState.ON);\n"
+"\n"
 
 #: vulnerabilities.py:5138
 msgid ""
@@ -10567,6 +10583,12 @@ msgid ""
 "WebSettings)\n"
 "\n"
 msgstr ""
+"\n"
+"- [Webview について](https://developer.android.com/reference/android/webkit/"
+"WebView)\n"
+"- [WebSettings について](https://developer.android.com/reference/android/"
+"webkit/WebSettings)\n"
+"\n"
 
 #: vulnerabilities.py:5150
 msgid "Improper Session Management"
