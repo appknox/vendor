@@ -471,7 +471,7 @@ html(lang="en")
             | {{ analysis.vulnerability.description | safe }}
           | {% for finding in analysis.findings %}
           | {% if finding.title %}
-          h2
+          h5.wrap-content
             | {{ finding.title | escape }}
           | {% endif %}
           pre
@@ -623,7 +623,7 @@ html(lang="en")
               | {{ analysis.vulnerability.description | safe }}
             | {% for finding in analysis.findings %}
             | {% if finding.title %}
-            h2
+            h5.wrap-content
               | {{ finding.title | escape }}
             | {% endif %}
             pre
