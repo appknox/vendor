@@ -1,3 +1,4 @@
+| {% load i18n %}
 doctype 5
 html(lang="en")
   head
@@ -29,15 +30,15 @@ html(lang="en")
       div.sub-heading
         | {% trans "For Internal Purpose" %}
 
-      | {% if data.client.logo != '' %}
+      | {% if data.prepared_for.logo != '' %}
       table.client-logo
         tr
           td
-            img(src="{{ data.client.logo }}" alt="{{ data.client.name }}")
+            img(src="{{ data.prepared_for.logo }}" alt="{{ data.prepared_for.name }}")
       | {% else %}
       div.client-name
         h1
-          | {{ data.client.name }}
+          | {{ data.prepared_for.name }}
       | {% endif %}
 
       table.app-meta
@@ -66,78 +67,61 @@ html(lang="en")
 
       table(class="authors {% if not data.show_copyright %}authors-extended{% endif %}")
         tr
-          | {% if data.partner %}
-          | {% if not data.partner.hide_poweredby_logo %}
+          | {% if not data.prepared_by.hide and not data.powered_by.hide %}
           td.author.author-left
             div.author-heading
               | {% trans "Prepared by" %}
-            | {% if data.partner.logo != '' %}
+            | {% if data.prepared_by.logo != '' %}
             table.author-logo
               tr
                 td
-                  img(src="{{ data.partner.logo }}" alt="{{ data.partner.name }}")
+                  img(src="{{ data.prepared_by.logo }}" alt="{{ data.prepared_by.name }}")
             | {% else %}
             div.author-name
               h3
-                | {{ data.partner.name }}
+                | {{ data.prepared_by.name }}
             | {% endif %}
           td.author.author-right
             div.author-heading
               | {% trans "Powered by" %}
-            | {% if data.author.logo != '' %}
+            | {% if data.powered_by.logo != '' %}
             table.author-logo
               tr
                 td
-                  img(src="{{ data.author.logo }}" alt="{{ data.author.name }}")
+                  img(src="{{ data.powered_by.logo }}" alt="{{ data.powered_by.name }}")
             | {% else %}
             div.author-name
               h3
-                | {{ data.author.name }}
+                | {{ data.powered_by.name }}
             | {% endif %}
-          | {% elif data.partner.hide_poweredby_logo %}
+
+          | {% elif not data.prepared_by.hide and data.powered_by.hide %}
           td.author.author-center
             div.author-heading
               | {% trans "Prepared by" %}
-            | {% if data.partner.logo != '' %}
+            | {% if data.prepared_by.logo != '' %}
             table.author-logo
               tr
                 td
-                  img(src="{{ data.partner.logo }}" alt="{{ data.partner.name }}")
+                  img(src="{{ data.prepared_by.logo }}" alt="{{ data.prepared_by.name }}")
             | {% else %}
             div.author-name
               h3
-                | {{ data.partner.name }}
+                | {{ data.prepared_by.name }}
             | {% endif %}
-          | {% endif %}
-          | {% elif data.whitelabel and data.whitelabel.enabled %}
-          | {% if not data.whitelabel.hide_poweredby_logo %}
+          | {% elif data.prepared_by.hide and not data.powered_by.hide %}
           td.author.author-center
             div.author-heading
               | {% trans "Powered by" %}
-            | {% if data.author.logo != '' %}
+            | {% if data.powered_by.logo != '' %}
             table.author-logo
               tr
                 td
-                  img(src="{{ data.author.logo }}" alt="{{ data.author.name }}")
+                  img(src="{{ data.powered_by.logo }}" alt="{{ data.powered_by.name }}")
             | {% else %}
             div.author-name
               h3
-                | {{ data.author.name }}
-            | {% endif %}
-          | {% endif %}
-          | {% else %}
-          td.author.author-center
-            div.author-heading
-              | {% trans "Prepared by" %}
-            | {% if data.author.logo %}
-            table.author-logo
-              tr
-                td
-                  img(src="{{ data.author.logo }}" alt="{{ data.author.name }}")
-            | {% else %}
-            div.author-name
-              h3
-                | {{ data.author.name }}
+                | {{ data.powered_by.name }}
             | {% endif %}
           | {% endif %}
 
