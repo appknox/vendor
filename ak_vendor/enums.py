@@ -27,6 +27,7 @@ class OrganizationRolesEnum:
     class Meta:
         MEMBER = [0, 'MEMBER']
         OWNER = [1, 'OWNER']
+        ADMIN = [2, 'ADMIN']
 
 
 @choices_without_unknown
