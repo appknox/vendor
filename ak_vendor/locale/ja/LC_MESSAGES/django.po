@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-10 15:45+0000\n"
+"POT-Creation-Date: 2018-09-13 15:33+0000\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -759,27 +759,27 @@ msgstr ""
 "インシデント対応計画を実施します。システム違反に直ちに対応できるようにしてく"
 "ださい。"
 
-#: report.html:4
+#: report.html:3
 msgid "Confidential"
 msgstr "関係者外秘"
 
-#: report.html:14
+#: report.html:13
 msgid "App Security Report"
 msgstr "アプリケーション セキュリティレポート"
 
-#: report.html:14
+#: report.html:13
 msgid "For Internal Purpose"
 msgstr "内部目的のみ"
 
-#: report.html:15 report.html:18
+#: report.html:13
 msgid "Prepared by"
-msgstr "作成"
+msgstr "Prepared by"
 
-#: report.html:15 report.html:17
+#: report.html:13
 msgid "Powered by"
 msgstr "搭載"
 
-#: report.html:18
+#: report.html:13
 msgid ""
 "Portions of this document and the templates used in its production are the "
 "property of Appknox"
@@ -787,19 +787,19 @@ msgstr ""
 "この文書の一部およびそのプロダクションに使用されるテンプレートは、Appknoxが所"
 "有権を有します。"
 
-#: report.html:18
+#: report.html:13
 msgid " and "
 msgstr " そして "
 
-#: report.html:18 report.html:26
+#: report.html:13 report.html:21
 msgid ","
 msgstr "、"
 
-#: report.html:18
+#: report.html:13
 msgid " and cannot be copied without permission."
 msgstr " 許可なくコピーすることはできません。"
 
-#: report.html:18
+#: report.html:13
 msgid ""
 "While precautions have been taken in the preparation of this document, the "
 "publisher and the author(s) assume no responsibility for errors, omissions, "
@@ -808,98 +808,97 @@ msgid ""
 msgstr ""
 "本書の作成時に充分な注意を払っていますが、出版社および著者は、ここに記載され"
 "ている情報の使用に起因する誤り、省略、または損害について一切責任を負いませ"
-"ん。Appknox のサービスを使用しても、システムのセキュリティが保証されるわけで"
-"はなく、侵入も発生しません。"
+"ん。"
 
-#: report.html:18 report.html:26
+#: report.html:13 report.html:21
 msgid "Appknox"
 msgstr "Appknox"
 
-#: report.html:18
+#: report.html:13
 msgid ""
 " services does not guarantee the security of a system, or that intrusions "
 "will not occur."
 msgstr ""
-"サービスはシステムのセキュリティを保証するものではなく、侵入が起こらないこと"
-"を保証します。"
+" のサービスを使用しても、システムのセキュリティや、侵入が発生しないことを保証"
+"するものではありません。"
 
-#: report.html:18
+#: report.html:13
 msgid "Application Details"
 msgstr "アプリケーションの詳細"
 
-#: report.html:18
+#: report.html:13
 msgid "Application Name"
 msgstr "アプリケーションの名称"
 
-#: report.html:20
+#: report.html:15
 msgid "Platform"
 msgstr "プラットフォーム"
 
-#: report.html:20
+#: report.html:15
 msgid "Application Namespace"
 msgstr "アプリケーションの名前空間"
 
-#: report.html:20
+#: report.html:15
 msgid "Version"
 msgstr "バージョン"
 
-#: report.html:20
+#: report.html:15
 msgid "Audit Date"
 msgstr "監査日"
 
-#: report.html:20
+#: report.html:15
 msgid "Application SHA1 Hash"
 msgstr "アプリケーション SHA1 ハッシュ"
 
-#: report.html:20
+#: report.html:15
 msgid "Application MD5 Hash"
 msgstr "アプリケーション MD5 ハッシュ"
 
-#: report.html:20
+#: report.html:15
 msgid "Table of Contents"
 msgstr "目次"
 
-#: report.html:20 report.html:26
+#: report.html:15 report.html:21
 msgid "Report Summary"
 msgstr "レポートの概要"
 
-#: report.html:20 report.html:26
+#: report.html:15 report.html:21
 msgid "Audit Summary"
 msgstr "監査の概要"
 
-#: report.html:20 report.html:36
+#: report.html:15 report.html:31
 msgid "Appknox "
 msgstr "Appknox"
 
-#: report.html:20 report.html:36
+#: report.html:15 report.html:31
 msgid "Security Rating"
 msgstr "Appknoxのセキュリティ評価"
 
-#: report.html:21 report.html:40 report.html:49
+#: report.html:16 report.html:35 report.html:44
 msgid "Noncompliant Code Example"
 msgstr "違反コードの例"
 
-#: report.html:22 report.html:41 report.html:50
+#: report.html:17 report.html:36 report.html:45
 msgid "Compliant Solution"
 msgstr "コンプライアンス ソリューション"
 
-#: report.html:23 report.html:42 report.html:51
+#: report.html:18 report.html:37 report.html:46
 msgid "Business Implication"
 msgstr "ビジネスへの影響"
 
-#: report.html:24 report.html:43 report.html:52
+#: report.html:19 report.html:38 report.html:47
 msgid "Related Vulnerabilities"
 msgstr "関連のある脆弱性"
 
-#: report.html:26
+#: report.html:21
 msgid ", powered by "
 msgstr "、 搭載 "
 
-#: report.html:26
+#: report.html:21
 msgid " conducted a security assessment of the mobile application. "
 msgstr " モバイルアプリケーションのセキュリティ評価を実施しました。"
 
-#: report.html:26
+#: report.html:21
 msgid ""
 "This report contains all the findings during the automated and manual "
 "auditing processes. It also contains the process of discovering those "
@@ -909,63 +908,63 @@ msgstr ""
 "自動および手動監査プロセス中のすべての調査結果が含まれています。また、これら"
 "の脆弱性を発見するプロセスと、その問題を改善する方法も含まれています。"
 
-#: report.html:33
+#: report.html:28
 msgid "Ignored"
 msgstr ""
 
-#: report.html:36
+#: report.html:31
 msgid "Priority Level"
 msgstr "優先レベル"
 
-#: report.html:36
+#: report.html:31
 msgid "Number of failed test cases"
 msgstr "失敗したテストケースの数"
 
-#: report.html:36
+#: report.html:31
 msgid "Critical Risk"
 msgstr "重大リスク"
 
-#: report.html:36
+#: report.html:31
 msgid "High Risk"
 msgstr "高リスク"
 
-#: report.html:36
+#: report.html:31
 msgid "Medium Risk"
 msgstr "中リスク"
 
-#: report.html:36
+#: report.html:31
 msgid "Low Risk"
 msgstr "低リスク"
 
-#: report.html:36
+#: report.html:31
 msgid "Security Rating:"
 msgstr "セキュリティ評価："
 
-#: report.html:36
+#: report.html:31
 msgid "Unsecured"
 msgstr "無担保"
 
-#: report.html:37 report.html:46
+#: report.html:32 report.html:41
 msgid "Risk Rating"
 msgstr "リスク評価"
 
-#: report.html:37 report.html:46
+#: report.html:32 report.html:41
 msgid "Regulatory"
 msgstr "規制上"
 
-#: report.html:38 report.html:47
+#: report.html:33 report.html:42
 msgid "Description"
 msgstr "説明"
 
-#: report.html:39 report.html:48
+#: report.html:34 report.html:43
 msgid "Risk Assessment"
 msgstr "リスクアセスメント"
 
-#: report.html:45
+#: report.html:40
 msgid "Ignored Analyses"
 msgstr ""
 
-#: report.html:53
+#: report.html:48
 msgid "References"
 msgstr "参考文献"
 
