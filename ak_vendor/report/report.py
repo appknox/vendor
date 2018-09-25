@@ -406,7 +406,7 @@ class Report:
         )
 
     @classmethod
-    def create_content(cls, text: str, html: str, markdown: str):
+    def create_content(cls, text: str='', html: str='', markdown: str=''):
         return Content(text=text, html=html, markdown=markdown)
 
     @classmethod
