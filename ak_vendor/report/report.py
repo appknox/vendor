@@ -487,9 +487,9 @@ class Report:
     @property
     def svg_chart(self):
         tpl = (
-            '<circle cx="20" cy="20" r="8" fill="transparent" '
-            'stroke="{}" stroke-width="16" stroke-dasharray="{} {}" '
-            'stroke-dashoffset="-{}"></circle>'
+            '<circle cx="21" cy="21" r="15.91549430918954" stroke-width="8" '
+            'stroke="{}" stroke-dasharray="{} {}" stroke-dashoffset="-{}" '
+            'fill="transparent"></circle>'
         )
         sector = ''
         offset = 0
@@ -514,5 +514,5 @@ class Report:
             'data:image/svg+xml;utf8,'
             '<svg xmlns="http://www.w3.org/2000/svg" '
             'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" '
-            'width="300px" height="300px" viewBox="0 0 40 40">{}</svg>'
+            'width="216px" height="216px" viewBox="0 0 42 42">{}</svg>'
         ).format(sector)
