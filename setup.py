@@ -17,20 +17,24 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 
     keywords='appknox vendor',
     packages=find_packages(),
     data_files=[
         ('excel', ['ak_vendor/translations/ja/vulnerability.xlsx']),
-        ('report', ['ak_vendor/report.html', 'ak_vendor/report.css']),
+        ('report', [
+            'ak_vendor/report.html',
+            'ak_vendor/report.css',
+            'ak_vendor/report/report_template.html',
+        ]),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
     ],
     include_package_data=True,
     entry_points='',
     install_requires=[
-        "orm-choices==0.3.0"
+        'orm-choices==0.3.0'
     ],
     zip_safe=False,
     extras_require={

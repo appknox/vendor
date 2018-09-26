@@ -1,0 +1,979 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appknox Report</title>
+  <style>
+
+    /* print settings */
+    @page {
+      margin: 2cm 1.8cm;
+      padding: 0.3em 0;
+      @top-left {
+        content: '{% trans "Confidential" %}';
+        margin-left: 0.2cm;
+      }
+      @top-right {
+        content: "{{ report.created_on }} UTC";
+        margin-right: 0.2cm;
+      }
+      @bottom-center {
+        border-top: 1px solid #6B6B6B;
+        width: 100%;
+        content: "Page " counter(page) " of " counter(pages);
+      }
+    }
+    .page {
+      page-break-before: always;
+    }
+
+    /* report styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.95em;
+      color: #6d6e73;
+    }
+    pre {
+      white-space: pre-wrap;
+      padding-left: 2em;
+    }
+    a {
+      color: #EF4836;
+      text-decoration: none;
+    }
+    a:hover, a:focus, a:active {
+      color: #a3382c;
+    }
+    ul {
+      list-style-type:  square;
+    }
+    .wrap-content {
+      word-wrap: break-word;
+    }
+
+    .coverpage__title {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: 400;
+      margin-bottom: 0.3em;
+      margin-top: 3.2em;
+    }
+    .coverpage__tagline {
+      text-align: center;
+      font-size: 1.1em;
+      font-style: italic;
+    }
+
+    .coverpage__preparedfor {
+      text-align: center;
+      height: 15em;
+    }
+    .preparedfor {
+      width: 36em;
+      margin: auto;
+      height: 100%;
+      padding: 3em 0;
+    }
+    .preparedfor__name {
+      font-size: 2.3em;
+      margin: auto;
+      padding: 1em 0;
+    }
+    .preparedfor__logo {
+      width: 16em;
+      height: 10em;
+      margin: auto;
+    }
+    .preparedfor__logo td {
+      text-align: center;
+    }
+    .preparedfor__logo img {
+      max-height: 100%;
+      max-width: 16em;
+    }
+
+    .coverpage__appmeta {
+      text-align: center;
+    }
+    .appmeta {
+      margin: auto;
+    }
+    .appmeta__icon {
+      padding-right: 0.8em;
+      margin-left: -0.8em;
+    }
+    .appmeta__icon img {
+      width: 4.3em;
+    }
+    .appmeta__info {
+      text-align: left;
+    }
+    .appmeta__title {
+      font-size: 1.5em;
+    }
+    .appmeta__detail {
+      position: relative;
+    }
+    .appmeta__platform {
+      position: absolute;
+      top: 0.01em;
+      right: -1.5em;
+    }
+
+    .coverpage__authors {
+      width: 100%;
+      margin-top: 8.5em;
+    }
+    .author {
+      width: 50%;
+    }
+    .author__heading {
+      font-size: 0.8em;
+      padding-bottom: 1em;
+    }
+    .author__logo {
+      height: 6em;
+    }
+    .author__logo img {
+      max-width: 160px;
+      max-height: 100%;
+      display: inline-block;
+    }
+    .author--center, .author--center .author__heading, .author--center .author__logo {
+      text-align: center;
+    }
+    .author--center .author__logo img {
+      margin: auto;
+    }
+    .author--left, .author--left .author__heading, .author--left .author__logo {
+      text-align: left;
+    }
+    .author--left .author__logo img {
+      margin: auto auto auto 0;
+    }
+    .author--right, .author--right .author__heading, .author--right .author__logo {
+      text-align: right;
+    }
+    .author--right .author__logo img {
+      margin: auto 0 auto auto;
+    }
+
+    .pagetitle {
+      color: #EF4836;
+      border: 1px solid #EF4836;
+      font-weight: 400;
+      display: inline-block;
+      border-radius: 0.2em;
+    }
+    .pagetitle--main {
+      font-size: 1.9em;
+      padding: 0.1em 1em 0.2em;
+      max-width: 90%;
+      min-width: 50%;
+    }
+    .pagetitle--sub {
+      font-size: 1.3em;
+      padding: 0.2em 2em 0.3em;
+    }
+    .pagetitle__container {
+      text-align: center;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+
+    .table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    .table--bordered {
+      border-collapse: collapse;
+    }
+    .table--bordered th, .table--bordered td {
+      border: 1px solid #6d6e73;
+    }
+    .table--appdetail td {
+      padding: 0.8em 1em;
+    }
+    .table--appdetail tr td:first-child {
+      width: 41%;
+    }
+    .table--toc td {
+      padding: 0.4em 1em;
+      font-size: 1.1em;
+    }
+    .table--toc a, .table--toc a:hover, .table--toc a:active, .table--toc a:focus {
+      color: #6d6e73;
+      text-decoration: none;
+    }
+    .toc__heading {
+      margin: 0;
+    }
+    .toc__subheading {
+      margin-left: 0.8em;
+    }
+    .toc__subheading::before {
+      content: '-';
+      padding: 0 0.5em;
+    }
+    .table--auditsummary tbody {
+      width: 100%;
+    }
+    .table--auditsummary td {
+      padding: 0.8em 1em;
+    }
+    .auditsummary__score {
+      width: 11.5em;
+      padding: 0.8em 0 0.8em 1em;
+      text-align: center;
+    }
+    .auditsummary__severity {
+      min-width: 6.5em;
+    }
+    .auditsummary__cvssscore {
+      font-size: 3em;
+      font-weight: 600;
+      margin-right: 0.5em;
+      text-align: center;
+    }
+    .auditsummary__title {
+      margin: 0.2em 0.5em 0 0;
+      font-size: 1em;
+      display: inline-block;
+    }
+    .auditsummary__tags {
+      display: inline-block;
+    }
+    .tag {
+      background: #6d6e73;
+      color: white;
+      padding: 0.2em 0.7em 0.4em;
+      font-size: 0.7em;
+      font-weight: 600;
+      border-radius: 0.3em;
+    }
+    .severity {
+      padding: 0.3em 1em 0.45em;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 1em;
+      white-space: nowrap;
+      font-size: 0.9em;
+      color: white;
+    }
+    .severity__edited {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0.4em;
+      margin-left: 0.2em;
+      width: 1em;
+    }
+
+    .table--stats {
+      margin-top: 2em;
+    }
+    .table--stats th, .table--stats td {
+      padding: 0.8em 1em;
+    }
+
+    .statsoverview {
+      margin-top: 1em;
+    }
+    .statschart__field {
+      list-style-type: none;
+      margin: 0.3em 0;
+    }
+    .statschart__field__color {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      margin-right: 0.5em;
+    }
+    .statschart__field__name {
+      text-transform: capitalize;
+    }
+
+    .analysis__severity {
+      font-size: 1.1em;
+    }
+    .analysis__tags {
+      text-align: right;
+    }
+    .analysis__overridecomment {
+      border: 1px solid #ffeeed;
+      background: #fff8f8;
+      padding: 0.3em 0.75em;
+      margin: 1em 0 2em;
+    }
+    .analysis__overridecomment__icon {
+      width: 2em;
+    }
+    .analysis__overridecomment__icon img {
+      vertical-align: -18%;
+    }
+    .table--analysis-cvssv3 tr:first-child td:first-child {
+      width: 7em;
+      text-align: center;
+    }
+    .table--analysis-cvssv3 td {
+      padding: 0.35em 0.5em;
+      border-color: #e4e2e2;
+    }
+
+    .analysis__sectionheader {
+      border-bottom: 2px solid #efeeee;
+      padding: 0.2em 0.5em;
+      position: relative;
+      color: #000;
+      font-size: 1em;
+      background: #f4f4f5;
+      margin-top: 2em;
+    }
+    .analysis__cvss__value {
+      font-weight: bold;
+    }
+    .analysis__attachment {
+      margin: 4em 0;
+      text-align: center;
+    }
+    .analysis__attachment:first-child {
+      margin-top: 2em;
+    }
+    .analysis__attachment:last-child {
+      margin-bottom: 2em;
+    }
+    .analysis__attachment__image {
+      max-width: 100%;
+      max-height: 50em;
+    }
+    .analysis__attachment__caption {
+      text-align: center;
+      font-size: 0.8em;
+      font-style: italic;
+    }
+    .table--regulatory tr td:first-child {
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .analysis__regulatory {
+      margin-top: 3em;
+    }
+    .regulatory__block {
+      position: relative;
+      margin-bottom: 2em;
+    }
+    .regulatory__category {
+      width: 8em;
+      height: 3em;
+    }
+    .regulatory__table {
+      margin-top: -3em;
+      padding-left: 8em;
+      position: relative;
+    }
+    .regulatory__table__pcidss__title {
+      margin-bottom: 0.5em;
+    }
+    .regulatory__title {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!--------------------------
+    COVER PAGE
+  --------------------------->
+  <section class="page coverpage">
+
+    <!-- Title -->
+    <h1 class="coverpage__title">{% trans "App Security Report" %}</h1>
+    <div class="coverpage__tagline">{% trans "For Internal Purpose" %}</div>
+
+    <!-- Client logo -->
+    <div class="coverpage__preparedfor preparedfor">
+      {% if report.prepared_for.logo != '' %}
+        <div class="preparedfor__logo">
+          <img src="{{ report.prepared_for.logo }}" alt="{{ report.prepared_for.name }}">
+        </div>
+      {% else %}
+        <h2 class="preparedfor__name">{{ report.prepared_for.name }}</h2>
+      {% endif %}
+    </div>
+
+    <!-- appmeta -->
+    <div class="coverpage__appmeta">
+      <table class="appmeta">
+        <tr>
+          <td class="appmeta__icon">
+            <img src="{{ report.application.icon }}" />
+          </td>
+          <td class="appmeta__info">
+            <div class="appmeta__title">{{ report.application.name }}</div>
+            <div class="appmeta__detail">
+              <span class="appmeta__package">{{ report.package_name }}</span>
+              <img  class="appmeta__platform" src="{{ report.platform.icon }}" alt="{{ report.platform.name }}">
+              <div class="appmeta__version">
+                {{ report.application.version }}
+              </div>
+              {% if report.custom_meta_name != '' %}
+                <div class="appmeta__custom">{{ report.custom_meta_name }}</div>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- prepared & powered -->
+    <table class="coverpage__authors {% if not report.show_copyright %}coverpage__authors-extended{% endif %}">
+      <tr>
+        {% if not report.prepared_by.hide and not report.powered_by.hide %}
+          <td class="author author--left">
+            <div class="author__heading">{% trans "Prepared by" %}</div>
+            {% if report.prepared_by.logo != '' %}
+              <div class="author__logo">
+                <img src="{{ report.prepared_by.logo }}" alt="{{ report.prepared_by.name }}">
+              </div>
+            {% else %}
+              <h3 class="author__name">{{ report.prepared_by.name }}</h3>
+            {% endif %}
+          </td>
+          <td class="author author--right">
+            <div class="author__heading">{% trans "Powered by" %}</div>
+            {% if report.powered_by.logo != '' %}
+              <div class="author__logo">
+                <img src="{{ report.powered_by.logo }}" alt="{{ report.powered_by.name }}">
+              </div>
+            {% else %}
+              <h3 class="author__name">{{ report.powered_by.name }}</h3>
+            {% endif %}
+          </td>
+        {% elif not report.prepared_by.hide and report.powered_by.hide %}
+          <td class="author author--center">
+            <div class="author__heading">
+              {% trans "Prepared by" %}
+            </div>
+            {% if report.prepared_by.logo != '' %}
+              <div class="author__logo">
+                <img src="{{ report.prepared_by.logo }}" alt="{{ report.prepared_by.name }}">
+              </div>
+            {% else %}
+              <h3 class="author__name">{{ report.prepared_by.name }}</h3>
+            {% endif %}
+          </td>
+        {% elif report.prepared_by.hide and not report.powered_by.hide %}
+          <td class="author author--center">
+            <div class="author__heading">{% trans "Powered by" %}</div>
+            {% if report.powered_by.logo != '' %}
+              <div class="author__logo">
+                <img src="{{ report.powered_by.logo }}" alt="{{ report.powered_by.name }}">
+              </div>
+            {% else %}
+              <h3 class="author__name">{{ report.powered_by.name }}</h3>
+            {% endif %}
+          </td>
+        {% endif %}
+      </tr>
+    </table>
+
+    <!-- disclaimer -->
+    <div class="coverpage__disclaimer">
+      {% if report.show_copyright %}
+        <p>{% trans "Portions of this document and the templates used in its production are the property of Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans " and " %}{{ report.prepared_by.name }}{% trans "," %}{% endif %}{% trans " and cannot be copied without permission." %}</p>
+      {% endif %}
+      <p>{% trans "While precautions have been taken in the preparation of this document, the publisher and the author(s) assume no responsibility for errors, omissions, or for damages resulting from the use of the information contained herein. Use of " %}{% if report.show_copyright %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans " and " %}{{ report.prepared_by.name }}{% trans "," %}{% endif %}{% endif %}{% trans " services does not guarantee the security of a system, or that intrusions will not occur." %}</p>
+    </div>
+
+  </section>
+
+
+  <!--------------------------
+    APPLICATION DETAILS PAGE
+  --------------------------->
+  <section class="page appdetailpage">
+    <div class="pagetitle__container">
+      <h2 class="pagetitle pagetitle--main">{% trans "Application Details" %}</h2>
+    </div>
+
+    <table class="table table--bordered table--appdetail">
+      <tr>
+        <td>{% trans "Application Name" %}</td>
+        <td>
+          {{ report.application.name }}{% if report.custom_meta_data.name != '' %}<br>{{ report.custom_meta_data.name }}{% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>{% trans "Platform" %}</td>
+        <td>{{ report.platform.name }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Application Namespace" %}</td>
+        <td>{{ report.package_name }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Version" %}</td>
+        <td>{{ report.application.version }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Version Code" %}</td>
+        <td>{{ report.application.version_code }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Audit Date" %}</td>
+        <td>{{ report.created_on }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Application SHA1 Hash" %}</td>
+        <td>{{ report.application.sha1 }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Application MD5 Hash" %}</td>
+        <td>{{ report.application.md5 }}</td>
+      </tr>
+    </table>
+  </section>
+
+
+  <!--------------------------
+    TABLE OF CONTENTS PAGE
+  --------------------------->
+  <section class="page tocpage">
+    <div class="pagetitle__container">
+      <h2 class="pagetitle pagetitle--main">{% trans "Table of Contents" %}</h2>
+    </div>
+
+    <table class="table table--bordered table--toc">
+      <tbody>
+        <tr>
+          <td>
+            <h4 class="toc__heading">
+              <a href="#report-summary">{% trans "Report Summary" %}</a>
+            </h4>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a class="toc__subheading" href="#audit-summary">{% trans "Audit Summary" %}</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a class="toc__subheading" href="#security-rating">{% if report.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "Security Rating" %}</a>
+          </td>
+        </tr>
+        {% for analysis in report.analyses %}
+          {% if analysis.risk.computed_value > 0 %}
+            <tr>
+              <td>
+                <h4 class="toc__heading">
+                  <a href="#{{ analysis.id }}">{{ analysis.title.html }}</a>
+                </h4>
+              </td>
+            </tr>
+            {% if analysis.incorrect_implementation.html %}
+              <tr>
+                <td>
+                  <a class="toc__subheading" href="#{{ analysis.id }}{{ forloop.counter }}non-compliant">{% trans "Noncompliant Code Example" %}</a>
+                </td>
+              </tr>
+            {% endif %}
+            {% if analysis.correct_implementation.html %}
+              <tr>
+                <td>
+                  <a class="toc__subheading" href="#{{ analysis.id }}{{ forloop.counter }}compliant">{% trans "Compliant Solution" %}</a>
+                </td>
+              </tr>
+            {% endif %}
+            {% if analysis.business_implication.html %}
+              <tr>
+                <td>
+                  <a class="toc__subheading" href="#{{ analysis.id }}{{ forloop.counter }}business-implication">{% trans "Business Implication" %}</a>
+                </td>
+              </tr>
+            {% endif %}
+            {% if analysis.vulnerability_references.html %}
+              <tr>
+                <td>
+                  <a class="toc__subheading" href="#{{ analysis.id }}{{ forloop.counter }}related-to">{% trans "Related Vulnerabilities" %}</a>
+                </td>
+              </tr>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+
+  <!--------------------------
+    REPORT SUMMARY PAGE
+  --------------------------->
+  <section class="page summarypage">
+    <a id="report-summary"></a>
+    <div class="pagetitle__container">
+      <h2 class="pagetitle pagetitle--main">{% trans "Report Summary" %}</h2>
+    </div>
+
+    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated and manual auditing processes. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
+
+    <section class="audit">
+      <a id="audit-summary"></a>
+      <h3 class="pagetitle pagetitle--sub">{% trans "Audit Summary" %}</h3>
+      <div>
+        <table class="table table--bordered table--auditsummary">
+          <tbody>
+            {% for analysis in report.analyses %}
+              <tr class="auditsummary">
+                <td class="auditsummary__info">
+                  <h5 class="auditsummary__title">{{ analysis.title.html | safe }}</h5>
+                  <div class="auditsummary__tags">
+                    {% for tag in analysis.tags %}
+                      <span class="auditsummary__tag tag">{{ tag.val }}</span>
+                    {% endfor %}
+                  </div>
+                  <p class="auditsummary__desc">{{ analysis.desc.html | safe  }}</p>
+                </td>
+                <td class="auditsummary__score">
+                  {% if analysis.risk.computed_value > 0 %}
+                    <div class="auditsummary__cvssscore {% if analysis.risk.is_overridden %}auditsummary__cvssscore--padded {% endif %}" style="color: {{ analysis.risk.computed_value_color }}">{{ analysis.cvss_v3.base_score }}</div>
+                  {% endif %}
+                  <label class="auditsummary__severity severity" style="background-color: {{ analysis.risk.computed_value_color }}">
+                    {{ analysis.risk.computed_value_label }} {% trans "Risk" %}
+                  </label>
+                  <span class="severity__edited">
+                    {% if analysis.risk.is_overridden %}
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzOTkuMTQgMzk5LjE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOTkuMTQgMzk5LjE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+ICAgIDxnPiAgICAgICAgPGNpcmNsZSBjeD0iMTA4Ljc1IiBjeT0iNzIuOTgiIHI9IjYwIiBmaWxsPSIjYzdjN2M3Ii8+ICAgICAgICA8cGF0aCBkPSJNMTkyLjM4OSwyMDIuMjM4Yy0xOS45NDYtMjMuOTg0LTUwLjAwNi0zOS4yNTgtODMuNjM5LTM5LjI1OEM0OC42ODksMTYyLjk4LDAsMjExLjY2OSwwLDI3MS43M2gxMjIuODk3TDE5Mi4zODksMjAyLjIzOHoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0zMDAuMzc2LDEzNi42NzZsMzguNjYxLTM4LjY2MWw2MC4xMDQsNjAuMTA0bC0zOC42NjEsMzguNjYxTDMwMC4zNzYsMTM2LjY3NnoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0xMTAuOTk4LDM4Ni4xNmw2OC40NjQtMTkuOTg2bC00OC40NzgtNDguNDc3TDExMC45OTgsMzg2LjE2eiIgZmlsbD0iI2M3YzdjNyIvPiAgICAgICAgPHBhdGggZD0iTTE0Ni4zODEsMjkwLjY3bDEzMi43ODItMTMyLjc4Mmw2MC4xMDQsNjAuMTA0TDIwNi40ODUsMzUwLjc3NEwxNDYuMzgxLDI5MC42N3oiIGZpbGw9IiNjN2M3YzciLz4gICAgPC9nPjwvc3ZnPg==" alt="(user edited)">
+                    {% endif %}
+                  </span>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </section>
+
+
+  <!--------------------------
+    SECURITY STATS PAGE
+  --------------------------->
+  <section class="page statspage">
+    <table class="table table--bordered table--stats">
+      <tbody>
+        <tr>
+          <th>{% trans "Priority Level" %}</th>
+          <th>{% trans "Number of failed test cases" %}</th>
+        </tr>
+        <tr>
+          <td>{% trans "Critical Risk" %}</td>
+          <td>{{ report.critical_count }}</td>
+        </tr>
+        <tr>
+          <td>{% trans "High Risk" %}</td>
+          <td>{{ report.high_count }}</td>
+        </tr>
+        <tr>
+          <td>{% trans "Medium Risk" %}</td>
+          <td>{{ report.medium_count }}</td>
+        </tr>
+        <tr>
+          <td>{% trans "Low Risk" %}</td>
+          <td>{{ report.low_count }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="statsoverview">
+      <a id="security-rating"></a>
+      <h3 class="pagetitle pagetitle--sub">{% if report.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "Security Rating" %}</h3>
+      <div class="statsoverview__chart">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="{{ report.svg_chart }}" alt="">
+              </td>
+              <td>
+                <ul class="statschart__fields">
+                  <li class="statschart__field">
+                    <span class="statschart__field__color" style="background: {{ report.COLOR_CRITICAL }}"></span>
+                    <span class="statschart__field__name">{% trans "Critical" %} - <strong>{{ report.critical_percent }}%</strong></span>
+                  </li>
+                  <li class="statschart__field">
+                    <span class="statschart__field__color" style="background: {{ report.COLOR_HIGH }}"></span>
+                    <span class="statschart__field__name">{% trans "High" %} - <strong>{{ report.high_percent }}%</strong></span>
+                  </li>
+                  <li class="statschart__field">
+                    <span class="statschart__field__color" style="background: {{ report.COLOR_MEDIUM }}"></span>
+                    <span class="statschart__field__name">{% trans "Medium" %} - <strong>{{ report.medium_percent }}%</strong></span>
+                  </li>
+                  <li class="statschart__field">
+                    <span class="statschart__field__color" style="background: {{ report.COLOR_LOW }}"></span>
+                    <span class="statschart__field__name">{% trans "Low" %} - <strong>{{ report.low_percent }}%</strong></span>
+                  </li>
+                  <li class="statschart__field">
+                    <span class="statschart__field__color" style="background: {{ report.COLOR_PASSED }}"></span>
+                    <span class="statschart__field__name">{% trans "Passed" %} - <strong>{{ report.passed_percent }}%</strong></span>
+                  </li>
+                  <li class="statschart__field">
+                    <span class="statschart__field__color" style="background: {{ report.COLOR_UNTESTED }}"></span>
+                    <span class="statschart__field__name">{% trans "Untested" %} - <strong>{{ report.untested_percent }}%</strong></span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <p>{% if report.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "Security Rating:" %} <strong>{{ report.rating }}% {% trans "Unsecured" %}</strong></p>
+      </div>
+    </section>
+  </section>
+
+
+
+  <!--------------------------
+    ANALYSIS DETAIL PAGES
+  --------------------------->
+  {% for analysis in report.analyses %}
+    {% if analysis.risk.computed_value > 0 %}
+      <section class="page analysispage">
+        <a id="{{ analysis.id }}"></a>
+        <div class="pagetitle__container">
+          <h2 class="pagetitle pagetitle--main">{{ analysis.title.html | safe }}</h2>
+        </div>
+        <div class="analysis">
+          <section class="analysis__description">
+            <p>{{ analysis.intro.html | safe }}</p>
+          </section>
+
+          <section class="analysis__risktag">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="analysis__severity severity" style="background-color: {{ analysis.risk.computed_value_color }}">{% trans "Risk Rating" %} : {{ analysis.risk.computed_value_label }}
+                    </label>
+                    {% if analysis.risk.is_overridden %}
+                      <span class="severity__edited">
+                        <img  class="severity__edited" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzOTkuMTQgMzk5LjE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOTkuMTQgMzk5LjE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCI+ICAgIDxnPiAgICAgICAgPGNpcmNsZSBjeD0iMTA4Ljc1IiBjeT0iNzIuOTgiIHI9IjYwIiBmaWxsPSIjYzdjN2M3Ii8+ICAgICAgICA8cGF0aCBkPSJNMTkyLjM4OSwyMDIuMjM4Yy0xOS45NDYtMjMuOTg0LTUwLjAwNi0zOS4yNTgtODMuNjM5LTM5LjI1OEM0OC42ODksMTYyLjk4LDAsMjExLjY2OSwwLDI3MS43M2gxMjIuODk3TDE5Mi4zODksMjAyLjIzOHoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0zMDAuMzc2LDEzNi42NzZsMzguNjYxLTM4LjY2MWw2MC4xMDQsNjAuMTA0bC0zOC42NjEsMzguNjYxTDMwMC4zNzYsMTM2LjY3NnoiIGZpbGw9IiNjN2M3YzciLz4gICAgICAgIDxwYXRoIGQ9Ik0xMTAuOTk4LDM4Ni4xNmw2OC40NjQtMTkuOTg2bC00OC40NzgtNDguNDc3TDExMC45OTgsMzg2LjE2eiIgZmlsbD0iI2M3YzdjNyIvPiAgICAgICAgPHBhdGggZD0iTTE0Ni4zODEsMjkwLjY3bDEzMi43ODItMTMyLjc4Mmw2MC4xMDQsNjAuMTA0TDIwNi40ODUsMzUwLjc3NEwxNDYuMzgxLDI5MC42N3oiIGZpbGw9IiNjN2M3YzciLz4gICAgPC9nPjwvc3ZnPg==" alt="(user edited)" />
+                      </span>
+                    {% endif %}
+                  </td>
+                  <td class="analysis__tags">
+                    {% for tag in analysis.tags %}
+                      <label class="tag">{{ tag.val }}</label>
+                    {% endfor %}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            {% if analysis.risk.is_overridden %}
+              <div class="analysis__overridecomment">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td class="analysis__overridecomment__icon">
+                          <img class="analysis__overridecomment__svg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCI+ICAgIDxnPiAgICAgICAgPGc+ICAgICAgICAgICAgPHBhdGggZD0iTTI1NiwwQzExNC40OTcsMCwwLDExNC41MDcsMCwyNTZjMCwxNDEuNTAzLDExNC41MDcsMjU2LDI1NiwyNTZjMTQxLjUwMywwLDI1Ni0xMTQuNTA3LDI1Ni0yNTYgICAgQzUxMiwxMTQuNDk3LDM5Ny40OTMsMCwyNTYsMHogTTI1Niw0NzJjLTExOS4zOTMsMC0yMTYtOTYuNjE1LTIxNi0yMTZjMC0xMTkuMzkzLDk2LjYxNS0yMTYsMjE2LTIxNiAgICBjMTE5LjM5MywwLDIxNiw5Ni42MTUsMjE2LDIxNkM0NzIsMzc1LjM5MywzNzUuMzg1LDQ3MiwyNTYsNDcyeiIgZmlsbD0iI2Y3YmRiNyIvPiAgICAgICAgPC9nPiAgICA8L2c+ICAgIDxnPiAgICAgICAgPGc+ICAgICAgICAgICAgPHBhdGggZD0iTTI1NiwxMjguODc3Yy0xMS4wNDYsMC0yMCw4Ljk1NC0yMCwyMFYyNzcuNjdjMCwxMS4wNDYsOC45NTQsMjAsMjAsMjBzMjAtOC45NTQsMjAtMjBWMTQ4Ljg3NyAgICBDMjc2LDEzNy44MzEsMjY3LjA0NiwxMjguODc3LDI1NiwxMjguODc3eiIgZmlsbD0iI2Y3YmRiNyIvPiAgICAgICAgPC9nPiAgICA8L2c+ICAgIDxnPiAgICAgICAgPGc+ICAgICAgICAgICAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMzQ5LjE2IiByPSIyNyIgZmlsbD0iI2Y3YmRiNyIvPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+" alt="">
+                      </td>
+                      <td class="analysis__overridecomment__msg">
+                        {% trans "This risk has been overridden from" %} <strong>{{ analysis.risk.value_label }}</strong> {% trans "to" %} <strong>{{ analysis.risk.computed_value_label }}</strong>. {% if analysis.risk.override_comment %} {% trans "The reason is:" %} "{{ analysis.risk.override_comment.html }}"{% endif %}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            {% endif %}
+          </section>
+
+          <section class="analysis__cvss">
+            <h3 class="analysis__sectionheader">{% trans "CVSS" %}</h3>
+            <table class="table table--bordered table--analysis-cvssv3">
+              <tbody>
+                <tr>
+                  <td rowspan="4">
+                    <div class="analysis__cvss__scoretitle">{% trans "Version 3.0 Base Score" %}</div>
+                    <h2 class="analysis__cvss__scorevalue" style="color: {{ analysis.risk.value_color }}">{{ analysis.cvss_v3.base_score }}</h2>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Attack vector" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.attack_vector }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Attack complexity" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.attack_complexity }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Privileges required" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.privileges_required }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "User Interaction" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.user_interaction }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Scope" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.scope }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Confidentiality Impact" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.confidentiality_impact }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Integrity Impact" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.integrity_impact }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Availability Impact" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.availability_impact }}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          {% if analysis.regulatory.owasp or analysis.regulatory.pcidss %}
+            <section class="analysis__regulatory">
+              <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.owasp %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "OWASP" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for owasp in analysis.regulatory.owasp %}
+                        <tr>
+                          <td>{{ owasp.code }}</td>
+                          <td>{{ owasp.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.pcidss %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "PCI-DSS" %}</strong>{{analysis.regulatory.pcidss.length}}
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for pcidss in analysis.regulatory.pcidss %}
+                        <tr>
+                          <td>{{ pcidss.code }}</td>
+                          <td>
+                            <div class="regulatory__table__pcidss__title"><strong>{{ pcidss.title }}</strong></div>
+                            <div>{{ pcidss.description }}</div>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+            </section>
+          {% endif %}
+
+          <section class="analysis__assessment">
+            <h3 class="analysis__sectionheader">{% trans "Risk Assessment" %}</h3>
+            <div>
+              <p>{{ analysis.desc.html | safe }}</p>
+              {% for finding in analysis.findings %}
+                {% if finding.title.html %}
+                  <h5 class="wrap-content">{{ finding.title.html | escape }}</h5>
+                {% endif %}
+<pre>
+<code>{{ finding.description.html | escape }}</code>
+</pre>
+              {% endfor %}
+            </div>
+          </section>
+
+          {% if analysis.attachments %}
+          <section class="analysis__attachments">
+            {% for attachment in analysis.attachments %}
+              <figure class="analysis__attachment">
+                <img class="analysis__attachment__image" src="{{ attachment.url }}" alt="">
+                <figcaption class="analysis__attachment__caption">{{ attachment.name }}</figcaption>
+              </figure>
+            {% endfor %}
+          </section>
+          {% endif %}
+
+          {% if analysis.incorrect_implementation.html %}
+            <section class="analysis__incorrect">
+              <a id="{{ analysis.id }}{{ forloop.counter }}non-compliant"></a>
+              <h3 class="analysis__sectionheader">{% trans "Noncompliant Code Example" %}</h3>
+              <div>{{ analysis.incorrect_implementation.html | safe }}</div>
+            </section>
+          {% endif %}
+
+          {% if analysis.correct_implementation.html %}
+            <section class="analysis__correct">
+              <a id="{{ analysis.id }}{{ forloop.counter }}compliant"></a>
+              <h3 class="analysis__sectionheader">{% trans "Compliant Solution" %}</h3>
+              <div>{{ analysis.correct_implementation.html | safe }}</div>
+            </section>
+          {% endif %}
+
+          {% if analysis.business_implication.html %}
+            <section class="analysis__implication">
+              <a id="{{ analysis.id }}{{ forloop.counter }}business-implication"></a>
+              <h3 class="analysis__sectionheader">{% trans "Business Implication" %}</h3>
+              <div>{{ analysis.business_implication.html | safe }}</div>
+            </section>
+          {% endif %}
+
+          {% if analysis.vulnerability_references.html %}
+            <section class="analysis__reference">
+              <a id="{{ analysis.id }}{{ forloop.counter }}related-to"></a>
+              <h3 class="analysis__sectionheader">{% trans "Related Vulnerabilities" %}</h3>
+              <div>{{ analysis.vulnerability_references.html | safe }}</div>
+            </section>
+          {% endif %}
+
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+
+
+  <!--------------------------
+    REFERENCES PAGE
+  --------------------------->
+  <section class="page refpage">
+    <a id="references"></a>
+    <div class="pagetitle__container">
+      <h2 class="pagetitle pagetitle--main">{% trans "References" %}</h2>
+    </div>
+    <ol>
+      {% for ref in report.references %}
+        <li><a href="{{ ref.url }}">{{ ref.name }}</a></li>
+      {% endfor %}
+    </ol>
+  </section>
+
+</body>
+</html>
