@@ -423,7 +423,7 @@ class Report:
 
     @classmethod
     def get_risk_color(cls, risk):
-        return cls.RISK_COLOR.get(risk, '')
+        return cls.RISK_COLOR.get(risk.lower(), '')
 
     def _count_severity(self, label):
         return len(
