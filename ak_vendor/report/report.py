@@ -1,9 +1,52 @@
 import attr
 import enum
+import maya
+import json
+from datetime import datetime
 from cvss import CVSS3
 from typing import List
+from ..constants import PLATFORM_ICONS
 
 ATTACHMENT_IMAGE_FORMATS = ['png', 'jpg', 'jpeg', 'bmp', 'svg', 'gif']
+
+
+class PlatformEnum(enum.Enum):
+    ANDROID = 'Android'
+    IOS = 'iOS'
+    WINDOWS = 'Windows'
+
+
+class PlatformIconEnum(enum.Enum):
+    ANDROID = PLATFORM_ICONS['ANDROID']
+    IOS = PLATFORM_ICONS['IOS']
+    WINDOWS = PLATFORM_ICONS['WINDOWS']
+
+
+class RiskColorEnum(enum.Enum):
+    CRITICAL = '#EF4836'
+    HIGH = '#FF8C00'
+    MEDIUM = '#F5D76E'
+    LOW = '#2CC2F8'
+    PASSED = '#80C081'
+    UNTESTED = '#6B6B6B'
+
+
+class RiskValueEnum(enum.Enum):
+    CRITICAL = 4
+    HIGH = 3
+    MEDIUM = 2
+    LOW = 1
+    PASSED = 0
+    UNTESTED = -1
+
+
+class RiskLabelEnum(enum.Enum):
+    CRITICAL = 'Critical'
+    HIGH = 'High'
+    MEDIUM = 'Medium'
+    LOW = 'Low'
+    PASSED = 'Passed'
+    UNTESTED = 'Untested'
 
 
 class AttackVectorEnum(enum.Enum):
@@ -54,6 +97,12 @@ class AvailabilityImpactEnum(enum.Enum):
 
 @attr.s
 class Platform:
+    ANDROID = PlatformEnum.ANDROID.value
+    IOS = PlatformEnum.IOS.value
+    WINDOWS = PlatformEnum.WINDOWS.value
+    ICON_ANDROID = PlatformIconEnum.ANDROID.value
+    ICON_IOS = PlatformIconEnum.IOS.value
+    ICON_WINDOWS = PlatformIconEnum.WINDOWS.value
     name = attr.ib(type=str)
     icon = attr.ib(type=str)
 
@@ -63,16 +112,16 @@ class Application:
     name = attr.ib(type=str)
     icon = attr.ib(type=str)
     version = attr.ib(type=str)
-    version_code = attr.ib(type=str)
+    version_code = attr.ib(type=int)
     sha1 = attr.ib(type=str)
     md5 = attr.ib(type=str)
 
 
 @attr.s
 class Company:
-    name = attr.ib(type=str)
-    logo = attr.ib(type=str)
-    hide = attr.ib(type=bool)
+    name = attr.ib(type=str, default='')
+    logo = attr.ib(type=str, default='')
+    hide = attr.ib(type=bool, default=False)
 
 
 @attr.s
@@ -90,9 +139,9 @@ class CustomMetaData:
 
 @attr.s
 class Content:
-    text = attr.ib(type=str)
     html = attr.ib(type=str)
-    markdown = attr.ib(type=str)
+    text = attr.ib(type=str, default='')
+    markdown = attr.ib(type=str, default='')
 
 
 @attr.s
@@ -157,7 +206,7 @@ class CVSSv3:
     )
 
     @classmethod
-    def parse_vector(cls, vector_string):
+    def parse_vector(cls, vector_string: str) -> 'CVSSv3':
         if not vector_string:
             return None
         cvssv3 = CVSS3(vector_string)
@@ -198,14 +247,20 @@ class CVSSv3:
 
 @attr.s
 class Risk:
-    value = attr.ib(type=int)
-    value_label = attr.ib(type=str)
-    value_color = attr.ib(type=str)
-    computed_value = attr.ib(type=int)
-    computed_value_label = attr.ib(type=str)
-    computed_value_color = attr.ib(type=str)
-    is_overridden = attr.ib(type=bool)
-    override_comment = attr.ib(type=str)
+    value = attr.ib(type=int, default=RiskValueEnum.UNTESTED.value)
+    value_label = attr.ib(type=str, default=RiskLabelEnum.UNTESTED.value)
+    value_color = attr.ib(type=str, default=RiskColorEnum.UNTESTED.value)
+    computed_value = attr.ib(
+        type=int, default=RiskValueEnum.UNTESTED.value
+    )
+    computed_value_label = attr.ib(
+        type=str, default=RiskLabelEnum.UNTESTED.value
+    )
+    computed_value_color = attr.ib(
+        type=str, default=RiskColorEnum.UNTESTED.value
+    )
+    is_overridden = attr.ib(type=bool, default=False)
+    override_comment = attr.ib(type=str, default='')
 
 
 @attr.s
@@ -228,18 +283,18 @@ class Regulatory:
     pcidss = attr.ib(factory=list, type=List[dict])
 
     @classmethod
-    def create_owasp(cls, code: str, year: int, title: str):
+    def create_owasp(cls, code: str, year: int, title: str) -> OWASP:
         return OWASP(code=code, year=year, title=title)
 
     @classmethod
-    def create_pcidss(cls, code: str, title: str, description: str):
+    def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
         return PCIDSS(code=code, title=title, description=description)
 
-    def add_owasp(self, owasp: OWASP) -> OWASP:
+    def add_owasp(self, owasp: OWASP) -> List[OWASP]:
         self.owasp.append(owasp)
         return self.owasp
 
-    def add_pcidss(self, pcidss: PCIDSS) -> PCIDSS:
+    def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
         return self.pcidss
 
@@ -259,33 +314,39 @@ class Finding:
 class Analysis:
     id = attr.ib(type=int)
     title = attr.ib(type=Content)
-    intro = attr.ib(type=Content)
     desc = attr.ib(type=Content)
-    risk = attr.ib(type=Risk)
-    cvss_v3 = attr.ib(type=CVSSv3)
+    intro = attr.ib(type=Content)
     business_implication = attr.ib(type=Content)
     correct_implementation = attr.ib(type=Content)
     incorrect_implementation = attr.ib(type=Content)
-    regulatory = attr.ib(type=Regulatory)
     vulnerability_references = attr.ib(type=Content)
+    risk = attr.ib(type=Risk, default=Risk())
+    cvss_v3 = attr.ib(type=CVSSv3, default=None)
+    regulatory = attr.ib(
+        type=Regulatory, default=Regulatory(owasp=[], pcidss=[])
+    )
     findings = attr.ib(factory=list, type=List[Content])
     tags = attr.ib(factory=list, type=List[Tag])
     attachments = attr.ib(factory=list, type=List[Attachment])
 
     @classmethod
-    def create_regulatory(cls, owasp: List[dict]=[], pcidss: List[dict]=[]):
+    def create_regulatory(
+        cls, owasp: List[dict]=[], pcidss: List[dict]=[]
+    ) -> Regulatory:
         return Regulatory(owasp=owasp, pcidss=pcidss)
 
     @classmethod
-    def create_attachment(cls, id: str, name: str, extension: str, url: str):
+    def create_attachment(
+        cls, id: str, name: str, extension: str, url: str
+    ) -> Attachment:
         return Attachment(id=id, name=name, extension=extension, url=url)
 
     @classmethod
-    def create_finding(cls, title: Content, description: Content):
+    def create_finding(cls, title: Content, description: Content) -> Finding:
         return Finding(title=title, description=description)
 
     @classmethod
-    def create_tag(cls, val: str):
+    def create_tag(cls, val: str) -> Tag:
         return Tag(val=val)
 
     @classmethod
@@ -293,7 +354,7 @@ class Analysis:
         cls, value: int, value_label: str, value_color: str,
         computed_value: int, computed_value_label: str,
         computed_value_color: str, is_overridden: bool, override_comment: str
-    ):
+    ) -> Risk:
         return Risk(
             value=value,
             value_label=value_label,
@@ -322,12 +383,12 @@ class Analysis:
 
 @attr.s
 class Report:
-    COLOR_CRITICAL = '#EF4836'
-    COLOR_HIGH = '#FF8C00'
-    COLOR_MEDIUM = '#F5D76E'
-    COLOR_LOW = '#2CC2F8'
-    COLOR_PASSED = '#80C081'
-    COLOR_UNTESTED = '#6B6B6B'
+    COLOR_CRITICAL = RiskColorEnum.CRITICAL.value
+    COLOR_HIGH = RiskColorEnum.HIGH.value
+    COLOR_MEDIUM = RiskColorEnum.MEDIUM.value
+    COLOR_LOW = RiskColorEnum.LOW.value
+    COLOR_PASSED = RiskColorEnum.PASSED.value
+    COLOR_UNTESTED = RiskColorEnum.UNTESTED.value
     RISK_COLOR = {
         'critical': COLOR_CRITICAL,
         'high': COLOR_HIGH,
@@ -339,19 +400,38 @@ class Report:
     package_name = attr.ib(type=str)
     platform = attr.ib(type=Platform)
     application = attr.ib(type=Application)
-    created_on = attr.ib(type=str)
-    prepared_for = attr.ib(type=Company)
-    prepared_by = attr.ib(type=Company)
-    powered_by = attr.ib(type=Company)
-    show_copyright = attr.ib(type=bool)
-    is_partnered = attr.ib(type=bool)
-    rating = attr.ib(type=int)
+    prepared_for = attr.ib(
+        type=Company,
+        default=Company(name='')
+    )
+    prepared_by = attr.ib(
+        type=Company,
+        default=Company(
+            name='Appknox', logo='https://appknox.com/in/img/logo.png'
+        )
+    )
+    powered_by = attr.ib(
+        type=Company,
+        default=Company(hide=True)
+    )
+    created_on = attr.ib(
+        type=datetime,
+        default=maya.now().iso8601()
+    )
+    show_copyright = attr.ib(type=bool, default=True)
+    is_partnered = attr.ib(type=bool, default=False)
+    rating = attr.ib(type=int, default=0)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
     analyses = attr.ib(factory=list, type=List[Analysis])
 
-    def to_json(self):
+    def to_dict(self) -> dict:
         return attr.asdict(self)
+
+    def to_json(self) -> dict:
+        return json.loads(
+            json.dumps(self.to_dict(), indent=4, sort_keys=True, default=str)
+        )
 
     def add_analysis(self, analysis: Analysis) -> Analysis:
         self.analyses.append(analysis)
@@ -365,29 +445,35 @@ class Report:
         self.custom_meta_data.append(customdata)
 
     @classmethod
-    def create_platform(cls, name: str, icon: str):
+    def create_platform(cls, name: str, icon: str) -> Platform:
         return Platform(name=name, icon=icon)
 
     @classmethod
     def create_application(
         cls, name: str, icon: str, version: str, version_code: str,
         sha1: str, md5: str
-    ):
+    ) -> Application:
         return Application(
             name=name, icon=icon, version=version, version_code=version_code,
             sha1=sha1, md5=md5
         )
 
     @classmethod
-    def create_company(cls, name, logo, hide):
+    def create_company(cls, name, logo, hide) -> Company:
         return Company(name=name, logo=logo, hide=hide)
 
     @classmethod
-    def create_reference(cls, id: int, name: str, url: str):
+    def create_created_on(
+        cls, isodate: str=(maya.now().iso8601())
+    ) -> datetime:
+        return maya.parse(isodate).datetime()
+
+    @classmethod
+    def create_reference(cls, id: int, name: str, url: str) -> Reference:
         return Reference(id=id, name=name, url=url)
 
     @classmethod
-    def create_custommetadata(cls, key: str, val: str):
+    def create_custommetadata(cls, key: str, val: str) -> CustomMetaData:
         return CustomMetaData(key=key, val=val)
 
     @classmethod
@@ -398,94 +484,108 @@ class Report:
         regulatory: Regulatory, vulnerability_references: Content,
         findings: List[Content]=[], tags: List[Tag]=[],
         attachments: List[Attachment]=[]
-    ):
+    ) -> Analysis:
         return Analysis(
-            id, title, intro, desc, risk, cvss_v3, business_implication,
-            correct_implementation, incorrect_implementation, regulatory,
-            vulnerability_references, findings, tags, attachments
+            id=id,
+            title=title,
+            intro=intro,
+            desc=desc,
+            risk=risk,
+            cvss_v3=cvss_v3,
+            business_implication=business_implication,
+            correct_implementation=correct_implementation,
+            incorrect_implementation=incorrect_implementation,
+            regulatory=regulatory,
+            vulnerability_references=vulnerability_references,
+            findings=findings,
+            tags=tags,
+            attachments=attachments
         )
 
     @classmethod
-    def create_content(cls, text: str='', html: str='', markdown: str=''):
+    def create_content(
+        cls, text: str='', html: str='', markdown: str=''
+    ) -> Content:
         return Content(text=text, html=html, markdown=markdown)
 
     @classmethod
-    def create_risk(cls, **kwargs):
+    def create_risk(cls, **kwargs) -> Risk:
         return Analysis.create_risk(**kwargs)
 
     @classmethod
-    def create_regulatory(cls, **kwargs):
+    def create_regulatory(cls, **kwargs) -> Regulatory:
         return Analysis.create_regulatory(**kwargs)
 
     @classmethod
-    def parse_cvssv3_vector(cls, **kwargs):
+    def parse_cvssv3_vector(cls, **kwargs) -> CVSSv3:
         return CVSSv3.parse_vector(**kwargs)
 
     @classmethod
-    def get_risk_color(cls, risk):
+    def get_risk_color(cls, risk: str) -> str:
         return cls.RISK_COLOR.get(risk.lower(), '')
 
-    def _count_severity(self, label):
-        return len(
-            list(filter(
-                lambda x: x.risk.computed_value_label.lower() == label,
-                self.analyses
-            ))
-        )
+    def _count_severity(self, label: str) -> int:
+        count = 0
+        for a in self.analyses:
+            if a.risk and (a.risk.computed_value_label.lower() == label):
+                count += 1
+        return count
 
-    def _percent_severity(self, count):
+    def _percent_severity(self, count: int) -> float:
+        if not len(self.analyses):
+            return 0.0
         return round((count / len(self.analyses)) * 100, 2)
 
     @property
-    def critical_count(self):
+    def critical_count(self) -> int:
         return self._count_severity('critical')
 
     @property
-    def high_count(self):
+    def high_count(self) -> int:
         return self._count_severity('high')
 
     @property
-    def medium_count(self):
+    def medium_count(self) -> int:
         return self._count_severity('medium')
 
     @property
-    def low_count(self):
+    def low_count(self) -> int:
         return self._count_severity('low')
 
     @property
-    def passed_count(self):
+    def passed_count(self) -> int:
         return self._count_severity('passed')
 
     @property
-    def untested_count(self):
+    def untested_count(self) -> int:
         return self._count_severity('untested')
 
     @property
-    def critical_percent(self):
+    def critical_percent(self) -> float:
         return self._percent_severity(self.critical_count)
 
     @property
-    def high_percent(self):
+    def high_percent(self) -> float:
         return self._percent_severity(self.high_count)
 
     @property
-    def medium_percent(self):
+    def medium_percent(self) -> float:
         return self._percent_severity(self.medium_count)
 
     @property
-    def low_percent(self):
+    def low_percent(self) -> float:
         return self._percent_severity(self.low_count)
 
     @property
-    def passed_percent(self):
+    def passed_percent(self) -> float:
         return self._percent_severity(self.passed_count)
 
     @property
-    def untested_percent(self):
+    def untested_percent(self) -> float:
         return self._percent_severity(self.untested_count)
 
     @property
-    def svg_chart(self):
+    def svg_chart(self) -> str:
         tpl = (
             '<circle cx="21" cy="21" r="15.91549430918954" stroke-width="8" '
             'stroke="{}" stroke-dasharray="{} {}" stroke-dashoffset="-{}" '
