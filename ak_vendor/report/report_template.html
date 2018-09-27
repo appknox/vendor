@@ -35,6 +35,7 @@
     html {
       font-family: 'Noto Sans', sans-serif;
       font-size: 0.95em;
+      line-height: 1.5;
       color: #6d6e73;
     }
     pre {
@@ -197,6 +198,7 @@
     }
     .table--appdetail td {
       padding: 0.8em 1em;
+      word-wrap: break-word;
     }
     .table--appdetail tr td:first-child {
       width: 41%;
@@ -250,13 +252,13 @@
     .tag {
       background: #6d6e73;
       color: white;
-      padding: 0.2em 0.7em 0.4em;
+      padding: 0.3em 0.7em;
       font-size: 0.7em;
       font-weight: 600;
       border-radius: 0.3em;
     }
     .severity {
-      padding: 0.3em 1em 0.45em;
+      padding: 0.4em 1em;
       display: inline-block;
       text-align: center;
       vertical-align: middle;
@@ -337,6 +339,7 @@
     }
     .analysis__cvss__value {
       font-weight: bold;
+      font-size: 0.85em;
     }
     .analysis__attachment {
       margin: 4em 0;
@@ -701,9 +704,11 @@
         <table>
           <tbody>
             <tr>
-              <td>
-                <img src="{{ report.svg_chart }}" alt="">
-              </td>
+              {% if report.svg_chart %}
+                <td>
+                  <img src="{{ report.svg_chart }}" alt="">
+                </td>
+              {% endif %}
               <td>
                 <ul class="statschart__fields">
                   <li class="statschart__field">

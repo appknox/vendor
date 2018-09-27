@@ -34,7 +34,8 @@ setup(
     include_package_data=True,
     entry_points='',
     install_requires=[
-        'orm-choices==0.3.0'
+        'orm-choices==0.3.0',
+        'maya==0.5.0'
     ],
     zip_safe=False,
     extras_require={
