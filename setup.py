@@ -35,7 +35,8 @@ setup(
     entry_points='',
     install_requires=[
         'orm-choices==0.3.0',
-        'maya==0.5.0'
+        'maya==0.5.0',
+        'html2text==2018.1.9',
     ],
     zip_safe=False,
     extras_require={

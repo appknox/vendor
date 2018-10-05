@@ -2,6 +2,7 @@ import attr
 import enum
 import maya
 import json
+import html2text
 from datetime import datetime
 from cvss import CVSS3
 from typing import List
@@ -142,6 +143,9 @@ class Content:
     html = attr.ib(type=str)
     text = attr.ib(type=str, default='')
     markdown = attr.ib(type=str, default='')
+
+    def html_to_text(self):
+        return html2text.html2text(self.html)[:-2]
 
 
 @attr.s
