@@ -541,6 +541,12 @@
         <td>{% trans "Application MD5 Hash" %}</td>
         <td>{{ report.application.md5 }}</td>
       </tr>
+      {% if report.appknox_file_id %}
+        <tr>
+            <td>{% trans "Appknox File ID" %}</td>
+            <td>{{ report.appknox_file_id }}</td>
+        </tr>
+      {% endif %}
     </table>
   </section>
 

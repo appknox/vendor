@@ -400,6 +400,7 @@ class Report:
     package_name = attr.ib(type=str)
     platform = attr.ib(type=Platform)
     application = attr.ib(type=Application)
+    appknox_file_id = attr.ib(type=int, default=None)
     prepared_for = attr.ib(
         type=Company,
         default=Company(name='')
