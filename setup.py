@@ -41,7 +41,7 @@ setup(
     zip_safe=False,
     extras_require={
         'dev': [
-            'django==2.0.2',
+            'django==2.0.8',
             'weasyprint==0.42.2',
             'bumpversion==0.5.3',
             'twine==1.9.1'
