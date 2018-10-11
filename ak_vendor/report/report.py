@@ -2,6 +2,7 @@ import attr
 import enum
 import maya
 import json
+import html2text
 from datetime import datetime
 from cvss import CVSS3
 from typing import List
@@ -143,6 +144,9 @@ class Content:
     text = attr.ib(type=str, default='')
     markdown = attr.ib(type=str, default='')
 
+    def html_to_text(self):
+        return html2text.html2text(self.html)[:-2]
+
 
 @attr.s
 class Attachment:
@@ -283,6 +287,13 @@ class Regulatory:
     pcidss = attr.ib(factory=list, type=List[dict])
 
     @classmethod
+    def from_json(cls, data):
+        return cls(
+            owasp=[OWASP(**owasp) for owasp in data.get('owasp', [])],
+            pcidss=[PCIDSS(**pcidss) for pcidss in data.get('pcidss', [])]
+        )
+
+    @classmethod
     def create_owasp(cls, code: str, year: int, title: str) -> OWASP:
         return OWASP(code=code, year=year, title=title)
 
@@ -328,6 +339,35 @@ class Analysis:
     findings = attr.ib(factory=list, type=List[Content])
     tags = attr.ib(factory=list, type=List[Tag])
     attachments = attr.ib(factory=list, type=List[Attachment])
+
+    @classmethod
+    def from_json(cls, data):
+        cvssv3 = data.get('cvss_v3')
+        return cls(
+            id=data.get('id'),
+            title=Content(**data.get('title')),
+            desc=Content(**data.get('desc')),
+            intro=Content(**data.get('intro')),
+            business_implication=Content(**data.get('business_implication')),
+            correct_implementation=Content(
+                **data.get('correct_implementation')
+            ),
+            incorrect_implementation=Content(
+                **data.get('incorrect_implementation')
+            ),
+            vulnerability_references=Content(
+                **data.get('vulnerability_references')
+            ),
+            risk=Risk(**data.get('risk', {})),
+            cvss_v3=CVSSv3(**cvssv3) if cvssv3 else None,
+            regulatory=Regulatory.from_json(data.get('regulatory')),
+            findings=[Finding(**finding) for finding in data.get('findings', [])],
+            tags=[Tag(**tag) for tag in data.get('tags', [])],
+            attachments=[
+                Attachment(**attachment)
+                for attachment in data.get('attachments', [])
+            ]
+        )
 
     @classmethod
     def create_regulatory(
@@ -400,6 +440,7 @@ class Report:
     package_name = attr.ib(type=str)
     platform = attr.ib(type=Platform)
     application = attr.ib(type=Application)
+    appknox_file_id = attr.ib(type=int, default=None)
     prepared_for = attr.ib(
         type=Company,
         default=Company(name='')
@@ -431,6 +472,34 @@ class Report:
     def to_json(self) -> dict:
         return json.loads(
             json.dumps(self.to_dict(), indent=4, sort_keys=True, default=str)
+        )
+
+    @classmethod
+    def from_json(cls, data):
+        return cls(
+            package_name=data.get('package_name'),
+            platform=Platform(**data.get('platform')),
+            application=Application(**data.get('application')),
+            appknox_file_id=data.get('appknox_file_id'),
+            prepared_for=Company(**data.get('prepared_for')),
+            prepared_by=Company(**data.get('prepared_by')),
+            powered_by=Company(**data.get('powered_by')),
+            created_on=cls.create_created_on(data.get('created_on')),
+            show_copyright=data.get('show_copyright'),
+            is_partnered=data.get('is_partnered'),
+            rating=data.get('rating'),
+            references=[
+                Reference(**reference)
+                for reference in data.get('references', [])
+            ],
+            custom_meta_data=[
+                CustomMetaData(**cmd)
+                for cmd in data.get('custom_meta_data', [])
+            ],
+            analyses=[
+                Analysis.from_json(analysis)
+                for analysis in data.get('analyses', [])
+            ],
         )
 
     def add_analysis(self, analysis: Analysis) -> Analysis:
