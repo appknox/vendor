@@ -5,6 +5,7 @@ name = "pypi"
 
 [dev-packages]
 "e1839a8" = {path = ".", extras = ["dev"], editable = true}
+ak-vendor = {path = ".", extras = ["dev"], editable = true}
 
 [packages]
 "e1839a8" = {path = ".", editable = true}
