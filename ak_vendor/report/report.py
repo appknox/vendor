@@ -361,7 +361,13 @@ class Analysis:
             risk=Risk(**data.get('risk', {})),
             cvss_v3=CVSSv3(**cvssv3) if cvssv3 else None,
             regulatory=Regulatory.from_json(data.get('regulatory')),
-            findings=[Finding(**finding) for finding in data.get('findings', [])],
+            findings=[
+                cls.create_finding(
+                    title=Content(**finding.get('title')),
+                    description=Content(**finding.get('description'))
+                )
+                for finding in data.get('findings', [])
+            ],
             tags=[Tag(**tag) for tag in data.get('tags', [])],
             attachments=[
                 Attachment(**attachment)
@@ -383,6 +389,10 @@ class Analysis:
 
     @classmethod
     def create_finding(cls, title: Content, description: Content) -> Finding:
+        if title.html:
+            title.html = cls.trim_unsupported_chars(title.html)
+        if description.html:
+            description.html = cls.trim_unsupported_chars(description.html)
         return Finding(title=title, description=description)
 
     @classmethod
@@ -419,6 +429,14 @@ class Analysis:
             return False
         self.attachments.append(attachment)
         return self.attachments
+
+    @classmethod
+    def trim_unsupported_chars(cls, string: str) -> str:
+        """trim non-font characters"""
+        s = string
+        for char in ['\u001b', '\\u001b', '\x1b']:  # ESCAPE char
+            s = s.replace(char, '')
+        return s
 
 
 @attr.s
