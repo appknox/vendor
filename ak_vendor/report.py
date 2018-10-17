@@ -1,50 +1,39 @@
-from os import environ
-from datetime import datetime
-
+import json
+from os.path import dirname, abspath
 from django import template
 from django.conf import settings
 from django.template import Template, Context
 from django.template.engine import Engine
+from django.template.loader import render_to_string
+from ak_vendor.report import Report
+from django.core.wsgi import get_wsgi_application
+settings.configure()
+application = get_wsgi_application()
 
-from ak_vendor.utils import dict2obj
-from ak_vendor.seed import file_data, report_data
-from ak_vendor.constants import REPORT_PATH, OUTPUT_PATH
-from ak_vendor.enums import RiskEnum
+CUR_DIR = dirname(abspath(__file__))
+template.Library()
 
-settings.configure(DEBUG=False)
-register = template.Library()
-file = dict2obj(file_data)
-data = dict2obj(report_data)
-pwd = environ['PWD']
-content = ""
+class ReportHTMLExporter:
+    def __init__(self, report):
+        self.report = report
+
+    def to_html(self):
+        tpl = open('{}/report/report_template.html'.format(CUR_DIR)).read()
+        template = Template(tpl, engine=Engine(libraries={
+            'i18n': 'django.templatetags.i18n'
+        }))
+        context = Context({
+            'report': self.report
+        })
+        content = template.render(context)
+        return content
+
+    def to_html_file(self, path=''):
+        with open('{}/output.html'.format(path), 'w') as file:
+            tpl = self.to_html()
+            file.write(tpl)
 
 
-with open(REPORT_PATH, "r") as input_file:
-    """
-    WARNING: DO NOT MODIFY TEMPLATE STRING
-    """
-    template_string = input_file.read()
-    ts_list = template_string.split('{% trans "')
-    ts_1 = ts_list[0]
-    ts_rest = [ts.replace('" %}', '', 1) for ts in ts_list[1:]]
-    ts_rest.insert(0, ts_1)
-    template_compiled = "".join(ts_rest)
-    template = Template(template_compiled, engine=Engine())
-    context = Context(dict(
-        file=file,
-        data=data,
-        RiskEnum=RiskEnum,
-        chart_url="Some URL",
-        ignored_analyses_count=len([
-            a for a in file.sorted_analyses if a.is_ignored
-        ]),
-        rating=50.5,
-        date=str(datetime.now())
-    ))
-    content = template.render(context)
-
-with open(REPORT_PATH, "w") as report_file:
-    report_file.write("{% load i18n %}\n" + template_string)
-
-with open(OUTPUT_PATH, "w") as output_file:
-    output_file.write(content)
+data = json.load(open('{}/report_sample1.json'.format(CUR_DIR)))
+report_obj = Report.from_json(data)
+ReportHTMLExporter(report_obj).to_html_file(CUR_DIR)
