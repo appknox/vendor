@@ -8,8 +8,8 @@ setup(
     description="Some vendor scripts that we use here at Appknox",
     long_description="All the Vendor/helper files the Appknox relies on",
     url='https://github.com/appknox/vendor',
-    author='dhilipsiva',
-    author_email='dhilipsiva@gmail.com',
+    author='appknox',
+    author_email='engineering@appknox.com',
     license='MIT',
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -25,8 +25,6 @@ setup(
     data_files=[
         ('excel', ['ak_vendor/translations/ja/vulnerability.xlsx']),
         ('report', [
-            'ak_vendor/report.html',
-            'ak_vendor/report.css',
             'ak_vendor/report/report_template.html',
         ]),
         ('translations', ['ak_vendor/locale/ja/LC_MESSAGES/django.po']),
@@ -37,6 +35,8 @@ setup(
         'orm-choices==0.3.0',
         'maya==0.5.0',
         'html2text==2018.1.9',
+        'attrs>=18.2.0',
+        'cvss>=1.8'
     ],
     zip_safe=False,
     extras_require={

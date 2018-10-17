@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "01c5159ff81044f6b1cf3ac4f8ac6127fb48ea5393d704de675aa235f8acd47d"
+            "sha256": "d6e2d5ecf1ef7a673b1913e3d179d6642769eec428069923435aa12a0b25b8d3"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -14,16 +14,29 @@
         ]
     },
     "default": {
+        "ak-vendor": {
+            "editable": true,
+            "path": "."
+        },
+        "attrs": {
+            "hashes": [
+                "sha256:10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69",
+                "sha256:ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"
+            ],
+            "version": "==18.2.0"
+        },
+        "cvss": {
+            "hashes": [
+                "sha256:d35bb56ad742a617561757cda77d0fa7d6dbe85a8b6eedf46c0a37fbfb7fc335"
+            ],
+            "version": "==1.9"
+        },
         "dateparser": {
             "hashes": [
                 "sha256:940828183c937bcec530753211b70f673c0a9aab831e43273489b310538dff86",
                 "sha256:b452ef8b36cd78ae86a50721794bc674aa3994e19b570f7ba92810f4e0a2ae03"
             ],
             "version": "==0.7.0"
-        },
-        "e1839a8": {
-            "editable": true,
-            "path": "."
         },
         "html2text": {
             "hashes": [
@@ -131,10 +144,14 @@
     "develop": {
         "ak-vendor": {
             "editable": true,
-            "extras": [
-                "dev"
-            ],
             "path": "."
+        },
+        "attrs": {
+            "hashes": [
+                "sha256:10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69",
+                "sha256:ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"
+            ],
+            "version": "==18.2.0"
         },
         "bumpversion": {
             "hashes": [
@@ -160,10 +177,10 @@
         },
         "certifi": {
             "hashes": [
-                "sha256:376690d6f16d32f9d1fe8932551d80b23e9d393a8578c5633a2ed39a64861638",
-                "sha256:456048c7e371c089d0a77a5212fb37a2c2dce1e24146e3b7e0261736aaeaa22a"
+                "sha256:339dc09518b07e2fa7eda5450740925974815557727d6bd35d319c1524a04a4c",
+                "sha256:6d58c986d22b038c8c0df30d639f23a3e6d172a05c3583e766f4c0b785c0986a"
             ],
-            "version": "==2018.8.24"
+            "version": "==2018.10.15"
         },
         "cffi": {
             "hashes": [
@@ -217,6 +234,12 @@
             ],
             "version": "==0.2.1"
         },
+        "cvss": {
+            "hashes": [
+                "sha256:d35bb56ad742a617561757cda77d0fa7d6dbe85a8b6eedf46c0a37fbfb7fc335"
+            ],
+            "version": "==1.9"
+        },
         "dateparser": {
             "hashes": [
                 "sha256:940828183c937bcec530753211b70f673c0a9aab831e43273489b310538dff86",
@@ -237,10 +260,6 @@
                 "sha256:68aeea369a8130259354b6ba1fa9babe0c5ee6bced505dea4afcd00f765ae38b"
             ],
             "version": "==2.0.8"
-        },
-        "e1839a8": {
-            "editable": true,
-            "path": "."
         },
         "html2text": {
             "hashes": [
@@ -439,11 +458,11 @@
         },
         "tqdm": {
             "hashes": [
-                "sha256:18f1818ce951aeb9ea162ae1098b43f583f7d057b34d706f66939353d1208889",
-                "sha256:df02c0650160986bac0218bb07952245fc6960d23654648b5d5526ad5a4128c9"
+                "sha256:a0be569511161220ff709a5b60d0890d47921f746f1c737a11d965e1b29e7b2e",
+                "sha256:e293e6d7a7f41a529a27f8d6624ab11544ccbfe82a205af6fad102545099fc21"
             ],
-            "markers": "python_version >= '2.6' and python_version != '3.1.*' and python_version != '3.0.*'",
-            "version": "==4.26.0"
+            "markers": "python_version != '3.1.*' and python_version != '3.0.*' and python_version >= '2.6'",
+            "version": "==4.27.0"
         },
         "twine": {
             "hashes": [
