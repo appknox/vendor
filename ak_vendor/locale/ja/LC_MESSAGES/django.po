@@ -859,8 +859,6 @@ msgid "Application MD5 Hash"
 msgstr "アプリケーション MD5 ハッシュ"
 
 #: report.html:546
-#, fuzzy
-#| msgid "Appknox "
 msgid "Appknox File ID"
 msgstr "Appknox"
 
@@ -11130,20 +11128,14 @@ msgstr ""
 "\n"
 
 #: vulnerabilities.py:5180
-#, fuzzy
-#| msgid "Insecure SSLSocketFactories"
 msgid "Insecure Cookie Attributes"
 msgstr "安全でないSSLSocketFactories"
 
 #: vulnerabilities.py:5181
-#, fuzzy
-#| msgid "Does the application uses proper Session Management?"
 msgid "Does the application uses proper Cookie attributes?"
 msgstr "アプリケーションは適切なセッション管理を使用していますか？"
 
 #: vulnerabilities.py:5182
-#, fuzzy
-#| msgid "The application does uses proper Session Management"
 msgid "The application uses proper Cookie attributes"
 msgstr "アプリケーションは適切なセッション管理を使用しています。"
 
@@ -11213,20 +11205,14 @@ msgid ""
 msgstr ""
 
 #: vulnerabilities.py:5225
-#, fuzzy
-#| msgid "Sensitive Information in Property Lists"
 msgid "Sensitive Information Disclosure"
 msgstr "プロパティリストの機密情報"
 
 #: vulnerabilities.py:5226
-#, fuzzy
-#| msgid "Does this application store sensitive information in CoreData?"
 msgid "Does the application discloses sensitive information?"
 msgstr "このアプリケーションはCoreDataに機密情報を保存していませんか？"
 
 #: vulnerabilities.py:5227
-#, fuzzy
-#| msgid "This application does not store sensitive information in YapDB."
 msgid "The application does not discloses sensitive information"
 msgstr "このアプリケーションはYapDBに機密情報を保存していません。"
 
@@ -11285,14 +11271,10 @@ msgid "Stack Trace Enabled"
 msgstr ""
 
 #: vulnerabilities.py:5263
-#, fuzzy
-#| msgid "Does this application store sensitive information in CoreData?"
 msgid "Does the application leaks out sensitive information via Stacktrace?"
 msgstr "このアプリケーションはCoreDataに機密情報を保存していませんか？"
 
 #: vulnerabilities.py:5264
-#, fuzzy
-#| msgid "This application does not store sensitive information in CoreData."
 msgid "The application does not leak senstive information via stacktrace"
 msgstr "このアプリケーションはCoreDataに機密情報を保存していません。"
 
