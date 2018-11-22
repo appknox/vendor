@@ -69,6 +69,7 @@ class PlatformEnum:
         IOS = [1, 'iOS']
         WINDOWS = [2, 'Windows']
         COMMON = [3, 'common (meta)']
+        TVOS = [4, 'Apple TV']
 
 
 @choices
