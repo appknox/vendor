@@ -41,10 +41,10 @@ setup(
     zip_safe=False,
     extras_require={
         'dev': [
-            'django==2.0.8',
+            'django==2.0.10',
             'weasyprint==0.42.2',
             'bumpversion==0.5.3',
-            'twine==1.9.1'
+            'twine==1.12.1'
         ],
         'test': [''],
     },
