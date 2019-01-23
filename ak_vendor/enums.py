@@ -416,3 +416,4 @@ class MFAMethodEnum:
     class Meta:
         NONE = [0, 'None']
         TOTP = [1, 'TOTP']
+        HOTP = [2, 'HOTP']
