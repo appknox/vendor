@@ -703,3 +703,10 @@ class Report:
             'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" '
             'width="216px" height="216px" viewBox="0 0 42 42">{}</svg>'
         ).format(sector)
+
+    @property
+    def custom_meta_names(self) -> [str]:
+        return [
+            cmd.val for cmd in self.custom_meta_data
+            if cmd.key == 'name' and cmd.val != ''
+        ]
