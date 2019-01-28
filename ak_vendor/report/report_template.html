@@ -426,9 +426,6 @@
               <div class="appmeta__version">
                 {{ report.application.version }}
               </div>
-              {% if report.custom_meta_name != '' %}
-                <div class="appmeta__custom">{{ report.custom_meta_name }}</div>
-              {% endif %}
             </div>
           </td>
         </tr>
@@ -510,7 +507,7 @@
       <tr>
         <td>{% trans "Application Name" %}</td>
         <td>
-          {{ report.application.name }}{% if report.custom_meta_data.name != '' %}<br>{{ report.custom_meta_data.name }}{% endif %}
+            {{ report.application.name }} {% for meta_name in report.custom_meta_names %}<br>{{ meta_name }}{% endfor %}
         </td>
       </tr>
       <tr>
