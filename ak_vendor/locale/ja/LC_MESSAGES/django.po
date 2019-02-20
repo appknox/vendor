@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 10:00+0000\n"
+"POT-Creation-Date: 2019-02-20 08:26+0000\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -771,15 +771,15 @@ msgstr "アプリケーション セキュリティレポート"
 msgid "For Internal Purpose"
 msgstr "内部目的のみ"
 
-#: report.html:443 report.html:465
+#: report.html:440 report.html:462
 msgid "Prepared by"
 msgstr "Prepared by"
 
-#: report.html:453 report.html:477
+#: report.html:450 report.html:474
 msgid "Powered by"
 msgstr "搭載"
 
-#: report.html:493
+#: report.html:490
 msgid ""
 "Portions of this document and the templates used in its production are the "
 "property of Appknox"
@@ -787,19 +787,19 @@ msgstr ""
 "この文書の一部およびそのプロダクションに使用されるテンプレートは、Appknoxが所"
 "有権を有します。"
 
-#: report.html:493 report.html:495
+#: report.html:490 report.html:492
 msgid " and "
 msgstr " そして "
 
-#: report.html:493 report.html:495 report.html:634
+#: report.html:490 report.html:492 report.html:631
 msgid ","
 msgstr "、"
 
-#: report.html:493
+#: report.html:490
 msgid " and cannot be copied without permission."
 msgstr " 許可なくコピーすることはできません。"
 
-#: report.html:495
+#: report.html:492
 msgid ""
 "While precautions have been taken in the preparation of this document, the "
 "publisher and the author(s) assume no responsibility for errors, omissions, "
@@ -810,11 +810,11 @@ msgstr ""
 "ている情報の使用に起因する誤り、省略、または損害について一切責任を負いませ"
 "ん。"
 
-#: report.html:495 report.html:634
+#: report.html:492 report.html:631
 msgid "Appknox"
 msgstr "Appknox"
 
-#: report.html:495
+#: report.html:492
 msgid ""
 " services does not guarantee the security of a system, or that intrusions "
 "will not occur."
@@ -822,91 +822,91 @@ msgstr ""
 " のサービスを使用しても、システムのセキュリティや、侵入が発生しないことを保証"
 "するものではありません。"
 
-#: report.html:506
+#: report.html:503
 msgid "Application Details"
 msgstr "アプリケーションの詳細"
 
-#: report.html:511
+#: report.html:508
 msgid "Application Name"
 msgstr "アプリケーションの名称"
 
-#: report.html:517
+#: report.html:514
 msgid "Platform"
 msgstr "プラットフォーム"
 
-#: report.html:521
+#: report.html:518
 msgid "Application Namespace"
 msgstr "アプリケーションの名前空間"
 
-#: report.html:525
+#: report.html:522
 msgid "Version"
 msgstr "バージョン"
 
-#: report.html:529
+#: report.html:526
 msgid "Version Code"
 msgstr "バージョン"
 
-#: report.html:533
+#: report.html:530
 msgid "Audit Date"
 msgstr "監査日"
 
-#: report.html:537
+#: report.html:534
 msgid "Application SHA1 Hash"
 msgstr "アプリケーション SHA1 ハッシュ"
 
-#: report.html:541
+#: report.html:538
 msgid "Application MD5 Hash"
 msgstr "アプリケーション MD5 ハッシュ"
 
-#: report.html:546
+#: report.html:543
 msgid "Appknox File ID"
 msgstr "Appknox"
 
-#: report.html:559
+#: report.html:556
 msgid "Table of Contents"
 msgstr "目次"
 
-#: report.html:567 report.html:631
+#: report.html:564 report.html:628
 msgid "Report Summary"
 msgstr "レポートの概要"
 
-#: report.html:573 report.html:638
+#: report.html:570 report.html:635
 msgid "Audit Summary"
 msgstr "監査の概要"
 
-#: report.html:578 report.html:707 report.html:750
+#: report.html:575 report.html:704 report.html:747
 msgid "Appknox "
 msgstr "Appknox"
 
-#: report.html:578 report.html:707
+#: report.html:575 report.html:704
 msgid "Security Rating"
 msgstr "のセキュリティ評価"
 
-#: report.html:593 report.html:938
+#: report.html:590 report.html:935
 msgid "Noncompliant Code Example"
 msgstr "違反コードの例"
 
-#: report.html:600 report.html:946
+#: report.html:597 report.html:943
 msgid "Compliant Solution"
 msgstr "コンプライアンス ソリューション"
 
-#: report.html:607 report.html:954
+#: report.html:604 report.html:951
 msgid "Business Implication"
 msgstr "ビジネスへの影響"
 
-#: report.html:614 report.html:962
+#: report.html:611 report.html:959
 msgid "Related Vulnerabilities"
 msgstr "関連のある脆弱性"
 
-#: report.html:634
+#: report.html:631
 msgid ", powered by "
 msgstr "、 搭載 "
 
-#: report.html:634
+#: report.html:631
 msgid " conducted a security assessment of the mobile application. "
 msgstr " モバイルアプリケーションのセキュリティ評価を実施しました。"
 
-#: report.html:634
+#: report.html:631
 msgid ""
 "This report contains all the findings during the automated and manual "
 "auditing processes. It also contains the process of discovering those "
@@ -916,139 +916,139 @@ msgstr ""
 "自動および手動監査プロセス中のすべての調査結果が含まれています。また、これら"
 "の脆弱性を発見するプロセスと、その問題を改善する方法も含まれています。"
 
-#: report.html:658
+#: report.html:655
 msgid "Risk"
 msgstr "リスク"
 
-#: report.html:683
+#: report.html:680
 msgid "Priority Level"
 msgstr "優先レベル"
 
-#: report.html:684
+#: report.html:681
 msgid "Number of failed test cases"
 msgstr "失敗したテストケースの数"
 
-#: report.html:687
+#: report.html:684
 msgid "Critical Risk"
 msgstr "重大リスク"
 
-#: report.html:691
+#: report.html:688
 msgid "High Risk"
 msgstr "高リスク"
 
-#: report.html:695
+#: report.html:692
 msgid "Medium Risk"
 msgstr "中リスク"
 
-#: report.html:699
+#: report.html:696
 msgid "Low Risk"
 msgstr "低リスク"
 
-#: report.html:721
+#: report.html:718
 msgid "Critical"
 msgstr "クリティカル"
 
-#: report.html:725
+#: report.html:722
 msgid "High"
 msgstr "高い"
 
-#: report.html:729
+#: report.html:726
 msgid "Medium"
 msgstr "中"
 
-#: report.html:733
+#: report.html:730
 msgid "Low"
 msgstr "低い"
 
-#: report.html:737
+#: report.html:734
 msgid "Passed"
 msgstr "合格"
 
-#: report.html:741
+#: report.html:738
 msgid "Untested"
 msgstr "テストされていない"
 
-#: report.html:750
+#: report.html:747
 msgid "Security Rating:"
 msgstr "セキュリティ評価："
 
-#: report.html:750
+#: report.html:747
 msgid "Unsecured"
 msgstr "無担保"
 
-#: report.html:777
+#: report.html:774
 msgid "Risk Rating"
 msgstr "リスク評価"
 
-#: report.html:802
+#: report.html:799
 msgid "This risk has been overridden from"
 msgstr "This risk has been overridden from"
 
-#: report.html:802
+#: report.html:799
 msgid "to"
 msgstr "to"
 
-#: report.html:802
+#: report.html:799
 msgid "The reason is:"
 msgstr "The reason is:"
 
-#: report.html:812
+#: report.html:809
 msgid "CVSS"
 msgstr "CVSS"
 
-#: report.html:817
+#: report.html:814
 msgid "Version 3.0 Base Score"
 msgstr "バージョン3.0ベーススコア"
 
-#: report.html:821
+#: report.html:818
 msgid "Attack vector"
 msgstr "アタックベクトル"
 
-#: report.html:825
+#: report.html:822
 msgid "Attack complexity"
 msgstr "攻撃の複雑さ"
 
-#: report.html:831
+#: report.html:828
 msgid "Privileges required"
 msgstr "特権が必要です"
 
-#: report.html:835
+#: report.html:832
 msgid "User Interaction"
 msgstr "ユーザーインタラクション"
 
-#: report.html:841
+#: report.html:838
 msgid "Scope"
 msgstr "範囲"
 
-#: report.html:845
+#: report.html:842
 msgid "Confidentiality Impact"
 msgstr "機密性の影響"
 
-#: report.html:851
+#: report.html:848
 msgid "Integrity Impact"
 msgstr "完全性の影響"
 
-#: report.html:855
+#: report.html:852
 msgid "Availability Impact"
 msgstr "可用性への影響"
 
-#: report.html:865
+#: report.html:862
 msgid "Regulatory"
 msgstr "規制上"
 
-#: report.html:870
+#: report.html:867
 msgid "OWASP"
 msgstr "OWASP"
 
-#: report.html:888
+#: report.html:885
 msgid "PCI-DSS"
 msgstr "PCI-DSS"
 
-#: report.html:910
+#: report.html:907
 msgid "Risk Assessment"
 msgstr "リスクアセスメント"
 
-#: report.html:979
+#: report.html:976
 msgid "References"
 msgstr "参考文献"
 
@@ -10984,7 +10984,7 @@ msgstr "不適切なセッション管理"
 
 #: vulnerabilities.py:5120
 msgid "Does the application uses proper Session Management?"
-msgstr "アプリケーションは適切なセッション管理を使用していますか？"
+msgstr "このアプリケーションは適切なセッション管理が実装されていますか？"
 
 #: vulnerabilities.py:5121
 msgid "The application does uses proper Session Management"
@@ -11002,12 +11002,12 @@ msgid ""
 "loss of confidentiality and integrity.\n"
 msgstr ""
 "\n"
-"ユーザーが認証情報を使用してアプリケーションに正常にログインすると、サーバー"
-"によってアクセストークンが生成され、ユーザーに割り当てられます。 その後、アク"
-"セストークンを使用してユーザーを識別し、ログアウトするまでセッションを維持し"
-"ます。 アクセストークンを生成、割り当て、無効化することは、ログイン後のサー"
-"バーリソースの認証と、認証する方法を提供するため、安全に行う必要があります。 "
-"これを実施しないと完全性が失われる可能性があります。\n"
+"アクセストークンはユーザがアプリケーションに資格情報を使って正常にログインし"
+"た時にサーバによって生成され、ユーザに割り当てられるものです。その後、アクセ"
+"ストークンはユーザの識別に利用され、ログアウトまでセッションを維持するのに用"
+"いられます。ログイン後はアクセストークンを使って認証および認可を行っているた"
+"め、安全な方法で生成、割り当て、無効化するのは非常に重要で、不備があった場合"
+"には、機密性と完全性を失う可能性があります。\n"
 
 #: vulnerabilities.py:5125
 msgid ""
@@ -11017,9 +11017,9 @@ msgid ""
 "API calls on behalf of other users.\n"
 msgstr ""
 "\n"
-"アプリケーションがセッションを安全に管理しない場合、攻撃者はリモートからアカ"
-"ウントに進入し、トークンを再利用して他のユーザーに代わって不正なAPI呼び出しを"
-"行う可能性があります。\n"
+"アプリケーションがセッションを安全に管理していない場合、攻撃者がリモートから"
+"アカウントを奪いトークンを再利用することで、本来のユーザに代わり不正な API "
+"コールをされてしまう可能性があります。\n"
 
 #: vulnerabilities.py:5129
 msgid ""
@@ -11029,9 +11029,9 @@ msgid ""
 "or is inactive for a particular amount of time\n"
 msgstr ""
 "\n"
-"アプリケーションサーバーでは、ユーザーがログオフするか、または一定時間、非ア"
-"クティブになるとすぐに期限切れになるよう、強力に暗号化された動的なアクセス"
-"トークンを生成してください。\n"
+"強い暗号方式で動的に生成され、ユーザがログオフ、または一定時間行動が無かった"
+"場合にすぐに無効になるアクセストークンをアプリケーションサーバ側にて生成して"
+"下さい。\n"
 
 #: vulnerabilities.py:5132
 msgid ""
@@ -11137,7 +11137,7 @@ msgstr "アプリケーションは適切なセッション管理を使用して
 
 #: vulnerabilities.py:5182
 msgid "The application uses proper Cookie attributes"
-msgstr "アプリケーションは適切なセッション管理を使用しています。"
+msgstr "このアプリケーションは適切に Cookie の属性を付与しています。"
 
 #: vulnerabilities.py:5183
 msgid ""
@@ -11196,6 +11196,22 @@ msgid ""
 "    session.cookie_secure = false\n"
 "\n"
 msgstr ""
+"\n"
+"Java の場合,\n"
+"\n"
+"    <session-config>\n"
+"    <cookie-config>\n"
+"    <secure>false</secure>\n"
+"    </cookie-config>\n"
+"    </session-config>\n"
+"\n"
+"ASP.Net の場合,\n"
+"\n"
+"    <httpCookies requireSSL=\"false\" />\n"
+"PHP の場合,\n"
+"\n"
+"    session.cookie_secure = false\n"
+"\n"
 
 #: vulnerabilities.py:5214
 msgid ""
@@ -11206,15 +11222,15 @@ msgstr ""
 
 #: vulnerabilities.py:5225
 msgid "Sensitive Information Disclosure"
-msgstr "プロパティリストの機密情報"
+msgstr "機密情報の開示"
 
 #: vulnerabilities.py:5226
 msgid "Does the application discloses sensitive information?"
-msgstr "このアプリケーションはCoreDataに機密情報を保存していませんか？"
+msgstr "このアプリケーションは機密情報を開示していますか？"
 
 #: vulnerabilities.py:5227
 msgid "The application does not discloses sensitive information"
-msgstr "このアプリケーションはYapDBに機密情報を保存していません。"
+msgstr "このアプリケーションは機密情報を開示していません。"
 
 #: vulnerabilities.py:5228
 msgid ""
@@ -11234,6 +11250,16 @@ msgid ""
 "information including internal software versions, passwords, internal IPs "
 "etc.\n"
 msgstr ""
+"\n"
+"送付中のデータ、及び保存されているデータは、適切なアクセスコントロール及び暗"
+"号化を使用して外部への流出を防ぐ必要があります。暗号化がされていても、機密"
+"データの保護のために使用している暗号アルゴリズムが弱い、ハッシュアルゴリズム"
+"に脆弱性があるなどの理由で、対策が不十分なアプリケーションも少なくありませ"
+"ん。また、アプリケーションの API も外部へ機密情報が漏れるのを防ぐように適切に"
+"アクセスコントロールが施されていなければ、機密情報の流出源となりえます。機密"
+"情報を含むディレクトリが公に公開されている状態になっており、内部のソフトウェ"
+"アのバージョン、パスワード、内部 IP を含む多くの機密情報が漏れている例もあり"
+"ます。\n"
 
 #: vulnerabilities.py:5237
 msgid ""
@@ -11244,6 +11270,11 @@ msgid ""
 "perform identity theft,\n"
 "conduct credit card frauds and large no. of other crimes.\n"
 msgstr ""
+"\n"
+"アプリケーションはユーザのパスワード、金銭に関するデータ、ヘルス・レコード、"
+"個人が特定できる情報等を含む、機密情報を意図せず外部に露出していることがあり"
+"ます。このデータは ID 窃盗、クレジットカード詐欺、その他多くの犯罪を目論む攻"
+"撃者により盗まれる可能性があります。\n"
 
 #: vulnerabilities.py:5243
 msgid ""
@@ -11254,6 +11285,10 @@ msgid ""
 "in order to protect\n"
 "the data exposure across users and to the outside world.\n"
 msgstr ""
+"\n"
+"データは決して平文で送信してはいけません。保存されている機密データには暗号化"
+"を適切に使用し、ユーザ及び外部への露出を防止するようにアクセスコントロールを"
+"する必要があります。\n"
 
 #: vulnerabilities.py:5249
 msgid ""
@@ -11268,15 +11303,18 @@ msgstr ""
 
 #: vulnerabilities.py:5262
 msgid "Stack Trace Enabled"
-msgstr ""
+msgstr "スタックトレースが有効"
 
 #: vulnerabilities.py:5263
 msgid "Does the application leaks out sensitive information via Stacktrace?"
-msgstr "このアプリケーションはCoreDataに機密情報を保存していませんか？"
+msgstr ""
+"このアプリケーションはスタックトレースを通じて機密情報を漏えいしていません"
+"か？"
 
 #: vulnerabilities.py:5264
 msgid "The application does not leak senstive information via stacktrace"
-msgstr "このアプリケーションはCoreDataに機密情報を保存していません。"
+msgstr ""
+"このアプリケーションはスタックトレースを通じて機密情報を漏えいしていません。"
 
 #: vulnerabilities.py:5265
 msgid ""
@@ -11290,6 +11328,17 @@ msgid ""
 "structure of the server, usernames, information about the exception caused, "
 "source code etc.\n"
 msgstr ""
+"\n"
+"スタックトレース情報付きのアプリケーションの応答は攻撃者にとって有益で、一般"
+"的なエラー応答ページの代わりにデバッグ情報を提供することは悪い習慣と考えられ"
+"ています。例えば、アプリケーションの内部動作についての情報も含まれている可能"
+"性もあります。\n"
+"\n"
+"An attacker can gain information such as version of software, filepath "
+"structure of the server, usernames, information about the exception caused, "
+"source code etc.\t攻撃者に、ソフトウェアのバージョン、サーバのファイルパス構"
+"成、ユーザ名、例外情報、ソースコードなどの情報を取得される可能性もありま"
+"す。\n"
 
 #: vulnerabilities.py:5270
 msgid ""
@@ -11298,6 +11347,10 @@ msgid ""
 "which can be leveraged by an attacker. Attackers try to get this information "
 "by fuzzing and tampering the input data.\n"
 msgstr ""
+"\n"
+"スタックトレースはそれ自体では脆弱性ではないですが、攻撃者が利用できる情報を"
+"漏らしている可能性があります。攻撃者はファジングや入力データの改ざんによっ"
+"て、この情報を取得しようと試みます。\n"
 
 #: vulnerabilities.py:5274
 msgid ""
@@ -11320,6 +11373,25 @@ msgid ""
 "    </System.Web>\n"
 "\n"
 msgstr ""
+"\n"
+"カスタムエラーページを使用して、エラーが発生したときにユーザをリダイレクトす"
+"ることを推奨しています。\n"
+"Apply following changes on your web.config file to prevent information "
+"leakage by applying custom error pages.\tカスタムエラーページを適用して情報漏"
+"れを防ぐには、 web.config に以下のような変更を適用してください。\n"
+"\n"
+"    <System.Web>\n"
+"        <customErrors mode=\"On\" defaultRedirect=\"~/error/GeneralError.aspx"
+"\">\n"
+"            <error statusCode=\"403\" redirect=\"~/error/Forbidden.aspx\" /"
+">\n"
+"            <error statusCode=\"404\" redirect=\"~/error/PageNotFound.aspx"
+"\" />\n"
+"            <error statusCode=\"500\" redirect=\"~/error/InternalError.aspx"
+"\" />\n"
+"        </customErrors>\n"
+"    </System.Web>\n"
+"\n"
 
 #: vulnerabilities.py:5287
 msgid ""
@@ -11336,6 +11408,18 @@ msgid ""
 "        at Module._compile (module.js:460:26)\n"
 "\n"
 msgstr ""
+"\n"
+"スタックトレースを有効にした状態の情報表示の例,\n"
+"\n"
+"    Exception in thread \"main\" java.lang.NullPointerException\n"
+"            at com.example.myproject.Book.getTitle(Book.java:16)\n"
+"            at com.example.myproject.Author.getBookTitles(Author.java:25)\n"
+"\n"
+"    Error: Something unexpected has occurred.\n"
+"        at main (app.js:9:15)\n"
+"        at Object. (app.js:17:1)\n"
+"        at Module._compile (module.js:460:26)\n"
+"\n"
 
 #: vulnerabilities.py:5300
 msgid ""
