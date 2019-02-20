@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-__VERSION__ = '1.0.4'
+__VERSION__ = '1.0.5'
 
 setup(
     name='ak-vendor',
