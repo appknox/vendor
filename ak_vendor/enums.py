@@ -88,14 +88,17 @@ class DynamicStatusEnum:
     The Dynamic scanning status
     '''
     class Meta:
+        ERROR = [-1, 'Error']
         NONE = [0, 'None']
-        BOOTING = [1, 'Booting']
-        READY = [2, 'Ready']
-        SHUTTING_DOWN = [3, 'Shutting Down']
-        DOWNLOADING = [4, 'Downloading Package']
-        INSTALLING = [5, 'Installing Package']
-        LAUNCHING = [6, 'Launching App']
-        HOOKING = [7, 'Doing Magic']
+        INQUEUE = [1, 'In Queue']
+        BOOTING = [2, 'Booting']
+        DOWNLOADING = [3, 'Downloading Package']
+        INSTALLING = [4, 'Installing Package']
+        LAUNCHING = [5, 'Launching App']
+        HOOKING = [6, 'Hooking']
+        READY = [7, 'Ready']
+        SHUTTING_DOWN = [8, 'Shutting Down']
+        COMPLETED = [9, 'Completed']
 
 
 @choices
