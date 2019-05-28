@@ -50,6 +50,13 @@ class RiskLabelEnum(enum.Enum):
     UNTESTED = 'Untested'
 
 
+class AnalysisTypeEnum(enum.Enum):
+    STATIC = 'Static'
+    DYNAMIC = 'Dynamic'
+    MANUAL = 'Manual'
+    API = 'API'
+
+
 class AttackVectorEnum(enum.Enum):
     N = 'NETWORK'
     A = 'ADJACENT_NETWORK'
@@ -424,6 +431,12 @@ class Analysis:
         self.tags.append(tag)
         return self.tags
 
+    def remove_tag(self, tag_val: str) -> Tag:
+        for t in self.tags:
+            if tag_val == t.val:
+                self.tags.remove(t)
+        return self.tags
+
     def add_attachment(self, attachment: Attachment) -> Attachment:
         if attachment.extension.lower() not in ATTACHMENT_IMAGE_FORMATS:
             return False
@@ -480,6 +493,10 @@ class Report:
     show_copyright = attr.ib(type=bool, default=True)
     is_partnered = attr.ib(type=bool, default=False)
     rating = attr.ib(type=int, default=0)
+    has_static_scan = attr.ib(type=bool, default=True)
+    has_dynamic_scan = attr.ib(type=bool, default=True)
+    has_api_scan = attr.ib(type=bool, default=True)
+    has_manual_scan = attr.ib(type=bool, default=True)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
     analyses = attr.ib(factory=list, type=List[Analysis])
@@ -710,3 +727,31 @@ class Report:
             cmd.val for cmd in self.custom_meta_data
             if cmd.key == 'name' and cmd.val != ''
         ]
+
+    @property
+    def _scan_types_visible(self) -> {str}:
+        scan_types = set()
+        if self.has_static_scan:
+            scan_types.add(AnalysisTypeEnum.STATIC.value.lower())
+        if self.has_dynamic_scan:
+            scan_types.add(AnalysisTypeEnum.DYNAMIC.value.lower())
+        if self.has_api_scan:
+            scan_types.add(AnalysisTypeEnum.API.value.lower())
+        if self.has_manual_scan:
+            scan_types.add(AnalysisTypeEnum.MANUAL.value.lower())
+        return scan_types
+
+    def _is_visible_scan_type(self, analysis):
+        tags = {t.val.lower() for t in analysis.tags}
+        include_tags = tags.intersection(self._scan_types_visible)
+        if not include_tags:
+            return False
+        if include_tags:
+            for t in analysis.tags:
+                if t.val.lower() not in include_tags:
+                    analysis.tags.remove(t)
+        return analysis
+
+    @property
+    def viewable_analyses(self) -> List[Analysis]:
+        return [a for a in self.analyses if self._is_visible_scan_type(a)]
