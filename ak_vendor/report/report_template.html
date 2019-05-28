@@ -387,6 +387,10 @@
       padding: 0;
       margin: 0;
     }
+    .scan__type__check {
+        width: 1em;
+        vertical-align: text-bottom;
+    }
   </style>
 </head>
 <body>
@@ -629,7 +633,28 @@
     </div>
 
     <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated and manual auditing processes. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
-
+    <table class="table table--bordered">
+        <thead>
+            <th>
+                <img class="scan__type__check" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjN2FjMTQyIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMSAyNiBsNCAtNCBsOCA4IGwxNSAtMTUgbDQgNCBsLTE5IDE5Ii8+Cjwvc3ZnPg=="></img>
+                Static Scan
+            </th>
+            <th>Dynamic Scan</th>
+            <th>API Scan</th>
+            <th>Manual Scan</th>
+        </thead>
+        <!-- <tbody>
+            <th>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" style="width:25px;">
+                    <circle cx="26" cy="26" r="25" fill="#7ac142"/>
+                    <path fill="#fff" d="M11 26 l4 -4 l8 8 l15 -15 l4 4 l-19 19"/>
+                </svg>
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tbody> -->
+    </table>
     <section class="audit">
       <a id="audit-summary"></a>
       <h3 class="pagetitle pagetitle--sub">{% trans "Audit Summary" %}</h3>
