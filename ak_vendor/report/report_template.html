@@ -1,4 +1,6 @@
 {% load i18n %}
+
+{% with icon_done="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjN2FjMTQyIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMSAyNiBsNCAtNCBsOCA4IGwxNSAtMTUgbDQgNCBsLTE5IDE5Ii8+Cjwvc3ZnPg==" icon_not_done="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjZjAwIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yMiAyNiBsLTEwIC0xMCBsNCAtNCBsMTAgMTAgbDEwIC0xMCBsNCA0IGwtMTAgMTAgbDEwIDEwIGwtNCA0IGwtMTAgLTEwIGwtMTAgMTAgbC00IC00Ii8+Cjwvc3ZnPg==" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -387,6 +389,21 @@
       padding: 0;
       margin: 0;
     }
+    .scan__types__header {
+        background: #7d7d82;
+        color: white;
+        text-align: center;
+    }
+    .scan__type {
+        text-align: center;
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
+    .scan__type__icon {
+        width: 1em;
+        vertical-align: text-bottom;
+        margin-right: 0.3em;
+    }
   </style>
 </head>
 <body>
@@ -575,7 +592,7 @@
             <a class="toc__subheading" href="#security-rating">{% if report.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "Security Rating" %}</a>
           </td>
         </tr>
-        {% for analysis in report.analyses %}
+        {% for analysis in report.viewable_analyses %}
           {% if analysis.risk.computed_value > 0 %}
             <tr>
               <td>
@@ -629,14 +646,57 @@
     </div>
 
     <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated and manual auditing processes. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
-
+    <table class="table table--bordered">
+        <thead class="scan__types__header">
+            <tr>
+                <th colspan="4">Scan included in this report</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="scan__type">
+                    {% if report.has_static_scan %}
+                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
+                    {% else %}
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+                    {% endif %}
+                    <span>Static&nbsp;Scan</span>
+                </td>
+                <td class="scan__type">
+                    {% if report.has_dynamic_scan %}
+                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
+                    {% else %}
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+                    {% endif %}
+                    <span>Dynamic&nbsp;Scan</span>
+                </td>
+                <td class="scan__type">
+                    {% if report.has_api_scan %}
+                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
+                    {% else %}
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+                    {% endif %}
+                    <span>API&nbsp;Scan</span>
+                </td>
+                <td class="scan__type">
+                    {% if report.has_manual_scan %}
+                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
+                    {% else %}
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+                    {% endif %}
+                    <span>Manual&nbsp;Scan</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
     <section class="audit">
       <a id="audit-summary"></a>
       <h3 class="pagetitle pagetitle--sub">{% trans "Audit Summary" %}</h3>
       <div>
         <table class="table table--bordered table--auditsummary">
           <tbody>
-            {% for analysis in report.analyses %}
+            {% for analysis in report.viewable_analyses %}
               <tr class="auditsummary">
                 <td class="auditsummary__info">
                   <h5 class="auditsummary__title">{{ analysis.title.html | safe }}</h5>
@@ -754,7 +814,7 @@
   <!--------------------------
     ANALYSIS DETAIL PAGES
   --------------------------->
-  {% for analysis in report.analyses %}
+  {% for analysis in report.viewable_analyses %}
     {% if analysis.risk.computed_value > 0 %}
       <section class="page analysispage">
         <a id="{{ analysis.id }}"></a>
@@ -984,3 +1044,4 @@
 
 </body>
 </html>
+{% endwith %}
