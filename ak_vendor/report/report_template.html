@@ -1,6 +1,6 @@
 {% load i18n %}
 
-{% with icon_done="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjN2FjMTQyIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMSAyNiBsNCAtNCBsOCA4IGwxNSAtMTUgbDQgNCBsLTE5IDE5Ii8+Cjwvc3ZnPg==" icon_not_done="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjN2FjMTQyIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMSAyNiBsNCAtNCBsOCA4IGwxNSAtMTUgbDQgNCBsLTE5IDE5Ii8+Cjwvc3ZnPg==" %}
+{% with icon_done="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjN2FjMTQyIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMSAyNiBsNCAtNCBsOCA4IGwxNSAtMTUgbDQgNCBsLTE5IDE5Ii8+Cjwvc3ZnPg==" icon_not_done="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2hlY2ttYXJrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjI1IiBmaWxsPSIjZjAwIi8+CjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yMiAyNiBsLTEwIC0xMCBsNCAtNCBsMTAgMTAgbDEwIC0xMCBsNCA0IGwtMTAgMTAgbDEwIDEwIGwtNCA0IGwtMTAgLTEwIGwtMTAgMTAgbC00IC00Ii8+Cjwvc3ZnPg==" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -658,8 +658,7 @@
                     {% if report.has_static_scan %}
                         <img class="scan__type__icon" src="{{ icon_done }}"></img>
                     {% else %}
-                        <!-- <img class="scan__type__icon" src="{{ icon_not_done }}"></img> -->
-                        ❌
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
                     <span>Static&nbsp;Scan</span>
                 </td>
@@ -667,8 +666,7 @@
                     {% if report.has_dynamic_scan %}
                         <img class="scan__type__icon" src="{{ icon_done }}"></img>
                     {% else %}
-                        <!-- <img class="scan__type__icon" src="{{ icon_not_done }}"></img> -->
-                        ❌
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
                     <span>Dynamic&nbsp;Scan</span>
                 </td>
@@ -676,8 +674,7 @@
                     {% if report.has_api_scan %}
                         <img class="scan__type__icon" src="{{ icon_done }}"></img>
                     {% else %}
-                        <!-- <img class="scan__type__icon" src="{{ icon_not_done }}"></img> -->
-                        ❌
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
                     <span>API&nbsp;Scan</span>
                 </td>
@@ -685,8 +682,7 @@
                     {% if report.has_manual_scan %}
                         <img class="scan__type__icon" src="{{ icon_done }}"></img>
                     {% else %}
-                        <!-- <img class="scan__type__icon" src="{{ icon_not_done }}"></img> -->
-                        ❌
+                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
                     <span>Manual&nbsp;Scan</span>
                 </td>
