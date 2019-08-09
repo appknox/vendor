@@ -441,7 +441,7 @@ data = [
   {
     "title": _("Restrict physical access to cardholder data"),
     "code": "9.10",
-    "id": "9._0",
+    "id": "9_10",
     "description": _(
         "Destroy media when it is no longer needed for business or legal "
         "reasons"
