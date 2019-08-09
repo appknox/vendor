@@ -649,7 +649,7 @@
     <table class="table table--bordered">
         <thead class="scan__types__header">
             <tr>
-                <th colspan="4">Scan included in this report</th>
+                <th colspan="4">{% trans "Scan included in this report" %}</th>
             </tr>
         </thead>
         <tbody>
@@ -660,7 +660,7 @@
                     {% else %}
                         <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
-                    <span>Static&nbsp;Scan</span>
+                    <span>{% trans "Static Scan" %}</span>
                 </td>
                 <td class="scan__type">
                     {% if report.has_dynamic_scan %}
@@ -668,7 +668,7 @@
                     {% else %}
                         <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
-                    <span>Dynamic&nbsp;Scan</span>
+                    <span>{% trans "Dynamic Scan" %}</span>
                 </td>
                 <td class="scan__type">
                     {% if report.has_api_scan %}
@@ -676,7 +676,7 @@
                     {% else %}
                         <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
-                    <span>API&nbsp;Scan</span>
+                    <span>{% trans "API Scan" %}</span>
                 </td>
                 <td class="scan__type">
                     {% if report.has_manual_scan %}
@@ -684,7 +684,7 @@
                     {% else %}
                         <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
                     {% endif %}
-                    <span>Manual&nbsp;Scan</span>
+                    <span>{% trans "Manual Scan" %}</span>
                 </td>
             </tr>
         </tbody>
