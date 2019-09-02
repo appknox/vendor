@@ -156,7 +156,7 @@
           "findings": [
               {
                   "description": {
-                      "html": "Reference: -[NSUserDefaults setObject:forKey:]\nLOGIN_PUSH_RETRY_KEY\n0",
+                      "html": "Reference: [NSUserDefaults setObject:forKey:]\nLONG_STRING_VALUE_SAMPLE\nLoremipsumdolorsitamet,consecteturadipiscingelit.Integermalesuadaeuenimnecbibendum.Aliquamipsummi,temporsedenimut,vehiculamollisnisl.Sedtempusquamnecmolestietristique.Morbimalesuadafinibusdignissim.Nullamvitaeconguenisi.Curabitursollicitudinnequemi,acvolutpatquamvolutpatin.Curabiturnecaccumsannisl.Donecutipsumnulla.Vestibulumvelmiaorciluctusdictumineuenim.Pellentesquevelnullalaciniaodioeleifendinterduminaeros.Maecenasbibendum,quamquiscommododapibus,arcusapienfaucibustellus,aconsecteturmileoquiseros.Aliquamfermentumipsumquisduimaximus,actinciduntvelitsagittis.Curabituratnisliddiamfacilisisvenenatis.Sedhendreritexinipsumplaceratmollis.Proinnequemetus,interdumegetmetusvitae,aliquamlaoreettortor.Nullaquiserosimperdiet,tristiqueloremnon,dictumnisi.Morbiegetrutrumtellus.Donecauctoreuismodduietsuscipit.Aeneaneratturpis,gravidanonrutrumet,pulvinarnonvelit.Nuncsedornarelorem.Nullamhendreritmagnametus,quisfaucibusantevulputatevel.Aliquamacsuscipitlectus,quisrhoncuslibero.Nullaeuexatnisleleifendtinciduntinegetmetus.Sedsitametcommodosem.Vivamuscongueligulavestibulum",
                       "markdown": "",
                       "text": ""
                   },
@@ -166,6 +166,19 @@
                       "text": ""
                   }
               },
+              {
+                "description": {
+                    "html": "Reference: -[NSUserDefaults setObject:forKey:]\nLOGIN_PUSH_RETRY_KEY\n0",
+                    "markdown": "",
+                    "text": ""
+                },
+                "title": {
+                    "html": null,
+                    "markdown": "",
+                    "text": ""
+                }
+            },
+
               {
                   "description": {
                       "html": "Reference: -[NSUserDefaults setObject:forKey:]\nWebKitLocalStorageDatabasePathPreferenceKey\n/var/mobile/Containers/Data/Application/location/Library/Caches",
