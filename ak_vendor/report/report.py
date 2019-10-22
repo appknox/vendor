@@ -289,15 +289,25 @@ class PCIDSS:
 
 
 @attr.s
+class HIPAA:
+    code = attr.ib(type=str)
+    safeguard = attr.ib(type=str)
+    title = attr.ib(type=str)
+    description = attr.ib(type=str)
+
+
+@attr.s
 class Regulatory:
     owasp = attr.ib(factory=list, type=List[dict])
     pcidss = attr.ib(factory=list, type=List[dict])
+    hipaa = attr.ib(factory=list, type=List[dict])
 
     @classmethod
     def from_json(cls, data):
         return cls(
             owasp=[OWASP(**owasp) for owasp in data.get('owasp', [])],
-            pcidss=[PCIDSS(**pcidss) for pcidss in data.get('pcidss', [])]
+            pcidss=[PCIDSS(**pcidss) for pcidss in data.get('pcidss', [])],
+            hipaa=[HIPAA(**hipaa) for hipaa in data.get('hipaa', [])],
         )
 
     @classmethod
@@ -308,6 +318,17 @@ class Regulatory:
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
         return PCIDSS(code=code, title=title, description=description)
 
+    @classmethod
+    def create_hipaa(
+        cls, code: str, safeguard: str, title: str, description: str
+    ) -> HIPAA:
+        return HIPAA(
+            code=code,
+            safeguard=safeguard,
+            title=title,
+            description=description,
+        )
+
     def add_owasp(self, owasp: OWASP) -> List[OWASP]:
         self.owasp.append(owasp)
         return self.owasp
@@ -315,6 +336,10 @@ class Regulatory:
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
         return self.pcidss
+
+    def add_hipaa(self, hipaa: HIPAA) -> List[HIPAA]:
+        self.hipaa.append(hipaa)
+        return self.hipaa
 
 
 @attr.s
@@ -341,7 +366,7 @@ class Analysis:
     risk = attr.ib(type=Risk, default=Risk())
     cvss_v3 = attr.ib(type=CVSSv3, default=None)
     regulatory = attr.ib(
-        type=Regulatory, default=Regulatory(owasp=[], pcidss=[])
+        type=Regulatory, default=Regulatory(owasp=[], pcidss=[], hipaa=[])
     )
     findings = attr.ib(factory=list, type=List[Content])
     tags = attr.ib(factory=list, type=List[Tag])
@@ -384,9 +409,9 @@ class Analysis:
 
     @classmethod
     def create_regulatory(
-        cls, owasp: List[dict]=[], pcidss: List[dict]=[]
+        cls, owasp: List[dict]=[], pcidss: List[dict]=[], hipaa: List[dict]=[]
     ) -> Regulatory:
-        return Regulatory(owasp=owasp, pcidss=pcidss)
+        return Regulatory(owasp=owasp, pcidss=pcidss, hipaa=hipaa)
 
     @classmethod
     def create_attachment(

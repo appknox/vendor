@@ -386,6 +386,9 @@
     .regulatory__table__pcidss__title {
       margin-bottom: 0.5em;
     }
+    .regulatory__table__hipaa__title {
+      margin-bottom: 0.5em;
+    }
     .regulatory__title {
       padding: 0;
       margin: 0;
@@ -918,7 +921,7 @@
             </table>
           </section>
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.pcidss %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.pcidss or analysis.regulatory.hipaa %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
 
@@ -953,6 +956,27 @@
                           <td>
                             <div class="regulatory__table__pcidss__title"><strong>{{ pcidss.title }}</strong></div>
                             <div>{{ pcidss.description }}</div>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.hipaa %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "PCI-DSS" %}</strong>{{analysis.regulatory.hipaa.length}}
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for hipaa in analysis.regulatory.hipaa %}
+                        <tr>
+                          <td>{{ hipaa.code }}</td>
+                          <td>
+                            <div class="regulatory__table__hipaa__title"><strong>{{ hipaa.title }}</strong></div>
+                            <div>{{ hipaa.description }}</div>
                           </td>
                         </tr>
                       {% endfor %}
