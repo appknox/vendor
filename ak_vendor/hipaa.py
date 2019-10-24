@@ -1,3 +1,5 @@
+# flake8: noqa
+
 from gettext import gettext as _
 
 
