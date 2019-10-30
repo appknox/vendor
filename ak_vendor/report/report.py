@@ -434,7 +434,8 @@ class Analysis:
 
     @classmethod
     def create_regulatory(
-        cls, owasp: List[dict]=[], pcidss: List[dict]=[], hipaa: List[dict]=[]
+        cls, owasp: List[dict] = [], pcidss: List[dict] = [],
+        hipaa: List[dict] = []
     ) -> Regulatory:
         return Regulatory(owasp=owasp, pcidss=pcidss, hipaa=hipaa)
 
@@ -618,7 +619,7 @@ class Report:
 
     @classmethod
     def create_created_on(
-        cls, isodate: str=(maya.now().iso8601())
+        cls, isodate: str = (maya.now().iso8601())
     ) -> datetime:
         return maya.parse(isodate).datetime()
 
@@ -636,8 +637,8 @@ class Report:
         risk: Risk, cvss_v3: CVSSv3, business_implication: Content,
         correct_implementation: Content, incorrect_implementation: Content,
         regulatory: Regulatory, vulnerability_references: Content,
-        findings: List[Content]=[], tags: List[Tag]=[],
-        attachments: List[Attachment]=[]
+        findings: List[Content] = [], tags: List[Tag] = [],
+        attachments: List[Attachment] = []
     ) -> Analysis:
         return Analysis(
             id=id,
@@ -658,7 +659,7 @@ class Report:
 
     @classmethod
     def create_content(
-        cls, text: str='', html: str='', markdown: str=''
+        cls, text: str = '', html: str = '', markdown: str = ''
     ) -> Content:
         return Content(text=text, html=html, markdown=markdown)
 
