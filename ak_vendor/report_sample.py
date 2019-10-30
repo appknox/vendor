@@ -4,14 +4,15 @@ from django import template
 from django.conf import settings
 from django.template import Template, Context
 from django.template.engine import Engine
-from django.template.loader import render_to_string
-from ak_vendor.report import Report
 from django.core.wsgi import get_wsgi_application
+from ak_vendor.report import Report
+
 settings.configure()
 application = get_wsgi_application()
 
 CUR_DIR = dirname(abspath(__file__))
 template.Library()
+
 
 class ReportHTMLExporter:
     def __init__(self, report):
