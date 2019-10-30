@@ -289,11 +289,32 @@ class PCIDSS:
 
 
 @attr.s
+class HIPAAStandard:
+    title = attr.ib(type=str)
+    description = attr.ib(type=str)
+    specifications = attr.ib(type=str)
+
+
+@attr.s
 class HIPAA:
     code = attr.ib(type=str)
     safeguard = attr.ib(type=str)
     title = attr.ib(type=str)
-    description = attr.ib(type=str)
+    standards = attr.ib(factory=list, type=List[HIPAAStandard])
+
+    @classmethod
+    def create_standard(
+        cls, title: str, description: str, specifications: str
+    ) -> HIPAAStandard:
+        return HIPAAStandard(
+            title=title,
+            description=description,
+            specifications=specifications
+        )
+
+    def add_standard(self, standard: HIPAAStandard) -> HIPAAStandard:
+        self.standards.append(standard)
+        return self.standards
 
 
 @attr.s
@@ -320,13 +341,17 @@ class Regulatory:
 
     @classmethod
     def create_hipaa(
-        cls, code: str, safeguard: str, title: str, description: str
+        cls,
+        code: str,
+        safeguard: str,
+        title: str,
+        standards: List[HIPAAStandard] = []
     ) -> HIPAA:
         return HIPAA(
             code=code,
             safeguard=safeguard,
             title=title,
-            description=description,
+            standards=standards,
         )
 
     def add_owasp(self, owasp: OWASP) -> List[OWASP]:
