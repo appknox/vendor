@@ -10,20 +10,23 @@
 
     /* print settings */
     @page {
-      margin: 2cm 1.8cm;
+      margin: 1.8cm 0.75cm;
       padding: 0.3em 0;
       @top-left {
         content: '{% trans "Confidential" %}';
         margin-left: 0.2cm;
+        font-size: 0.85em;
       }
       @top-right {
         content: "{{ report.created_on }} UTC";
         margin-right: 0.2cm;
+        font-size: 0.85em;
       }
       @bottom-center {
         border-top: 1px solid #6B6B6B;
         width: 100%;
         content: "Page " counter(page) " of " counter(pages);
+        font-size: 0.85em;
       }
     }
     .page {
@@ -36,7 +39,7 @@
     }
     html {
       font-family: 'Noto Sans', sans-serif;
-      font-size: 0.95em;
+      font-size: 0.75em;
       line-height: 1.5;
       color: #6d6e73;
     }
@@ -64,7 +67,7 @@
       font-size: 2.2em;
       font-weight: 400;
       margin-bottom: 0.3em;
-      margin-top: 3.2em;
+      margin-top: 5.2em;
     }
     .coverpage__tagline {
       text-align: center;
@@ -80,7 +83,7 @@
       width: 36em;
       margin: auto;
       height: 100%;
-      padding: 3em 0;
+      padding: 6em 0 4em;
     }
     .preparedfor__name {
       font-size: 2.3em;
@@ -130,7 +133,7 @@
 
     .coverpage__authors {
       width: 100%;
-      margin-top: 7.5em;
+      margin-top: 14.5em;
     }
     .author {
       width: 50%;
@@ -389,24 +392,27 @@
     .regulatory__table__hipaa__title {
       margin-bottom: 0.5em;
     }
+    .regulatory__table__hipaa__standards {
+      padding-left: 1.3em;
+    }
     .regulatory__title {
       padding: 0;
       margin: 0;
     }
     .scan__types__header {
-        background: #7d7d82;
-        color: white;
-        text-align: center;
+      background: #7d7d82;
+      color: white;
+      text-align: center;
     }
     .scan__type {
-        text-align: center;
-        padding: 0.5em 1em;
-        font-size: 0.9em;
+      text-align: center;
+      padding: 0.5em 1em;
+      font-size: 0.9em;
     }
     .scan__type__icon {
-        width: 1em;
-        vertical-align: text-bottom;
-        margin-right: 0.3em;
+      width: 1em;
+      vertical-align: text-bottom;
+      margin-right: 0.3em;
     }
   </style>
 </head>
@@ -975,8 +981,15 @@
                         <tr>
                           <td>{{ hipaa.code }}</td>
                           <td>
-                            <div class="regulatory__table__hipaa__title"><strong>{{ hipaa.title }}</strong></div>
-                            <div>{{ hipaa.description }}</div>
+                            <div class="regulatory__table__hipaa__title"><strong>{{ hipaa.safeguard }}: {{ hipaa.title }}</strong></div>
+                            <ul class="regulatory__table__hipaa__standards">
+                                {% for std in hipaa.standards %}
+                                    <li>
+                                        <strong>{{ std.title }} ({{ std.specifications }})</strong>
+                                        <div>{{ std.description }}</div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
                           </td>
                         </tr>
                       {% endfor %}
