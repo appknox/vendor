@@ -42,7 +42,7 @@ setup(
     extras_require={
         'dev': [
             'django==2.2.6',
-            'weasyprint==45',
+            'weasyprint==50',
             'bumpversion==0.5.3',
             'twine==1.12.1'
         ],

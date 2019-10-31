@@ -312,7 +312,7 @@ class HIPAA:
             specifications=specifications
         )
 
-    def add_standard(self, standard: HIPAAStandard) -> HIPAAStandard:
+    def add_standard(self, standard: HIPAAStandard) -> List[HIPAAStandard]:
         self.standards.append(standard)
         return self.standards
 
