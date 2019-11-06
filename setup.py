@@ -33,10 +33,10 @@ setup(
     entry_points='',
     install_requires=[
         'orm-choices==0.3.0',
-        'maya>=0.5.0,<1.0.0,',
+        'maya==0.5.0',
         'html2text==2018.1.9',
         'attrs>=19.0.0',
-        'cvss>=2.0'
+        'cvss>=2.0',
     ],
     zip_safe=False,
     extras_require={
@@ -44,7 +44,7 @@ setup(
             'django==2.2.6',
             'weasyprint==50',
             'bumpversion==0.5.3',
-            'twine==2.0.0'
+            'twine==2.0.0',
         ],
         'test': [''],
     },
