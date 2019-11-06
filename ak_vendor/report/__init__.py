@@ -1,7 +1,7 @@
 from .report import (
     Analysis, Application, Attachment, Company, Content, CVSSv3,
-    CustomMetaData, Finding, OWASP, PCIDSS, Platform, Reference, Regulatory,
-    Report, Risk, Tag
+    CustomMetaData, Finding, OWASP, PCIDSS, HIPAA, Platform, Reference,
+    Regulatory, Report, Risk, Tag,
 )
 
 
@@ -16,6 +16,7 @@ __all__ = [
     Finding.__name__,
     OWASP.__name__,
     PCIDSS.__name__,
+    HIPAA.__name__,
     Platform.__name__,
     Reference.__name__,
     Regulatory.__name__,
