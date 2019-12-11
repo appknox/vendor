@@ -208,6 +208,7 @@
     }
     .table--appdetail tr td:first-child {
       width: 41%;
+      font-weight: bold;
     }
     .table--toc td {
       padding: 0.4em 1em;
@@ -406,13 +407,24 @@
     }
     .scan__type {
       text-align: center;
-      padding: 0.5em 1em;
+      padding-right: 1em;
       font-size: 0.9em;
     }
     .scan__type__icon {
       width: 1em;
       vertical-align: text-bottom;
       margin-right: 0.3em;
+    }
+    .scan_included__ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .scan_included__li {
+        display: inline;
+    }
+    .scan_included__li:not(:last-child):after {
+        content: ",";
     }
   </style>
 </head>
@@ -554,10 +566,6 @@
         <td>{{ report.application.version_code }}</td>
       </tr>
       <tr>
-        <td>{% trans "Audit Date" %}</td>
-        <td>{{ report.created_on }}</td>
-      </tr>
-      <tr>
         <td>{% trans "Application SHA1 Hash" %}</td>
         <td>{{ report.application.sha1 }}</td>
       </tr>
@@ -565,13 +573,81 @@
         <td>{% trans "Application MD5 Hash" %}</td>
         <td>{{ report.application.md5 }}</td>
       </tr>
+    </table>
+
+    <div class="pagetitle__container">
+      <h2 class="pagetitle pagetitle--main">{% trans "Audit Details" %}</h2>
+    </div>
+
+    <table class="table table--bordered table--appdetail">
       {% if report.appknox_file_id %}
         <tr>
-            <td>{% trans "Appknox File ID" %}</td>
-            <td>{{ report.appknox_file_id }}</td>
+          <td>{% trans "File ID" %}</td>
+          <td>{{ report.appknox_file_id }}</td>
         </tr>
       {% endif %}
+      <tr>
+        <td>{% trans "Audit Date" %}</td>
+        <td>{{ report.created_on }}</td>
+      </tr>
+      <tr>
+        <td>{% trans "Scan Status" %}</td>
+        <td>
+          <span class="scan__type">
+            {% if report.is_done_static_scan %}
+                <img class="scan__type__icon" src="{{ icon_done }}"></img>
+            {% else %}
+                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+            {% endif %}
+            <span>{% trans "Static" %}</span>
+          </span>
+          <span class="scan__type">
+            {% if report.is_done_dynamic_scan %}
+                <img class="scan__type__icon" src="{{ icon_done }}"></img>
+            {% else %}
+                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+            {% endif %}
+            <span>{% trans "Dynamic" %}</span>
+          </span>
+          <span class="scan__type">
+            {% if report.is_done_api_scan %}
+                <img class="scan__type__icon" src="{{ icon_done }}"></img>
+            {% else %}
+                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+            {% endif %}
+            <span>{% trans "API" %}</span>
+          </span>
+          <span class="scan__type">
+            {% if report.is_done_manual_scan %}
+                <img class="scan__type__icon" src="{{ icon_done }}"></img>
+            {% else %}
+                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+            {% endif %}
+            <span>{% trans "Manual" %}</span>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>{% trans "Scans included in the Report" %}</td>
+        <td>
+            <ul class="scan_included__ul">
+                {% if report.is_included_static_scan %}
+                    <li class="scan_included__li">{% trans "Static" %}</li>
+                {% endif %}
+                {% if report.is_included_dynamic_scan %}
+                    <li class="scan_included__li">{% trans "Dynamic" %}</li>
+                {% endif %}
+                {% if report.is_included_api_scan %}
+                    <li class="scan_included__li">{% trans "API" %}</li>
+                {% endif %}
+                {% if report.is_included_manual_scan %}
+                    <li class="scan_included__li">{% trans "Manual" %}</li>
+                {% endif %}
+            </ul>
+        </td>
+      </tr>
     </table>
+
   </section>
 
 
@@ -655,51 +731,7 @@
       <h2 class="pagetitle pagetitle--main">{% trans "Report Summary" %}</h2>
     </div>
 
-    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report contains all the findings during the automated and manual auditing processes. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
-    <table class="table table--bordered">
-        <thead class="scan__types__header">
-            <tr>
-                <th colspan="4">{% trans "Scan included in this report" %}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="scan__type">
-                    {% if report.has_static_scan %}
-                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
-                    {% else %}
-                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-                    {% endif %}
-                    <span>{% trans "Static Scan" %}</span>
-                </td>
-                <td class="scan__type">
-                    {% if report.has_dynamic_scan %}
-                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
-                    {% else %}
-                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-                    {% endif %}
-                    <span>{% trans "Dynamic Scan" %}</span>
-                </td>
-                <td class="scan__type">
-                    {% if report.has_api_scan %}
-                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
-                    {% else %}
-                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-                    {% endif %}
-                    <span>{% trans "API Scan" %}</span>
-                </td>
-                <td class="scan__type">
-                    {% if report.has_manual_scan %}
-                        <img class="scan__type__icon" src="{{ icon_done }}"></img>
-                    {% else %}
-                        <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-                    {% endif %}
-                    <span>{% trans "Manual Scan" %}</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
+    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report is generated based on the findings during the automated" %}{% if report.is_included_manual_scan %}{% trans " and manual" %}{% endif %}{% trans " auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
     <section class="audit">
       <a id="audit-summary"></a>
       <h3 class="pagetitle pagetitle--sub">{% trans "Audit Summary" %}</h3>
