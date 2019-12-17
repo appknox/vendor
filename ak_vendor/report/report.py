@@ -544,10 +544,14 @@ class Report:
     show_copyright = attr.ib(type=bool, default=True)
     is_partnered = attr.ib(type=bool, default=False)
     rating = attr.ib(type=int, default=0)
-    has_static_scan = attr.ib(type=bool, default=True)
-    has_dynamic_scan = attr.ib(type=bool, default=True)
-    has_api_scan = attr.ib(type=bool, default=True)
-    has_manual_scan = attr.ib(type=bool, default=True)
+    is_included_static_scan = attr.ib(type=bool, default=True)
+    is_included_dynamic_scan = attr.ib(type=bool, default=True)
+    is_included_api_scan = attr.ib(type=bool, default=True)
+    is_included_manual_scan = attr.ib(type=bool, default=True)
+    is_done_static_scan = attr.ib(type=bool, default=True)
+    is_done_dynamic_scan = attr.ib(type=bool, default=True)
+    is_done_api_scan = attr.ib(type=bool, default=True)
+    is_done_manual_scan = attr.ib(type=bool, default=True)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
     analyses = attr.ib(factory=list, type=List[Analysis])
@@ -782,13 +786,13 @@ class Report:
     @property
     def _scan_types_visible(self) -> {str}:
         scan_types = set()
-        if self.has_static_scan:
+        if self.is_included_static_scan:
             scan_types.add(AnalysisTypeEnum.STATIC.value.lower())
-        if self.has_dynamic_scan:
+        if self.is_included_dynamic_scan:
             scan_types.add(AnalysisTypeEnum.DYNAMIC.value.lower())
-        if self.has_api_scan:
+        if self.is_included_api_scan:
             scan_types.add(AnalysisTypeEnum.API.value.lower())
-        if self.has_manual_scan:
+        if self.is_included_manual_scan:
             scan_types.add(AnalysisTypeEnum.MANUAL.value.lower())
         return scan_types
 
