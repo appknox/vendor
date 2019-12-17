@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-ak-vendor = {path = ".", extras = ["dev"], editable = true}
+ak-vendor = {path = ".",extras = ["dev"],editable = true}
 
 [packages]
-ak-vendor = {path = ".", editable = true}
+ak-vendor = {path = ".",editable = true}
