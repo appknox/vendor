@@ -41,10 +41,10 @@
         },
         "html2text": {
             "hashes": [
-                "sha256:c7c629882da0cf377d66f073329ccf34a12ed2adf0169b9285ae4e63ef54c82b",
-                "sha256:e296318e16b059ddb97f7a8a1d6a5c1d7af4544049a01e261731d2d5cc277bbb"
+                "sha256:c476417609d89a8e1de4b88f3bae33498b9dcfdb16c152c768e159db36c60f79",
+                "sha256:f516b9c10284174e2a974d86f91cab02b3cf983a17752075da751af0e895ef5e"
             ],
-            "version": "==2020.1.16"
+            "version": "==2019.8.11"
         },
         "humanize": {
             "hashes": [
@@ -286,10 +286,10 @@
         },
         "html2text": {
             "hashes": [
-                "sha256:c7c629882da0cf377d66f073329ccf34a12ed2adf0169b9285ae4e63ef54c82b",
-                "sha256:e296318e16b059ddb97f7a8a1d6a5c1d7af4544049a01e261731d2d5cc277bbb"
+                "sha256:c476417609d89a8e1de4b88f3bae33498b9dcfdb16c152c768e159db36c60f79",
+                "sha256:f516b9c10284174e2a974d86f91cab02b3cf983a17752075da751af0e895ef5e"
             ],
-            "version": "==2020.1.16"
+            "version": "==2019.8.11"
         },
         "html5lib": {
             "hashes": [
