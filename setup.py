@@ -34,7 +34,7 @@ setup(
     install_requires=[
         'orm-choices==0.3.0',
         'maya>=0.6.0',
-        'html2text==2020.1.16',
+        'html2text==2019.8.11',
         'attrs>=19.0.0',
         'cvss>=2.0',
     ],
