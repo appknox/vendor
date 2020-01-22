@@ -162,6 +162,8 @@ class SubmissionStatusEnum:
         VALIDATE_FAILED = [5, 'Failed to validate the file']
         ANALYZE_PREPARE = [6, 'Preparing to analyze the file']
         ANALYZING = [7, 'The file is being analyzed']
+        SELECT_PLAN = [8, 'Plan selection is needed to proceed further']
+        CANCELLED = [9, 'This submission is canceled']
 
 
 @choices
@@ -420,3 +422,26 @@ class MFAMethodEnum:
         NONE = [0, 'None']
         TOTP = [1, 'TOTP']
         HOTP = [2, 'HOTP']
+
+
+@choices
+class OneTimeScanStatusEnum:
+    class Meta:
+        ACTIVE = [0, 'Active']
+        EXPIRED = [1, 'Expired']
+
+
+@choices
+class SubscriptionStatusEnum:
+    class Meta:
+        ACTIVE = [0, 'Active']
+        CANCELLED = [1, 'Cancelled']
+        EXPIRED = [2, 'Expired']
+        INVALID_CARD = [3, 'Invalid Card']
+
+
+@choices
+class PlanTypeEnum:
+    class Meta:
+        SUBSCRIPTION = [0, 'Subscription']
+        ONETIME = [1, 'Onetime']
