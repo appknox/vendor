@@ -589,6 +589,22 @@ class Report:
             show_copyright=data.get('show_copyright'),
             is_partnered=data.get('is_partnered'),
             rating=data.get('rating'),
+            is_included_static_scan=data.get(
+                'is_included_static_scan', True),
+            is_included_dynamic_scan=data.get(
+                'is_included_dynamic_scan', True),
+            is_included_api_scan=data.get(
+                'is_included_api_scan', True),
+            is_included_manual_scan=data.get(
+                'is_included_manual_scan', True),
+            is_done_static_scan=data.get(
+                'is_done_static_scan', True),
+            is_done_dynamic_scan=data.get(
+                'is_done_dynamic_scan', True),
+            is_done_api_scan=data.get(
+                'is_done_api_scan', True),
+            is_done_manual_scan=data.get(
+                'is_done_manual_scan', True),
             references=[
                 Reference(**reference)
                 for reference in data.get('references', [])
