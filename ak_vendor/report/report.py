@@ -312,6 +312,16 @@ class HIPAA:
             specifications=specifications
         )
 
+    @classmethod
+    def from_json(cls, data: dict):
+        return cls(
+            code=data.get('code'),
+            safeguard=data.get('safeguard'),
+            title=data.get('title'),
+            standards=[cls.create_standard(**standard) for standard
+                       in data.get('standards', [])],
+        )
+
     def add_standard(self, standard: HIPAAStandard) -> List[HIPAAStandard]:
         self.standards.append(standard)
         return self.standards
@@ -327,8 +337,9 @@ class Regulatory:
     def from_json(cls, data):
         return cls(
             owasp=[OWASP(**owasp) for owasp in data.get('owasp', [])],
-            pcidss=[PCIDSS(**pcidss) for pcidss in data.get('pcidss', [])],
-            hipaa=[HIPAA(**hipaa) for hipaa in data.get('hipaa', [])],
+            pcidss=[PCIDSS(**pcidss) for pcidss
+                    in data.get('pcidss', [])],
+            hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get('hipaa', [])],
         )
 
     @classmethod
