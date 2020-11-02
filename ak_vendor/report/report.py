@@ -559,10 +559,10 @@ class Report:
     is_included_dynamic_scan = attr.ib(type=bool, default=True)
     is_included_api_scan = attr.ib(type=bool, default=True)
     is_included_manual_scan = attr.ib(type=bool, default=True)
-    is_done_static_scan = attr.ib(type=bool, default=True)
-    is_done_dynamic_scan = attr.ib(type=bool, default=True)
-    is_done_api_scan = attr.ib(type=bool, default=True)
-    is_done_manual_scan = attr.ib(type=bool, default=True)
+    is_done_static_scan = attr.ib(type=bool, default=False)
+    is_done_dynamic_scan = attr.ib(type=bool, default=False)
+    is_done_api_scan = attr.ib(type=bool, default=False)
+    is_done_manual_scan = attr.ib(type=bool, default=False)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
     analyses = attr.ib(factory=list, type=List[Analysis])
@@ -590,21 +590,29 @@ class Report:
             is_partnered=data.get('is_partnered'),
             rating=data.get('rating'),
             is_included_static_scan=data.get(
-                'is_included_static_scan', True),
+                'is_included_static_scan',
+                cls.__attrs_attrs__.is_included_static_scan.default),
             is_included_dynamic_scan=data.get(
-                'is_included_dynamic_scan', True),
+                'is_included_dynamic_scan',
+                cls.__attrs_attrs__.is_included_dynamic_scan.default),
             is_included_api_scan=data.get(
-                'is_included_api_scan', True),
+                'is_included_api_scan',
+                cls.__attrs_attrs__.is_included_api_scan.default),
             is_included_manual_scan=data.get(
-                'is_included_manual_scan', True),
+                'is_included_manual_scan',
+                cls.__attrs_attrs__.is_included_manual_scan.default),
             is_done_static_scan=data.get(
-                'is_done_static_scan', True),
+                'is_done_static_scan',
+                cls.__attrs_attrs__.is_done_static_scan.default),
             is_done_dynamic_scan=data.get(
-                'is_done_dynamic_scan', True),
+                'is_done_dynamic_scan',
+                cls.__attrs_attrs__.is_done_dynamic_scan.default),
             is_done_api_scan=data.get(
-                'is_done_api_scan', True),
+                'is_done_api_scan',
+                cls.__attrs_attrs__.is_done_api_scan.default),
             is_done_manual_scan=data.get(
-                'is_done_manual_scan', True),
+                'is_done_manual_scan',
+                cls.__attrs_attrs__.is_done_manual_scan.default),
             references=[
                 Reference(**reference)
                 for reference in data.get('references', [])
