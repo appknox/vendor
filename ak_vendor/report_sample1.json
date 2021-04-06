@@ -135,6 +135,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "Does the application use Transport Layer protection? Is HTTPS enabled globally in the application?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "Application has SSL enabled and sufficient protection is being used to prevent information leakage.",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -307,6 +317,16 @@
         "html": "Sensitive Data in NSUserDefaults",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "Does this application store sensitive information in NSUserDefaults?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "This application does not store sensitive information in NSUserDefaults.",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -709,6 +729,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "Is the application logging to the system logs?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "Application does not log to system logs.",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -828,6 +858,16 @@
         "html": "Sensitive Information in Property Lists",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "Does the application store sensitive information in Property Lists (plist)?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "The application does not store sensitive information in Property Lists.",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -978,6 +1018,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1107,6 +1157,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1188,6 +1248,16 @@
         "html": "Unsecured Data in YapDB",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "Does this application store data in RealmDB?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "This application does not store sensitive information in YapDB.",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -1271,6 +1341,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "Does this application store sensitive information in CoreData?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "This application does not store sensitive information in CoreData.",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1353,6 +1433,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1418,6 +1508,16 @@
         "html": "PhoneGap Debug Logging",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -1491,6 +1591,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1556,6 +1666,16 @@
         "html": "PhoneGap Whitelist RegEx Bypass",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -1629,6 +1749,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "<p>For background on secure Internet connections, please read <a href=\"https://developer.apple.com/library/content/technotes/tn2232/_index.html\">HTTPS Server Trust\nEvaluation</a>.</p>",
         "markdown": "",
@@ -1694,6 +1824,16 @@
         "html": "iOS Binary having ASLR Protection",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "<ul>\n<li><a href=\"https://developer.apple.com/library/ios/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html\">Avoiding Buffer Overflows and Underflows by\n  Apple</a></li>\n<li><a href=\"http://books.google.de/books?id=huy8AwAAQBAJ&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false\">Hacking and Securing iOS\n  Applications</a></li>\n</ul>",
@@ -1772,6 +1912,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1849,6 +1999,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -1920,6 +2080,16 @@
         "html": "Insecure Peer Connections",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -1997,6 +2167,16 @@
         "html": "Short HMAC Keys",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -2083,6 +2263,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "<ul>\n<li><a href=\"https://zipperdown.org/\">Zipperdown Web</a></li>\n<li><a href=\"https://github.com/ZipArchive/ZipArchive/issues/453\">Zipperdown Issue in ZipArchive</a></li>\n</ul>",
         "markdown": "",
@@ -2165,6 +2355,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -2230,6 +2430,16 @@
         "html": "UIWebView Exploits",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -2308,6 +2518,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -2380,6 +2600,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "Are there LDAP injection vulnerabilities in HTTP request?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "No LDAP injection vulnerabilities were found in HTTP request.",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -2451,6 +2681,16 @@
         "html": "String Validation Vulnerabilities in HTTP Requests",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "Are there string validation vulnerabilities in HTTP request?",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "No string validation vulnerabilities were found in HTTP requests.",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -2534,6 +2774,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -2606,6 +2856,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "<ul>\n<li><a href=\"https://developer.apple.com/library/ios/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html\">Avoiding Buffer Overflows and Underflows by\n  Apple</a></li>\n<li><a href=\"http://books.google.de/books?id=huy8AwAAQBAJ&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false\">Hacking and Securing iOS\n  Applications</a></li>\n</ul>",
         "markdown": "",
@@ -2677,6 +2937,16 @@
         "html": "Command Injection Vulnerabilities in HTTP Requests",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -2765,6 +3035,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -2836,6 +3116,16 @@
         "html": "Regex DoS Vulnerabilities in HTTP Requests",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -2909,6 +3199,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -2980,6 +3280,16 @@
         "html": "Buffer Overflow Vulnerabilities in HTTP Requests",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3063,6 +3373,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "<ul>\n<li><a href=\"https://developer.apple.com/library/ios/documentation/security/Conceptual/keychainServConcepts/01introduction/introduction.html#//apple_ref/doc/uid/TP30000897\">Keychain Services Programming Guide</a></li>\n<li><a href=\"https://www.owasp.org/index.php/Mobile_Top_10_2014-M2\">M2 - Insecure Data Storage</a></li>\n<li><a href=\"https://www.owasp.org/index.php/Mobile_Top_10_2014-M5\">M5 - Poor Authorization and Authentication</a></li>\n</ul>",
         "markdown": "",
@@ -3122,6 +3442,16 @@
         "html": "Misconfigured AWS S3 Buckets",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3183,6 +3513,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -3242,6 +3582,16 @@
         "html": "Business Logic",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3320,6 +3670,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -3385,6 +3745,16 @@
         "html": "General Server Vulnerabilities",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3457,6 +3827,16 @@
         "html": "Cross Site Tracing Vulnerabilities",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3534,6 +3914,16 @@
         "html": "Response Body Contains Non-HTTPS Links",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3617,6 +4007,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "<ul>\n<li><a href=\"https://jvn.jp/en/jp/JVN76662040/\">JVN#76662040</a> Clipboard\n  contents alteration vulnerability in Grani</li>\n<li><a href=\"http://jvn.jp/en/jp/JVN64764004/index.html\">JVN#64764004</a> Clipboard\n  contents alteration vulnerability in Sleipnir</li>\n</ul>",
         "markdown": "",
@@ -3676,6 +4076,16 @@
         "html": "CORS Wild Character Vulnerabilities in HTTP Headers",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3748,6 +4158,16 @@
         "html": "Integer Overflow Vulnerabilities in HTTP Requests",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
@@ -3841,6 +4261,16 @@
         "markdown": "",
         "text": ""
       },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
+      },
       "vulnerability_references": {
         "html": "",
         "markdown": "",
@@ -3912,6 +4342,16 @@
         "html": "JSON Depth Overflow in HTTP Requests",
         "markdown": "",
         "text": ""
+      },
+      "question": {
+        "html": "",
+        "text": "",
+        "markdown": ""
+      },
+      "success_message": {
+          "html": "",
+          "text": "",
+          "markdown": ""
       },
       "vulnerability_references": {
         "html": "",
