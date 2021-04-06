@@ -747,7 +747,13 @@
                       <span class="auditsummary__tag tag">{{ tag.val }}</span>
                     {% endfor %}
                   </div>
-                  <p class="auditsummary__desc">{{ analysis.desc.html | safe  }}</p>
+                  {% if analysis.risk.computed_value == -1 %}
+                    <p class="auditsummary__desc">{{ analysis.question.html | safe  }}</p>
+                  {% elif analysis.risk.computed_value == 0 %}
+                    <p class="auditsummary__desc">{{ analysis.success_message.html | safe  }}</p>
+                  {% else %}
+                    <p class="auditsummary__desc">{{ analysis.desc.html | safe  }}</p>
+                  {% endif %}
                 </td>
                 <td class="auditsummary__score">
                   {% if analysis.risk.computed_value > 0 %}

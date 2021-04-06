@@ -398,6 +398,8 @@ class Analysis:
     business_implication = attr.ib(type=Content)
     correct_implementation = attr.ib(type=Content)
     incorrect_implementation = attr.ib(type=Content)
+    question = attr.ib(type=Content)
+    success_message = attr.ib(type=Content)
     vulnerability_references = attr.ib(type=Content)
     risk = attr.ib(type=Risk, default=Risk())
     cvss_v3 = attr.ib(type=CVSSv3, default=None)
@@ -422,6 +424,10 @@ class Analysis:
             ),
             incorrect_implementation=Content(
                 **data.get('incorrect_implementation')
+            ),
+            question=Content(**data.get('question')),
+            success_message=Content(
+                **data.get('success_message')
             ),
             vulnerability_references=Content(
                 **data.get('vulnerability_references')
@@ -675,9 +681,9 @@ class Report:
         cls, id, title: Content, intro: Content, desc: Content,
         risk: Risk, cvss_v3: CVSSv3, business_implication: Content,
         correct_implementation: Content, incorrect_implementation: Content,
-        regulatory: Regulatory, vulnerability_references: Content,
-        findings: List[Content] = [], tags: List[Tag] = [],
-        attachments: List[Attachment] = []
+        question: Content, success_message: Content, regulatory: Regulatory,
+        vulnerability_references: Content, findings: List[Content] = [],
+        tags: List[Tag] = [], attachments: List[Attachment] = []
     ) -> Analysis:
         return Analysis(
             id=id,
@@ -689,6 +695,8 @@ class Report:
             business_implication=business_implication,
             correct_implementation=correct_implementation,
             incorrect_implementation=incorrect_implementation,
+            question=question,
+            success_message=success_message,
             regulatory=regulatory,
             vulnerability_references=vulnerability_references,
             findings=findings,
