@@ -11,6 +11,7 @@ rm -rf dist/
 poetry version patch
 export CURRENT_BRANCH
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-git push --tags
+VERSION=$(poetry version -s)
+git commit -am "Version bump $VERSION"
 git push origin "$CURRENT_BRANCH:$CURRENT_BRANCH"
-poetry publish
+poetry publish --build
