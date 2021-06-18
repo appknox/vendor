@@ -27,8 +27,6 @@ cvss = ">=2.0"
 [tool.poetry.dev-dependencies]
 Django = "^3.2.1"
 WeasyPrint = "^52.1"
-bumpversion = "^0.6.0"
-twine = "^3.2.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
