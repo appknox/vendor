@@ -965,7 +965,7 @@
             </table>
           </section>
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.pcidss or analysis.regulatory.hipaa %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.mstg or analysis.regulatory.asvs or analysis.regulatory.cwe or analysis.regulatory.gdpr %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
 
@@ -1029,6 +1029,78 @@
                                 {% endfor %}
                             </ul>
                           </td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.mstg %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "MSTG" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for mstg in analysis.regulatory.mstg %}
+                        <tr>
+                          <td>{{ mstg.code }}</td>
+                          <td>{{ mstg.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.asvs %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "ASVS" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for asvs in analysis.regulatory.asvs %}
+                        <tr>
+                          <td>{{ asvs.code }}</td>
+                          <td>{{ asvs.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.cwe %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "CWE" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for cwe in analysis.regulatory.cwe %}
+                        <tr>
+                          <td>{{ cwe.code }}</td>
+                          <td>{{ cwe.url }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.gdpr %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "GDPR" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for gdpr in analysis.regulatory.gdpr %}
+                        <tr>
+                          <td>{{ gdpr.code }}</td>
+                          <td>{{ gdpr.title }}</td>
                         </tr>
                       {% endfor %}
                     </tbody>
