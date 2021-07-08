@@ -4,8 +4,9 @@ import maya
 import json
 import html2text
 from datetime import datetime
+from urllib.parse import quote
 from cvss import CVSS3
-from typing import List
+from typing import List, Dict
 from ..constants import PLATFORM_ICONS
 
 ATTACHMENT_IMAGE_FORMATS = ['png', 'jpg', 'jpeg', 'bmp', 'svg', 'gif']
@@ -817,17 +818,17 @@ class Report:
             '<svg xmlns="http://www.w3.org/2000/svg" '
             'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" '
             'width="216px" height="216px" viewBox="0 0 42 42">{}</svg>'
-        ).format(sector)
+        ).format(quote(sector))
 
     @property
-    def custom_meta_names(self) -> [str]:
+    def custom_meta_names(self) -> List[str]:
         return [
             cmd.val for cmd in self.custom_meta_data
             if cmd.key == 'name' and cmd.val != ''
         ]
 
     @property
-    def _scan_types_visible(self) -> {str}:
+    def _scan_types_visible(self) -> Dict[str]:
         scan_types = set()
         if self.is_included_static_scan:
             scan_types.add(AnalysisTypeEnum.STATIC.value.lower())
