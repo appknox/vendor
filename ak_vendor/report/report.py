@@ -828,7 +828,7 @@ class Report:
         ]
 
     @property
-    def _scan_types_visible(self) -> Dict[str]:
+    def _scan_types_visible(self):
         scan_types = set()
         if self.is_included_static_scan:
             scan_types.add(AnalysisTypeEnum.STATIC.value.lower())
