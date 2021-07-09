@@ -1,3 +1,5 @@
+import attr
+from typing import List
 from gettext import gettext as _
 
 
@@ -526,3 +528,54 @@ data = [
         ]
     },
 ]
+
+
+@attr.s
+class HIPAAStandard:
+    title = attr.ib(type=str)
+    description = attr.ib(type=str)
+    specifications = attr.ib(type=str)
+
+    @classmethod
+    def from_json(cls, data):
+        return cls(
+            title=data.get("title"),
+            description=data.get("description"),
+            specifications=data.get("specifications"),
+        )
+
+
+@attr.s
+class HIPAA:
+    id = attr.ib(type=int)
+    pk = attr.ib(init=False)
+    code = attr.ib(type=str)
+    safeguard = attr.ib(type=str)
+    title = attr.ib(type=str)
+    standards = attr.ib(factory=list, type=List[HIPAAStandard])
+    active = attr.ib(type=bool, default=True)
+
+    def __attrs_post_init__(self):
+        object.__setattr__(self, "pk", self.id)
+
+    def __str__(self):
+        return "%s - %s - %s - %s" % (self.id, self.code, self.title, self.description)
+
+    def __repr__(self):
+        return "<HIPAA: %s>" % self.__str__()
+
+    @classmethod
+    def from_json(cls, data):
+        return cls(
+            id=data.get("id"),
+            code=data.get("code"),
+            safeguard=data.get("safeguard"),
+            title=data.get("title"),
+            standards=[
+                HIPAAStandard.from_json(std) for std in data.get("standards", [])
+            ],
+            active=data.get("active", True),
+        )
+
+
+HIPAA_DATA = {d["id"]: HIPAA.from_json(d) for d in data}

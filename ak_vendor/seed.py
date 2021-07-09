@@ -13,8 +13,8 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2017-03-30
 """
 from copy import copy
-from ak_vendor import owasp
-from ak_vendor import pcidss
+from ak_vendor.compliances import owasp
+from ak_vendor.compliances import pcidss
 from ak_vendor.utils import dict2obj
 OWASP_DATA = {d['id']: dict2obj(d) for d in owasp.data}
 PCIDSS_DATA = {d['id']: dict2obj(d) for d in pcidss.data}
