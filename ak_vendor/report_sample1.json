@@ -113,6 +113,38 @@
             "description": "Use strong cryptography and security protocols such as SSL/TLS, SSH or IPSec to safeguard sensitive cardholder data during transmission over open, public networks (e.g. Internet, wireless technologies, Global System for Mobile communications [GSM], General Packet Radio Service [GPRS]). Ensure wireless networks transmitting cardholder data or connected to the cardholder data environment use industry best practices (e.g., IEEE 802.11i) to implement strong encryption for authentication and transmission. The use of WEP as a security control is prohibited",
             "title": "Encrypt transmission of cardholder data across open, public networks"
           }
+        ],
+        "mstg": [
+          {
+            "code": "MSTG-NETWORK-1",
+            "title": "Data is encrypted on the network using TLS. The secure channel is used consistently throughout the app."
+          }
+        ],
+        "asvs": [
+          {
+            "code": "V1.1.1",
+            "title": "Verify the use of a secure software development lifecycle that addresses security in all stages of development."
+          },
+          {
+            "code": "V1.1.2",
+            "title": "Verify the use of threat modeling for every design change or sprint planning to identify threats, plan for countermeasures, facilitate appropriate risk responses, and guide security testing."
+          }
+        ],
+        "cwe": [
+          {
+            "code": "CWE-319",
+            "url": "https://cwe.mitre.org/data/definitions/319.html"
+          }
+        ],
+        "gdpr": [
+          {
+            "code": "Art-25-GDPR",
+            "title": "Data protection by design and by default"
+          },
+          {
+            "code": "Art-32-GDPR",
+            "title": "Security of processing"
+          }
         ]
       },
       "risk": {
@@ -295,6 +327,29 @@
             "code": "3.4",
             "description": "Render PAN unreadable anywhere it is stored including on portable digital media, backup media, in logs, and data received from or stored by wireless networks. Technology solutions for this requirement may include strong one-way hash functions of the entire PAN, truncation, index tokens with securely stored pads, or strong cryptography. (See PCI DSS Glossary for definition of strong cryptography.)",
             "title": "Protect stored cardholder data"
+          }
+        ],
+        "mstg": [
+          {
+            "code": "MSTG-STORAGE‑1",
+            "title": "System credential storage facilities need to be used to store sensitive data, such as PII, user credentials or cryptographic keys."
+          }
+        ],
+        "asvs": [],
+        "cwe": [
+          {
+            "code": "CWE-922",
+            "url": "https://cwe.mitre.org/data/definitions/922.html"
+          }
+        ],
+        "gdpr": [
+          {
+            "code": "Art-25-GDPR",
+            "title": "Data protection by design and by default"
+          },
+          {
+            "code": "Art-32-GDPR",
+            "title": "Security of processing"
           }
         ]
       },
@@ -706,6 +761,29 @@
             "code": "3.4",
             "description": "Render PAN unreadable anywhere it is stored including on portable digital media, backup media, in logs, and data received from or stored by wireless networks. Technology solutions for this requirement may include strong one-way hash functions of the entire PAN, truncation, index tokens with securely stored pads, or strong cryptography. (See PCI DSS Glossary for definition of strong cryptography.)",
             "title": "Protect stored cardholder data"
+          }
+        ],
+        "mstg": [
+          {
+            "code": "MSTG-STORAGE‑3",
+            "title": "No sensitive data is written to application logs."
+          }
+        ],
+        "asvs": [],
+        "cwe": [
+          {
+            "code": "CWE-779",
+            "url": "https://cwe.mitre.org/data/definitions/779.html"
+          }
+        ],
+        "gdpr": [
+          {
+            "code": "Art-25-GDPR",
+            "title": "Data protection by design and by default"
+          },
+          {
+            "code": "Art-32-GDPR",
+            "title": "Security of processing"
           }
         ]
       },
@@ -3421,7 +3499,8 @@
       },
       "regulatory": {
         "owasp": [],
-        "pcidss": []
+        "pcidss": [],
+        "hipaa": []
       },
       "risk": {
         "computed_value": -1,
