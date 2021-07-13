@@ -329,10 +329,54 @@ class HIPAA:
 
 
 @attr.s
+class MSTG:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+    @classmethod
+    def from_json(cls, data: dict):
+        return cls(code=data.get("code"), title=data.get("title"))
+
+
+@attr.s
+class ASVS:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+    @classmethod
+    def from_json(cls, data: dict):
+        return cls(code=data.get("code"), title=data.get("title"))
+
+
+@attr.s
+class CWE:
+    code = attr.ib(type=str)
+    url = attr.ib(type=str)
+
+    @classmethod
+    def from_json(cls, data: dict):
+        return cls(code=data.get("code"), url=data.get("url"))
+
+
+@attr.s
+class GDPR:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+    @classmethod
+    def from_json(cls, data: dict):
+        return cls(code=data.get("code"), title=data.get("title"))
+
+
+@attr.s
 class Regulatory:
     owasp = attr.ib(factory=list, type=List[dict])
     pcidss = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
+    asvs = attr.ib(factory=list, type=List[dict])
+    cwe = attr.ib(factory=list, type=List[dict])
+    gdpr = attr.ib(factory=list, type=List[dict])
+    mstg = attr.ib(factory=list, type=List[dict])
 
     @classmethod
     def from_json(cls, data):
@@ -341,6 +385,10 @@ class Regulatory:
             pcidss=[PCIDSS(**pcidss) for pcidss
                     in data.get('pcidss', [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get('hipaa', [])],
+            asvs=[ASVS.from_json(asvs) for asvs in data.get('asvs', [])],
+            cwe=[CWE.from_json(cwe) for cwe in data.get('cwe', [])],
+            gdpr=[GDPR.from_json(gdpr) for gdpr in data.get('gdpr', [])],
+            mstg=[MSTG.from_json(mstg) for mstg in data.get('mstg', [])],
         )
 
     @classmethod
@@ -366,6 +414,22 @@ class Regulatory:
             standards=standards,
         )
 
+    @classmethod
+    def create_mstg(cls, code: str, title: str) -> MSTG:
+        return MSTG(code=code, title=title)
+
+    @classmethod
+    def create_asvs(cls, code: str, title: str) -> ASVS:
+        return ASVS(code=code, title=title)
+
+    @classmethod
+    def create_cwe(cls, code: str, url: str) -> CWE:
+        return CWE(code=code, url=url)
+
+    @classmethod
+    def create_gdpr(cls, code: str, title: str) -> GDPR:
+        return GDPR(code=code, title=title)
+
     def add_owasp(self, owasp: OWASP) -> List[OWASP]:
         self.owasp.append(owasp)
         return self.owasp
@@ -377,6 +441,22 @@ class Regulatory:
     def add_hipaa(self, hipaa: HIPAA) -> List[HIPAA]:
         self.hipaa.append(hipaa)
         return self.hipaa
+
+    def add_mstg(self, mstg: MSTG) -> List[MSTG]:
+        self.mstg.append(mstg)
+        return self.mstg
+
+    def add_asvs(self, asvs: ASVS) -> List[ASVS]:
+        self.asvs.append(asvs)
+        return self.asvs
+
+    def add_cwe(self, cwe: CWE) -> List[MSTG]:
+        self.cwe.append(cwe)
+        return self.cwe
+
+    def add_gdpr(self, gdpr: GDPR) -> List[GDPR]:
+        self.gdpr.append(gdpr)
+        return self.gdpr
 
 
 @attr.s
@@ -405,7 +485,8 @@ class Analysis:
     risk = attr.ib(type=Risk, default=Risk())
     cvss_v3 = attr.ib(type=CVSSv3, default=None)
     regulatory = attr.ib(
-        type=Regulatory, default=Regulatory(owasp=[], pcidss=[], hipaa=[])
+        type=Regulatory, default=Regulatory(owasp=[], pcidss=[], hipaa=[],
+                                            asvs=[], cwe=[], gdpr=[], mstg=[])
     )
     findings = attr.ib(factory=list, type=List[Content])
     tags = attr.ib(factory=list, type=List[Tag])
@@ -453,9 +534,11 @@ class Analysis:
     @classmethod
     def create_regulatory(
         cls, owasp: List[dict] = [], pcidss: List[dict] = [],
-        hipaa: List[dict] = []
+        hipaa: List[dict] = [],  asvs: List[dict] = [],  cwe: List[dict] = [],
+        gdpr: List[dict] = [], mstg: List[dict] = []
     ) -> Regulatory:
-        return Regulatory(owasp=owasp, pcidss=pcidss, hipaa=hipaa)
+        return Regulatory(owasp=owasp, pcidss=pcidss, hipaa=hipaa,
+                          asvs=asvs, cwe=cwe, gdpr=gdpr, mstg=mstg)
 
     @classmethod
     def create_attachment(
