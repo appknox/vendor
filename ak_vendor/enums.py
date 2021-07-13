@@ -163,6 +163,13 @@ class SubmissionStatusEnum:
         VALIDATE_FAILED = [5, 'Failed to validate the file']
         ANALYZE_PREPARE = [6, 'Preparing to analyze the file']
         ANALYZING = [7, 'The file is being analyzed']
+        ANALYZE_PREPARE_FAILED = [8, 'Preparing to analyze failed']
+        PLAN_SELECTION = [9, 'Awaiting plan selection']
+        INVALID_APP = [10, 'Invalid app file']
+        INVALID_PAYMENT = [11, 'Insufficient credits']
+        INVALID_NAMESPACE = [12, 'Unapproved namespace']
+        INVALID_PERMISSION = [13, 'Project permission denied']
+        INVALID_ARCHIVED_PROJECT = [14, 'Archived project']
 
 
 @choices
