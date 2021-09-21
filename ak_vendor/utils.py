@@ -17,6 +17,7 @@ class EmptyClass(object):
     """
     Just an empty class with nothing to see
     """
+
     pass
 
 

@@ -19,22 +19,20 @@ class ReportHTMLExporter:
         self.report = report
 
     def to_html(self):
-        tpl = open('{}/report/report_template.html'.format(CUR_DIR)).read()
-        template = Template(tpl, engine=Engine(libraries={
-            'i18n': 'django.templatetags.i18n'
-        }))
-        context = Context({
-            'report': self.report
-        })
+        tpl = open("{}/report/report_template.html".format(CUR_DIR)).read()
+        template = Template(
+            tpl, engine=Engine(libraries={"i18n": "django.templatetags.i18n"})
+        )
+        context = Context({"report": self.report})
         content = template.render(context)
         return content
 
-    def to_html_file(self, path=''):
-        with open('{}/output.html'.format(path), 'w') as file:
+    def to_html_file(self, path=""):
+        with open("{}/output.html".format(path), "w") as file:
             tpl = self.to_html()
             file.write(tpl)
 
 
-data = json.load(open('{}/report_sample1.json'.format(CUR_DIR)))
+data = json.load(open("{}/report_sample1.json".format(CUR_DIR)))
 report_obj = Report.from_json(data)
 ReportHTMLExporter(report_obj).to_html_file(CUR_DIR)

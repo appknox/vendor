@@ -16,7 +16,7 @@ data = [
                     "Assign a unique name and/or number for identifying and "
                     "tracking user identity"
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Emergency Access Procedure"),
@@ -25,7 +25,7 @@ data = [
                     "obtaining  necessary electronic protected health "
                     "information during an emergency."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Automatic Logoff"),
@@ -34,7 +34,7 @@ data = [
                     "electronic session after a predetermined time of "
                     "inactivity."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Encryption and Decryption"),
@@ -42,9 +42,9 @@ data = [
                     "Implement a method to encrypt and decrypt electronic "
                     "protected health information."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_312_c_1",
@@ -59,9 +59,9 @@ data = [
                     "electronic protected health information has not been "
                     "altered or destroyed in an unauthorized manner."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             }
-        ]
+        ],
     },
     {
         "id": "164_312_d",
@@ -75,9 +75,9 @@ data = [
                     "Implement procedures to verify that a person or entity "
                     "seeking access to ePHI is the one claimed"
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_312_e_1",
@@ -92,16 +92,14 @@ data = [
                     "electronically  transmitted ePHI is not improperly "
                     "modified without detection."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Encryption"),
-                "description": _(
-                    "Implement a mechanism to encrypt ePHI in transit."
-                ),
-                "specifications": "Addressable"
+                "description": _("Implement a mechanism to encrypt ePHI in transit."),
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_310_a_1",
@@ -117,7 +115,7 @@ data = [
                     "data under the disaster recovery plan and emergency mode "
                     "operations plan in the event of an emergency"
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Facility Security Plan"),
@@ -126,7 +124,7 @@ data = [
                     "facility  and the equipment therein from unauthorized "
                     "physical access, tampering, and theft."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Access Control and Validation Procedures"),
@@ -136,7 +134,7 @@ data = [
                     "including visitor control, and control of access to "
                     "software  programs for testing and revision."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Maintenance Records"),
@@ -146,9 +144,9 @@ data = [
                     "facility which are related to security (for example, "
                     "hardware, walls, doors, and locks)."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_310_b",
@@ -165,9 +163,9 @@ data = [
                     "attributes of the surroundings of a specific workstation "
                     "or class of workstation that can access ePHI."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_310_c",
@@ -181,9 +179,9 @@ data = [
                     "Implement physical safeguards for all workstations that "
                     "access ePHI, to restrict access to authorized users."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_310_d_1",
@@ -198,7 +196,7 @@ data = [
                     "disposition of ePHI, and/or the hardware or electronic "
                     "media on which it is stored."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Medical Re-use"),
@@ -206,7 +204,7 @@ data = [
                     "Implement procedures for removal of ePHI from electronic "
                     "media before the media are made available for re-use."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Accountability"),
@@ -214,7 +212,7 @@ data = [
                     "Maintain a record of the movements of hardware and "
                     "electronic media and any person responsible therefore."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Data Storage and Backup"),
@@ -223,9 +221,9 @@ data = [
                     "protected health information, when needed, before "
                     "movement of equipment."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_1",
@@ -241,7 +239,7 @@ data = [
                     "confidentiality, integrity, and availability of "
                     "electronic PHI held by the covered entity."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Risk Management"),
@@ -251,7 +249,7 @@ data = [
                     "level to comply with Sec. 164.306(a) [Security "
                     "standards: General rules; (a) General requirements]."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Sanction Policy"),
@@ -260,7 +258,7 @@ data = [
                     "who fail to comply with the security policies and "
                     "procedures of the covered entity."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Information System Activity Review"),
@@ -269,9 +267,9 @@ data = [
                     "information system activity, such as audit logs, access "
                     "reports, and security incident tracking reports."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_2",
@@ -287,9 +285,9 @@ data = [
                     "the policies and procedures required by this subpart "
                     "for the entity."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_3",
@@ -305,7 +303,7 @@ data = [
                     "electronic  protected health information or in locations "
                     "where it might be accessed."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Workforce Clearance Procedures"),
@@ -314,7 +312,7 @@ data = [
                     "workforce member to electronic protected health "
                     "information is appropriate."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Authorization and/or Supervision"),
@@ -326,9 +324,9 @@ data = [
                     "(a)(3)(ii)(B) [Workforce Clearance Procedures] of this "
                     "section."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_4",
@@ -345,7 +343,7 @@ data = [
                     "health information of the clearinghouse from "
                     "unauthorized access by the larger organization."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Access Authorization"),
@@ -355,7 +353,7 @@ data = [
                     "through access to a workstation, transaction, program, "
                     "process, or other mechanism."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Access Establishment and Modification"),
@@ -365,9 +363,9 @@ data = [
                     "document, review, and modify a user's right of access to "
                     "a workstation, transaction, program, or process."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_5",
@@ -378,7 +376,7 @@ data = [
             {
                 "title": _("Security Reminders"),
                 "description": _("Periodic security updates."),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Protection from Malicious Software"),
@@ -386,7 +384,7 @@ data = [
                     "Procedures for guarding against, detecting, and "
                     "reporting malicious software."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Log-in Monitoring"),
@@ -394,17 +392,16 @@ data = [
                     "Procedures for monitoring log-in attempts and reporting "
                     "discrepancies."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Password Management"),
                 "description": _(
-                    "Procedures for creating, changing, and safeguarding "
-                    "passwords."
+                    "Procedures for creating, changing, and safeguarding " "passwords."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_6",
@@ -421,9 +418,9 @@ data = [
                     "covered entity; and document security incidents and "
                     "their outcomes."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_7",
@@ -438,7 +435,7 @@ data = [
                     "maintain retrievable exact copies of electronic "
                     "protected health information."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Disaster Recovery Plan"),
@@ -446,7 +443,7 @@ data = [
                     "Establish (and implement as needed) procedures to "
                     "restore any loss of data."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Emergency Mode Operation Plan"),
@@ -456,7 +453,7 @@ data = [
                     "protection of the security of electronic PHI while "
                     "operating in emergency mode."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
             {
                 "title": _("Testing and Revision Procedures"),
@@ -464,7 +461,7 @@ data = [
                     "Implement procedures for periodic testing and revision "
                     "of contingency plans."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
             {
                 "title": _("Applications and Data Criticality Analysis"),
@@ -472,9 +469,9 @@ data = [
                     "Assess the relative criticality of specific applications "
                     "and data in support of other contingency plan components."
                 ),
-                "specifications": "Addressable"
+                "specifications": "Addressable",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_a_8",
@@ -494,9 +491,9 @@ data = [
                     "policies and procedures meet the requirements of this "
                     "subpart."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
     {
         "id": "164_308_b_1",
@@ -523,9 +520,9 @@ data = [
                     "applicable requirements of § 164.314(a) [Business "
                     "Associate Contracts or Other Arrangements]."
                 ),
-                "specifications": "Required"
+                "specifications": "Required",
             },
-        ]
+        ],
     },
 ]
 

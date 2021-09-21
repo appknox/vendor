@@ -44,11 +44,13 @@ def pnguncrush(old_png):
     while chunk_pos < len(old_png):
 
         # Reading chunk
-        chunk_length = old_png[chunk_pos:chunk_pos+4]
+        chunk_length = old_png[chunk_pos : chunk_pos + 4]
         chunk_length = unpack(">L", chunk_length)[0]
-        chunk_type = old_png[chunk_pos+4: chunk_pos+8]
-        chunk_data = old_png[chunk_pos+8:chunk_pos+8+chunk_length]
-        chunk_crc = old_png[chunk_pos+chunk_length+8:chunk_pos+chunk_length+12]
+        chunk_type = old_png[chunk_pos + 4 : chunk_pos + 8]
+        chunk_data = old_png[chunk_pos + 8 : chunk_pos + 8 + chunk_length]
+        chunk_crc = old_png[
+            chunk_pos + chunk_length + 8 : chunk_pos + chunk_length + 12
+        ]
         chunk_crc = unpack(">L", chunk_crc)[0]
         chunk_pos += chunk_length + 12
 
@@ -64,7 +66,8 @@ def pnguncrush(old_png):
                 buf_size = width * height * 4 + height
                 if pendingIDATChunks:
                     chunk_data = decompress(
-                        b''.join(pendingIDATChunks) + chunk_data, -8, buf_size)
+                        b"".join(pendingIDATChunks) + chunk_data, -8, buf_size
+                    )
                 else:
                     chunk_data = decompress(chunk_data, -8, buf_size)
 
@@ -107,7 +110,12 @@ def pnguncrush(old_png):
 
     return new_png
 
+
 def to_bytes(data):
-    if type(data).__name__ == 'int':
-        return bytes([data, ])
+    if type(data).__name__ == "int":
+        return bytes(
+            [
+                data,
+            ]
+        )
     return data

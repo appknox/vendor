@@ -6,31 +6,31 @@ import html2text
 from datetime import datetime
 from urllib.parse import quote
 from cvss import CVSS3
-from typing import List, Dict
+from typing import List
 from ..constants import PLATFORM_ICONS
 
-ATTACHMENT_IMAGE_FORMATS = ['png', 'jpg', 'jpeg', 'bmp', 'svg', 'gif']
+ATTACHMENT_IMAGE_FORMATS = ["png", "jpg", "jpeg", "bmp", "svg", "gif"]
 
 
 class PlatformEnum(enum.Enum):
-    ANDROID = 'Android'
-    IOS = 'iOS'
-    WINDOWS = 'Windows'
+    ANDROID = "Android"
+    IOS = "iOS"
+    WINDOWS = "Windows"
 
 
 class PlatformIconEnum(enum.Enum):
-    ANDROID = PLATFORM_ICONS['ANDROID']
-    IOS = PLATFORM_ICONS['IOS']
-    WINDOWS = PLATFORM_ICONS['WINDOWS']
+    ANDROID = PLATFORM_ICONS["ANDROID"]
+    IOS = PLATFORM_ICONS["IOS"]
+    WINDOWS = PLATFORM_ICONS["WINDOWS"]
 
 
 class RiskColorEnum(enum.Enum):
-    CRITICAL = '#EF4836'
-    HIGH = '#FF8C00'
-    MEDIUM = '#F5D76E'
-    LOW = '#2CC2F8'
-    PASSED = '#80C081'
-    UNTESTED = '#6B6B6B'
+    CRITICAL = "#EF4836"
+    HIGH = "#FF8C00"
+    MEDIUM = "#F5D76E"
+    LOW = "#2CC2F8"
+    PASSED = "#80C081"
+    UNTESTED = "#6B6B6B"
 
 
 class RiskValueEnum(enum.Enum):
@@ -43,65 +43,65 @@ class RiskValueEnum(enum.Enum):
 
 
 class RiskLabelEnum(enum.Enum):
-    CRITICAL = 'Critical'
-    HIGH = 'High'
-    MEDIUM = 'Medium'
-    LOW = 'Low'
-    PASSED = 'Passed'
-    UNTESTED = 'Untested'
+    CRITICAL = "Critical"
+    HIGH = "High"
+    MEDIUM = "Medium"
+    LOW = "Low"
+    PASSED = "Passed"
+    UNTESTED = "Untested"
 
 
 class AnalysisTypeEnum(enum.Enum):
-    STATIC = 'Static'
-    DYNAMIC = 'Dynamic'
-    MANUAL = 'Manual'
-    API = 'API'
+    STATIC = "Static"
+    DYNAMIC = "Dynamic"
+    MANUAL = "Manual"
+    API = "API"
 
 
 class AttackVectorEnum(enum.Enum):
-    N = 'NETWORK'
-    A = 'ADJACENT_NETWORK'
-    L = 'LOCAL'
-    P = 'PHYSICAL'
+    N = "NETWORK"
+    A = "ADJACENT_NETWORK"
+    L = "LOCAL"
+    P = "PHYSICAL"
 
 
 class AttackComplexityEnum(enum.Enum):
-    H = 'HIGH'
-    L = 'LOW'
+    H = "HIGH"
+    L = "LOW"
 
 
 class PrivilegesRequiredEnum(enum.Enum):
-    H = 'HIGH'
-    L = 'LOW'
-    N = 'NONE'
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
 
 
 class UserInteractionEnum(enum.Enum):
-    N = 'NONE'
-    R = 'REQUIRED'
+    N = "NONE"
+    R = "REQUIRED"
 
 
 class ScopeEnum(enum.Enum):
-    U = 'UNCHANGED'
-    C = 'CHANGED'
+    U = "UNCHANGED"
+    C = "CHANGED"
 
 
 class ConfidentialityImpactEnum(enum.Enum):
-    H = 'HIGH'
-    L = 'LOW'
-    N = 'NONE'
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
 
 
 class IntegrityImpactEnum(enum.Enum):
-    H = 'HIGH'
-    L = 'LOW'
-    N = 'NONE'
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
 
 
 class AvailabilityImpactEnum(enum.Enum):
-    H = 'HIGH'
-    L = 'LOW'
-    N = 'NONE'
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
 
 
 @attr.s
@@ -128,8 +128,8 @@ class Application:
 
 @attr.s
 class Company:
-    name = attr.ib(type=str, default='')
-    logo = attr.ib(type=str, default='')
+    name = attr.ib(type=str, default="")
+    logo = attr.ib(type=str, default="")
     hide = attr.ib(type=bool, default=False)
 
 
@@ -149,8 +149,8 @@ class CustomMetaData:
 @attr.s
 class Content:
     html = attr.ib(type=str)
-    text = attr.ib(type=str, default='')
-    markdown = attr.ib(type=str, default='')
+    text = attr.ib(type=str, default="")
+    markdown = attr.ib(type=str, default="")
 
     def html_to_text(self):
         return html2text.html2text(self.html)[:-2]
@@ -173,87 +173,67 @@ class CVSSv3:
     attack_vector = attr.ib(
         type=str,
         validator=attr.validators.in_([e.value for e in AttackVectorEnum]),
-        default=AttackVectorEnum.P.value
+        default=AttackVectorEnum.P.value,
     )
     attack_complexity = attr.ib(
         type=str,
         validator=attr.validators.in_([e.value for e in AttackComplexityEnum]),
-        default=AttackComplexityEnum.H.value
+        default=AttackComplexityEnum.H.value,
     )
     privileges_required = attr.ib(
         type=str,
-        validator=attr.validators.in_(
-            [e.value for e in PrivilegesRequiredEnum]
-        ),
-        default=PrivilegesRequiredEnum.H.value
+        validator=attr.validators.in_([e.value for e in PrivilegesRequiredEnum]),
+        default=PrivilegesRequiredEnum.H.value,
     )
     user_interaction = attr.ib(
         type=str,
         validator=attr.validators.in_([e.value for e in UserInteractionEnum]),
-        default=UserInteractionEnum.R.value
+        default=UserInteractionEnum.R.value,
     )
     scope = attr.ib(
         type=str,
         validator=attr.validators.in_([e.value for e in ScopeEnum]),
-        default=ScopeEnum.U.value
+        default=ScopeEnum.U.value,
     )
     confidentiality_impact = attr.ib(
         type=str,
-        validator=attr.validators.in_(
-            [e.value for e in ConfidentialityImpactEnum]
-        ),
-        default=ConfidentialityImpactEnum.N.value
+        validator=attr.validators.in_([e.value for e in ConfidentialityImpactEnum]),
+        default=ConfidentialityImpactEnum.N.value,
     )
     integrity_impact = attr.ib(
         type=str,
         validator=attr.validators.in_([e.value for e in IntegrityImpactEnum]),
-        default=IntegrityImpactEnum.N.value
+        default=IntegrityImpactEnum.N.value,
     )
     availability_impact = attr.ib(
         type=str,
-        validator=attr.validators.in_(
-            [e.value for e in AvailabilityImpactEnum]
-        ),
-        default=AvailabilityImpactEnum.N.value
+        validator=attr.validators.in_([e.value for e in AvailabilityImpactEnum]),
+        default=AvailabilityImpactEnum.N.value,
     )
 
     @classmethod
-    def parse_vector(cls, vector_string: str) -> 'CVSSv3':
+    def parse_vector(cls, vector_string: str) -> "CVSSv3":
         if not vector_string:
             return None
         cvssv3 = CVSS3(vector_string)
-        (
-            base_severity, temporal_severity, environmental_severity
-        ) = cvssv3.severities()
+        (base_severity, temporal_severity, environmental_severity) = cvssv3.severities()
         return CVSSv3(
-            version='3',
+            version="3",
             vector_string=vector_string,
             base_score=str(cvssv3.base_score),
             base_severity=base_severity,
-            attack_vector=(
-                AttackVectorEnum[cvssv3.metrics.get('AV')].value
-            ),
-            attack_complexity=(
-                AttackComplexityEnum[cvssv3.metrics.get('AC')].value
-            ),
+            attack_vector=(AttackVectorEnum[cvssv3.metrics.get("AV")].value),
+            attack_complexity=(AttackComplexityEnum[cvssv3.metrics.get("AC")].value),
             privileges_required=(
-                PrivilegesRequiredEnum[cvssv3.metrics.get('PR')].value
+                PrivilegesRequiredEnum[cvssv3.metrics.get("PR")].value
             ),
-            user_interaction=(
-                UserInteractionEnum[cvssv3.metrics.get('UI')].value
-            ),
-            scope=(
-                ScopeEnum[cvssv3.metrics.get('S')].value
-            ),
+            user_interaction=(UserInteractionEnum[cvssv3.metrics.get("UI")].value),
+            scope=(ScopeEnum[cvssv3.metrics.get("S")].value),
             confidentiality_impact=(
-                ConfidentialityImpactEnum[cvssv3.metrics.get('C')].value
+                ConfidentialityImpactEnum[cvssv3.metrics.get("C")].value
             ),
-            integrity_impact=(
-                IntegrityImpactEnum[cvssv3.metrics.get('I')].value
-            ),
-            availability_impact=(
-                AvailabilityImpactEnum[cvssv3.metrics.get('A')].value
-            ),
+            integrity_impact=(IntegrityImpactEnum[cvssv3.metrics.get("I")].value),
+            availability_impact=(AvailabilityImpactEnum[cvssv3.metrics.get("A")].value),
         )
 
 
@@ -262,17 +242,11 @@ class Risk:
     value = attr.ib(type=int, default=RiskValueEnum.UNTESTED.value)
     value_label = attr.ib(type=str, default=RiskLabelEnum.UNTESTED.value)
     value_color = attr.ib(type=str, default=RiskColorEnum.UNTESTED.value)
-    computed_value = attr.ib(
-        type=int, default=RiskValueEnum.UNTESTED.value
-    )
-    computed_value_label = attr.ib(
-        type=str, default=RiskLabelEnum.UNTESTED.value
-    )
-    computed_value_color = attr.ib(
-        type=str, default=RiskColorEnum.UNTESTED.value
-    )
+    computed_value = attr.ib(type=int, default=RiskValueEnum.UNTESTED.value)
+    computed_value_label = attr.ib(type=str, default=RiskLabelEnum.UNTESTED.value)
+    computed_value_color = attr.ib(type=str, default=RiskColorEnum.UNTESTED.value)
     is_overridden = attr.ib(type=bool, default=False)
-    override_comment = attr.ib(type=str, default='')
+    override_comment = attr.ib(type=str, default="")
 
 
 @attr.s
@@ -464,8 +438,10 @@ class Analysis:
     risk = attr.ib(type=Risk, default=Risk())
     cvss_v3 = attr.ib(type=CVSSv3, default=None)
     regulatory = attr.ib(
-        type=Regulatory, default=Regulatory(owasp=[], pcidss=[], hipaa=[],
-                                            asvs=[], cwe=[], gdpr=[], mstg=[])
+        type=Regulatory,
+        default=Regulatory(
+            owasp=[], pcidss=[], hipaa=[], asvs=[], cwe=[], gdpr=[], mstg=[]
+        ),
     )
     findings = attr.ib(factory=list, type=List[Content])
     tags = attr.ib(factory=list, type=List[Tag])
@@ -473,41 +449,32 @@ class Analysis:
 
     @classmethod
     def from_json(cls, data):
-        cvssv3 = data.get('cvss_v3')
+        cvssv3 = data.get("cvss_v3")
         return cls(
-            id=data.get('id'),
-            title=Content(**data.get('title')),
-            desc=Content(**data.get('desc')),
-            intro=Content(**data.get('intro')),
-            business_implication=Content(**data.get('business_implication')),
-            correct_implementation=Content(
-                **data.get('correct_implementation')
-            ),
-            incorrect_implementation=Content(
-                **data.get('incorrect_implementation')
-            ),
-            question=Content(**data.get('question')),
-            success_message=Content(
-                **data.get('success_message')
-            ),
-            vulnerability_references=Content(
-                **data.get('vulnerability_references')
-            ),
-            risk=Risk(**data.get('risk', {})),
+            id=data.get("id"),
+            title=Content(**data.get("title")),
+            desc=Content(**data.get("desc")),
+            intro=Content(**data.get("intro")),
+            business_implication=Content(**data.get("business_implication")),
+            correct_implementation=Content(**data.get("correct_implementation")),
+            incorrect_implementation=Content(**data.get("incorrect_implementation")),
+            question=Content(**data.get("question")),
+            success_message=Content(**data.get("success_message")),
+            vulnerability_references=Content(**data.get("vulnerability_references")),
+            risk=Risk(**data.get("risk", {})),
             cvss_v3=CVSSv3(**cvssv3) if cvssv3 else None,
-            regulatory=Regulatory.from_json(data.get('regulatory')),
+            regulatory=Regulatory.from_json(data.get("regulatory")),
             findings=[
                 cls.create_finding(
-                    title=Content(**finding.get('title')),
-                    description=Content(**finding.get('description'))
+                    title=Content(**finding.get("title")),
+                    description=Content(**finding.get("description")),
                 )
-                for finding in data.get('findings', [])
+                for finding in data.get("findings", [])
             ],
-            tags=[Tag(**tag) for tag in data.get('tags', [])],
+            tags=[Tag(**tag) for tag in data.get("tags", [])],
             attachments=[
-                Attachment(**attachment)
-                for attachment in data.get('attachments', [])
-            ]
+                Attachment(**attachment) for attachment in data.get("attachments", [])
+            ],
         )
 
     @classmethod
@@ -551,9 +518,15 @@ class Analysis:
 
     @classmethod
     def create_risk(
-        cls, value: int, value_label: str, value_color: str,
-        computed_value: int, computed_value_label: str,
-        computed_value_color: str, is_overridden: bool, override_comment: str
+        cls,
+        value: int,
+        value_label: str,
+        value_color: str,
+        computed_value: int,
+        computed_value_label: str,
+        computed_value_color: str,
+        is_overridden: bool,
+        override_comment: str,
     ) -> Risk:
         return Risk(
             value=value,
@@ -563,7 +536,7 @@ class Analysis:
             computed_value_label=computed_value_label,
             computed_value_color=computed_value_color,
             is_overridden=is_overridden,
-            override_comment=override_comment
+            override_comment=override_comment,
         )
 
     def add_finding(self, finding: Finding) -> Finding:
@@ -590,8 +563,8 @@ class Analysis:
     def trim_unsupported_chars(cls, string: str) -> str:
         """trim non-font characters"""
         s = string
-        for char in ['\u001b', '\\u001b', '\x1b']:  # ESCAPE char
-            s = s.replace(char, '')
+        for char in ["\u001b", "\\u001b", "\x1b"]:  # ESCAPE char
+            s = s.replace(char, "")
         return s
 
 
@@ -604,35 +577,24 @@ class Report:
     COLOR_PASSED = RiskColorEnum.PASSED.value
     COLOR_UNTESTED = RiskColorEnum.UNTESTED.value
     RISK_COLOR = {
-        'critical': COLOR_CRITICAL,
-        'high': COLOR_HIGH,
-        'medium': COLOR_MEDIUM,
-        'low': COLOR_LOW,
-        'passed': COLOR_PASSED,
-        'untested': COLOR_UNTESTED,
+        "critical": COLOR_CRITICAL,
+        "high": COLOR_HIGH,
+        "medium": COLOR_MEDIUM,
+        "low": COLOR_LOW,
+        "passed": COLOR_PASSED,
+        "untested": COLOR_UNTESTED,
     }
     package_name = attr.ib(type=str)
     platform = attr.ib(type=Platform)
     application = attr.ib(type=Application)
     appknox_file_id = attr.ib(type=int, default=None)
-    prepared_for = attr.ib(
-        type=Company,
-        default=Company(name='')
-    )
+    prepared_for = attr.ib(type=Company, default=Company(name=""))
     prepared_by = attr.ib(
         type=Company,
-        default=Company(
-            name='Appknox', logo='https://appknox.com/in/img/logo.png'
-        )
+        default=Company(name="Appknox", logo="https://appknox.com/in/img/logo.png"),
     )
-    powered_by = attr.ib(
-        type=Company,
-        default=Company(hide=True)
-    )
-    created_on = attr.ib(
-        type=datetime,
-        default=maya.now().iso8601()
-    )
+    powered_by = attr.ib(type=Company, default=Company(hide=True))
+    created_on = attr.ib(type=datetime, default=maya.now().iso8601())
     show_copyright = attr.ib(type=bool, default=True)
     is_partnered = attr.ib(type=bool, default=False)
     rating = attr.ib(type=int, default=0)
@@ -659,52 +621,52 @@ class Report:
     @classmethod
     def from_json(cls, data):
         return cls(
-            package_name=data.get('package_name'),
-            platform=Platform(**data.get('platform')),
-            application=Application(**data.get('application')),
-            appknox_file_id=data.get('appknox_file_id'),
-            prepared_for=Company(**data.get('prepared_for')),
-            prepared_by=Company(**data.get('prepared_by')),
-            powered_by=Company(**data.get('powered_by')),
-            created_on=cls.create_created_on(data.get('created_on')),
-            show_copyright=data.get('show_copyright'),
-            is_partnered=data.get('is_partnered'),
-            rating=data.get('rating'),
+            package_name=data.get("package_name"),
+            platform=Platform(**data.get("platform")),
+            application=Application(**data.get("application")),
+            appknox_file_id=data.get("appknox_file_id"),
+            prepared_for=Company(**data.get("prepared_for")),
+            prepared_by=Company(**data.get("prepared_by")),
+            powered_by=Company(**data.get("powered_by")),
+            created_on=cls.create_created_on(data.get("created_on")),
+            show_copyright=data.get("show_copyright"),
+            is_partnered=data.get("is_partnered"),
+            rating=data.get("rating"),
             is_included_static_scan=data.get(
-                'is_included_static_scan',
-                cls.__attrs_attrs__.is_included_static_scan.default),
+                "is_included_static_scan",
+                cls.__attrs_attrs__.is_included_static_scan.default,
+            ),
             is_included_dynamic_scan=data.get(
-                'is_included_dynamic_scan',
-                cls.__attrs_attrs__.is_included_dynamic_scan.default),
+                "is_included_dynamic_scan",
+                cls.__attrs_attrs__.is_included_dynamic_scan.default,
+            ),
             is_included_api_scan=data.get(
-                'is_included_api_scan',
-                cls.__attrs_attrs__.is_included_api_scan.default),
+                "is_included_api_scan", cls.__attrs_attrs__.is_included_api_scan.default
+            ),
             is_included_manual_scan=data.get(
-                'is_included_manual_scan',
-                cls.__attrs_attrs__.is_included_manual_scan.default),
+                "is_included_manual_scan",
+                cls.__attrs_attrs__.is_included_manual_scan.default,
+            ),
             is_done_static_scan=data.get(
-                'is_done_static_scan',
-                cls.__attrs_attrs__.is_done_static_scan.default),
+                "is_done_static_scan", cls.__attrs_attrs__.is_done_static_scan.default
+            ),
             is_done_dynamic_scan=data.get(
-                'is_done_dynamic_scan',
-                cls.__attrs_attrs__.is_done_dynamic_scan.default),
+                "is_done_dynamic_scan", cls.__attrs_attrs__.is_done_dynamic_scan.default
+            ),
             is_done_api_scan=data.get(
-                'is_done_api_scan',
-                cls.__attrs_attrs__.is_done_api_scan.default),
+                "is_done_api_scan", cls.__attrs_attrs__.is_done_api_scan.default
+            ),
             is_done_manual_scan=data.get(
-                'is_done_manual_scan',
-                cls.__attrs_attrs__.is_done_manual_scan.default),
+                "is_done_manual_scan", cls.__attrs_attrs__.is_done_manual_scan.default
+            ),
             references=[
-                Reference(**reference)
-                for reference in data.get('references', [])
+                Reference(**reference) for reference in data.get("references", [])
             ],
             custom_meta_data=[
-                CustomMetaData(**cmd)
-                for cmd in data.get('custom_meta_data', [])
+                CustomMetaData(**cmd) for cmd in data.get("custom_meta_data", [])
             ],
             analyses=[
-                Analysis.from_json(analysis)
-                for analysis in data.get('analyses', [])
+                Analysis.from_json(analysis) for analysis in data.get("analyses", [])
             ],
         )
 
@@ -714,9 +676,7 @@ class Report:
     def add_reference(self, reference: Reference) -> Reference:
         self.references.append(reference)
 
-    def add_custom_metadata(
-        self, customdata: CustomMetaData
-    ) -> CustomMetaData:
+    def add_custom_metadata(self, customdata: CustomMetaData) -> CustomMetaData:
         self.custom_meta_data.append(customdata)
 
     @classmethod
@@ -725,12 +685,15 @@ class Report:
 
     @classmethod
     def create_application(
-        cls, name: str, icon: str, version: str, version_code: str,
-        sha1: str, md5: str
+        cls, name: str, icon: str, version: str, version_code: str, sha1: str, md5: str
     ) -> Application:
         return Application(
-            name=name, icon=icon, version=version, version_code=version_code,
-            sha1=sha1, md5=md5
+            name=name,
+            icon=icon,
+            version=version,
+            version_code=version_code,
+            sha1=sha1,
+            md5=md5,
         )
 
     @classmethod
@@ -738,9 +701,7 @@ class Report:
         return Company(name=name, logo=logo, hide=hide)
 
     @classmethod
-    def create_created_on(
-        cls, isodate: str = (maya.now().iso8601())
-    ) -> datetime:
+    def create_created_on(cls, isodate: str = (maya.now().iso8601())) -> datetime:
         return maya.parse(isodate).datetime()
 
     @classmethod
@@ -753,12 +714,23 @@ class Report:
 
     @classmethod
     def create_analysis(
-        cls, id, title: Content, intro: Content, desc: Content,
-        risk: Risk, cvss_v3: CVSSv3, business_implication: Content,
-        correct_implementation: Content, incorrect_implementation: Content,
-        question: Content, success_message: Content, regulatory: Regulatory,
-        vulnerability_references: Content, findings: List[Content] = [],
-        tags: List[Tag] = [], attachments: List[Attachment] = []
+        cls,
+        id,
+        title: Content,
+        intro: Content,
+        desc: Content,
+        risk: Risk,
+        cvss_v3: CVSSv3,
+        business_implication: Content,
+        correct_implementation: Content,
+        incorrect_implementation: Content,
+        question: Content,
+        success_message: Content,
+        regulatory: Regulatory,
+        vulnerability_references: Content,
+        findings: List[Content] = [],
+        tags: List[Tag] = [],
+        attachments: List[Attachment] = [],
     ) -> Analysis:
         return Analysis(
             id=id,
@@ -776,12 +748,12 @@ class Report:
             vulnerability_references=vulnerability_references,
             findings=findings,
             tags=tags,
-            attachments=attachments
+            attachments=attachments,
         )
 
     @classmethod
     def create_content(
-        cls, text: str = '', html: str = '', markdown: str = ''
+        cls, text: str = "", html: str = "", markdown: str = ""
     ) -> Content:
         return Content(text=text, html=html, markdown=markdown)
 
@@ -799,7 +771,7 @@ class Report:
 
     @classmethod
     def get_risk_color(cls, risk: str) -> str:
-        return cls.RISK_COLOR.get(risk.lower(), '')
+        return cls.RISK_COLOR.get(risk.lower(), "")
 
     def _count_severity(self, label: str) -> int:
         count = 0
@@ -815,27 +787,27 @@ class Report:
 
     @property
     def critical_count(self) -> int:
-        return self._count_severity('critical')
+        return self._count_severity("critical")
 
     @property
     def high_count(self) -> int:
-        return self._count_severity('high')
+        return self._count_severity("high")
 
     @property
     def medium_count(self) -> int:
-        return self._count_severity('medium')
+        return self._count_severity("medium")
 
     @property
     def low_count(self) -> int:
-        return self._count_severity('low')
+        return self._count_severity("low")
 
     @property
     def passed_count(self) -> int:
-        return self._count_severity('passed')
+        return self._count_severity("passed")
 
     @property
     def untested_count(self) -> int:
-        return self._count_severity('untested')
+        return self._count_severity("untested")
 
     @property
     def critical_percent(self) -> float:
@@ -868,7 +840,7 @@ class Report:
             'stroke="{}" stroke-dasharray="{} {}" stroke-dashoffset="-{}" '
             'fill="transparent"></circle>'
         )
-        sector = ''
+        sector = ""
         offset = 0
         p = self.critical_percent
         sector += tpl.format(self.COLOR_CRITICAL, p, round(100 - p, 2), offset)
@@ -888,7 +860,7 @@ class Report:
         p = self.untested_percent
         sector += tpl.format(self.COLOR_UNTESTED, p, round(100 - p, 2), offset)
         return (
-            'data:image/svg+xml;utf8,'
+            "data:image/svg+xml;utf8,"
             '<svg xmlns="http://www.w3.org/2000/svg" '
             'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" '
             'width="216px" height="216px" viewBox="0 0 42 42">{}</svg>'
@@ -897,8 +869,9 @@ class Report:
     @property
     def custom_meta_names(self) -> List[str]:
         return [
-            cmd.val for cmd in self.custom_meta_data
-            if cmd.key == 'name' and cmd.val != ''
+            cmd.val
+            for cmd in self.custom_meta_data
+            if cmd.key == "name" and cmd.val != ""
         ]
 
     @property
