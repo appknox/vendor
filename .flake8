@@ -1,0 +1,7 @@
+[flake8]
+select = BLK,C,E,F,W
+max-line-length = 88
+ignore = E203,W503
+exclude = .git,.venv,build,dist,docs
+application-import-names = ak_vendor
+import-order-style = google
