@@ -1811,9 +1811,7 @@ data = [
     {
         "code": "V3.2.2",
         "id": "ASVS_3_2_2",
-        "title": _(
-            "Verify that session tokens possess at least 64 bits of entropy."
-        ),
+        "title": _("Verify that session tokens possess at least 64 bits of entropy."),
         "active": True,
     },
     {

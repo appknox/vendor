@@ -23,11 +23,30 @@ maya = ">=0.6.0"
 html2text = "2020.1.16"
 attrs = ">=21.1.0"
 cvss = ">=2.0"
+black = "^21.9b0"
 
 [tool.poetry.dev-dependencies]
 Django = "^3.2.1"
 WeasyPrint = "^52.1"
+black = "^21.9b0"
+flake8 = "^3.9.2"
+flake8-black = "^0.2.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.git
+    | \.venv
+    | build
+    | dist
+    | docs
+  )
+)
+'''

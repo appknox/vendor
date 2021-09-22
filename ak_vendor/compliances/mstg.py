@@ -251,9 +251,7 @@ data = [
     {
         "id": "MSTG_3_2",
         "code": "MSTG-CRYPTO-2",
-        "title": _(
-            "The app uses proven implementations of cryptographic primitives."
-        ),
+        "title": _("The app uses proven implementations of cryptographic primitives."),
         "active": True,
     },
     {
@@ -337,9 +335,7 @@ data = [
     {
         "id": "MSTG_4_5",
         "code": "MSTG-AUTH-5",
-        "title": _(
-            "A password policy exists and is enforced at the remote endpoint."
-        ),
+        "title": _("A password policy exists and is enforced at the remote endpoint."),
         "active": True,
     },
     {
@@ -366,7 +362,7 @@ data = [
         "code": "MSTG-AUTH-8",
         "title": _(
             "Biometric authentication, if any, is not event-bound (i.e. "
-            "using an API that simply returns \"true\" or \"false\"). "
+            'using an API that simply returns "true" or "false"). '
             "Instead, it is based on unlocking the keychain/keystore."
         ),
         "active": True,
@@ -472,9 +468,7 @@ data = [
     {
         "id": "MSTG_6_1",
         "code": "MSTG-PLATFORM-1",
-        "title": _(
-            "The app only requests the minimum set of permissions necessary."
-        ),
+        "title": _("The app only requests the minimum set of permissions necessary."),
         "active": True,
     },
     {
@@ -632,9 +626,7 @@ data = [
     {
         "id": "MSTG_7_8",
         "code": "MSTG-CODE-8",
-        "title": _(
-            "In unmanaged code, memory is allocated, freed and used securely."
-        ),
+        "title": _("In unmanaged code, memory is allocated, freed and used securely."),
         "active": True,
     },
     {

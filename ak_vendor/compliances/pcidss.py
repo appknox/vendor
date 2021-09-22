@@ -368,11 +368,11 @@ data = [
         "code": "8.7",
         "id": "8_7",
         "description": _(
-            "All access to any database containing cardholder data must be restricted: all "
-            "user access must be through programmatic methods; only database "
+            "All access to any database containing cardholder data must be restricted: "
+            "all user access must be through programmatic methods; only database "
             "administrators can have direct or query access; and application IDs for "
-            "database applications can only be used by the applications (and not by users "
-            "or non-application processes)."
+            "database applications can only be used by the applications (and not by "
+            "users or non-application processes)."
         ),
     },
     {
