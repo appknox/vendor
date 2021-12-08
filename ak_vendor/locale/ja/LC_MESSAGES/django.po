@@ -1181,13 +1181,9 @@ msgid "Verify the application never reveals session tokens in URL parameters."
 msgstr ""
 
 #: compliances/asvs.py:1806
-#, fuzzy
-#| msgid "Does the application insecurely store data in Keychain?"
 msgid ""
 "Verify the application generates a new session token on user authentication."
 msgstr ""
-"アプリケーションはキーチェーンでセキュリティで保護されずにデータを保存してい"
-"ませんか？"
 
 #: compliances/asvs.py:1814
 msgid "Verify that session tokens possess at least 64 bits of entropy."
@@ -1769,16 +1765,10 @@ msgid ""
 msgstr ""
 
 #: compliances/asvs.py:2711
-#, fuzzy
-#| msgid ""
-#| "Does the application protect sensitive screens from being displayed in "
-#| "screencasts initiated by third-party Apps?"
 msgid ""
 "Verify the application protects sensitive data from being cached in server "
 "components such as load balancers and application caches."
 msgstr ""
-"アプリケーションは、第三者のアプリケーションが開始したスクリーンキャストに、"
-"機密画面が表示されるのを防止しますか？"
 
 #: compliances/asvs.py:2721
 msgid ""
@@ -1943,10 +1933,8 @@ msgid "Data protection by design and by default"
 msgstr ""
 
 #: compliances/gdpr.py:15
-#, fuzzy
-#| msgid "Security Rating"
 msgid "Security of processing"
-msgstr "のセキュリティ評価"
+msgstr ""
 
 #: compliances/hipaa.py:10 compliances/hipaa.py:52 compliances/hipaa.py:69
 #: compliances/hipaa.py:85
@@ -1958,10 +1946,8 @@ msgid "Access Control"
 msgstr ""
 
 #: compliances/hipaa.py:14
-#, fuzzy
-#| msgid "User Interaction"
 msgid "Unique User Identification"
-msgstr "ユーザーインタラクション"
+msgstr ""
 
 #: compliances/hipaa.py:16
 msgid ""
@@ -1999,10 +1985,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:53
-#, fuzzy
-#| msgid "Integrity Impact"
 msgid "Integrity"
-msgstr "完全性の影響"
+msgstr "完全性"
 
 #: compliances/hipaa.py:56
 msgid "Mechanism to Authenticate Electronic Protected"
@@ -2016,10 +2000,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:70 compliances/hipaa.py:73
-#, fuzzy
-#| msgid "Insecure Authentication"
 msgid "Person or Entity Authentication"
-msgstr "安全でない認証"
+msgstr ""
 
 #: compliances/hipaa.py:75
 msgid ""
@@ -2028,16 +2010,12 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:86
-#, fuzzy
-#| msgid "App Transport Security"
 msgid "Transmission Security"
-msgstr "App Transport Security (ATS) の設定"
+msgstr ""
 
 #: compliances/hipaa.py:89
-#, fuzzy
-#| msgid "Integrity Impact"
 msgid "Integrity Controls"
-msgstr "完全性の影響"
+msgstr ""
 
 #: compliances/hipaa.py:91
 msgid ""
@@ -2046,10 +2024,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:98
-#, fuzzy
-#| msgid "Injection"
 msgid "Encryption"
-msgstr "インジェクション"
+msgstr ""
 
 #: compliances/hipaa.py:99
 msgid "Implement a mechanism to encrypt ePHI in transit."
@@ -2061,10 +2037,8 @@ msgid "Physical Safeguards"
 msgstr ""
 
 #: compliances/hipaa.py:108
-#, fuzzy
-#| msgid "Missing Function Level Access Control"
 msgid "Facility Access Control"
-msgstr "機能レベルのアクセス制御の欠如"
+msgstr ""
 
 #: compliances/hipaa.py:111
 msgid "Contingency Operations"
@@ -2197,10 +2171,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:245
-#, fuzzy
-#| msgid "Risk Assessment"
 msgid "Risk Management"
-msgstr "リスクアセスメント"
+msgstr ""
 
 #: compliances/hipaa.py:247
 msgid ""
@@ -2231,10 +2203,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:278 compliances/hipaa.py:281
-#, fuzzy
-#| msgid "App Security Report"
 msgid "Assigned Security Responsibility"
-msgstr "アプリケーション セキュリティレポート"
+msgstr ""
 
 #: compliances/hipaa.py:283
 msgid ""
@@ -2244,10 +2214,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:296
-#, fuzzy
-#| msgid "App Transport Security"
 msgid "Workforce Security"
-msgstr "App Transport Security (ATS) の設定"
+msgstr ""
 
 #: compliances/hipaa.py:299
 msgid "Termination Procedures"
@@ -2283,10 +2251,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:335
-#, fuzzy
-#| msgid "Improper Session Management"
 msgid "Information Access Management"
-msgstr "不適切なセッション管理"
+msgstr ""
 
 #: compliances/hipaa.py:338
 msgid "Isolating Health Care Clearinghouse Functions"
@@ -2301,10 +2267,8 @@ msgid ""
 msgstr ""
 
 #: compliances/hipaa.py:349
-#, fuzzy
-#| msgid "Insecure Authorization"
 msgid "Access Authorization"
-msgstr "安全でない承認"
+msgstr ""
 
 #: compliances/hipaa.py:351
 msgid ""
@@ -2329,10 +2293,8 @@ msgid "Security Awareness and Training"
 msgstr ""
 
 #: compliances/hipaa.py:377
-#, fuzzy
-#| msgid "Security Rating"
 msgid "Security Reminders"
-msgstr "のセキュリティ評価"
+msgstr ""
 
 #: compliances/hipaa.py:378
 msgid "Periodic security updates."
@@ -2356,10 +2318,8 @@ msgid "Procedures for monitoring log-in attempts and reporting discrepancies."
 msgstr ""
 
 #: compliances/hipaa.py:398
-#, fuzzy
-#| msgid "Improper Session Management"
 msgid "Password Management"
-msgstr "不適切なセッション管理"
+msgstr ""
 
 #: compliances/hipaa.py:400
 msgid "Procedures for creating, changing, and safeguarding passwords."
@@ -4821,9 +4781,6 @@ msgid "Is the HostnameVerifier for SSL implemented properly?"
 msgstr "HostnameVerifier for SSLは正しく実装されていますか?"
 
 #: vulnerabilities.py:571
-#, fuzzy
-#| msgid ""
-#| "HostnameVerifiers for SSL, if any, seem to be verfying hostnames properly."
 msgid ""
 "HostnameVerifiers for SSL, if any, seem to be verifying hostnames properly."
 msgstr ""
@@ -4861,61 +4818,6 @@ msgstr ""
 "中断します。\n"
 
 #: vulnerabilities.py:602
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "The code example shows how to verify hostname using a\n"
-#| "wrappper `HostnameVerifier` which also checks for custom loaded "
-#| "certificates\n"
-#| "\n"
-#| "    public HostnameVerifier wrapHostnameVerifier(final HostnameVerifier "
-#| "defaultVerifier) {\n"
-#| "        if (defaultVerifier == null)\n"
-#| "            throw new IllegalArgumentException(\"The default verifier may "
-#| "not be null\");\n"
-#| "\n"
-#| "        return new SecuringHostnameVerifier(defaultVerifier);\n"
-#| "    }\n"
-#| "\n"
-#| "    class SecuringHostnameVerifier implements HostnameVerifier {\n"
-#| "        private HostnameVerifier defaultVerifier;\n"
-#| "\n"
-#| "        public MemorizingHostnameVerifier(HostnameVerifier wrapped) {\n"
-#| "            defaultVerifier = wrapped;\n"
-#| "        }\n"
-#| "\n"
-#| "        @Override\n"
-#| "        public boolean verify(String hostname, SSLSession session) {\n"
-#| "            Log.d(\"log\", \"hostname verifier for \" + hostname + \", "
-#| "trying default verifier first\");\n"
-#| "            // if the default verifier accepts the hostname, we are done\n"
-#| "            if (defaultVerifier.verify(hostname, session)) {\n"
-#| "                Log.d(\"log\", \"default verifier accepted \" + "
-#| "hostname);\n"
-#| "                return true;\n"
-#| "            }\n"
-#| "            // otherwise, we check if the hostname is an alias for this "
-#| "cert in our keystore\n"
-#| "            try {\n"
-#| "                X509Certificate cert = (X509Certificate)session."
-#| "getPeerCertificates()[0];\n"
-#| "                if (cert.equals(appKeyStore.getCertificate(hostname."
-#| "toLowerCase(Locale.US)))) {\n"
-#| "                    Log.d(\"log\", \"certificate for \" + hostname + \" "
-#| "is in keystore. accepting.\");\n"
-#| "                    return true;\n"
-#| "                } else {\n"
-#| "                    Log.d(\"log\", \"server \" + hostname + \" provided "
-#| "wrong certificate.\");\n"
-#| "                    return false;\n"
-#| "                }\n"
-#| "            } catch (Exception e) {\n"
-#| "                e.printStackTrace();\n"
-#| "                return false;\n"
-#| "            }\n"
-#| "        }\n"
-#| "    }\n"
-#| "\n"
 msgid ""
 "\n"
 "The code example shows how to verify hostname using a\n"
@@ -5022,23 +4924,6 @@ msgstr ""
 "\n"
 
 #: vulnerabilities.py:648
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "The following code inherits `javax.net.ssl.SSLContext`:\n"
-#| "\n"
-#| "    public void HostnameVerifier() {\n"
-#| "        HostnameVerifier hv = new HostnameVerifier() {\n"
-#| "            @Override\n"
-#| "            public boolean verify(String hostname, SSLSession session) {\n"
-#| "                // Always return true -> Accespt any host names\n"
-#| "                return true;\n"
-#| "            }\n"
-#| "        };\n"
-#| "    }\n"
-#| "\n"
-#| "`HostnameVerifier` will always return true without checking the contents\n"
-#| "or verifying the hostname\n"
 msgid ""
 "\n"
 "The following code inherits `javax.net.ssl.SSLContext`:\n"
@@ -5525,13 +5410,6 @@ msgstr ""
 "\n"
 
 #: vulnerabilities.py:983
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Application seems to use `JavascriptInterface`. An attacker can use it "
-#| "to\n"
-#| "do a Remote Code Execution on your application and steal sensitive\n"
-#| "informations.\n"
 msgid ""
 "\n"
 "Application seems to use `JavascriptInterface`. An attacker can use it to\n"
@@ -6022,46 +5900,6 @@ msgstr ""
 "\n"
 
 #: vulnerabilities.py:1249
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "This non-compliant code example shows JDBC code that is vulnerable to\n"
-#| "SQL injection. The SQL statement SQL accepts unsanitized input\n"
-#| "arguments.\n"
-#| "\n"
-#| "    class Login {\n"
-#| "        public void doPrivilegedAction(String username, String password) "
-#| "throws SQLException {\n"
-#| "\n"
-#| "            DriverManager.registerDriver(new com.microsoft.jdbc.sqlserver."
-#| "SQLServerDriver());\n"
-#| "            Connection connection = DriverManager.getConnection(\n"
-#| "                \"jdbc:microsoft:sqlserver://<HOST>:1433\", \"<UID>\", "
-#| "\"<PWD>\");\n"
-#| "\n"
-#| "            if (connection != null) {\n"
-#| "                String sql = \"select * from db_user where username = '\" "
-#| "+ username +\n"
-#| "                    \"' and password = '\" + password + \"'\";\n"
-#| "\n"
-#| "                Statement stmt = connection.createStatement();\n"
-#| "                ResultSet rs = stmt.executeQuery(sql);\n"
-#| "                if (!rs.next()) {\n"
-#| "                    throw new SecurityException(\"User name or Password "
-#| "incorrect\");\n"
-#| "                }\n"
-#| "                // Authenticated; proceed\n"
-#| "            }\n"
-#| "        }\n"
-#| "        ...\n"
-#| "\n"
-#| "If the attacker enters a valid user name securecoding and enters 'OR\n"
-#| "username = 'securecoding for the password argument, the SQL statement\n"
-#| "evaluates to select \\* from db\\_user where username = '' OR username =\n"
-#| "'securecoding' and password='', consequently bypassing the login\n"
-#| "password check. Similarly, an input ofsomeuser' OR '1' = '1 would bypass\n"
-#| "both the user name and password checks, granting the attacker\n"
-#| "unrestricted access.\n"
 msgid ""
 "\n"
 "This non-compliant code example shows JDBC code that is vulnerable to\n"
@@ -6209,11 +6047,6 @@ msgstr ""
 "ます。\n"
 
 #: vulnerabilities.py:1326
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Insecured informations were found in shared preference. One shouldn't\n"
-#| "use un-encrypted information in SharedPreference.\n"
 msgid ""
 "\n"
 "Insecured information was found in shared preference. One shouldn't\n"
@@ -6539,39 +6372,6 @@ msgstr ""
 "\n"
 
 #: vulnerabilities.py:1507
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "The following are the rules which should be followed while using\n"
-#| "encryption:\n"
-#| "\n"
-#| "- If AES encryption is used, always pair it with CBC (Cipher Block "
-#| "Chaining)\n"
-#| "- Never use just AES as encryption because it defaults to AES/ECB "
-#| "(Electronic Codebook)\n"
-#| "- Always use padding with the encryption, for example, AES/CBC/PKCS7 is "
-#| "stronger than just AES/CBC\n"
-#| "- Never use older algorithim like DES (Data Encryption Standard)\n"
-#| "- Assume that the network layer is not secure and may potentially be "
-#| "hostile and eavesdropping.\n"
-#| "- Enforce the use of SSL/TLS for all transport channels in which\n"
-#| "  sensitive information, session tokens, or other sensitive data is\n"
-#| "  going to be communicated to a backend API or web service.\n"
-#| "- Remember to account for outside entities like third-party analytics,\n"
-#| "  social networks, etc. and use their SSL versions even when an\n"
-#| "  application runs a routine via the browser/webkit. Mixed SSL\n"
-#| "  sessions should be avoided and may expose the user's session ID.\n"
-#| "- Use strong, industry standard encryption algorithms and appropriate\n"
-#| "  key lengths.\n"
-#| "- Use certificates signed by a trusted CA provider.\n"
-#| "- Never allow self-signed certificates, and consider certificate\n"
-#| "  pinning for security conscious applications.\n"
-#| "- Do not disable or ignore SSL chain verification.\n"
-#| "- Only establish a secure connection after verifying the identity of\n"
-#| "  the endpoint server with trusted certificates in the key chain.\n"
-#| "- Alert users through the UI if an invalid certificate is detected.\n"
-#| "- Do not send sensitive data over alternate channels, such as SMS,\n"
-#| "  MMS, or notifications.\n"
 msgid ""
 "\n"
 "The following are the rules which should be followed while using\n"
@@ -6901,21 +6701,6 @@ msgstr ""
 "か？\n"
 
 #: vulnerabilities.py:1690
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Most security problems are weaknesses in an application that result from\n"
-#| "a broken or missing security control (authentication, access control,\n"
-#| "input validation, etc.). By contrast, business logic vulnerabilities are\n"
-#| "ways of using the legitimate processing flow of an application in a way\n"
-#| "that results in a negative consequence to the organization.\n"
-#| "\n"
-#| "Too often, the business logic category is used for vulnerabilities that\n"
-#| "can't be scanned for automatically. This makes it very difficult to\n"
-#| "apply any kind of categorization scheme. Business logic problems are\n"
-#| "different from authentication problems and every other category. There\n"
-#| "are many signficant business logic vulnerabilities, but they are far\n"
-#| "less common than the type of items.\n"
 msgid ""
 "\n"
 "Most security problems are weaknesses in an application that result from\n"
@@ -7878,11 +7663,6 @@ msgstr ""
 "リリースへアップデートすることを推奨します。 </p>\n"
 
 #: vulnerabilities.py:2306
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Android application which uses older version of PhoneGap is vulnerable\n"
-#| "to URL redirection to arbitary website as defined by CVE-3500\n"
 msgid ""
 "\n"
 "Android application which uses older version of PhoneGap is vulnerable\n"
@@ -7943,11 +7723,6 @@ msgstr ""
 "示しています。 </p>\n"
 
 #: vulnerabilities.py:2354
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Android application which uses older version of PhoneGap is vulnerable\n"
-#| "to Error URL redirection to arbitary website as defined by CVE-3500\n"
 msgid ""
 "\n"
 "Android application which uses older version of PhoneGap is vulnerable\n"
@@ -10239,33 +10014,6 @@ msgstr ""
 "す。"
 
 #: vulnerabilities.py:3731
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "iOS has several mechanisms which prevent the application from being\n"
-#| "compromised at runtime. In order to understand the security issues that\n"
-#| "affect iOS applications, it is important to understand and to known the\n"
-#| "security features of the platform. The main [security features of iOS]"
-#| "(http://www.apple.com/ipad/business/docs/iOS_Security_Feb14.pdf) are:\n"
-#| "\n"
-#| "- Code signing: ensures that all applications come from a approved source "
-#| "(using\n"
-#| "  Apple-issued certificates)\n"
-#| "- Generic exploit mitigations\n"
-#| "    - Address Space Layout Randomization (ASLR): Usually compiled using `-"
-#| "fPIE -pie`\n"
-#| "    - Non Executable Memory (ARM's Execute Never feature)\n"
-#| "    - Stack Smashing Protections (SSP): Usually compiled with `-fstack-"
-#| "protector-all` flag\n"
-#| "- Sandboxing\n"
-#| "    - run applications as non-privileged user\n"
-#| "    - 3rd-party apps are restricted in accessing files stored by other\n"
-#| "      apps\n"
-#| "- Memory Management\n"
-#| "    - Automatic Reference Counting (ARC) protects applications\n"
-#| "      from memory coruption issues by letting the compiler do the\n"
-#| "      memory management stuff\n"
-#| "\n"
 msgid ""
 "\n"
 "iOS has several mechanisms which prevent the application from being\n"
@@ -10329,34 +10077,6 @@ msgstr ""
 "+のコードのセキュリティ脆弱性の主要な原因です。\n"
 
 #: vulnerabilities.py:3762
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Usually the ipa file will be decrypted at runtime by the kernel's mach\n"
-#| "loader. If the binary is encrypted or not is easily found using otool\n"
-#| "\n"
-#| "An example where the binary is encrypted:\n"
-#| "\n"
-#| "    # otool -l OTHER_BINARY | grep -A 4 LC_ENCRYPTION_INFO\n"
-#| "           cmd LC_ENCRYPTION_INFO\n"
-#| "       cmdsize 20\n"
-#| "      cryptoff 16384\n"
-#| "     cryptsize 10502144\n"
-#| "     cryptid   1\n"
-#| "\n"
-#| "- ASLR\n"
-#| "    - Usually the binary is compiled using the `PIE` flag\n"
-#| "- Stack Smashing Protection\n"
-#| "    - iOS applications usually use `[stack canaries]()`\n"
-#| "    - therefore you should find certain symbols inside the binary\n"
-#| "        (like `_stack_chk_guard` and `_stack_chk_fail`)\n"
-#| "- Automatic Reference Couting\n"
-#| "    - this option can be enabled by activating the compiler option\n"
-#| "      `Objective-C Automatic Reference Counting`\n"
-#| "    - binaries built with this option should include symbols called\n"
-#| "      `_objc_release`, `_obj_autorelease`, `_obj_storeStrong`,\n"
-#| "      `_obj_retain`\n"
-#| "\n"
 msgid ""
 "\n"
 "Usually the ipa file will be decrypted at runtime by the kernel's mach\n"
@@ -11002,8 +10722,6 @@ msgid "Do Insecure Direct Object References exist within the app?"
 msgstr "安全でない直接オブジェクト参照が存在していませんか?"
 
 #: vulnerabilities.py:4123
-#, fuzzy
-#| msgid "No occurences of Insecure Direct Object References were found."
 msgid "No occurrences of Insecure Direct Object References were found."
 msgstr "安全でない直接オブジェクト参照は見つかりませんでした。"
 
@@ -11807,11 +11525,6 @@ msgstr ""
 "ありません。\n"
 
 #: vulnerabilities.py:4632
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Appknox found string validation vulnerabilities in one or more HTTP "
-#| "requests\n"
 msgid ""
 "\n"
 "Our scanner found string validation vulnerabilities in one or more HTTP "
@@ -12099,11 +11812,6 @@ msgstr ""
 "JavaScriptによってCookieがアクセスされないようにしています。\n"
 
 #: vulnerabilities.py:4806
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "One or more API requests were found to be susceptible to Cross Site "
-#| "Tracing vulnerabilies\n"
 msgid ""
 "\n"
 "One or more API requests were found to be susceptible to Cross Site Tracing "
@@ -12253,18 +11961,6 @@ msgstr ""
 "アプリケーションは安全でないネットワーク経由でアドレス帳を送信しません。"
 
 #: vulnerabilities.py:4907
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Information stored in the Contacts list along with the private notes are\n"
-#| "store in clear text without any encryption. It was found that the "
-#| "application\n"
-#| "sends the data from address book over the network. Lack of encryption "
-#| "might\n"
-#| "result in leakage of information to third parties. Insecure Transport "
-#| "Layer\n"
-#| "Protection might allow Man-In-The-Middle Attack, via which the\n"
-#| "AddressBook data or Personal Identifiable Informations can be stolen\n"
 msgid ""
 "\n"
 "Information stored in the Contacts list along with the private notes are\n"
@@ -12695,8 +12391,6 @@ msgid "Android Fragment Injection"
 msgstr "Android Fragment Injection"
 
 #: vulnerabilities.py:5125
-#, fuzzy
-#| msgid "Is your appl;ication vulnerable to Fragment Injection?"
 msgid "Is your application vulnerable to Fragment Injection?"
 msgstr "アプリケーションは Fragment Injection に対して脆弱ですか？"
 
@@ -13960,11 +13654,6 @@ msgstr ""
 "合には危険です。\n"
 
 #: vulnerabilities.py:5806
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Javascript in the Webview having CORS enabled to be loaded from file and "
-#| "any arbitary URL\n"
 msgid ""
 "\n"
 "Javascript in the Webview having CORS enabled to be loaded from file and any "
@@ -14235,11 +13924,6 @@ msgstr ""
 "インの例には、PDFリーダー、Flash プラグインなどが含まれます。\n"
 
 #: vulnerabilities.py:5942
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "`setPluginState` has security implication and depricated by Android. It "
-#| "is unsafe to use in production.\n"
 msgid ""
 "\n"
 "`setPluginState` has security implication and deprecated by Android. It is "
@@ -14258,15 +13942,6 @@ msgstr ""
 "`setPluginState` の機能は非推奨です。有効にしないでください。\n"
 
 #: vulnerabilities.py:5953
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Following is an example of insecure implemntation\n"
-#| "\n"
-#| "    WebSettings settings = webView.getSettings();\n"
-#| "    settings.setPluginsEnabled(true);\n"
-#| "    settings.setPluginState(WebSettings.PluginState.ON);\n"
-#| "\n"
 msgid ""
 "\n"
 "Following is an example of insecure implementation\n"
@@ -14558,23 +14233,6 @@ msgid "The application does not discloses sensitive information"
 msgstr "このアプリケーションは機密情報を開示していません。"
 
 #: vulnerabilities.py:6101
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "Data in transit or at rest needs to be secured from exposure using proper "
-#| "access controls and\n"
-#| "cryptography. Sometimes, even if cryptography is in place, it may not be "
-#| "sufficient as many\n"
-#| "application still use weak cryptographic algorithms or vulnerable hash "
-#| "algortihms to protect\n"
-#| "sensitive data. The application APIs can also reveal sensitive "
-#| "information if proper access\n"
-#| "controls are not kept in place revealing sensitive information to outside "
-#| "world. Also, many\n"
-#| "applications leave the sensitive directories open publicly which may "
-#| "reveal lot of sensitive\n"
-#| "information including internal software versions, passwords, internal IPs "
-#| "etc.\n"
 msgid ""
 "\n"
 "Data in transit or at rest needs to be secured from exposure using proper "
@@ -14654,8 +14312,6 @@ msgstr ""
 "か？"
 
 #: vulnerabilities.py:6146
-#, fuzzy
-#| msgid "The application does not leak senstive information via stacktrace"
 msgid "The application does not leak sensitive information via stacktrace"
 msgstr ""
 "このアプリケーションはスタックトレースを通じて機密情報を漏えいしていません。"
@@ -14694,26 +14350,6 @@ msgstr ""
 "て、この情報を取得しようと試みます。\n"
 
 #: vulnerabilities.py:6162
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "It is recommended to use custom error pages and redirect the user to the "
-#| "same whenever an error is occured.\n"
-#| "Apply following changes on your web.config file to prevent information "
-#| "leakage by applying custom error pages.\n"
-#| "\n"
-#| "    <System.Web>\n"
-#| "        <customErrors mode=\"On\" defaultRedirect=\"~/error/GeneralError."
-#| "aspx\">\n"
-#| "            <error statusCode=\"403\" redirect=\"~/error/Forbidden.aspx"
-#| "\" />\n"
-#| "            <error statusCode=\"404\" redirect=\"~/error/PageNotFound.aspx"
-#| "\" />\n"
-#| "            <error statusCode=\"500\" redirect=\"~/error/InternalError."
-#| "aspx\" />\n"
-#| "        </customErrors>\n"
-#| "    </System.Web>\n"
-#| "\n"
 msgid ""
 "\n"
 "It is recommended to use custom error pages and redirect the user to the "
@@ -14794,12 +14430,10 @@ msgid "Bytecode Obfuscation"
 msgstr ""
 
 #: vulnerabilities.py:6204
-#, fuzzy
-#| msgid "Does the application uses proper Session Management?"
 msgid ""
 "Does the application has code obfuscation to protect from reverse "
 "engineering?"
-msgstr "このアプリケーションは適切なセッション管理が実装されていますか？"
+msgstr ""
 
 #: vulnerabilities.py:6207
 msgid ""
@@ -14959,16 +14593,12 @@ msgid "HTTP TRACE method is enabled"
 msgstr ""
 
 #: vulnerabilities.py:6339
-#, fuzzy
-#| msgid "Does the application have debug enabled?"
 msgid "Does the backend server have TRACE method enabled?"
-msgstr "アプリケーションでデバッグが有効になっていますか？"
+msgstr ""
 
 #: vulnerabilities.py:6341
-#, fuzzy
-#| msgid "The application backup is not enabled."
 msgid "The application backend server doesn't have TRACE method enabled"
-msgstr "アプリケーションのバックアップが有効になっていません。"
+msgstr ""
 
 #: vulnerabilities.py:6344
 msgid ""
@@ -15052,17 +14682,12 @@ msgid "HTTP Host Header Injection"
 msgstr ""
 
 #: vulnerabilities.py:6412
-#, fuzzy
-#| msgid "Is the application vulnerable to Object deserialization?"
 msgid "Is the backend server vulnerable to Host header injection?"
-msgstr "アプリケーションはオブジェクトの逆シリアル化に対して脆弱ですか？"
+msgstr ""
 
 #: vulnerabilities.py:6414
-#, fuzzy
-#| msgid "The application is not vulnerable to object deserialization."
 msgid "The the host is not vulnerable to Host header injection attacks"
 msgstr ""
-"アプリケーションは、オブジェクトの逆シリアル化に対して脆弱ではありません。"
 
 #: vulnerabilities.py:6417
 msgid ""
@@ -15113,24 +14738,16 @@ msgid ""
 msgstr ""
 
 #: vulnerabilities.py:6461
-#, fuzzy
-#| msgid "Remote URL Redirection Vulnerability"
 msgid "OpenSSL CCS Injection Vulnerability"
-msgstr "リモートURLリダイレクトの脆弱性"
+msgstr ""
 
 #: vulnerabilities.py:6462
-#, fuzzy
-#| msgid "Is the application vulnerable to SQL Injection through Web API?"
 msgid "Is the backend server vulnerable to OpenSSL CCS Injection?"
 msgstr ""
-"アプリケーションはWeb APIを通じたSQLインジェクションに対して脆弱ではありませ"
-"んか？"
 
 #: vulnerabilities.py:6463
-#, fuzzy
-#| msgid "Application is not vulnerable to Fragment Injection"
 msgid "The the host is not vulnerable to OpenSSL CCS Injection"
-msgstr "アプリケーションはFragment Injection に対して脆弱ではありません。"
+msgstr ""
 
 #: vulnerabilities.py:6465
 msgid ""
@@ -15234,20 +14851,16 @@ msgid ""
 msgstr ""
 
 #: vulnerabilities.py:6561
-#, fuzzy
-#| msgid "Related Vulnerabilities"
 msgid "Heartbleed Vulnerability"
-msgstr "関連のある脆弱性"
+msgstr ""
 
 #: vulnerabilities.py:6562
 msgid "Is the backend server vulnerable to HEARTBLEED bug?"
 msgstr ""
 
 #: vulnerabilities.py:6563
-#, fuzzy
-#| msgid "Application is not vulnerable to SQLITE db"
 msgid "The the host is not vulnerable to HEARTBLEED bug"
-msgstr "アプリケーションはSQLite DBに対して脆弱ではありません。"
+msgstr ""
 
 #: vulnerabilities.py:6565
 msgid ""
@@ -15306,10 +14919,8 @@ msgid "Is the backend server vulnerable to ROBOT Attack?"
 msgstr ""
 
 #: vulnerabilities.py:6612
-#, fuzzy
-#| msgid "The application is not vulnerable to Javascript CORS."
 msgid "The the host is not vulnerable to ROBOT Attack"
-msgstr "このアプリケーションは Javascript CORS に脆弱ではありません。"
+msgstr ""
 
 #: vulnerabilities.py:6614 vulnerabilities.py:6661
 msgid ""
@@ -15364,10 +14975,8 @@ msgid "Is the backend server vulnerable to TLS/SSL CRIME Attack?"
 msgstr ""
 
 #: vulnerabilities.py:6659
-#, fuzzy
-#| msgid "Application is not vulnerable to SQLITE db"
 msgid "The the host is not vulnerable to TLS/SSL CRIME Attack"
-msgstr "アプリケーションはSQLite DBに対して脆弱ではありません。"
+msgstr ""
 
 #: vulnerabilities.py:6669
 msgid ""
@@ -15405,23 +15014,16 @@ msgid ""
 msgstr ""
 
 #: vulnerabilities.py:6705
-#, fuzzy
-#| msgid "Remote URL Redirection Vulnerability"
 msgid "SSL/TLS Renegotiation Vulnerability"
-msgstr "リモートURLリダイレクトの脆弱性"
+msgstr ""
 
 #: vulnerabilities.py:6706
-#, fuzzy
-#| msgid "Is the application vulnerable to Object deserialization?"
 msgid "Is the backend server vulnerable to SSL/TLS Renegotiation?"
-msgstr "アプリケーションはオブジェクトの逆シリアル化に対して脆弱ですか？"
+msgstr ""
 
 #: vulnerabilities.py:6707
-#, fuzzy
-#| msgid "The application is not vulnerable to object deserialization."
 msgid "The the host is not vulnerable to SSL/TLS Re-Negotiation"
 msgstr ""
-"アプリケーションは、オブジェクトの逆シリアル化に対して脆弱ではありません。"
 
 #: vulnerabilities.py:6709
 msgid ""
@@ -15458,28 +15060,16 @@ msgid ""
 msgstr ""
 
 #: vulnerabilities.py:6745
-#, fuzzy
-#| msgid "Security Misconfiguration"
 msgid "Network Security Misconfiguration"
-msgstr "セキュリティの誤設定"
+msgstr ""
 
 #: vulnerabilities.py:6747
-#, fuzzy
-#| msgid ""
-#| "Does the application use insecure encryption algorithms or configurations?"
 msgid "Does the application has misconfigured Network Security Configuration?"
 msgstr ""
-"アプリケーションは安全ではない暗号化アルゴリズムあるいは構成を使用していませ"
-"んか？"
 
 #: vulnerabilities.py:6750
-#, fuzzy
-#| msgid ""
-#| "The application does not use insecure encryption algorithms or "
-#| "configurations."
 msgid "The application has properly configured network security configuration"
 msgstr ""
-"アプリケーションは、安全ではない暗号化アルゴリズムまたは構成を使用しません。"
 
 #: vulnerabilities.py:6753
 msgid ""
@@ -15599,24 +15189,16 @@ msgid ""
 msgstr ""
 
 #: vulnerabilities.py:6850 vulnerabilities.py:6968
-#, fuzzy
-#| msgid "Insecure Authentication"
 msgid "Insecure Biometric Authentication"
-msgstr "安全でない認証"
+msgstr ""
 
 #: vulnerabilities.py:6852
-#, fuzzy
-#| msgid "Does the application insecurely store data in Keychain?"
 msgid "Has the application securely implemented Biometric authentication?"
 msgstr ""
-"アプリケーションはキーチェーンでセキュリティで保護されずにデータを保存してい"
-"ませんか？"
 
 #: vulnerabilities.py:6855
-#, fuzzy
-#| msgid "Does the application use proper SecKeyEncrypt implementation?"
 msgid "The application has properly implemented biometric authentication"
-msgstr "アプリケーションは適切な SecKeyEncrypt 実装を使用していますか？"
+msgstr ""
 
 #: vulnerabilities.py:6858
 msgid ""
