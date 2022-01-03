@@ -19,7 +19,7 @@ class ReportHTMLExporter:
         self.report = report
 
     def to_html(self):
-        tpl = open("{}/report/report_template.html".format(CUR_DIR)).read()
+        tpl = open("{}/templates/report_template.html".format(CUR_DIR)).read()
         template = Template(
             tpl, engine=Engine(libraries={"i18n": "django.templatetags.i18n"})
         )
