@@ -26,7 +26,7 @@ cvss = ">=2.0"
 black = "^21.9b0"
 
 [tool.poetry.dev-dependencies]
-Django = "^3.2.1"
+Django = "^3.2.10"
 WeasyPrint = "^52.1"
 black = "^21.9b0"
 flake8 = "^3.9.2"
