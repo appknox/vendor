@@ -606,6 +606,7 @@ class Report:
     is_done_dynamic_scan = attr.ib(type=bool, default=False)
     is_done_api_scan = attr.ib(type=bool, default=False)
     is_done_manual_scan = attr.ib(type=bool, default=False)
+    hide_untested_analyses = attr.ib(type=bool, default=False)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
     analyses = attr.ib(factory=list, type=List[Analysis])
@@ -658,6 +659,10 @@ class Report:
             ),
             is_done_manual_scan=data.get(
                 "is_done_manual_scan", cls.__attrs_attrs__.is_done_manual_scan.default
+            ),
+            hide_untested_analyses=data.get(
+                "hide_untested_analyses",
+                cls.__attrs_attrs__.hide_untested_analyses.default,
             ),
             references=[
                 Reference(**reference) for reference in data.get("references", [])
