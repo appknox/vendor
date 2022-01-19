@@ -821,30 +821,32 @@
               {% endif %}
               <td>
                 <ul class="statschart__fields">
-                  <li class="statschart__field">
+                  <li class="statschart__field statschart__field--critical">
                     <span class="statschart__field__color" style="background: {{ report.COLOR_CRITICAL }}"></span>
                     <span class="statschart__field__name">{% trans "Critical" %} - <strong>{{ report.critical_percent }}%</strong></span>
                   </li>
-                  <li class="statschart__field">
+                  <li class="statschart__field statschart__field--high">
                     <span class="statschart__field__color" style="background: {{ report.COLOR_HIGH }}"></span>
                     <span class="statschart__field__name">{% trans "High" %} - <strong>{{ report.high_percent }}%</strong></span>
                   </li>
-                  <li class="statschart__field">
+                  <li class="statschart__field statschart__field--medium">
                     <span class="statschart__field__color" style="background: {{ report.COLOR_MEDIUM }}"></span>
                     <span class="statschart__field__name">{% trans "Medium" %} - <strong>{{ report.medium_percent }}%</strong></span>
                   </li>
-                  <li class="statschart__field">
+                  <li class="statschart__field statschart__field--low">
                     <span class="statschart__field__color" style="background: {{ report.COLOR_LOW }}"></span>
                     <span class="statschart__field__name">{% trans "Low" %} - <strong>{{ report.low_percent }}%</strong></span>
                   </li>
-                  <li class="statschart__field">
+                  <li class="statschart__field statschart__field--passed">
                     <span class="statschart__field__color" style="background: {{ report.COLOR_PASSED }}"></span>
                     <span class="statschart__field__name">{% trans "Passed" %} - <strong>{{ report.passed_percent }}%</strong></span>
                   </li>
-                  <li class="statschart__field">
-                    <span class="statschart__field__color" style="background: {{ report.COLOR_UNTESTED }}"></span>
-                    <span class="statschart__field__name">{% trans "Untested" %} - <strong>{{ report.untested_percent }}%</strong></span>
-                  </li>
+                  {% if report.hide_untested_analyses %}
+                    <li class="statschart__field statschart__field--untested">
+                      <span class="statschart__field__color" style="background: {{ report.COLOR_UNTESTED }}"></span>
+                      <span class="statschart__field__name">{% trans "Untested" %} - <strong>{{ report.untested_percent }}%</strong></span>
+                    </li>
+                  {% endif %}
                 </ul>
               </td>
             </tr>
@@ -852,7 +854,7 @@
         </table>
       </div>
       <div>
-        <p>{% if report.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "Security Rating:" %} <strong>{{ report.rating }}% {% trans "Unsecured" %}</strong></p>
+        <p>{% if report.show_copyright %}{% trans "Appknox " %}{% endif %}{% trans "Security Rating:" %} <strong>{{ report.rating }} {% trans "Unsecured" %}</strong></p>
       </div>
     </section>
   </section>

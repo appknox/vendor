@@ -20,6 +20,7 @@ from .report import (
     Report,
     Risk,
     Tag,
+    RiskColorEnum,
 )
 
 
@@ -45,4 +46,5 @@ __all__ = [
     Report.__name__,
     Risk.__name__,
     Tag.__name__,
+    RiskColorEnum.__name__,
 ]
