@@ -455,3 +455,15 @@ class MFAMethodEnum:
         NONE = [0, "None"]
         TOTP = [1, "TOTP"]
         HOTP = [2, "HOTP"]
+
+
+@choices
+class FileFormatEnum:
+    """
+    The file types.
+    """
+
+    class Meta:
+        ANDROID_APK = [0, "APK"]
+        ANDROID_AAB = [1, "AAB"]
+        IOS_IPA = [2, "IPA"]
