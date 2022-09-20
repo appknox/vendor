@@ -617,14 +617,16 @@
             {% endif %}
             <span>{% trans "API" %}</span>
           </span>
-          <span class="scan__type">
-            {% if report.is_done_manual_scan %}
-                <img class="scan__type__icon" src="{{ icon_done }}"></img>
-            {% else %}
-                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-            {% endif %}
-            <span>{% trans "Manual" %}</span>
-          </span>
+          {% if report.is_included_manual_scan %}
+            <span class="scan__type">
+              {% if report.is_done_manual_scan %}
+                  <img class="scan__type__icon" src="{{ icon_done }}"></img>
+              {% else %}
+                  <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
+              {% endif %}
+              <span>{% trans "Manual" %}</span>
+            </span>
+          {% endif %}
         </td>
       </tr>
       <tr>
