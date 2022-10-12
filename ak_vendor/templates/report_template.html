@@ -617,7 +617,7 @@
             {% endif %}
             <span>{% trans "API" %}</span>
           </span>
-          {% if report.is_included_manual_scan %}
+          {% if report.features.manualscan %}
             <span class="scan__type">
               {% if report.is_done_manual_scan %}
                   <img class="scan__type__icon" src="{{ icon_done }}"></img>

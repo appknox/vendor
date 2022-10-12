@@ -2,6 +2,7 @@ import attr
 import enum
 import maya
 import json
+import typing
 import html2text
 from datetime import datetime
 from urllib.parse import quote
@@ -569,6 +570,10 @@ class Analysis:
 
 
 @attr.s
+class OrganizationFeature:
+    manualscan = attr.ib(type=bool, default=False)
+
+@attr.s
 class Report:
     COLOR_CRITICAL = RiskColorEnum.CRITICAL.value
     COLOR_HIGH = RiskColorEnum.HIGH.value
@@ -587,6 +592,7 @@ class Report:
     package_name = attr.ib(type=str)
     platform = attr.ib(type=Platform)
     application = attr.ib(type=Application)
+    features = attr.ib(type=OrganizationFeature)
     appknox_file_id = attr.ib(type=int, default=None)
     prepared_for = attr.ib(type=Company, default=Company(name=""))
     prepared_by = attr.ib(
@@ -633,6 +639,7 @@ class Report:
             show_copyright=data.get("show_copyright"),
             is_partnered=data.get("is_partnered"),
             rating=data.get("rating"),
+            features=OrganizationFeature(**data.get("features")),
             is_included_static_scan=data.get(
                 "is_included_static_scan",
                 cls.__attrs_attrs__.is_included_static_scan.default,
@@ -773,6 +780,10 @@ class Report:
     @classmethod
     def parse_cvssv3_vector(cls, **kwargs) -> CVSSv3:
         return CVSSv3.parse_vector(**kwargs)
+
+    @classmethod
+    def create_features(cls, **kwargs) -> "OrganizationFeature":
+        return OrganizationFeature(**kwargs)
 
     @classmethod
     def get_risk_color(cls, risk: str) -> str:
