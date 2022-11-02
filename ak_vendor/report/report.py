@@ -900,5 +900,5 @@ class Report:
         return [a for a in self.analyses if self._is_visible_scan_type(a)]
     
     @classmethod
-    def create_scan(cls, **kwargs) -> "Scan":
-        return Scan(**kwargs)
+    def create_scan(cls, scan_type: int, is_included: bool = False, is_done: bool = False, show_scan_status: bool = False) -> "Scan":
+        return Scan(scan_type=scan_type, is_included=is_included, is_done=is_done, show_scan_status=show_scan_status)
