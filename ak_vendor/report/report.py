@@ -568,19 +568,6 @@ class Analysis:
             s = s.replace(char, "")
         return s
 
-    TYPE_STATIC = 1
-    TYPE_DYNAMIC = 2
-    TYPE_API = 3
-    TYPE_MANUAL = 4
-
-    TYPE_DISPLAY_MAP = {
-        TYPE_STATIC: _("Static"),
-        TYPE_DYNAMIC: _("Dynamic"),
-        TYPE_API: _("API"),
-        TYPE_MANUAL: _("Manual"),
-    }
-
-
 @attr.s
 class AssessmentType:
     TYPE_STATIC = 1
