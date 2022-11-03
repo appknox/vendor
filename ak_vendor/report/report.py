@@ -568,6 +568,7 @@ class Analysis:
             s = s.replace(char, "")
         return s
 
+
 @attr.s
 class AssessmentType:
     TYPE_STATIC = 1
@@ -920,3 +921,13 @@ class Report:
             is_done=is_done,
             can_include=can_include,
         )
+
+    @property
+    def is_manual_scan_included(self) -> bool:
+        for assessment_type in self.assessment_types:
+            if (
+                assessment_type.assessment_type == AssessmentType.TYPE_MANUAL
+                and assessment_type.is_included
+            ):
+                return True
+        return False

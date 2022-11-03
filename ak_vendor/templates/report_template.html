@@ -710,7 +710,7 @@
       <h2 class="pagetitle pagetitle--main">{% trans "Report Summary" %}</h2>
     </div>
 
-    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report is generated based on the findings during the automated" %}{% if report.assessment_types.3.is_included %}{% trans " and manual" %}{% endif %}{% trans " auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
+    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report is generated based on the findings during the automated" %}{% if report.is_manual_scan_included %}{% trans " and manual" %}{% endif %}{% trans " auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
     <section class="audit">
       <a id="audit-summary"></a>
       <h3 class="pagetitle pagetitle--sub">{% trans "Audit Summary" %}</h3>
