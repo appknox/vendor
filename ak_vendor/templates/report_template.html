@@ -593,17 +593,17 @@
       <tr>
         <td>{% trans "Scan Status" %}</td>
         <td>
-          {% for scan in report.scans %}
+          {% for assessment_type in report.assessment_types %}
 
-          {% if scan.show_scan_status %}
+          {% if assessment_type.can_include %}
 
           <span class="scan__type">
-            {% if scan.is_done %}
+            {% if assessment_type.is_done %}
                 <img class="scan__type__icon" src="{{ icon_done }}"></img>
             {% else %}
                 <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
             {% endif %}
-            <span>{{ scan.type_display }}</span>
+            <span>{{ assessment_type.display }}</span>
           </span>
           
           {% endif %}
@@ -615,10 +615,10 @@
         <td>{% trans "Scans included in the Report" %}</td>
         <td>
             <ul class="scan_included__ul">
-              {% for scan in report.scans %}
+              {% for assessment_type in report.assessment_types %}
 
-                {% if scan.is_included %}
-                    <li class="scan_included__li">{{ scan.type_display }}</li>
+                {% if assessment_type.is_included %}
+                    <li class="scan_included__li">{{ assessment_type.display }}</li>
                 {% endif %}
 
               {% endfor %}
@@ -710,7 +710,7 @@
       <h2 class="pagetitle pagetitle--main">{% trans "Report Summary" %}</h2>
     </div>
 
-    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report is generated based on the findings during the automated" %}{% if report.is_included_manual_scan %}{% trans " and manual" %}{% endif %}{% trans " auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
+    <p>{% if report.show_copyright %}{% if report.is_partnered and not report.powered_by.hide %}{{ report.prepared_by.name }}{% trans ", powered by " %}{% endif %}{% trans "Appknox" %}{% if report.is_partnered and not report.powered_by.hide %}{% trans "," %}{% endif %}{% trans " conducted a security assessment of the mobile application. " %}{% endif %}{% trans "This report is generated based on the findings during the automated" %}{% if report.assessment_types.3.is_included %}{% trans " and manual" %}{% endif %}{% trans " auditing process. It also contains the process of discovering those vulnerabilities in the first place, and ways to remediate those issues." %}</p>
     <section class="audit">
       <a id="audit-summary"></a>
       <h3 class="pagetitle pagetitle--sub">{% trans "Audit Summary" %}</h3>

@@ -568,8 +568,6 @@ class Analysis:
             s = s.replace(char, "")
         return s
 
-@attr.s
-class Scan:
     TYPE_STATIC = 1
     TYPE_DYNAMIC = 2
     TYPE_API = 3
@@ -582,14 +580,29 @@ class Scan:
         TYPE_MANUAL: _("Manual"),
     }
 
-    scan_type = attr.ib(type=int)
+
+@attr.s
+class AssessmentType:
+    TYPE_STATIC = 1
+    TYPE_DYNAMIC = 2
+    TYPE_API = 3
+    TYPE_MANUAL = 4
+
+    TYPE_DISPLAY_MAP = {
+        TYPE_STATIC: _("Static"),
+        TYPE_DYNAMIC: _("Dynamic"),
+        TYPE_API: _("API"),
+        TYPE_MANUAL: _("Manual"),
+    }
+
+    assessment_type = attr.ib(type=int)
     is_included = attr.ib(type=bool, default=False)
     is_done = attr.ib(type=bool, default=False)
-    show_scan_status = attr.ib(type=bool, default=False)
-    
+    can_include = attr.ib(type=bool, default=False)
+
     @property
-    def type_display(self) -> str:
-        return self.TYPE_DISPLAY_MAP.get(self.scan_type, "")    
+    def display(self) -> str:
+        return self.TYPE_DISPLAY_MAP.get(self.assessment_type, "")
 
 
 @attr.s
@@ -622,7 +635,7 @@ class Report:
     show_copyright = attr.ib(type=bool, default=True)
     is_partnered = attr.ib(type=bool, default=False)
     rating = attr.ib(type=int, default=0)
-    scans = attr.ib(factory=list, type=List[Scan])
+    assessment_types = attr.ib(factory=list, type=List[AssessmentType])
     hide_untested_analyses = attr.ib(type=bool, default=False)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
@@ -650,7 +663,10 @@ class Report:
             show_copyright=data.get("show_copyright"),
             is_partnered=data.get("is_partnered"),
             rating=data.get("rating"),
-            scans=[Scan(**scan_data) for scan_data in data.get("scans", [])],
+            assessment_types=[
+                AssessmentType(**assess_type)
+                for assess_type in data.get("assessment_types", [])
+            ],
             hide_untested_analyses=data.get(
                 "hide_untested_analyses",
                 cls.__attrs_attrs__.hide_untested_analyses.default,
@@ -872,15 +888,19 @@ class Report:
 
     @property
     def _scan_types_visible(self):
-        allowed_scan_types = [scan.scan_type for scan in self.scans if scan.is_included]
+        allowed_scan_types = [
+            assessment_type.assessment_type
+            for assessment_type in self.assessment_types
+            if assessment_type.is_included
+        ]
         scan_types = set()
-        if Scan.TYPE_STATIC in allowed_scan_types:
+        if AssessmentType.TYPE_STATIC in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.STATIC.value.lower())
-        if Scan.TYPE_DYNAMIC in allowed_scan_types:
+        if AssessmentType.TYPE_DYNAMIC in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.DYNAMIC.value.lower())
-        if Scan.TYPE_API in allowed_scan_types:
+        if AssessmentType.TYPE_API in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.API.value.lower())
-        if Scan.TYPE_MANUAL in allowed_scan_types:
+        if AssessmentType.TYPE_MANUAL in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.MANUAL.value.lower())
         return scan_types
 
@@ -898,7 +918,18 @@ class Report:
     @property
     def viewable_analyses(self) -> List[Analysis]:
         return [a for a in self.analyses if self._is_visible_scan_type(a)]
-    
+
     @classmethod
-    def create_scan(cls, scan_type: int, is_included: bool = False, is_done: bool = False, show_scan_status: bool = False) -> "Scan":
-        return Scan(scan_type=scan_type, is_included=is_included, is_done=is_done, show_scan_status=show_scan_status)
+    def create_assessment_type(
+        cls,
+        assessment_type: int,
+        is_included: bool = False,
+        is_done: bool = False,
+        can_include: bool = False,
+    ) -> "AssessmentType":
+        return AssessmentType(
+            assessment_type=assessment_type,
+            is_included=is_included,
+            is_done=is_done,
+            can_include=can_include,
+        )
