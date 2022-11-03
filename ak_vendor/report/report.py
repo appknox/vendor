@@ -7,6 +7,7 @@ from datetime import datetime
 from urllib.parse import quote
 from cvss import CVSS3
 from typing import List
+from django.utils.translation import gettext_lazy as _
 from ..constants import PLATFORM_ICONS
 
 ATTACHMENT_IMAGE_FORMATS = ["png", "jpg", "jpeg", "bmp", "svg", "gif"]
@@ -567,6 +568,29 @@ class Analysis:
             s = s.replace(char, "")
         return s
 
+@attr.s
+class Scan:
+    TYPE_STATIC = 1
+    TYPE_DYNAMIC = 2
+    TYPE_API = 3
+    TYPE_MANUAL = 4
+
+    TYPE_DISPLAY_MAP = {
+        TYPE_STATIC: _("Static"),
+        TYPE_DYNAMIC: _("Dynamic"),
+        TYPE_API: _("API"),
+        TYPE_MANUAL: _("Manual"),
+    }
+
+    scan_type = attr.ib(type=int)
+    is_included = attr.ib(type=bool, default=False)
+    is_done = attr.ib(type=bool, default=False)
+    show_scan_status = attr.ib(type=bool, default=False)
+    
+    @property
+    def type_display(self) -> str:
+        return self.TYPE_DISPLAY_MAP.get(self.scan_type, "")    
+
 
 @attr.s
 class Report:
@@ -598,14 +622,7 @@ class Report:
     show_copyright = attr.ib(type=bool, default=True)
     is_partnered = attr.ib(type=bool, default=False)
     rating = attr.ib(type=int, default=0)
-    is_included_static_scan = attr.ib(type=bool, default=True)
-    is_included_dynamic_scan = attr.ib(type=bool, default=True)
-    is_included_api_scan = attr.ib(type=bool, default=True)
-    is_included_manual_scan = attr.ib(type=bool, default=True)
-    is_done_static_scan = attr.ib(type=bool, default=False)
-    is_done_dynamic_scan = attr.ib(type=bool, default=False)
-    is_done_api_scan = attr.ib(type=bool, default=False)
-    is_done_manual_scan = attr.ib(type=bool, default=False)
+    scans = attr.ib(factory=list, type=List[Scan])
     hide_untested_analyses = attr.ib(type=bool, default=False)
     references = attr.ib(factory=list, type=List[Reference])
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
@@ -633,33 +650,7 @@ class Report:
             show_copyright=data.get("show_copyright"),
             is_partnered=data.get("is_partnered"),
             rating=data.get("rating"),
-            is_included_static_scan=data.get(
-                "is_included_static_scan",
-                cls.__attrs_attrs__.is_included_static_scan.default,
-            ),
-            is_included_dynamic_scan=data.get(
-                "is_included_dynamic_scan",
-                cls.__attrs_attrs__.is_included_dynamic_scan.default,
-            ),
-            is_included_api_scan=data.get(
-                "is_included_api_scan", cls.__attrs_attrs__.is_included_api_scan.default
-            ),
-            is_included_manual_scan=data.get(
-                "is_included_manual_scan",
-                cls.__attrs_attrs__.is_included_manual_scan.default,
-            ),
-            is_done_static_scan=data.get(
-                "is_done_static_scan", cls.__attrs_attrs__.is_done_static_scan.default
-            ),
-            is_done_dynamic_scan=data.get(
-                "is_done_dynamic_scan", cls.__attrs_attrs__.is_done_dynamic_scan.default
-            ),
-            is_done_api_scan=data.get(
-                "is_done_api_scan", cls.__attrs_attrs__.is_done_api_scan.default
-            ),
-            is_done_manual_scan=data.get(
-                "is_done_manual_scan", cls.__attrs_attrs__.is_done_manual_scan.default
-            ),
+            scans=[Scan(**scan_data) for scan_data in data.get("scans", [])],
             hide_untested_analyses=data.get(
                 "hide_untested_analyses",
                 cls.__attrs_attrs__.hide_untested_analyses.default,
@@ -881,14 +872,15 @@ class Report:
 
     @property
     def _scan_types_visible(self):
+        allowed_scan_types = [scan.scan_type for scan in self.scans if scan.is_included]
         scan_types = set()
-        if self.is_included_static_scan:
+        if Scan.TYPE_STATIC in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.STATIC.value.lower())
-        if self.is_included_dynamic_scan:
+        if Scan.TYPE_DYNAMIC in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.DYNAMIC.value.lower())
-        if self.is_included_api_scan:
+        if Scan.TYPE_API in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.API.value.lower())
-        if self.is_included_manual_scan:
+        if Scan.TYPE_MANUAL in allowed_scan_types:
             scan_types.add(AnalysisTypeEnum.MANUAL.value.lower())
         return scan_types
 
@@ -906,3 +898,7 @@ class Report:
     @property
     def viewable_analyses(self) -> List[Analysis]:
         return [a for a in self.analyses if self._is_visible_scan_type(a)]
+    
+    @classmethod
+    def create_scan(cls, scan_type: int, is_included: bool = False, is_done: bool = False, show_scan_status: bool = False) -> "Scan":
+        return Scan(scan_type=scan_type, is_included=is_included, is_done=is_done, show_scan_status=show_scan_status)

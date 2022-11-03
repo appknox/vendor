@@ -593,56 +593,35 @@
       <tr>
         <td>{% trans "Scan Status" %}</td>
         <td>
+          {% for scan in report.scans %}
+
+          {% if scan.show_scan_status %}
+
           <span class="scan__type">
-            {% if report.is_done_static_scan %}
+            {% if scan.is_done %}
                 <img class="scan__type__icon" src="{{ icon_done }}"></img>
             {% else %}
                 <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
             {% endif %}
-            <span>{% trans "Static" %}</span>
+            <span>{{ scan.type_display }}</span>
           </span>
-          <span class="scan__type">
-            {% if report.is_done_dynamic_scan %}
-                <img class="scan__type__icon" src="{{ icon_done }}"></img>
-            {% else %}
-                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-            {% endif %}
-            <span>{% trans "Dynamic" %}</span>
-          </span>
-          <span class="scan__type">
-            {% if report.is_done_api_scan %}
-                <img class="scan__type__icon" src="{{ icon_done }}"></img>
-            {% else %}
-                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-            {% endif %}
-            <span>{% trans "API" %}</span>
-          </span>
-          <span class="scan__type">
-            {% if report.is_done_manual_scan %}
-                <img class="scan__type__icon" src="{{ icon_done }}"></img>
-            {% else %}
-                <img class="scan__type__icon" src="{{ icon_not_done }}"></img>
-            {% endif %}
-            <span>{% trans "Manual" %}</span>
-          </span>
+          
+          {% endif %}
+
+          {% endfor %}
         </td>
       </tr>
       <tr>
         <td>{% trans "Scans included in the Report" %}</td>
         <td>
             <ul class="scan_included__ul">
-                {% if report.is_included_static_scan %}
-                    <li class="scan_included__li">{% trans "Static" %}</li>
+              {% for scan in report.scans %}
+
+                {% if scan.is_included %}
+                    <li class="scan_included__li">{{ scan.type_display }}</li>
                 {% endif %}
-                {% if report.is_included_dynamic_scan %}
-                    <li class="scan_included__li">{% trans "Dynamic" %}</li>
-                {% endif %}
-                {% if report.is_included_api_scan %}
-                    <li class="scan_included__li">{% trans "API" %}</li>
-                {% endif %}
-                {% if report.is_included_manual_scan %}
-                    <li class="scan_included__li">{% trans "Manual" %}</li>
-                {% endif %}
+
+              {% endfor %}
             </ul>
         </td>
       </tr>
