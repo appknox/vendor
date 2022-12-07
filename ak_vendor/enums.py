@@ -467,3 +467,14 @@ class FileFormatEnum:
         ANDROID_APK = [0, "APK"]
         ANDROID_AAB = [1, "AAB"]
         IOS_IPA = [2, "IPA"]
+
+
+@choices
+class WebhookServiceEnum:
+    """
+    Supported webhook services
+    """
+    class Meta:
+        CUSTOM_WEBHOOK = [0, "Custom Webhook"]
+        SLACK = [1, "Slack"]
+        MICROSOFT_TEAMS = [2, "Microsoft Teams"]
