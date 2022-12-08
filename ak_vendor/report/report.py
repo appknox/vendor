@@ -609,6 +609,8 @@ class Report:
         "passed": COLOR_PASSED,
         "untested": COLOR_UNTESTED,
     }
+    organization_id = attr.ib(type=int)
+    project_id = attr.ib(type=int)
     package_name = attr.ib(type=str)
     platform = attr.ib(type=Platform)
     application = attr.ib(type=Application)
@@ -640,6 +642,8 @@ class Report:
     @classmethod
     def from_json(cls, data):
         return cls(
+            organization_id=data.get("organization_id"),
+            project_id=data.get("project_id"),
             package_name=data.get("package_name"),
             platform=Platform(**data.get("platform")),
             application=Application(**data.get("application")),
