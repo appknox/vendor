@@ -3405,6 +3405,11 @@ data = [
         "url": "https://cwe.mitre.org/data/definitions/1004.html",
     },
     {
+        "id": "CWE_1021",
+        "code": "CWE-1021",
+        "url": "https://cwe.mitre.org/data/definitions/1021.html",
+    },
+    {
         "id": "CWE_1299",
         "code": "CWE-1299",
         "url": "https://cwe.mitre.org/data/definitions/1299.html",
