@@ -946,7 +946,7 @@
             </table>
           </section>
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
 
@@ -997,6 +997,24 @@
                         <tr>
                           <td>{{ mstg.code }}</td>
                           <td>{{ mstg.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.masvs %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "OWASP MASVS (v2)" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for masvs in analysis.regulatory.masvs %}
+                        <tr>
+                          <td>{{ masvs.code }}</td>
+                          <td>{{ masvs.title }}</td>
                         </tr>
                       {% endfor %}
                     </tbody>
