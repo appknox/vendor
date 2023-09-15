@@ -163,14 +163,24 @@ class NotifyEnum:
 
 @choices
 class SubmissionStatusEnum:
-    """
-    Submission status enum
-    """
-
     class Meta:
+        # Statuses if app is uploading using URL
+        NOT_STARTED = [-7, "Not Started"]
+        URL_VALIDATING = [-6, "Validating URL"]
+        URL_VALIDATION_FAILED = [-5, "Failed to Validate the URL"]
+        STORE_DOWNLOAD_PREPARE = [-4, "Preparing to download from store"]
+        STORE_DOWNLOADING = [-3, "Downloading from store"]
+        STORE_DOWNLOAD_FAILED = [-2, "Failed to download from store"]
+
+        # -1 is unknown status which is automatically added
+        # by choices decorator
+
+        # Statueses if app is uploaded using system file
         DOWNLOAD_PREPARE = [0, "Preparing to download the URL"]
         DOWNLOADING = [1, "Downloading the URL"]
         DOWNLOAD_FAILED = [2, "Failed to download the URL"]
+
+        # Commom statuses for both URL and system file upload
         VALIDATE_PREPARE = [3, "Preparing to validate the file"]
         VALIDATING = [4, "Validating the file"]
         VALIDATE_FAILED = [5, "Failed to validate the file"]
@@ -185,10 +195,13 @@ class SubmissionSourceEnum:
     """
 
     class Meta:
-        UPLOAD = [0, "Upload"]
+        UPLOAD = [0, "Upload"]  # to be deprecated
         STORE = [1, "Store"]
-        SCM = [2, "Source Code Management"]
-        DEVKNOX = [3, "Devknox"]
+        SCM = [2, "Source Code Management"]  # unused
+        DEVKNOX = [3, "Devknox"]  # unused
+        DASHBOARD = [4, "Dashboard"]
+        SDK = [5, "SDK"]
+        API = [6, "API"]
 
 
 @choices
