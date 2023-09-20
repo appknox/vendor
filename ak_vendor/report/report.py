@@ -276,6 +276,12 @@ class MSTG:
 
 
 @attr.s
+class MASVS:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+
+@attr.s
 class PCIDSS:
     code = attr.ib(type=str)
     title = attr.ib(type=str)
@@ -333,6 +339,7 @@ class Regulatory:
     cwe = attr.ib(factory=list, type=List[dict])
     asvs = attr.ib(factory=list, type=List[dict])
     mstg = attr.ib(factory=list, type=List[dict])
+    masvs = attr.ib(factory=list, type=List[dict])
     pcidss = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
     gdpr = attr.ib(factory=list, type=List[dict])
@@ -344,6 +351,7 @@ class Regulatory:
             cwe=[CWE(**cwe) for cwe in data.get("cwe", [])],
             asvs=[ASVS(**asvs) for asvs in data.get("asvs", [])],
             mstg=[MSTG(**mstg) for mstg in data.get("mstg", [])],
+            masvs=[MASVS(**masvs) for masvs in data.get("masvs", [])],
             pcidss=[PCIDSS(**pcidss) for pcidss in data.get("pcidss", [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get("hipaa", [])],
             gdpr=[GDPR(**gdpr) for gdpr in data.get("gdpr", [])],
@@ -364,6 +372,10 @@ class Regulatory:
     @classmethod
     def create_mstg(cls, code: str, title: str) -> MSTG:
         return MSTG(code=code, title=title)
+
+    @classmethod
+    def create_masvs(cls, code: str, title: str) -> "MASVS":
+        return MASVS(code=code, title=title)
 
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
@@ -399,6 +411,10 @@ class Regulatory:
     def add_mstg(self, mstg: MSTG) -> List[MSTG]:
         self.mstg.append(mstg)
         return self.mstg
+
+    def add_masvs(self, masvs: MASVS) -> "List[MASVS]":
+        self.masvs.append(masvs)
+        return self.masvs
 
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
@@ -441,7 +457,7 @@ class Analysis:
     regulatory = attr.ib(
         type=Regulatory,
         default=Regulatory(
-            owasp=[], pcidss=[], hipaa=[], asvs=[], cwe=[], gdpr=[], mstg=[]
+            owasp=[], pcidss=[], hipaa=[], asvs=[], cwe=[], gdpr=[], mstg=[], masvs=[]
         ),
     )
     findings = attr.ib(factory=list, type=List[Content])
@@ -485,6 +501,7 @@ class Analysis:
         cwe: List[dict] = [],
         asvs: List[dict] = [],
         mstg: List[dict] = [],
+        masvs: List[dict] = [],
         pcidss: List[dict] = [],
         hipaa: List[dict] = [],
         gdpr: List[dict] = [],
@@ -494,6 +511,7 @@ class Analysis:
             cwe=cwe,
             asvs=asvs,
             mstg=mstg,
+            masvs=masvs,
             pcidss=pcidss,
             hipaa=hipaa,
             gdpr=gdpr,
