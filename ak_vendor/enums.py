@@ -163,14 +163,24 @@ class NotifyEnum:
 
 @choices
 class SubmissionStatusEnum:
-    """
-    Submission status enum
-    """
-
     class Meta:
+        # Statuses if app is uploading using store URL
+        STORE_NOT_STARTED = [10100, "Not Started"]
+        STORE_VALIDATING_URL = [10101, "Validating URL"]
+        STORE_URL_VALIDATION_FAILED = [10102, "Failed to Validate the URL"]
+        STORE_DOWNLOAD_PREPARE = [10103, "Preparing to download from store"]
+        STORE_DOWNLOADING = [10104, "Downloading from store"]
+        STORE_DOWNLOAD_FAILED = [10105, "Failed to download from store"]
+        STORE_UPLOAD_PREPARE = [10106, "Preparing to upload"]
+        STORE_UPLOADING = [10107, "Uploading"]
+        STORE_UPLOAD_FAILED = [10108, "Failed to upload"]
+
+        # Statuses if app is uploaded using system file
         DOWNLOAD_PREPARE = [0, "Preparing to download the URL"]
         DOWNLOADING = [1, "Downloading the URL"]
         DOWNLOAD_FAILED = [2, "Failed to download the URL"]
+
+        # Commom statuses for both URL and system file upload
         VALIDATE_PREPARE = [3, "Preparing to validate the file"]
         VALIDATING = [4, "Validating the file"]
         VALIDATE_FAILED = [5, "Failed to validate the file"]
@@ -185,10 +195,13 @@ class SubmissionSourceEnum:
     """
 
     class Meta:
-        UPLOAD = [0, "Upload"]
+        UPLOAD = [0, "Upload"]  # to be deprecated
         STORE = [1, "Store"]
-        SCM = [2, "Source Code Management"]
-        DEVKNOX = [3, "Devknox"]
+        SCM = [2, "Source Code Management"]  # unused
+        DEVKNOX = [3, "Devknox"]  # unused
+        DASHBOARD = [4, "Dashboard"]
+        SDK = [5, "SDK"]
+        API = [6, "API"]
 
 
 @choices
