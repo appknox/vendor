@@ -1,6 +1,5 @@
 from gettext import gettext as _
 
-
 data = [
     # Reference: https://mobile-security.gitbook.io/masvs/security
     # -requirements/0x06-v1-architecture_design_and_threat_modelling_requireme
@@ -781,7 +780,7 @@ class MSTG:
         self.active = active
 
     def __str__(self):
-        return "%s - %s - %s" % (self.id, self.code, self.title)
+        return f"{self.id} - {self.code} - {self.title}"
 
     def __repr__(self):
         return "<MSTG: %s>" % self.__str__()

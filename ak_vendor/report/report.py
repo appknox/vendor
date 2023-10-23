@@ -1,13 +1,15 @@
-import attr
 import enum
-import maya
 import json
-import html2text
 from datetime import datetime
-from urllib.parse import quote
-from cvss import CVSS3
 from typing import List
+from urllib.parse import quote
+
+import attr
+import html2text
+import maya
+from cvss import CVSS3
 from django.utils.translation import gettext_lazy as _
+
 from ..constants import PLATFORM_ICONS
 
 ATTACHMENT_IMAGE_FORMATS = ["png", "jpg", "jpeg", "bmp", "svg", "gif"]
@@ -383,8 +385,14 @@ class Regulatory:
 
     @classmethod
     def create_hipaa(
-        cls, code: str, safeguard: str, title: str, standards: List[HIPAAStandard] = []
+        cls,
+        code: str,
+        safeguard: str,
+        title: str,
+        standards: List[HIPAAStandard] = None,
     ) -> HIPAA:
+        if standards is None:
+            standards = []
         return HIPAA(
             code=code,
             safeguard=safeguard,
@@ -497,15 +505,31 @@ class Analysis:
     @classmethod
     def create_regulatory(
         cls,
-        owasp: List[dict] = [],
-        cwe: List[dict] = [],
-        asvs: List[dict] = [],
-        mstg: List[dict] = [],
-        masvs: List[dict] = [],
-        pcidss: List[dict] = [],
-        hipaa: List[dict] = [],
-        gdpr: List[dict] = [],
+        owasp: List[dict] = None,
+        cwe: List[dict] = None,
+        asvs: List[dict] = None,
+        mstg: List[dict] = None,
+        masvs: List[dict] = None,
+        pcidss: List[dict] = None,
+        hipaa: List[dict] = None,
+        gdpr: List[dict] = None,
     ) -> Regulatory:
+        if gdpr is None:
+            gdpr = []
+        if hipaa is None:
+            hipaa = []
+        if pcidss is None:
+            pcidss = []
+        if masvs is None:
+            masvs = []
+        if mstg is None:
+            mstg = []
+        if asvs is None:
+            asvs = []
+        if cwe is None:
+            cwe = []
+        if owasp is None:
+            owasp = []
         return Regulatory(
             owasp=owasp,
             cwe=cwe,
@@ -750,10 +774,16 @@ class Report:
         success_message: Content,
         regulatory: Regulatory,
         vulnerability_references: Content,
-        findings: List[Content] = [],
-        tags: List[Tag] = [],
-        attachments: List[Attachment] = [],
+        findings: List[Content] = None,
+        tags: List[Tag] = None,
+        attachments: List[Attachment] = None,
     ) -> Analysis:
+        if attachments is None:
+            attachments = []
+        if tags is None:
+            tags = []
+        if findings is None:
+            findings = []
         return Analysis(
             id=id,
             title=title,
@@ -885,8 +915,8 @@ class Report:
             "data:image/svg+xml;utf8,"
             '<svg xmlns="http://www.w3.org/2000/svg" '
             'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" '
-            'width="216px" height="216px" viewBox="0 0 42 42">{}</svg>'
-        ).format(quote(sector))
+            f'width="216px" height="216px" viewBox="0 0 42 42">{quote(sector)}</svg>'
+        )
 
     @property
     def custom_meta_names(self) -> List[str]:

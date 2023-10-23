@@ -42,7 +42,6 @@ def pnguncrush(old_png):
 
     # For each chunk in the PNG file
     while chunk_pos < len(old_png):
-
         # Reading chunk
         chunk_length = old_png[chunk_pos : chunk_pos + 4]
         chunk_length = unpack(">L", chunk_length)[0]
@@ -78,10 +77,10 @@ def pnguncrush(old_png):
 
             # Swapping red & blue bytes for each pixel
             new_data = b""
-            for y in range(height):
+            for y in range(height):  # noqa: B007
                 i = len(new_data)
                 new_data += to_bytes(chunk_data[i])
-                for x in range(width):
+                for x in range(width):  # noqa: B007
                     i = len(new_data)
                     new_data += to_bytes(chunk_data[i + 2])
                     new_data += to_bytes(chunk_data[i + 1])

@@ -1,6 +1,5 @@
 from gettext import gettext as _
 
-
 data = [
     {
         "id": "M1_2016",
@@ -188,7 +187,7 @@ class OWASP:
         return self.type == self.TYPE_API
 
     def __str__(self):
-        return "%s - %s - %s - %s" % (self.id, self.code, self.title, self.year)
+        return f"{self.id} - {self.code} - {self.title} - {self.year}"
 
     def __repr__(self):
         return "<OWASP: %s>" % self.__str__()

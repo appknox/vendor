@@ -3425,7 +3425,7 @@ class CWE:
         self.code = code
 
     def __str__(self):
-        return "%s - %s - %s" % (self.id, self.code, self.url)
+        return f"{self.id} - {self.code} - {self.url}"
 
     def __repr__(self):
         return "<CWE: %s>" % self.__str__()
