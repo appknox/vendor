@@ -1,15 +1,12 @@
-# (c) 2017, XYSec Labs
-
-from orm_choices import choices_with_unknown as choices
 from orm_choices import choices as choices_without_unknown
-
+from orm_choices import choices_with_unknown as choices
 
 from ak_vendor.constants import (
-    RISK_ENUM_PASSED,
+    RISK_ENUM_CRITICAL,
+    RISK_ENUM_HIGH,
     RISK_ENUM_LOW,
     RISK_ENUM_MEDIUM,
-    RISK_ENUM_HIGH,
-    RISK_ENUM_CRITICAL,
+    RISK_ENUM_PASSED,
 )
 
 

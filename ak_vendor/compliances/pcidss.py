@@ -1,6 +1,5 @@
 from gettext import gettext as _
 
-
 data = [
     {
         "title": _(
@@ -739,7 +738,7 @@ class PCIDSS:
         self.active = active
 
     def __str__(self):
-        return "%s - %s - %s - %s" % (self.id, self.code, self.title, self.description)
+        return f"{self.id} - {self.code} - {self.title} - {self.description}"
 
     def __repr__(self):
         return "<PCIDSS: %s>" % self.__str__()

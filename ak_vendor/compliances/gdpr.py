@@ -1,6 +1,5 @@
 from gettext import gettext as _
 
-
 data = [
     # Reference: https://gdpr-info.eu/art-25-gdpr/
     {
@@ -25,7 +24,7 @@ class GDPR:
         self.code = code
 
     def __str__(self):
-        return "%s - %s - %s" % (self.id, self.code, self.title)
+        return f"{self.id} - {self.code} - {self.title}"
 
     def __repr__(self):
         return "<GDPR: %s>" % self.__str__()

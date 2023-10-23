@@ -2967,7 +2967,7 @@ class ASVS:
         self.active = active
 
     def __str__(self):
-        return "%s - %s - %s" % (self.id, self.code, self.title)
+        return f"{self.id} - {self.code} - {self.title}"
 
     def __repr__(self):
         return "<ASVS: %s>" % self.__str__()

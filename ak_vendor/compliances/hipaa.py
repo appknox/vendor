@@ -1,7 +1,7 @@
-import attr
-from typing import List
 from gettext import gettext as _
+from typing import List
 
+import attr
 
 data = [
     {
@@ -556,7 +556,7 @@ class HIPAA:
         object.__setattr__(self, "pk", self.id)
 
     def __str__(self):
-        return "%s - %s - %s - %s" % (self.id, self.code, self.title, self.description)
+        return f"{self.id} - {self.code} - {self.title} - {self.description}"
 
     def __repr__(self):
         return "<HIPAA: %s>" % self.__str__()

@@ -1,19 +1,4 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# vim: fenc=utf-8
-# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
-#
-#
-
-"""
-File name: utils.py
-Author: dhilipsiva <dhilipsiva@gmail.com>
-Date created: 2017-03-15
-"""
-
-
-class EmptyClass(object):
+class EmptyClass:
     """
     Just an empty class with nothing to see
     """
@@ -22,7 +7,7 @@ class EmptyClass(object):
 
 
 def dict2obj(d):
-    if type(d) == list:
+    if type(d) == list:  # noqa: E721
         d = [dict2obj(i) for i in d]
     try:
         d = dict(d)

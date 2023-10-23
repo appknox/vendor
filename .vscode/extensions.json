@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "EditorConfig.EditorConfig",
+    "ms-python.black-formatter",
+    "charliermarsh.ruff",
+    "vscode-icons-team.vscode-icons"
+  ],
+  "unwantedRecommendations": [
+    "ms-python.flake8"
+  ]
+}

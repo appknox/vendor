@@ -11,9 +11,7 @@ data = [
     {
         "id": "MASVS_1_2",
         "code": "MASVS-STORAGE-2",
-        "title": _(
-            "The app prevents leakage of sensitive data."
-        ),
+        "title": _("The app prevents leakage of sensitive data."),
         "active": True,
     },
     {
@@ -29,8 +27,7 @@ data = [
         "id": "MASVS_2_2",
         "code": "MASVS-CRYPTO-2",
         "title": _(
-            "The app performs key management according "
-            "to industry best practices."
+            "The app performs key management according to industry best practices."
         ),
         "active": True,
     },
@@ -57,17 +54,14 @@ data = [
         "id": "MASVS_3_3",
         "code": "MASVS-AUTH-3",
         "title": _(
-            "The app secures sensitive operations "
-            "with additional authentication."
+            "The app secures sensitive operations with additional authentication."
         ),
         "active": True,
     },
     {
         "id": "MASVS_4_1",
         "code": "MASVS-CODE-1",
-        "title": _(
-            "The app requires an up-to-date platform version."
-        ),
+        "title": _("The app requires an up-to-date platform version."),
         "active": True,
     },
     {
@@ -80,17 +74,14 @@ data = [
         "id": "MASVS_4_3",
         "code": "MASVS-CODE-3",
         "title": _(
-            "The app only uses software components "
-            "without known vulnerabilities."
+            "The app only uses software components without known vulnerabilities."
         ),
         "active": True,
     },
     {
         "id": "MASVS_4_4",
         "code": "MASVS-CODE-4",
-        "title": _(
-            "The app validates and sanitizes all untrusted inputs."
-        ),
+        "title": _("The app validates and sanitizes all untrusted inputs."),
         "active": True,
     },
     {
@@ -114,9 +105,7 @@ data = [
     {
         "id": "MASVS_6_1",
         "code": "MASVS-PLATFORM-1",
-        "title": _(
-            "The app uses IPC mechanisms securely."
-        ),
+        "title": _("The app uses IPC mechanisms securely."),
         "active": True,
     },
     {
@@ -128,17 +117,13 @@ data = [
     {
         "id": "MASVS_6_3",
         "code": "MASVS-PLATFORM-3",
-        "title": _(
-            "The app uses the user interface securely."
-        ),
+        "title": _("The app uses the user interface securely."),
         "active": True,
     },
     {
         "id": "MASVS_7_1",
         "code": "MASVS-RESILIANCE-1",
-        "title": _(
-            "The app validates the integrity of the platform."
-        ),
+        "title": _("The app validates the integrity of the platform."),
         "active": True,
     },
     {
@@ -150,20 +135,15 @@ data = [
     {
         "id": "MASVS_7_3",
         "code": "MASVS-RESILIANCE-3",
-        "title": _(
-            "The app implements anti-static analysis mechanisms."
-        ),
+        "title": _("The app implements anti-static analysis mechanisms."),
         "active": True,
     },
     {
         "id": "MASVS_7_4",
         "code": "MASVS-RESILIANCE-4",
-        "title": _(
-            "The app implements anti-dynamic analysis techniques."
-        ),
+        "title": _("The app implements anti-dynamic analysis techniques."),
         "active": True,
     },
-    
 ]
 
 
@@ -176,7 +156,7 @@ class MASVS:
         self.active = active
 
     def __str__(self):
-        return "%s - %s - %s" % (self.id, self.code, self.title)
+        return f"{self.id} - {self.code} - {self.title}"
 
     def __repr__(self):
         return "<MASVS: %s>" % self.__str__()
