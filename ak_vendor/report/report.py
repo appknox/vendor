@@ -284,6 +284,12 @@ class MASVS:
 
 
 @attr.s
+class OWASPAPI2023:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+
+@attr.s
 class PCIDSS:
     code = attr.ib(type=str)
     title = attr.ib(type=str)
@@ -342,6 +348,7 @@ class Regulatory:
     asvs = attr.ib(factory=list, type=List[dict])
     mstg = attr.ib(factory=list, type=List[dict])
     masvs = attr.ib(factory=list, type=List[dict])
+    owaspapi2023 = attr.ib(factory=list, type=List[dict])
     pcidss = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
     gdpr = attr.ib(factory=list, type=List[dict])
@@ -354,6 +361,10 @@ class Regulatory:
             asvs=[ASVS(**asvs) for asvs in data.get("asvs", [])],
             mstg=[MSTG(**mstg) for mstg in data.get("mstg", [])],
             masvs=[MASVS(**masvs) for masvs in data.get("masvs", [])],
+            owaspapi2023=[
+                OWASPAPI2023(**owaspapi2023)
+                for owaspapi2023 in data.get("owaspapi2023", [])
+            ],
             pcidss=[PCIDSS(**pcidss) for pcidss in data.get("pcidss", [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get("hipaa", [])],
             gdpr=[GDPR(**gdpr) for gdpr in data.get("gdpr", [])],
@@ -378,6 +389,10 @@ class Regulatory:
     @classmethod
     def create_masvs(cls, code: str, title: str) -> "MASVS":
         return MASVS(code=code, title=title)
+
+    @classmethod
+    def create_owaspapi2023(cls, code: str, title: str) -> "OWASPAPI2023":
+        return OWASPAPI2023(code=code, title=title)
 
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
@@ -424,6 +439,10 @@ class Regulatory:
         self.masvs.append(masvs)
         return self.masvs
 
+    def add_owaspapi2023(self, owaspapi2023: OWASPAPI2023) -> "List[OWASPAPI2023]":
+        self.owaspapi2023.append(owaspapi2023)
+        return self.owaspapi2023
+
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
         return self.pcidss
@@ -465,7 +484,15 @@ class Analysis:
     regulatory = attr.ib(
         type=Regulatory,
         default=Regulatory(
-            owasp=[], pcidss=[], hipaa=[], asvs=[], cwe=[], gdpr=[], mstg=[], masvs=[]
+            owasp=[],
+            pcidss=[],
+            hipaa=[],
+            asvs=[],
+            cwe=[],
+            gdpr=[],
+            mstg=[],
+            masvs=[],
+            owaspapi2023=[],
         ),
     )
     findings = attr.ib(factory=list, type=List[Content])
@@ -513,7 +540,10 @@ class Analysis:
         pcidss: List[dict] = None,
         hipaa: List[dict] = None,
         gdpr: List[dict] = None,
+        owaspapi2023: List[dict] = None,
     ) -> Regulatory:
+        if owaspapi2023 is None:
+            owaspapi2023 = []
         if gdpr is None:
             gdpr = []
         if hipaa is None:
@@ -536,6 +566,7 @@ class Analysis:
             asvs=asvs,
             mstg=mstg,
             masvs=masvs,
+            owaspapi2023=owaspapi2023,
             pcidss=pcidss,
             hipaa=hipaa,
             gdpr=gdpr,
