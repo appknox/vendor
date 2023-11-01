@@ -96,7 +96,7 @@ class OWASPAPI2023:
         self.type = type
 
     def __str__(self):
-        return "%s - %s - %s" % (self.id, self.code, self.title)
+        return f"{self.id} - {self.code} - {self.title}"
 
     def __repr__(self):
         return "<OWASPAPI2023: %s>" % self.__str__()

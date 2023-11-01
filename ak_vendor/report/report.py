@@ -286,6 +286,7 @@ class MASVS:
 @attr.s
 class OWASPAPI2023:
     code = attr.ib(type=str)
+    year = attr.ib(type=int)
     title = attr.ib(type=str)
 
 
@@ -391,8 +392,8 @@ class Regulatory:
         return MASVS(code=code, title=title)
 
     @classmethod
-    def create_owaspapi2023(cls, code: str, title: str) -> "OWASPAPI2023":
-        return OWASPAPI2023(code=code, title=title)
+    def create_owaspapi2023(cls, code: str, year: int, title: str) -> "OWASPAPI2023":
+        return OWASPAPI2023(code=code, year=year, title=title)
 
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
