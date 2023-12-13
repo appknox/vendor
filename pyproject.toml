@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ak-vendor"
-version = "5.2.2"
+version = "5.3.0"
 description = "Some vendor scripts that we use here at Appknox"
 authors = ["Appknox <engineering@appknox.com>"]
 license = "MIT"
