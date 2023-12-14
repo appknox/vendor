@@ -343,6 +343,18 @@ class GDPR:
 
 
 @attr.s
+class NISTSP80053:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+
+@attr.s
+class NISTSP800171:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+
+@attr.s
 class Regulatory:
     owasp = attr.ib(factory=list, type=List[dict])
     cwe = attr.ib(factory=list, type=List[dict])
@@ -353,6 +365,8 @@ class Regulatory:
     pcidss = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
     gdpr = attr.ib(factory=list, type=List[dict])
+    nistsp80053 = attr.ib(factory=list, type=List[dict])
+    nistsp800171 = attr.ib(factory=list, type=List[dict])
 
     @classmethod
     def from_json(cls, data):
@@ -369,6 +383,14 @@ class Regulatory:
             pcidss=[PCIDSS(**pcidss) for pcidss in data.get("pcidss", [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get("hipaa", [])],
             gdpr=[GDPR(**gdpr) for gdpr in data.get("gdpr", [])],
+            nistsp80053=[
+                NISTSP80053(**nistsp80053)
+                for nistsp80053 in data.get("nistsp80053", [])
+            ],
+            nistsp800171=[
+                NISTSP800171(**nistsp800171)
+                for nistsp800171 in data.get("nistsp800171", [])
+            ],
         )
 
     @classmethod
@@ -420,6 +442,14 @@ class Regulatory:
     def create_gdpr(cls, code: str, title: str) -> GDPR:
         return GDPR(code=code, title=title)
 
+    @classmethod
+    def create_nistsp80053(cls, code: str, title: str) -> NISTSP80053:
+        return NISTSP80053(code=code, title=title)
+
+    @classmethod
+    def create_nistsp800171(cls, code: str, title: str) -> NISTSP800171:
+        return NISTSP800171(code=code, title=title)
+
     def add_owasp(self, owasp: OWASP) -> List[OWASP]:
         self.owasp.append(owasp)
         return self.owasp
@@ -455,6 +485,14 @@ class Regulatory:
     def add_gdpr(self, gdpr: GDPR) -> List[GDPR]:
         self.gdpr.append(gdpr)
         return self.gdpr
+
+    def add_nistsp80053(self, nistsp80053: NISTSP80053) -> List[NISTSP80053]:
+        self.nistsp80053.append(nistsp80053)
+        return self.nistsp80053
+
+    def add_nistsp800171(self, nistsp800171: NISTSP800171) -> List[NISTSP800171]:
+        self.nistsp800171.append(nistsp800171)
+        return self.nistsp800171
 
 
 @attr.s
@@ -494,6 +532,8 @@ class Analysis:
             mstg=[],
             masvs=[],
             owaspapi2023=[],
+            nistsp80053=[],
+            nistsp800171=[],
         ),
     )
     findings = attr.ib(factory=list, type=List[Content])
@@ -542,7 +582,13 @@ class Analysis:
         hipaa: List[dict] = None,
         gdpr: List[dict] = None,
         owaspapi2023: List[dict] = None,
+        nistsp80053: List[dict] = None,
+        nistsp800171: List[dict] = None,
     ) -> Regulatory:
+        if nistsp80053 is None:
+            nistsp80053 = []
+        if nistsp800171 is None:
+            nistsp800171 = []
         if owaspapi2023 is None:
             owaspapi2023 = []
         if gdpr is None:
@@ -571,6 +617,8 @@ class Analysis:
             pcidss=pcidss,
             hipaa=hipaa,
             gdpr=gdpr,
+            nistsp80053=nistsp80053,
+            nistsp800171=nistsp800171,
         )
 
     @classmethod
