@@ -41,6 +41,21 @@ data = [
     {"id": "CM_6", "code": "CM-6", "title": _("Configuration Settings")},
     {"id": "CM_7", "code": "CM-7", "title": _("Least Functionality")},
     {"id": "CM_8", "code": "CM-8", "title": _("System Component Inventory")},
+    {
+        "id": "IA_3",
+        "code": "IA-3",
+        "title": _("Device Identification and Authentication"),
+    },
+    {
+        "id": "IA_5",
+        "code": "IA-5",
+        "title": _("Identification and Authentication (Cryptographic Protections)"),
+    },
+    {
+        "id": "IA_9",
+        "code": "IA-9",
+        "title": _("Service Identification and Authentication"),
+    },
     {"id": "IR_4", "code": "IR-4", "title": _("Incident Handling")},
     {
         "id": "MA_3",
