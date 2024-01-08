@@ -946,7 +946,7 @@
             </table>
           </section>
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
 
@@ -1118,6 +1118,42 @@
                         <tr>
                           <td>{{ gdpr.code }}</td>
                           <td>{{ gdpr.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.nistsp80053 %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "NIST SP 800-53" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for nistsp80053 in analysis.regulatory.nistsp80053 %}
+                        <tr>
+                          <td>{{ nistsp80053.code }}</td>
+                          <td>{{ nistsp80053.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.nistsp800171 %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "NIST SP 800-171" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for nistsp800171 in analysis.regulatory.nistsp800171 %}
+                        <tr>
+                          <td>{{ nistsp800171.code }}</td>
+                          <td>{{ nistsp800171.title }}</td>
                         </tr>
                       {% endfor %}
                     </tbody>
