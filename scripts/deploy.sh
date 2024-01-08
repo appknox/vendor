@@ -30,6 +30,7 @@ fi
 echo "Creating release"
 rm -rf dist/
 poetry version "$1"
+poetry update
 export CURRENT_BRANCH
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 VERSION=$(poetry version -s)
