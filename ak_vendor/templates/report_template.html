@@ -380,11 +380,11 @@
       margin-bottom: 2em;
     }
     .regulatory__category {
-      width: 8em;
+      width: 12em;
       position: absolute;
     }
     .regulatory__table {
-      padding-left: 8em;
+      padding-left: 12em;
       position: relative;
     }
     .regulatory__table__pcidss__title {
@@ -946,10 +946,11 @@
             </table>
           </section>
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.owaspmobile2024 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
 
+              
               <div class="regulatory__block">
                 {% if analysis.regulatory.owasp %}
                   <div class="regulatory__category">
@@ -961,6 +962,24 @@
                         <tr>
                           <td>{{ owasp.code }}</td>
                           <td>{{ owasp.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+              
+              <div class="regulatory__block">
+                {% if analysis.regulatory.owaspmobile2024 %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "OWASP Mobile Top 10 (2024)" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for owaspmobile2024 in analysis.regulatory.owaspmobile2024 %}
+                        <tr>
+                          <td>{{ owaspmobile2024.code }}</td>
+                          <td>{{ owaspmobile2024.title }}</td>
                         </tr>
                       {% endfor %}
                     </tbody>
