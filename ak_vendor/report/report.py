@@ -291,6 +291,13 @@ class OWASPAPI2023:
 
 
 @attr.s
+class OWASPMOBILE2024:
+    code = attr.ib(type=str)
+    year = attr.ib(type=int)
+    title = attr.ib(type=str)
+
+
+@attr.s
 class PCIDSS:
     code = attr.ib(type=str)
     title = attr.ib(type=str)
@@ -362,6 +369,7 @@ class Regulatory:
     mstg = attr.ib(factory=list, type=List[dict])
     masvs = attr.ib(factory=list, type=List[dict])
     owaspapi2023 = attr.ib(factory=list, type=List[dict])
+    owaspmobile2024 = attr.ib(factory=list, type=List[dict])
     pcidss = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
     gdpr = attr.ib(factory=list, type=List[dict])
@@ -379,6 +387,10 @@ class Regulatory:
             owaspapi2023=[
                 OWASPAPI2023(**owaspapi2023)
                 for owaspapi2023 in data.get("owaspapi2023", [])
+            ],
+            owaspmobile2024=[
+                OWASPMOBILE2024(**owaspmobile2024)
+                for owaspmobile2024 in data.get("owaspmobile2024", [])
             ],
             pcidss=[PCIDSS(**pcidss) for pcidss in data.get("pcidss", [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get("hipaa", [])],
@@ -416,6 +428,10 @@ class Regulatory:
     @classmethod
     def create_owaspapi2023(cls, code: str, year: int, title: str) -> "OWASPAPI2023":
         return OWASPAPI2023(code=code, year=year, title=title)
+
+    @classmethod
+    def create_owaspmobile2024(cls, code: str, year: int, title: str) -> "OWASPMOBILE2024":
+        return OWASPMOBILE2024(code=code, year=year, title=title)
 
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
@@ -473,6 +489,10 @@ class Regulatory:
     def add_owaspapi2023(self, owaspapi2023: OWASPAPI2023) -> "List[OWASPAPI2023]":
         self.owaspapi2023.append(owaspapi2023)
         return self.owaspapi2023
+
+    def add_owaspmobile2024(self, owaspmobile2024: OWASPMOBILE2024) -> "List[OWASPMOBILE2024]":
+        self.owaspmobile2024.append(owaspmobile2024)
+        return self.owaspmobile2024
 
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
@@ -532,6 +552,7 @@ class Analysis:
             mstg=[],
             masvs=[],
             owaspapi2023=[],
+            owaspmobile2024=[],
             nistsp80053=[],
             nistsp800171=[],
         ),
@@ -582,6 +603,7 @@ class Analysis:
         hipaa: List[dict] = None,
         gdpr: List[dict] = None,
         owaspapi2023: List[dict] = None,
+        owaspmobile2024: List[dict] = None,
         nistsp80053: List[dict] = None,
         nistsp800171: List[dict] = None,
     ) -> Regulatory:
@@ -591,6 +613,8 @@ class Analysis:
             nistsp800171 = []
         if owaspapi2023 is None:
             owaspapi2023 = []
+        if owaspmobile2024 is None:
+            owaspmobile2024 = []
         if gdpr is None:
             gdpr = []
         if hipaa is None:
@@ -614,6 +638,7 @@ class Analysis:
             mstg=mstg,
             masvs=masvs,
             owaspapi2023=owaspapi2023,
+            owaspmobile2024=owaspmobile2024,
             pcidss=pcidss,
             hipaa=hipaa,
             gdpr=gdpr,
