@@ -4,7 +4,7 @@ data = [
     # Reference: https://owasp.org/www-project-mobile-top-10/
     {
         "id": "M1_2024",
-        "code": "M1:2024",
+        "code": "M1",
         "title": _("Improper Credential Usage"),
         "year": 2024,
         "active": True,
@@ -12,7 +12,7 @@ data = [
     },
     {
         "id": "M2_2024",
-        "code": "M2:2024",
+        "code": "M2",
         "title": _("Inadequate Supply Chain Security"),
         "year": 2024,
         "active": True,
@@ -20,7 +20,7 @@ data = [
     },
     {
         "id": "M3_2024",
-        "code": "M3:2024",
+        "code": "M3",
         "title": _("Insecure Authentication/Authorization"),
         "year": 2024,
         "active": True,
@@ -28,7 +28,7 @@ data = [
     },
     {
         "id": "M4_2024",
-        "code": "M4:2024",
+        "code": "M4",
         "title": _("Insufficient Input/Output Validation"),
         "year": 2024,
         "active": True,
@@ -36,7 +36,7 @@ data = [
     },
     {
         "id": "M5_2024",
-        "code": "M5:2024",
+        "code": "M5",
         "title": _("Insecure Communication"),
         "year": 2024,
         "active": True,
@@ -44,7 +44,7 @@ data = [
     },
     {
         "id": "M6_2024",
-        "code": "M6:2024",
+        "code": "M6",
         "title": _("Inadequate Privacy Controls"),
         "year": 2024,
         "active": True,
@@ -52,7 +52,7 @@ data = [
     },
     {
         "id": "M7_2024",
-        "code": "M7:2024",
+        "code": "M7",
         "title": _("Insufficient Binary Protections"),
         "year": 2024,
         "active": True,
@@ -60,7 +60,7 @@ data = [
     },
     {
         "id": "M8_2024",
-        "code": "M8:2024",
+        "code": "M8",
         "title": _("Security Misconfiguration"),
         "year": 2024,
         "active": True,
@@ -68,7 +68,7 @@ data = [
     },
     {
         "id": "M9_2024",
-        "code": "M9:2024",
+        "code": "M9",
         "title": _("Insecure Data Storage"),
         "year": 2024,
         "active": True,
@@ -76,7 +76,7 @@ data = [
     },
     {
         "id": "M10_2024",
-        "code": "M10:2024",
+        "code": "M10",
         "title": _("Insufficient Cryptography"),
         "year": 2024,
         "active": True,
