@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-03 14:16+0530\n"
+"POT-Creation-Date: 2024-05-22 12:49+0530\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -401,8 +401,8 @@ msgstr ""
 
 #: ak_vendor/compliances/asvs.py:609
 msgid ""
-"Verify the application does not suffer from \"Time Of Check to Time Of Use"
-"\" (TOCTOU) issues or other race conditions for sensitive operations."
+"Verify the application does not suffer from \"Time Of Check to Time Of "
+"Use\" (TOCTOU) issues or other race conditions for sensitive operations."
 msgstr ""
 
 #: ak_vendor/compliances/asvs.py:619
@@ -719,8 +719,8 @@ msgstr ""
 
 #: ak_vendor/compliances/asvs.py:1095
 msgid ""
-"Verify that every HTTP response contains a Content-Type header. text/*, */*"
-"+xml and application/xml content types should also specify a safe character "
+"Verify that every HTTP response contains a Content-Type header. text/*, */"
+"*+xml and application/xml content types should also specify a safe character "
 "set (e.g., UTF-8, ISO-8859-1)."
 msgstr ""
 
@@ -1928,11 +1928,11 @@ msgstr ""
 msgid "Verify that backend TLS connection failures are logged."
 msgstr ""
 
-#: ak_vendor/compliances/gdpr.py:9
+#: ak_vendor/compliances/gdpr.py:8
 msgid "Data protection by design and by default"
 msgstr ""
 
-#: ak_vendor/compliances/gdpr.py:15
+#: ak_vendor/compliances/gdpr.py:14
 msgid "Security of processing"
 msgstr ""
 
@@ -2432,280 +2432,371 @@ msgid ""
 "Contracts or Other Arrangements]."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:10
+#: ak_vendor/compliances/masvs.py:8
+msgid "The app securely stores sensitive data."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:14
+msgid "The app prevents leakage of sensitive data."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:21
+msgid ""
+"The app employs current strong cryptography and uses it according to "
+"industry best practices."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:30
+msgid "The app performs key management according to industry best practices."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:38
+msgid ""
+"The app uses secure authentication and authorization protocols and follows "
+"the relevant best practices."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:48
+msgid ""
+"The app performs local authentication securely according to the platform "
+"best practices."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:57
+msgid "The app secures sensitive operations with additional authentication."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:64
+msgid "The app requires an up-to-date platform version."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:70
+msgid "The app has a mechanism for enforcing app updates."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:77
+#, fuzzy
+#| msgid "Using Components with Known Vulnerabilities"
+msgid "The app only uses software components without known vulnerabilities."
+msgstr "既知の脆弱性を持つコンポーネントの使用"
+
+#: ak_vendor/compliances/masvs.py:84
+msgid "The app validates and sanitizes all untrusted inputs."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:91
+msgid ""
+"The app secures all network traffic according to the current best practices."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:100
+msgid ""
+"The app performs identity pinning for all remote endpoints under the "
+"developer's control."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:108
+msgid "The app uses IPC mechanisms securely."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:114
+msgid "The app uses WebViews securely."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:120
+msgid "The app uses the user interface securely."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:126
+msgid "The app validates the integrity of the platform."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:132
+msgid "The app implements anti-tampering mechanisms."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:138
+msgid "The app implements anti-static analysis mechanisms."
+msgstr ""
+
+#: ak_vendor/compliances/masvs.py:144
+msgid "The app implements anti-dynamic analysis techniques."
+msgstr ""
+
+#: ak_vendor/compliances/mstg.py:9
 msgid "All app components are identified and known to be needed."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:17
+#: ak_vendor/compliances/mstg.py:16
 msgid ""
 "Security controls are never enforced only on the client side, but on the "
 "respective remote endpoints."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:26
+#: ak_vendor/compliances/mstg.py:25
 msgid ""
 "A high-level architecture for the mobile app and all connected remote "
 "services has been defined and security has been addressed in that "
 "architecture."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:36
+#: ak_vendor/compliances/mstg.py:35
 msgid ""
 "Data considered sensitive in the context of the mobile app is clearly "
 "identified."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:45
+#: ak_vendor/compliances/mstg.py:44
 msgid ""
 "All app components are defined in terms of the business functions and/or "
 "security functions they provide."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:54
+#: ak_vendor/compliances/mstg.py:53
 msgid ""
 "A threat model for the mobile app and the associated remote services has "
 "been produced that identifies potential threats and countermeasures."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:63
+#: ak_vendor/compliances/mstg.py:62
 msgid "All security controls have a centralized implementation."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:70
+#: ak_vendor/compliances/mstg.py:69
 msgid ""
 "There is an explicit policy for how cryptographic keys (if any) are managed, "
 "and the lifecycle of cryptographic keys is enforced. Ideally, follow a key "
 "management standard such as NIST SP 800-57."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:80
+#: ak_vendor/compliances/mstg.py:79
 msgid "A mechanism for enforcing updates of the mobile app exists."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:87
+#: ak_vendor/compliances/mstg.py:86
 msgid ""
 "Security is addressed within all parts of the software development lifecycle."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:96
+#: ak_vendor/compliances/mstg.py:95
 msgid "A responsible disclosure policy is in place and effectively applied."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:103
+#: ak_vendor/compliances/mstg.py:102
 msgid "The app should comply with privacy laws and regulations."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:112
+#: ak_vendor/compliances/mstg.py:111
 msgid ""
 "System credential storage facilities need to be used to store sensitive "
 "data, such as PII, user credentials or cryptographic keys."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:122
+#: ak_vendor/compliances/mstg.py:121
 msgid ""
 "No sensitive data should be stored outside of the app container or system "
 "credential storage facilities."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:130
+#: ak_vendor/compliances/mstg.py:129
 msgid "No sensitive data is written to application logs."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:137
+#: ak_vendor/compliances/mstg.py:136
 msgid ""
 "No sensitive data is shared with third parties unless it is a necessary part "
 "of the architecture."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:146
+#: ak_vendor/compliances/mstg.py:145
 msgid ""
 "The keyboard cache is disabled on text inputs that process sensitive data."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:154
+#: ak_vendor/compliances/mstg.py:153
 msgid "No sensitive data is exposed via IPC mechanisms."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:161
+#: ak_vendor/compliances/mstg.py:160
 msgid ""
 "No sensitive data, such as passwords or pins, is exposed through the user "
 "interface."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:170
+#: ak_vendor/compliances/mstg.py:169
 msgid ""
 "No sensitive data is included in backups generated by the mobile operating "
 "system."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:179
+#: ak_vendor/compliances/mstg.py:178
 msgid "The app removes sensitive data from views when moved to the background."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:187
+#: ak_vendor/compliances/mstg.py:186
 msgid ""
 "The app does not hold sensitive data in memory longer than necessary, and "
 "memory is cleared explicitly after use."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:196
+#: ak_vendor/compliances/mstg.py:195
 msgid ""
 "The app enforces a minimum device-access-security policy, such as requiring "
 "the user to set a device passcode."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:205
+#: ak_vendor/compliances/mstg.py:204
 msgid ""
 "The app educates the user about the types of personally identifiable "
 "information processed, as well as security best practices the user should "
 "follow in using the app."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:215
+#: ak_vendor/compliances/mstg.py:214
 msgid ""
 "No sensitive data should be stored locally on the mobile device. Instead, "
 "data should be retrieved from a remote endpoint when needed and only be kept "
 "in memory."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:225
+#: ak_vendor/compliances/mstg.py:224
 msgid ""
 "If sensitive data is still required to be stored locally, it should be "
 "encrypted using a key derived from hardware backed storage which requires "
 "authentication."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:235
+#: ak_vendor/compliances/mstg.py:234
 msgid ""
 "The app’s local storage should be wiped after an excessive number of failed "
 "authentication attempts."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:246
+#: ak_vendor/compliances/mstg.py:245
 msgid ""
 "The app does not rely on symmetric cryptography with hardcoded keys as a "
 "sole method of encryption."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:254
+#: ak_vendor/compliances/mstg.py:253
 msgid "The app uses proven implementations of cryptographic primitives."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:261
+#: ak_vendor/compliances/mstg.py:260
 msgid ""
 "The app uses cryptographic primitives that are appropriate for the "
 "particular use-case, configured with parameters that adhere to industry best "
 "practices."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:271
+#: ak_vendor/compliances/mstg.py:270
 msgid ""
 "The app does not use cryptographic protocols or algorithms that are widely "
 "considered deprecated for security purposes."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:280
+#: ak_vendor/compliances/mstg.py:279
 msgid ""
 "The app doesn't re-use the same cryptographic key for multiple purposes."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:289
+#: ak_vendor/compliances/mstg.py:288
 msgid ""
 "All random values are generated using a sufficiently secure random number "
 "generator."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:300
+#: ak_vendor/compliances/mstg.py:299
 msgid ""
 "If the app provides users access to a remote service, some form of "
 "authentication, such as username/password authentication, is performed at "
 "the remote endpoint."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:310
+#: ak_vendor/compliances/mstg.py:309
 msgid ""
 "If stateful session management is used, the remote endpoint uses randomly "
 "generated session identifiers to authenticate client requests without "
 "sending the user's credentials."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:320
+#: ak_vendor/compliances/mstg.py:319
 msgid ""
 "If stateless token-based authentication is used, the server provides a token "
 "that has been signed using a secure algorithm."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:330
+#: ak_vendor/compliances/mstg.py:329
 msgid ""
 "The remote endpoint terminates the existing session when the user logs out."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:338
+#: ak_vendor/compliances/mstg.py:337
 msgid "A password policy exists and is enforced at the remote endpoint."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:345
+#: ak_vendor/compliances/mstg.py:344
 msgid ""
 "The remote endpoint implements a mechanism to protect against the submission "
 "of credentials an excessive number of times."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:355
+#: ak_vendor/compliances/mstg.py:354
 msgid ""
 "Sessions are invalidated at the remote endpoint after a predefined period of "
 "inactivity and access tokens expire."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:364
+#: ak_vendor/compliances/mstg.py:363
 msgid ""
 "Biometric authentication, if any, is not event-bound (i.e. using an API that "
 "simply returns \"true\" or \"false\"). Instead, it is based on unlocking the "
 "keychain/keystore."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:374
+#: ak_vendor/compliances/mstg.py:373
 msgid ""
 "A second factor of authentication exists at the remote endpoint and the 2FA "
 "requirement is consistently enforced."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:382
+#: ak_vendor/compliances/mstg.py:381
 msgid "Sensitive transactions require step-up authentication."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:389
+#: ak_vendor/compliances/mstg.py:388
 msgid ""
 "The app informs the user of all sensitive activities with their account. "
 "Users are able to view a list of devices, view contextual information (IP "
 "address, location, etc.), and to block specific devices."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:400
+#: ak_vendor/compliances/mstg.py:399
 msgid ""
 "Authorization models should be defined and enforced at the remote endpoint."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:411
+#: ak_vendor/compliances/mstg.py:410
 msgid ""
 "Data is encrypted on the network using TLS. The secure channel is used "
 "consistently throughout the app."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:420
+#: ak_vendor/compliances/mstg.py:419
 msgid ""
 "The TLS settings are in line with current best practices, or as close as "
 "possible if the mobile operating system does not support the recommended "
 "standards."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:430
+#: ak_vendor/compliances/mstg.py:429
 msgid ""
 "The app verifies the X.509 certificate of the remote endpoint when the "
 "secure channel is established. Only certificates signed by a trusted CA are "
 "accepted."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:440
+#: ak_vendor/compliances/mstg.py:439
 msgid ""
 "The app either uses its own certificate store, or pins the endpoint "
 "certificate or public key, and subsequently does not establish connections "
@@ -2713,185 +2804,185 @@ msgid ""
 "a trusted CA."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:452
+#: ak_vendor/compliances/mstg.py:451
 msgid ""
 "The app doesn't rely on a single insecure communication channel (email or "
 "SMS) for critical operations, such as enrollments and account recovery."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:462
+#: ak_vendor/compliances/mstg.py:461
 msgid "The app only depends on up-to-date connectivity and security libraries."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:471
+#: ak_vendor/compliances/mstg.py:470
 msgid "The app only requests the minimum set of permissions necessary."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:478
+#: ak_vendor/compliances/mstg.py:477
 msgid ""
 "All inputs from external sources and the user are validated and if necessary "
 "sanitized. This includes data received via the UI, IPC mechanisms such as "
 "intents, custom URLs, and network sources."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:489
+#: ak_vendor/compliances/mstg.py:488
 msgid ""
 "The app does not export sensitive functionality via custom URL schemes, "
 "unless these mechanisms are properly protected."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:498
+#: ak_vendor/compliances/mstg.py:497
 msgid ""
 "The app does not export sensitive functionality through IPC facilities, "
 "unless these mechanisms are properly protected."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:506
+#: ak_vendor/compliances/mstg.py:505
 msgid "JavaScript is disabled in WebViews unless explicitly required."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:513
+#: ak_vendor/compliances/mstg.py:512
 msgid ""
 "WebViews are configured to allow only the minimum set of protocol handlers "
 "required (ideally, only https is supported). Potentially dangerous handlers, "
 "such as file, tel and app-id, are disabled."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:524
+#: ak_vendor/compliances/mstg.py:523
 msgid ""
 "If native methods of the app are exposed to a WebView, verify that the "
 "WebView only renders JavaScript contained within the app package."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:534
+#: ak_vendor/compliances/mstg.py:533
 msgid ""
 "Object deserialization, if any, is implemented using safe serialization APIs."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:543
+#: ak_vendor/compliances/mstg.py:542
 msgid "The app protects itself against screen overlay attacks. (Android only)"
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:551
+#: ak_vendor/compliances/mstg.py:550
 msgid ""
 "A WebView's cache, storage, and loaded resources (JavaScript, etc.) should "
 "be cleared before the WebView is destroyed."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:561
+#: ak_vendor/compliances/mstg.py:560
 msgid ""
 "Verify that the app prevents usage of custom third-party keyboards whenever "
 "sensitive data is entered (iOS only)."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:572
+#: ak_vendor/compliances/mstg.py:571
 msgid ""
 "The app is signed and provisioned with a valid certificate, of which the "
 "private key is properly protected."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:581
+#: ak_vendor/compliances/mstg.py:580
 msgid ""
 "The app has been built in release mode, with settings appropriate for a "
 "release build (e.g. non-debuggable)."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:589
+#: ak_vendor/compliances/mstg.py:588
 msgid "Debugging symbols have been removed from native binaries."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:596
+#: ak_vendor/compliances/mstg.py:595
 msgid ""
 "Debugging code and developer assistance code (e.g. test code, backdoors, "
 "hidden settings) have been removed. The app does not log verbose errors or "
 "debugging messages."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:606
+#: ak_vendor/compliances/mstg.py:605
 msgid ""
 "All third party components used by the mobile app, such as libraries and "
 "frameworks, are identified, and checked for known vulnerabilities."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:615
+#: ak_vendor/compliances/mstg.py:614
 msgid "The app catches and handles possible exceptions."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:622
+#: ak_vendor/compliances/mstg.py:621
 msgid "Error handling logic in security controls denies access by default."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:629
+#: ak_vendor/compliances/mstg.py:628
 msgid "In unmanaged code, memory is allocated, freed and used securely."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:636
+#: ak_vendor/compliances/mstg.py:635
 msgid ""
 "Free security features offered by the toolchain, such as byte-code "
 "minification, stack protection, PIE support and automatic reference "
 "counting, are activated."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:648
+#: ak_vendor/compliances/mstg.py:647
 msgid ""
 "The app detects, and responds to, the presence of a rooted or jailbroken "
 "device either by alerting the user or terminating the app."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:658
+#: ak_vendor/compliances/mstg.py:657
 msgid ""
 "The app prevents debugging and/or detects, and responds to, a debugger being "
 "attached. All available debugging protocols must be covered."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:668
+#: ak_vendor/compliances/mstg.py:667
 msgid ""
 "The app detects, and responds to, tampering with executable files and "
 "critical data within its own sandbox."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:677
+#: ak_vendor/compliances/mstg.py:676
 msgid ""
 "The app detects, and responds to, the presence of widely used reverse "
 "engineering tools and frameworks on the device."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:685
+#: ak_vendor/compliances/mstg.py:684
 msgid "The app detects, and responds to, being run in an emulator."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:692
+#: ak_vendor/compliances/mstg.py:691
 msgid ""
 "The app detects, and responds to, tampering the code and data in its own "
 "memory space."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:701
+#: ak_vendor/compliances/mstg.py:700
 msgid ""
 "The app implements multiple mechanisms in each defense category (8.1 to "
 "8.6). Note that resiliency scales with the amount, diversity of the "
 "originality of the mechanisms used."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:711
+#: ak_vendor/compliances/mstg.py:710
 msgid ""
 "The detection mechanisms trigger responses of different types, including "
 "delayed and stealthy responses."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:720
+#: ak_vendor/compliances/mstg.py:719
 msgid ""
 "Obfuscation is applied to programmatic defenses, which in turn impede de-"
 "obfuscation via dynamic analysis."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:729
+#: ak_vendor/compliances/mstg.py:728
 msgid ""
 "The app implements a 'device binding' functionality using a device "
 "fingerprint derived from multiple properties unique to the device."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:739
+#: ak_vendor/compliances/mstg.py:738
 msgid ""
 "All executable files and libraries belonging to the app are either encrypted "
 "on the file level and/or important code and data segments inside the "
@@ -2899,7 +2990,7 @@ msgid ""
 "important code or data."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:751
+#: ak_vendor/compliances/mstg.py:750
 msgid ""
 "If the goal of obfuscation is to protect sensitive computations, an "
 "obfuscation scheme is used that is both appropriate for the particular task "
@@ -2909,94 +3000,560 @@ msgid ""
 "features are preferred over obfuscation whenever possible."
 msgstr ""
 
-#: ak_vendor/compliances/mstg.py:766
+#: ak_vendor/compliances/mstg.py:765
 msgid ""
 "As a defense in depth, next to having solid hardening of the communicating "
 "parties, application level payload encryption can be applied to further "
 "impede eavesdropping."
 msgstr ""
 
-#: ak_vendor/compliances/owasp.py:8
+#: ak_vendor/compliances/nistsp800171.py:8
+msgid ""
+"Limit system access to authorized users, processes acting on behalf of "
+"authorized users, and devices (including other systems)"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:15
+msgid ""
+"Employ the principle of least privilege, including for specific security "
+"functions and privileged accounts"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:21
+msgid "Control connection of mobile devices."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:26
+msgid "Encrypt CUI on mobile devices and mobile computing platforms"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:32
+msgid "Verify and control/limit connections to and use of external systems."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:39
+msgid ""
+"Ensure that personnel are trained to carry out their assigned information "
+"security-related duties and responsibilities."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:46
+msgid ""
+"Establish and maintain baseline configurations and inventories of "
+"organizational systems (including hardware, software, firmware, and "
+"documentation) throughout the respective system development life cycles."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:53
+msgid ""
+"Establish and enforce security configuration settings for information "
+"technology products employed in organizational systems."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:60
+msgid ""
+"Authenticate (or verify) the identities of users, processes, or devices, as "
+"a prerequisite to allowing access to organizational systems"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:66
+msgid "Store and transmit only cryptographically-protected passwords"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:72
+msgid ""
+"Track, document, and report incidents to designated officials and/or "
+"authorities both internal and external to the organization"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:78
+msgid "Protect the confidentiality of backup CUI at storage locations."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:84
+msgid ""
+"Periodically assess the risk to organizational operations (including "
+"mission, functions, image, or reputation), organizational assets, and "
+"individuals, resulting from the operation of organizational systems and the "
+"associated processing, storage, or transmission of CUI"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:91
+msgid ""
+"Scan for vulnerabilities in organizational systems and applications "
+"periodically and when new vulnerabilities affecting those systems and "
+"applications are identified."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:97
+msgid "Remediate vulnerabilities in accordance with risk assessments."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:103
+msgid ""
+"Periodically assess the security controls in organizational systems to "
+"determine if the controls are effective in their application"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:110
+msgid ""
+"Monitor, control, and protect communications (i.e., information transmitted "
+"or received by organizational systems) at the external boundaries and key "
+"internal boundaries of organizational systems."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:117
+msgid ""
+"Establish and manage cryptographic keys for cryptography employed in "
+"organizational systems"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:123
+msgid "Control and monitor the use of mobile code."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:128
+msgid "Protect the confidentiality of CUI at rest."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:133
+msgid "Identify, report, and correct system flaws in a timely manner."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:139
+msgid ""
+"Provide protection from malicious code at designated locations within "
+"organizational systems."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:146
+msgid ""
+"Update malicious code protection mechanisms when new releases are available."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:152
+msgid "Identify unauthorized use of organizational systems"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:4
+msgid "Access Enforcement"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:8
+msgid "Restrict access to specific info type"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:10
+msgid "Information Flow Enforcement"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:11
+msgid "Separation of Duties"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:12
+msgid "Least Privilege"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:13
+msgid "Security Attributes"
+msgstr "のセキュリティ評価"
+
+#: ak_vendor/compliances/nistsp80053.py:17
+msgid "Remote Access | MONITORING AND CONTROL"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:22
+msgid "Protection of Confidentiality and Integrity Using Encryption"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:24
+#, fuzzy
+#| msgid "Broken Authentication and Session Management"
+msgid "Authentication and encryption"
+msgstr "壊れた認証とセッション管理"
+
+#: ak_vendor/compliances/nistsp80053.py:28
+msgid "Full device/container based encryption"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:33
+msgid "Monitoring for Information Disclosure"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:35
+#, fuzzy
+#| msgid "Risk Assessment"
+msgid "Control Assessments"
+msgstr "リスクアセスメント"
+
+#: ak_vendor/compliances/nistsp80053.py:36
+msgid "Information Exchange"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:37
+msgid "Continuous Monitoring"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:38
+msgid "Penetration Testing"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:39
+#, fuzzy
+#| msgid "Security Misconfiguration"
+msgid "Baseline Configuration"
+msgstr "セキュリティの誤設定"
+
+#: ak_vendor/compliances/nistsp80053.py:40
+msgid "Configuration Management"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:41
+msgid "Configuration Settings"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:42
+#, fuzzy
+#| msgid "Extraneous Functionality"
+msgid "Least Functionality"
+msgstr "無関係な機能"
+
+#: ak_vendor/compliances/nistsp80053.py:43
+msgid "System Component Inventory"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:47
+msgid "Device Identification and Authentication"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:52
+msgid "Identification and Authentication (Cryptographic Protections)"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:57
+msgid "Service Identification and Authentication"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:59
+msgid "Incident Handling"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:63
+msgid "Maintenance Tools | Software Updates and Patches"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:65
+msgid "Software Updates And Patches"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:69
+msgid "Physical Access Control | Tamper Protection"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:71
+msgid "Monitoring Physical Access"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:72
+msgid "System Inventory"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:73
+msgid "Testing, Training, and Monitoring"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:74
+msgid "Access Agreements"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:75
+msgid "Security Categorization"
+msgstr "のセキュリティ評価"
+
+#: ak_vendor/compliances/nistsp80053.py:76
+#: ak_vendor/templates/report_template.html:1393
+msgid "Risk Assessment"
+msgstr "リスクアセスメント"
+
+#: ak_vendor/compliances/nistsp80053.py:77
+msgid "Vulnerability Monitoring and Scanning"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:78
+#, fuzzy
+#| msgid "Critical Risk"
+msgid "Criticality Analysis"
+msgstr "緊急リスク"
+
+#: ak_vendor/compliances/nistsp80053.py:79
+msgid "System Development Life Cycle"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:80
+msgid "Developer Testing and Evaluation"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:81
+msgid "STATIC CODE ANALYSIS"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:82
+msgid "MANUAL CODE REVIEWS "
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:83
+msgid "PENETRATION TESTING"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:84
+msgid "DYNAMIC CODE ANALYSIS"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:88
+msgid "Development process, standards and tools"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:90
+msgid "Tamper Resistance And Detection"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:91
+msgid "Flaw Remediation"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:92
+msgid "Malicious Code Protection"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:93
+msgid "System Monitoring"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:94
+msgid "UNAUTHORIZED NETWORK SERVICES"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:98
+msgid "Software, Firmware, And Information Integrity"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:100
+#: ak_vendor/compliances/nistsp80053.py:120
+msgid "Cryptographic Protection"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:101
+msgid "Information Input Validation"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:105
+msgid "RESTRICT INPUTS TO TRUSTED SOURCES AND APPROVED FORMATS"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:107
+msgid "INJECTION PREVENTION"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:108
+#, fuzzy
+#| msgid "User Interaction"
+msgid "Memory Protection"
+msgstr "ユーザーインタラクション"
+
+#: ak_vendor/compliances/nistsp80053.py:109
+msgid "Boundary Protection"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:113
+msgid "Transmission Confidentiality and Integrity"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:118
+msgid "Cryptographic Key Establishment and Management"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:124
+msgid "Public Key Infrastructure Certificates"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:126
+msgid "Mobile Code"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:127
+msgid "Protection of Information at Rest"
+msgstr ""
+
+#: ak_vendor/compliances/nistsp80053.py:128
+#, fuzzy
+#| msgid "Insufficient Cryptography"
+msgid "Use of Cryptography"
+msgstr "安全でない暗号化"
+
+#: ak_vendor/compliances/nistsp80053.py:129
+msgid "Tamper Resistance and Detection"
+msgstr ""
+
+#: ak_vendor/compliances/owasp.py:7
 msgid "Improper Platform Usage"
 msgstr "不適切なプラットフォームの使用"
 
-#: ak_vendor/compliances/owasp.py:16
+#: ak_vendor/compliances/owasp.py:15
+#: ak_vendor/compliances/owaspmobile2024.py:72
 msgid "Insecure Data Storage"
 msgstr "安全でないデータストレージ"
 
-#: ak_vendor/compliances/owasp.py:24
+#: ak_vendor/compliances/owasp.py:23
+#: ak_vendor/compliances/owaspmobile2024.py:40
 msgid "Insecure Communication"
 msgstr "安全でないコミュニケーション"
 
-#: ak_vendor/compliances/owasp.py:32
+#: ak_vendor/compliances/owasp.py:31
 msgid "Insecure Authentication"
 msgstr "安全でない認証"
 
-#: ak_vendor/compliances/owasp.py:40
+#: ak_vendor/compliances/owasp.py:39
+#: ak_vendor/compliances/owaspmobile2024.py:80
 msgid "Insufficient Cryptography"
 msgstr "安全でない暗号化"
 
-#: ak_vendor/compliances/owasp.py:48
+#: ak_vendor/compliances/owasp.py:47
 msgid "Insecure Authorization"
 msgstr "安全でない承認"
 
-#: ak_vendor/compliances/owasp.py:56
+#: ak_vendor/compliances/owasp.py:55
 msgid "Client Code Quality"
 msgstr "クライアントコードの品質"
 
-#: ak_vendor/compliances/owasp.py:64
+#: ak_vendor/compliances/owasp.py:63
 msgid "Code Tampering"
 msgstr "コード改ざん"
 
-#: ak_vendor/compliances/owasp.py:72
+#: ak_vendor/compliances/owasp.py:71
 msgid "Reverse Engineering"
 msgstr "リバースエンジニアリング"
 
-#: ak_vendor/compliances/owasp.py:80
+#: ak_vendor/compliances/owasp.py:79
 msgid "Extraneous Functionality"
 msgstr "無関係な機能"
 
-#: ak_vendor/compliances/owasp.py:88
+#: ak_vendor/compliances/owasp.py:87
 msgid "Injection"
 msgstr "インジェクション"
 
-#: ak_vendor/compliances/owasp.py:96
+#: ak_vendor/compliances/owasp.py:95
 msgid "Broken Authentication and Session Management"
 msgstr "壊れた認証とセッション管理"
 
-#: ak_vendor/compliances/owasp.py:104
+#: ak_vendor/compliances/owasp.py:103
 msgid "Cross Site Scripting"
 msgstr "クロスサイトスクリプティング"
 
-#: ak_vendor/compliances/owasp.py:112
+#: ak_vendor/compliances/owasp.py:111
 msgid "Insecure Direct Object References"
 msgstr "安全でない直接オブジェクト参照"
 
-#: ak_vendor/compliances/owasp.py:120
+#: ak_vendor/compliances/owasp.py:119 ak_vendor/compliances/owaspapi2023.py:64
+#: ak_vendor/compliances/owaspmobile2024.py:64
 msgid "Security Misconfiguration"
 msgstr "セキュリティの誤設定"
 
-#: ak_vendor/compliances/owasp.py:128
+#: ak_vendor/compliances/owasp.py:127
 msgid "Sensitive Data Exposure"
 msgstr "機密データの暴露"
 
-#: ak_vendor/compliances/owasp.py:136
+#: ak_vendor/compliances/owasp.py:135
 msgid "Missing Function Level Access Control"
 msgstr "機能レベルのアクセス制御の欠如"
 
-#: ak_vendor/compliances/owasp.py:144
+#: ak_vendor/compliances/owasp.py:143
 msgid "Cross-Site Request Forgery (CSRF)"
 msgstr "クロスサイトリクエストフォージェリ（CSRF）"
 
-#: ak_vendor/compliances/owasp.py:152
+#: ak_vendor/compliances/owasp.py:151
 msgid "Using Components with Known Vulnerabilities"
 msgstr "既知の脆弱性を持つコンポーネントの使用"
 
-#: ak_vendor/compliances/owasp.py:160
+#: ak_vendor/compliances/owasp.py:159
 msgid "Unvalidated Redirects and Forwards"
 msgstr "未確認のリダイレクトと転送"
 
-#: ak_vendor/compliances/pcidss.py:7
+#: ak_vendor/compliances/owaspapi2023.py:8
+#, fuzzy
+#| msgid "Insecure Authorization"
+msgid "Broken Object Level Authorization"
+msgstr "安全でない承認"
+
+#: ak_vendor/compliances/owaspapi2023.py:16
+#, fuzzy
+#| msgid "Insecure Authentication"
+msgid "Broke Authentication"
+msgstr "安全でない認証"
+
+#: ak_vendor/compliances/owaspapi2023.py:24
+msgid "Broken Object Property Level Authorization"
+msgstr ""
+
+#: ak_vendor/compliances/owaspapi2023.py:32
+msgid "Unrestricted Resource Consumption"
+msgstr ""
+
+#: ak_vendor/compliances/owaspapi2023.py:40
+msgid "Broken Function Level Authorization"
+msgstr ""
+
+#: ak_vendor/compliances/owaspapi2023.py:48
+msgid "Unrestricted Access to Sensitive Business Flows"
+msgstr ""
+
+#: ak_vendor/compliances/owaspapi2023.py:56
+#, fuzzy
+#| msgid "Cross-Site Request Forgery (CSRF)"
+msgid "Server Side Request Forgery"
+msgstr "クロスサイトリクエストフォージェリ（CSRF）"
+
+#: ak_vendor/compliances/owaspapi2023.py:72
+#, fuzzy
+#| msgid "Improper Platform Usage"
+msgid "Improper Inventory Management"
+msgstr "不適切なプラットフォームの使用"
+
+#: ak_vendor/compliances/owaspapi2023.py:80
+msgid "Unsafe Consumption of APIs"
+msgstr ""
+
+#: ak_vendor/compliances/owaspmobile2024.py:8
+#, fuzzy
+#| msgid "Improper Platform Usage"
+msgid "Improper Credential Usage"
+msgstr "不適切なプラットフォームの使用"
+
+#: ak_vendor/compliances/owaspmobile2024.py:16
+msgid "Inadequate Supply Chain Security"
+msgstr ""
+
+#: ak_vendor/compliances/owaspmobile2024.py:24
+#, fuzzy
+#| msgid "Insecure Authentication"
+msgid "Insecure Authentication/Authorization"
+msgstr "安全でない認証"
+
+#: ak_vendor/compliances/owaspmobile2024.py:32
+msgid "Insufficient Input/Output Validation"
+msgstr ""
+
+#: ak_vendor/compliances/owaspmobile2024.py:48
+msgid "Inadequate Privacy Controls"
+msgstr ""
+
+#: ak_vendor/compliances/owaspmobile2024.py:56
+#, fuzzy
+#| msgid "Insufficient Cryptography"
+msgid "Insufficient Binary Protections"
+msgstr "安全でない暗号化"
+
+#: ak_vendor/compliances/pcidss.py:6
 msgid ""
 "Install and maintain a firewall and router configuration to "
 "protectcardholder data"
@@ -3004,7 +3561,7 @@ msgstr ""
 "カード会員データを保護するために、ファイアウォールとルーター設定をインストー"
 "ルして構成を維持する。"
 
-#: ak_vendor/compliances/pcidss.py:13
+#: ak_vendor/compliances/pcidss.py:12
 msgid ""
 "Establish firewall and router configuration standards that formalize testing "
 "whenever configurations change; that identify all connections to cardholder "
@@ -3018,8 +3575,8 @@ msgstr ""
 "各実装にさまざまな技術設定を使用する。 \n"
 "少なくとも6ヵ月ごとに構成ルールセットのレビューを規定する。"
 
-#: ak_vendor/compliances/pcidss.py:22 ak_vendor/compliances/pcidss.py:35
-#: ak_vendor/compliances/pcidss.py:47
+#: ak_vendor/compliances/pcidss.py:21 ak_vendor/compliances/pcidss.py:34
+#: ak_vendor/compliances/pcidss.py:46
 msgid ""
 "Install and maintain a firewall and router configuration to protect "
 "cardholder data"
@@ -3027,7 +3584,7 @@ msgstr ""
 "カード会員データを保護するために、ファイアウォールとルーター設定をインストー"
 "ルして構成を維持する。"
 
-#: ak_vendor/compliances/pcidss.py:28
+#: ak_vendor/compliances/pcidss.py:27
 msgid ""
 "Build firewall and router configurations that restrict all traffic from "
 "untrusted networks and hosts, except for protocols necessary for the "
@@ -3037,7 +3594,7 @@ msgstr ""
 "ワークやホストからのすべてのトラフィックを制限するファイアウォールとルーター"
 "の構成を構築する。"
 
-#: ak_vendor/compliances/pcidss.py:41
+#: ak_vendor/compliances/pcidss.py:40
 msgid ""
 "Prohibit direct public access between the Internet and any system component "
 "in the cardholder data environment."
@@ -3045,7 +3602,7 @@ msgstr ""
 "カード会員データが存在する環境において、インターネットとシステムコンポーネン"
 "トとの間の直接的なパブリックアクセスの禁止する。"
 
-#: ak_vendor/compliances/pcidss.py:53
+#: ak_vendor/compliances/pcidss.py:52
 msgid ""
 "Install personal firewall software on any mobile and/or employee-owned "
 "computers with direct connectivity to the Internet that are used to access "
@@ -3055,8 +3612,8 @@ msgstr ""
 "イルおよび/または従業員が所有するコンピュータに、パーソナルファイアウォールの"
 "ソフトウェアをインストールする。"
 
-#: ak_vendor/compliances/pcidss.py:60 ak_vendor/compliances/pcidss.py:74
-#: ak_vendor/compliances/pcidss.py:88 ak_vendor/compliances/pcidss.py:100
+#: ak_vendor/compliances/pcidss.py:59 ak_vendor/compliances/pcidss.py:73
+#: ak_vendor/compliances/pcidss.py:87 ak_vendor/compliances/pcidss.py:99
 msgid ""
 "Do not use vendor-supplied defaults for system passwords and other security "
 "parameters"
@@ -3064,7 +3621,7 @@ msgstr ""
 "ベンダーから提供されたままの規定値をシステムパスワードやその他のセキュリティ"
 "パラメータに使用しない。"
 
-#: ak_vendor/compliances/pcidss.py:66
+#: ak_vendor/compliances/pcidss.py:65
 msgid ""
 "Always change vendor-supplied defaults before installing a system on the "
 "network. This includes wireless devices that are connected to the cardholder "
@@ -3074,7 +3631,7 @@ msgstr ""
 "る。 これには、カード会員データ環境に接続されているか、カード会員データを送信"
 "するために使用される無線デバイスが含まれる。"
 
-#: ak_vendor/compliances/pcidss.py:80
+#: ak_vendor/compliances/pcidss.py:79
 msgid ""
 "Develop configuration standards for all system components that address all "
 "known security vulnerabilities and are consistent with industry-accepted "
@@ -3085,7 +3642,7 @@ msgstr ""
 "一致するすべてのシステムコンポーネントの構成基準を作成する。 新しい脆弱性の問"
 "題が特定されるとシステム構成標準を更新する。"
 
-#: ak_vendor/compliances/pcidss.py:94
+#: ak_vendor/compliances/pcidss.py:93
 msgid ""
 "Encrypt using strong cryptography all non-console administrative access such "
 "as browser/web- based management tools"
@@ -3093,7 +3650,7 @@ msgstr ""
 "強力な暗号化を使用して、ブラウザ/ Webベースの管理ツールなどコンソール以外の管"
 "理アクセスをすべて暗号化する。"
 
-#: ak_vendor/compliances/pcidss.py:106
+#: ak_vendor/compliances/pcidss.py:105
 msgid ""
 "Shared hosting providers must protect each entity's hosted environment and "
 "cardholder data (details are in PCI DSS Appendix A: Additional PCI DSS "
@@ -3103,13 +3660,13 @@ msgstr ""
 "タを保護する必要がある（詳細はPCI DSS Appendix A：共有ホスティングプロバイダ"
 "の追加PCI DSS要件を参照してください）。"
 
-#: ak_vendor/compliances/pcidss.py:112 ak_vendor/compliances/pcidss.py:123
-#: ak_vendor/compliances/pcidss.py:134 ak_vendor/compliances/pcidss.py:146
-#: ak_vendor/compliances/pcidss.py:160 ak_vendor/compliances/pcidss.py:169
+#: ak_vendor/compliances/pcidss.py:111 ak_vendor/compliances/pcidss.py:122
+#: ak_vendor/compliances/pcidss.py:133 ak_vendor/compliances/pcidss.py:145
+#: ak_vendor/compliances/pcidss.py:159 ak_vendor/compliances/pcidss.py:168
 msgid "Protect stored cardholder data"
 msgstr "保存されたカード会員データを保護する"
 
-#: ak_vendor/compliances/pcidss.py:116
+#: ak_vendor/compliances/pcidss.py:115
 msgid ""
 "Limit cardholder data storage and retention time to that required for "
 "business, legal, and/or regulatory purposes, as documented in your data "
@@ -3119,7 +3676,7 @@ msgstr ""
 "間をビジネス、法的および/または規制目的に必要なものに制限する。 少なくとも四"
 "半期ごとに不要な格納データをパージする。"
 
-#: ak_vendor/compliances/pcidss.py:127
+#: ak_vendor/compliances/pcidss.py:126
 msgid ""
 "Do not store sensitive authentication data after authorization (even if it "
 "is encrypted). See guidelines in table below. Issuers and related entities "
@@ -3131,7 +3688,7 @@ msgstr ""
 "されている場合、発行者および関連するエンティティは機密性の高い認証データを格"
 "納することがあります。"
 
-#: ak_vendor/compliances/pcidss.py:138
+#: ak_vendor/compliances/pcidss.py:137
 msgid ""
 "Mask PAN when displayed; the first six and last four digits are the maximum "
 "number of digits you may display. Not applicable for authorized people with "
@@ -3145,7 +3702,7 @@ msgstr ""
 "ンドによるPOS レシート要件など）に関するこれより厳しい要件がある場合は、その"
 "要件より優先されることはありません。"
 
-#: ak_vendor/compliances/pcidss.py:150
+#: ak_vendor/compliances/pcidss.py:149
 msgid ""
 "Render PAN unreadable anywhere it is stored including on portable digital "
 "media, backup media, in logs, and data received from or stored by wireless "
@@ -3161,13 +3718,13 @@ msgstr ""
 "たパッド、または強力な暗号化が含まれます。 （強力な暗号化の定義については、"
 "「PCI DSS用語集」を参照してください）。"
 
-#: ak_vendor/compliances/pcidss.py:164
+#: ak_vendor/compliances/pcidss.py:163
 msgid ""
 "Protect any keys used for encryption of cardholder data from disclosure and "
 "misuse"
 msgstr "カード会員データの暗号化に使用される鍵を漏洩や不正使用から保護する"
 
-#: ak_vendor/compliances/pcidss.py:173
+#: ak_vendor/compliances/pcidss.py:172
 msgid ""
 "Fully document and implement all appropriate key management processes and "
 "procedures for cryptographic keys used for encryption of cardholder data"
@@ -3175,11 +3732,11 @@ msgstr ""
 "カード会員データの暗号化に使用される暗号化鍵の管理プロセスおよび手順\n"
 "をすべて文書化し、実装する。"
 
-#: ak_vendor/compliances/pcidss.py:180 ak_vendor/compliances/pcidss.py:198
+#: ak_vendor/compliances/pcidss.py:179 ak_vendor/compliances/pcidss.py:197
 msgid "Encrypt transmission of cardholder data across open, public networks"
 msgstr "公共ネットワーク経由でのカード会員データの送信を暗号化する"
 
-#: ak_vendor/compliances/pcidss.py:185
+#: ak_vendor/compliances/pcidss.py:184
 msgid ""
 "Use strong cryptography and security protocols such as SSL/TLS, SSH or IPSec "
 "to safeguard sensitive cardholder data during transmission over open, public "
@@ -3198,16 +3755,16 @@ msgstr ""
 "認証と送信のための強力な暗号化を実装する。 セキュリティ管理としてのWEPは使用"
 "しない。"
 
-#: ak_vendor/compliances/pcidss.py:203
+#: ak_vendor/compliances/pcidss.py:202
 msgid "Never send unprotected PANs by end user messaging technologies"
 msgstr ""
 "保護されていない PAN をエンドユーザメッセージングテクノロジで送信しない。"
 
-#: ak_vendor/compliances/pcidss.py:207 ak_vendor/compliances/pcidss.py:216
+#: ak_vendor/compliances/pcidss.py:206 ak_vendor/compliances/pcidss.py:215
 msgid "Use and regularly update anti-virus software or programs"
 msgstr "アンチウイルスソフトウェアまたはプログラムを使用し、定期的に更新する。"
 
-#: ak_vendor/compliances/pcidss.py:211
+#: ak_vendor/compliances/pcidss.py:210
 msgid ""
 "Deploy anti-virus software on all systems affected by malicious software "
 "(particularly personal computers and servers)"
@@ -3215,7 +3772,7 @@ msgstr ""
 "悪意のあるソフトウェア（特にパーソナルコンピュータやサーバー）の影響を受ける"
 "すべてのシステムにアンチウイルスソフトウェアを導入する。"
 
-#: ak_vendor/compliances/pcidss.py:220
+#: ak_vendor/compliances/pcidss.py:219
 msgid ""
 "Ensure that all anti-virus mechanisms are current, actively running, and "
 "generating audit logs"
@@ -3223,13 +3780,13 @@ msgstr ""
 "すべてのウイルス対策メカニズムが最新であり、実行中であり、監査ログが生成され"
 "ていることを確認する。"
 
-#: ak_vendor/compliances/pcidss.py:225 ak_vendor/compliances/pcidss.py:235
-#: ak_vendor/compliances/pcidss.py:245 ak_vendor/compliances/pcidss.py:256
-#: ak_vendor/compliances/pcidss.py:265 ak_vendor/compliances/pcidss.py:276
+#: ak_vendor/compliances/pcidss.py:224 ak_vendor/compliances/pcidss.py:234
+#: ak_vendor/compliances/pcidss.py:244 ak_vendor/compliances/pcidss.py:255
+#: ak_vendor/compliances/pcidss.py:264 ak_vendor/compliances/pcidss.py:275
 msgid "Develop and maintain secure systems and applications"
 msgstr "安全なシステムとアプリケーションの開発と維持"
 
-#: ak_vendor/compliances/pcidss.py:229
+#: ak_vendor/compliances/pcidss.py:228
 msgid ""
 "Ensure that all system components and software are protected from known "
 "vulnerabilities by having the latest vendor-supplied security patches "
@@ -3239,7 +3796,7 @@ msgstr ""
 "ティパッチがインストールされ、既知の脆弱性から保護されている。重要なセ\n"
 "キュリティパッチは、リリース後 1 カ月以内にインストールする。"
 
-#: ak_vendor/compliances/pcidss.py:239
+#: ak_vendor/compliances/pcidss.py:238
 msgid ""
 "Establish a process to identify and assign a risk ranking to newly "
 "discovered security vulnerabilities. Risk rankings should be based on "
@@ -3249,7 +3806,7 @@ msgstr ""
 "ランクを割り当てるプロセスを確立する。リスクのランク分けは、業界のベストプラ"
 "クティスとガイドラインに基づいている必要があります。"
 
-#: ak_vendor/compliances/pcidss.py:249
+#: ak_vendor/compliances/pcidss.py:248
 msgid ""
 "Develop software applications (internal and external, and including web-"
 "based administrative access) in accordance with PCI DSS and based on "
@@ -3260,7 +3817,7 @@ msgstr ""
 "ンを開発する（内部および外部、Webベースの管理アクセスを含む）。ソフトウェア開"
 "発ライフサイクル全体に情報セキュリティを組み込む。"
 
-#: ak_vendor/compliances/pcidss.py:260
+#: ak_vendor/compliances/pcidss.py:259
 msgid ""
 "Follow change control processes and procedures for all changes to system "
 "components"
@@ -3268,7 +3825,7 @@ msgstr ""
 "システムコンポーネントのすべての変更について、変更管理のプロセスと手順に従"
 "う。"
 
-#: ak_vendor/compliances/pcidss.py:269
+#: ak_vendor/compliances/pcidss.py:268
 msgid ""
 "Develop applications based on secure coding guidelines and review custom "
 "application code to identify coding vulnerabilities. Follow up-to-date "
@@ -3278,7 +3835,7 @@ msgstr ""
 "プリケーションコードをレビューしてコーディングの脆弱性を特定する。最新の業界"
 "ベストプラクティスに従い、脆弱性を識別して管理する。"
 
-#: ak_vendor/compliances/pcidss.py:280
+#: ak_vendor/compliances/pcidss.py:279
 msgid ""
 "Ensure all public-facing web applications are protected against known "
 "attacks, either by performing code vulnerability reviews at least annually "
@@ -3290,11 +3847,11 @@ msgstr ""
 "Webアプリケーションが既知の攻撃から保護されていることを確実に\n"
 "する。"
 
-#: ak_vendor/compliances/pcidss.py:287 ak_vendor/compliances/pcidss.py:296
+#: ak_vendor/compliances/pcidss.py:286 ak_vendor/compliances/pcidss.py:295
 msgid "Restrict access to cardholder data by business need to know"
 msgstr "カード会員データへのアクセスを、業務上必要な範囲内に制限する。"
 
-#: ak_vendor/compliances/pcidss.py:291
+#: ak_vendor/compliances/pcidss.py:290
 msgid ""
 "Limit access to system components and cardholder data to only those "
 "individuals whose job requires such access."
@@ -3302,7 +3859,7 @@ msgstr ""
 "システムコンポーネントおよびカード会員データへのアクセスを業務上必要な\n"
 "人に限定する。"
 
-#: ak_vendor/compliances/pcidss.py:300
+#: ak_vendor/compliances/pcidss.py:299
 msgid ""
 "Establish an access control system for systems components with multiple "
 "users that restricts access based on a user's need to know, and is set to "
@@ -3312,14 +3869,14 @@ msgstr ""
 "れ、特に許可のない場合は「すべてを拒否」に設定された、アクセス制御システ\n"
 "ムを確立する。"
 
-#: ak_vendor/compliances/pcidss.py:306 ak_vendor/compliances/pcidss.py:315
-#: ak_vendor/compliances/pcidss.py:326 ak_vendor/compliances/pcidss.py:340
-#: ak_vendor/compliances/pcidss.py:349 ak_vendor/compliances/pcidss.py:358
-#: ak_vendor/compliances/pcidss.py:367 ak_vendor/compliances/pcidss.py:379
+#: ak_vendor/compliances/pcidss.py:305 ak_vendor/compliances/pcidss.py:314
+#: ak_vendor/compliances/pcidss.py:325 ak_vendor/compliances/pcidss.py:339
+#: ak_vendor/compliances/pcidss.py:348 ak_vendor/compliances/pcidss.py:357
+#: ak_vendor/compliances/pcidss.py:366 ak_vendor/compliances/pcidss.py:378
 msgid "Assign a unique ID to each person with computer access"
 msgstr "コンピュータへのアクセスが可能な各ユーザに一意のIDを割り当てる。"
 
-#: ak_vendor/compliances/pcidss.py:310
+#: ak_vendor/compliances/pcidss.py:309
 msgid ""
 "Assign all users a unique user name before allowing them to access system "
 "components or cardholder data."
@@ -3327,7 +3884,7 @@ msgstr ""
 "すべてのユーザーにシステムコンポーネントまたはカード会員データへのアクセスを"
 "許可する前に、一意のユーザー名を割り当てる。"
 
-#: ak_vendor/compliances/pcidss.py:319
+#: ak_vendor/compliances/pcidss.py:318
 msgid ""
 "Employ at least one of these to authenticate all users: something you know, "
 "such as a password or passphrase; something you have, such as a token device "
@@ -3337,7 +3894,7 @@ msgstr ""
 "いるものを少なくとも1つ使用します。トークンデバイスやスマートカードなど、あな"
 "たの所有物や生体認証などです。"
 
-#: ak_vendor/compliances/pcidss.py:330
+#: ak_vendor/compliances/pcidss.py:329
 msgid ""
 "Implement two-factor authentication for remote access to the network by "
 "employees, administrators, and third parties. For example, use technologies "
@@ -3354,7 +3911,7 @@ msgstr ""
 "る。1 つの要素を 2 回使用すること（例えば、2 つの個別パスワードを使用する）"
 "は、多要素認証とは見なされない。"
 
-#: ak_vendor/compliances/pcidss.py:344
+#: ak_vendor/compliances/pcidss.py:343
 msgid ""
 "Render all passwords unreadable during storage and transmission, for all "
 "system components, by using strong cryptography."
@@ -3362,7 +3919,7 @@ msgstr ""
 "強力な暗号化を使用して、すべてのシステムコンポーネントについて、保存中および"
 "送信中に認証情報（パスワード）をすべて読み取り不能とする。"
 
-#: ak_vendor/compliances/pcidss.py:353
+#: ak_vendor/compliances/pcidss.py:352
 msgid ""
 "Ensure proper user identification and authentication management for non-"
 "consumer users and administrators on all system components"
@@ -3370,13 +3927,13 @@ msgstr ""
 "すべてのシステムコンポーネントで、非消費者ユーザと管理者のための適切なユーザ"
 "識別管理が行われるようにする。"
 
-#: ak_vendor/compliances/pcidss.py:362
+#: ak_vendor/compliances/pcidss.py:361
 msgid ""
 "Use of other authentication mechanisms such as physical security tokens, "
 "smart cards, and certificates must be assigned to an individual account."
 msgstr ""
 
-#: ak_vendor/compliances/pcidss.py:371
+#: ak_vendor/compliances/pcidss.py:370
 msgid ""
 "All access to any database containing cardholder data must be restricted: "
 "all user access must be through programmatic methods; only database "
@@ -3385,21 +3942,21 @@ msgid ""
 "or non-application processes)."
 msgstr ""
 
-#: ak_vendor/compliances/pcidss.py:383
+#: ak_vendor/compliances/pcidss.py:382
 msgid ""
 "Ensure that related security policies and operational procedures are "
 "documented, in use, and known to all affected parties."
 msgstr ""
 
-#: ak_vendor/compliances/pcidss.py:388 ak_vendor/compliances/pcidss.py:397
-#: ak_vendor/compliances/pcidss.py:406 ak_vendor/compliances/pcidss.py:418
-#: ak_vendor/compliances/pcidss.py:429 ak_vendor/compliances/pcidss.py:437
-#: ak_vendor/compliances/pcidss.py:443 ak_vendor/compliances/pcidss.py:453
-#: ak_vendor/compliances/pcidss.py:462 ak_vendor/compliances/pcidss.py:470
+#: ak_vendor/compliances/pcidss.py:387 ak_vendor/compliances/pcidss.py:396
+#: ak_vendor/compliances/pcidss.py:405 ak_vendor/compliances/pcidss.py:417
+#: ak_vendor/compliances/pcidss.py:428 ak_vendor/compliances/pcidss.py:436
+#: ak_vendor/compliances/pcidss.py:442 ak_vendor/compliances/pcidss.py:452
+#: ak_vendor/compliances/pcidss.py:461 ak_vendor/compliances/pcidss.py:469
 msgid "Restrict physical access to cardholder data"
 msgstr "カード会員データへの物理アクセスを制限する"
 
-#: ak_vendor/compliances/pcidss.py:392
+#: ak_vendor/compliances/pcidss.py:391
 msgid ""
 "Use appropriate facility entry controls to limit and monitor physical access "
 "to systems in the cardholder data environment"
@@ -3407,7 +3964,7 @@ msgstr ""
 "適切な施設入館管理を使用して、カード会員データ環境内のシステムへの物理アクセ"
 "スを制限および監視する。"
 
-#: ak_vendor/compliances/pcidss.py:401
+#: ak_vendor/compliances/pcidss.py:400
 msgid ""
 "Develop procedures to easily distinguish between onsite personnel and "
 "visitors, especially in areas where cardholder data is accessible"
@@ -3415,7 +3972,7 @@ msgstr ""
 "特に、カード会員データにアクセスできる場所について、オンサイト要員と訪問者を"
 "容易に区別するための手順を開発する。"
 
-#: ak_vendor/compliances/pcidss.py:410
+#: ak_vendor/compliances/pcidss.py:409
 msgid ""
 "Ensure all visitors are authorized before entering areas where cardholder "
 "data is processed or maintained; given a physical token that expires and "
@@ -3427,7 +3984,7 @@ msgstr ""
 "者がオンサイトの担当者ではないと特定すると、施設を出る前に、または満了した日"
 "に物理トークンを返却するよう求められます。"
 
-#: ak_vendor/compliances/pcidss.py:422
+#: ak_vendor/compliances/pcidss.py:421
 msgid ""
 "Use a visitor log to maintain a physical audit trail of visitor information "
 "and activity, including visitor name and company, and the onsite personnel "
@@ -3441,16 +3998,16 @@ msgstr ""
 "る。法律によって別途定められていない限り、このログを少なくとも 3 カ月間保管す"
 "る。"
 
-#: ak_vendor/compliances/pcidss.py:433
+#: ak_vendor/compliances/pcidss.py:432
 msgid "Store media back-ups in a secure location, preferably off site."
 msgstr ""
 "バックアップの入った媒体を安全な場所に保管する（オフサイト施設が望ましい）"
 
-#: ak_vendor/compliances/pcidss.py:440
+#: ak_vendor/compliances/pcidss.py:439
 msgid "Physically secure all media."
 msgstr "すべての媒体を物理的にセキュリティ保護する。"
 
-#: ak_vendor/compliances/pcidss.py:447
+#: ak_vendor/compliances/pcidss.py:446
 msgid ""
 "Maintain strict control over the internal or external distribution of any "
 "kind of media. Classify media so the sensitivity of the data can be "
@@ -3459,30 +4016,30 @@ msgstr ""
 "あらゆるタイプの媒体を内部または外部に配布する際の厳格な管理を維持する。\n"
 "データの機密性を識別できるように、媒体を分類する。"
 
-#: ak_vendor/compliances/pcidss.py:457
+#: ak_vendor/compliances/pcidss.py:456
 msgid ""
 "Ensure that management approves any and all media moved from a secured area, "
 "especially when media is distributed to individuals"
 msgstr ""
 "安全なエリアから移動されるすべての媒体を管理者が承認していることを確認する。"
 
-#: ak_vendor/compliances/pcidss.py:466
+#: ak_vendor/compliances/pcidss.py:465
 msgid "Maintain strict control over the storage and accessibility of media"
 msgstr "媒体の保管およびアクセスについて、厳密な管理を維持する。"
 
-#: ak_vendor/compliances/pcidss.py:474
+#: ak_vendor/compliances/pcidss.py:473
 msgid "Destroy media when it is no longer needed for business or legal reasons"
 msgstr "ビジネスまたは法律上不要になった媒体を破棄する。"
 
-#: ak_vendor/compliances/pcidss.py:479 ak_vendor/compliances/pcidss.py:491
-#: ak_vendor/compliances/pcidss.py:507 ak_vendor/compliances/pcidss.py:520
-#: ak_vendor/compliances/pcidss.py:532 ak_vendor/compliances/pcidss.py:540
-#: ak_vendor/compliances/pcidss.py:551
+#: ak_vendor/compliances/pcidss.py:478 ak_vendor/compliances/pcidss.py:490
+#: ak_vendor/compliances/pcidss.py:506 ak_vendor/compliances/pcidss.py:519
+#: ak_vendor/compliances/pcidss.py:531 ak_vendor/compliances/pcidss.py:539
+#: ak_vendor/compliances/pcidss.py:550
 msgid "Track and monitor all access to network resources and cardholder  data"
 msgstr ""
 "ネットワークリソースおよびカード会員データへのすべてのアクセスを追跡監視"
 
-#: ak_vendor/compliances/pcidss.py:484
+#: ak_vendor/compliances/pcidss.py:483
 msgid ""
 "Establish a process for linking all access to system components to each "
 "individual user especially access done with administrative privileges."
@@ -3490,7 +4047,7 @@ msgstr ""
 "特に、管理者権限で実行されるアクセスについて、システムコンポーネントへのすべ"
 "てのアクセスを各ユーザーにリンクするプロセスを確立する。"
 
-#: ak_vendor/compliances/pcidss.py:496
+#: ak_vendor/compliances/pcidss.py:495
 msgid ""
 "Implement automated audit trails for all system components for "
 "reconstructing these events: all individual user accesses to cardholder "
@@ -3505,7 +4062,7 @@ msgstr ""
 "効な論理アクセス試行;識別と認証メカニズムの使用および変更;監査ログの初期化;シ"
 "ステムレベルオブジェクトの作成および削除;"
 
-#: ak_vendor/compliances/pcidss.py:512
+#: ak_vendor/compliances/pcidss.py:511
 msgid ""
 "Record audit trail entries for all system components for each event, "
 "including at a minimum: user identification, type of event, date and time, "
@@ -3517,7 +4074,7 @@ msgstr ""
 "前など、イベントごとにすべてのシステムコンポーネントについて監査証跡エントリ"
 "を記録する。"
 
-#: ak_vendor/compliances/pcidss.py:525
+#: ak_vendor/compliances/pcidss.py:524
 msgid ""
 "Using time synchronization technology, synchronize all critical system "
 "clocks and times and implement controls for acquiring, distributing, and "
@@ -3526,11 +4083,11 @@ msgstr ""
 "時間同期技術を使用して、すべての重要なシステムクロックおよび時間を同期し、時"
 "間を取得、配布、保存するための制御を実装する。"
 
-#: ak_vendor/compliances/pcidss.py:536
+#: ak_vendor/compliances/pcidss.py:535
 msgid "Secure audit trails so they cannot be altered."
 msgstr "監査証跡を変更されないようにする"
 
-#: ak_vendor/compliances/pcidss.py:545
+#: ak_vendor/compliances/pcidss.py:544
 msgid ""
 "Review logs for all system components related to security functions at least "
 "daily"
@@ -3538,7 +4095,7 @@ msgstr ""
 "少なくとも毎日セキュリティ機能に関連するすべてのシステムコンポーネントのログ"
 "を確認する"
 
-#: ak_vendor/compliances/pcidss.py:556
+#: ak_vendor/compliances/pcidss.py:555
 msgid ""
 "Retain audit trail history for at least one year; at least three months of "
 "history must be immediately available for analysis"
@@ -3546,13 +4103,13 @@ msgstr ""
 "監査証跡の履歴を少なくとも 1 年間保持する。少なくとも 3 カ月はすぐに分析でき"
 "る状態にしておく。"
 
-#: ak_vendor/compliances/pcidss.py:561 ak_vendor/compliances/pcidss.py:573
-#: ak_vendor/compliances/pcidss.py:587 ak_vendor/compliances/pcidss.py:598
-#: ak_vendor/compliances/pcidss.py:611
+#: ak_vendor/compliances/pcidss.py:560 ak_vendor/compliances/pcidss.py:572
+#: ak_vendor/compliances/pcidss.py:586 ak_vendor/compliances/pcidss.py:597
+#: ak_vendor/compliances/pcidss.py:610
 msgid "Regularly test security systems and processes"
 msgstr "セキュリティシステムとプロセスを定期的にテストする"
 
-#: ak_vendor/compliances/pcidss.py:565
+#: ak_vendor/compliances/pcidss.py:564
 msgid ""
 "Test for the presence of wireless access points and detect unauthorized "
 "wireless access points on a quarterly basis. Typical methods are wireless "
@@ -3564,7 +4121,7 @@ msgstr ""
 "ステムコンポーネントとインフラストラクチャの物理/論理検査、ネットワークアクセ"
 "ス制御（NAC）、またはワイヤレスIDS / IPSです。"
 
-#: ak_vendor/compliances/pcidss.py:577
+#: ak_vendor/compliances/pcidss.py:576
 msgid ""
 "Run internal and external network vulnerability scans at least quarterly and "
 "after any significant change in the network. After passing a scan for "
@@ -3580,7 +4137,7 @@ msgstr ""
 "（ASV）によって実行されなければならない。ネットワークの変更後に実施するスキャ"
 "ンは社内スタッフが行うことができる。"
 
-#: ak_vendor/compliances/pcidss.py:591
+#: ak_vendor/compliances/pcidss.py:590
 msgid ""
 "Perform external and internal penetration testing, including network- and "
 "application-layer penetration tests, at least annually and after any "
@@ -3590,7 +4147,7 @@ msgstr ""
 "レードまたは修正が行われた後で、ネットワークおよびアプリケーション層のペネト"
 "レーションテストを含む外部および内部ペネトレーションテストを実行する。"
 
-#: ak_vendor/compliances/pcidss.py:602
+#: ak_vendor/compliances/pcidss.py:601
 msgid ""
 "Use network intrusion detection systems and/or intrusion prevention systems "
 "to monitor all traffic at the perimeter of the cardholder data environment "
@@ -3604,7 +4161,7 @@ msgstr ""
 "合は担当者に警告する。すべての侵入検知および防止エンジン、ベースライン、シグ"
 "ネチャを最新状態に保つ。"
 
-#: ak_vendor/compliances/pcidss.py:615
+#: ak_vendor/compliances/pcidss.py:614
 msgid ""
 "Deploy file integrity monitoring tools to alert personnel to unauthorized "
 "modification of critical system files, configuration files or content files. "
@@ -3615,15 +4172,15 @@ msgstr ""
 "更、追加、および削除を含む）を担当者に警告し、重要なファイルの比較を少な\n"
 "くとも週に一度実行するようにソフトウェアを構成する。"
 
-#: ak_vendor/compliances/pcidss.py:623 ak_vendor/compliances/pcidss.py:637
-#: ak_vendor/compliances/pcidss.py:648 ak_vendor/compliances/pcidss.py:661
-#: ak_vendor/compliances/pcidss.py:672 ak_vendor/compliances/pcidss.py:683
-#: ak_vendor/compliances/pcidss.py:694 ak_vendor/compliances/pcidss.py:707
-#: ak_vendor/compliances/pcidss.py:720
+#: ak_vendor/compliances/pcidss.py:622 ak_vendor/compliances/pcidss.py:636
+#: ak_vendor/compliances/pcidss.py:647 ak_vendor/compliances/pcidss.py:660
+#: ak_vendor/compliances/pcidss.py:671 ak_vendor/compliances/pcidss.py:682
+#: ak_vendor/compliances/pcidss.py:693 ak_vendor/compliances/pcidss.py:706
+#: ak_vendor/compliances/pcidss.py:719
 msgid "Maintain a policy that addresses information security for all personnel"
 msgstr "すべての担当者の情報セキュリティに対応するポリシーを維持する。"
 
-#: ak_vendor/compliances/pcidss.py:628
+#: ak_vendor/compliances/pcidss.py:627
 msgid ""
 "Establish, publish, maintain, and disseminate a security policy that "
 "addresses all PCI DSS requirements, includes an annual process for "
@@ -3634,13 +4191,13 @@ msgstr ""
 "普及、脆弱性を特定し、少なくとも年に一度と環境に大きな変更があった場合に実施"
 "されるリスク評価プロセスを実装する。"
 
-#: ak_vendor/compliances/pcidss.py:642
+#: ak_vendor/compliances/pcidss.py:641
 msgid ""
 "Develop daily operational security procedures that are consistent with "
 "requirements in PCI DSS"
 msgstr "PCI DSSの要件に沿った日々の運用セキュリティ手順を開発する"
 
-#: ak_vendor/compliances/pcidss.py:653
+#: ak_vendor/compliances/pcidss.py:652
 msgid ""
 "Develop usage policies for critical technologies to define their proper use "
 "by all personnel. These include remote access, wireless, removable "
@@ -3651,7 +4208,7 @@ msgstr ""
 "これには、リモートアクセス、ワイヤレス、リムーバブル電子メディア、ラップトッ"
 "プ、タブレット、ハンドヘルドデバイス、電子メール、インターネットを含む。"
 
-#: ak_vendor/compliances/pcidss.py:666
+#: ak_vendor/compliances/pcidss.py:665
 msgid ""
 "Ensure that the security policy and procedures clearly define information "
 "security responsibilities for all personnel."
@@ -3659,14 +4216,14 @@ msgstr ""
 "セキュリティポリシーと手順が、すべての担当者に関する情報セキュリティ\n"
 "責任を明確に定義していることを確実にする。"
 
-#: ak_vendor/compliances/pcidss.py:677
+#: ak_vendor/compliances/pcidss.py:676
 msgid ""
 "Assign to an individual or team information security responsibilities "
 "defined by 12.5 subsections."
 msgstr ""
 "個人またはチームに12.5項で定義されている情報セキュリティ責任を割り当てる。"
 
-#: ak_vendor/compliances/pcidss.py:688
+#: ak_vendor/compliances/pcidss.py:687
 msgid ""
 "Implement a formal security awareness program to make all personnel aware of "
 "the importance of cardholder data security"
@@ -3674,7 +4231,7 @@ msgstr ""
 "カード会員データセキュリティポリシーおよび手順をすべての担当者が認識できるよ"
 "うに正式なセキュリティ意識向上プログラムを実装する。"
 
-#: ak_vendor/compliances/pcidss.py:699
+#: ak_vendor/compliances/pcidss.py:698
 msgid ""
 "Screen potential personnel prior to hire to minimize the risk of attacks "
 "from internal sources. Example screening includes previous employment "
@@ -3684,7 +4241,7 @@ msgstr ""
 "クを最小限に抑える。（バックグラウンドチェックの例には、職歴、犯罪歴、信\n"
 "用履歴、経歴照会がある。）"
 
-#: ak_vendor/compliances/pcidss.py:712
+#: ak_vendor/compliances/pcidss.py:711
 msgid ""
 "If cardholder data is shared with service providers, maintain policies and "
 "procedures to formally identify service provider responsibilities for "
@@ -3696,7 +4253,7 @@ msgstr ""
 "し、少なくとも年に一度はサービスプロバイダーのPCI DSS準拠ステータスを監視す"
 "る。"
 
-#: ak_vendor/compliances/pcidss.py:725
+#: ak_vendor/compliances/pcidss.py:724
 msgid ""
 "Implement an incident response plan. Be prepared to respond immediately to a "
 "system breach."
@@ -3704,29 +4261,45 @@ msgstr ""
 "インシデント対応計画を実施します。システム違反に直ちに対応できるようにしてく"
 "ださい。"
 
+#: ak_vendor/report/report.py:743
+msgid "Static"
+msgstr "静的"
+
+#: ak_vendor/report/report.py:744
+msgid "Dynamic"
+msgstr "動的"
+
+#: ak_vendor/report/report.py:745
+msgid "API"
+msgstr ""
+
+#: ak_vendor/report/report.py:746
+msgid "Manual"
+msgstr "手動"
+
 #: ak_vendor/templates/report_template.html:16
 msgid "Confidential"
 msgstr "関係者外秘"
 
-#: ak_vendor/templates/report_template.html:439
+#: ak_vendor/templates/report_template.html:579
 msgid "App Security Report"
 msgstr "アプリケーション セキュリティレポート"
 
-#: ak_vendor/templates/report_template.html:440
+#: ak_vendor/templates/report_template.html:580
 msgid "For Internal Purpose"
 msgstr "内部目的のみ"
 
-#: ak_vendor/templates/report_template.html:479
-#: ak_vendor/templates/report_template.html:501
+#: ak_vendor/templates/report_template.html:619
+#: ak_vendor/templates/report_template.html:641
 msgid "Prepared by"
 msgstr "Prepared by"
 
-#: ak_vendor/templates/report_template.html:489
-#: ak_vendor/templates/report_template.html:513
+#: ak_vendor/templates/report_template.html:629
+#: ak_vendor/templates/report_template.html:653
 msgid "Powered by"
 msgstr "搭載"
 
-#: ak_vendor/templates/report_template.html:529
+#: ak_vendor/templates/report_template.html:669
 msgid ""
 "Portions of this document and the templates used in its production are the "
 "property of Appknox"
@@ -3734,22 +4307,22 @@ msgstr ""
 "この文書の一部およびそのプロダクションに使用されるテンプレートは、Appknoxが所"
 "有権を有します。"
 
-#: ak_vendor/templates/report_template.html:529
-#: ak_vendor/templates/report_template.html:531
+#: ak_vendor/templates/report_template.html:669
+#: ak_vendor/templates/report_template.html:671
 msgid " and "
 msgstr " そして "
 
-#: ak_vendor/templates/report_template.html:529
-#: ak_vendor/templates/report_template.html:531
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:669
+#: ak_vendor/templates/report_template.html:671
+#: ak_vendor/templates/report_template.html:853
 msgid ","
 msgstr "、"
 
-#: ak_vendor/templates/report_template.html:529
+#: ak_vendor/templates/report_template.html:669
 msgid " and cannot be copied without permission."
 msgstr " 許可なくコピーすることはできません。"
 
-#: ak_vendor/templates/report_template.html:531
+#: ak_vendor/templates/report_template.html:671
 msgid ""
 "While precautions have been taken in the preparation of this document, the "
 "publisher and the author(s) assume no responsibility for errors, omissions, "
@@ -3760,12 +4333,12 @@ msgstr ""
 "ている情報の使用に起因する誤り、省略、または損害について一切責任を負いませ"
 "ん。"
 
-#: ak_vendor/templates/report_template.html:531
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:671
+#: ak_vendor/templates/report_template.html:853
 msgid "Appknox"
 msgstr "Appknox"
 
-#: ak_vendor/templates/report_template.html:531
+#: ak_vendor/templates/report_template.html:671
 msgid ""
 " services does not guarantee the security of a system, or that intrusions "
 "will not occur."
@@ -3773,140 +4346,120 @@ msgstr ""
 " のサービスを使用しても、システムのセキュリティや、侵入が発生しないことを保証"
 "するものではありません。"
 
-#: ak_vendor/templates/report_template.html:542
+#: ak_vendor/templates/report_template.html:682
 msgid "Application Details"
 msgstr "アプリケーションの詳細"
 
-#: ak_vendor/templates/report_template.html:547
+#: ak_vendor/templates/report_template.html:687
 msgid "Application Name"
 msgstr "アプリケーションの名称"
 
-#: ak_vendor/templates/report_template.html:553
+#: ak_vendor/templates/report_template.html:693
 msgid "Platform"
 msgstr "プラットフォーム"
 
-#: ak_vendor/templates/report_template.html:557
+#: ak_vendor/templates/report_template.html:697
 msgid "Application Namespace"
 msgstr "アプリケーションの名前空間"
 
-#: ak_vendor/templates/report_template.html:561
+#: ak_vendor/templates/report_template.html:701
 msgid "Version"
 msgstr "バージョン"
 
-#: ak_vendor/templates/report_template.html:565
+#: ak_vendor/templates/report_template.html:705
 msgid "Version Code"
 msgstr "バージョン"
 
-#: ak_vendor/templates/report_template.html:569
+#: ak_vendor/templates/report_template.html:709
 msgid "Application SHA1 Hash"
 msgstr "アプリケーション SHA1 ハッシュ"
 
-#: ak_vendor/templates/report_template.html:573
+#: ak_vendor/templates/report_template.html:713
 msgid "Application MD5 Hash"
 msgstr "アプリケーション MD5 ハッシュ"
 
-#: ak_vendor/templates/report_template.html:579
+#: ak_vendor/templates/report_template.html:719
 msgid "Audit Details"
 msgstr "監査の詳細"
 
-#: ak_vendor/templates/report_template.html:585
+#: ak_vendor/templates/report_template.html:725
 msgid "File ID"
 msgstr "ファイルID"
 
-#: ak_vendor/templates/report_template.html:590
+#: ak_vendor/templates/report_template.html:730
 msgid "Audit Date"
 msgstr "監査日"
 
-#: ak_vendor/templates/report_template.html:594
+#: ak_vendor/templates/report_template.html:734
 msgid "Scan Status"
 msgstr "スキャン状態"
 
-#: ak_vendor/templates/report_template.html:602
-#: ak_vendor/templates/report_template.html:635
-msgid "Static"
-msgstr "静的"
-
-#: ak_vendor/templates/report_template.html:610
-#: ak_vendor/templates/report_template.html:638
-msgid "Dynamic"
-msgstr "動的"
-
-#: ak_vendor/templates/report_template.html:618
-#: ak_vendor/templates/report_template.html:641
-msgid "API"
-msgstr ""
-
-#: ak_vendor/templates/report_template.html:626
-#: ak_vendor/templates/report_template.html:644
-msgid "Manual"
-msgstr "手動"
-
-#: ak_vendor/templates/report_template.html:631
+#: ak_vendor/templates/report_template.html:755
 msgid "Scans included in the Report"
 msgstr "レポートに含まれるスキャン"
 
-#: ak_vendor/templates/report_template.html:659
+#: ak_vendor/templates/report_template.html:778
 msgid "Table of Contents"
 msgstr "目次"
 
-#: ak_vendor/templates/report_template.html:667
-#: ak_vendor/templates/report_template.html:731
+#: ak_vendor/templates/report_template.html:786
+#: ak_vendor/templates/report_template.html:850
 msgid "Report Summary"
 msgstr "レポートの概要"
 
-#: ak_vendor/templates/report_template.html:673
-#: ak_vendor/templates/report_template.html:737
+#: ak_vendor/templates/report_template.html:792
+#: ak_vendor/templates/report_template.html:856
 msgid "Audit Summary"
 msgstr "監査の概要"
 
-#: ak_vendor/templates/report_template.html:678
-#: ak_vendor/templates/report_template.html:812
-#: ak_vendor/templates/report_template.html:855
+#: ak_vendor/templates/report_template.html:797
+#: ak_vendor/templates/report_template.html:935
+#: ak_vendor/templates/report_template.html:1025
 msgid "Appknox "
-msgstr "Appknox"
+msgstr "Appknox "
 
-#: ak_vendor/templates/report_template.html:678
-#: ak_vendor/templates/report_template.html:812
+#: ak_vendor/templates/report_template.html:797
+#: ak_vendor/templates/report_template.html:935
 msgid "Security Rating"
 msgstr "のセキュリティ評価"
 
-#: ak_vendor/templates/report_template.html:693
-#: ak_vendor/templates/report_template.html:1143
+#: ak_vendor/templates/report_template.html:812
+#: ak_vendor/templates/report_template.html:1421
 msgid "Noncompliant Code Example"
 msgstr "違反コードの例"
 
-#: ak_vendor/templates/report_template.html:700
-#: ak_vendor/templates/report_template.html:1151
+#: ak_vendor/templates/report_template.html:819
+#: ak_vendor/templates/report_template.html:1429
 msgid "Compliant Solution"
 msgstr "コンプライアンス ソリューション"
 
-#: ak_vendor/templates/report_template.html:707
-#: ak_vendor/templates/report_template.html:1159
+#: ak_vendor/templates/report_template.html:826
+#: ak_vendor/templates/report_template.html:1437
 msgid "Business Implication"
 msgstr "ビジネスへの影響"
 
-#: ak_vendor/templates/report_template.html:714
-#: ak_vendor/templates/report_template.html:1167
+#: ak_vendor/templates/report_template.html:833
+#: ak_vendor/templates/report_template.html:1445
 msgid "Related Vulnerabilities"
 msgstr "関連のある脆弱性"
 
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:853
 msgid ", powered by "
 msgstr "、 搭載 "
 
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:853
 msgid " conducted a security assessment of the mobile application. "
 msgstr " モバイルアプリケーションのセキュリティ評価を実施しました。"
 
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:853
 msgid "This report is generated based on the findings during the automated"
 msgstr "このレポートは、自動化中の調査結果に基づいて生成されます"
 
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:853
 msgid " and manual"
 msgstr " そしてマニュアル"
 
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:853
 msgid ""
 " auditing process. It also contains the process of discovering those "
 "vulnerabilities in the first place, and ways to remediate those issues."
@@ -3914,158 +4467,184 @@ msgstr ""
 "監査プロセス。また、そもそもこれらの脆弱性を見つけるプロセスと、それらの問題"
 "を修正する方法も含まれています。"
 
-#: ak_vendor/templates/report_template.html:763
-msgid "Risk"
-msgstr "リスク"
-
-#: ak_vendor/templates/report_template.html:788
+#: ak_vendor/templates/report_template.html:911
 msgid "Priority Level"
 msgstr "優先レベル"
 
-#: ak_vendor/templates/report_template.html:789
+#: ak_vendor/templates/report_template.html:912
 msgid "Number of failed test cases"
 msgstr "脆弱性の数"
 
-#: ak_vendor/templates/report_template.html:792
+#: ak_vendor/templates/report_template.html:915
 msgid "Critical Risk"
 msgstr "緊急リスク"
 
-#: ak_vendor/templates/report_template.html:796
+#: ak_vendor/templates/report_template.html:919
 msgid "High Risk"
 msgstr "高リスク"
 
-#: ak_vendor/templates/report_template.html:800
+#: ak_vendor/templates/report_template.html:923
 msgid "Medium Risk"
 msgstr "中リスク"
 
-#: ak_vendor/templates/report_template.html:804
+#: ak_vendor/templates/report_template.html:927
 msgid "Low Risk"
 msgstr "低リスク"
 
-#: ak_vendor/templates/report_template.html:826
+#: ak_vendor/templates/report_template.html:950
 msgid "Critical"
 msgstr "緊急"
 
-#: ak_vendor/templates/report_template.html:830
+#: ak_vendor/templates/report_template.html:961
 msgid "High"
 msgstr "高"
 
-#: ak_vendor/templates/report_template.html:834
+#: ak_vendor/templates/report_template.html:972
 msgid "Medium"
 msgstr "中"
 
-#: ak_vendor/templates/report_template.html:838
+#: ak_vendor/templates/report_template.html:983
 msgid "Low"
 msgstr "低"
 
-#: ak_vendor/templates/report_template.html:842
+#: ak_vendor/templates/report_template.html:994
 msgid "Passed"
 msgstr "合格"
 
-#: ak_vendor/templates/report_template.html:846
+#: ak_vendor/templates/report_template.html:1010
 msgid "Untested"
 msgstr "未テスト"
 
-#: ak_vendor/templates/report_template.html:855
-msgid "Security Rating:"
-msgstr "セキュリティ評価："
+#: ak_vendor/templates/report_template.html:1025
+msgid "Security Rating - "
+msgstr "のセキュリティ評価 - "
 
-#: ak_vendor/templates/report_template.html:855
+#: ak_vendor/templates/report_template.html:1025
 msgid "Unsecured"
 msgstr "脆弱"
 
-#: ak_vendor/templates/report_template.html:882
+#: ak_vendor/templates/report_template.html:1059
 msgid "Risk Rating"
 msgstr "リスク評価"
 
-#: ak_vendor/templates/report_template.html:907
+#: ak_vendor/templates/report_template.html:1074
+msgid "Scan Type"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1097
 msgid "This risk has been overridden from"
-msgstr "This risk has been overridden from"
+msgstr "このリスクは以前から上書きされています"
 
-#: ak_vendor/templates/report_template.html:907
+#: ak_vendor/templates/report_template.html:1097
 msgid "to"
-msgstr "to"
+msgstr "に"
 
-#: ak_vendor/templates/report_template.html:907
+#: ak_vendor/templates/report_template.html:1097
+msgid "by"
+msgstr "による"
+
+#: ak_vendor/templates/report_template.html:1097
 msgid "The reason is:"
-msgstr "The reason is:"
+msgstr "その理由は："
 
-#: ak_vendor/templates/report_template.html:917
+#: ak_vendor/templates/report_template.html:1107
 msgid "CVSS"
 msgstr "CVSS"
 
-#: ak_vendor/templates/report_template.html:922
+#: ak_vendor/templates/report_template.html:1112
 msgid "Version 3.0 Base Score"
 msgstr "バージョン3.0ベーススコア"
 
-#: ak_vendor/templates/report_template.html:926
+#: ak_vendor/templates/report_template.html:1116
 msgid "Attack vector"
 msgstr "アタックベクトル"
 
-#: ak_vendor/templates/report_template.html:930
+#: ak_vendor/templates/report_template.html:1120
 msgid "Attack complexity"
 msgstr "攻撃の複雑さ"
 
-#: ak_vendor/templates/report_template.html:936
+#: ak_vendor/templates/report_template.html:1126
 msgid "Privileges required"
 msgstr "特権が必要です"
 
-#: ak_vendor/templates/report_template.html:940
+#: ak_vendor/templates/report_template.html:1130
 msgid "User Interaction"
 msgstr "ユーザーインタラクション"
 
-#: ak_vendor/templates/report_template.html:946
+#: ak_vendor/templates/report_template.html:1136
 msgid "Scope"
 msgstr "範囲"
 
-#: ak_vendor/templates/report_template.html:950
+#: ak_vendor/templates/report_template.html:1140
 msgid "Confidentiality Impact"
 msgstr "機密性の影響"
 
-#: ak_vendor/templates/report_template.html:956
+#: ak_vendor/templates/report_template.html:1146
 msgid "Integrity Impact"
 msgstr "完全性の影響"
 
-#: ak_vendor/templates/report_template.html:960
+#: ak_vendor/templates/report_template.html:1150
 msgid "Availability Impact"
 msgstr "可用性への影響"
 
-#: ak_vendor/templates/report_template.html:970
+#: ak_vendor/templates/report_template.html:1160
 msgid "Regulatory"
 msgstr "規制上"
 
-#: ak_vendor/templates/report_template.html:975
+#: ak_vendor/templates/report_template.html:1164
 msgid "OWASP"
 msgstr "OWASP"
 
-#: ak_vendor/templates/report_template.html:993
+#: ak_vendor/templates/report_template.html:1181
+msgid "OWASP Mobile Top 10 (2024)"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1199
 msgid "CWE"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1011
+#: ak_vendor/templates/report_template.html:1217
 msgid "MSTG"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1029
+#: ak_vendor/templates/report_template.html:1235
+msgid "OWASP MASVS (v2)"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1253
+msgid "OWASP API 2023"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1271
 msgid "ASVS"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1047
+#: ak_vendor/templates/report_template.html:1289
 msgid "PCI-DSS"
 msgstr "PCI-DSS"
 
-#: ak_vendor/templates/report_template.html:1068
+#: ak_vendor/templates/report_template.html:1310
 msgid "HIPAA"
 msgstr "HIPAA"
 
-#: ak_vendor/templates/report_template.html:1096
+#: ak_vendor/templates/report_template.html:1338
 msgid "GDPR"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1115
-msgid "Risk Assessment"
-msgstr "リスクアセスメント"
+#: ak_vendor/templates/report_template.html:1356
+msgid "NIST SP 800-53"
+msgstr ""
 
-#: ak_vendor/templates/report_template.html:1184
+#: ak_vendor/templates/report_template.html:1374
+msgid "NIST SP 800-171"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1462
 msgid "References"
 msgstr "参考文献"
+
+#~ msgid "Risk"
+#~ msgstr "リスク"
+
+#~ msgid "Security Rating:"
+#~ msgstr "セキュリティ評価："

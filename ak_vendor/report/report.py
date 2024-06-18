@@ -250,6 +250,10 @@ class Risk:
     computed_value_color = attr.ib(type=str, default=RiskColorEnum.UNTESTED.value)
     is_overridden = attr.ib(type=bool, default=False)
     override_comment = attr.ib(type=str, default="")
+    overridden_by = attr.ib(type=str, default="")
+    overridden_date = attr.ib(type=str, default="")
+    overridden_criteria = attr.ib(type=str, default="")
+    overridden_criteria_value = attr.ib(type=str, default="")
 
 
 @attr.s
@@ -430,7 +434,9 @@ class Regulatory:
         return OWASPAPI2023(code=code, year=year, title=title)
 
     @classmethod
-    def create_owaspmobile2024(cls, code: str, year: int, title: str) -> "OWASPMOBILE2024":
+    def create_owaspmobile2024(
+        cls, code: str, year: int, title: str
+    ) -> "OWASPMOBILE2024":
         return OWASPMOBILE2024(code=code, year=year, title=title)
 
     @classmethod
@@ -490,7 +496,9 @@ class Regulatory:
         self.owaspapi2023.append(owaspapi2023)
         return self.owaspapi2023
 
-    def add_owaspmobile2024(self, owaspmobile2024: OWASPMOBILE2024) -> "List[OWASPMOBILE2024]":
+    def add_owaspmobile2024(
+        self, owaspmobile2024: OWASPMOBILE2024
+    ) -> "List[OWASPMOBILE2024]":
         self.owaspmobile2024.append(owaspmobile2024)
         return self.owaspmobile2024
 
@@ -675,6 +683,10 @@ class Analysis:
         computed_value_color: str,
         is_overridden: bool,
         override_comment: str,
+        overridden_by: str,
+        overridden_date: str,
+        overridden_criteria: str,
+        overridden_criteria_value: str,
     ) -> Risk:
         return Risk(
             value=value,
@@ -685,6 +697,10 @@ class Analysis:
             computed_value_color=computed_value_color,
             is_overridden=is_overridden,
             override_comment=override_comment,
+            overridden_by=overridden_by,
+            overridden_date=overridden_date,
+            overridden_criteria=overridden_criteria,
+            overridden_criteria_value=overridden_criteria_value,
         )
 
     def add_finding(self, finding: Finding) -> Finding:
@@ -937,6 +953,38 @@ class Report:
                 count += 1
         return count
 
+    def _count_severity_overridden(self, risk_value_enum: RiskValueEnum) -> str:
+        """
+        Count the number of analyses with an overridden risk matching the given value.
+
+        This function iterates over the list of analyses and increments a counter for
+        each analysis that meets the following criteria:
+
+        1. The analysis has a risk that is not passed by system (risk.value >0) .
+        2. The risk level for the analysis has been overridden (a.risk.is_overridden).
+        3. The computed value of the overridden risk level matches the provided
+            value ( a.risk.computed_value == value)
+
+        Args:
+            value (RiskValueEnum):The value to match against the computed value value of
+            the overridden risk level. This is typically a int representation of the
+                risk severity level (e.g., RiskValueEnum.CRITICAL,RiskValueEnum.LOW
+                ,RiskValueEnum.MEDIUM ,RiskValueEnum.HIGH, etc ).
+
+        Returns:
+            int: The count of analyses with an overridden risk matching the given value.
+        """
+        count = 0
+        for a in self.analyses:
+            if (
+                a.risk
+                and a.risk.value > 0
+                and a.risk.is_overridden
+                and (a.risk.computed_value == risk_value_enum.value)
+            ):
+                count += 1
+        return count
+
     def _percent_severity(self, count: int) -> float:
         if not len(self.analyses):
             return 0.0
@@ -961,6 +1009,10 @@ class Report:
     @property
     def passed_count(self) -> int:
         return self._count_severity("passed")
+
+    @property
+    def passed_overridden_count(self) -> int:
+        return self._count_severity_overridden(RiskValueEnum.PASSED)
 
     @property
     def untested_count(self) -> int:
