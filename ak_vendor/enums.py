@@ -345,6 +345,7 @@ class UserRoleEnum:
         EMPLOYEE = [2, "Employee"]
         PARTNER = [3, "Partner"]
         REGULAR = [4, "Regular"]
+        SA_USER = [5, "Sa-User"]
 
 
 @choices
