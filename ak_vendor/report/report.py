@@ -366,6 +366,13 @@ class NISTSP800171:
 
 
 @attr.s
+class SAMA:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+    description = attr.ib(type=str)
+
+
+@attr.s
 class Regulatory:
     owasp = attr.ib(factory=list, type=List[dict])
     cwe = attr.ib(factory=list, type=List[dict])
@@ -379,6 +386,7 @@ class Regulatory:
     gdpr = attr.ib(factory=list, type=List[dict])
     nistsp80053 = attr.ib(factory=list, type=List[dict])
     nistsp800171 = attr.ib(factory=list, type=List[dict])
+    sama = attr.ib(factory=list, type=List[dict])
 
     @classmethod
     def from_json(cls, data):
@@ -407,6 +415,7 @@ class Regulatory:
                 NISTSP800171(**nistsp800171)
                 for nistsp800171 in data.get("nistsp800171", [])
             ],
+            sama=[SAMA(**sama) for sama in data.get("sama", [])],
         )
 
     @classmethod
@@ -472,6 +481,10 @@ class Regulatory:
     def create_nistsp800171(cls, code: str, title: str) -> NISTSP800171:
         return NISTSP800171(code=code, title=title)
 
+    @classmethod
+    def create_sama(cls, code: str, title: str, description: str) -> SAMA:
+        return SAMA(code=code, title=title, description=description)
+
     def add_owasp(self, owasp: OWASP) -> List[OWASP]:
         self.owasp.append(owasp)
         return self.owasp
@@ -522,6 +535,10 @@ class Regulatory:
         self.nistsp800171.append(nistsp800171)
         return self.nistsp800171
 
+    def add_sama(self, sama: SAMA) -> List[SAMA]:
+        self.sama.append(sama)
+        return self.sama
+
 
 @attr.s
 class Tag:
@@ -563,6 +580,7 @@ class Analysis:
             owaspmobile2024=[],
             nistsp80053=[],
             nistsp800171=[],
+            sama=[],
         ),
     )
     findings = attr.ib(factory=list, type=List[Content])
@@ -614,7 +632,10 @@ class Analysis:
         owaspmobile2024: List[dict] = None,
         nistsp80053: List[dict] = None,
         nistsp800171: List[dict] = None,
+        sama: List[dict] = None,
     ) -> Regulatory:
+        if sama is None:
+            sama = []
         if nistsp80053 is None:
             nistsp80053 = []
         if nistsp800171 is None:
@@ -652,6 +673,7 @@ class Analysis:
             gdpr=gdpr,
             nistsp80053=nistsp80053,
             nistsp800171=nistsp800171,
+            sama=sama,
         )
 
     @classmethod
