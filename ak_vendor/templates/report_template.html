@@ -522,6 +522,10 @@
       margin-bottom: 0.5em;
     }
 
+    .regulatory__table__sama__title {
+      margin-bottom: 0.5em;
+    }
+
     .regulatory__table__hipaa__title {
       margin-bottom: 0.5em;
     }
@@ -1168,7 +1172,7 @@
             </table>
           </section>
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.owaspmobile2024 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.owaspmobile2024 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 or analysis.regulatory.sama %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
               <div class="regulatory__block">
@@ -1392,6 +1396,27 @@
                         <tr>
                           <td>{{ nistsp800171.code }}</td>
                           <td>{{ nistsp800171.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.sama %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "SAMA" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for sama in analysis.regulatory.sama %}
+                        <tr>
+                          <td>{{ sama.code }}</td>
+                          <td>
+                            <div class="regulatory__table__sama__title"><strong>{{ sama.title }}</strong></div>
+                            <div>{{ sama.description }}</div>
+                            </td>
                         </tr>
                       {% endfor %}
                     </tbody>
