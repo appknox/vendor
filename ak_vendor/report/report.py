@@ -307,6 +307,11 @@ class PCIDSS:
     title = attr.ib(type=str)
     description = attr.ib(type=str)
 
+@attr.s
+class PCIDSS4:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+    description = attr.ib(type=str)
 
 @attr.s
 class HIPAAStandard:
@@ -382,6 +387,7 @@ class Regulatory:
     owaspapi2023 = attr.ib(factory=list, type=List[dict])
     owaspmobile2024 = attr.ib(factory=list, type=List[dict])
     pcidss = attr.ib(factory=list, type=List[dict])
+    pcidss4 = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
     gdpr = attr.ib(factory=list, type=List[dict])
     nistsp80053 = attr.ib(factory=list, type=List[dict])
@@ -405,6 +411,7 @@ class Regulatory:
                 for owaspmobile2024 in data.get("owaspmobile2024", [])
             ],
             pcidss=[PCIDSS(**pcidss) for pcidss in data.get("pcidss", [])],
+            pcidss4=[PCIDSS4(**pcidss4) for pcidss4 in data.get("pcidss4", [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get("hipaa", [])],
             gdpr=[GDPR(**gdpr) for gdpr in data.get("gdpr", [])],
             nistsp80053=[
@@ -451,6 +458,10 @@ class Regulatory:
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
         return PCIDSS(code=code, title=title, description=description)
+    
+    @classmethod
+    def create_pcidss4(cls, code: str, title: str, description: str) -> PCIDSS4:
+        return PCIDSS4(code=code, title=title, description=description)
 
     @classmethod
     def create_hipaa(
@@ -518,6 +529,10 @@ class Regulatory:
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
         return self.pcidss
+    
+    def add_pcidss4(self, pcidss4: PCIDSS4) -> List[PCIDSS4]:
+        self.pcidss4.append(pcidss4)
+        return self.pcidss4
 
     def add_hipaa(self, hipaa: HIPAA) -> List[HIPAA]:
         self.hipaa.append(hipaa)
@@ -570,6 +585,7 @@ class Analysis:
         default=Regulatory(
             owasp=[],
             pcidss=[],
+            pcidss4=[],
             hipaa=[],
             asvs=[],
             cwe=[],
@@ -626,6 +642,7 @@ class Analysis:
         mstg: List[dict] = None,
         masvs: List[dict] = None,
         pcidss: List[dict] = None,
+        pcidss4: List[dict] = None,
         hipaa: List[dict] = None,
         gdpr: List[dict] = None,
         owaspapi2023: List[dict] = None,
@@ -650,6 +667,8 @@ class Analysis:
             hipaa = []
         if pcidss is None:
             pcidss = []
+        if pcidss4 is None:
+            pcidss4 = []
         if masvs is None:
             masvs = []
         if mstg is None:
@@ -669,6 +688,7 @@ class Analysis:
             owaspapi2023=owaspapi2023,
             owaspmobile2024=owaspmobile2024,
             pcidss=pcidss,
+            pcidss4=pcidss4,
             hipaa=hipaa,
             gdpr=gdpr,
             nistsp80053=nistsp80053,
