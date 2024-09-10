@@ -5,7 +5,7 @@ from typing import List
 from urllib.parse import quote
 
 import attr
-import html2text
+import lxml.html
 import maya
 from cvss import CVSS3
 from django.utils.translation import gettext_lazy as _
@@ -156,7 +156,10 @@ class Content:
     markdown = attr.ib(type=str, default="")
 
     def html_to_text(self):
-        return html2text.html2text(self.html)[:-2]
+        if not self.html:
+            return ""
+        tree = lxml.html.fromstring(self.html)
+        return tree.text_content()
 
 
 @attr.s
@@ -458,7 +461,7 @@ class Regulatory:
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
         return PCIDSS(code=code, title=title, description=description)
-    
+
     @classmethod
     def create_pcidss4(cls, code: str, title: str, description: str) -> PCIDSS4:
         return PCIDSS4(code=code, title=title, description=description)
@@ -529,7 +532,7 @@ class Regulatory:
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
         return self.pcidss
-    
+
     def add_pcidss4(self, pcidss4: PCIDSS4) -> List[PCIDSS4]:
         self.pcidss4.append(pcidss4)
         return self.pcidss4
