@@ -111,6 +111,13 @@ data = [
         ),
     },
     {
+        "id": "3_13_2",
+        "code": "3.13.2",
+        "title": _(
+            "Employ architectural designs, software development techniques, and systems engineering principles that promote effective information security within organizational systems."
+        ),
+    },
+    {
         "id": "3_13_10",
         "code": "3.13.10",
         "title": _(
