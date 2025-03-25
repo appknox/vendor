@@ -1,6 +1,6 @@
 import enum
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List
 from urllib.parse import quote
 
@@ -307,11 +307,13 @@ class PCIDSS:
     title = attr.ib(type=str)
     description = attr.ib(type=str)
 
+
 @attr.s
 class PCIDSS4:
     code = attr.ib(type=str)
     title = attr.ib(type=str)
     description = attr.ib(type=str)
+
 
 @attr.s
 class HIPAAStandard:
@@ -458,7 +460,7 @@ class Regulatory:
     @classmethod
     def create_pcidss(cls, code: str, title: str, description: str) -> PCIDSS:
         return PCIDSS(code=code, title=title, description=description)
-    
+
     @classmethod
     def create_pcidss4(cls, code: str, title: str, description: str) -> PCIDSS4:
         return PCIDSS4(code=code, title=title, description=description)
@@ -529,7 +531,7 @@ class Regulatory:
     def add_pcidss(self, pcidss: PCIDSS) -> List[PCIDSS]:
         self.pcidss.append(pcidss)
         return self.pcidss
-    
+
     def add_pcidss4(self, pcidss4: PCIDSS4) -> List[PCIDSS4]:
         self.pcidss4.append(pcidss4)
         return self.pcidss4
@@ -910,8 +912,10 @@ class Report:
         return Company(name=name, logo=logo, hide=hide)
 
     @classmethod
-    def create_created_on(cls, isodate: str = (maya.now().iso8601())) -> datetime:
-        return maya.parse(isodate).datetime()
+    def create_created_on(cls, isodate: str = None) -> datetime:
+        if isodate is None:
+            return timezone.now()
+        return datetime.fromisoformat(isodate).replace(tzinfo=timezone.utc)
 
     @classmethod
     def create_reference(cls, id: int, name: str, url: str) -> Reference:
