@@ -21,7 +21,6 @@ repository = "https://github.com/appknox/vendor"
 [tool.poetry.dependencies]
 python = "^3.8"
 orm-choices = "0.3.0"
-maya = ">=0.6.0"
 html2text = "2020.1.16"
 attrs = ">=21.1.0"
 cvss = ">=2.0"
