@@ -4449,23 +4449,22 @@ msgstr "、 搭載 "
 
 #: ak_vendor/templates/report_template.html:853
 msgid " conducted a security assessment of the mobile application. "
-msgstr " モバイルアプリケーションのセキュリティ評価を実施しました。"
+msgstr "はモバイルアプリケーションのセキュリティ評価を実施しました。"
 
 #: ak_vendor/templates/report_template.html:853
 msgid "This report is generated based on the findings during the automated"
-msgstr "このレポートは、自動化中の調査結果に基づいて生成されます"
+msgstr "このレポートは自動"
 
 #: ak_vendor/templates/report_template.html:853
 msgid " and manual"
-msgstr " そしてマニュアル"
+msgstr "および手動の"
 
 #: ak_vendor/templates/report_template.html:853
-msgid ""
-" auditing process. It also contains the process of discovering those "
-"vulnerabilities in the first place, and ways to remediate those issues."
+msgid " auditing process. It also contains the process of discovering "
+"those vulnerabilities in the first place, and ways to remediate those issues."
 msgstr ""
-"監査プロセス。また、そもそもこれらの脆弱性を見つけるプロセスと、それらの問題"
-"を修正する方法も含まれています。"
+"監査プロセスにおける調査結果に基づいて生成されています。また、その脆"
+"弱性を最初に発見するまでのプロセスや、その問題を改善する方法なども含まれています。"
 
 #: ak_vendor/templates/report_template.html:911
 msgid "Priority Level"
