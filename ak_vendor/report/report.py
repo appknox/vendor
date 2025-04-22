@@ -6,7 +6,6 @@ from urllib.parse import quote
 
 import attr
 import html2text
-import maya
 from cvss import CVSS3
 from django.utils.translation import gettext_lazy as _
 
@@ -828,7 +827,10 @@ class Report:
         default=Company(name="Appknox", logo="https://appknox.com/in/img/logo.png"),
     )
     powered_by = attr.ib(type=Company, default=Company(hide=True))
-    created_on = attr.ib(type=datetime, default=maya.now().iso8601())
+    created_on = attr.ib(
+        type=datetime,
+        default=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+    )
     show_copyright = attr.ib(type=bool, default=True)
     is_partnered = attr.ib(type=bool, default=False)
     rating = attr.ib(type=int, default=0)
