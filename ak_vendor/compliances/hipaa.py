@@ -524,6 +524,40 @@ data = [
             },
         ],
     },
+    {
+        "id": "164_306_a_1",
+        "code": "164.306(a)(1)",
+        "safeguard": _("General Rules"),
+        "title": _("General Requirements"),
+        "standards": [
+            {
+                "title": _("General Requirements"),
+                "description": _(
+                    "Ensure the confidentiality, integrity, and availability of "
+                    "all electronic protected health information the covered "
+                    "entity or business associate creates, receives, maintains, "
+                    "or transmits."
+                ),
+                "specifications": "Required",
+            }
+        ],
+    },
+    {
+        "id": "164_306_a_2",
+        "code": "164.306(a)(2)",
+        "safeguard": _("General Rules"),
+        "title": _("General Requirements"),
+        "standards": [
+            {
+                "title": _("General Requirements"),
+                "description": _(
+                    "Protect against any reasonably anticipated threats or "
+                    "hazards to the security or integrity of such information."
+                ),
+                "specifications": "Required",
+            }
+        ],
+    },
 ]
 
 
