@@ -33,17 +33,17 @@ data = [
         ),
     },
     {
-        "id": "3_3_4",
-        "code": "3.3.4",
-        "title": _("Cyber Security Architecture"),
+        "id": "3_2_4",
+        "code": "3.2.4",
+        "title": _("Cyber Security Review"),
         "description": _(
             "The cyber security status of the Member Organization's information assets"
             " should be subject to periodic cyber security review."
         ),
     },
     {
-        "id": "3_3_5",
-        "code": "3.3.5",
+        "id": "3_2_5",
+        "code": "3.2.5",
         "title": _("Cyber Security Audits"),
         "description": _(
             "The cyber security status of the Member Organization's information assets"
