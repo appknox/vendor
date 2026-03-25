@@ -23,7 +23,7 @@ python = "^3.8"
 orm-choices = "0.3.0"
 html2text = "2020.1.16"
 attrs = ">=21.1.0"
-cvss = ">=2.0"
+cvss = ">=3.0"
 
 [tool.poetry.group.dev.dependencies]
 Django = "^4.2.6"

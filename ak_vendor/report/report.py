@@ -6,7 +6,7 @@ from urllib.parse import quote
 
 import attr
 import html2text
-from cvss import CVSS3
+from cvss import CVSS3, CVSS4
 from django.utils.translation import gettext_lazy as _
 
 from ..constants import PLATFORM_ICONS
@@ -104,6 +104,133 @@ class AvailabilityImpactEnum(enum.Enum):
     H = "HIGH"
     L = "LOW"
     N = "NONE"
+
+
+# ---------------------------------------------------------------------------
+# CVSS v4.0 enums
+# ---------------------------------------------------------------------------
+
+
+class AttackRequirementsEnum(enum.Enum):
+    N = "NONE"
+    P = "PRESENT"
+
+
+class UserInteractionV4Enum(enum.Enum):
+    N = "NONE"
+    P = "PASSIVE"
+    A = "ACTIVE"
+
+
+class VulnerableSystemImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class SubsequentSystemImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+@attr.s
+class CVSSv4:
+    version = attr.ib(type=str)
+    vector_string = attr.ib(type=str)
+    base_score = attr.ib(type=str)
+    base_severity = attr.ib(type=str)
+    attack_vector = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in AttackVectorEnum]),
+        default=AttackVectorEnum.P.value,
+    )
+    attack_complexity = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in AttackComplexityEnum]),
+        default=AttackComplexityEnum.H.value,
+    )
+    attack_requirements = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in AttackRequirementsEnum]),
+        default=AttackRequirementsEnum.N.value,
+    )
+    privileges_required = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in PrivilegesRequiredEnum]),
+        default=PrivilegesRequiredEnum.H.value,
+    )
+    user_interaction = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in UserInteractionV4Enum]),
+        default=UserInteractionV4Enum.A.value,
+    )
+    vulnerable_confidentiality_impact = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in VulnerableSystemImpactEnum]),
+        default=VulnerableSystemImpactEnum.N.value,
+    )
+    vulnerable_integrity_impact = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in VulnerableSystemImpactEnum]),
+        default=VulnerableSystemImpactEnum.N.value,
+    )
+    vulnerable_availability_impact = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in VulnerableSystemImpactEnum]),
+        default=VulnerableSystemImpactEnum.N.value,
+    )
+    subsequent_confidentiality_impact = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in SubsequentSystemImpactEnum]),
+        default=SubsequentSystemImpactEnum.N.value,
+    )
+    subsequent_integrity_impact = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in SubsequentSystemImpactEnum]),
+        default=SubsequentSystemImpactEnum.N.value,
+    )
+    subsequent_availability_impact = attr.ib(
+        type=str,
+        validator=attr.validators.in_([e.value for e in SubsequentSystemImpactEnum]),
+        default=SubsequentSystemImpactEnum.N.value,
+    )
+
+    @classmethod
+    def parse_vector(cls, vector_string: str) -> "CVSSv4":
+        if not vector_string:
+            return None
+        cvssv4 = CVSS4(vector_string)
+        (base_severity,) = cvssv4.severities()
+        return CVSSv4(
+            version="4.0",
+            vector_string=vector_string,
+            base_score=str(cvssv4.base_score),
+            base_severity=base_severity,
+            attack_vector=AttackVectorEnum[cvssv4.metrics.get("AV")].value,
+            attack_complexity=AttackComplexityEnum[cvssv4.metrics.get("AC")].value,
+            attack_requirements=AttackRequirementsEnum[cvssv4.metrics.get("AT")].value,
+            privileges_required=PrivilegesRequiredEnum[cvssv4.metrics.get("PR")].value,
+            user_interaction=UserInteractionV4Enum[cvssv4.metrics.get("UI")].value,
+            vulnerable_confidentiality_impact=VulnerableSystemImpactEnum[
+                cvssv4.metrics.get("VC")
+            ].value,
+            vulnerable_integrity_impact=VulnerableSystemImpactEnum[
+                cvssv4.metrics.get("VI")
+            ].value,
+            vulnerable_availability_impact=VulnerableSystemImpactEnum[
+                cvssv4.metrics.get("VA")
+            ].value,
+            subsequent_confidentiality_impact=SubsequentSystemImpactEnum[
+                cvssv4.metrics.get("SC")
+            ].value,
+            subsequent_integrity_impact=SubsequentSystemImpactEnum[
+                cvssv4.metrics.get("SI")
+            ].value,
+            subsequent_availability_impact=SubsequentSystemImpactEnum[
+                cvssv4.metrics.get("SA")
+            ].value,
+        )
 
 
 @attr.s
@@ -581,6 +708,7 @@ class Analysis:
     vulnerability_references = attr.ib(type=Content)
     risk = attr.ib(type=Risk, default=Risk())
     cvss_v3 = attr.ib(type=CVSSv3, default=None)
+    cvss_v4 = attr.ib(type=CVSSv4, default=None)
     regulatory = attr.ib(
         type=Regulatory,
         default=Regulatory(
@@ -607,6 +735,7 @@ class Analysis:
     @classmethod
     def from_json(cls, data):
         cvssv3 = data.get("cvss_v3")
+        cvssv4 = data.get("cvss_v4")
         return cls(
             id=data.get("id"),
             title=Content(**data.get("title")),
@@ -620,6 +749,7 @@ class Analysis:
             vulnerability_references=Content(**data.get("vulnerability_references")),
             risk=Risk(**data.get("risk", {})),
             cvss_v3=CVSSv3(**cvssv3) if cvssv3 else None,
+            cvss_v4=CVSSv4(**cvssv4) if cvssv4 else None,
             regulatory=Regulatory.from_json(data.get("regulatory")),
             findings=[
                 cls.create_finding(
@@ -946,6 +1076,7 @@ class Report:
         findings: List[Content] = None,
         tags: List[Tag] = None,
         attachments: List[Attachment] = None,
+        cvss_v4: CVSSv4 = None,
     ) -> Analysis:
         if attachments is None:
             attachments = []
@@ -960,6 +1091,7 @@ class Report:
             desc=desc,
             risk=risk,
             cvss_v3=cvss_v3,
+            cvss_v4=cvss_v4,
             business_implication=business_implication,
             correct_implementation=correct_implementation,
             incorrect_implementation=incorrect_implementation,
@@ -989,6 +1121,10 @@ class Report:
     @classmethod
     def parse_cvssv3_vector(cls, **kwargs) -> CVSSv3:
         return CVSSv3.parse_vector(**kwargs)
+
+    @classmethod
+    def parse_cvssv4_vector(cls, **kwargs) -> CVSSv4:
+        return CVSSv4.parse_vector(**kwargs)
 
     @classmethod
     def get_risk_color(cls, risk: str) -> str:
