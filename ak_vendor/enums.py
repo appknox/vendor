@@ -457,6 +457,41 @@ class AvailabilityImpactEnum:
 
 
 @choices
+class AttackRequirementsEnum:
+    """
+    CVSSv4 attack requirements
+    """
+
+    class Meta:
+        NONE = ["N", "None"]
+        PRESENT = ["P", "Present"]
+
+
+@choices
+class VulnerableSubsequentSystemImpactEnum:
+    """
+    CVSSv4 impact metrics — shared across VC, VI, VA, SC, SI, SA
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class UserInteractionV4Enum:
+    """
+    CVSSv4 user interaction — replaces UserInteractionEnum (N/R → N/P/A)
+    """
+
+    class Meta:
+        NONE = ["N", "None"]
+        PASSIVE = ["P", "Passive"]
+        ACTIVE = ["A", "Active"]
+
+
+@choices
 class MFAMethodEnum:
     """
     Multi-factor authentication method
