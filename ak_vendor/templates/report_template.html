@@ -445,12 +445,12 @@
       height: 1.2em;
     }
 
-    .table--analysis-cvssv3 tr:first-child td:first-child {
+    .table--analysis-cvss tr:first-child td:first-child {
       width: 7em;
       text-align: center;
     }
 
-    .table--analysis-cvssv3 td {
+    .table--analysis-cvss td {
       padding: 0.35em 0.5em;
       border-color: #e4e2e2;
     }
@@ -898,7 +898,7 @@
 
                 <td class="auditsummary__score">
                   {% if analysis.risk.computed_value > 0 %}
-                    <div class="auditsummary__cvssscore {% if analysis.risk.is_overridden %}auditsummary__cvssscore--padded {% endif %}" style="color: {{ analysis.risk.computed_value_color }}">{{ analysis.cvss_v3.base_score }}</div>
+                    <div class="auditsummary__cvssscore {% if analysis.risk.is_overridden %}auditsummary__cvssscore--padded {% endif %}" style="color: {{ analysis.risk.computed_value_color }}">{{ analysis.cvss.base_score }}</div>
                   {% endif %}
 
                   <label class="auditsummary__severity severity" style="background-color: {{ analysis.risk.computed_value_color }}">
@@ -1124,57 +1124,125 @@
             {% endif %}
           </section>
 
+          {% if analysis.cvss %}
           <section class="analysis__cvss">
             <h3 class="analysis__sectionheader">{% trans "CVSS" %}</h3>
-            <table class="table table--bordered table--analysis-cvssv3">
+
+            <table class="table table--bordered table--analysis-cvss">
               <tbody>
+                {% if analysis.cvss.version.value == "3" %}
                 <tr>
                   <td rowspan="4">
                     <div class="analysis__cvss__scoretitle">{% trans "Version 3.0 Base Score" %}</div>
-                    <h2 class="analysis__cvss__scorevalue" style="color: {{ analysis.risk.value_color }}">{{ analysis.cvss_v3.base_score }}</h2>
+                    <h2 class="analysis__cvss__scorevalue" style="color: {{ analysis.risk.value_color }}">{{ analysis.cvss.base_score }}</h2>
                   </td>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Attack vector" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.attack_vector }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.attack_vector }}</span>
                   </td>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Attack complexity" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.attack_complexity }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.attack_complexity }}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Privileges required" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.privileges_required }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.privileges_required }}</span>
                   </td>
                   <td>
                     <span class="analysis__cvss__key">{% trans "User Interaction" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.user_interaction }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.user_interaction }}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Scope" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.scope }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.scope }}</span>
                   </td>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Confidentiality Impact" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.confidentiality_impact }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.confidentiality_impact }}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Integrity Impact" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.integrity_impact }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.integrity_impact }}</span>
                   </td>
                   <td>
                     <span class="analysis__cvss__key">{% trans "Availability Impact" %}:</span>
-                    <span class="analysis__cvss__value">{{ analysis.cvss_v3.availability_impact }}</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.availability_impact }}</span>
                   </td>
                 </tr>
+
+                {% elif analysis.cvss.version.value == "4" %}
+                <tr>
+                  <td rowspan="6">
+                    <div class="analysis__cvss__scoretitle">{% trans "Version 4.0 Base Score" %}</div>
+                    <h2 class="analysis__cvss__scorevalue" style="color: {{ analysis.risk.value_color }}">{{ analysis.cvss.base_score }}</h2>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Attack vector" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.attack_vector }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Attack complexity" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.attack_complexity }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Attack requirements" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.attack_requirements }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Privileges required" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.privileges_required }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "User Interaction" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.user_interaction }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Vulnerable System Confidentiality" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.vuln_confidentiality }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Vulnerable System Integrity" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.vuln_integrity }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Vulnerable System Availability" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.vuln_availability }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Subsequent System Confidentiality" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.subsequent_confidentiality }}</span>
+                  </td>
+                  <td>
+                    <span class="analysis__cvss__key">{% trans "Subsequent System Integrity" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.subsequent_integrity }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <span class="analysis__cvss__key">{% trans "Subsequent System Availability" %}:</span>
+                    <span class="analysis__cvss__value">{{ analysis.cvss.cvss_metrics.subsequent_availability }}</span>
+                  </td>
+                  <td></td>
+                </tr>
+                {% endif %}
               </tbody>
             </table>
           </section>
+          {% endif %}
 
           {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.owaspmobile2024 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.pcidss4 or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 or analysis.regulatory.sama %}
             <section class="analysis__regulatory">
