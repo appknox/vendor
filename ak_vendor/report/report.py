@@ -123,7 +123,7 @@ class VulnerableSubsequentSystemImpactEnum(enum.Enum):
     N = "NONE"
 
 
-class CVSSVersion(enum.Enum):
+class CVSSVersion(str, enum.Enum):
     V3 = "3"
     V4 = "4"
 

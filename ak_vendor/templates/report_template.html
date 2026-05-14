@@ -1130,7 +1130,7 @@
 
             <table class="table table--bordered table--analysis-cvss">
               <tbody>
-                {% if analysis.cvss.version.value == "3" %}
+                {% if analysis.cvss.version == "3" %}
                 <tr>
                   <td rowspan="4">
                     <div class="analysis__cvss__scoretitle">{% trans "Version 3.0 Base Score" %}</div>
@@ -1176,7 +1176,7 @@
                   </td>
                 </tr>
 
-                {% elif analysis.cvss.version.value == "4" %}
+                {% elif analysis.cvss.version == "4" %}
                 <tr>
                   <td rowspan="6">
                     <div class="analysis__cvss__scoretitle">{% trans "Version 4.0 Base Score" %}</div>
