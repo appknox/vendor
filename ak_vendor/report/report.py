@@ -444,7 +444,7 @@ class CVSS:
 
         if vector_string_upper.startswith("CVSS:4"):
             cvssv4 = CVSS4(vector_string)
-            base_severity, _temporal, _environmental = cvssv4.severities()
+            base_severity = cvssv4.severities()[0]
 
             return cls(
                 version=CVSSVersion.V4,
