@@ -478,3 +478,11 @@ class FileFormatEnum:
         ANDROID_APK = [0, "APK"]
         ANDROID_AAB = [1, "AAB"]
         IOS_IPA = [2, "IPA"]
+
+
+@choices_without_unknown
+class KnoxIQScanType:
+    class Meta:
+        SAST = [1, "SAST"]
+        DAST = [2, "DAST"]
+        API = [3, "API"]
