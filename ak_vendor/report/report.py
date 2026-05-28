@@ -106,18 +106,66 @@ class AvailabilityImpactEnum(enum.Enum):
     N = "NONE"
 
 
-class AttackRequirementsEnum(enum.Enum):
+class CVSSV4AttackVectorEnum(enum.Enum):
+    N = "NETWORK"
+    A = "ADJACENT_NETWORK"
+    L = "LOCAL"
+    P = "PHYSICAL"
+
+
+class CVSSV4AttackComplexityEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+
+
+class CVSSV4PrivilegesRequiredEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class CVSSV4AttackRequirementsEnum(enum.Enum):
     N = "NONE"
     P = "PRESENT"
 
 
-class UserInteractionV4Enum(enum.Enum):
+class CVSSV4UserInteractionEnum(enum.Enum):
     N = "NONE"
     P = "PASSIVE"
     A = "ACTIVE"
 
 
-class VulnerableSubsequentSystemImpactEnum(enum.Enum):
+class CVSSV4VulnerableConfidentialityImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class CVSSV4VulnerableIntegrityImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class CVSSV4VulnerableAvailabilityImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class CVSSV4SubsequentConfidentialityImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class CVSSV4SubsequentIntegrityImpactEnum(enum.Enum):
+    H = "HIGH"
+    L = "LOW"
+    N = "NONE"
+
+
+class CVSSV4SubsequentAvailabilityImpactEnum(enum.Enum):
     H = "HIGH"
     L = "LOW"
     N = "NONE"
@@ -305,7 +353,7 @@ class CVSSv3Metric:
     )
 
     @classmethod
-    def from_json(cls, data):
+    def from_json(cls, data) -> "CVSSv3Metric":
         return cls(
             attack_vector=(AttackVectorEnum[data.get("AV")].value),
             attack_complexity=(AttackComplexityEnum[data.get("AC")].value),
@@ -322,106 +370,108 @@ class CVSSv3Metric:
 class CVSSv4Metric:
     attack_vector = attr.ib(
         type=str,
-        validator=attr.validators.in_([e.value for e in AttackVectorEnum]),
-        default=AttackVectorEnum.P.value,
+        validator=attr.validators.in_([e.value for e in CVSSV4AttackVectorEnum]),
+        default=CVSSV4AttackVectorEnum.P.value,
     )
     attack_complexity = attr.ib(
         type=str,
-        validator=attr.validators.in_([e.value for e in AttackComplexityEnum]),
-        default=AttackComplexityEnum.H.value,
+        validator=attr.validators.in_([e.value for e in CVSSV4AttackComplexityEnum]),
+        default=CVSSV4AttackComplexityEnum.H.value,
     )
     attack_requirements = attr.ib(
         type=str,
-        validator=attr.validators.in_([e.value for e in AttackRequirementsEnum]),
-        default=AttackRequirementsEnum.P.value,
+        validator=attr.validators.in_([e.value for e in CVSSV4AttackRequirementsEnum]),
+        default=CVSSV4AttackRequirementsEnum.P.value,
     )
     privileges_required = attr.ib(
         type=str,
-        validator=attr.validators.in_([e.value for e in PrivilegesRequiredEnum]),
-        default=PrivilegesRequiredEnum.H.value,
+        validator=attr.validators.in_([e.value for e in CVSSV4PrivilegesRequiredEnum]),
+        default=CVSSV4PrivilegesRequiredEnum.H.value,
     )
     user_interaction = attr.ib(
         type=str,
-        validator=attr.validators.in_([e.value for e in UserInteractionV4Enum]),
-        default=UserInteractionV4Enum.A.value,
+        validator=attr.validators.in_([e.value for e in CVSSV4UserInteractionEnum]),
+        default=CVSSV4UserInteractionEnum.A.value,
     )
     vuln_confidentiality = attr.ib(
         type=str,
         validator=attr.validators.in_(
-            [e.value for e in VulnerableSubsequentSystemImpactEnum]
+            [e.value for e in CVSSV4VulnerableConfidentialityImpactEnum]
         ),
-        default=VulnerableSubsequentSystemImpactEnum.N.value,
+        default=CVSSV4VulnerableConfidentialityImpactEnum.N.value,
     )
     vuln_integrity = attr.ib(
         type=str,
         validator=attr.validators.in_(
-            [e.value for e in VulnerableSubsequentSystemImpactEnum]
+            [e.value for e in CVSSV4VulnerableIntegrityImpactEnum]
         ),
-        default=VulnerableSubsequentSystemImpactEnum.N.value,
+        default=CVSSV4VulnerableIntegrityImpactEnum.N.value,
     )
     vuln_availability = attr.ib(
         type=str,
         validator=attr.validators.in_(
-            [e.value for e in VulnerableSubsequentSystemImpactEnum]
+            [e.value for e in CVSSV4VulnerableAvailabilityImpactEnum]
         ),
-        default=VulnerableSubsequentSystemImpactEnum.N.value,
+        default=CVSSV4VulnerableAvailabilityImpactEnum.N.value,
     )
     subsequent_confidentiality = attr.ib(
         type=str,
         validator=attr.validators.in_(
-            [e.value for e in VulnerableSubsequentSystemImpactEnum]
+            [e.value for e in CVSSV4SubsequentConfidentialityImpactEnum]
         ),
-        default=VulnerableSubsequentSystemImpactEnum.N.value,
+        default=CVSSV4SubsequentConfidentialityImpactEnum.N.value,
     )
     subsequent_integrity = attr.ib(
         type=str,
         validator=attr.validators.in_(
-            [e.value for e in VulnerableSubsequentSystemImpactEnum]
+            [e.value for e in CVSSV4SubsequentIntegrityImpactEnum]
         ),
-        default=VulnerableSubsequentSystemImpactEnum.N.value,
+        default=CVSSV4SubsequentIntegrityImpactEnum.N.value,
     )
     subsequent_availability = attr.ib(
         type=str,
         validator=attr.validators.in_(
-            [e.value for e in VulnerableSubsequentSystemImpactEnum]
+            [e.value for e in CVSSV4SubsequentAvailabilityImpactEnum]
         ),
-        default=VulnerableSubsequentSystemImpactEnum.N.value,
+        default=CVSSV4SubsequentAvailabilityImpactEnum.N.value,
     )
 
     @classmethod
-    def from_json(cls, data):
+    def from_json(cls, data) -> "CVSSv4Metric":
         return cls(
-            attack_vector=(AttackVectorEnum[data.get("AV")].value),
-            attack_complexity=(AttackComplexityEnum[data.get("AC")].value),
-            attack_requirements=(AttackRequirementsEnum[data.get("AT")].value),
-            privileges_required=(PrivilegesRequiredEnum[data.get("PR")].value),
-            user_interaction=(UserInteractionV4Enum[data.get("UI")].value),
+            attack_vector=(CVSSV4AttackVectorEnum[data.get("AV")].value),
+            attack_complexity=(CVSSV4AttackComplexityEnum[data.get("AC")].value),
+            attack_requirements=(CVSSV4AttackRequirementsEnum[data.get("AT")].value),
+            privileges_required=(CVSSV4PrivilegesRequiredEnum[data.get("PR")].value),
+            user_interaction=(CVSSV4UserInteractionEnum[data.get("UI")].value),
             vuln_confidentiality=(
-                VulnerableSubsequentSystemImpactEnum[data.get("VC")].value
+                CVSSV4VulnerableConfidentialityImpactEnum[data.get("VC")].value
             ),
-            vuln_integrity=(VulnerableSubsequentSystemImpactEnum[data.get("VI")].value),
+            vuln_integrity=(
+                CVSSV4VulnerableIntegrityImpactEnum[data.get("VI")].value
+            ),
             vuln_availability=(
-                VulnerableSubsequentSystemImpactEnum[data.get("VA")].value
+                CVSSV4VulnerableAvailabilityImpactEnum[data.get("VA")].value
             ),
             subsequent_confidentiality=(
-                VulnerableSubsequentSystemImpactEnum[data.get("SC")].value
+                CVSSV4SubsequentConfidentialityImpactEnum[data.get("SC")].value
             ),
             subsequent_integrity=(
-                VulnerableSubsequentSystemImpactEnum[data.get("SI")].value
+                CVSSV4SubsequentIntegrityImpactEnum[data.get("SI")].value
             ),
             subsequent_availability=(
-                VulnerableSubsequentSystemImpactEnum[data.get("SA")].value
+                CVSSV4SubsequentAvailabilityImpactEnum[data.get("SA")].value
             ),
         )
 
 
 @attr.s
 class CVSS:
-    version = attr.ib(type=CVSSVersion)
+    version = attr.ib(type="CVSSVersion")
     vector_string = attr.ib(type=str)
     base_score = attr.ib(type=str)
     base_severity = attr.ib(type=str)
-    cvss_metrics = attr.ib(type=CVSSv3Metric | CVSSv4Metric)
+    cvss_metrics = attr.ib(type="CVSSv3Metric | CVSSv4Metric")
 
     @classmethod
     def parse_vector(cls, vector_string: str) -> "CVSS":
