@@ -457,6 +457,137 @@ class AvailabilityImpactEnum:
 
 
 @choices
+class CVSSV4AttackVectorEnum:
+    """
+    CVSSv4 attack vector
+    """
+
+    class Meta:
+        NETWORK = ["N", "Network"]
+        ADJACENT = ["A", "Adjacent"]
+        LOCAL = ["L", "Local"]
+        PHYSICAL = ["P", "Physical"]
+
+
+@choices
+class CVSSV4AttackComplexityEnum:
+    """
+    CVSSv4 attack complexity
+    """
+
+    class Meta:
+        LOW = ["L", "Low"]
+        HIGH = ["H", "High"]
+
+
+@choices
+class CVSSV4PrivilegesRequiredEnum:
+    """
+    CVSSv4 privileges required
+    """
+
+    class Meta:
+        NONE = ["N", "None"]
+        LOW = ["L", "Low"]
+        HIGH = ["H", "High"]
+
+
+@choices
+class CVSSV4AttackRequirementsEnum:
+    """
+    CVSSv4 attack requirements
+    """
+
+    class Meta:
+        NONE = ["N", "None"]
+        PRESENT = ["P", "Present"]
+
+
+@choices
+class CVSSV4VulnerableConfidentialityImpactEnum:
+    """
+    CVSSv4 vulnerable system confidentiality impact (VC)
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class CVSSV4VulnerableIntegrityImpactEnum:
+    """
+    CVSSv4 vulnerable system integrity impact (VI)
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class CVSSV4VulnerableAvailabilityImpactEnum:
+    """
+    CVSSv4 vulnerable system availability impact (VA)
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class CVSSV4SubsequentConfidentialityImpactEnum:
+    """
+    CVSSv4 subsequent system confidentiality impact (SC)
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class CVSSV4SubsequentIntegrityImpactEnum:
+    """
+    CVSSv4 subsequent system integrity impact (SI)
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class CVSSV4SubsequentAvailabilityImpactEnum:
+    """
+    CVSSv4 subsequent system availability impact (SA)
+    """
+
+    class Meta:
+        HIGH = ["H", "High"]
+        LOW = ["L", "Low"]
+        NONE = ["N", "None"]
+
+
+@choices
+class CVSSV4UserInteractionEnum:
+    """
+    CVSSv4 user interaction (N/P/A)
+    """
+
+    class Meta:
+        NONE = ["N", "None"]
+        PASSIVE = ["P", "Passive"]
+        ACTIVE = ["A", "Active"]
+
+
+@choices
 class MFAMethodEnum:
     """
     Multi-factor authentication method

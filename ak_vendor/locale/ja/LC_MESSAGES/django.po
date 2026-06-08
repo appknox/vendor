@@ -4554,16 +4554,24 @@ msgstr "CVSS"
 msgid "Version 3.0 Base Score"
 msgstr "バージョン3.0ベーススコア"
 
-#: ak_vendor/templates/report_template.html:1116
-msgid "Attack vector"
+#: ak_vendor/templates/report_template.html:1182
+msgid "Version 4.0 Base Score"
+msgstr "バージョン4.0ベーススコア"
+
+#: ak_vendor/templates/report_template.html:1140
+msgid "Attack Vector"
 msgstr "アタックベクトル"
 
-#: ak_vendor/templates/report_template.html:1120
-msgid "Attack complexity"
+#: ak_vendor/templates/report_template.html:1144
+msgid "Attack Complexity"
 msgstr "攻撃の複雑さ"
 
-#: ak_vendor/templates/report_template.html:1126
-msgid "Privileges required"
+#: ak_vendor/templates/report_template.html:1196
+msgid "Attack Requirements"
+msgstr "攻撃要件"
+
+#: ak_vendor/templates/report_template.html:1150
+msgid "Privileges Required"
 msgstr "特権が必要です"
 
 #: ak_vendor/templates/report_template.html:1130
@@ -4586,7 +4594,31 @@ msgstr "完全性の影響"
 msgid "Availability Impact"
 msgstr "可用性への影響"
 
-#: ak_vendor/templates/report_template.html:1160
+#: ak_vendor/templates/report_template.html:1210
+msgid "Vulnerable System Confidentiality"
+msgstr "脆弱なシステムの機密性"
+
+#: ak_vendor/templates/report_template.html:1216
+msgid "Vulnerable System Integrity"
+msgstr "脆弱なシステムの完全性"
+
+#: ak_vendor/templates/report_template.html:1220
+msgid "Vulnerable System Availability"
+msgstr "脆弱なシステムの可用性"
+
+#: ak_vendor/templates/report_template.html:1226
+msgid "Subsequent System Confidentiality"
+msgstr "その後のシステムの機密保持"
+
+#: ak_vendor/templates/report_template.html:1230
+msgid "Subsequent System Integrity"
+msgstr "その後のシステムの整合性"
+
+#: ak_vendor/templates/report_template.html:1236
+msgid "Subsequent System Availability"
+msgstr "その後のシステムの可用性"
+
+#: ak_vendor/templates/report_template.html:1249
 msgid "Regulatory"
 msgstr "規制上"
 
