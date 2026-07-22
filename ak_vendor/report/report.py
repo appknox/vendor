@@ -519,6 +519,7 @@ class Risk:
     overridden_date = attr.ib(type=str, default="")
     overridden_criteria = attr.ib(type=str, default="")
     overridden_criteria_value = attr.ib(type=str, default="")
+    approved_by = attr.ib(type=str, default="")
 
 
 @attr.s
@@ -1048,6 +1049,7 @@ class Analysis:
         overridden_date: str,
         overridden_criteria: str,
         overridden_criteria_value: str,
+        approved_by: str = "",
     ) -> Risk:
         return Risk(
             value=value,
@@ -1062,6 +1064,7 @@ class Analysis:
             overridden_date=overridden_date,
             overridden_criteria=overridden_criteria,
             overridden_criteria_value=overridden_criteria_value,
+            approved_by=approved_by,
         )
 
     def add_finding(self, finding: Finding) -> Finding:
