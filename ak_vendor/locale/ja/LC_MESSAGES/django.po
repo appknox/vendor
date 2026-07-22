@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-22 12:49+0530\n"
+"POT-Creation-Date: 2026-07-21 16:07+0100\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -401,8 +401,8 @@ msgstr ""
 
 #: ak_vendor/compliances/asvs.py:609
 msgid ""
-"Verify the application does not suffer from \"Time Of Check to Time Of "
-"Use\" (TOCTOU) issues or other race conditions for sensitive operations."
+"Verify the application does not suffer from \"Time Of Check to Time Of Use\" "
+"(TOCTOU) issues or other race conditions for sensitive operations."
 msgstr ""
 
 #: ak_vendor/compliances/asvs.py:619
@@ -501,8 +501,8 @@ msgstr ""
 msgid ""
 "Verify that the web tier is configured to serve only files with specific "
 "file extensions to prevent unintentional information and source code "
-"leakage. For example, backup files (e.g. .bak), temporary working files (e."
-"g. .swp), compressed files (.zip, .tar.gz, etc) and other extensions "
+"leakage. For example, backup files (e.g. .bak), temporary working files "
+"(e.g. .swp), compressed files (.zip, .tar.gz, etc) and other extensions "
 "commonly used by editors should be blocked unless required."
 msgstr ""
 
@@ -1569,8 +1569,9 @@ msgstr ""
 
 #: ak_vendor/compliances/asvs.py:2403
 msgid ""
-"Verify that when parsing JSON in browsers or JavaScript-based backends, JSON."
-"parse is used to parse the JSON document. Do not use eval() to parse JSON."
+"Verify that when parsing JSON in browsers or JavaScript-based backends, "
+"JSON.parse is used to parse the JSON document. Do not use eval() to parse "
+"JSON."
 msgstr ""
 
 #: ak_vendor/compliances/asvs.py:2413
@@ -1926,6 +1927,91 @@ msgstr ""
 
 #: ak_vendor/compliances/asvs.py:2955
 msgid "Verify that backend TLS connection failures are logged."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:10
+msgid ""
+"Identify and document processes dependent on ICT third-party service "
+"providers and interconnections supporting critical/important functions; "
+"maintain and periodically update relevant inventories."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:19
+msgid ""
+"Maintain the availability, authenticity, integrity and confidentiality of "
+"data in transit."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:26
+msgid "Maintain the confidentiality and integrity of data."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:32
+msgid ""
+"Maintain the availability, integrity and confidentiality of ICT systems and "
+"data."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:40
+msgid ""
+"Maintain confidentiality/integrity of data at rest or in use; prevent "
+"confidentiality breaches and loss of data."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:47
+msgid "Ensure the security of the means of transfer of data."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:53
+msgid ""
+"Relevant where the exposure creates a risk of unauthorised access or data "
+"loss."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:61
+msgid ""
+"Minimise technical flaws (e.g. overflow/DoS-type conditions) that may hinder "
+"business activity or cause data loss/integrity breach."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:69
+msgid ""
+"Minimise the risk of corruption or loss of data, unauthorised access and "
+"technical flaws; prevent unavailability, impairment of authenticity/"
+"integrity, breaches of confidentiality and loss of data."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:78
+msgid ""
+"Limit the physical or logical access to information assets and ICT assets to "
+"what is required for legitimate and approved functions only."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:86
+msgid ""
+"Implement strong authentication mechanisms and protection of cryptographic "
+"keys, encrypting data based on approved data-classification and ICT risk-"
+"assessment processes."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:95
+msgid ""
+"Apply encryption / key-protection controls appropriate to the classification "
+"of the data."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:103
+msgid "Evidenced via vulnerability assessments/scans and penetration testing."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:109
+msgid "Evidenced via vulnerability assessments/security testing."
+msgstr ""
+
+#: ak_vendor/compliances/dora.py:115
+msgid ""
+"Evidenced via vulnerability assessments/scans, source-code reviews where "
+"feasible, and penetration testing."
 msgstr ""
 
 #: ak_vendor/compliances/gdpr.py:8
@@ -2430,6 +2516,30 @@ msgid ""
 "through a written contract or other arrangement with the business associate "
 "that meets the applicable requirements of § 164.314(a) [Business Associate "
 "Contracts or Other Arrangements]."
+msgstr ""
+
+#: ak_vendor/compliances/hipaa.py:530 ak_vendor/compliances/hipaa.py:548
+msgid "General Rules"
+msgstr ""
+
+#: ak_vendor/compliances/hipaa.py:531 ak_vendor/compliances/hipaa.py:534
+#: ak_vendor/compliances/hipaa.py:549 ak_vendor/compliances/hipaa.py:552
+#, fuzzy
+#| msgid "Attack Requirements"
+msgid "General Requirements"
+msgstr "攻撃要件"
+
+#: ak_vendor/compliances/hipaa.py:536
+msgid ""
+"Ensure the confidentiality, integrity, and availability of all electronic "
+"protected health information the covered entity or business associate "
+"creates, receives, maintains, or transmits."
+msgstr ""
+
+#: ak_vendor/compliances/hipaa.py:554
+msgid ""
+"Protect against any reasonably anticipated threats or hazards to the "
+"security or integrity of such information."
 msgstr ""
 
 #: ak_vendor/compliances/masvs.py:8
@@ -3104,34 +3214,41 @@ msgstr ""
 
 #: ak_vendor/compliances/nistsp800171.py:117
 msgid ""
+"Employ architectural designs, software development techniques, and systems "
+"engineering principles that promote effective information security within "
+"organizational systems."
+msgstr ""
+
+#: ak_vendor/compliances/nistsp800171.py:124
+msgid ""
 "Establish and manage cryptographic keys for cryptography employed in "
 "organizational systems"
 msgstr ""
 
-#: ak_vendor/compliances/nistsp800171.py:123
+#: ak_vendor/compliances/nistsp800171.py:130
 msgid "Control and monitor the use of mobile code."
 msgstr ""
 
-#: ak_vendor/compliances/nistsp800171.py:128
+#: ak_vendor/compliances/nistsp800171.py:135
 msgid "Protect the confidentiality of CUI at rest."
 msgstr ""
 
-#: ak_vendor/compliances/nistsp800171.py:133
+#: ak_vendor/compliances/nistsp800171.py:140
 msgid "Identify, report, and correct system flaws in a timely manner."
 msgstr ""
 
-#: ak_vendor/compliances/nistsp800171.py:139
+#: ak_vendor/compliances/nistsp800171.py:146
 msgid ""
 "Provide protection from malicious code at designated locations within "
 "organizational systems."
 msgstr ""
 
-#: ak_vendor/compliances/nistsp800171.py:146
+#: ak_vendor/compliances/nistsp800171.py:153
 msgid ""
 "Update malicious code protection mechanisms when new releases are available."
 msgstr ""
 
-#: ak_vendor/compliances/nistsp800171.py:152
+#: ak_vendor/compliances/nistsp800171.py:159
 msgid "Identify unauthorized use of organizational systems"
 msgstr ""
 
@@ -3272,7 +3389,7 @@ msgid "Security Categorization"
 msgstr "のセキュリティ評価"
 
 #: ak_vendor/compliances/nistsp80053.py:76
-#: ak_vendor/templates/report_template.html:1393
+#: ak_vendor/templates/report_template.html:1542
 msgid "Risk Assessment"
 msgstr "リスクアセスメント"
 
@@ -3783,6 +3900,9 @@ msgstr ""
 #: ak_vendor/compliances/pcidss.py:224 ak_vendor/compliances/pcidss.py:234
 #: ak_vendor/compliances/pcidss.py:244 ak_vendor/compliances/pcidss.py:255
 #: ak_vendor/compliances/pcidss.py:264 ak_vendor/compliances/pcidss.py:275
+#: ak_vendor/compliances/pcidss4.py:203 ak_vendor/compliances/pcidss4.py:212
+#: ak_vendor/compliances/pcidss4.py:220 ak_vendor/compliances/pcidss4.py:228
+#: ak_vendor/compliances/pcidss4.py:236
 msgid "Develop and maintain secure systems and applications"
 msgstr "安全なシステムとアプリケーションの開発と維持"
 
@@ -3848,6 +3968,8 @@ msgstr ""
 "する。"
 
 #: ak_vendor/compliances/pcidss.py:286 ak_vendor/compliances/pcidss.py:295
+#: ak_vendor/compliances/pcidss4.py:244 ak_vendor/compliances/pcidss4.py:254
+#: ak_vendor/compliances/pcidss4.py:262
 msgid "Restrict access to cardholder data by business need to know"
 msgstr "カード会員データへのアクセスを、業務上必要な範囲内に制限する。"
 
@@ -3953,6 +4075,9 @@ msgstr ""
 #: ak_vendor/compliances/pcidss.py:428 ak_vendor/compliances/pcidss.py:436
 #: ak_vendor/compliances/pcidss.py:442 ak_vendor/compliances/pcidss.py:452
 #: ak_vendor/compliances/pcidss.py:461 ak_vendor/compliances/pcidss.py:469
+#: ak_vendor/compliances/pcidss4.py:321 ak_vendor/compliances/pcidss4.py:330
+#: ak_vendor/compliances/pcidss4.py:339 ak_vendor/compliances/pcidss4.py:347
+#: ak_vendor/compliances/pcidss4.py:356
 msgid "Restrict physical access to cardholder data"
 msgstr "カード会員データへの物理アクセスを制限する"
 
@@ -4261,19 +4386,723 @@ msgstr ""
 "インシデント対応計画を実施します。システム違反に直ちに対応できるようにしてく"
 "ださい。"
 
-#: ak_vendor/report/report.py:743
+#: ak_vendor/compliances/pcidss4.py:8 ak_vendor/compliances/pcidss4.py:19
+#: ak_vendor/compliances/pcidss4.py:29 ak_vendor/compliances/pcidss4.py:39
+#: ak_vendor/compliances/pcidss4.py:49
+msgid "Install and maintain network security controls"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:13
+msgid ""
+"Processes and mechanisms for installing and maintaining network security "
+"controls are defined and understood."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:24
+msgid "Network security controls (NSCs) are configured and maintained"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:34
+msgid ""
+"Network access to and from the cardholder data environment is restricted."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:44
+msgid ""
+"Network connections between trusted and untrusted networks are controlled."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:54
+msgid ""
+"Risks to the CDE from computing devices that are able to connect to both "
+"untrusted networks and the CDE are mitigated"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:60 ak_vendor/compliances/pcidss4.py:71
+#: ak_vendor/compliances/pcidss4.py:81
+msgid "Apply secure configurations to all system components"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:65
+msgid ""
+"Processes and mechanisms for applying secure configurations to all system "
+"components are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:76
+msgid "System components are configured and managed securely"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:86
+msgid "Wireless environments are configured and managed securely"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:90 ak_vendor/compliances/pcidss4.py:98
+#: ak_vendor/compliances/pcidss4.py:106 ak_vendor/compliances/pcidss4.py:114
+#: ak_vendor/compliances/pcidss4.py:122 ak_vendor/compliances/pcidss4.py:130
+#: ak_vendor/compliances/pcidss4.py:138
+msgid "Protect Account Data"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:94
+msgid ""
+"Processes and mechanisms for protecting stored account data are defined and "
+"understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:102
+msgid "Storage of account data is kept to a minimum"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:110
+msgid "Sensitive authentication data (SAD) is not stored after authorization"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:118
+msgid ""
+"Access to displays of full PAN and ability to copy cardholder data are "
+"restricted"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:126
+msgid "Primary account number (PAN) is secured wherever it is stored"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:134
+msgid "Cryptographic keys used to protect stored account data are secured."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:142
+msgid ""
+"Where cryptography is used to protect stored account data, key management "
+"processes and procedures covering all aspects of the key lifecycle are "
+"defined and implemented"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:149 ak_vendor/compliances/pcidss4.py:161
+msgid ""
+"Protect cardholder data with strong cryptography during transmission over "
+"open, public networks"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:154
+msgid ""
+"Processes and mechanisms for protecting cardholder data with strong "
+"cryptography during transmission over open, public networks are defined and "
+"documented."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:166
+msgid "PAN is protected with strong cryptography during transmission"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:170 ak_vendor/compliances/pcidss4.py:179
+#: ak_vendor/compliances/pcidss4.py:187 ak_vendor/compliances/pcidss4.py:195
+msgid "Protect all systems and networks from malicious software"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:174
+msgid ""
+"Processes and mechanisms for protecting all systems and networks from "
+"malicious software are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:183
+msgid "Malicious software (malware) is prevented, or detected and addressed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:191
+msgid ""
+"Anti-malware mechanisms and processes are active, maintained, and monitored"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:199
+msgid "Anti-phishing mechanisms protect users against phishing attacks"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:207
+msgid ""
+"Processes and mechanisms for developing and maintaining secure systems and "
+"software are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:216
+msgid "Bespoke and custom software are developed securely"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:224
+msgid "Security vulnerabilities are identified and addressed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:232
+msgid "Public-facing web applications are protected against attacks"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:240
+#, fuzzy
+#| msgid ""
+#| "Review logs for all system components related to security functions at "
+#| "least daily"
+msgid "Changes to all system components are managed securely"
+msgstr ""
+"少なくとも毎日セキュリティ機能に関連するすべてのシステムコンポーネントのログ"
+"を確認する"
+
+#: ak_vendor/compliances/pcidss4.py:248
+msgid ""
+"Processes and mechanisms for restricting access to system components and "
+"cardholder data by business need to know are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:258
+msgid ""
+"Access to system components and data is appropriately defined and assigned"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:266
+msgid ""
+"Access to system components and data is managed via an access control "
+"system(s)"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:270 ak_vendor/compliances/pcidss4.py:279
+#: ak_vendor/compliances/pcidss4.py:288 ak_vendor/compliances/pcidss4.py:296
+#: ak_vendor/compliances/pcidss4.py:304 ak_vendor/compliances/pcidss4.py:312
+msgid "Identify users and authenticate access to system components"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:274
+msgid ""
+"Processes and mechanisms for identifying users and authenticating access to "
+"system components are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:283
+msgid ""
+"User identification and related accounts for users and administrators are "
+"strictly managed throughout an account’s lifecycle"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:292
+msgid ""
+"Strong authentication for users and administrators is established and managed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:300
+msgid ""
+"Multi-factor authentication (MFA) is implemented to secure access into the "
+"CDE"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:308
+msgid ""
+"Multi-factor authentication (MFA) systems are configured to prevent misuse"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:316
+msgid ""
+"Use of application and system accounts and associated authentication factors "
+"is strictly managed."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:325
+msgid ""
+"Processes and mechanisms for restricting physical access to cardholder data "
+"are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:334
+msgid ""
+"Physical access controls manage entry into facilities and systems containing "
+"cardholder data"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:343
+msgid "Physical access for personnel and visitors is authorized and managed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:351
+msgid ""
+"Media with cardholder data is securely stored, accessed, distributed, and "
+"destroyed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:360
+msgid ""
+"Point-of-interaction (POI) devices are protected from tampering and "
+"unauthorized substitution"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:366 ak_vendor/compliances/pcidss4.py:378
+#: ak_vendor/compliances/pcidss4.py:390 ak_vendor/compliances/pcidss4.py:400
+#: ak_vendor/compliances/pcidss4.py:410 ak_vendor/compliances/pcidss4.py:420
+#: ak_vendor/compliances/pcidss4.py:431
+#, fuzzy
+#| msgid ""
+#| "Track and monitor all access to network resources and cardholder  data"
+msgid "Log and monitor all access to system components and cardholder data"
+msgstr ""
+"ネットワークリソースおよびカード会員データへのすべてのアクセスを追跡監視"
+
+#: ak_vendor/compliances/pcidss4.py:371
+msgid ""
+"Processes and mechanisms for logging and monitoring all access to system "
+"components and cardholder data are defined and documented"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:383
+msgid ""
+"Audit logs are implemented to support the detection of anomalies and "
+"suspicious activity, and the forensic analysis of events"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:395
+msgid ""
+"Audit logs are protected from destruction and unauthorized modifications"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:405
+msgid "Audit logs are reviewed to identify anomalies or suspicious activity"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:415
+msgid "Audit log history is retained and available for analysis"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:425
+msgid ""
+"Time-synchronization mechanisms support consistent time settings across all "
+"systems"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:436
+msgid ""
+"Failures of critical security control systems are detected, reported, and "
+"responded to promptly"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:441 ak_vendor/compliances/pcidss4.py:450
+#: ak_vendor/compliances/pcidss4.py:459 ak_vendor/compliances/pcidss4.py:468
+#: ak_vendor/compliances/pcidss4.py:478 ak_vendor/compliances/pcidss4.py:486
+#, fuzzy
+#| msgid "Regularly test security systems and processes"
+msgid "Test security of systems and networks regularly"
+msgstr "セキュリティシステムとプロセスを定期的にテストする"
+
+#: ak_vendor/compliances/pcidss4.py:445
+msgid ""
+"Processes and mechanisms for regularly testing security of systems and "
+"networks are defined and understood"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:454
+msgid ""
+"Wireless access points are identified and monitored, and unauthorized "
+"wireless access points are addressed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:463
+msgid ""
+"External and internal vulnerabilities are regularly identified, prioritized, "
+"and addressed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:472
+msgid ""
+"External and internal penetration testing is regularly performed, and "
+"exploitable vulnerabilities and security weaknesses are corrected"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:482
+msgid ""
+"Network intrusions and unexpected file changes are detected and responded to."
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:490
+msgid "Unauthorized changes on payment pages are detected and responded to"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:495 ak_vendor/compliances/pcidss4.py:507
+#: ak_vendor/compliances/pcidss4.py:517 ak_vendor/compliances/pcidss4.py:528
+#: ak_vendor/compliances/pcidss4.py:538 ak_vendor/compliances/pcidss4.py:548
+#: ak_vendor/compliances/pcidss4.py:558 ak_vendor/compliances/pcidss4.py:568
+#: ak_vendor/compliances/pcidss4.py:579 ak_vendor/compliances/pcidss4.py:590
+msgid "Support information security with organizational policies and programs"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:500
+msgid ""
+"A comprehensive information security policy that governs and provides "
+"direction for protection of the entity’s information assets is known and "
+"current"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:512
+msgid ""
+"Acceptable use policies for end-user technologies are defined and implemented"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:522
+msgid ""
+"Risks to the cardholder data environment are formally identified, evaluated, "
+"and managed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:533
+msgid "PCI DSS compliance is managed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:543
+msgid "PCI DSS scope is documented and validated"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:553
+msgid "Security awareness education is an ongoing activity"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:563
+msgid "Personnel are screened to reduce risks from insider threats"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:573
+msgid ""
+"Risk to information assets associated with third-party service provider "
+"(TPSP) relationships is managed"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:584
+msgid ""
+"Third-party service providers (TPSPs) support their customers’ PCI DSS "
+"compliance"
+msgstr ""
+
+#: ak_vendor/compliances/pcidss4.py:595
+msgid ""
+"Suspected and confirmed security incidents that could impact the CDE are "
+"responded to immediately"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:9
+msgid "Cyber Security Risk Management"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:11
+msgid ""
+"A cyber security risk management process should be defined, approved and "
+"implemented, and should be aligned with the Member Organization's enterprise "
+"risk management process."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:19
+#, fuzzy
+#| msgid "Regulatory"
+msgid "Regulatory Compliance"
+msgstr "規制上"
+
+#: ak_vendor/compliances/sama.py:21
+msgid ""
+"A process should be established by the Member Organization to identify, "
+"communicate and comply with the cyber security implications of relevant "
+"regulations."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:29
+msgid "Compliance with (inter)national industry standards"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:31
+msgid ""
+"The Member Organization should comply with mandatory (inter)national "
+"industry standards."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:38
+#, fuzzy
+#| msgid "Security Rating"
+msgid "Cyber Security Review"
+msgstr "のセキュリティ評価"
+
+#: ak_vendor/compliances/sama.py:40
+msgid ""
+"The cyber security status of the Member Organization's information assets "
+"should be subject to periodic cyber security review."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:47
+#, fuzzy
+#| msgid "Security Attributes"
+msgid "Cyber Security Audits"
+msgstr "のセキュリティ評価"
+
+#: ak_vendor/compliances/sama.py:49
+msgid ""
+"The cyber security status of the Member Organization's information assets "
+"should be subject to thorough, independent and regular cyber security audits "
+"performed in accordance with generally accepted auditing standards and SAMA "
+"cyber security framework."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:58
+msgid "Human Resources"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:60
+msgid ""
+"The Member Organization should incorporate cyber security requirements into "
+"human resources processes."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:67
+#, fuzzy
+#| msgid "Physically secure all media."
+msgid "Physical Security"
+msgstr "すべての媒体を物理的にセキュリティ保護する。"
+
+#: ak_vendor/compliances/sama.py:69
+msgid ""
+"The Member Organization should ensure all facilities which host information "
+"assets are physically protected against intentional and unintentional "
+"security events."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:77
+msgid "Asset Management"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:79
+msgid ""
+"The Member Organization should define, approve, implement, communicate and "
+"monitor an asset management process, which supports an accurate, up-to-date "
+"and unified asset register."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:88
+#, fuzzy
+#| msgid "Security Attributes"
+msgid "Cyber Security Architecture"
+msgstr "のセキュリティ評価"
+
+#: ak_vendor/compliances/sama.py:90
+msgid ""
+"The Member Organization should define, follow and review the cyber security "
+"architecture, which outlines the cyber security requirements in the "
+"enterprise  architecture and addresses the design principles for developing "
+"cyber security capabilities."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:100
+#, fuzzy
+#| msgid "Broken Authentication and Session Management"
+msgid "Identity and Access Management"
+msgstr "壊れた認証とセッション管理"
+
+#: ak_vendor/compliances/sama.py:102
+msgid ""
+"The Member Organization should restrict access to its information assets in "
+"line with their business requirements based on the need-to-have or need-to-"
+"know principles."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:110
+#, fuzzy
+#| msgid "Application Name"
+msgid "Application Security"
+msgstr "アプリケーションの名称"
+
+#: ak_vendor/compliances/sama.py:112
+msgid ""
+"The Member Organization should define, approve and implement  cyber security "
+"standards for application systems. The compliance with these standards "
+"should be monitored and the effectiveness of these controls should be "
+"measured and periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:121
+msgid "Change Management"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:123
+msgid ""
+"The Member Organization should define, approve and implement a change "
+"management process that controls all changes to information assets. The "
+"compliance with the process should be monitored and the effectiveness should "
+"be measured and periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:132
+msgid "Infrastructure Security"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:134
+msgid ""
+"The Member Organization should define, approve and implement cyber security "
+"standards for their infrastructure components. The compliance with these "
+"standards should be monitored and the effectiveness should be measured and "
+"periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:143
+#, fuzzy
+#| msgid "Insufficient Cryptography"
+msgid "Cryptography"
+msgstr "安全でない暗号化"
+
+#: ak_vendor/compliances/sama.py:145
+msgid ""
+"The use of cryptographic solutions within the Member Organizations should be "
+"defined, approved and implemented."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:152
+msgid "Bring Your Own Device (BYOD)"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:154
+msgid ""
+"When the Member Organization allows the use of personal devices (e.g., "
+"smartphones, tablets, laptops) for business purposes, the use should be "
+"supported by a defined, approved and implemented cyber security standard, "
+"additional staff agreements and a cyber security awareness training."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:164
+msgid "Secure Disposal of Information Assets"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:166
+msgid ""
+"The information assets of the Member Organization should be securely "
+"disposed when the information assets are no longer required."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:173
+msgid "Payment Systems"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:175
+msgid ""
+"The Member Organization should define, approve,implement and monitor a cyber "
+"security standard for payment systems. The effectiveness of this process "
+"should be measured and periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:183
+msgid "Electronic Banking Services"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:185
+msgid ""
+"The Member Organization should define, approve, implement and monitor a "
+"cyber security standard for electronic banking services. The effectiveness "
+"of this standard should be measured and periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:194
+#, fuzzy
+#| msgid "Improper Platform Usage"
+msgid "Cyber Security Event Management"
+msgstr "不適切なプラットフォームの使用"
+
+#: ak_vendor/compliances/sama.py:196
+msgid ""
+"The Member Organization should define, approve and implement a security "
+"event management process to analyze operational and security loggings and "
+"respond to security events. The effectiveness of this  process should be "
+"measured and periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:205
+#, fuzzy
+#| msgid "Improper Platform Usage"
+msgid "Cyber Security Incident Management"
+msgstr "不適切なプラットフォームの使用"
+
+#: ak_vendor/compliances/sama.py:207
+msgid ""
+"The Member Organization should define, approve and implement a cyber "
+"security incident management that is aligned with the enterprise incident "
+"management process, to identify, respond to and recover from  cyber security "
+"incidents. The effectiveness of this process should  be measured and "
+"periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:217
+#, fuzzy
+#| msgid "Improper Platform Usage"
+msgid "Threat Management"
+msgstr "不適切なプラットフォームの使用"
+
+#: ak_vendor/compliances/sama.py:219
+msgid ""
+"The Member Organization should define, approve and implement a threat "
+"intelligence management process to identify, assess and understand threats "
+"to the Member Organization information assets, using multiple reliable "
+"sources. The effectiveness of this process should be measured and "
+"periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:229
+msgid "Vulnerability Management"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:231
+msgid ""
+"The Member Organization should define, approve and implement a vulnerability "
+"management process for the identification and mitigation of application and "
+"infrastructural vulnerabilities. The effectiveness of this process should be "
+"measured and the effectiveness should be periodically evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:241
+#, fuzzy
+#| msgid "Improper Platform Usage"
+msgid "Contract and Vendor Management"
+msgstr "不適切なプラットフォームの使用"
+
+#: ak_vendor/compliances/sama.py:243
+msgid ""
+"The Member Organization should define, approve, implement and monitor the "
+"required cyber security controls within the contract and vendor management "
+"processes."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:251
+msgid "Outsourcing"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:253
+msgid ""
+"The Member Organization should define, implement and monitor the required "
+"cyber security controls within outsourcing policy and outsourcing process. "
+"The effectiveness of the defined cyber security controls should periodically "
+"be measured and evaluated."
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:262
+msgid "Cloud Computing"
+msgstr ""
+
+#: ak_vendor/compliances/sama.py:264
+msgid ""
+"The Member Organization should define, implement and monitor the required "
+"cyber security controls within the cloud computing policy and process for "
+"hybrid and public cloud services. The effectiveness of the defined cyber "
+"security controls should periodically be measured and evaluated."
+msgstr ""
+
+#: ak_vendor/report/report.py:1083
 msgid "Static"
 msgstr "静的"
 
-#: ak_vendor/report/report.py:744
+#: ak_vendor/report/report.py:1084
 msgid "Dynamic"
 msgstr "動的"
 
-#: ak_vendor/report/report.py:745
+#: ak_vendor/report/report.py:1085
 msgid "API"
 msgstr ""
 
-#: ak_vendor/report/report.py:746
+#: ak_vendor/report/report.py:1086
 msgid "Manual"
 msgstr "手動"
 
@@ -4281,25 +5110,25 @@ msgstr "手動"
 msgid "Confidential"
 msgstr "関係者外秘"
 
-#: ak_vendor/templates/report_template.html:579
+#: ak_vendor/templates/report_template.html:586
 msgid "App Security Report"
 msgstr "アプリケーション セキュリティレポート"
 
-#: ak_vendor/templates/report_template.html:580
+#: ak_vendor/templates/report_template.html:587
 msgid "For Internal Purpose"
 msgstr "内部目的のみ"
 
-#: ak_vendor/templates/report_template.html:619
-#: ak_vendor/templates/report_template.html:641
+#: ak_vendor/templates/report_template.html:626
+#: ak_vendor/templates/report_template.html:648
 msgid "Prepared by"
 msgstr "Prepared by"
 
-#: ak_vendor/templates/report_template.html:629
-#: ak_vendor/templates/report_template.html:653
+#: ak_vendor/templates/report_template.html:636
+#: ak_vendor/templates/report_template.html:660
 msgid "Powered by"
 msgstr "搭載"
 
-#: ak_vendor/templates/report_template.html:669
+#: ak_vendor/templates/report_template.html:676
 msgid ""
 "Portions of this document and the templates used in its production are the "
 "property of Appknox"
@@ -4307,22 +5136,22 @@ msgstr ""
 "この文書の一部およびそのプロダクションに使用されるテンプレートは、Appknoxが所"
 "有権を有します。"
 
-#: ak_vendor/templates/report_template.html:669
-#: ak_vendor/templates/report_template.html:671
+#: ak_vendor/templates/report_template.html:676
+#: ak_vendor/templates/report_template.html:678
 msgid " and "
 msgstr " そして "
 
-#: ak_vendor/templates/report_template.html:669
-#: ak_vendor/templates/report_template.html:671
-#: ak_vendor/templates/report_template.html:853
+#: ak_vendor/templates/report_template.html:676
+#: ak_vendor/templates/report_template.html:678
+#: ak_vendor/templates/report_template.html:860
 msgid ","
 msgstr "、"
 
-#: ak_vendor/templates/report_template.html:669
+#: ak_vendor/templates/report_template.html:676
 msgid " and cannot be copied without permission."
 msgstr " 許可なくコピーすることはできません。"
 
-#: ak_vendor/templates/report_template.html:671
+#: ak_vendor/templates/report_template.html:678
 msgid ""
 "While precautions have been taken in the preparation of this document, the "
 "publisher and the author(s) assume no responsibility for errors, omissions, "
@@ -4333,12 +5162,12 @@ msgstr ""
 "ている情報の使用に起因する誤り、省略、または損害について一切責任を負いませ"
 "ん。"
 
-#: ak_vendor/templates/report_template.html:671
-#: ak_vendor/templates/report_template.html:853
+#: ak_vendor/templates/report_template.html:678
+#: ak_vendor/templates/report_template.html:860
 msgid "Appknox"
 msgstr "Appknox"
 
-#: ak_vendor/templates/report_template.html:671
+#: ak_vendor/templates/report_template.html:678
 msgid ""
 " services does not guarantee the security of a system, or that intrusions "
 "will not occur."
@@ -4346,253 +5175,280 @@ msgstr ""
 " のサービスを使用しても、システムのセキュリティや、侵入が発生しないことを保証"
 "するものではありません。"
 
-#: ak_vendor/templates/report_template.html:682
+#: ak_vendor/templates/report_template.html:689
 msgid "Application Details"
 msgstr "アプリケーションの詳細"
 
-#: ak_vendor/templates/report_template.html:687
+#: ak_vendor/templates/report_template.html:694
 msgid "Application Name"
 msgstr "アプリケーションの名称"
 
-#: ak_vendor/templates/report_template.html:693
+#: ak_vendor/templates/report_template.html:700
 msgid "Platform"
 msgstr "プラットフォーム"
 
-#: ak_vendor/templates/report_template.html:697
+#: ak_vendor/templates/report_template.html:704
 msgid "Application Namespace"
 msgstr "アプリケーションの名前空間"
 
-#: ak_vendor/templates/report_template.html:701
+#: ak_vendor/templates/report_template.html:708
 msgid "Version"
 msgstr "バージョン"
 
-#: ak_vendor/templates/report_template.html:705
+#: ak_vendor/templates/report_template.html:712
 msgid "Version Code"
 msgstr "バージョン"
 
-#: ak_vendor/templates/report_template.html:709
+#: ak_vendor/templates/report_template.html:716
 msgid "Application SHA1 Hash"
 msgstr "アプリケーション SHA1 ハッシュ"
 
-#: ak_vendor/templates/report_template.html:713
+#: ak_vendor/templates/report_template.html:720
 msgid "Application MD5 Hash"
 msgstr "アプリケーション MD5 ハッシュ"
 
-#: ak_vendor/templates/report_template.html:719
+#: ak_vendor/templates/report_template.html:726
 msgid "Audit Details"
 msgstr "監査の詳細"
 
-#: ak_vendor/templates/report_template.html:725
+#: ak_vendor/templates/report_template.html:732
 msgid "File ID"
 msgstr "ファイルID"
 
-#: ak_vendor/templates/report_template.html:730
+#: ak_vendor/templates/report_template.html:737
 msgid "Audit Date"
 msgstr "監査日"
 
-#: ak_vendor/templates/report_template.html:734
+#: ak_vendor/templates/report_template.html:741
 msgid "Scan Status"
 msgstr "スキャン状態"
 
-#: ak_vendor/templates/report_template.html:755
+#: ak_vendor/templates/report_template.html:762
 msgid "Scans included in the Report"
 msgstr "レポートに含まれるスキャン"
 
-#: ak_vendor/templates/report_template.html:778
+#: ak_vendor/templates/report_template.html:785
 msgid "Table of Contents"
 msgstr "目次"
 
-#: ak_vendor/templates/report_template.html:786
-#: ak_vendor/templates/report_template.html:850
+#: ak_vendor/templates/report_template.html:793
+#: ak_vendor/templates/report_template.html:857
 msgid "Report Summary"
 msgstr "レポートの概要"
 
-#: ak_vendor/templates/report_template.html:792
-#: ak_vendor/templates/report_template.html:856
+#: ak_vendor/templates/report_template.html:799
+#: ak_vendor/templates/report_template.html:863
 msgid "Audit Summary"
 msgstr "監査の概要"
 
-#: ak_vendor/templates/report_template.html:797
-#: ak_vendor/templates/report_template.html:935
-#: ak_vendor/templates/report_template.html:1025
+#: ak_vendor/templates/report_template.html:804
+#: ak_vendor/templates/report_template.html:956
+#: ak_vendor/templates/report_template.html:1046
 msgid "Appknox "
 msgstr "Appknox "
 
-#: ak_vendor/templates/report_template.html:797
-#: ak_vendor/templates/report_template.html:935
+#: ak_vendor/templates/report_template.html:804
+#: ak_vendor/templates/report_template.html:956
+#: ak_vendor/templates/report_template.html:1046
 msgid "Security Rating"
 msgstr "のセキュリティ評価"
 
-#: ak_vendor/templates/report_template.html:812
-#: ak_vendor/templates/report_template.html:1421
+#: ak_vendor/templates/report_template.html:819
+#: ak_vendor/templates/report_template.html:1570
 msgid "Noncompliant Code Example"
 msgstr "違反コードの例"
 
-#: ak_vendor/templates/report_template.html:819
-#: ak_vendor/templates/report_template.html:1429
+#: ak_vendor/templates/report_template.html:826
+#: ak_vendor/templates/report_template.html:1578
 msgid "Compliant Solution"
 msgstr "コンプライアンス ソリューション"
 
-#: ak_vendor/templates/report_template.html:826
-#: ak_vendor/templates/report_template.html:1437
+#: ak_vendor/templates/report_template.html:833
+#: ak_vendor/templates/report_template.html:1586
 msgid "Business Implication"
 msgstr "ビジネスへの影響"
 
-#: ak_vendor/templates/report_template.html:833
-#: ak_vendor/templates/report_template.html:1445
+#: ak_vendor/templates/report_template.html:840
+#: ak_vendor/templates/report_template.html:1594
 msgid "Related Vulnerabilities"
 msgstr "関連のある脆弱性"
 
-#: ak_vendor/templates/report_template.html:853
+#: ak_vendor/templates/report_template.html:860
 msgid ", powered by "
 msgstr "、 搭載 "
 
-#: ak_vendor/templates/report_template.html:853
+#: ak_vendor/templates/report_template.html:860
 msgid " conducted a security assessment of the mobile application. "
 msgstr "はモバイルアプリケーションのセキュリティ評価を実施しました。"
 
-#: ak_vendor/templates/report_template.html:853
+#: ak_vendor/templates/report_template.html:860
 msgid "This report is generated based on the findings during the automated"
 msgstr "このレポートは自動"
 
-#: ak_vendor/templates/report_template.html:853
+#: ak_vendor/templates/report_template.html:860
 msgid " and manual"
 msgstr "および手動の"
 
-#: ak_vendor/templates/report_template.html:853
-msgid " auditing process. It also contains the process of discovering "
-"those vulnerabilities in the first place, and ways to remediate those issues."
+#: ak_vendor/templates/report_template.html:860
+msgid ""
+" auditing process. It also contains the process of discovering those "
+"vulnerabilities in the first place, and ways to remediate those issues."
 msgstr ""
-"監査プロセスにおける調査結果に基づいて生成されています。また、その脆"
-"弱性を最初に発見するまでのプロセスや、その問題を改善する方法なども含まれています。"
+"監査プロセスにおける調査結果に基づいて生成されています。また、その脆弱性を最"
+"初に発見するまでのプロセスや、その問題を改善する方法なども含まれています。"
 
-#: ak_vendor/templates/report_template.html:911
-msgid "Priority Level"
-msgstr "優先レベル"
-
-#: ak_vendor/templates/report_template.html:912
-msgid "Number of failed test cases"
-msgstr "脆弱性の数"
-
-#: ak_vendor/templates/report_template.html:915
-msgid "Critical Risk"
-msgstr "緊急リスク"
-
-#: ak_vendor/templates/report_template.html:919
-msgid "High Risk"
-msgstr "高リスク"
-
-#: ak_vendor/templates/report_template.html:923
-msgid "Medium Risk"
-msgstr "中リスク"
-
-#: ak_vendor/templates/report_template.html:927
-msgid "Low Risk"
-msgstr "低リスク"
-
-#: ak_vendor/templates/report_template.html:950
-msgid "Critical"
-msgstr "緊急"
-
-#: ak_vendor/templates/report_template.html:961
-msgid "High"
-msgstr "高"
-
-#: ak_vendor/templates/report_template.html:972
-msgid "Medium"
-msgstr "中"
-
-#: ak_vendor/templates/report_template.html:983
-msgid "Low"
-msgstr "低"
-
-#: ak_vendor/templates/report_template.html:994
-msgid "Passed"
-msgstr "合格"
-
-#: ak_vendor/templates/report_template.html:1010
-msgid "Untested"
-msgstr "未テスト"
-
-#: ak_vendor/templates/report_template.html:1025
-msgid "Security Rating - "
-msgstr "のセキュリティ評価 - "
-
-#: ak_vendor/templates/report_template.html:1025
-msgid "Unsecured"
-msgstr "脆弱"
-
-#: ak_vendor/templates/report_template.html:1059
-msgid "Risk Rating"
-msgstr "リスク評価"
-
-#: ak_vendor/templates/report_template.html:1074
-msgid "Scan Type"
+#: ak_vendor/templates/report_template.html:885
+msgid "Note:"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1097
-msgid "This risk has been overridden from"
-msgstr "このリスクは以前から上書きされています"
+#: ak_vendor/templates/report_template.html:886
+msgid "This vulnerability was manually overridden to Passed"
+msgstr ""
 
-#: ak_vendor/templates/report_template.html:1097
-msgid "to"
-msgstr "に"
-
-#: ak_vendor/templates/report_template.html:1097
+#: ak_vendor/templates/report_template.html:886
+#: ak_vendor/templates/report_template.html:1118
 msgid "by"
 msgstr "による"
 
-#: ak_vendor/templates/report_template.html:1097
+#: ak_vendor/templates/report_template.html:886
+msgid "on"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:886
+msgid "This override is applied"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:886
+msgid "to the current and all future uploads."
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:886
+msgid "only to the current file."
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:932
+msgid "Priority Level"
+msgstr "優先レベル"
+
+#: ak_vendor/templates/report_template.html:933
+msgid "Number of failed test cases"
+msgstr "脆弱性の数"
+
+#: ak_vendor/templates/report_template.html:936
+msgid "Critical Risk"
+msgstr "緊急リスク"
+
+#: ak_vendor/templates/report_template.html:940
+msgid "High Risk"
+msgstr "高リスク"
+
+#: ak_vendor/templates/report_template.html:944
+msgid "Medium Risk"
+msgstr "中リスク"
+
+#: ak_vendor/templates/report_template.html:948
+msgid "Low Risk"
+msgstr "低リスク"
+
+#: ak_vendor/templates/report_template.html:971
+msgid "Critical"
+msgstr "緊急"
+
+#: ak_vendor/templates/report_template.html:982
+msgid "High"
+msgstr "高"
+
+#: ak_vendor/templates/report_template.html:993
+msgid "Medium"
+msgstr "中"
+
+#: ak_vendor/templates/report_template.html:1004
+msgid "Low"
+msgstr "低"
+
+#: ak_vendor/templates/report_template.html:1015
+msgid "Passed"
+msgstr "合格"
+
+#: ak_vendor/templates/report_template.html:1031
+msgid "Untested"
+msgstr "未テスト"
+
+#: ak_vendor/templates/report_template.html:1046
+msgid "Unsecured"
+msgstr "脆弱"
+
+#: ak_vendor/templates/report_template.html:1080
+msgid "Risk Rating"
+msgstr "リスク評価"
+
+#: ak_vendor/templates/report_template.html:1095
+msgid "Scan Type"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1118
+msgid "This risk has been overridden from"
+msgstr "このリスクは以前から上書きされています"
+
+#: ak_vendor/templates/report_template.html:1118
+msgid "to"
+msgstr "に"
+
+#: ak_vendor/templates/report_template.html:1118
 msgid "The reason is:"
 msgstr "その理由は："
 
-#: ak_vendor/templates/report_template.html:1107
+#: ak_vendor/templates/report_template.html:1129
 msgid "CVSS"
 msgstr "CVSS"
 
-#: ak_vendor/templates/report_template.html:1112
+#: ak_vendor/templates/report_template.html:1136
 msgid "Version 3.0 Base Score"
 msgstr "バージョン3.0ベーススコア"
+
+#: ak_vendor/templates/report_template.html:1140
+#: ak_vendor/templates/report_template.html:1186
+msgid "Attack Vector"
+msgstr "アタックベクトル"
+
+#: ak_vendor/templates/report_template.html:1144
+#: ak_vendor/templates/report_template.html:1190
+msgid "Attack Complexity"
+msgstr "攻撃の複雑さ"
+
+#: ak_vendor/templates/report_template.html:1150
+#: ak_vendor/templates/report_template.html:1200
+msgid "Privileges Required"
+msgstr "特権が必要です"
+
+#: ak_vendor/templates/report_template.html:1154
+#: ak_vendor/templates/report_template.html:1206
+msgid "User Interaction"
+msgstr "ユーザーインタラクション"
+
+#: ak_vendor/templates/report_template.html:1160
+msgid "Scope"
+msgstr "範囲"
+
+#: ak_vendor/templates/report_template.html:1164
+msgid "Confidentiality Impact"
+msgstr "機密性の影響"
+
+#: ak_vendor/templates/report_template.html:1170
+msgid "Integrity Impact"
+msgstr "完全性の影響"
+
+#: ak_vendor/templates/report_template.html:1174
+msgid "Availability Impact"
+msgstr "可用性への影響"
 
 #: ak_vendor/templates/report_template.html:1182
 msgid "Version 4.0 Base Score"
 msgstr "バージョン4.0ベーススコア"
 
-#: ak_vendor/templates/report_template.html:1140
-msgid "Attack Vector"
-msgstr "アタックベクトル"
-
-#: ak_vendor/templates/report_template.html:1144
-msgid "Attack Complexity"
-msgstr "攻撃の複雑さ"
-
 #: ak_vendor/templates/report_template.html:1196
 msgid "Attack Requirements"
 msgstr "攻撃要件"
-
-#: ak_vendor/templates/report_template.html:1150
-msgid "Privileges Required"
-msgstr "特権が必要です"
-
-#: ak_vendor/templates/report_template.html:1130
-msgid "User Interaction"
-msgstr "ユーザーインタラクション"
-
-#: ak_vendor/templates/report_template.html:1136
-msgid "Scope"
-msgstr "範囲"
-
-#: ak_vendor/templates/report_template.html:1140
-msgid "Confidentiality Impact"
-msgstr "機密性の影響"
-
-#: ak_vendor/templates/report_template.html:1146
-msgid "Integrity Impact"
-msgstr "完全性の影響"
-
-#: ak_vendor/templates/report_template.html:1150
-msgid "Availability Impact"
-msgstr "可用性への影響"
 
 #: ak_vendor/templates/report_template.html:1210
 msgid "Vulnerable System Confidentiality"
@@ -4622,57 +5478,74 @@ msgstr "その後のシステムの可用性"
 msgid "Regulatory"
 msgstr "規制上"
 
-#: ak_vendor/templates/report_template.html:1164
+#: ak_vendor/templates/report_template.html:1253
 msgid "OWASP"
 msgstr "OWASP"
 
-#: ak_vendor/templates/report_template.html:1181
+#: ak_vendor/templates/report_template.html:1270
 msgid "OWASP Mobile Top 10 (2024)"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1199
+#: ak_vendor/templates/report_template.html:1288
 msgid "CWE"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1217
+#: ak_vendor/templates/report_template.html:1306
 msgid "MSTG"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1235
+#: ak_vendor/templates/report_template.html:1324
 msgid "OWASP MASVS (v2)"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1253
+#: ak_vendor/templates/report_template.html:1342
 msgid "OWASP API 2023"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1271
+#: ak_vendor/templates/report_template.html:1360
 msgid "ASVS"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1289
+#: ak_vendor/templates/report_template.html:1378
 msgid "PCI-DSS"
 msgstr "PCI-DSS"
 
-#: ak_vendor/templates/report_template.html:1310
+#: ak_vendor/templates/report_template.html:1399
+#, fuzzy
+#| msgid "PCI-DSS"
+msgid "PCI-DSS (v4.0)"
+msgstr "PCI-DSS"
+
+#: ak_vendor/templates/report_template.html:1420
 msgid "HIPAA"
 msgstr "HIPAA"
 
-#: ak_vendor/templates/report_template.html:1338
+#: ak_vendor/templates/report_template.html:1448
 msgid "GDPR"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1356
+#: ak_vendor/templates/report_template.html:1466
+msgid "DORA"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1484
 msgid "NIST SP 800-53"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1374
+#: ak_vendor/templates/report_template.html:1502
 msgid "NIST SP 800-171"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1462
+#: ak_vendor/templates/report_template.html:1520
+msgid "SAMA"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1611
 msgid "References"
 msgstr "参考文献"
+
+#~ msgid "Security Rating - "
+#~ msgstr "のセキュリティ評価 - "
 
 #~ msgid "Risk"
 #~ msgstr "リスク"

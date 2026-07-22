@@ -145,6 +145,20 @@
             "code": "Art-32-GDPR",
             "title": "Security of processing"
           }
+        ],
+        "dora": [
+          {
+            "code": "Art. 9(2)",
+            "title": "Maintain the availability, authenticity, integrity and confidentiality of data in transit."
+          },
+          {
+            "code": "Art. 9(3)(a)",
+            "title": "Ensure the security of the means of transfer of data."
+          },
+          {
+            "code": "Art. 25(1)",
+            "title": "Evidenced via vulnerability assessments/scans and penetration testing."
+          }
         ]
       },
       "risk": {
@@ -350,6 +364,20 @@
           {
             "code": "Art-32-GDPR",
             "title": "Security of processing"
+          }
+        ],
+        "dora": [
+          {
+            "code": "Art. 9(4)(c)",
+            "title": "Limit the physical or logical access to information assets and ICT assets to what is required for legitimate and approved functions only."
+          },
+          {
+            "code": "Art. 9(3)(b)-(c)",
+            "title": "Minimise the risk of corruption or loss of data, unauthorised access and technical flaws; prevent unavailability, impairment of authenticity/integrity, breaches of confidentiality and loss of data."
+          },
+          {
+            "code": "Art. 25(1)",
+            "title": "Evidenced via vulnerability assessments/scans, source-code reviews where feasible, and penetration testing."
           }
         ]
       },
@@ -784,6 +812,20 @@
           {
             "code": "Art-32-GDPR",
             "title": "Security of processing"
+          }
+        ],
+        "dora": [
+          {
+            "code": "Art. 9(4)(d)",
+            "title": "Apply encryption / key-protection controls appropriate to the classification of the data."
+          },
+          {
+            "code": "Art. 9(2) and 9(3)(c)",
+            "title": "Maintain confidentiality/integrity of data at rest or in use; prevent confidentiality breaches and loss of data."
+          },
+          {
+            "code": "Art. 25(1)",
+            "title": "Evidenced via vulnerability assessments/security testing."
           }
         ]
       },

@@ -447,9 +447,7 @@ class CVSSv4Metric:
             vuln_confidentiality=(
                 CVSSV4VulnerableConfidentialityImpactEnum[data.get("VC")].value
             ),
-            vuln_integrity=(
-                CVSSV4VulnerableIntegrityImpactEnum[data.get("VI")].value
-            ),
+            vuln_integrity=(CVSSV4VulnerableIntegrityImpactEnum[data.get("VI")].value),
             vuln_availability=(
                 CVSSV4VulnerableAvailabilityImpactEnum[data.get("VA")].value
             ),
@@ -628,6 +626,12 @@ class GDPR:
 
 
 @attr.s
+class DORA:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+
+@attr.s
 class NISTSP80053:
     code = attr.ib(type=str)
     title = attr.ib(type=str)
@@ -659,6 +663,7 @@ class Regulatory:
     pcidss4 = attr.ib(factory=list, type=List[dict])
     hipaa = attr.ib(factory=list, type=List[dict])
     gdpr = attr.ib(factory=list, type=List[dict])
+    dora = attr.ib(factory=list, type=List[dict])
     nistsp80053 = attr.ib(factory=list, type=List[dict])
     nistsp800171 = attr.ib(factory=list, type=List[dict])
     sama = attr.ib(factory=list, type=List[dict])
@@ -683,6 +688,7 @@ class Regulatory:
             pcidss4=[PCIDSS4(**pcidss4) for pcidss4 in data.get("pcidss4", [])],
             hipaa=[HIPAA.from_json(hipaa) for hipaa in data.get("hipaa", [])],
             gdpr=[GDPR(**gdpr) for gdpr in data.get("gdpr", [])],
+            dora=[DORA(**dora) for dora in data.get("dora", [])],
             nistsp80053=[
                 NISTSP80053(**nistsp80053)
                 for nistsp80053 in data.get("nistsp80053", [])
@@ -754,6 +760,10 @@ class Regulatory:
         return GDPR(code=code, title=title)
 
     @classmethod
+    def create_dora(cls, code: str, title: str) -> DORA:
+        return DORA(code=code, title=title)
+
+    @classmethod
     def create_nistsp80053(cls, code: str, title: str) -> NISTSP80053:
         return NISTSP80053(code=code, title=title)
 
@@ -811,6 +821,10 @@ class Regulatory:
         self.gdpr.append(gdpr)
         return self.gdpr
 
+    def add_dora(self, dora: DORA) -> List[DORA]:
+        self.dora.append(dora)
+        return self.dora
+
     def add_nistsp80053(self, nistsp80053: NISTSP80053) -> List[NISTSP80053]:
         self.nistsp80053.append(nistsp80053)
         return self.nistsp80053
@@ -860,6 +874,7 @@ class Analysis:
             asvs=[],
             cwe=[],
             gdpr=[],
+            dora=[],
             mstg=[],
             masvs=[],
             owaspapi2023=[],
@@ -924,6 +939,7 @@ class Analysis:
         pcidss4: List[dict] = None,
         hipaa: List[dict] = None,
         gdpr: List[dict] = None,
+        dora: List[dict] = None,
         owaspapi2023: List[dict] = None,
         owaspmobile2024: List[dict] = None,
         nistsp80053: List[dict] = None,
@@ -942,6 +958,8 @@ class Analysis:
             owaspmobile2024 = []
         if gdpr is None:
             gdpr = []
+        if dora is None:
+            dora = []
         if hipaa is None:
             hipaa = []
         if pcidss is None:
@@ -970,6 +988,7 @@ class Analysis:
             pcidss4=pcidss4,
             hipaa=hipaa,
             gdpr=gdpr,
+            dora=dora,
             nistsp80053=nistsp80053,
             nistsp800171=nistsp800171,
             sama=sama,
