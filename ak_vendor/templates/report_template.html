@@ -883,7 +883,7 @@
                         <div class="analysis__overridecomment">
                           <div style="margin-bottom: 0.5em;">
                               <strong>{% trans "Note:" %}</strong>
-                                {% trans "This vulnerability was manually overridden to Passed" %} {% if analysis.risk.overridden_by %}&nbsp;{% trans "by" %}&nbsp;{{ analysis.risk.overridden_by }} {% trans "on" %} {{ analysis.risk.overridden_date }}.{% endif %} {% trans "This override is applied" %} {% if analysis.risk.overridden_criteria == "all_future_upload" %} {% trans "to the current and all future uploads." %} {% else %} {% trans "only to the current file." %} {% endif %}
+                                {% trans "This vulnerability was manually overridden to Passed" %} {% if analysis.risk.overridden_by %}&nbsp;{% trans "by" %}&nbsp;{{ analysis.risk.overridden_by }} {% trans "on" %} {{ analysis.risk.overridden_date }}{% if analysis.risk.approved_by %}&nbsp;{% trans "and approved by" %}&nbsp;<strong>{{ analysis.risk.approved_by }}</strong>{% endif %}.{% endif %} {% trans "This override is applied" %} {% if analysis.risk.overridden_criteria == "all_future_upload" %} {% trans "to the current and all future uploads." %} {% else %} {% trans "only to the current file." %} {% endif %}
                             </div>
                             <div>
                               <strong>Reason:</strong> {{ analysis.risk.override_comment | escape  }}
@@ -1115,7 +1115,7 @@
                       </td>
 
                       <td class="analysis__overridecomment__msg">
-                        {% trans "This risk has been overridden from" %} <strong>{{ analysis.risk.value_label }}</strong> {% trans "to" %} <strong>{{ analysis.risk.computed_value_label }}</strong> {% if analysis.risk.overridden_by %} {% trans "by" %} <strong>{% trans analysis.risk.overridden_by %}</strong>. on <strong>{% trans analysis.risk.overridden_date %}</strong> {% endif %} <br />{% if analysis.risk.override_comment %} {% trans "The reason is:" %} "{{ analysis.risk.override_comment }}"{% endif %}
+                        {% trans "This risk has been overridden from" %} <strong>{{ analysis.risk.value_label }}</strong> {% trans "to" %} <strong>{{ analysis.risk.computed_value_label }}</strong> {% if analysis.risk.overridden_by %} {% trans "by" %} <strong>{% trans analysis.risk.overridden_by %}</strong>. on <strong>{% trans analysis.risk.overridden_date %}</strong> {% endif %}{% if analysis.risk.approved_by %} {% trans "and approved by" %} <strong>{{ analysis.risk.approved_by }}</strong>{% endif %} <br />{% if analysis.risk.override_comment %} {% trans "The reason is:" %} "{{ analysis.risk.override_comment }}"{% endif %}
                       </td>
                     </tr>
                   </tbody>
