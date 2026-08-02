@@ -1468,7 +1468,7 @@
           </section>
           {% endif %}
 
-          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.owaspmobile2024 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.pcidss4 or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.dora or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 or analysis.regulatory.sama %}
+          {% if analysis.regulatory.owasp or analysis.regulatory.cwe or analysis.regulatory.mstg or analysis.regulatory.masvs or analysis.regulatory.owaspapi2023 or analysis.regulatory.owaspmobile2024 or analysis.regulatory.asvs or analysis.regulatory.pcidss or analysis.regulatory.pcidss4 or analysis.regulatory.hipaa or analysis.regulatory.gdpr or analysis.regulatory.dora or analysis.regulatory.eucra or analysis.regulatory.nistsp80053 or analysis.regulatory.nistsp800171 or analysis.regulatory.sama %}
             <section class="analysis__regulatory">
               <h3 class="analysis__sectionheader">{% trans "Regulatory" %}</h3>
               <div class="regulatory__block">
@@ -1695,6 +1695,24 @@
                         <tr>
                           <td>{{ dora.code }}</td>
                           <td>{{ dora.title }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% endif %}
+              </div>
+
+              <div class="regulatory__block">
+                {% if analysis.regulatory.eucra %}
+                  <div class="regulatory__category">
+                    <strong class="regulatory__title">{% trans "EU CRA" %}</strong>
+                  </div>
+                  <table class="table table--regulatory regulatory__table">
+                    <tbody>
+                      {% for eucra in analysis.regulatory.eucra %}
+                        <tr>
+                          <td>{{ eucra.code }}</td>
+                          <td>{{ eucra.title }}</td>
                         </tr>
                       {% endfor %}
                     </tbody>
