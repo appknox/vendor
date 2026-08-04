@@ -1,7 +1,7 @@
 import enum
 import json
 from datetime import datetime, timezone
-from typing import List
+from typing import List, Optional
 from urllib.parse import quote
 
 import attr
@@ -1137,6 +1137,10 @@ class Report:
     custom_meta_data = attr.ib(factory=list, type=List[CustomMetaData])
     analyses = attr.ib(factory=list, type=List[Analysis])
 
+    # Security Health Score data
+    health_score: Optional[int] = attr.ib(default=None)
+    health_score_status: Optional[str] = attr.ib(default=None)
+
     def to_dict(self) -> dict:
         return attr.asdict(self)
 
@@ -1178,6 +1182,8 @@ class Report:
             analyses=[
                 Analysis.from_json(analysis) for analysis in data.get("analyses", [])
             ],
+            health_score=data.get("health_score"),
+            health_score_status=data.get("health_score_status"),
         )
 
     def add_analysis(self, analysis: Analysis) -> Analysis:
