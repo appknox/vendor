@@ -199,6 +199,7 @@ class SubmissionSourceEnum:
         DASHBOARD = [4, "Dashboard"]
         SDK = [5, "SDK"]
         API = [6, "API"]
+        OFFSEC = [7, "Offsec"]
 
 
 @choices
