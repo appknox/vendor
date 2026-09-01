@@ -159,6 +159,16 @@
             "code": "Art. 25(1)",
             "title": "Evidenced via vulnerability assessments/scans and penetration testing."
           }
+        ],
+        "eucra": [
+          {
+            "code": "Annex I, Part I, point (2)(e)",
+            "title": "protect the confidentiality of stored, transmitted or otherwise processed data, personal or other, such as by encrypting relevant data at rest or in transit by state of the art mechanisms, and by using other technical means;"
+          },
+          {
+            "code": "Annex I, Part I, point (2)(f)",
+            "title": "protect the integrity of stored, transmitted or otherwise processed data, personal or other, commands, programs and configuration against any manipulation or modification not authorised by the user, and report on corruptions;"
+          }
         ]
       },
       "risk": {
@@ -378,6 +388,16 @@
           {
             "code": "Art. 25(1)",
             "title": "Evidenced via vulnerability assessments/scans, source-code reviews where feasible, and penetration testing."
+          }
+        ],
+        "eucra": [
+          {
+            "code": "Annex I, Part I, point (2)(d)",
+            "title": "ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;"
+          },
+          {
+            "code": "Annex I, Part I, point (2)(j)",
+            "title": "be designed, developed and produced to limit attack surfaces, including external interfaces;"
           }
         ]
       },
@@ -826,6 +846,16 @@
           {
             "code": "Art. 25(1)",
             "title": "Evidenced via vulnerability assessments/security testing."
+          }
+        ],
+        "eucra": [
+          {
+            "code": "Annex I, Part I, point (2)(e)",
+            "title": "protect the confidentiality of stored, transmitted or otherwise processed data, personal or other, such as by encrypting relevant data at rest or in transit by state of the art mechanisms, and by using other technical means;"
+          },
+          {
+            "code": "Annex I, Part II, point (2)",
+            "title": "in relation to the risks posed to products with digital elements, address and remediate vulnerabilities without delay, including by providing security updates; where technically feasible, new security updates shall be provided separately from functionality updates;"
           }
         ]
       },

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Appknox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-21 16:07+0100\n"
+"POT-Creation-Date: 2026-08-02 16:01+0530\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2012,6 +2012,77 @@ msgstr ""
 msgid ""
 "Evidenced via vulnerability assessments/scans, source-code reviews where "
 "feasible, and penetration testing."
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:10
+#, fuzzy
+#| msgid "Using Components with Known Vulnerabilities"
+msgid ""
+"be made available on the market without known exploitable vulnerabilities;"
+msgstr "既知の脆弱性を持つコンポーネントの使用"
+
+#: ak_vendor/compliances/eucra.py:17
+msgid ""
+"be made available on the market with a secure by default configuration, "
+"unless otherwise agreed between manufacturer and business user in relation "
+"to a tailor-made product with digital elements, including the possibility to "
+"reset the product to its original state;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:27
+msgid ""
+"ensure protection from unauthorised access by appropriate control "
+"mechanisms, including but not limited to authentication, identity or access "
+"management systems, and report on possible unauthorised access;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:36
+msgid ""
+"protect the confidentiality of stored, transmitted or otherwise processed "
+"data, personal or other, such as by encrypting relevant data at rest or in "
+"transit by state of the art mechanisms, and by using other technical means;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:45
+msgid ""
+"protect the integrity of stored, transmitted or otherwise processed data, "
+"personal or other, commands, programs and configuration against any "
+"manipulation or modification not authorised by the user, and report on "
+"corruptions;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:55
+msgid ""
+"process only data, personal or other, that are adequate, relevant and "
+"limited to what is necessary in relation to the intended purpose of the "
+"product with digital elements (data minimisation);"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:64
+msgid ""
+"protect the availability of essential and basic functions, also after an "
+"incident, including through resilience and mitigation measures against "
+"denial-of-service attacks;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:73
+msgid ""
+"be designed, developed and produced to limit attack surfaces, including "
+"external interfaces;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:81
+msgid ""
+"be designed, developed and produced to reduce the impact of an incident "
+"using appropriate exploitation mitigation mechanisms and techniques;"
+msgstr ""
+
+#: ak_vendor/compliances/eucra.py:89
+msgid ""
+"in relation to the risks posed to products with digital elements, address "
+"and remediate vulnerabilities without delay, including by providing security "
+"updates; where technically feasible, new security updates shall be provided "
+"separately from functionality updates;"
 msgstr ""
 
 #: ak_vendor/compliances/gdpr.py:8
@@ -5090,19 +5161,19 @@ msgid ""
 "security controls should periodically be measured and evaluated."
 msgstr ""
 
-#: ak_vendor/report/report.py:1083
+#: ak_vendor/report/report.py:1104
 msgid "Static"
 msgstr "静的"
 
-#: ak_vendor/report/report.py:1084
+#: ak_vendor/report/report.py:1105
 msgid "Dynamic"
 msgstr "動的"
 
-#: ak_vendor/report/report.py:1085
+#: ak_vendor/report/report.py:1106
 msgid "API"
 msgstr ""
 
-#: ak_vendor/report/report.py:1086
+#: ak_vendor/report/report.py:1107
 msgid "Manual"
 msgstr "手動"
 
@@ -5524,8 +5595,12 @@ msgstr "HIPAA"
 msgid "GDPR"
 msgstr ""
 
-#: ak_vendor/templates/report_template.html:1466
+#: ak_vendor/templates/report_template.html:1690
 msgid "DORA"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1708
+msgid "EU CRA"
 msgstr ""
 
 #: ak_vendor/templates/report_template.html:1484
