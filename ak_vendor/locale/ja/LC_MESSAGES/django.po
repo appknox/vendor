@@ -2085,6 +2085,66 @@ msgid ""
 "separately from functionality updates;"
 msgstr ""
 
+#: ak_vendor/compliances/popia.py:10
+msgid ""
+"Secure the integrity and confidentiality of personal information against "
+"loss, damage or unauthorised destruction."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:16
+msgid "Prevent unlawful access to or processing of personal information."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:20
+msgid ""
+"Establish and maintain appropriate safeguards against the risks identified."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:26
+msgid ""
+"Ensure that safeguards are continually updated in response to new risks or "
+"deficiencies in previously implemented safeguards."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:32
+msgid "Have due regard to generally accepted information security practices."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:38
+msgid ""
+"The Act does not apply to personal information that has been de-identified "
+"to the extent that it cannot be re-identified again (s 6(1)(b)); s 1 "
+"defines 'de-identify' and 're-identify'."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:47
+msgid ""
+"Processing must be adequate, relevant and not excessive given the purpose. "
+"The minimality rule."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:53
+msgid ""
+"Processing requires one of the six lawful grounds in s 11(1), of which "
+"consent — defined in s 1 as a voluntary, specific and informed expression of "
+"will — is one; the responsible party bears the burden of proving consent "
+"(s 11(2)(a))."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:63
+msgid ""
+"Personal information must be collected directly from the data subject, "
+"subject to the s 12(2) exceptions (a)-(f)."
+msgstr ""
+
+#: ak_vendor/compliances/popia.py:69
+msgid ""
+"Take reasonably practicable steps to make the data subject aware of what is "
+"collected and from where, by whom, why, and any further information "
+"necessary in the circumstances, including recipients; subject to the s 18(4) "
+"exceptions."
+msgstr ""
+
 #: ak_vendor/compliances/gdpr.py:8
 msgid "Data protection by design and by default"
 msgstr ""
@@ -5601,6 +5661,10 @@ msgstr ""
 
 #: ak_vendor/templates/report_template.html:1708
 msgid "EU CRA"
+msgstr ""
+
+#: ak_vendor/templates/report_template.html:1732
+msgid "POPIA"
 msgstr ""
 
 #: ak_vendor/templates/report_template.html:1484

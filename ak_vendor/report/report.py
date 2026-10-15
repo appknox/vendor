@@ -639,6 +639,12 @@ class EUCRA:
 
 
 @attr.s
+class POPIA:
+    code = attr.ib(type=str)
+    title = attr.ib(type=str)
+
+
+@attr.s
 class NISTSP80053:
     code = attr.ib(type=str)
     title = attr.ib(type=str)
@@ -672,6 +678,7 @@ class Regulatory:
     gdpr = attr.ib(factory=list, type=List[dict])
     dora = attr.ib(factory=list, type=List[dict])
     eucra = attr.ib(factory=list, type=List[dict])
+    popia = attr.ib(factory=list, type=List[dict])
     nistsp80053 = attr.ib(factory=list, type=List[dict])
     nistsp800171 = attr.ib(factory=list, type=List[dict])
     sama = attr.ib(factory=list, type=List[dict])
@@ -698,6 +705,7 @@ class Regulatory:
             gdpr=[GDPR(**gdpr) for gdpr in data.get("gdpr", [])],
             dora=[DORA(**dora) for dora in data.get("dora", [])],
             eucra=[EUCRA(**eucra) for eucra in data.get("eucra", [])],
+            popia=[POPIA(**popia) for popia in data.get("popia", [])],
             nistsp80053=[
                 NISTSP80053(**nistsp80053)
                 for nistsp80053 in data.get("nistsp80053", [])
@@ -777,6 +785,10 @@ class Regulatory:
         return EUCRA(code=code, title=title)
 
     @classmethod
+    def create_popia(cls, code: str, title: str) -> POPIA:
+        return POPIA(code=code, title=title)
+
+    @classmethod
     def create_nistsp80053(cls, code: str, title: str) -> NISTSP80053:
         return NISTSP80053(code=code, title=title)
 
@@ -842,6 +854,10 @@ class Regulatory:
         self.eucra.append(eucra)
         return self.eucra
 
+    def add_popia(self, popia: POPIA) -> List[POPIA]:
+        self.popia.append(popia)
+        return self.popia
+
     def add_nistsp80053(self, nistsp80053: NISTSP80053) -> List[NISTSP80053]:
         self.nistsp80053.append(nistsp80053)
         return self.nistsp80053
@@ -893,6 +909,7 @@ class Analysis:
             gdpr=[],
             dora=[],
             eucra=[],
+            popia=[],
             mstg=[],
             masvs=[],
             owaspapi2023=[],
@@ -959,6 +976,7 @@ class Analysis:
         gdpr: List[dict] = None,
         dora: List[dict] = None,
         eucra: List[dict] = None,
+        popia: List[dict] = None,
         owaspapi2023: List[dict] = None,
         owaspmobile2024: List[dict] = None,
         nistsp80053: List[dict] = None,
@@ -981,6 +999,8 @@ class Analysis:
             dora = []
         if eucra is None:
             eucra = []
+        if popia is None:
+            popia = []
         if hipaa is None:
             hipaa = []
         if pcidss is None:
@@ -1011,6 +1031,7 @@ class Analysis:
             gdpr=gdpr,
             dora=dora,
             eucra=eucra,
+            popia=popia,
             nistsp80053=nistsp80053,
             nistsp800171=nistsp800171,
             sama=sama,
