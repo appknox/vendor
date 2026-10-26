@@ -169,6 +169,16 @@
             "code": "Annex I, Part I, point (2)(f)",
             "title": "protect the integrity of stored, transmitted or otherwise processed data, personal or other, commands, programs and configuration against any manipulation or modification not authorised by the user, and report on corruptions;"
           }
+        ],
+        "popia": [
+          {
+            "code": "s 19(1)(b)",
+            "title": "Prevent unlawful access to or processing of personal information."
+          },
+          {
+            "code": "s 19(2)(b)",
+            "title": "Establish and maintain appropriate safeguards against the risks identified."
+          }
         ]
       },
       "risk": {
@@ -398,6 +408,16 @@
           {
             "code": "Annex I, Part I, point (2)(j)",
             "title": "be designed, developed and produced to limit attack surfaces, including external interfaces;"
+          }
+        ],
+        "popia": [
+          {
+            "code": "s 19(1)(b)",
+            "title": "Prevent unlawful access to or processing of personal information."
+          },
+          {
+            "code": "s 19(3)",
+            "title": "Have due regard to generally accepted information security practices."
           }
         ]
       },
@@ -856,6 +876,16 @@
           {
             "code": "Annex I, Part II, point (2)",
             "title": "in relation to the risks posed to products with digital elements, address and remediate vulnerabilities without delay, including by providing security updates; where technically feasible, new security updates shall be provided separately from functionality updates;"
+          }
+        ],
+        "popia": [
+          {
+            "code": "s 19(1)(b)",
+            "title": "Prevent unlawful access to or processing of personal information."
+          },
+          {
+            "code": "s 19(2)(d)",
+            "title": "Ensure that safeguards are continually updated in response to new risks or deficiencies in previously implemented safeguards."
           }
         ]
       },
